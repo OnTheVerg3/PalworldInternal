@@ -193,6 +193,7 @@
     <ClInclude Include="libs\MinHook\trampoline.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="include\cheat_state.h" />
+    <ClInclude Include="src\ui\cheat\aimbot.h" />
     <ClInclude Include="src\ui\cheat\esp.h" />
     <ClInclude Include="src\ui\fonts.h" />
     <ClInclude Include="src\ui\imgui_style.h" />
@@ -287,6 +288,7 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
     </ClCompile>
+    <ClCompile Include="src\ui\cheat\aimbot.cpp" />
     <ClCompile Include="src\ui\cheat\cheat_state.cpp" />
     <ClCompile Include="src\ui\cheat\esp.cpp" />
     <ClCompile Include="src\ui\imgui_style.cpp" />

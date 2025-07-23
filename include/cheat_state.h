@@ -38,9 +38,14 @@ struct CheatState
     float cameraFov = 90.0f;
     float craftSpeed = 1.0f;
     float palCraftSpeed = 1.0f;
-    
     __int32 techPoints = 0;
     __int32 aTechPoints = 0;
+
+    //Aimbot
+	bool aimbotEnabled = false;
+	bool aimbotShowFov = false;
+	float aimbotFov = 20.0f;
+	float aimbotSmooth = 1.0f;
 
     // ESP
     bool espEnabled = false;

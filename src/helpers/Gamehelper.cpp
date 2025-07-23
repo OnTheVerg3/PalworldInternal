@@ -149,4 +149,12 @@ namespace Helper
         return bResult;
     }
 
+    float GetDistance(const SDK::FVector2D& a, const SDK::FVector2D& b)
+    {
+        return sqrtf(
+            (a.X - b.X) * (a.X - b.X) +
+            (a.Y - b.Y) * (a.Y - b.Y)
+        );
+    }
+
 }

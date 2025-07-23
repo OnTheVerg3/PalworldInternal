@@ -15,4 +15,5 @@ namespace Helper
 
     bool GetTAllNPC(SDK::TArray<class SDK::APalCharacter*>* outResult);
     SDK::UPalCharacterImportanceManager* GetCharacterImpManager();
+    float GetDistance(const SDK::FVector2D& a, const SDK::FVector2D& b);
 }

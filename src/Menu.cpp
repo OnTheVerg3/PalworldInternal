@@ -7,6 +7,7 @@
 #include "ui/cheat/esp.h"
 #include "ItemList.hpp"
 #include "database.h"  
+#include "ui/cheat/aimbot.h"
 
 namespace DX11Base
 {
@@ -89,6 +90,11 @@ namespace DX11Base
                         ImGui::Checkbox("Show Pals", &cheatState.espShowPals);
                         ImGui::Checkbox("Show Pickup Items", &cheatState.espShowPickupItems);
                         ImGui::Separator();
+                        ImGui::SeparatorEx(1.0f);
+                        ImGui::Text("Aimbot test");
+                        ImGui::Checkbox("Enable aimbot", &cheatState.aimbotEnabled);
+						ImGui::SliderFloat("Aimbot FOV", &cheatState.aimbotFov, 1.0f, 180.0f);
+                        ImGui::SliderFloat("Aimbot Smooth", &cheatState.aimbotSmooth, 0.0f, 1.0f);
 
                         ImGui::EndTabItem();
                     }
@@ -332,14 +338,13 @@ namespace DX11Base
                 }
             }
             
-            /*ONLY DEBUG
             if (ImGui::Button("UNHOOK", ImVec2(ImGui::GetContentRegionAvail().x, 20))) {
 #if CONSOLE_OUTPUT
                 g_Console->printdbg("\n\n[+] UNHOOK INITIALIZED\n\n", Console::Colors::red);
 #endif
                 g_KillSwitch = TRUE;
             }
-            */
+            
             ImGui::End();
         }
 	}
@@ -355,6 +360,7 @@ namespace DX11Base
         ResetStamina();
         SetDemiGodMode();
         DrawESP();
+        RunPalAimbot();
 
         if (g_Engine->bShowHud && !g_Engine->bShowMenu)
         {
