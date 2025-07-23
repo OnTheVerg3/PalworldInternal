@@ -12,6 +12,7 @@ namespace Helper
     bool GetTAllPals(SDK::TArray<class SDK::APalCharacter*>* outResult);
     bool IsAlive(SDK::AActor* pCharacter);
     bool IsABaseWorker(SDK::APalCharacter* pChar, bool bLocalControlled = true);
+    bool IsTamed(SDK::APalCharacter* pChar);
 
     bool GetTAllNPC(SDK::TArray<class SDK::APalCharacter*>* outResult);
     SDK::UPalCharacterImportanceManager* GetCharacterImpManager();

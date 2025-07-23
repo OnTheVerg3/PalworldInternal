@@ -2,6 +2,7 @@
 #include "esp.h"
 #include <Windows.h>
 #include "libs/ImGui/imgui.h"
+#include "Engine.h"
 
 #include "Engine_classes.hpp"
 #include "Pal_classes.hpp"
@@ -10,235 +11,312 @@
 
 using namespace Helper;
 using namespace SDK;
+using namespace DX11Base;
 
-bool ShouldSkipESPActor(const std::string& rawName);
-bool IsJunkActor(const std::string& rawName);
 
-void DrawESP()
+std::string GetCleanPalName(const std::string& rawName) {
+    size_t start = 0;
+
+    // Remove "BP_" prefix if present
+    if (rawName.find("BP_") == 0)
+        start += 3;
+
+    // Remove "NPC_" prefix if present (after BP_ or at start)
+    if (rawName.find("NPC_", start) == start)
+        start += 4;
+
+    // Find _C (typical UE4/5 suffix)
+    size_t end = rawName.find("_C", start);
+    std::string coreName = (end != std::string::npos)
+        ? rawName.substr(start, end - start)
+        : rawName.substr(start);
+
+    // Remove trailing digits (e.g. "_123456")
+    while (!coreName.empty() && std::isdigit(coreName.back()))
+        coreName.pop_back();
+
+    // Remove trailing underscores after digits
+    while (!coreName.empty() && coreName.back() == '_')
+        coreName.pop_back();
+
+    return coreName;
+}
+
+void DrawRelicESPText(ImVec2 screenPos, const char* nameLabel, float distance)
 {
-    if (!cheatState.espEnabled)
+    ImVec2 nameSize = ImGui::CalcTextSize(nameLabel);
+
+    // Center name
+    screenPos.x -= nameSize.x / 2.0f;
+
+    // Background + shadow for name
+    ImVec2 nameBgMin = ImVec2(screenPos.x - 4, screenPos.y - 2);
+    ImVec2 nameBgMax = ImVec2(screenPos.x + nameSize.x + 4, screenPos.y + nameSize.y + 2);
+    ImGui::GetBackgroundDrawList()->AddRectFilled(nameBgMin, nameBgMax, IM_COL32(0, 0, 0, 140), 4.0f);
+    ImGui::GetBackgroundDrawList()->AddText(ImVec2(screenPos.x + 1, screenPos.y + 1), IM_COL32(0, 0, 0, 200), nameLabel);
+    ImGui::GetBackgroundDrawList()->AddText(screenPos, IM_COL32(255, 255, 100, 255), nameLabel);
+
+    // Advance Y for distance label
+    if (cheatState.espShowDistance)
+    {
+        char distLabel[32];
+        snprintf(distLabel, sizeof(distLabel), "[%.1fm]", distance / 100.0f);
+
+        ImVec2 distSize = ImGui::CalcTextSize(distLabel);
+        ImVec2 distPos = ImVec2(screenPos.x + nameSize.x / 2.0f - distSize.x / 2.0f, screenPos.y + nameSize.y + 4);
+
+        ImVec2 distBgMin = ImVec2(distPos.x - 4, distPos.y - 2);
+        ImVec2 distBgMax = ImVec2(distPos.x + distSize.x + 4, distPos.y + distSize.y + 2);
+        ImGui::GetBackgroundDrawList()->AddRectFilled(distBgMin, distBgMax, IM_COL32(0, 0, 0, 140), 4.0f);
+        ImGui::GetBackgroundDrawList()->AddText(ImVec2(distPos.x + 1, distPos.y + 1), IM_COL32(0, 0, 0, 200), distLabel);
+        ImGui::GetBackgroundDrawList()->AddText(distPos, IM_COL32(120, 255, 120, 255), distLabel);
+    }
+}
+
+void DrawESPText(ImVec2 screenPos, const char* name, float distance = -1.0f)
+{
+    // Skip entire ESP if out of range
+    if (distance >= 0.0f && distance > cheatState.espDistance)
         return;
 
-    auto player = GetPalPlayerCharacter();
+    ImVec2 nameSize = ImGui::CalcTextSize(name);
+    ImVec2 pos = screenPos;
+    pos.x -= nameSize.x / 2.0f;
+
+    // Name box
+    ImVec2 bgMin = ImVec2(pos.x - 4, pos.y - 2);
+    ImVec2 bgMax = ImVec2(pos.x + nameSize.x + 4, pos.y + nameSize.y + 2);
+    ImGui::GetBackgroundDrawList()->AddText(ImVec2(pos.x + 1, pos.y + 1), IM_COL32(0, 0, 0, 200), name);
+    ImGui::GetBackgroundDrawList()->AddText(pos, IM_COL32(255, 255, 255, 255), name);
+
+    // Optional distance label (only if in range)
+    if (cheatState.espShowDistance && distance >= 0.0f && distance <= cheatState.espDistance)
+    {
+        char distText[32];
+        snprintf(distText, sizeof(distText), "[%.0fm]", distance / 100.0f);
+
+        ImVec2 distSize = ImGui::CalcTextSize(distText);
+        ImVec2 distPos = ImVec2(screenPos.x - distSize.x / 2.0f, pos.y + nameSize.y + 4);
+
+        ImVec2 distBgMin = ImVec2(distPos.x - 4, distPos.y - 2);
+        ImVec2 distBgMax = ImVec2(distPos.x + distSize.x + 4, distPos.y + distSize.y + 2);
+        ImGui::GetBackgroundDrawList()->AddRectFilled(distBgMin, distBgMax, IM_COL32(0, 0, 0, 140), 4.0f);
+        ImGui::GetBackgroundDrawList()->AddText(ImVec2(distPos.x + 1, distPos.y + 1), IM_COL32(0, 0, 0, 200), distText);
+        ImGui::GetBackgroundDrawList()->AddText(distPos, IM_COL32(120, 255, 120, 255), distText);
+    }
+}
+
+
+void DrawPalESP()
+{
+    if (!cheatState.espEnabled || !cheatState.espShowPals)
+        return;
+
+    APalPlayerCharacter* player = GetPalPlayerCharacter();
     if (!player)
         return;
 
     auto controller = reinterpret_cast<APlayerController*>(player->Controller);
+    if (!controller)
+        return;
+
+    // Get all Pals efficiently
+    SDK::TArray<SDK::APalCharacter*> pals;
+    if (!Helper::GetTAllPals(&pals))
+        return;
 
     FVector cameraLocation;
     FRotator cameraRotation;
     controller->GetPlayerViewPoint(&cameraLocation, &cameraRotation);
 
-    UWorld* world = UWorld::GetWorld();
-    if (!world || !world->PersistentLevel)
-        return;
-
-    for (int i = 0; i < world->PersistentLevel->Actors.Num(); ++i)
+    for (int i = 0; i < pals.Num(); ++i)
     {
-        AActor* actor = world->PersistentLevel->Actors[i];
-        if (!actor || actor == player)
+        SDK::APalCharacter* pal = pals[i];
+        if (!pal)
+            continue;
+        if (pal == player)
+            continue;
+        bool baseWorker = IsABaseWorker(pal, true);
+        bool isAlive = IsAlive(pal);
+        bool isTamed = IsTamed(pal);
+        if (baseWorker || !isAlive || isTamed)
             continue;
 
         // Get location and distance
-        FVector actorLocation = actor->K2_GetActorLocation();
-        float distance = actorLocation.GetDistanceTo(cameraLocation);
+        FVector palLocation = pal->K2_GetActorLocation();
+        float distance = palLocation.GetDistanceTo(cameraLocation);
 
         if (distance > cheatState.espDistance)
             continue;
 
-        // Raw name
-        std::string rawName = ((UObject*)actor)->GetName();
-        OutputDebugStringA(("[DEBUG] Actor name: " + rawName + "\n").c_str());
-
-        if (rawName.find("BP_") == std::string::npos || rawName.find("_C") == std::string::npos)
-            continue;
-
-        // FILTERS
-
-        if (ShouldSkipESPActor(rawName))
-            continue;
-
-
-        // Screen projection
+        // Project to screen
         FVector2D screenPos;
-        if (!controller->ProjectWorldLocationToScreen(actorLocation, &screenPos, false)) {
-            OutputDebugStringA("[-] ProjectWorldLocationToScreen failed\n");
+        if (!controller->ProjectWorldLocationToScreen(palLocation, &screenPos, false))
             continue;
-        }
 
-        // just making sure we get only BPs shown
-        std::string cleanName = rawName;
-        size_t bpStart = cleanName.find("BP_");
-        if (bpStart != std::string::npos) {
-            cleanName = cleanName.substr(bpStart);
-            size_t suffix = cleanName.find("_C");
-            if (suffix != std::string::npos)
-                cleanName = cleanName.substr(0, suffix);
-        }
+        UPalCharacterParameterComponent* params = pal->CharacterParameterComponent;
+        float currentHealth = params ? static_cast<float>(params->GetHP().Value) : 0.0f;
+        float maxHealth = params ? static_cast<float>(params->GetMaxHP().Value) : 1.0f;
 
-        // Show Boxes
-        if (cheatState.espBoxes && !IsJunkActor(rawName) && rawName.find("MapObject") == std::string::npos && rawName.find("Item") == std::string::npos && rawName.find("PalSphere") == std::string::npos)
+        if (cheatState.espShowPalHealth && params)
         {
-            // Get actor bounds in world space
-            FVector actorLocation = actor->K2_GetActorLocation();
-            float halfHeight = 100.0f;
+            float healthFrac = maxHealth > 0 ? (currentHealth / maxHealth) : 0.0f;
+            float barWidth = 100.0f;
+            float barHeight = 6.0f;
+            ImVec2 barPos(screenPos.X - barWidth / 2, screenPos.Y + 16); // 16 px below text
 
-            FVector top = actorLocation + FVector(0, 0, halfHeight);
-            FVector bottom = actorLocation - FVector(0, 0, halfHeight);
+            // Background (grey)
+            ImGui::GetBackgroundDrawList()->AddRectFilled(
+                barPos, ImVec2(barPos.x + barWidth, barPos.y + barHeight),
+                IM_COL32(60, 60, 60, 200), 3.0f);
 
-            // Project to screen space
-            FVector2D screenTop, screenBottom;
-            if (!controller->ProjectWorldLocationToScreen(top, &screenTop, false)) continue;
-            if (!controller->ProjectWorldLocationToScreen(bottom, &screenBottom, false)) continue;
+            // Foreground (green->red)
+            ImU32 hpColor = IM_COL32(
+                static_cast<int>((1.0f - healthFrac) * 220),
+                static_cast<int>(healthFrac * 220),
+                30, 230);
 
-            float height = screenBottom.Y - screenTop.Y;
-            float width = height * 0.4f; // aspect ratio approximation
+            ImGui::GetBackgroundDrawList()->AddRectFilled(
+                barPos, ImVec2(barPos.x + barWidth * healthFrac, barPos.y + barHeight),
+                hpColor, 3.0f);
+        }
 
-            ImVec2 boxTopLeft(screenTop.X - width / 2, screenTop.Y);
-            ImVec2 boxBottomRight(screenTop.X + width / 2, screenBottom.Y);
+        if (cheatState.espBoxes)
+        {
+            float boxHeight = 100.0f;
+            float boxWidth = 40.0f;
+
+            ImVec2 topLeft = ImVec2(screenPos.X - boxWidth / 2.0f, screenPos.Y - boxHeight / 2.0f);
+            ImVec2 bottomRight = ImVec2(screenPos.X + boxWidth / 2.0f, screenPos.Y + boxHeight / 2.0f);
 
             ImGui::GetBackgroundDrawList()->AddRect(
-                boxTopLeft,
-                boxBottomRight,
-                IM_COL32(255, 0, 0, 255),
-                0.0f,
-                0,
-                1.5f
-            );
+                topLeft, bottomRight, IM_COL32(255, 255, 255, 180), 2.0f, 0, 1.5f);
         }
 
-        // Show Name and Distance
-        if (cheatState.espShowNames || cheatState.espShowDistance && !ShouldSkipESPActor(rawName))
-        {
-            std::string labelText;
 
-            if (cheatState.espShowNames)
-                labelText += cleanName;
+        // Pal name (change this to display something nicer if you want)
+        std::string palName = GetCleanPalName(pal->GetName());
+        // Show name
+        char label[128];
+        snprintf(label, sizeof(label), "%s", palName.c_str());
 
-            if (cheatState.espShowDistance)
-            {
-                if (!labelText.empty())
-                    labelText += " ";
-                char distanceText[32];
-                sprintf_s(distanceText, "[%.0f m]", distance / 100.0f);
-                labelText += distanceText;
-            }
-
-            ImVec2 textSize = ImGui::CalcTextSize(labelText.c_str());
-
-            ImVec2 textPos = ImVec2(
-                screenPos.X - textSize.x / 2.0f, // center horizontally
-                screenPos.Y                     // draw from Y as-is
-            );
-
-            ImGui::GetBackgroundDrawList()->AddText(
-                textPos,
-                IM_COL32(255, 255, 255, 255),
-                labelText.c_str()
-            );
-        }
+        DrawESPText(ImVec2(screenPos.X, screenPos.Y), palName.c_str(), distance);
 
     }
-
-    OutputDebugStringA("[+] DrawESP() finished\n");
 }
 
-void DrawUActorComponent(TArray<UActorComponent*> Comps, ImColor color)
-{
-    ImGui::GetBackgroundDrawList()->AddText(nullptr, 16, ImVec2(ImGui::GetIO().DisplaySize.x / 2, ImGui::GetIO().DisplaySize.y / 2), color, "Drawing...");
-    if (!Comps.IsValid())
-        return;
-    for (int i = 0; i < Comps.Num(); i++)
-    {
+std::vector<AActor*> cachedRelics;
+float lastRelicScan = 0.0f;
+const float scanInterval = 5.0f;
 
-        if (!Comps[i])
+void UpdateRelicCache(UWorld* world)
+{
+    cachedRelics.clear();
+    if (!world) return;
+
+    for (ULevel* level : world->Levels)
+    {
+        if (!level) continue;
+
+        for (AActor* actor : level->Actors)
+        {
+            if (!actor || !actor->Class) continue;
+
+            std::string className = actor->Class->GetName();
+            if (className == "BP_LevelObject_Relic_C")
+            {
+                cachedRelics.push_back(actor);
+            }
+        }
+    }
+}
+
+void DrawRelicESP()
+{
+    if (!cheatState.espEnabled || !cheatState.espShowRelics)
+        return;
+
+    UWorld* world = UWorld::GetWorld();
+    if (!world) return;
+
+    double currentTime = UKismetSystemLibrary::GetGameTimeInSeconds(world);
+    if (currentTime - lastRelicScan > scanInterval)
+    {
+        UpdateRelicCache(world);
+        lastRelicScan = currentTime;
+    }
+
+    APalPlayerCharacter* player = GetPalPlayerCharacter();
+    if (!player) return;
+
+    APlayerController* controller = reinterpret_cast<APlayerController*>(player->Controller);
+    if (!controller) return;
+
+    FVector cameraLoc;
+    FRotator cameraRot;
+    controller->GetPlayerViewPoint(&cameraLoc, &cameraRot);
+
+    for (AActor* actor : cachedRelics)
+    {
+        if (!actor) continue;
+
+        FVector relicLoc = actor->K2_GetActorLocation();
+        float distance = relicLoc.GetDistanceTo(cameraLoc);
+        if (distance > cheatState.espDistance)
             continue;
 
-        ImGui::GetBackgroundDrawList()->AddText(nullptr, 16, ImVec2(10, 10 + (i * 30)), color, Comps[i]->GetFullName().c_str());
+        FVector2D screenPos;
+        if (!controller->ProjectWorldLocationToScreen(relicLoc, &screenPos, false))
+            continue;
+
+        char label[64];
+        snprintf(label, sizeof(label), "Relic");
+        DrawRelicESPText(ImVec2(screenPos.X, screenPos.Y), label, distance);
     }
 }
 
-bool ShouldSkipESPActor(const std::string& rawName)
-{
-    //(static junk filter)
-    if (
-        rawName.find("AIController") != std::string::npos ||
-        rawName.find("BackWeapon") != std::string::npos ||
-        rawName.find("Registra") != std::string::npos ||
-        rawName.find("VisualActor") != std::string::npos
-        )
-        return true;
 
-    if (!cheatState.espShowPals) {
-        // Skip actors whose name matches any Pal
-        for (auto name : database::palNames) {
-            if (rawName.find(name) != std::string::npos) {
-                return true;
-            }
+void DebugNearbyActors(float radius)
+{
+    uintptr_t moduleBase = (uintptr_t)GetModuleHandle(NULL); // Only works if injected into game process
+    uintptr_t GObjectsAddress = moduleBase + Offsets::GObjects;
+    TUObjectArray* GObjects = reinterpret_cast<TUObjectArray*>(GObjectsAddress);
+    if (!GObjects) return;
+
+    int found = 0;
+    for (int i = 0; i < GObjects->Num(); ++i)
+    {
+        UObject* obj = GObjects->GetByIndex(i);
+        if (!obj) continue;
+
+        std::string objName = obj->GetName();
+        std::string className = "Unknown";
+        if (obj->Class)
+            className = obj->Class->GetName();
+
+        // Search for keywords
+        if (
+            objName.find("Relic") != std::string::npos ||
+            className.find("Relic") != std::string::npos ||
+            objName.find("LevelObject") != std::string::npos ||
+            className.find("LevelObject") != std::string::npos ||
+            objName.find("Obtainable") != std::string::npos ||
+            className.find("Obtainable") != std::string::npos ||
+            objName.find("Pickup") != std::string::npos ||
+            className.find("Pickup") != std::string::npos
+            )
+        {
+            g_Console->cLog("[RelicDebug] Name: %s | Class: %s | Ptr: 0x%p\n",
+                Console::EColor_yellow,
+                objName.c_str(),
+                className.c_str(),
+                obj);
+            found++;
         }
     }
-
-    if (!cheatState.espShowPickupItems &&
-        (
-            rawName.find("PickupItem") != std::string::npos ||
-            rawName.find("PalSphere") != std::string::npos ||
-            rawName.find("Paldium") != std::string::npos ||
-            rawName.find("Meat") != std::string::npos ||
-            rawName.find("Berry") != std::string::npos ||
-            rawName.find("Arrow") != std::string::npos ||
-            rawName.find("Egg") != std::string::npos ||
-            rawName.find("Wood") != std::string::npos ||
-            rawName.find("Stone") != std::string::npos ||
-            rawName.find("Ore") != std::string::npos ||
-            rawName.find("Leather") != std::string::npos ||
-            rawName.find("Fiber") != std::string::npos ||
-            rawName.find("Fur") != std::string::npos ||
-            rawName.find("Milk") != std::string::npos ||
-            rawName.find("Honey") != std::string::npos ||
-            rawName.find("Trasure") != std::string::npos ||
-            rawName.find("BP_MapObject") != std::string::npos ||
-            rawName.find("Seed") != std::string::npos
-            ))
-    {
-        return true;
-    }
-    if (!cheatState.espShowJunk && IsJunkActor(rawName))
-        return true;
-
-
-    return false;
+    g_Console->cLog("[RelicDebug] Total matching objects: %d\n", Console::EColor_green, found);
 }
 
-bool HasKeyword(const std::string& str, const std::initializer_list<const char*> keywords) {
-    for (const char* key : keywords)
-        if (str.find(key) != std::string::npos) return true;
-    return false;
-}
 
-bool IsJunkActor(const std::string& rawName)
-{
-    return
-        rawName.find("Lamp") != std::string::npos ||
-        rawName.find("NPCSpawner") != std::string::npos ||
-        rawName.find("Dummy") != std::string::npos ||
-        rawName.find("Glider") != std::string::npos ||
-        rawName.find("Grappling") != std::string::npos ||
-        rawName.find("Pickaxe") != std::string::npos ||
-        rawName.find("gun") != std::string::npos ||
-        rawName.find("Rifle") != std::string::npos ||
-        rawName.find("Tower") != std::string::npos ||
-        rawName.find("Adjust") != std::string::npos ||
-        rawName.find("Dungeon") != std::string::npos ||
-        rawName.find("Builder") != std::string::npos ||
-        rawName.find("BuildObject") != std::string::npos ||
-        rawName.find("PalEgg") != std::string::npos || 
-        rawName.find("Farm") != std::string::npos ||
-        rawName.find("SkillFruit") != std::string::npos ||
-        rawName.find("Mining") != std::string::npos ||
-        rawName.find("FishShadow") != std::string::npos ||
-        rawName.find("NPC") != std::string::npos ||
-        rawName.find("Hammer") != std::string::npos ||
-        rawName.find("Axe") != std::string::npos ||
-        rawName.find("BP_Bat") != std::string::npos ||
-        rawName.find("DamagableRock") != std::string::npos;
-}
+
+

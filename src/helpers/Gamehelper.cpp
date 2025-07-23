@@ -149,6 +149,17 @@ namespace Helper
         return bResult;
     }
 
+    bool IsTamed(SDK::APalCharacter* pChar)
+    {
+        SDK::UPalUtility* pUtil = UPalUtility::GetDefaultObj();
+        SDK::APalPlayerCharacter* pLocalChar = GetPalPlayerCharacter();
+        if (!pUtil || !pLocalChar || !pChar || !IsAlive(pChar))
+            return false;
+
+        bool bResult = pUtil->IsPlayersOtomo(pChar);
+        return bResult;
+    }
+
     float GetDistance(const SDK::FVector2D& a, const SDK::FVector2D& b)
     {
         return sqrtf(

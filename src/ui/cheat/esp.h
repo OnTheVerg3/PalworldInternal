@@ -1,3 +1,6 @@
 #pragma once
 
-void DrawESP();
+void DrawPalESP();
+void DrawRelicESP();
+void DebugNearbyActors(float searchRadius);
+

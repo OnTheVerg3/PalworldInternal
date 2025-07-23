@@ -111,7 +111,6 @@ AimbotTarget FindBestPalTarget(APlayerController* controller, FVector2D screenCe
 void RunPalAimbot()
 {
     if (!cheatState.aimbotEnabled) {
-        if (g_Console) g_Console->cLog("[Aimbot] Aimbot disabled\n");
         return;
     }
 

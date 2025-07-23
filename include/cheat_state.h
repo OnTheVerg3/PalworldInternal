@@ -54,9 +54,9 @@ struct CheatState
     bool espShowDistance = false;
     float espDistance = 5000.0f;
     // ESP Filters
-    bool espShowJunk = false;
+    bool espShowPalHealth = false;
     bool espShowPals = true;
-    bool espShowPickupItems = true;
+    bool espShowRelics = true;
     bool espShowWaypoints = false;
 
     // Misc

@@ -375,6 +375,8 @@ namespace DX11Base
 			ImGui::StyleColorsDark();
 			m_Device->GetImmediateContext(&m_DeviceContext);
 
+			ImFont* fontSegoe = io.Fonts->AddFontFromFileTTF("C:/Windows/Fonts/segoeui.ttf", 18.0f);
+			io.FontDefault = fontSegoe;
 
 			DXGI_SWAP_CHAIN_DESC Desc;
 			swapChain->GetDesc(&Desc);

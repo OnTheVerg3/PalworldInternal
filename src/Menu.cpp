@@ -86,9 +86,9 @@ namespace DX11Base
                         ImGui::SeparatorEx(1.0f);
                         ImGui::Text("Filters");
 
-                        ImGui::Checkbox("Show Junk", &cheatState.espShowJunk);
                         ImGui::Checkbox("Show Pals", &cheatState.espShowPals);
-                        ImGui::Checkbox("Show Pickup Items", &cheatState.espShowPickupItems);
+                        ImGui::Checkbox("Show Health", &cheatState.espShowPalHealth);
+                        ImGui::Checkbox("Show Pickup Items", &cheatState.espShowRelics);
                         ImGui::Separator();
                         ImGui::SeparatorEx(1.0f);
                         ImGui::Text("Aimbot test");
@@ -359,7 +359,8 @@ namespace DX11Base
 
         ResetStamina();
         SetDemiGodMode();
-        DrawESP();
+        DrawPalESP();
+        DrawRelicESP();
         RunPalAimbot();
 
         if (g_Engine->bShowHud && !g_Engine->bShowMenu)
