@@ -45,7 +45,7 @@ struct CheatState
 	bool aimbotEnabled = false;
 	bool aimbotShowFov = false;
 	float aimbotFov = 20.0f;
-	float aimbotSmooth = 1.0f;
+	float aimbotSmooth = 0.5f;
 
     // ESP
     bool espEnabled = false;

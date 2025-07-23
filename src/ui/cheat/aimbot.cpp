@@ -11,11 +11,11 @@ using namespace DX11Base;
 
 struct AimbotTarget
 {
-    APalMonsterCharacter* Pal;
+    APalCharacter* Pal;
     FVector2D ScreenPos;
     float Fov;
 
-    AimbotTarget(APalMonsterCharacter* p, const FVector2D& s, float f)
+    AimbotTarget(APalCharacter* p, const FVector2D& s, float f)
         : Pal(p), ScreenPos(s), Fov(f) {
     }
 };
@@ -29,16 +29,25 @@ FRotator CalcLookAtRotation(const SDK::FVector& from, const SDK::FVector& to)
     return FRotator(pitch, yaw, 0.0f); // Roll is usually zero
 }
 
-bool IsValidAimbotTarget(APalMonsterCharacter* pal)
+bool IsValidAimbotTarget(APalCharacter* pal)
 {
-    if (!pal)
-        if (g_Console) g_Console->cLog("[Aimbot] [IsValidAimbotTarget] pal is null\n");
+    if (!pal) {
+        if (g_Console) g_Console->cLog("[Aimbot] Rejected: pal is nullptr\n");
         return false;
+    }
 
     auto params = pal->CharacterParameterComponent;
-    if (!params || !params->IndividualParameter)
+    if (!params) {
+        if (g_Console) g_Console->cLog("[Aimbot] Rejected: No CharacterParameterComponent: %s\n", Console::EColor_DEFAULT, pal->GetName().c_str());
         return false;
+    }
 
+    if (!params->IndividualParameter) {
+        if (g_Console) g_Console->cLog("[Aimbot] Rejected: No IndividualParameter: %s\n", Console::EColor_DEFAULT, pal->GetName().c_str());
+        return false;
+    }
+
+    // Passes all checks
     return true;
 }
 
@@ -46,24 +55,29 @@ AimbotTarget FindBestPalTarget(APlayerController* controller, FVector2D screenCe
 {
     if (g_Console) g_Console->cLog("[Aimbot] Searching for best Pal target...\n");
 
-    UWorld* world = UWorld::GetWorld();
-    if (!world || !world->PersistentLevel)
-        if (g_Console) g_Console->cLog("[Aimbot] UWorld or PersistentLevel is null\n");
+    SDK::TArray<SDK::APalCharacter*> pals;
+    if (!GetTAllPals(&pals)) {
+        if (g_Console) g_Console->cLog("[Aimbot] GetAllPals failed!\n");
         return { nullptr, {}, FLT_MAX };
+    }
+
+    if (g_Console) g_Console->cLog("[Aimbot] pals.Num(): %d\n", Console::EColor_DEFAULT, pals.Num());
 
     float bestFov = maxFov;
-    APalMonsterCharacter* bestPal = nullptr;
+    APalCharacter* bestPal = nullptr;
     FVector2D bestScreen{};
 
-    for (int i = 0; i < world->PersistentLevel->Actors.Num(); ++i)
+    int palCount = 0;
+
+    for (int i = 0; i < pals.Num(); ++i)
     {
-        AActor* actor = world->PersistentLevel->Actors[i];
-        if (!actor || !actor->IsA(APalMonsterCharacter::StaticClass()))
+        APalCharacter* pal = pals[i];
+        if (!pal)
             continue;
 
-        auto pal = static_cast<APalMonsterCharacter*>(actor);
         if (!IsValidAimbotTarget(pal))
             continue;
+        palCount++;
 
         FVector2D screenPos;
         if (!controller->ProjectWorldLocationToScreen(pal->K2_GetActorLocation(), &screenPos, false))
@@ -78,62 +92,90 @@ AimbotTarget FindBestPalTarget(APlayerController* controller, FVector2D screenCe
         }
     }
 
+    if (g_Console) g_Console->cLog("[Aimbot] Found %d valid APalCharacters\n", Console::EColor_DEFAULT, palCount);
+
     if (bestPal && g_Console)
-        g_Console->cLog("[Aimbot] Found best target: %s, FOV: %.2f\n", Console::EColor_DEFAULT, bestPal->GetName().c_str(), bestFov);
+        g_Console->cLog("[Aimbot] Best target: %s | FOV: %.2f\n", Console::EColor_DEFAULT, bestPal->GetName().c_str(), bestFov);
     else if (g_Console)
         g_Console->cLog("[Aimbot] No valid Pal target found in FOV\n");
+
+    // You may want to cast to APalMonsterCharacter* here if your AimbotTarget struct expects that type.
+    // If so, check: 
+    //    APalMonsterCharacter* monster = dynamic_cast<APalMonsterCharacter*>(bestPal);
 
     return { bestPal, bestScreen, bestFov };
 }
 
+
+
 void RunPalAimbot()
 {
-    if (!cheatState.aimbotEnabled)
+    if (!cheatState.aimbotEnabled) {
         if (g_Console) g_Console->cLog("[Aimbot] Aimbot disabled\n");
         return;
+    }
 
     APalPlayerCharacter* player = GetPalPlayerCharacter();
-    if (!player)
+    if (!player) {
+        if (g_Console) g_Console->cLog("[Aimbot] Player not found\n");
         return;
+    }
 
-    APlayerController* controller = reinterpret_cast<APlayerController*>(player->Controller);
-    if (!controller)
+    // Make sure the controller is the player controller
+    APalPlayerController* controller = GetPalPlayerController();
+    if (!controller) {
         if (g_Console) g_Console->cLog("[Aimbot] Controller not found\n");
         return;
+    }
 
+    // Screen center for FOV calc
     FVector2D screenCenter(ImGui::GetIO().DisplaySize.x / 2.0f, ImGui::GetIO().DisplaySize.y / 2.0f);
 
-    // Find the best Pal to aim at
+    // Find best pal to aim at
     AimbotTarget target = FindBestPalTarget(controller, screenCenter, cheatState.aimbotFov);
 
-    if (!target.Pal)
+    if (!target.Pal) {
         if (g_Console) g_Console->cLog("[Aimbot] No Pal to aim at\n");
         return;
+    }
 
-    // Calculate rotation to target
     FVector targetLoc = target.Pal->K2_GetActorLocation();
+
+    // Use controller's current view for calculation
     FVector cameraLoc;
     FRotator cameraRot;
     controller->GetPlayerViewPoint(&cameraLoc, &cameraRot);
+
+    // Calculate desired aim
     FRotator desiredRot = CalcLookAtRotation(cameraLoc, targetLoc);
+    desiredRot.Roll = 0.0f; // Only aim Pitch/Yaw
 
-    if (g_Console)
-        g_Console->cLog("[Aimbot] Aiming at Pal: %s\n", Console::EColor_DEFAULT, target.Pal->GetName().c_str());
+    float smooth = cheatState.aimbotSmooth;
+    if (smooth < 0.0f) smooth = 0.0f;
+    if (smooth > 1.0f) smooth = 1.0f;
 
-    // Smooth or snap
-    if (cheatState.aimbotSmooth > 0.0f && cheatState.aimbotSmooth < 1.0f)
-    {
-        FRotator newRot;
-        newRot.Pitch = cameraRot.Pitch + (desiredRot.Pitch - cameraRot.Pitch) * cheatState.aimbotSmooth;
-        newRot.Yaw = cameraRot.Yaw + (desiredRot.Yaw - cameraRot.Yaw) * cheatState.aimbotSmooth;
-        newRot.Roll = cameraRot.Roll + (desiredRot.Roll - cameraRot.Roll) * cheatState.aimbotSmooth;
+    FRotator newRot;
+    if (smooth > 0.0f && smooth < 1.0f) {
+        newRot.Pitch = cameraRot.Pitch + (desiredRot.Pitch - cameraRot.Pitch) * smooth;
+        newRot.Yaw = cameraRot.Yaw + (desiredRot.Yaw - cameraRot.Yaw) * smooth;
+        newRot.Roll = 0.0f;
         controller->SetControlRotation(newRot);
-        if (g_Console)
-            g_Console->cLog("[Aimbot] Smooth aim applied (%.2f)\n", Console::EColor_DEFAULT, cheatState.aimbotSmooth);
+
+        if (g_Console) g_Console->cLog(
+            "[Aimbot] Smooth aim: Pitch %.1f Yaw %.1f (Smooth: %.2f)\n",
+            Console::EColor_green, newRot.Pitch, newRot.Yaw, smooth
+        );
     }
-    else
-    {
+    else {
         controller->SetControlRotation(desiredRot);
+
+        if (g_Console) g_Console->cLog(
+            "[Aimbot] Snap aim: Pitch %.1f Yaw %.1f\n",
+            Console::EColor_green, desiredRot.Pitch, desiredRot.Yaw
+        );
     }
 }
+
+
+
 
