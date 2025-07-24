@@ -1,8 +1,9 @@
-#include <pch.h>
+﻿#include <pch.h>
 #include "Engine_classes.hpp"
 #include "Pal_classes.hpp"
 #include "Engine.h"
 #include "Aimbot.h"
+#include <Windows.h>
 
 using namespace SDK;
 using namespace Helper;
@@ -53,15 +54,10 @@ bool IsValidAimbotTarget(APalCharacter* pal)
 
 AimbotTarget FindBestPalTarget(APlayerController* controller, FVector2D screenCenter, float maxFov)
 {
-    if (g_Console) g_Console->cLog("[Aimbot] Searching for best Pal target...\n");
-
     SDK::TArray<SDK::APalCharacter*> pals;
     if (!GetTAllPals(&pals)) {
-        if (g_Console) g_Console->cLog("[Aimbot] GetAllPals failed!\n");
         return { nullptr, {}, FLT_MAX };
     }
-
-    if (g_Console) g_Console->cLog("[Aimbot] pals.Num(): %d\n", Console::EColor_DEFAULT, pals.Num());
 
     float bestFov = maxFov;
     APalCharacter* bestPal = nullptr;
@@ -99,81 +95,85 @@ AimbotTarget FindBestPalTarget(APlayerController* controller, FVector2D screenCe
     else if (g_Console)
         g_Console->cLog("[Aimbot] No valid Pal target found in FOV\n");
 
-    // You may want to cast to APalMonsterCharacter* here if your AimbotTarget struct expects that type.
-    // If so, check: 
-    //    APalMonsterCharacter* monster = dynamic_cast<APalMonsterCharacter*>(bestPal);
-
     return { bestPal, bestScreen, bestFov };
 }
 
-
+void MoveMouseRelative(int dx, int dy)
+{
+    INPUT input = { 0 };
+    input.type = INPUT_MOUSE;
+    input.mi.dx = dx;
+    input.mi.dy = dy;
+    input.mi.dwFlags = MOUSEEVENTF_MOVE;
+    SendInput(1, &input, sizeof(INPUT));
+}
 
 void RunPalAimbot()
 {
-    if (!cheatState.aimbotEnabled) {
-        return;
-    }
-
     APalPlayerCharacter* player = GetPalPlayerCharacter();
-    if (!player) {
-        if (g_Console) g_Console->cLog("[Aimbot] Player not found\n");
-        return;
-    }
+    if (!player) return;
 
-    // Make sure the controller is the player controller
     APalPlayerController* controller = GetPalPlayerController();
-    if (!controller) {
-        if (g_Console) g_Console->cLog("[Aimbot] Controller not found\n");
-        return;
-    }
+    if (!controller) return;
 
-    // Screen center for FOV calc
     FVector2D screenCenter(ImGui::GetIO().DisplaySize.x / 2.0f, ImGui::GetIO().DisplaySize.y / 2.0f);
-
-    // Find best pal to aim at
     AimbotTarget target = FindBestPalTarget(controller, screenCenter, cheatState.aimbotFov);
-
-    if (!target.Pal) {
-        if (g_Console) g_Console->cLog("[Aimbot] No Pal to aim at\n");
-        return;
-    }
+    if (!target.Pal) return;
 
     FVector targetLoc = target.Pal->K2_GetActorLocation();
 
-    // Use controller's current view for calculation
     FVector cameraLoc;
     FRotator cameraRot;
     controller->GetPlayerViewPoint(&cameraLoc, &cameraRot);
 
-    // Calculate desired aim
     FRotator desiredRot = CalcLookAtRotation(cameraLoc, targetLoc);
-    desiredRot.Roll = 0.0f; // Only aim Pitch/Yaw
+    desiredRot.Roll = 0.0f;
 
     float smooth = cheatState.aimbotSmooth;
     if (smooth < 0.0f) smooth = 0.0f;
     if (smooth > 1.0f) smooth = 1.0f;
 
-    FRotator newRot;
-    if (smooth > 0.0f && smooth < 1.0f) {
-        newRot.Pitch = cameraRot.Pitch + (desiredRot.Pitch - cameraRot.Pitch) * smooth;
-        newRot.Yaw = cameraRot.Yaw + (desiredRot.Yaw - cameraRot.Yaw) * smooth;
-        newRot.Roll = 0.0f;
-        controller->SetControlRotation(newRot);
+    float deltaYaw = desiredRot.Yaw - cameraRot.Yaw;
+    float deltaPitch = desiredRot.Pitch - cameraRot.Pitch;
 
-        if (g_Console) g_Console->cLog(
-            "[Aimbot] Smooth aim: Pitch %.1f Yaw %.1f (Smooth: %.2f)\n",
-            Console::EColor_green, newRot.Pitch, newRot.Yaw, smooth
-        );
-    }
-    else {
-        controller->SetControlRotation(desiredRot);
+    // Normalize
+    if (deltaYaw > 180.f) deltaYaw -= 360.f;
+    if (deltaYaw < -180.f) deltaYaw += 360.f;
 
-        if (g_Console) g_Console->cLog(
-            "[Aimbot] Snap aim: Pitch %.1f Yaw %.1f\n",
-            Console::EColor_green, desiredRot.Pitch, desiredRot.Yaw
-        );
+    if (deltaPitch > 180.f) deltaPitch -= 360.f;
+    if (deltaPitch < -180.f) deltaPitch += 360.f;
+
+    float snapFactor = powf(1.0f - cheatState.aimbotSmooth, 0.5f);
+    if (snapFactor < 0.01f) snapFactor = 0.01f;
+    else if (snapFactor > 1.0f) snapFactor = 1.0f;
+
+    deltaYaw *= snapFactor;
+    deltaPitch *= snapFactor;
+
+    // Mouse sensitivity conversion
+    float sensitivity = 0.25f; // adjust to your game sensitivity
+
+    float rawX = deltaYaw / sensitivity;
+    float rawY = -deltaPitch / sensitivity;
+
+    int mouseX = static_cast<int>(rawX);
+    int mouseY = static_cast<int>(rawY);
+
+    // ✅ If smooth is 0 and we're supposed to snap — force at least 1px movement
+    if (cheatState.aimbotSmooth <= 0.001f)
+    {
+        if (mouseX == 0 && fabsf(rawX) > 0.01f)
+            mouseX = (rawX > 0.0f ? 1 : -1);
+
+        if (mouseY == 0 && fabsf(rawY) > 0.01f)
+            mouseY = (rawY > 0.0f ? 1 : -1);
     }
+
+    MoveMouseRelative(mouseX, mouseY);
 }
+
+
+
 
 
 

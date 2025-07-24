@@ -69,10 +69,44 @@ namespace DX11Base
                 {
                     //ESP Tab
                     ImGui::PushFont(HeaderFont);
-                    if (ImGui::BeginTabItem("ESP"))
+                    if (ImGui::BeginTabItem("Aimbot & ESP"))
                     {
                         ImGui::PopFont();
                         ImGui::Spacing();
+                        ImGui::Checkbox("Enable aimbot", &cheatState.aimbotEnabled);
+
+                        static bool waitingForKey = false;
+
+                        // Get key name
+                        char keyName[64] = "Unknown";
+                        DWORD scanCode = MapVirtualKeyA(cheatState.aimbotHotkey, MAPVK_VK_TO_VSC);
+                        if (scanCode)
+                            GetKeyNameTextA(scanCode << 16, keyName, sizeof(keyName));
+
+                        // Display key selector
+                        ImGui::Text("Aimbot Hotkey: ");
+                        ImGui::SameLine();
+                        if (ImGui::Button(keyName))
+                            waitingForKey = true;
+
+                        // Wait for new key press
+                        if (waitingForKey)
+                        {
+                            ImGui::Text("Press any key...");
+                            for (int vk = 0x01; vk <= 0xFE; ++vk)
+                            {
+                                if (GetAsyncKeyState(vk) & 0x8000)
+                                {
+                                    cheatState.aimbotHotkey = vk;
+                                    waitingForKey = false;
+                                    break;
+                                }
+                            }
+                        }
+                        ImGui::Checkbox("Draw FOV", &cheatState.aimbotDrawFOV);
+                        ImGui::SliderFloat("Aimbot FOV", &cheatState.aimbotFov, 1.0f, 180.0f);
+                        ImGui::SliderFloat("Aimbot Smooth", &cheatState.aimbotSmooth, 0.0f, 1.0f);
+
                         ImGui::SeparatorEx(1.0f);
 
                         ImGui::Checkbox("Enable ESP", &cheatState.espEnabled);
@@ -81,20 +115,15 @@ namespace DX11Base
                         ImGui::Checkbox("Draw Boxes", &cheatState.espBoxes);
                         ImGui::Checkbox("Show Names", &cheatState.espShowNames);
                         ImGui::Checkbox("Show Distance", &cheatState.espShowDistance);
-                        ImGui::SliderFloat("Distance", &cheatState.espDistance, 200.0f, 20000.0f);
+                        ImGui::Checkbox("Show Health", &cheatState.espShowPalHealth);
+                        ImGui::SliderFloat("Distance", &cheatState.espDistance, 200.0f, 30000.0f);
 
                         ImGui::SeparatorEx(1.0f);
                         ImGui::Text("Filters");
 
                         ImGui::Checkbox("Show Pals", &cheatState.espShowPals);
-                        ImGui::Checkbox("Show Health", &cheatState.espShowPalHealth);
-                        ImGui::Checkbox("Show Pickup Items", &cheatState.espShowRelics);
+                        ImGui::Checkbox("Show Relics", &cheatState.espShowRelics);
                         ImGui::Separator();
-                        ImGui::SeparatorEx(1.0f);
-                        ImGui::Text("Aimbot test");
-                        ImGui::Checkbox("Enable aimbot", &cheatState.aimbotEnabled);
-						ImGui::SliderFloat("Aimbot FOV", &cheatState.aimbotFov, 1.0f, 180.0f);
-                        ImGui::SliderFloat("Aimbot Smooth", &cheatState.aimbotSmooth, 0.0f, 1.0f);
 
                         ImGui::EndTabItem();
                     }
@@ -361,7 +390,26 @@ namespace DX11Base
         SetDemiGodMode();
         DrawPalESP();
         DrawRelicESP();
-        RunPalAimbot();
+
+        if (cheatState.aimbotEnabled && (GetAsyncKeyState(cheatState.aimbotHotkey) & 0x8000))
+        {
+            RunPalAimbot();
+        }
+		//Draw aimbot FOV circle if enabled
+        if (cheatState.aimbotEnabled && cheatState.aimbotDrawFOV)
+        {
+            ImVec2 screenCenter = ImVec2(ImGui::GetIO().DisplaySize.x / 2.0f,
+                ImGui::GetIO().DisplaySize.y / 2.0f);
+
+            ImDrawList* drawList = ImGui::GetBackgroundDrawList();
+            drawList->AddCircle(
+                screenCenter,
+                cheatState.aimbotFov,
+                IM_COL32(180, 180, 180, 180), // Yellow-ish, semi-transparent
+                64,                         // Segments (smoother circle)
+                2.0f                        // Thickness
+            );
+        }
 
         if (g_Engine->bShowHud && !g_Engine->bShowMenu)
         {

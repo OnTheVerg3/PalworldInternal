@@ -44,15 +44,17 @@ struct CheatState
     //Aimbot
 	bool aimbotEnabled = false;
 	bool aimbotShowFov = false;
+	bool aimbotDrawFOV = false;
 	float aimbotFov = 20.0f;
 	float aimbotSmooth = 0.5f;
+    int aimbotHotkey = VK_MENU;
 
     // ESP
     bool espEnabled = false;
     bool espBoxes = false;
-    bool espShowNames = false;
+    bool espShowNames = true;
     bool espShowDistance = false;
-    float espDistance = 5000.0f;
+    float espDistance = 10000.0f;
     // ESP Filters
     bool espShowPalHealth = false;
     bool espShowPals = true;
