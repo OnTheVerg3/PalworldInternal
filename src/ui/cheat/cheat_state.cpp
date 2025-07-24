@@ -3,9 +3,12 @@
 #include "Engine_classes.hpp"
 #include "Pal_classes.hpp"
 #include "Menu.h"
+#include "Engine.h"
+#include <libs/MinHook/MinHook.h>
 
 using namespace SDK;
 using namespace Helper;
+using namespace DX11Base;
 
 std::vector<SDK::APalPlayerCharacter*> g_PlayerList;
 SDK::APalPlayerCharacter* selectedPlayer = nullptr;

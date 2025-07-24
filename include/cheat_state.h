@@ -23,6 +23,7 @@ void AddTechPoints();
 void AddAncientTechPoints();
 void AddWaypointLocation(const std::string& wpName);
 bool RemoveWaypointLocationByName(const std::string& wpName);
+void InfHP();
 
 struct CheatState
 { 
@@ -45,12 +46,12 @@ struct CheatState
 	bool aimbotEnabled = false;
 	bool aimbotShowFov = false;
 	bool aimbotDrawFOV = false;
-	float aimbotFov = 20.0f;
-	float aimbotSmooth = 0.5f;
+	float aimbotFov = 60.0f;
+	float aimbotSmooth = 0.2f;
     int aimbotHotkey = VK_MENU;
 
     // ESP
-    bool espEnabled = false;
+    bool espEnabled = true;
     bool espBoxes = false;
     bool espShowNames = true;
     bool espShowDistance = false;

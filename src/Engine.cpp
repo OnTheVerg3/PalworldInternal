@@ -3,7 +3,6 @@
 #include <Menu.h>
 #include <src/ui/fonts.h>
 
-
 IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 namespace DX11Base 
@@ -253,6 +252,7 @@ namespace DX11Base
 		{
 			Hooking::CreateHook((void*)MethodsTable[IDXGI_PRESENT], &SwapChain_Present_hook, (void**)&IDXGISwapChain_Present_stub);
 			Hooking::CreateHook((void*)MethodsTable[IDXGI_RESIZE_BUFFERS], &SwapChain_ResizeBuffers_hook, (void**)&IDXGISwapChain_ResizeBuffers_stub);
+
 			bInit = true;
 			return true;
 		}

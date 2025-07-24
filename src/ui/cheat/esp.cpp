@@ -214,12 +214,22 @@ void UpdateRelicCache(UWorld* world)
     cachedRelics.clear();
     if (!world) return;
 
-    for (ULevel* level : world->Levels)
+    // Validate Levels array
+    const auto& levels = world->Levels;
+    if (levels.Num() <= 0)
+        return;
+
+    for (int32 i = 0; i < levels.Num(); ++i)
     {
+        if (!levels.IsValidIndex(i)) continue;
+
+        ULevel* level = levels[i];
         if (!level) continue;
 
-        for (AActor* actor : level->Actors)
+        const auto& actors = level->Actors;
+        for (int32 j = 0; j < actors.Num(); ++j)
         {
+            AActor* actor = actors[j];
             if (!actor || !actor->Class) continue;
 
             std::string className = actor->Class->GetName();

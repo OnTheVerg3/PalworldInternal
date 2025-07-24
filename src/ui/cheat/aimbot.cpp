@@ -120,7 +120,22 @@ void RunPalAimbot()
     AimbotTarget target = FindBestPalTarget(controller, screenCenter, cheatState.aimbotFov);
     if (!target.Pal) return;
 
-    FVector targetLoc = target.Pal->K2_GetActorLocation();
+    USkeletalMeshComponent* mesh = target.Pal->Mesh;
+    FVector targetLoc;
+
+    if (mesh)
+    {
+        FName headBoneName = mesh->GetBoneName(6); // index 6 = Head
+        if (mesh->DoesSocketExist(headBoneName))
+        {
+            targetLoc = mesh->GetSocketLocation(headBoneName);
+        }
+    }
+    else
+    {
+        targetLoc = target.Pal->K2_GetActorLocation(); // Fallback
+    }
+
 
     FVector cameraLoc;
     FRotator cameraRot;
