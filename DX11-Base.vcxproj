@@ -170,6 +170,7 @@
     <ClInclude Include="include\Engine.h" />
     <ClInclude Include="include\GameHelper.h" />
     <ClInclude Include="include\helper.h" />
+    <ClInclude Include="include\hotkeys.h" />
     <ClInclude Include="include\ItemList.hpp" />
     <ClInclude Include="include\Menu.h" />
     <ClInclude Include="libs\ImGui\imconfig.h" />
@@ -291,6 +292,7 @@
     <ClCompile Include="src\ui\cheat\aimbot.cpp" />
     <ClCompile Include="src\ui\cheat\cheat_state.cpp" />
     <ClCompile Include="src\ui\cheat\esp.cpp" />
+    <ClCompile Include="src\ui\cheat\hotkeys.cpp" />
     <ClCompile Include="src\ui\imgui_style.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -8,6 +8,7 @@
 #include "ItemList.hpp"
 #include "database.h"  
 #include "ui/cheat/aimbot.h"
+#include "include/hotkeys.h"
 
 namespace DX11Base
 {
@@ -62,16 +63,14 @@ namespace DX11Base
     {
         void TABMain()
         {
-            ImGui::SetNextWindowSize(ImVec2(530, 600), ImGuiCond_FirstUseEver);
+            ImGui::SetNextWindowSize(ImVec2(590, 620), ImGuiCond_FirstUseEver);
             if (ImGui::Begin("##trainer", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoTitleBar))
             {
                 if (ImGui::BeginTabBar("##tabs"))
                 {
                     //ESP Tab
-                    ImGui::PushFont(HeaderFont);
                     if (ImGui::BeginTabItem("Aimbot & ESP"))
                     {
-                        ImGui::PopFont();
                         ImGui::Spacing();
                         ImGui::Checkbox("Enable aimbot", &cheatState.aimbotEnabled);
 
@@ -127,16 +126,10 @@ namespace DX11Base
 
                         ImGui::EndTabItem();
                     }
-                    else
-                    {
-                        ImGui::PopFont();
-                    }
 
                     //Features Tab
-                    ImGui::PushFont(HeaderFont);
                     if (ImGui::BeginTabItem("Features"))
                     {
-                        ImGui::PopFont();
 
                         ImGui::SeparatorEx(1.0f);
                         ImGui::Spacing();
@@ -211,16 +204,10 @@ namespace DX11Base
 
                         ImGui::EndTabItem();
                     }
-                    else
-                    {
-                        ImGui::PopFont();
-                    }
 
                     //Tab3
-                    ImGui::PushFont(HeaderFont);
                     if (ImGui::BeginTabItem("Item Spawner"))
                     {
-                        ImGui::PopFont();
 
                         static int selectedCategoryIndex = 0;
                         static char searchBuf[128] = "";
@@ -287,10 +274,6 @@ namespace DX11Base
                             }
                         }
                         ImGui::EndTabItem();
-                    }
-                    else
-                    {
-                        ImGui::PopFont();
                     }
 
                     static char wpNameBuf[64] = "";
@@ -362,7 +345,13 @@ namespace DX11Base
                         ImGui::EndTabItem();
                     }
 
-
+					//Settings Tab
+                    if (ImGui::BeginTabItem("Settings"))
+                    {
+                        DrawHotkeys();
+                        ImGui::EndTabItem();
+                    }
+                    
                     ImGui::EndTabBar();
                 }
             }
@@ -390,6 +379,7 @@ namespace DX11Base
         SetDemiGodMode();
         DrawPalESP();
         DrawRelicESP();
+        TickHotkeys();
 
         if (cheatState.aimbotEnabled && (GetAsyncKeyState(cheatState.aimbotHotkey) & 0x8000))
         {

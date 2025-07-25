@@ -77,5 +77,23 @@ struct SWaypoint
     }
 };
 
+struct Hotkeys
+{
+    int hotkeyToggleWorldSpeed = VK_F1;
+    int hotkeyStamina = VK_F2;
+    int hotkeyToggleESP = VK_F3;
+    int hotkeyToggleRelic = VK_F4;
+    int hotkeyToggleAttack = VK_F5;
+
+    bool worldSpeedToggled = false;
+	bool staminaToggled = false;
+    bool espToggled = false;
+	bool relicToggled = false;
+	bool attackToggled = false;
+
+};
+
+
 inline CheatState cheatState;
+extern Hotkeys key;
 inline std::vector<SWaypoint> g_Waypoints;
