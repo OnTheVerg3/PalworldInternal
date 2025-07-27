@@ -134,11 +134,14 @@ void DrawPalESP()
         SDK::APalCharacter* pal = pals[i];
         if (!pal)
             continue;
+
         if (pal == player)
             continue;
+
         bool baseWorker = IsABaseWorker(pal, true);
         bool isAlive = IsAlive(pal);
         bool isTamed = IsTamed(pal);
+
         if (baseWorker || !isAlive || isTamed)
             continue;
 
@@ -155,11 +158,12 @@ void DrawPalESP()
             continue;
 
         UPalCharacterParameterComponent* params = pal->CharacterParameterComponent;
-        float currentHealth = params ? static_cast<float>(params->GetHP().Value) : 0.0f;
-        float maxHealth = params ? static_cast<float>(params->GetMaxHP().Value) : 1.0f;
 
         if (cheatState.espShowPalHealth && params)
         {
+            float currentHealth = params ? static_cast<float>(params->GetHP().Value) : 0.0f;
+            float maxHealth = params ? static_cast<float>(params->GetMaxHP().Value) : 1.0f;
+
             float healthFrac = maxHealth > 0 ? (currentHealth / maxHealth) : 0.0f;
             float barWidth = 100.0f;
             float barHeight = 6.0f;
@@ -214,7 +218,6 @@ void UpdateRelicCache(UWorld* world)
     cachedRelics.clear();
     if (!world) return;
 
-    // Validate Levels array
     const auto& levels = world->Levels;
     if (levels.Num() <= 0)
         return;
@@ -229,6 +232,8 @@ void UpdateRelicCache(UWorld* world)
         const auto& actors = level->Actors;
         for (int32 j = 0; j < actors.Num(); ++j)
         {
+            if (!actors.IsValidIndex(j)) continue;
+
             AActor* actor = actors[j];
             if (!actor || !actor->Class) continue;
 

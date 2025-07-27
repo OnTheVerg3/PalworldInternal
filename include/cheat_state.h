@@ -1,8 +1,9 @@
 #pragma once
-
+#include <string>
 
 extern std::vector<SDK::APalPlayerCharacter*> g_PlayerList;
 extern SDK::APalPlayerCharacter* selectedPlayer;
+extern SDK::APalWeaponBase* playerWeapon;
 
 
 void SetInfiniteAmmo(bool bInfAmmo);
@@ -17,16 +18,36 @@ void AddItemToInventoryByName(std::string itemName, int count);
 void TeleportPlayerTo(const SDK::FVector& pos);
 void SetDemiGodMode();
 void SetCameraFov();
+void SetCameraBrightness();
 void SetCraftSpeed();
 void SetPalCraftSpeed();
 void AddTechPoints();
 void AddAncientTechPoints();
 void AddWaypointLocation(const std::string& wpName);
 bool RemoveWaypointLocationByName(const std::string& wpName);
+void CheckWeapon();
+void UpdateWeaponCheats();
 void InfHP();
 
 struct CheatState
 { 
+    // Weapon cheats toggles
+    bool noRecoil = false;
+    bool infiniteAmmo = false;
+    bool instantFire = false;
+    bool fullAuto = false;
+    bool maxDamage = false;
+    // Original weapon values (to restore when toggled off)
+    float defaultRecoilYaw = 0.0f;
+    float defaultRecoilPitch = 0.0f;
+    float defaultRecoilDecay = 0.0f;
+    bool defaultInfiniteAmmo = false;
+    float defaultCoolDown = 0.0f;
+    bool defaultTriggerOnly = true;
+    float defaultDamage = 1.0f;
+
+    bool defaultsSaved = false;
+
     //Features
     float speed = 600.0f;
     float worldSpeed = 1.0f;
@@ -37,17 +58,19 @@ struct CheatState
     bool infStamina = false;
     bool godmode = false;
     float cameraFov = 90.0f;
+    float cameraBrightness = 0.0f;
     float craftSpeed = 1.0f;
     float palCraftSpeed = 1.0f;
     __int32 techPoints = 0;
     __int32 aTechPoints = 0;
+    std::string weaponName = "No Weapon";
 
     //Aimbot
 	bool aimbotEnabled = false;
 	bool aimbotShowFov = false;
 	bool aimbotDrawFOV = false;
-	float aimbotFov = 60.0f;
-	float aimbotSmooth = 0.2f;
+	float aimbotFov = 120.0f;
+	float aimbotSmooth = 0.1f;
     int aimbotHotkey = VK_MENU;
 
     // ESP

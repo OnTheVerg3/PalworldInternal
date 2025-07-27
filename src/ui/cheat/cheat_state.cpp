@@ -5,6 +5,10 @@
 #include "Menu.h"
 #include "Engine.h"
 #include <libs/MinHook/MinHook.h>
+#include <algorithm>
+#include <string>
+#include <locale>
+#include <codecvt>
 
 using namespace SDK;
 using namespace Helper;
@@ -104,6 +108,8 @@ void SetInfiniteAmmo()
 		return;
 
 	APalWeaponBase* pWeapon = pShootComponent->HasWeapon;
+	if (!pWeapon)
+		return;
 
 	pWeapon->IsRequiredBullet = cheatState.infAmmo ? false : true;
 
@@ -201,6 +207,20 @@ void SetCameraFov()
 	cameraComp->AimFOV = cheatState.cameraFov;
 }
 
+void SetCameraBrightness()
+{
+	APalPlayerCharacter* player = GetPalPlayerCharacter();
+	if (!player) return;
+
+	UPalCharacterCameraComponent* cameraComp = player->FollowCamera;
+	if (!cameraComp) return;
+
+	cameraComp->PostProcessSettings.bOverride_AutoExposureBias = true;
+	cameraComp->PostProcessBlendWeight = 1.0f;
+
+	cameraComp->PostProcessSettings.AutoExposureBias = cheatState.cameraBrightness;
+}
+
 void SetCraftSpeed()
 {
 	APalPlayerCharacter* pPalCharacter = GetPalPlayerCharacter();
@@ -267,7 +287,6 @@ void AddTechPoints()
 	pTechData->TechnologyPoint += cheatState.techPoints;
 }
 
-//	
 void AddAncientTechPoints()
 {
 	APalPlayerState* mPlayerState = GetPalPlayerState();
@@ -304,6 +323,88 @@ bool RemoveWaypointLocationByName(const std::string& wpName)
 	}
 	return false;
 }
+
+void CheckWeapon()
+{
+	APalPlayerCharacter* player = GetPalPlayerCharacter();
+	if (!player)
+		return;
+
+	APalWeaponBase* weapon = player->ShooterComponent->HasWeapon;
+	if (weapon)
+	{
+		auto name = weapon->GetName(); // Check type below!
+		cheatState.weaponName = name;
+	}
+	else
+	{
+		cheatState.weaponName = "No Weapon found";
+	}
+
+}
+
+void UpdateWeaponCheats()
+{
+	APalPlayerCharacter* player = GetPalPlayerCharacter();
+	if (!player || !player->ShooterComponent)
+	{
+		cheatState.weaponName = "No Weapon found";
+		cheatState.defaultsSaved = false;
+		return;
+	}
+
+	APalWeaponBase* weapon = player->ShooterComponent->HasWeapon;
+	if (!weapon)
+	{
+		cheatState.weaponName = "No Weapon found";
+		cheatState.defaultsSaved = false;
+		return;
+	}
+
+	cheatState.weaponName = weapon->GetName();
+
+	// Save defaults once
+	if (!cheatState.defaultsSaved)
+	{
+		cheatState.defaultRecoilYaw = weapon->RecoilYawRange;
+		cheatState.defaultRecoilPitch = weapon->RecoilPitchTotalMax;
+		cheatState.defaultRecoilDecay = weapon->RecoilDecaySpeed;
+		cheatState.defaultInfiniteAmmo = weapon->IsInfinityMagazine;
+		cheatState.defaultCoolDown = weapon->CoolDownTime;
+		cheatState.defaultTriggerOnly = weapon->IsTriggerOnlyFireWeapon;
+		cheatState.defaultDamage = weapon->PvPDamageRate;
+		cheatState.defaultsSaved = true;
+	}
+
+	// --- Apply toggles every frame ---
+
+	// No Recoil
+	if (cheatState.noRecoil)
+	{
+		weapon->RecoilYawRange = 0.0f;
+		weapon->RecoilPitchTotalMax = 0.0f;
+		weapon->RecoilDecaySpeed = 9999.0f;
+	}
+	else
+	{
+		weapon->RecoilYawRange = cheatState.defaultRecoilYaw;
+		weapon->RecoilPitchTotalMax = cheatState.defaultRecoilPitch;
+		weapon->RecoilDecaySpeed = cheatState.defaultRecoilDecay;
+	}
+
+	// Infinite Ammo
+	weapon->IsInfinityMagazine = cheatState.infiniteAmmo ? true : cheatState.defaultInfiniteAmmo;
+
+	// Instant Fire
+	weapon->CoolDownTime = cheatState.instantFire ? 0.0f : cheatState.defaultCoolDown;
+
+	// Full Auto
+	weapon->IsTriggerOnlyFireWeapon = cheatState.fullAuto ? false : cheatState.defaultTriggerOnly;
+
+	// Max Damage
+	weapon->PvPDamageRate = cheatState.maxDamage ? 9999.0f : cheatState.defaultDamage;
+}
+
 
 
 //TODO: Implement in the future

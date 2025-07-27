@@ -63,7 +63,7 @@ namespace DX11Base
     {
         void TABMain()
         {
-            ImGui::SetNextWindowSize(ImVec2(590, 620), ImGuiCond_FirstUseEver);
+            ImGui::SetNextWindowSize(ImVec2(620, 700), ImGuiCond_FirstUseEver);
             if (ImGui::Begin("##trainer", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoTitleBar))
             {
                 if (ImGui::BeginTabBar("##tabs"))
@@ -77,7 +77,7 @@ namespace DX11Base
                         static bool waitingForKey = false;
 
                         // Get key name
-                        char keyName[64] = "Unknown";
+                        char keyName[64] = "RMB";
                         DWORD scanCode = MapVirtualKeyA(cheatState.aimbotHotkey, MAPVK_VK_TO_VSC);
                         if (scanCode)
                             GetKeyNameTextA(scanCode << 16, keyName, sizeof(keyName));
@@ -103,7 +103,7 @@ namespace DX11Base
                             }
                         }
                         ImGui::Checkbox("Draw FOV", &cheatState.aimbotDrawFOV);
-                        ImGui::SliderFloat("Aimbot FOV", &cheatState.aimbotFov, 1.0f, 180.0f);
+                        ImGui::SliderFloat("Aimbot FOV", &cheatState.aimbotFov, 1.0f, 280.0f);
                         ImGui::SliderFloat("Aimbot Smooth", &cheatState.aimbotSmooth, 0.0f, 1.0f);
 
                         ImGui::SeparatorEx(1.0f);
@@ -201,6 +201,35 @@ namespace DX11Base
                             SetCameraFov();
                         }
 
+                        if (ImGui::SliderFloat("Brightness", &cheatState.cameraBrightness, 0.0f, 5.0f, "%.2f"))
+                        {
+                            SetCameraBrightness();
+                        }
+
+                        ImGui::EndTabItem();
+                    }
+
+                    if (ImGui::BeginTabItem("Weapon"))
+                    {
+                        ImGui::SeparatorText("Weapon Cheats");
+                        if (cheatState.weaponName == "No Weapon found")
+                        {
+                            // Red color for no weapon
+                            ImGui::TextColored(ImVec4(1.0f, 0.2f, 0.2f, 1.0f), "%s", cheatState.weaponName.c_str());
+                        }
+                        else
+                        {
+                            // Green color for a valid weapon
+                            ImGui::TextColored(ImVec4(0.2f, 1.0f, 0.2f, 1.0f), "%s", cheatState.weaponName.c_str());
+                        }
+
+                        ImGui::Checkbox("No Recoil", &cheatState.noRecoil);
+                        ImGui::Checkbox("Infinite Ammo", &cheatState.infiniteAmmo);
+                        ImGui::Checkbox("Instant Fire (No Cooldown)", &cheatState.instantFire);
+                        ImGui::Checkbox("Full Auto", &cheatState.fullAuto);
+                        ImGui::Checkbox("Max Damage", &cheatState.maxDamage);
+
+                        //Start of Functions
 
                         ImGui::EndTabItem();
                     }
@@ -351,11 +380,12 @@ namespace DX11Base
                         DrawHotkeys();
                         ImGui::EndTabItem();
                     }
+
                     
                     ImGui::EndTabBar();
                 }
             }
-            
+
             if (ImGui::Button("UNHOOK", ImVec2(ImGui::GetContentRegionAvail().x, 20))) {
 #if CONSOLE_OUTPUT
                 g_Console->printdbg("\n\n[+] UNHOOK INITIALIZED\n\n", Console::Colors::red);
@@ -380,6 +410,7 @@ namespace DX11Base
         DrawPalESP();
         DrawRelicESP();
         TickHotkeys();
+        UpdateWeaponCheats();
 
         if (cheatState.aimbotEnabled && (GetAsyncKeyState(cheatState.aimbotHotkey) & 0x8000))
         {
@@ -419,7 +450,7 @@ namespace DX11Base
         if (!g_Engine->bShowDemoWindow && !g_Engine->bShowStyleEditor)
             Styles::BaseStyle();
 
-        if (!ImGui::Begin("(DX11) ImGui Internal Base", &g_Engine->bShowMenu, 96))
+        if (!ImGui::Begin("2", &g_Engine->bShowMenu, 96))
         {
             ImGui::End();
             return;

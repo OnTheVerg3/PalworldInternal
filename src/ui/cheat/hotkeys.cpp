@@ -92,9 +92,9 @@ void DrawHotkeys()
         // 2. Active status (aligned right to label)
         ImGui::SameLine(250); // adjust spacing
         if (entry.activeFlag && *entry.activeFlag)
-            ImGui::TextColored(ImVec4(0.2f, 1.0f, 0.2f, 1.0f), "● ON");
+            ImGui::TextColored(ImVec4(0.2f, 1.0f, 0.2f, 1.0f), "ON");
         else
-            ImGui::TextColored(ImVec4(1.0f, 0.3f, 0.3f, 1.0f), "● OFF");
+            ImGui::TextColored(ImVec4(1.0f, 0.3f, 0.3f, 1.0f), "OFF");
 
         // 3. Hotkey button (far right)
         ImGui::SameLine(350); // align further right
