@@ -94,9 +94,19 @@ void SetPlayerInventoryWeight()
 	if (!pInventory)
 		return;
 
-	pInventory->MaxInventoryWeight= cheatState.weight;
+	pInventory->MaxInventoryWeight = cheatState.weight;
+	pInventory->PassiveBuffedMaxWeight = cheatState.weight;
+
+	pInventory->NowItemWeight = (std::min)(pInventory->NowItemWeight, cheatState.weight);
+	pInventory->PassiveBuffedCurrentWeight = 0.0f;
+
 	pInventory->OnRep_maxInventoryWeight();
+	pInventory->OnRep_BuffMaxWeight();
+	pInventory->OnRep_BuffCurrentWeight();
+
+	// Force server inventory refresh
 	pInventory->RequestForceMarkAllDirty_ToServer(true);
+	
 }
 
 void SetInfiniteAmmo()
@@ -110,8 +120,17 @@ void SetInfiniteAmmo()
 		return;
 
 	APalWeaponBase* pWeapon = pShootComponent->HasWeapon;
-	if (!pWeapon)
+
+	if (pWeapon)
+	{
+		auto name = pWeapon->GetName();
+		cheatState.weaponName = name;
+	}
+	else
+	{
+		cheatState.weaponName = "No Weapon found";
 		return;
+	}
 
 	pWeapon->IsRequiredBullet = cheatState.infAmmo ? false : true;
 

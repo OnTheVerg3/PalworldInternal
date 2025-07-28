@@ -151,6 +151,20 @@ namespace DX11Base
                         }
                         ImGui::Checkbox("Inf Stamina", &cheatState.infStamina);
 
+                        if (ImGui::Checkbox("[Inf Ammo] Applied to:", &cheatState.infAmmo))
+                        {
+                            SetInfiniteAmmo();
+                        }
+                        ImGui::SameLine();
+                        if (cheatState.weaponName == "No Weapon found")
+                        {
+                            ImGui::TextColored(ImVec4(1.0f, 0.2f, 0.2f, 1.0f), "%s", cheatState.weaponName.c_str()); // Red
+                        }
+                        else
+                        {
+                            ImGui::TextColored(ImVec4(0.2f, 1.0f, 0.2f, 1.0f), "%s", cheatState.weaponName.c_str()); // Green
+                        }
+
                         ImGui::Spacing();
                         ImGui::SeparatorEx(1.0f);
                         ImGui::Text("Single Player");
@@ -186,11 +200,6 @@ namespace DX11Base
                         }
 
                         ImGui::Checkbox("Godmode", &cheatState.godmode);
-
-                        if (ImGui::Checkbox("Inf Ammo", &cheatState.infAmmo))
-                        {
-                            SetInfiniteAmmo();
-                        }
 
                         ImGui::Spacing();
                         ImGui::SeparatorEx(1.0f);
