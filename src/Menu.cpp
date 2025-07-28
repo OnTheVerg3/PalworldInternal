@@ -209,31 +209,6 @@ namespace DX11Base
                         ImGui::EndTabItem();
                     }
 
-                    if (ImGui::BeginTabItem("Weapon"))
-                    {
-                        ImGui::SeparatorText("Weapon Cheats");
-                        if (cheatState.weaponName == "No Weapon found")
-                        {
-                            // Red color for no weapon
-                            ImGui::TextColored(ImVec4(1.0f, 0.2f, 0.2f, 1.0f), "%s", cheatState.weaponName.c_str());
-                        }
-                        else
-                        {
-                            // Green color for a valid weapon
-                            ImGui::TextColored(ImVec4(0.2f, 1.0f, 0.2f, 1.0f), "%s", cheatState.weaponName.c_str());
-                        }
-
-                        ImGui::Checkbox("No Recoil", &cheatState.noRecoil);
-                        ImGui::Checkbox("Infinite Ammo", &cheatState.infiniteAmmo);
-                        ImGui::Checkbox("Instant Fire (No Cooldown)", &cheatState.instantFire);
-                        ImGui::Checkbox("Full Auto", &cheatState.fullAuto);
-                        ImGui::Checkbox("Max Damage", &cheatState.maxDamage);
-
-                        //Start of Functions
-
-                        ImGui::EndTabItem();
-                    }
-
                     //Tab3
                     if (ImGui::BeginTabItem("Item Spawner"))
                     {
@@ -410,7 +385,6 @@ namespace DX11Base
         DrawPalESP();
         DrawRelicESP();
         TickHotkeys();
-        UpdateWeaponCheats();
 
         if (cheatState.aimbotEnabled && (GetAsyncKeyState(cheatState.aimbotHotkey) & 0x8000))
         {

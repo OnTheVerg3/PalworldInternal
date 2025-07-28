@@ -26,27 +26,10 @@ void AddAncientTechPoints();
 void AddWaypointLocation(const std::string& wpName);
 bool RemoveWaypointLocationByName(const std::string& wpName);
 void CheckWeapon();
-void UpdateWeaponCheats();
 void InfHP();
 
 struct CheatState
 { 
-    // Weapon cheats toggles
-    bool noRecoil = false;
-    bool infiniteAmmo = false;
-    bool instantFire = false;
-    bool fullAuto = false;
-    bool maxDamage = false;
-    // Original weapon values (to restore when toggled off)
-    float defaultRecoilYaw = 0.0f;
-    float defaultRecoilPitch = 0.0f;
-    float defaultRecoilDecay = 0.0f;
-    bool defaultInfiniteAmmo = false;
-    float defaultCoolDown = 0.0f;
-    bool defaultTriggerOnly = true;
-    float defaultDamage = 1.0f;
-
-    bool defaultsSaved = false;
 
     //Features
     float speed = 600.0f;

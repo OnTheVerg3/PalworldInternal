@@ -95,6 +95,8 @@ void SetPlayerInventoryWeight()
 		return;
 
 	pInventory->MaxInventoryWeight= cheatState.weight;
+	pInventory->OnRep_maxInventoryWeight();
+	pInventory->RequestForceMarkAllDirty_ToServer(true);
 }
 
 void SetInfiniteAmmo()
@@ -342,69 +344,6 @@ void CheckWeapon()
 	}
 
 }
-
-void UpdateWeaponCheats()
-{
-	APalPlayerCharacter* player = GetPalPlayerCharacter();
-	if (!player || !player->ShooterComponent)
-	{
-		cheatState.weaponName = "No Weapon found";
-		cheatState.defaultsSaved = false;
-		return;
-	}
-
-	APalWeaponBase* weapon = player->ShooterComponent->HasWeapon;
-	if (!weapon)
-	{
-		cheatState.weaponName = "No Weapon found";
-		cheatState.defaultsSaved = false;
-		return;
-	}
-
-	cheatState.weaponName = weapon->GetName();
-
-	// Save defaults once
-	if (!cheatState.defaultsSaved)
-	{
-		cheatState.defaultRecoilYaw = weapon->RecoilYawRange;
-		cheatState.defaultRecoilPitch = weapon->RecoilPitchTotalMax;
-		cheatState.defaultRecoilDecay = weapon->RecoilDecaySpeed;
-		cheatState.defaultInfiniteAmmo = weapon->IsInfinityMagazine;
-		cheatState.defaultCoolDown = weapon->CoolDownTime;
-		cheatState.defaultTriggerOnly = weapon->IsTriggerOnlyFireWeapon;
-		cheatState.defaultDamage = weapon->PvPDamageRate;
-		cheatState.defaultsSaved = true;
-	}
-
-	// --- Apply toggles every frame ---
-
-	// No Recoil
-	if (cheatState.noRecoil)
-	{
-		weapon->RecoilYawRange = 0.0f;
-		weapon->RecoilPitchTotalMax = 0.0f;
-		weapon->RecoilDecaySpeed = 9999.0f;
-	}
-	else
-	{
-		weapon->RecoilYawRange = cheatState.defaultRecoilYaw;
-		weapon->RecoilPitchTotalMax = cheatState.defaultRecoilPitch;
-		weapon->RecoilDecaySpeed = cheatState.defaultRecoilDecay;
-	}
-
-	// Infinite Ammo
-	weapon->IsInfinityMagazine = cheatState.infiniteAmmo ? true : cheatState.defaultInfiniteAmmo;
-
-	// Instant Fire
-	weapon->CoolDownTime = cheatState.instantFire ? 0.0f : cheatState.defaultCoolDown;
-
-	// Full Auto
-	weapon->IsTriggerOnlyFireWeapon = cheatState.fullAuto ? false : cheatState.defaultTriggerOnly;
-
-	// Max Damage
-	weapon->PvPDamageRate = cheatState.maxDamage ? 9999.0f : cheatState.defaultDamage;
-}
-
 
 
 //TODO: Implement in the future
