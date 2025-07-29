@@ -48,9 +48,18 @@ namespace InSDKUtils
 	template<typename FuncType>
 	inline FuncType GetVirtualFunction(const void* ObjectInstance, int32 Index)
 	{
-		void** VTable = *reinterpret_cast<void***>(const_cast<void*>(ObjectInstance));
+		if (!ObjectInstance || reinterpret_cast<uintptr_t>(ObjectInstance) < 0x10000)
+			return nullptr;
 
-		return reinterpret_cast<FuncType>(VTable[Index]);
+		void*** vtablePtr = (void***)ObjectInstance;
+		if (!vtablePtr || reinterpret_cast<uintptr_t>(vtablePtr) < 0x10000)
+			return nullptr;
+
+		void** vtable = *vtablePtr;
+		if (!vtable || reinterpret_cast<uintptr_t>(vtable) < 0x10000)
+			return nullptr;
+
+		return reinterpret_cast<FuncType>(vtable[Index]);
 	}
 
 	template<typename FuncType, typename... ParamTypes>

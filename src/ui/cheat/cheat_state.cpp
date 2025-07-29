@@ -35,6 +35,7 @@ void ChangeSpeed(float speed)
     APalPlayerCharacter* pCharacter = GetPalPlayerCharacter();
 
     auto movement = pCharacter->CharacterMovement;
+	if (!movement) return;
 
     movement->MaxWalkSpeed = speed;
     movement->MaxAcceleration = 1000 * speed;
@@ -184,6 +185,9 @@ void TeleportPlayerTo(const FVector& pos)
 	// Adjust to avoid spawning inside terrain
 	FVector safeLocation = FVector(pos.X, pos.Y + 100.0f, pos.Z);
 	FQuat defaultRotation(0.f, 0.f, 0.f, 1.f);
+
+	if (!pPalPlayerController->Transmitter || !pPalPlayerController->Transmitter->Player) return;
+
 	// Get player unique ID (needed for server call)
 	FGuid guid = pPalPlayerState->PlayerUId;
 
@@ -221,8 +225,11 @@ void SetDemiGodMode()
 void SetCameraFov()
 {
 	APalPlayerCharacter* player = GetPalPlayerCharacter();
+	if (!player) return;
 
 	auto cameraComp = player->FollowCamera;
+	if (!cameraComp) return;
+
 	cameraComp->WalkFOV = cheatState.cameraFov;
 	cameraComp->SprintFOV = cheatState.cameraFov;
 	cameraComp->AimFOV = cheatState.cameraFov;
@@ -348,20 +355,18 @@ bool RemoveWaypointLocationByName(const std::string& wpName)
 void CheckWeapon()
 {
 	APalPlayerCharacter* player = GetPalPlayerCharacter();
-	if (!player)
-		return;
+	if (!player) return;
 
-	APalWeaponBase* weapon = player->ShooterComponent->HasWeapon;
-	if (weapon)
-	{
-		auto name = weapon->GetName(); // Check type below!
-		cheatState.weaponName = name;
+	auto shooter = player->ShooterComponent;
+	if (!shooter) return;
+
+	APalWeaponBase* weapon = shooter->HasWeapon;
+	if (weapon) {
+		cheatState.weaponName = weapon->GetName();
 	}
-	else
-	{
+	else {
 		cheatState.weaponName = "No Weapon found";
 	}
-
 }
 
 

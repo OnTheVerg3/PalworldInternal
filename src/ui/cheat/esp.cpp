@@ -112,6 +112,10 @@ void DrawPalESP()
     if (!cheatState.espEnabled || !cheatState.espShowPals)
         return;
 
+    auto drawList = ImGui::GetBackgroundDrawList(); // Making sure that ImGui is ready
+    if (!drawList)
+        return;
+
     APalPlayerCharacter* player = GetPalPlayerCharacter();
     if (!player)
         return;
@@ -131,6 +135,9 @@ void DrawPalESP()
 
     for (int i = 0; i < pals.Num(); ++i)
     {
+        if (!pals.IsValidIndex(i))
+            continue;
+
         SDK::APalCharacter* pal = pals[i];
         if (!pal)
             continue;
@@ -161,8 +168,17 @@ void DrawPalESP()
 
         if (cheatState.espShowPalHealth && params)
         {
-            float currentHealth = params ? static_cast<float>(params->GetHP().Value) : 0.0f;
-            float maxHealth = params ? static_cast<float>(params->GetMaxHP().Value) : 1.0f;
+            float currentHealth = 0.0f;
+            float maxHealth = 1.0f;
+
+            if (params)
+            {
+                auto hp = params->GetHP();
+                auto maxHp = params->GetMaxHP();
+
+                currentHealth = (hp.Value >= 0) ? static_cast<float>(hp.Value) : 0.0f;
+                maxHealth = (maxHp.Value > 0) ? static_cast<float>(maxHp.Value) : 1.0f;
+            }
 
             float healthFrac = maxHealth > 0 ? (currentHealth / maxHealth) : 0.0f;
             float barWidth = 100.0f;
@@ -198,8 +214,15 @@ void DrawPalESP()
         }
 
 
-        // Pal name (change this to display something nicer if you want)
-        std::string palName = GetCleanPalName(pal->GetName());
+        std::string palName = "Unknown";
+        if (pal)
+        {
+            std::string rawName = pal->GetName(); //Valid check
+            if (!rawName.empty())
+                palName = GetCleanPalName(rawName);
+        }
+
+
         // Show name
         char label[128];
         snprintf(label, sizeof(label), "%s", palName.c_str());
@@ -219,23 +242,23 @@ void UpdateRelicCache(UWorld* world)
     if (!world) return;
 
     const auto& levels = world->Levels;
-    if (levels.Num() <= 0)
+    if (levels.Num() == 0)
         return;
 
     for (int32 i = 0; i < levels.Num(); ++i)
     {
-        if (!levels.IsValidIndex(i)) continue;
-
         ULevel* level = levels[i];
         if (!level) continue;
 
         const auto& actors = level->Actors;
         for (int32 j = 0; j < actors.Num(); ++j)
         {
-            if (!actors.IsValidIndex(j)) continue;
 
             AActor* actor = actors[j];
             if (!actor || !actor->Class) continue;
+
+            if(actor->bHidden)
+				continue;
 
             std::string className = actor->Class->GetName();
             if (className == "BP_LevelObject_Relic_C")
@@ -254,6 +277,17 @@ void DrawRelicESP()
     UWorld* world = UWorld::GetWorld();
     if (!world) return;
 
+    if (world->Levels.Num() == 0) {
+        cachedRelics.clear();
+        return;
+    }
+
+    if (!world->OwningGameInstance)
+    {
+        cachedRelics.clear();
+        return;
+    }
+
     double currentTime = UKismetSystemLibrary::GetGameTimeInSeconds(world);
     if (currentTime - lastRelicScan > scanInterval)
     {
@@ -261,32 +295,95 @@ void DrawRelicESP()
         lastRelicScan = currentTime;
     }
 
+
+
     APalPlayerCharacter* player = GetPalPlayerCharacter();
-    if (!player) return;
+    if (!player)
+    {
+        cachedRelics.clear();
+        return;
+    }
 
     APlayerController* controller = reinterpret_cast<APlayerController*>(player->Controller);
-    if (!controller) return;
+    if (!controller)
+    {
+        cachedRelics.clear();
+        return;
+    }
 
     FVector cameraLoc;
     FRotator cameraRot;
     controller->GetPlayerViewPoint(&cameraLoc, &cameraRot);
 
-    for (AActor* actor : cachedRelics)
+    // Remove null actors before using them
+    // Cleanup only null pointers
+    cachedRelics.erase(
+        std::remove_if(
+            cachedRelics.begin(),
+            cachedRelics.end(),
+            [](AActor* actor) {
+                return actor == nullptr;
+            }
+        ),
+        cachedRelics.end()
+    );
+
+
+    for (auto it = cachedRelics.begin(); it != cachedRelics.end(); )
     {
-        if (!actor) continue;
+        AActor* actor = *it;
+
+        if (!actor || reinterpret_cast<uintptr_t>(actor) < 0x10000)
+        {
+            it = cachedRelics.erase(it);
+            continue;
+        }
+
+        // Check if Class pointer is valid
+        uintptr_t classPtr = reinterpret_cast<uintptr_t>(actor->Class);
+        if (classPtr < 0x10000)
+        {
+            it = cachedRelics.erase(it);
+            continue;
+        }
+
+        //trying to get the name safely because it crashes always
+        std::string className;
+        try
+        {
+            className = actor->Class->GetName();
+        }
+        catch (...)
+        {
+            it = cachedRelics.erase(it);
+            continue;
+        }
+
+        if (className == "BP_LevelObject_Relic_C" || className.find("PalLevelObjectRelic") != std::string::npos)
+        {
+            APalLevelObjectObtainable* obtainable = reinterpret_cast<APalLevelObjectObtainable*>(actor);
+            if (obtainable && obtainable->bPickedInClient)
+            {
+                ++it;
+                continue;
+            }
+        }
+
 
         FVector relicLoc = actor->K2_GetActorLocation();
         float distance = relicLoc.GetDistanceTo(cameraLoc);
-        if (distance > cheatState.espDistance)
-            continue;
 
-        FVector2D screenPos;
-        if (!controller->ProjectWorldLocationToScreen(relicLoc, &screenPos, false))
-            continue;
-
-        char label[64];
-        snprintf(label, sizeof(label), "Relic");
-        DrawRelicESPText(ImVec2(screenPos.X, screenPos.Y), label, distance);
+        if (distance <= cheatState.espDistance)
+        {
+            FVector2D screenPos;
+            if (controller->ProjectWorldLocationToScreen(relicLoc, &screenPos, false))
+            {
+                char label[64];
+                snprintf(label, sizeof(label), "Relic");
+                DrawRelicESPText(ImVec2(screenPos.X, screenPos.Y), label, distance);
+            }
+        }
+        ++it;
     }
 }
 
