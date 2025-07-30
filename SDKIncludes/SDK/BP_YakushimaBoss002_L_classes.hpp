@@ -18,12 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_YakushimaBoss002_L.BP_YakushimaBoss002_L_C
-// 0x0000 (0x0B50 - 0x0B50)
+// 0x0000 (0x0B60 - 0x0B60)
 class ABP_YakushimaBoss002_L_C final : public ABP_YakushimaBoss002_PartBase_C
 {
 public:
-	uint8                                         Pad_B41[0x7];                                      // 0x0B41(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_YakushimaBoss002_L_C;            // 0x0B48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_YakushimaBoss002_L_C;            // 0x0B58(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_YakushimaBoss002_L(int32 EntryPoint);
@@ -41,8 +40,8 @@ public:
 	}
 };
 static_assert(alignof(ABP_YakushimaBoss002_L_C) == 0x000010, "Wrong alignment on ABP_YakushimaBoss002_L_C");
-static_assert(sizeof(ABP_YakushimaBoss002_L_C) == 0x000B50, "Wrong size on ABP_YakushimaBoss002_L_C");
-static_assert(offsetof(ABP_YakushimaBoss002_L_C, UberGraphFrame_BP_YakushimaBoss002_L_C) == 0x000B48, "Member 'ABP_YakushimaBoss002_L_C::UberGraphFrame_BP_YakushimaBoss002_L_C' has a wrong offset!");
+static_assert(sizeof(ABP_YakushimaBoss002_L_C) == 0x000B60, "Wrong size on ABP_YakushimaBoss002_L_C");
+static_assert(offsetof(ABP_YakushimaBoss002_L_C, UberGraphFrame_BP_YakushimaBoss002_L_C) == 0x000B58, "Member 'ABP_YakushimaBoss002_L_C::UberGraphFrame_BP_YakushimaBoss002_L_C' has a wrong offset!");
 
 }
 

@@ -30,6 +30,16 @@ enum class EClusterConnectionTypeEnum : uint8
 	Chaos_MAX                                = 7,
 };
 
+// ScriptStruct ChaosSolverEngine.CrumblingEventCallbackWrapper
+// 0x0040 (0x0040 - 0x0000)
+struct alignas(0x10) FCrumblingEventCallbackWrapper final
+{
+public:
+	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FCrumblingEventCallbackWrapper) == 0x000010, "Wrong alignment on FCrumblingEventCallbackWrapper");
+static_assert(sizeof(FCrumblingEventCallbackWrapper) == 0x000040, "Wrong size on FCrumblingEventCallbackWrapper");
+
 // ScriptStruct ChaosSolverEngine.ChaosPhysicsCollisionInfo
 // 0x00C0 (0x00C0 - 0x0000)
 struct FChaosPhysicsCollisionInfo final
@@ -60,16 +70,6 @@ static_assert(offsetof(FChaosPhysicsCollisionInfo, AngularVelocity) == 0x000088,
 static_assert(offsetof(FChaosPhysicsCollisionInfo, OtherAngularVelocity) == 0x0000A0, "Member 'FChaosPhysicsCollisionInfo::OtherAngularVelocity' has a wrong offset!");
 static_assert(offsetof(FChaosPhysicsCollisionInfo, Mass) == 0x0000B8, "Member 'FChaosPhysicsCollisionInfo::Mass' has a wrong offset!");
 static_assert(offsetof(FChaosPhysicsCollisionInfo, OtherMass) == 0x0000BC, "Member 'FChaosPhysicsCollisionInfo::OtherMass' has a wrong offset!");
-
-// ScriptStruct ChaosSolverEngine.BreakEventCallbackWrapper
-// 0x0040 (0x0040 - 0x0000)
-struct alignas(0x10) FBreakEventCallbackWrapper final
-{
-public:
-	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FBreakEventCallbackWrapper) == 0x000010, "Wrong alignment on FBreakEventCallbackWrapper");
-static_assert(sizeof(FBreakEventCallbackWrapper) == 0x000040, "Wrong size on FBreakEventCallbackWrapper");
 
 // ScriptStruct ChaosSolverEngine.ChaosRemovalEvent
 // 0x0028 (0x0028 - 0x0000)
@@ -134,6 +134,16 @@ static_assert(offsetof(FChaosCrumblingEvent, Mass) == 0x000070, "Member 'FChaosC
 static_assert(offsetof(FChaosCrumblingEvent, LocalBounds) == 0x000078, "Member 'FChaosCrumblingEvent::LocalBounds' has a wrong offset!");
 static_assert(offsetof(FChaosCrumblingEvent, Children) == 0x0000B0, "Member 'FChaosCrumblingEvent::Children' has a wrong offset!");
 
+// ScriptStruct ChaosSolverEngine.BreakEventCallbackWrapper
+// 0x0040 (0x0040 - 0x0000)
+struct alignas(0x10) FBreakEventCallbackWrapper final
+{
+public:
+	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FBreakEventCallbackWrapper) == 0x000010, "Wrong alignment on FBreakEventCallbackWrapper");
+static_assert(sizeof(FBreakEventCallbackWrapper) == 0x000040, "Wrong size on FBreakEventCallbackWrapper");
+
 // ScriptStruct ChaosSolverEngine.RemovalEventCallbackWrapper
 // 0x0040 (0x0040 - 0x0000)
 struct alignas(0x10) FRemovalEventCallbackWrapper final
@@ -143,16 +153,6 @@ public:
 };
 static_assert(alignof(FRemovalEventCallbackWrapper) == 0x000010, "Wrong alignment on FRemovalEventCallbackWrapper");
 static_assert(sizeof(FRemovalEventCallbackWrapper) == 0x000040, "Wrong size on FRemovalEventCallbackWrapper");
-
-// ScriptStruct ChaosSolverEngine.CrumblingEventCallbackWrapper
-// 0x0040 (0x0040 - 0x0000)
-struct alignas(0x10) FCrumblingEventCallbackWrapper final
-{
-public:
-	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FCrumblingEventCallbackWrapper) == 0x000010, "Wrong alignment on FCrumblingEventCallbackWrapper");
-static_assert(sizeof(FCrumblingEventCallbackWrapper) == 0x000040, "Wrong size on FCrumblingEventCallbackWrapper");
 
 // ScriptStruct ChaosSolverEngine.ChaosHandlerSet
 // 0x0058 (0x0058 - 0x0000)

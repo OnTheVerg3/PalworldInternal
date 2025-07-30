@@ -18,7 +18,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_AIAction_TurnAndEncount_YakushimaBoss002.BP_AIAction_TurnAndEncount_YakushimaBoss002_C
 // 0x0000 (0x0188 - 0x0188)
-class UBP_AIAction_TurnAndEncount_YakushimaBoss002_C final : public UBP_AIAction_TurnAndEncount_C
+class UBP_AIAction_TurnAndEncount_YakushimaBoss002_C : public UBP_AIAction_TurnAndEncount_C
 {
 public:
 	static class UClass* StaticClass()

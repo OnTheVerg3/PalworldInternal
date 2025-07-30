@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ShooterAnime_ThrowBase.BP_ShooterAnime_ThrowBase_C
-// 0x0018 (0x02A0 - 0x0288)
+// 0x0018 (0x0340 - 0x0328)
 class UBP_ShooterAnime_ThrowBase_C final : public UPalShooterAnimeAssetBase
 {
 public:
-	class UAnimMontage*                           Ride_Fire_Front;                                   // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           Ride_Fire_Right;                                   // 0x0290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           Ride_Fire_Left;                                    // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           Ride_Fire_Front;                                   // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           Ride_Fire_Right;                                   // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           Ride_Fire_Left;                                    // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ChangeRidePullTriggerAnime(EPalStepAxisType Direction);
@@ -40,10 +40,10 @@ public:
 	}
 };
 static_assert(alignof(UBP_ShooterAnime_ThrowBase_C) == 0x000008, "Wrong alignment on UBP_ShooterAnime_ThrowBase_C");
-static_assert(sizeof(UBP_ShooterAnime_ThrowBase_C) == 0x0002A0, "Wrong size on UBP_ShooterAnime_ThrowBase_C");
-static_assert(offsetof(UBP_ShooterAnime_ThrowBase_C, Ride_Fire_Front) == 0x000288, "Member 'UBP_ShooterAnime_ThrowBase_C::Ride_Fire_Front' has a wrong offset!");
-static_assert(offsetof(UBP_ShooterAnime_ThrowBase_C, Ride_Fire_Right) == 0x000290, "Member 'UBP_ShooterAnime_ThrowBase_C::Ride_Fire_Right' has a wrong offset!");
-static_assert(offsetof(UBP_ShooterAnime_ThrowBase_C, Ride_Fire_Left) == 0x000298, "Member 'UBP_ShooterAnime_ThrowBase_C::Ride_Fire_Left' has a wrong offset!");
+static_assert(sizeof(UBP_ShooterAnime_ThrowBase_C) == 0x000340, "Wrong size on UBP_ShooterAnime_ThrowBase_C");
+static_assert(offsetof(UBP_ShooterAnime_ThrowBase_C, Ride_Fire_Front) == 0x000328, "Member 'UBP_ShooterAnime_ThrowBase_C::Ride_Fire_Front' has a wrong offset!");
+static_assert(offsetof(UBP_ShooterAnime_ThrowBase_C, Ride_Fire_Right) == 0x000330, "Member 'UBP_ShooterAnime_ThrowBase_C::Ride_Fire_Right' has a wrong offset!");
+static_assert(offsetof(UBP_ShooterAnime_ThrowBase_C, Ride_Fire_Left) == 0x000338, "Member 'UBP_ShooterAnime_ThrowBase_C::Ride_Fire_Left' has a wrong offset!");
 
 }
 

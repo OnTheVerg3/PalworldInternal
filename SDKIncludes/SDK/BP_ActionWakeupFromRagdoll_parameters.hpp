@@ -179,136 +179,169 @@ static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_ExecuteUbergraph_BP_ActionWa
 static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_ExecuteUbergraph_BP_ActionWakeupFromRagdoll, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000258, "Member 'BP_ActionWakeupFromRagdoll_C_ExecuteUbergraph_BP_ActionWakeupFromRagdoll::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function BP_ActionWakeupFromRagdoll.BP_ActionWakeupFromRagdoll_C.GroundCheckAdjust
-// 0x0468 (0x0468 - 0x0000)
+// 0x0618 (0x0618 - 0x0000)
 struct BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust final
 {
 public:
-	struct FVector                                NextActorPos;                                      // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         Ignore;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
-	struct FVector                                rayStartPos;                                       // 0x0028(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Const_RayStartUpOffset;                            // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue;           // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_1;         // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_2;         // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetUnscaledCapsuleHalfHeight_ReturnValue; // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_BreakVector_X;                            // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_3;         // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_4;         // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetUnscaledCapsuleHalfHeight_ReturnValue_1; // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_5;         // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetUnscaledCapsuleHalfHeight_ReturnValue_2; // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_LineTraceSingle_OutHit;                   // 0x0118(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x0208(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0221(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_222[0x2];                                      // 0x0222(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x0224(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22C[0x4];                                      // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0230(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0248(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0260(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0278(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0298(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x02A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C4[0x4];                                      // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x02C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x02E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x02F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X_1;                          // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y_1;                          // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z_1;                          // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0328(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_3;           // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x0348(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0360(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x0448(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_449[0x7];                                      // 0x0449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0458(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast_1;        // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Const_RayDownOffset;                               // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                NextActorPos;                                      // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         Ignore;                                            // 0x0020(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	struct FVector                                rayStartPos;                                       // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Const_RayStartUpOffset;                            // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue;           // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingle_OutHit;                   // 0x00A8(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x0198(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B2[0x2];                                      // 0x01B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x01C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x01D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x01F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0208(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0230(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_254[0x4];                                      // 0x0254(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0258(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0270(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_1;         // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x02A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_2;         // 0x02B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_3;         // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_4;         // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x02C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetUnscaledCapsuleHalfHeight_ReturnValue; // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E4[0x4];                                      // 0x02E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_BreakVector_X_1;                          // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y_1;                          // 0x02F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z_1;                          // 0x02F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_5;         // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x0318(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_2;        // 0x0330(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0348(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x0430(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_431[0x7];                                      // 0x0431(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0438(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingle_OutHit_1;                 // 0x0450(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingle_ReturnValue_1;            // 0x0538(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit_1;            // 0x0539(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap_1;         // 0x053A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_53B[0x1];                                      // 0x053B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time_1;                    // 0x053C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance_1;                // 0x0540(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_544[0x4];                                      // 0x0544(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location_1;                // 0x0548(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint_1;             // 0x0560(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal_1;                  // 0x0578(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal_1;            // 0x0590(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat_1;                 // 0x05A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor_1;                // 0x05B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent_1;            // 0x05B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName_1;             // 0x05C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName_1;                // 0x05C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem_1;                 // 0x05D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex_1;            // 0x05D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex_1;               // 0x05D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5DC[0x4];                                      // 0x05DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart_1;              // 0x05E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd_1;                // 0x05F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0610(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust) == 0x000008, "Wrong alignment on BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust");
-static_assert(sizeof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust) == 0x000468, "Wrong size on BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, NextActorPos) == 0x000000, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::NextActorPos' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, Ignore) == 0x000018, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::Ignore' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, rayStartPos) == 0x000028, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::rayStartPos' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, Const_RayStartUpOffset) == 0x000040, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::Const_RayStartUpOffset' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetActionCharacter_ReturnValue) == 0x000048, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetActionCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetActionCharacter_ReturnValue_1) == 0x000050, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetActionCharacter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetActionCharacter_ReturnValue_2) == 0x000058, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetActionCharacter_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000060, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetUnscaledCapsuleHalfHeight_ReturnValue) == 0x000078, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetUnscaledCapsuleHalfHeight_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakVector_X) == 0x000080, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakVector_Y) == 0x000088, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakVector_Z) == 0x000090, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000098, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetActionCharacter_ReturnValue_3) == 0x0000A0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetActionCharacter_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Array_Add_ReturnValue) == 0x0000A8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetActionCharacter_ReturnValue_4) == 0x0000B0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetActionCharacter_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetUnscaledCapsuleHalfHeight_ReturnValue_1) == 0x0000B8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetUnscaledCapsuleHalfHeight_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000C0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetActionCharacter_ReturnValue_5) == 0x0000C8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetActionCharacter_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0000D0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_MakeVector_ReturnValue) == 0x0000D8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetUnscaledCapsuleHalfHeight_ReturnValue_2) == 0x0000F0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetUnscaledCapsuleHalfHeight_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Add_VectorVector_ReturnValue) == 0x0000F8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000110, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_LineTraceSingle_OutHit) == 0x000118, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_LineTraceSingle_OutHit' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_LineTraceSingle_ReturnValue) == 0x000200, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_LineTraceSingle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_MakeVector_ReturnValue_1) == 0x000208, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_bBlockingHit) == 0x000220, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_bInitialOverlap) == 0x000221, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_Time) == 0x000224, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_Distance) == 0x000228, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_Location) == 0x000230, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_ImpactPoint) == 0x000248, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_Normal) == 0x000260, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_ImpactNormal) == 0x000278, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_PhysMat) == 0x000290, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_HitActor) == 0x000298, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_HitComponent) == 0x0002A0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_HitBoneName) == 0x0002A8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_BoneName) == 0x0002B0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_HitItem) == 0x0002B8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_ElementIndex) == 0x0002BC, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_FaceIndex) == 0x0002C0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_TraceStart) == 0x0002C8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_TraceEnd) == 0x0002E0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x0002F8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakVector_X_1) == 0x000310, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakVector_Y_1) == 0x000318, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakVector_Z_1) == 0x000320, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000328, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Add_DoubleDouble_ReturnValue_3) == 0x000340, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Add_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_MakeVector_ReturnValue_2) == 0x000348, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_MakeVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000360, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_K2_SetActorLocation_ReturnValue) == 0x000448, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000450, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000458, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Add_DoubleDouble_A_ImplicitCast_1) == 0x000460, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Add_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(sizeof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust) == 0x000618, "Wrong size on BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, Const_RayDownOffset) == 0x000000, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::Const_RayDownOffset' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, NextActorPos) == 0x000008, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::NextActorPos' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, Ignore) == 0x000020, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::Ignore' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, rayStartPos) == 0x000030, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::rayStartPos' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, Const_RayStartUpOffset) == 0x000048, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::Const_RayStartUpOffset' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetActionCharacter_ReturnValue) == 0x000050, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetActionCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_MakeVector_ReturnValue) == 0x000058, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000070, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Add_VectorVector_ReturnValue) == 0x000088, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000A0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_LineTraceSingle_OutHit) == 0x0000A8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_LineTraceSingle_OutHit' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_LineTraceSingle_ReturnValue) == 0x000190, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_LineTraceSingle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_MakeVector_ReturnValue_1) == 0x000198, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_bBlockingHit) == 0x0001B0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_bInitialOverlap) == 0x0001B1, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_Time) == 0x0001B4, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_Time' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_Distance) == 0x0001B8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_Distance' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_Location) == 0x0001C0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_Location' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_ImpactPoint) == 0x0001D8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_Normal) == 0x0001F0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_Normal' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_ImpactNormal) == 0x000208, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_PhysMat) == 0x000220, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_HitActor) == 0x000228, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_HitComponent) == 0x000230, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_HitBoneName) == 0x000238, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_BoneName) == 0x000240, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_HitItem) == 0x000248, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_ElementIndex) == 0x00024C, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_FaceIndex) == 0x000250, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_TraceStart) == 0x000258, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_TraceEnd) == 0x000270, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetActionCharacter_ReturnValue_1) == 0x000288, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetActionCharacter_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakVector_X) == 0x000290, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakVector_Y) == 0x000298, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakVector_Z) == 0x0002A0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Array_Add_ReturnValue) == 0x0002A8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetActionCharacter_ReturnValue_2) == 0x0002B0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetActionCharacter_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetActionCharacter_ReturnValue_3) == 0x0002B8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetActionCharacter_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetActionCharacter_ReturnValue_4) == 0x0002C0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetActionCharacter_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x0002C8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetUnscaledCapsuleHalfHeight_ReturnValue) == 0x0002E0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetUnscaledCapsuleHalfHeight_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakVector_X_1) == 0x0002E8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakVector_X_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakVector_Y_1) == 0x0002F0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakVector_Y_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakVector_Z_1) == 0x0002F8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakVector_Z_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000300, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000308, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_GetActionCharacter_ReturnValue_5) == 0x000310, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_GetActionCharacter_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_MakeVector_ReturnValue_2) == 0x000318, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_MakeVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_K2_GetActorLocation_ReturnValue_2) == 0x000330, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_K2_GetActorLocation_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000348, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_K2_SetActorLocation_ReturnValue) == 0x000430, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000438, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_LineTraceSingle_OutHit_1) == 0x000450, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_LineTraceSingle_OutHit_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_LineTraceSingle_ReturnValue_1) == 0x000538, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_LineTraceSingle_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_bBlockingHit_1) == 0x000539, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_bBlockingHit_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_bInitialOverlap_1) == 0x00053A, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_bInitialOverlap_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_Time_1) == 0x00053C, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_Time_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_Distance_1) == 0x000540, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_Distance_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_Location_1) == 0x000548, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_Location_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_ImpactPoint_1) == 0x000560, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_ImpactPoint_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_Normal_1) == 0x000578, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_Normal_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_ImpactNormal_1) == 0x000590, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_ImpactNormal_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_PhysMat_1) == 0x0005A8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_PhysMat_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_HitActor_1) == 0x0005B0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_HitActor_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_HitComponent_1) == 0x0005B8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_HitComponent_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_HitBoneName_1) == 0x0005C0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_HitBoneName_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_BoneName_1) == 0x0005C8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_BoneName_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_HitItem_1) == 0x0005D0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_HitItem_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_ElementIndex_1) == 0x0005D4, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_ElementIndex_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_FaceIndex_1) == 0x0005D8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_FaceIndex_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_TraceStart_1) == 0x0005E0, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_TraceStart_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_BreakHitResult_TraceEnd_1) == 0x0005F8, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_BreakHitResult_TraceEnd_1' has a wrong offset!");
+static_assert(offsetof(BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000610, "Member 'BP_ActionWakeupFromRagdoll_C_GroundCheckAdjust::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 // Function BP_ActionWakeupFromRagdoll.BP_ActionWakeupFromRagdoll_C.OnBlendOut_7DDA652645DB1077111C1B809FF79A5C
 // 0x0008 (0x0008 - 0x0000)

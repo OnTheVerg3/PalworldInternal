@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_YakushimaBoss002_L.ABP_YakushimaBoss002_L_C
-// 0x0000 (0x2AC0 - 0x2AC0)
+// 0x0000 (0x2C00 - 0x2C00)
 class UABP_YakushimaBoss002_L_C final : public UABP_MonsterBase_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UABP_YakushimaBoss002_L_C) == 0x000010, "Wrong alignment on UABP_YakushimaBoss002_L_C");
-static_assert(sizeof(UABP_YakushimaBoss002_L_C) == 0x002AC0, "Wrong size on UABP_YakushimaBoss002_L_C");
+static_assert(sizeof(UABP_YakushimaBoss002_L_C) == 0x002C00, "Wrong size on UABP_YakushimaBoss002_L_C");
 
 }
 

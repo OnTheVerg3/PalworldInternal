@@ -233,19 +233,6 @@ enum class EListItemAlignment : uint8
 	EListItemAlignment_MAX                   = 7,
 };
 
-// ScriptStruct Slate.Anchors
-// 0x0020 (0x0020 - 0x0000)
-struct FAnchors final
-{
-public:
-	struct FVector2D                              Minimum;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Maximum;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAnchors) == 0x000008, "Wrong alignment on FAnchors");
-static_assert(sizeof(FAnchors) == 0x000020, "Wrong size on FAnchors");
-static_assert(offsetof(FAnchors, Minimum) == 0x000000, "Member 'FAnchors::Minimum' has a wrong offset!");
-static_assert(offsetof(FAnchors, Maximum) == 0x000010, "Member 'FAnchors::Maximum' has a wrong offset!");
-
 // ScriptStruct Slate.VirtualKeyboardOptions
 // 0x0001 (0x0001 - 0x0000)
 struct FVirtualKeyboardOptions final
@@ -283,6 +270,19 @@ public:
 static_assert(alignof(FCustomizedToolMenuEntry) == 0x000004, "Wrong alignment on FCustomizedToolMenuEntry");
 static_assert(sizeof(FCustomizedToolMenuEntry) == 0x000004, "Wrong size on FCustomizedToolMenuEntry");
 static_assert(offsetof(FCustomizedToolMenuEntry, Visibility) == 0x000000, "Member 'FCustomizedToolMenuEntry::Visibility' has a wrong offset!");
+
+// ScriptStruct Slate.Anchors
+// 0x0020 (0x0020 - 0x0000)
+struct FAnchors final
+{
+public:
+	struct FVector2D                              Minimum;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Maximum;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAnchors) == 0x000008, "Wrong alignment on FAnchors");
+static_assert(sizeof(FAnchors) == 0x000020, "Wrong size on FAnchors");
+static_assert(offsetof(FAnchors, Minimum) == 0x000000, "Member 'FAnchors::Minimum' has a wrong offset!");
+static_assert(offsetof(FAnchors, Maximum) == 0x000010, "Member 'FAnchors::Maximum' has a wrong offset!");
 
 // ScriptStruct Slate.CustomizedToolMenuSection
 // 0x0004 (0x0004 - 0x0000)

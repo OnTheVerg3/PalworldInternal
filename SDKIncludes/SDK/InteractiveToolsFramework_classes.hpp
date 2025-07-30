@@ -19,6 +19,30 @@
 namespace SDK
 {
 
+// Class InteractiveToolsFramework.GizmoConstantAxisSource
+// 0x0038 (0x0060 - 0x0028)
+class UGizmoConstantAxisSource final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Origin;                                            // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Direction;                                         // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GizmoConstantAxisSource">();
+	}
+	static class UGizmoConstantAxisSource* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGizmoConstantAxisSource>();
+	}
+};
+static_assert(alignof(UGizmoConstantAxisSource) == 0x000008, "Wrong alignment on UGizmoConstantAxisSource");
+static_assert(sizeof(UGizmoConstantAxisSource) == 0x000060, "Wrong size on UGizmoConstantAxisSource");
+static_assert(offsetof(UGizmoConstantAxisSource, Origin) == 0x000030, "Member 'UGizmoConstantAxisSource::Origin' has a wrong offset!");
+static_assert(offsetof(UGizmoConstantAxisSource, Direction) == 0x000048, "Member 'UGizmoConstantAxisSource::Direction' has a wrong offset!");
+
 // Class InteractiveToolsFramework.InteractiveToolPropertySet
 // 0x0080 (0x00A8 - 0x0028)
 class UInteractiveToolPropertySet : public UObject
@@ -64,25 +88,48 @@ public:
 static_assert(alignof(UInputBehavior) == 0x000008, "Wrong alignment on UInputBehavior");
 static_assert(sizeof(UInputBehavior) == 0x000030, "Wrong size on UInputBehavior");
 
-// Class InteractiveToolsFramework.MouseHoverBehavior
-// 0x0068 (0x0098 - 0x0030)
-class UMouseHoverBehavior : public UInputBehavior
+// Class InteractiveToolsFramework.AnyButtonInputBehavior
+// 0x0050 (0x0080 - 0x0030)
+class UAnyButtonInputBehavior : public UInputBehavior
 {
 public:
-	uint8                                         Pad_30[0x68];                                      // 0x0030(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x50];                                      // 0x0030(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MouseHoverBehavior">();
+		return StaticClassImpl<"AnyButtonInputBehavior">();
 	}
-	static class UMouseHoverBehavior* GetDefaultObj()
+	static class UAnyButtonInputBehavior* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMouseHoverBehavior>();
+		return GetDefaultObjImpl<UAnyButtonInputBehavior>();
 	}
 };
-static_assert(alignof(UMouseHoverBehavior) == 0x000008, "Wrong alignment on UMouseHoverBehavior");
-static_assert(sizeof(UMouseHoverBehavior) == 0x000098, "Wrong size on UMouseHoverBehavior");
+static_assert(alignof(UAnyButtonInputBehavior) == 0x000008, "Wrong alignment on UAnyButtonInputBehavior");
+static_assert(sizeof(UAnyButtonInputBehavior) == 0x000080, "Wrong size on UAnyButtonInputBehavior");
+
+// Class InteractiveToolsFramework.ClickDragInputBehavior
+// 0x00C0 (0x0140 - 0x0080)
+class UClickDragInputBehavior : public UAnyButtonInputBehavior
+{
+public:
+	uint8                                         Pad_80[0xA0];                                      // 0x0080(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUpdateModifiersDuringDrag;                        // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_121[0x1F];                                     // 0x0121(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ClickDragInputBehavior">();
+	}
+	static class UClickDragInputBehavior* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClickDragInputBehavior>();
+	}
+};
+static_assert(alignof(UClickDragInputBehavior) == 0x000008, "Wrong alignment on UClickDragInputBehavior");
+static_assert(sizeof(UClickDragInputBehavior) == 0x000140, "Wrong size on UClickDragInputBehavior");
+static_assert(offsetof(UClickDragInputBehavior, bUpdateModifiersDuringDrag) == 0x000120, "Member 'UClickDragInputBehavior::bUpdateModifiersDuringDrag' has a wrong offset!");
 
 // Class InteractiveToolsFramework.InteractiveToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -185,91 +232,18 @@ static_assert(alignof(USingleSelectionTool) == 0x000008, "Wrong alignment on USi
 static_assert(sizeof(USingleSelectionTool) == 0x0000A8, "Wrong size on USingleSelectionTool");
 static_assert(offsetof(USingleSelectionTool, Target) == 0x0000A0, "Member 'USingleSelectionTool::Target' has a wrong offset!");
 
-// Class InteractiveToolsFramework.InteractiveGizmo
-// 0x0010 (0x0038 - 0x0028)
-class UInteractiveGizmo : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputBehaviorSet*                      InputBehaviors;                                    // 0x0030(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"InteractiveGizmo">();
-	}
-	static class UInteractiveGizmo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInteractiveGizmo>();
-	}
-};
-static_assert(alignof(UInteractiveGizmo) == 0x000008, "Wrong alignment on UInteractiveGizmo");
-static_assert(sizeof(UInteractiveGizmo) == 0x000038, "Wrong size on UInteractiveGizmo");
-static_assert(offsetof(UInteractiveGizmo, InputBehaviors) == 0x000030, "Member 'UInteractiveGizmo::InputBehaviors' has a wrong offset!");
-
-// Class InteractiveToolsFramework.AxisAngleGizmo
-// 0x0198 (0x01D0 - 0x0038)
-class alignas(0x10) UAxisAngleGizmo final : public UInteractiveGizmo
-{
-public:
-	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IGizmoAxisSource>      AxisSource;                                        // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TScriptInterface<class IGizmoFloatParameterSource> AngleSource;                                  // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TScriptInterface<class IGizmoClickTarget>     hitTarget;                                         // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TScriptInterface<class IGizmoStateTarget>     StateTarget;                                       // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClickDragInputBehavior*                MouseBehavior;                                     // 0x0088(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0x80];                                      // 0x0090(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bInInteraction;                                    // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                RotationOrigin;                                    // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                RotationAxis;                                      // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                RotationPlaneX;                                    // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                RotationPlaneY;                                    // 0x0160(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InteractionStartPoint;                             // 0x0178(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InteractionCurPoint;                               // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InteractionStartAngle;                             // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InteractionCurAngle;                               // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B0[0x20];                                     // 0x01B0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AxisAngleGizmo">();
-	}
-	static class UAxisAngleGizmo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAxisAngleGizmo>();
-	}
-};
-static_assert(alignof(UAxisAngleGizmo) == 0x000010, "Wrong alignment on UAxisAngleGizmo");
-static_assert(sizeof(UAxisAngleGizmo) == 0x0001D0, "Wrong size on UAxisAngleGizmo");
-static_assert(offsetof(UAxisAngleGizmo, AxisSource) == 0x000048, "Member 'UAxisAngleGizmo::AxisSource' has a wrong offset!");
-static_assert(offsetof(UAxisAngleGizmo, AngleSource) == 0x000058, "Member 'UAxisAngleGizmo::AngleSource' has a wrong offset!");
-static_assert(offsetof(UAxisAngleGizmo, hitTarget) == 0x000068, "Member 'UAxisAngleGizmo::hitTarget' has a wrong offset!");
-static_assert(offsetof(UAxisAngleGizmo, StateTarget) == 0x000078, "Member 'UAxisAngleGizmo::StateTarget' has a wrong offset!");
-static_assert(offsetof(UAxisAngleGizmo, MouseBehavior) == 0x000088, "Member 'UAxisAngleGizmo::MouseBehavior' has a wrong offset!");
-static_assert(offsetof(UAxisAngleGizmo, bInInteraction) == 0x000110, "Member 'UAxisAngleGizmo::bInInteraction' has a wrong offset!");
-static_assert(offsetof(UAxisAngleGizmo, RotationOrigin) == 0x000118, "Member 'UAxisAngleGizmo::RotationOrigin' has a wrong offset!");
-static_assert(offsetof(UAxisAngleGizmo, RotationAxis) == 0x000130, "Member 'UAxisAngleGizmo::RotationAxis' has a wrong offset!");
-static_assert(offsetof(UAxisAngleGizmo, RotationPlaneX) == 0x000148, "Member 'UAxisAngleGizmo::RotationPlaneX' has a wrong offset!");
-static_assert(offsetof(UAxisAngleGizmo, RotationPlaneY) == 0x000160, "Member 'UAxisAngleGizmo::RotationPlaneY' has a wrong offset!");
-static_assert(offsetof(UAxisAngleGizmo, InteractionStartPoint) == 0x000178, "Member 'UAxisAngleGizmo::InteractionStartPoint' has a wrong offset!");
-static_assert(offsetof(UAxisAngleGizmo, InteractionCurPoint) == 0x000190, "Member 'UAxisAngleGizmo::InteractionCurPoint' has a wrong offset!");
-static_assert(offsetof(UAxisAngleGizmo, InteractionStartAngle) == 0x0001A8, "Member 'UAxisAngleGizmo::InteractionStartAngle' has a wrong offset!");
-static_assert(offsetof(UAxisAngleGizmo, InteractionCurAngle) == 0x0001AC, "Member 'UAxisAngleGizmo::InteractionCurAngle' has a wrong offset!");
-
-// Class InteractiveToolsFramework.PhysicsDataSource
+// Class InteractiveToolsFramework.WidgetBaseBehavior
 // 0x0000 (0x0000 - 0x0000)
-class IPhysicsDataSource final
+class IWidgetBaseBehavior final
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PhysicsDataSource">();
+		return StaticClassImpl<"WidgetBaseBehavior">();
 	}
-	static class IPhysicsDataSource* GetDefaultObj()
+	static class IWidgetBaseBehavior* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IPhysicsDataSource>();
+		return GetDefaultObjImpl<IWidgetBaseBehavior>();
 	}
 
 	class UObject* AsUObject()
@@ -281,8 +255,68 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IPhysicsDataSource) == 0x000001, "Wrong alignment on IPhysicsDataSource");
-static_assert(sizeof(IPhysicsDataSource) == 0x000001, "Wrong size on IPhysicsDataSource");
+static_assert(alignof(IWidgetBaseBehavior) == 0x000001, "Wrong alignment on IWidgetBaseBehavior");
+static_assert(sizeof(IWidgetBaseBehavior) == 0x000001, "Wrong size on IWidgetBaseBehavior");
+
+// Class InteractiveToolsFramework.GizmoBaseVec2ParameterSource
+// 0x0020 (0x0048 - 0x0028)
+class UGizmoBaseVec2ParameterSource : public UObject
+{
+public:
+	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GizmoBaseVec2ParameterSource">();
+	}
+	static class UGizmoBaseVec2ParameterSource* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGizmoBaseVec2ParameterSource>();
+	}
+};
+static_assert(alignof(UGizmoBaseVec2ParameterSource) == 0x000008, "Wrong alignment on UGizmoBaseVec2ParameterSource");
+static_assert(sizeof(UGizmoBaseVec2ParameterSource) == 0x000048, "Wrong size on UGizmoBaseVec2ParameterSource");
+
+// Class InteractiveToolsFramework.GizmoUniformScaleParameterSource
+// 0x0118 (0x0160 - 0x0048)
+class UGizmoUniformScaleParameterSource final : public UGizmoBaseVec2ParameterSource
+{
+public:
+	TScriptInterface<class IGizmoAxisSource>      AxisSource;                                        // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TScriptInterface<class IGizmoTransformSource> TransformSource;                                   // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ScaleMultiplier;                                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              Parameter;                                         // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGizmoVec2ParameterChange              LastChange;                                        // 0x0080(0x0020)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                CurScaleOrigin;                                    // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                CurScaleNormal;                                    // 0x00B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                CurScaleAxisX;                                     // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                CurScaleAxisY;                                     // 0x00E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             InitialTransform;                                  // 0x0100(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GizmoUniformScaleParameterSource">();
+	}
+	static class UGizmoUniformScaleParameterSource* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGizmoUniformScaleParameterSource>();
+	}
+};
+static_assert(alignof(UGizmoUniformScaleParameterSource) == 0x000010, "Wrong alignment on UGizmoUniformScaleParameterSource");
+static_assert(sizeof(UGizmoUniformScaleParameterSource) == 0x000160, "Wrong size on UGizmoUniformScaleParameterSource");
+static_assert(offsetof(UGizmoUniformScaleParameterSource, AxisSource) == 0x000048, "Member 'UGizmoUniformScaleParameterSource::AxisSource' has a wrong offset!");
+static_assert(offsetof(UGizmoUniformScaleParameterSource, TransformSource) == 0x000058, "Member 'UGizmoUniformScaleParameterSource::TransformSource' has a wrong offset!");
+static_assert(offsetof(UGizmoUniformScaleParameterSource, ScaleMultiplier) == 0x000068, "Member 'UGizmoUniformScaleParameterSource::ScaleMultiplier' has a wrong offset!");
+static_assert(offsetof(UGizmoUniformScaleParameterSource, Parameter) == 0x000070, "Member 'UGizmoUniformScaleParameterSource::Parameter' has a wrong offset!");
+static_assert(offsetof(UGizmoUniformScaleParameterSource, LastChange) == 0x000080, "Member 'UGizmoUniformScaleParameterSource::LastChange' has a wrong offset!");
+static_assert(offsetof(UGizmoUniformScaleParameterSource, CurScaleOrigin) == 0x0000A0, "Member 'UGizmoUniformScaleParameterSource::CurScaleOrigin' has a wrong offset!");
+static_assert(offsetof(UGizmoUniformScaleParameterSource, CurScaleNormal) == 0x0000B8, "Member 'UGizmoUniformScaleParameterSource::CurScaleNormal' has a wrong offset!");
+static_assert(offsetof(UGizmoUniformScaleParameterSource, CurScaleAxisX) == 0x0000D0, "Member 'UGizmoUniformScaleParameterSource::CurScaleAxisX' has a wrong offset!");
+static_assert(offsetof(UGizmoUniformScaleParameterSource, CurScaleAxisY) == 0x0000E8, "Member 'UGizmoUniformScaleParameterSource::CurScaleAxisY' has a wrong offset!");
+static_assert(offsetof(UGizmoUniformScaleParameterSource, InitialTransform) == 0x000100, "Member 'UGizmoUniformScaleParameterSource::InitialTransform' has a wrong offset!");
 
 // Class InteractiveToolsFramework.SingleClickTool
 // 0x0008 (0x00A0 - 0x0098)
@@ -304,117 +338,59 @@ public:
 static_assert(alignof(USingleClickTool) == 0x000008, "Wrong alignment on USingleClickTool");
 static_assert(sizeof(USingleClickTool) == 0x0000A0, "Wrong size on USingleClickTool");
 
-// Class InteractiveToolsFramework.GizmoConstantFrameAxisSource
-// 0x0068 (0x0090 - 0x0028)
-class UGizmoConstantFrameAxisSource final : public UObject
+// Class InteractiveToolsFramework.InteractiveGizmoBuilder
+// 0x0000 (0x0028 - 0x0028)
+class UInteractiveGizmoBuilder : public UObject
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Origin;                                            // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Direction;                                         // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                TangentX;                                          // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                TangentY;                                          // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InteractiveGizmoBuilder">();
+	}
+	static class UInteractiveGizmoBuilder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInteractiveGizmoBuilder>();
+	}
+};
+static_assert(alignof(UInteractiveGizmoBuilder) == 0x000008, "Wrong alignment on UInteractiveGizmoBuilder");
+static_assert(sizeof(UInteractiveGizmoBuilder) == 0x000028, "Wrong size on UInteractiveGizmoBuilder");
+
+// Class InteractiveToolsFramework.AxisPositionGizmoBuilder
+// 0x0000 (0x0028 - 0x0028)
+class UAxisPositionGizmoBuilder final : public UInteractiveGizmoBuilder
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AxisPositionGizmoBuilder">();
+	}
+	static class UAxisPositionGizmoBuilder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAxisPositionGizmoBuilder>();
+	}
+};
+static_assert(alignof(UAxisPositionGizmoBuilder) == 0x000008, "Wrong alignment on UAxisPositionGizmoBuilder");
+static_assert(sizeof(UAxisPositionGizmoBuilder) == 0x000028, "Wrong size on UAxisPositionGizmoBuilder");
+
+// Class InteractiveToolsFramework.ClickDragTool
+// 0x0008 (0x00A0 - 0x0098)
+class UClickDragTool final : public UInteractiveTool
+{
+public:
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GizmoConstantFrameAxisSource">();
+		return StaticClassImpl<"ClickDragTool">();
 	}
-	static class UGizmoConstantFrameAxisSource* GetDefaultObj()
+	static class UClickDragTool* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UGizmoConstantFrameAxisSource>();
+		return GetDefaultObjImpl<UClickDragTool>();
 	}
 };
-static_assert(alignof(UGizmoConstantFrameAxisSource) == 0x000008, "Wrong alignment on UGizmoConstantFrameAxisSource");
-static_assert(sizeof(UGizmoConstantFrameAxisSource) == 0x000090, "Wrong size on UGizmoConstantFrameAxisSource");
-static_assert(offsetof(UGizmoConstantFrameAxisSource, Origin) == 0x000030, "Member 'UGizmoConstantFrameAxisSource::Origin' has a wrong offset!");
-static_assert(offsetof(UGizmoConstantFrameAxisSource, Direction) == 0x000048, "Member 'UGizmoConstantFrameAxisSource::Direction' has a wrong offset!");
-static_assert(offsetof(UGizmoConstantFrameAxisSource, TangentX) == 0x000060, "Member 'UGizmoConstantFrameAxisSource::TangentX' has a wrong offset!");
-static_assert(offsetof(UGizmoConstantFrameAxisSource, TangentY) == 0x000078, "Member 'UGizmoConstantFrameAxisSource::TangentY' has a wrong offset!");
-
-// Class InteractiveToolsFramework.InputBehaviorSet
-// 0x0010 (0x0038 - 0x0028)
-class UInputBehaviorSet final : public UObject
-{
-public:
-	TArray<struct FBehaviorInfo>                  Behaviors;                                         // 0x0028(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"InputBehaviorSet">();
-	}
-	static class UInputBehaviorSet* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInputBehaviorSet>();
-	}
-};
-static_assert(alignof(UInputBehaviorSet) == 0x000008, "Wrong alignment on UInputBehaviorSet");
-static_assert(sizeof(UInputBehaviorSet) == 0x000038, "Wrong size on UInputBehaviorSet");
-static_assert(offsetof(UInputBehaviorSet, Behaviors) == 0x000028, "Member 'UInputBehaviorSet::Behaviors' has a wrong offset!");
-
-// Class InteractiveToolsFramework.AnyButtonInputBehavior
-// 0x0050 (0x0080 - 0x0030)
-class UAnyButtonInputBehavior : public UInputBehavior
-{
-public:
-	uint8                                         Pad_30[0x50];                                      // 0x0030(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AnyButtonInputBehavior">();
-	}
-	static class UAnyButtonInputBehavior* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnyButtonInputBehavior>();
-	}
-};
-static_assert(alignof(UAnyButtonInputBehavior) == 0x000008, "Wrong alignment on UAnyButtonInputBehavior");
-static_assert(sizeof(UAnyButtonInputBehavior) == 0x000080, "Wrong size on UAnyButtonInputBehavior");
-
-// Class InteractiveToolsFramework.ClickDragInputBehavior
-// 0x00C0 (0x0140 - 0x0080)
-class UClickDragInputBehavior : public UAnyButtonInputBehavior
-{
-public:
-	uint8                                         Pad_80[0xA0];                                      // 0x0080(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bUpdateModifiersDuringDrag;                        // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_121[0x1F];                                     // 0x0121(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ClickDragInputBehavior">();
-	}
-	static class UClickDragInputBehavior* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UClickDragInputBehavior>();
-	}
-};
-static_assert(alignof(UClickDragInputBehavior) == 0x000008, "Wrong alignment on UClickDragInputBehavior");
-static_assert(sizeof(UClickDragInputBehavior) == 0x000140, "Wrong size on UClickDragInputBehavior");
-static_assert(offsetof(UClickDragInputBehavior, bUpdateModifiersDuringDrag) == 0x000120, "Member 'UClickDragInputBehavior::bUpdateModifiersDuringDrag' has a wrong offset!");
-
-// Class InteractiveToolsFramework.LocalClickDragInputBehavior
-// 0x0140 (0x0280 - 0x0140)
-class ULocalClickDragInputBehavior final : public UClickDragInputBehavior
-{
-public:
-	uint8                                         Pad_140[0x140];                                    // 0x0140(0x0140)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"LocalClickDragInputBehavior">();
-	}
-	static class ULocalClickDragInputBehavior* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULocalClickDragInputBehavior>();
-	}
-};
-static_assert(alignof(ULocalClickDragInputBehavior) == 0x000008, "Wrong alignment on ULocalClickDragInputBehavior");
-static_assert(sizeof(ULocalClickDragInputBehavior) == 0x000280, "Wrong size on ULocalClickDragInputBehavior");
+static_assert(alignof(UClickDragTool) == 0x000008, "Wrong alignment on UClickDragTool");
+static_assert(sizeof(UClickDragTool) == 0x0000A0, "Wrong size on UClickDragTool");
 
 // Class InteractiveToolsFramework.MultiSelectionTool
 // 0x0018 (0x00B0 - 0x0098)
@@ -438,18 +414,18 @@ static_assert(alignof(UMultiSelectionTool) == 0x000008, "Wrong alignment on UMul
 static_assert(sizeof(UMultiSelectionTool) == 0x0000B0, "Wrong size on UMultiSelectionTool");
 static_assert(offsetof(UMultiSelectionTool, Targets) == 0x0000A0, "Member 'UMultiSelectionTool::Targets' has a wrong offset!");
 
-// Class InteractiveToolsFramework.MeshDescriptionCommitter
+// Class InteractiveToolsFramework.InteractiveToolNestedAcceptCancelAPI
 // 0x0000 (0x0000 - 0x0000)
-class IMeshDescriptionCommitter final
+class IInteractiveToolNestedAcceptCancelAPI final
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MeshDescriptionCommitter">();
+		return StaticClassImpl<"InteractiveToolNestedAcceptCancelAPI">();
 	}
-	static class IMeshDescriptionCommitter* GetDefaultObj()
+	static class IInteractiveToolNestedAcceptCancelAPI* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IMeshDescriptionCommitter>();
+		return GetDefaultObjImpl<IInteractiveToolNestedAcceptCancelAPI>();
 	}
 
 	class UObject* AsUObject()
@@ -461,8 +437,8 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IMeshDescriptionCommitter) == 0x000001, "Wrong alignment on IMeshDescriptionCommitter");
-static_assert(sizeof(IMeshDescriptionCommitter) == 0x000001, "Wrong size on IMeshDescriptionCommitter");
+static_assert(alignof(IInteractiveToolNestedAcceptCancelAPI) == 0x000001, "Wrong alignment on IInteractiveToolNestedAcceptCancelAPI");
+static_assert(sizeof(IInteractiveToolNestedAcceptCancelAPI) == 0x000001, "Wrong size on IInteractiveToolNestedAcceptCancelAPI");
 
 // Class InteractiveToolsFramework.MeshSurfacePointTool
 // 0x0058 (0x0100 - 0x00A8)
@@ -485,6 +461,26 @@ public:
 static_assert(alignof(UMeshSurfacePointTool) == 0x000008, "Wrong alignment on UMeshSurfacePointTool");
 static_assert(sizeof(UMeshSurfacePointTool) == 0x000100, "Wrong size on UMeshSurfacePointTool");
 static_assert(offsetof(UMeshSurfacePointTool, TargetWorld) == 0x0000F8, "Member 'UMeshSurfacePointTool::TargetWorld' has a wrong offset!");
+
+// Class InteractiveToolsFramework.SingleKeyCaptureBehavior
+// 0x00E0 (0x0110 - 0x0030)
+class USingleKeyCaptureBehavior final : public UInputBehavior
+{
+public:
+	uint8                                         Pad_30[0xE0];                                      // 0x0030(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SingleKeyCaptureBehavior">();
+	}
+	static class USingleKeyCaptureBehavior* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USingleKeyCaptureBehavior>();
+	}
+};
+static_assert(alignof(USingleKeyCaptureBehavior) == 0x000008, "Wrong alignment on USingleKeyCaptureBehavior");
+static_assert(sizeof(USingleKeyCaptureBehavior) == 0x000110, "Wrong size on USingleKeyCaptureBehavior");
 
 // Class InteractiveToolsFramework.BaseBrushTool
 // 0x0180 (0x0280 - 0x0100)
@@ -519,25 +515,25 @@ static_assert(offsetof(UBaseBrushTool, LastBrushStamp) == 0x000110, "Member 'UBa
 static_assert(offsetof(UBaseBrushTool, PropertyClass) == 0x000248, "Member 'UBaseBrushTool::PropertyClass' has a wrong offset!");
 static_assert(offsetof(UBaseBrushTool, BrushStampIndicator) == 0x000278, "Member 'UBaseBrushTool::BrushStampIndicator' has a wrong offset!");
 
-// Class InteractiveToolsFramework.MouseWheelInputBehavior
-// 0x00B0 (0x0130 - 0x0080)
-class UMouseWheelInputBehavior final : public UAnyButtonInputBehavior
+// Class InteractiveToolsFramework.KeyAsModifierInputBehavior
+// 0x0068 (0x0098 - 0x0030)
+class UKeyAsModifierInputBehavior final : public UInputBehavior
 {
 public:
-	uint8                                         Pad_80[0xB0];                                      // 0x0080(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x68];                                      // 0x0030(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MouseWheelInputBehavior">();
+		return StaticClassImpl<"KeyAsModifierInputBehavior">();
 	}
-	static class UMouseWheelInputBehavior* GetDefaultObj()
+	static class UKeyAsModifierInputBehavior* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMouseWheelInputBehavior>();
+		return GetDefaultObjImpl<UKeyAsModifierInputBehavior>();
 	}
 };
-static_assert(alignof(UMouseWheelInputBehavior) == 0x000008, "Wrong alignment on UMouseWheelInputBehavior");
-static_assert(sizeof(UMouseWheelInputBehavior) == 0x000130, "Wrong size on UMouseWheelInputBehavior");
+static_assert(alignof(UKeyAsModifierInputBehavior) == 0x000008, "Wrong alignment on UKeyAsModifierInputBehavior");
+static_assert(sizeof(UKeyAsModifierInputBehavior) == 0x000098, "Wrong size on UKeyAsModifierInputBehavior");
 
 // Class InteractiveToolsFramework.InteractionMechanic
 // 0x0008 (0x0030 - 0x0028)
@@ -596,25 +592,56 @@ public:
 static_assert(alignof(UInteractiveCommandArguments) == 0x000008, "Wrong alignment on UInteractiveCommandArguments");
 static_assert(sizeof(UInteractiveCommandArguments) == 0x000030, "Wrong size on UInteractiveCommandArguments");
 
-// Class InteractiveToolsFramework.SingleKeyCaptureBehavior
-// 0x00E0 (0x0110 - 0x0030)
-class USingleKeyCaptureBehavior final : public UInputBehavior
+// Class InteractiveToolsFramework.SingleClickInputBehavior
+// 0x00B0 (0x0130 - 0x0080)
+class USingleClickInputBehavior : public UAnyButtonInputBehavior
 {
 public:
-	uint8                                         Pad_30[0xE0];                                      // 0x0030(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_80[0x40];                                      // 0x0080(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          HitTestOnRelease;                                  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C1[0x6F];                                      // 0x00C1(0x006F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SingleKeyCaptureBehavior">();
+		return StaticClassImpl<"SingleClickInputBehavior">();
 	}
-	static class USingleKeyCaptureBehavior* GetDefaultObj()
+	static class USingleClickInputBehavior* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USingleKeyCaptureBehavior>();
+		return GetDefaultObjImpl<USingleClickInputBehavior>();
 	}
 };
-static_assert(alignof(USingleKeyCaptureBehavior) == 0x000008, "Wrong alignment on USingleKeyCaptureBehavior");
-static_assert(sizeof(USingleKeyCaptureBehavior) == 0x000110, "Wrong size on USingleKeyCaptureBehavior");
+static_assert(alignof(USingleClickInputBehavior) == 0x000008, "Wrong alignment on USingleClickInputBehavior");
+static_assert(sizeof(USingleClickInputBehavior) == 0x000130, "Wrong size on USingleClickInputBehavior");
+static_assert(offsetof(USingleClickInputBehavior, HitTestOnRelease) == 0x0000C0, "Member 'USingleClickInputBehavior::HitTestOnRelease' has a wrong offset!");
+
+// Class InteractiveToolsFramework.GizmoConstantFrameAxisSource
+// 0x0068 (0x0090 - 0x0028)
+class UGizmoConstantFrameAxisSource final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Origin;                                            // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Direction;                                         // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                TangentX;                                          // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                TangentY;                                          // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GizmoConstantFrameAxisSource">();
+	}
+	static class UGizmoConstantFrameAxisSource* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGizmoConstantFrameAxisSource>();
+	}
+};
+static_assert(alignof(UGizmoConstantFrameAxisSource) == 0x000008, "Wrong alignment on UGizmoConstantFrameAxisSource");
+static_assert(sizeof(UGizmoConstantFrameAxisSource) == 0x000090, "Wrong size on UGizmoConstantFrameAxisSource");
+static_assert(offsetof(UGizmoConstantFrameAxisSource, Origin) == 0x000030, "Member 'UGizmoConstantFrameAxisSource::Origin' has a wrong offset!");
+static_assert(offsetof(UGizmoConstantFrameAxisSource, Direction) == 0x000048, "Member 'UGizmoConstantFrameAxisSource::Direction' has a wrong offset!");
+static_assert(offsetof(UGizmoConstantFrameAxisSource, TangentX) == 0x000060, "Member 'UGizmoConstantFrameAxisSource::TangentX' has a wrong offset!");
+static_assert(offsetof(UGizmoConstantFrameAxisSource, TangentY) == 0x000078, "Member 'UGizmoConstantFrameAxisSource::TangentY' has a wrong offset!");
 
 // Class InteractiveToolsFramework.InternalToolFrameworkActor
 // 0x0008 (0x0298 - 0x0290)
@@ -638,25 +665,31 @@ static_assert(alignof(AInternalToolFrameworkActor) == 0x000008, "Wrong alignment
 static_assert(sizeof(AInternalToolFrameworkActor) == 0x000298, "Wrong size on AInternalToolFrameworkActor");
 static_assert(offsetof(AInternalToolFrameworkActor, bIsSelectableInEditor) == 0x000290, "Member 'AInternalToolFrameworkActor::bIsSelectableInEditor' has a wrong offset!");
 
-// Class InteractiveToolsFramework.GizmoBaseFloatParameterSource
-// 0x0020 (0x0048 - 0x0028)
-class UGizmoBaseFloatParameterSource : public UObject
+// Class InteractiveToolsFramework.MeshDescriptionProvider
+// 0x0000 (0x0000 - 0x0000)
+class IMeshDescriptionProvider final
 {
-public:
-	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GizmoBaseFloatParameterSource">();
+		return StaticClassImpl<"MeshDescriptionProvider">();
 	}
-	static class UGizmoBaseFloatParameterSource* GetDefaultObj()
+	static class IMeshDescriptionProvider* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UGizmoBaseFloatParameterSource>();
+		return GetDefaultObjImpl<IMeshDescriptionProvider>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(UGizmoBaseFloatParameterSource) == 0x000008, "Wrong alignment on UGizmoBaseFloatParameterSource");
-static_assert(sizeof(UGizmoBaseFloatParameterSource) == 0x000048, "Wrong size on UGizmoBaseFloatParameterSource");
+static_assert(alignof(IMeshDescriptionProvider) == 0x000001, "Wrong alignment on IMeshDescriptionProvider");
+static_assert(sizeof(IMeshDescriptionProvider) == 0x000001, "Wrong size on IMeshDescriptionProvider");
 
 // Class InteractiveToolsFramework.SceneSnappingManager
 // 0x0000 (0x0028 - 0x0028)
@@ -889,23 +922,6 @@ static_assert(alignof(UGizmoElementArc) == 0x000008, "Wrong alignment on UGizmoE
 static_assert(sizeof(UGizmoElementArc) == 0x0001D0, "Wrong size on UGizmoElementArc");
 static_assert(offsetof(UGizmoElementArc, InnerRadius) == 0x0001C8, "Member 'UGizmoElementArc::InnerRadius' has a wrong offset!");
 
-// Class InteractiveToolsFramework.InteractiveGizmoBuilder
-// 0x0000 (0x0028 - 0x0028)
-class UInteractiveGizmoBuilder : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"InteractiveGizmoBuilder">();
-	}
-	static class UInteractiveGizmoBuilder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInteractiveGizmoBuilder>();
-	}
-};
-static_assert(alignof(UInteractiveGizmoBuilder) == 0x000008, "Wrong alignment on UInteractiveGizmoBuilder");
-static_assert(sizeof(UInteractiveGizmoBuilder) == 0x000028, "Wrong size on UInteractiveGizmoBuilder");
-
 // Class InteractiveToolsFramework.ToolContextTransactionProvider
 // 0x0000 (0x0000 - 0x0000)
 class IToolContextTransactionProvider final
@@ -984,32 +1000,6 @@ public:
 static_assert(alignof(IInteractiveToolCameraFocusAPI) == 0x000001, "Wrong alignment on IInteractiveToolCameraFocusAPI");
 static_assert(sizeof(IInteractiveToolCameraFocusAPI) == 0x000001, "Wrong size on IInteractiveToolCameraFocusAPI");
 
-// Class InteractiveToolsFramework.InteractiveToolNestedAcceptCancelAPI
-// 0x0000 (0x0000 - 0x0000)
-class IInteractiveToolNestedAcceptCancelAPI final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"InteractiveToolNestedAcceptCancelAPI">();
-	}
-	static class IInteractiveToolNestedAcceptCancelAPI* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IInteractiveToolNestedAcceptCancelAPI>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-static_assert(alignof(IInteractiveToolNestedAcceptCancelAPI) == 0x000001, "Wrong alignment on IInteractiveToolNestedAcceptCancelAPI");
-static_assert(sizeof(IInteractiveToolNestedAcceptCancelAPI) == 0x000001, "Wrong size on IInteractiveToolNestedAcceptCancelAPI");
-
 // Class InteractiveToolsFramework.InteractiveToolExclusiveToolAPI
 // 0x0000 (0x0000 - 0x0000)
 class IInteractiveToolExclusiveToolAPI final
@@ -1062,18 +1052,18 @@ public:
 static_assert(alignof(IMaterialProvider) == 0x000001, "Wrong alignment on IMaterialProvider");
 static_assert(sizeof(IMaterialProvider) == 0x000001, "Wrong size on IMaterialProvider");
 
-// Class InteractiveToolsFramework.MeshDescriptionProvider
+// Class InteractiveToolsFramework.MeshDescriptionCommitter
 // 0x0000 (0x0000 - 0x0000)
-class IMeshDescriptionProvider final
+class IMeshDescriptionCommitter final
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MeshDescriptionProvider">();
+		return StaticClassImpl<"MeshDescriptionCommitter">();
 	}
-	static class IMeshDescriptionProvider* GetDefaultObj()
+	static class IMeshDescriptionCommitter* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IMeshDescriptionProvider>();
+		return GetDefaultObjImpl<IMeshDescriptionCommitter>();
 	}
 
 	class UObject* AsUObject()
@@ -1085,28 +1075,8 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IMeshDescriptionProvider) == 0x000001, "Wrong alignment on IMeshDescriptionProvider");
-static_assert(sizeof(IMeshDescriptionProvider) == 0x000001, "Wrong size on IMeshDescriptionProvider");
-
-// Class InteractiveToolsFramework.GizmoBaseVec2ParameterSource
-// 0x0020 (0x0048 - 0x0028)
-class UGizmoBaseVec2ParameterSource : public UObject
-{
-public:
-	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GizmoBaseVec2ParameterSource">();
-	}
-	static class UGizmoBaseVec2ParameterSource* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGizmoBaseVec2ParameterSource>();
-	}
-};
-static_assert(alignof(UGizmoBaseVec2ParameterSource) == 0x000008, "Wrong alignment on UGizmoBaseVec2ParameterSource");
-static_assert(sizeof(UGizmoBaseVec2ParameterSource) == 0x000048, "Wrong size on UGizmoBaseVec2ParameterSource");
+static_assert(alignof(IMeshDescriptionCommitter) == 0x000001, "Wrong alignment on IMeshDescriptionCommitter");
+static_assert(sizeof(IMeshDescriptionCommitter) == 0x000001, "Wrong size on IMeshDescriptionCommitter");
 
 // Class InteractiveToolsFramework.GizmoLocalVec2ParameterSource
 // 0x0030 (0x0078 - 0x0048)
@@ -1130,6 +1100,26 @@ static_assert(alignof(UGizmoLocalVec2ParameterSource) == 0x000008, "Wrong alignm
 static_assert(sizeof(UGizmoLocalVec2ParameterSource) == 0x000078, "Wrong size on UGizmoLocalVec2ParameterSource");
 static_assert(offsetof(UGizmoLocalVec2ParameterSource, Value) == 0x000048, "Member 'UGizmoLocalVec2ParameterSource::Value' has a wrong offset!");
 static_assert(offsetof(UGizmoLocalVec2ParameterSource, LastChange) == 0x000058, "Member 'UGizmoLocalVec2ParameterSource::LastChange' has a wrong offset!");
+
+// Class InteractiveToolsFramework.GizmoBaseFloatParameterSource
+// 0x0020 (0x0048 - 0x0028)
+class UGizmoBaseFloatParameterSource : public UObject
+{
+public:
+	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GizmoBaseFloatParameterSource">();
+	}
+	static class UGizmoBaseFloatParameterSource* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGizmoBaseFloatParameterSource>();
+	}
+};
+static_assert(alignof(UGizmoBaseFloatParameterSource) == 0x000008, "Wrong alignment on UGizmoBaseFloatParameterSource");
+static_assert(sizeof(UGizmoBaseFloatParameterSource) == 0x000048, "Wrong size on UGizmoBaseFloatParameterSource");
 
 // Class InteractiveToolsFramework.GizmoAxisTranslationParameterSource
 // 0x0108 (0x0150 - 0x0048)
@@ -1239,46 +1229,6 @@ static_assert(offsetof(UGizmoAxisRotationParameterSource, CurRotationAxis) == 0x
 static_assert(offsetof(UGizmoAxisRotationParameterSource, CurRotationOrigin) == 0x0000D8, "Member 'UGizmoAxisRotationParameterSource::CurRotationOrigin' has a wrong offset!");
 static_assert(offsetof(UGizmoAxisRotationParameterSource, InitialTransform) == 0x0000F0, "Member 'UGizmoAxisRotationParameterSource::InitialTransform' has a wrong offset!");
 
-// Class InteractiveToolsFramework.GizmoUniformScaleParameterSource
-// 0x0118 (0x0160 - 0x0048)
-class UGizmoUniformScaleParameterSource final : public UGizmoBaseVec2ParameterSource
-{
-public:
-	TScriptInterface<class IGizmoAxisSource>      AxisSource;                                        // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TScriptInterface<class IGizmoTransformSource> TransformSource;                                   // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ScaleMultiplier;                                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              Parameter;                                         // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGizmoVec2ParameterChange              LastChange;                                        // 0x0080(0x0020)(NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                CurScaleOrigin;                                    // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                CurScaleNormal;                                    // 0x00B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                CurScaleAxisX;                                     // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                CurScaleAxisY;                                     // 0x00E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             InitialTransform;                                  // 0x0100(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GizmoUniformScaleParameterSource">();
-	}
-	static class UGizmoUniformScaleParameterSource* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGizmoUniformScaleParameterSource>();
-	}
-};
-static_assert(alignof(UGizmoUniformScaleParameterSource) == 0x000010, "Wrong alignment on UGizmoUniformScaleParameterSource");
-static_assert(sizeof(UGizmoUniformScaleParameterSource) == 0x000160, "Wrong size on UGizmoUniformScaleParameterSource");
-static_assert(offsetof(UGizmoUniformScaleParameterSource, AxisSource) == 0x000048, "Member 'UGizmoUniformScaleParameterSource::AxisSource' has a wrong offset!");
-static_assert(offsetof(UGizmoUniformScaleParameterSource, TransformSource) == 0x000058, "Member 'UGizmoUniformScaleParameterSource::TransformSource' has a wrong offset!");
-static_assert(offsetof(UGizmoUniformScaleParameterSource, ScaleMultiplier) == 0x000068, "Member 'UGizmoUniformScaleParameterSource::ScaleMultiplier' has a wrong offset!");
-static_assert(offsetof(UGizmoUniformScaleParameterSource, Parameter) == 0x000070, "Member 'UGizmoUniformScaleParameterSource::Parameter' has a wrong offset!");
-static_assert(offsetof(UGizmoUniformScaleParameterSource, LastChange) == 0x000080, "Member 'UGizmoUniformScaleParameterSource::LastChange' has a wrong offset!");
-static_assert(offsetof(UGizmoUniformScaleParameterSource, CurScaleOrigin) == 0x0000A0, "Member 'UGizmoUniformScaleParameterSource::CurScaleOrigin' has a wrong offset!");
-static_assert(offsetof(UGizmoUniformScaleParameterSource, CurScaleNormal) == 0x0000B8, "Member 'UGizmoUniformScaleParameterSource::CurScaleNormal' has a wrong offset!");
-static_assert(offsetof(UGizmoUniformScaleParameterSource, CurScaleAxisX) == 0x0000D0, "Member 'UGizmoUniformScaleParameterSource::CurScaleAxisX' has a wrong offset!");
-static_assert(offsetof(UGizmoUniformScaleParameterSource, CurScaleAxisY) == 0x0000E8, "Member 'UGizmoUniformScaleParameterSource::CurScaleAxisY' has a wrong offset!");
-static_assert(offsetof(UGizmoUniformScaleParameterSource, InitialTransform) == 0x000100, "Member 'UGizmoUniformScaleParameterSource::InitialTransform' has a wrong offset!");
-
 // Class InteractiveToolsFramework.GizmoAxisScaleParameterSource
 // 0x00C8 (0x0110 - 0x0048)
 class UGizmoAxisScaleParameterSource final : public UGizmoBaseFloatParameterSource
@@ -1364,6 +1314,32 @@ static_assert(offsetof(UGizmoPlaneScaleParameterSource, CurScaleAxisX) == 0x0001
 static_assert(offsetof(UGizmoPlaneScaleParameterSource, CurScaleAxisY) == 0x000130, "Member 'UGizmoPlaneScaleParameterSource::CurScaleAxisY' has a wrong offset!");
 static_assert(offsetof(UGizmoPlaneScaleParameterSource, InitialTransform) == 0x000150, "Member 'UGizmoPlaneScaleParameterSource::InitialTransform' has a wrong offset!");
 
+// Class InteractiveToolsFramework.PhysicsDataSource
+// 0x0000 (0x0000 - 0x0000)
+class IPhysicsDataSource final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PhysicsDataSource">();
+	}
+	static class IPhysicsDataSource* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IPhysicsDataSource>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+static_assert(alignof(IPhysicsDataSource) == 0x000001, "Wrong alignment on IPhysicsDataSource");
+static_assert(sizeof(IPhysicsDataSource) == 0x000001, "Wrong size on IPhysicsDataSource");
+
 // Class InteractiveToolsFramework.PrimitiveComponentBackedTarget
 // 0x0000 (0x0000 - 0x0000)
 class IPrimitiveComponentBackedTarget final
@@ -1442,9 +1418,29 @@ public:
 static_assert(alignof(IStaticMeshBackedTarget) == 0x000001, "Wrong alignment on IStaticMeshBackedTarget");
 static_assert(sizeof(IStaticMeshBackedTarget) == 0x000001, "Wrong size on IStaticMeshBackedTarget");
 
-// Class InteractiveToolsFramework.KeyAsModifierInputBehavior
+// Class InteractiveToolsFramework.LocalClickDragInputBehavior
+// 0x0140 (0x0280 - 0x0140)
+class ULocalClickDragInputBehavior final : public UClickDragInputBehavior
+{
+public:
+	uint8                                         Pad_140[0x140];                                    // 0x0140(0x0140)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LocalClickDragInputBehavior">();
+	}
+	static class ULocalClickDragInputBehavior* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULocalClickDragInputBehavior>();
+	}
+};
+static_assert(alignof(ULocalClickDragInputBehavior) == 0x000008, "Wrong alignment on ULocalClickDragInputBehavior");
+static_assert(sizeof(ULocalClickDragInputBehavior) == 0x000280, "Wrong size on ULocalClickDragInputBehavior");
+
+// Class InteractiveToolsFramework.MouseHoverBehavior
 // 0x0068 (0x0098 - 0x0030)
-class UKeyAsModifierInputBehavior final : public UInputBehavior
+class UMouseHoverBehavior : public UInputBehavior
 {
 public:
 	uint8                                         Pad_30[0x68];                                      // 0x0030(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -1452,15 +1448,15 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KeyAsModifierInputBehavior">();
+		return StaticClassImpl<"MouseHoverBehavior">();
 	}
-	static class UKeyAsModifierInputBehavior* GetDefaultObj()
+	static class UMouseHoverBehavior* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKeyAsModifierInputBehavior>();
+		return GetDefaultObjImpl<UMouseHoverBehavior>();
 	}
 };
-static_assert(alignof(UKeyAsModifierInputBehavior) == 0x000008, "Wrong alignment on UKeyAsModifierInputBehavior");
-static_assert(sizeof(UKeyAsModifierInputBehavior) == 0x000098, "Wrong size on UKeyAsModifierInputBehavior");
+static_assert(alignof(UMouseHoverBehavior) == 0x000008, "Wrong alignment on UMouseHoverBehavior");
+static_assert(sizeof(UMouseHoverBehavior) == 0x000098, "Wrong size on UMouseHoverBehavior");
 
 // Class InteractiveToolsFramework.LocalMouseHoverBehavior
 // 0x0108 (0x01A0 - 0x0098)
@@ -1482,6 +1478,26 @@ public:
 static_assert(alignof(ULocalMouseHoverBehavior) == 0x000008, "Wrong alignment on ULocalMouseHoverBehavior");
 static_assert(sizeof(ULocalMouseHoverBehavior) == 0x0001A0, "Wrong size on ULocalMouseHoverBehavior");
 
+// Class InteractiveToolsFramework.MouseWheelInputBehavior
+// 0x00B0 (0x0130 - 0x0080)
+class UMouseWheelInputBehavior final : public UAnyButtonInputBehavior
+{
+public:
+	uint8                                         Pad_80[0xB0];                                      // 0x0080(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MouseWheelInputBehavior">();
+	}
+	static class UMouseWheelInputBehavior* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMouseWheelInputBehavior>();
+	}
+};
+static_assert(alignof(UMouseWheelInputBehavior) == 0x000008, "Wrong alignment on UMouseWheelInputBehavior");
+static_assert(sizeof(UMouseWheelInputBehavior) == 0x000130, "Wrong size on UMouseWheelInputBehavior");
+
 // Class InteractiveToolsFramework.MultiClickSequenceInputBehavior
 // 0x00B0 (0x0130 - 0x0080)
 class UMultiClickSequenceInputBehavior final : public UAnyButtonInputBehavior
@@ -1501,29 +1517,6 @@ public:
 };
 static_assert(alignof(UMultiClickSequenceInputBehavior) == 0x000008, "Wrong alignment on UMultiClickSequenceInputBehavior");
 static_assert(sizeof(UMultiClickSequenceInputBehavior) == 0x000130, "Wrong size on UMultiClickSequenceInputBehavior");
-
-// Class InteractiveToolsFramework.SingleClickInputBehavior
-// 0x00B0 (0x0130 - 0x0080)
-class USingleClickInputBehavior : public UAnyButtonInputBehavior
-{
-public:
-	uint8                                         Pad_80[0x40];                                      // 0x0080(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          HitTestOnRelease;                                  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C1[0x6F];                                      // 0x00C1(0x006F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SingleClickInputBehavior">();
-	}
-	static class USingleClickInputBehavior* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USingleClickInputBehavior>();
-	}
-};
-static_assert(alignof(USingleClickInputBehavior) == 0x000008, "Wrong alignment on USingleClickInputBehavior");
-static_assert(sizeof(USingleClickInputBehavior) == 0x000130, "Wrong size on USingleClickInputBehavior");
-static_assert(offsetof(USingleClickInputBehavior, HitTestOnRelease) == 0x0000C0, "Member 'USingleClickInputBehavior::HitTestOnRelease' has a wrong offset!");
 
 // Class InteractiveToolsFramework.LocalSingleClickInputBehavior
 // 0x00D0 (0x0200 - 0x0130)
@@ -1571,32 +1564,6 @@ static_assert(sizeof(USingleClickOrDragInputBehavior) == 0x000180, "Wrong size o
 static_assert(offsetof(USingleClickOrDragInputBehavior, bBeginDragIfClickTargetNotHit) == 0x000120, "Member 'USingleClickOrDragInputBehavior::bBeginDragIfClickTargetNotHit' has a wrong offset!");
 static_assert(offsetof(USingleClickOrDragInputBehavior, ClickDistanceThreshold) == 0x000124, "Member 'USingleClickOrDragInputBehavior::ClickDistanceThreshold' has a wrong offset!");
 
-// Class InteractiveToolsFramework.WidgetBaseBehavior
-// 0x0000 (0x0000 - 0x0000)
-class IWidgetBaseBehavior final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"WidgetBaseBehavior">();
-	}
-	static class IWidgetBaseBehavior* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IWidgetBaseBehavior>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-static_assert(alignof(IWidgetBaseBehavior) == 0x000001, "Wrong alignment on IWidgetBaseBehavior");
-static_assert(sizeof(IWidgetBaseBehavior) == 0x000001, "Wrong size on IWidgetBaseBehavior");
-
 // Class InteractiveToolsFramework.AxisAngleGizmoBuilder
 // 0x0000 (0x0028 - 0x0028)
 class UAxisAngleGizmoBuilder final : public UInteractiveGizmoBuilder
@@ -1614,22 +1581,78 @@ public:
 static_assert(alignof(UAxisAngleGizmoBuilder) == 0x000008, "Wrong alignment on UAxisAngleGizmoBuilder");
 static_assert(sizeof(UAxisAngleGizmoBuilder) == 0x000028, "Wrong size on UAxisAngleGizmoBuilder");
 
-// Class InteractiveToolsFramework.AxisPositionGizmoBuilder
-// 0x0000 (0x0028 - 0x0028)
-class UAxisPositionGizmoBuilder final : public UInteractiveGizmoBuilder
+// Class InteractiveToolsFramework.InteractiveGizmo
+// 0x0010 (0x0038 - 0x0028)
+class UInteractiveGizmo : public UObject
 {
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInputBehaviorSet*                      InputBehaviors;                                    // 0x0030(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AxisPositionGizmoBuilder">();
+		return StaticClassImpl<"InteractiveGizmo">();
 	}
-	static class UAxisPositionGizmoBuilder* GetDefaultObj()
+	static class UInteractiveGizmo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAxisPositionGizmoBuilder>();
+		return GetDefaultObjImpl<UInteractiveGizmo>();
 	}
 };
-static_assert(alignof(UAxisPositionGizmoBuilder) == 0x000008, "Wrong alignment on UAxisPositionGizmoBuilder");
-static_assert(sizeof(UAxisPositionGizmoBuilder) == 0x000028, "Wrong size on UAxisPositionGizmoBuilder");
+static_assert(alignof(UInteractiveGizmo) == 0x000008, "Wrong alignment on UInteractiveGizmo");
+static_assert(sizeof(UInteractiveGizmo) == 0x000038, "Wrong size on UInteractiveGizmo");
+static_assert(offsetof(UInteractiveGizmo, InputBehaviors) == 0x000030, "Member 'UInteractiveGizmo::InputBehaviors' has a wrong offset!");
+
+// Class InteractiveToolsFramework.AxisAngleGizmo
+// 0x0198 (0x01D0 - 0x0038)
+class alignas(0x10) UAxisAngleGizmo final : public UInteractiveGizmo
+{
+public:
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGizmoAxisSource>      AxisSource;                                        // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TScriptInterface<class IGizmoFloatParameterSource> AngleSource;                                  // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TScriptInterface<class IGizmoClickTarget>     hitTarget;                                         // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TScriptInterface<class IGizmoStateTarget>     StateTarget;                                       // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClickDragInputBehavior*                MouseBehavior;                                     // 0x0088(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_90[0x80];                                      // 0x0090(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bInInteraction;                                    // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                RotationOrigin;                                    // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                RotationAxis;                                      // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                RotationPlaneX;                                    // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                RotationPlaneY;                                    // 0x0160(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InteractionStartPoint;                             // 0x0178(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InteractionCurPoint;                               // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InteractionStartAngle;                             // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InteractionCurAngle;                               // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B0[0x20];                                     // 0x01B0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AxisAngleGizmo">();
+	}
+	static class UAxisAngleGizmo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAxisAngleGizmo>();
+	}
+};
+static_assert(alignof(UAxisAngleGizmo) == 0x000010, "Wrong alignment on UAxisAngleGizmo");
+static_assert(sizeof(UAxisAngleGizmo) == 0x0001D0, "Wrong size on UAxisAngleGizmo");
+static_assert(offsetof(UAxisAngleGizmo, AxisSource) == 0x000048, "Member 'UAxisAngleGizmo::AxisSource' has a wrong offset!");
+static_assert(offsetof(UAxisAngleGizmo, AngleSource) == 0x000058, "Member 'UAxisAngleGizmo::AngleSource' has a wrong offset!");
+static_assert(offsetof(UAxisAngleGizmo, hitTarget) == 0x000068, "Member 'UAxisAngleGizmo::hitTarget' has a wrong offset!");
+static_assert(offsetof(UAxisAngleGizmo, StateTarget) == 0x000078, "Member 'UAxisAngleGizmo::StateTarget' has a wrong offset!");
+static_assert(offsetof(UAxisAngleGizmo, MouseBehavior) == 0x000088, "Member 'UAxisAngleGizmo::MouseBehavior' has a wrong offset!");
+static_assert(offsetof(UAxisAngleGizmo, bInInteraction) == 0x000110, "Member 'UAxisAngleGizmo::bInInteraction' has a wrong offset!");
+static_assert(offsetof(UAxisAngleGizmo, RotationOrigin) == 0x000118, "Member 'UAxisAngleGizmo::RotationOrigin' has a wrong offset!");
+static_assert(offsetof(UAxisAngleGizmo, RotationAxis) == 0x000130, "Member 'UAxisAngleGizmo::RotationAxis' has a wrong offset!");
+static_assert(offsetof(UAxisAngleGizmo, RotationPlaneX) == 0x000148, "Member 'UAxisAngleGizmo::RotationPlaneX' has a wrong offset!");
+static_assert(offsetof(UAxisAngleGizmo, RotationPlaneY) == 0x000160, "Member 'UAxisAngleGizmo::RotationPlaneY' has a wrong offset!");
+static_assert(offsetof(UAxisAngleGizmo, InteractionStartPoint) == 0x000178, "Member 'UAxisAngleGizmo::InteractionStartPoint' has a wrong offset!");
+static_assert(offsetof(UAxisAngleGizmo, InteractionCurPoint) == 0x000190, "Member 'UAxisAngleGizmo::InteractionCurPoint' has a wrong offset!");
+static_assert(offsetof(UAxisAngleGizmo, InteractionStartAngle) == 0x0001A8, "Member 'UAxisAngleGizmo::InteractionStartAngle' has a wrong offset!");
+static_assert(offsetof(UAxisAngleGizmo, InteractionCurAngle) == 0x0001AC, "Member 'UAxisAngleGizmo::InteractionCurAngle' has a wrong offset!");
 
 // Class InteractiveToolsFramework.AxisPositionGizmo
 // 0x0188 (0x01C0 - 0x0038)
@@ -1683,30 +1706,6 @@ static_assert(offsetof(UAxisPositionGizmo, InteractionCurPoint) == 0x000170, "Me
 static_assert(offsetof(UAxisPositionGizmo, InteractionStartParameter) == 0x000188, "Member 'UAxisPositionGizmo::InteractionStartParameter' has a wrong offset!");
 static_assert(offsetof(UAxisPositionGizmo, InteractionCurParameter) == 0x00018C, "Member 'UAxisPositionGizmo::InteractionCurParameter' has a wrong offset!");
 static_assert(offsetof(UAxisPositionGizmo, ParameterSign) == 0x000190, "Member 'UAxisPositionGizmo::ParameterSign' has a wrong offset!");
-
-// Class InteractiveToolsFramework.GizmoConstantAxisSource
-// 0x0038 (0x0060 - 0x0028)
-class UGizmoConstantAxisSource final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Origin;                                            // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Direction;                                         // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GizmoConstantAxisSource">();
-	}
-	static class UGizmoConstantAxisSource* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGizmoConstantAxisSource>();
-	}
-};
-static_assert(alignof(UGizmoConstantAxisSource) == 0x000008, "Wrong alignment on UGizmoConstantAxisSource");
-static_assert(sizeof(UGizmoConstantAxisSource) == 0x000060, "Wrong size on UGizmoConstantAxisSource");
-static_assert(offsetof(UGizmoConstantAxisSource, Origin) == 0x000030, "Member 'UGizmoConstantAxisSource::Origin' has a wrong offset!");
-static_assert(offsetof(UGizmoConstantAxisSource, Direction) == 0x000048, "Member 'UGizmoConstantAxisSource::Direction' has a wrong offset!");
 
 // Class InteractiveToolsFramework.GizmoWorldAxisSource
 // 0x0028 (0x0050 - 0x0028)
@@ -3412,26 +3411,6 @@ public:
 static_assert(alignof(UClickDragToolBuilder) == 0x000008, "Wrong alignment on UClickDragToolBuilder");
 static_assert(sizeof(UClickDragToolBuilder) == 0x000028, "Wrong size on UClickDragToolBuilder");
 
-// Class InteractiveToolsFramework.ClickDragTool
-// 0x0008 (0x00A0 - 0x0098)
-class UClickDragTool final : public UInteractiveTool
-{
-public:
-	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ClickDragTool">();
-	}
-	static class UClickDragTool* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UClickDragTool>();
-	}
-};
-static_assert(alignof(UClickDragTool) == 0x000008, "Wrong alignment on UClickDragTool");
-static_assert(sizeof(UClickDragTool) == 0x0000A0, "Wrong size on UClickDragTool");
-
 // Class InteractiveToolsFramework.SingleClickToolBuilder
 // 0x0000 (0x0028 - 0x0028)
 class USingleClickToolBuilder final : public UInteractiveToolBuilder
@@ -3469,6 +3448,27 @@ public:
 static_assert(alignof(UContextObjectStore) == 0x000008, "Wrong alignment on UContextObjectStore");
 static_assert(sizeof(UContextObjectStore) == 0x000038, "Wrong size on UContextObjectStore");
 static_assert(offsetof(UContextObjectStore, ContextObjects) == 0x000028, "Member 'UContextObjectStore::ContextObjects' has a wrong offset!");
+
+// Class InteractiveToolsFramework.InputBehaviorSet
+// 0x0010 (0x0038 - 0x0028)
+class UInputBehaviorSet final : public UObject
+{
+public:
+	TArray<struct FBehaviorInfo>                  Behaviors;                                         // 0x0028(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InputBehaviorSet">();
+	}
+	static class UInputBehaviorSet* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInputBehaviorSet>();
+	}
+};
+static_assert(alignof(UInputBehaviorSet) == 0x000008, "Wrong alignment on UInputBehaviorSet");
+static_assert(sizeof(UInputBehaviorSet) == 0x000038, "Wrong size on UInputBehaviorSet");
+static_assert(offsetof(UInputBehaviorSet, Behaviors) == 0x000028, "Member 'UInputBehaviorSet::Behaviors' has a wrong offset!");
 
 // Class InteractiveToolsFramework.InputBehaviorSource
 // 0x0000 (0x0000 - 0x0000)

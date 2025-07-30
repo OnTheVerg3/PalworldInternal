@@ -109,6 +109,16 @@ static_assert(offsetof(FTransformConstraint, TargetNode) == 0x000018, "Member 'F
 static_assert(offsetof(FTransformConstraint, Weight) == 0x000020, "Member 'FTransformConstraint::Weight' has a wrong offset!");
 static_assert(offsetof(FTransformConstraint, bMaintainOffset) == 0x000024, "Member 'FTransformConstraint::bMaintainOffset' has a wrong offset!");
 
+// ScriptStruct AnimationCore.FABRIKChainLink
+// 0x0050 (0x0050 - 0x0000)
+struct alignas(0x08) FFABRIKChainLink final
+{
+public:
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FFABRIKChainLink) == 0x000008, "Wrong alignment on FFABRIKChainLink");
+static_assert(sizeof(FFABRIKChainLink) == 0x000050, "Wrong size on FFABRIKChainLink");
+
 // ScriptStruct AnimationCore.ConstraintOffset
 // 0x00C0 (0x00C0 - 0x0000)
 struct FConstraintOffset final
@@ -239,16 +249,6 @@ public:
 };
 static_assert(alignof(FCCDIKChainLink) == 0x000010, "Wrong alignment on FCCDIKChainLink");
 static_assert(sizeof(FCCDIKChainLink) == 0x0000E0, "Wrong size on FCCDIKChainLink");
-
-// ScriptStruct AnimationCore.FABRIKChainLink
-// 0x0050 (0x0050 - 0x0000)
-struct alignas(0x08) FFABRIKChainLink final
-{
-public:
-	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FFABRIKChainLink) == 0x000008, "Wrong alignment on FFABRIKChainLink");
-static_assert(sizeof(FFABRIKChainLink) == 0x000050, "Wrong size on FFABRIKChainLink");
 
 // ScriptStruct AnimationCore.Axis
 // 0x0020 (0x0020 - 0x0000)

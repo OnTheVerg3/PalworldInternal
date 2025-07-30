@@ -63,7 +63,7 @@ static_assert(offsetof(WBP_OptionSettings_C_Set_Tab_Action, CallFunc_RegisterAct
 static_assert(offsetof(WBP_OptionSettings_C_Set_Tab_Action, CallFunc_RegisterActionBinding_ReturnValue_1) == 0x000028, "Member 'WBP_OptionSettings_C_Set_Tab_Action::CallFunc_RegisterActionBinding_ReturnValue_1' has a wrong offset!");
 
 // Function WBP_OptionSettings.WBP_OptionSettings_C.ExecuteUbergraph_WBP_OptionSettings
-// 0x05F0 (0x05F0 - 0x0000)
+// 0x0618 (0x0618 - 0x0000)
 struct WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings final
 {
 public:
@@ -288,9 +288,13 @@ public:
 	uint8                                         Pad_5E3[0x1];                                      // 0x05E3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Select_Default_2;                           // 0x05E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Select_Default_3;                           // 0x05E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5EC[0x4];                                      // 0x05EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetEuraBaseURL_ReturnValue;               // 0x05F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0600(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShowWebURL_ReturnValue;                   // 0x0610(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings) == 0x000008, "Wrong alignment on WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings");
-static_assert(sizeof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings) == 0x0005F0, "Wrong size on WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings");
+static_assert(sizeof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings) == 0x000618, "Wrong size on WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings");
 static_assert(offsetof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings, EntryPoint) == 0x000000, "Member 'WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000008, "Member 'WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings, CallFunc_GetCurrentInputType_ReturnValue) == 0x000010, "Member 'WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
@@ -482,6 +486,9 @@ static_assert(offsetof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings,
 static_assert(offsetof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings, CallFunc_IsPS5_ReturnValue_3) == 0x0005E2, "Member 'WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings::CallFunc_IsPS5_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings, K2Node_Select_Default_2) == 0x0005E4, "Member 'WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings::K2Node_Select_Default_2' has a wrong offset!");
 static_assert(offsetof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings, K2Node_Select_Default_3) == 0x0005E8, "Member 'WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings::K2Node_Select_Default_3' has a wrong offset!");
+static_assert(offsetof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings, CallFunc_GetEuraBaseURL_ReturnValue) == 0x0005F0, "Member 'WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings::CallFunc_GetEuraBaseURL_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings, CallFunc_Concat_StrStr_ReturnValue) == 0x000600, "Member 'WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings, CallFunc_ShowWebURL_ReturnValue) == 0x000610, "Member 'WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings::CallFunc_ShowWebURL_ReturnValue' has a wrong offset!");
 
 // Function WBP_OptionSettings.WBP_OptionSettings_C.EmptyEvent
 // 0x0001 (0x0001 - 0x0000)

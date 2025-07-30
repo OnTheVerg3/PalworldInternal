@@ -18,6 +18,8 @@
 #include <thread>
 #include <vector>
 #include <chrono>
+#include <fstream>
+#include <sstream>
 
 // DIRECTX
 #include <d3d11.h>

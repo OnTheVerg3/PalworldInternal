@@ -9,6 +9,7 @@
 #include "database.h"  
 #include "ui/cheat/aimbot.h"
 #include "include/hotkeys.h"
+#include "ConfigManager.h"
 
 namespace DX11Base
 {
@@ -115,7 +116,7 @@ namespace DX11Base
                         ImGui::Checkbox("Show Names", &cheatState.espShowNames);
                         ImGui::Checkbox("Show Distance", &cheatState.espShowDistance);
                         ImGui::Checkbox("Show Health", &cheatState.espShowPalHealth);
-                        ImGui::SliderFloat("Distance", &cheatState.espDistance, 200.0f, 30000.0f);
+                        ImGui::SliderFloat("Distance", &cheatState.espDistance, 200.0f, 40000.0f);
 
                         ImGui::SeparatorEx(1.0f);
                         ImGui::Text("Filters");
@@ -362,6 +363,18 @@ namespace DX11Base
                     if (ImGui::BeginTabItem("Settings"))
                     {
                         DrawHotkeys();
+						ImGui::Separator();
+                        if (ImGui::Button("Save Config"))
+                        {
+                            SaveConfig("config.txt"); // will create c_settings/config.txt if not exists
+                        }
+
+                        ImGui::SameLine();
+
+                        if (ImGui::Button("Load Config"))
+                        {
+                            LoadConfig("config.txt");
+                        }
                         ImGui::EndTabItem();
                     }
 
@@ -391,14 +404,16 @@ namespace DX11Base
 
         ResetStamina();
         SetDemiGodMode();
-        DrawPalESP();
-        DrawRelicESP();
         TickHotkeys();
 
         if (cheatState.aimbotEnabled && (GetAsyncKeyState(cheatState.aimbotHotkey) & 0x8000))
         {
             RunPalAimbot();
         }
+
+        DrawPalESP();
+        DrawRelicESP();
+
 		//Draw aimbot FOV circle if enabled
         if (cheatState.aimbotEnabled && cheatState.aimbotDrawFOV)
         {

@@ -1,12 +1,14 @@
 #pragma once
+#include <pch.h>
 #include <string>
+#include <Windows.h>
 
 extern std::vector<SDK::APalPlayerCharacter*> g_PlayerList;
 extern SDK::APalPlayerCharacter* selectedPlayer;
 extern SDK::APalWeaponBase* playerWeapon;
 
 
-void SetInfiniteAmmo(bool bInfAmmo);
+void SetInfiniteAmmo();
 void ChangeSpeed(float speed);
 void ChangeWorldSpeed(float speed);
 void SetPlayerAttackParam();

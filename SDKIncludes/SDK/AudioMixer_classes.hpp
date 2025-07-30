@@ -19,28 +19,6 @@
 namespace SDK
 {
 
-// Class AudioMixer.SynthSound
-// 0x0020 (0x04C0 - 0x04A0)
-class USynthSound final : public USoundWaveProcedural
-{
-public:
-	TWeakObjectPtr<class USynthComponent>         OwningSynthComponent;                              // 0x04A0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4A8[0x18];                                     // 0x04A8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SynthSound">();
-	}
-	static class USynthSound* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USynthSound>();
-	}
-};
-static_assert(alignof(USynthSound) == 0x000008, "Wrong alignment on USynthSound");
-static_assert(sizeof(USynthSound) == 0x0004C0, "Wrong size on USynthSound");
-static_assert(offsetof(USynthSound, OwningSynthComponent) == 0x0004A0, "Member 'USynthSound::OwningSynthComponent' has a wrong offset!");
-
 // Class AudioMixer.AudioGenerator
 // 0x0080 (0x00A8 - 0x0028)
 class UAudioGenerator : public UObject
@@ -234,6 +212,28 @@ public:
 };
 static_assert(alignof(UAudioMixerBlueprintLibrary) == 0x000008, "Wrong alignment on UAudioMixerBlueprintLibrary");
 static_assert(sizeof(UAudioMixerBlueprintLibrary) == 0x000028, "Wrong size on UAudioMixerBlueprintLibrary");
+
+// Class AudioMixer.SynthSound
+// 0x0020 (0x04C0 - 0x04A0)
+class USynthSound final : public USoundWaveProcedural
+{
+public:
+	TWeakObjectPtr<class USynthComponent>         OwningSynthComponent;                              // 0x04A0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4A8[0x18];                                     // 0x04A8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SynthSound">();
+	}
+	static class USynthSound* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USynthSound>();
+	}
+};
+static_assert(alignof(USynthSound) == 0x000008, "Wrong alignment on USynthSound");
+static_assert(sizeof(USynthSound) == 0x0004C0, "Wrong size on USynthSound");
+static_assert(offsetof(USynthSound, OwningSynthComponent) == 0x0004A0, "Member 'USynthSound::OwningSynthComponent' has a wrong offset!");
 
 // Class AudioMixer.SubmixEffectDynamicsProcessorPreset
 // 0x00E8 (0x0150 - 0x0068)

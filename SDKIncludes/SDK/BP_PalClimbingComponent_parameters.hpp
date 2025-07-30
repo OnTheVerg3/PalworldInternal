@@ -1015,7 +1015,7 @@ public:
 	class ACharacter*                             K2Node_DynamicCast_AsCharacter;                    // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_211[0x3];                                      // 0x0211(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UPalCharacterMovementComponent* Component, EMovementMode prevMode, EMovementMode newMode, EPalCharacterMovementCustomMode PrevCustomMode, EPalCharacterMovementCustomMode NewCustomMode)> K2Node_CreateDelegate_OutputDelegate_5; // 0x0214(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UPalCharacterMovementComponent* Component, EMovementMode PrevMode, EMovementMode NewMode, EPalCharacterMovementCustomMode PrevCustomMode, EPalCharacterMovementCustomMode NewCustomMode)> K2Node_CreateDelegate_OutputDelegate_5; // 0x0214(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_224[0x4];                                      // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPalStaticCharacterParameterComponent*  CallFunc_GetComponentByClass_ReturnValue_2;        // 0x0228(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 CallFunc_GetMainMeshByActor_ReturnValue;           // 0x0230(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -1538,7 +1538,7 @@ static_assert(sizeof(BP_PalClimbingComponent_C_OnCompleted_085F600F42305157C1A54
 static_assert(offsetof(BP_PalClimbingComponent_C_OnCompleted_085F600F42305157C1A542B1D6539EF9, NotifyName) == 0x000000, "Member 'BP_PalClimbingComponent_C_OnCompleted_085F600F42305157C1A542B1D6539EF9::NotifyName' has a wrong offset!");
 
 // Function BP_PalClimbingComponent.BP_PalClimbingComponent_C.OnEndClimbing
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct BP_PalClimbingComponent_C_OnEndClimbing final
 {
 public:
@@ -1550,28 +1550,29 @@ public:
 	class UPalShooterComponent*                   CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_2;                   // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPalShooterSpringArmComponent*          CallFunc_GetComponentByClass_ReturnValue_2;        // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_3;                   // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalFootIKComponent*                    CallFunc_GetComponentByClass_ReturnValue_3;        // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_4;                   // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_5;                   // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_6;                   // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalCharacterMovementComponent*         CallFunc_GetComponentByClass_ReturnValue_4;        // 0x00B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_3;                   // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalFootIKComponent*                    CallFunc_GetComponentByClass_ReturnValue_3;        // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_4;                   // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_5;                   // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_6;                   // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalCharacterMovementComponent*         CallFunc_GetComponentByClass_ReturnValue_4;        // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PalClimbingComponent_C_OnEndClimbing) == 0x000008, "Wrong alignment on BP_PalClimbingComponent_C_OnEndClimbing");
-static_assert(sizeof(BP_PalClimbingComponent_C_OnEndClimbing) == 0x0000C8, "Wrong size on BP_PalClimbingComponent_C_OnEndClimbing");
+static_assert(sizeof(BP_PalClimbingComponent_C_OnEndClimbing) == 0x0000D0, "Wrong size on BP_PalClimbingComponent_C_OnEndClimbing");
 static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, ShooterComponent) == 0x000000, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::ShooterComponent' has a wrong offset!");
 static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, MoveComponent) == 0x000008, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::MoveComponent' has a wrong offset!");
 static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetOwner_ReturnValue) == 0x000010, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
@@ -1580,22 +1581,22 @@ static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetOwne
 static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000028, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetOwner_ReturnValue_2) == 0x000030, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetOwner_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetComponentByClass_ReturnValue_2) == 0x000038, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetOwner_ReturnValue_3) == 0x000040, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetOwner_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetComponentByClass_ReturnValue_3) == 0x000048, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetComponentByClass_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_IsValid_ReturnValue_1) == 0x000051, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetOwner_ReturnValue_4) == 0x000058, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetOwner_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetOwner_ReturnValue_5) == 0x000060, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetOwner_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000068, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_BreakRotator_Roll) == 0x000080, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_BreakRotator_Pitch) == 0x000084, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_BreakRotator_Yaw) == 0x000088, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_IsValid_ReturnValue_2) == 0x00008C, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_MakeRotator_ReturnValue) == 0x000090, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_K2_SetActorRotation_ReturnValue) == 0x0000A8, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetOwner_ReturnValue_6) == 0x0000B0, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetOwner_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetComponentByClass_ReturnValue_4) == 0x0000B8, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetComponentByClass_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_IsValid_ReturnValue_3) == 0x0000C0, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_IsValid_ReturnValue) == 0x000040, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetOwner_ReturnValue_3) == 0x000048, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetOwner_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetComponentByClass_ReturnValue_3) == 0x000050, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetComponentByClass_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_IsValid_ReturnValue_1) == 0x000058, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetOwner_ReturnValue_4) == 0x000060, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetOwner_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetOwner_ReturnValue_5) == 0x000068, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetOwner_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000070, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_BreakRotator_Roll) == 0x000088, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_BreakRotator_Pitch) == 0x00008C, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_BreakRotator_Yaw) == 0x000090, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_IsValid_ReturnValue_2) == 0x000094, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_MakeRotator_ReturnValue) == 0x000098, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_K2_SetActorRotation_ReturnValue) == 0x0000B0, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetOwner_ReturnValue_6) == 0x0000B8, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetOwner_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_GetComponentByClass_ReturnValue_4) == 0x0000C0, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_GetComponentByClass_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnEndClimbing, CallFunc_IsValid_ReturnValue_3) == 0x0000C8, "Member 'BP_PalClimbingComponent_C_OnEndClimbing::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
 
 // Function BP_PalClimbingComponent.BP_PalClimbingComponent_C.OnInterrupted_085F600F42305157C1A542B1D6539EF9
 // 0x0008 (0x0008 - 0x0000)
@@ -1614,16 +1615,16 @@ struct BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0 fi
 {
 public:
 	class UPalCharacterMovementComponent*         Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EMovementMode                                 prevMode;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMovementMode                                 newMode;                                           // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMovementMode                                 PrevMode;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMovementMode                                 NewMode;                                           // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EPalCharacterMovementCustomMode               PrevCustomMode;                                    // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EPalCharacterMovementCustomMode               NewCustomMode;                                     // 0x000B(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0) == 0x000008, "Wrong alignment on BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0");
 static_assert(sizeof(BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0) == 0x000010, "Wrong size on BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0");
 static_assert(offsetof(BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0, Component) == 0x000000, "Member 'BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0::Component' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0, prevMode) == 0x000008, "Member 'BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0::prevMode' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0, newMode) == 0x000009, "Member 'BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0::newMode' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0, PrevMode) == 0x000008, "Member 'BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0::PrevMode' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0, NewMode) == 0x000009, "Member 'BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0::NewMode' has a wrong offset!");
 static_assert(offsetof(BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0, PrevCustomMode) == 0x00000A, "Member 'BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0::PrevCustomMode' has a wrong offset!");
 static_assert(offsetof(BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0, NewCustomMode) == 0x00000B, "Member 'BP_PalClimbingComponent_C_OnMovementModeChangedDelegate_イベント_0::NewCustomMode' has a wrong offset!");
 
@@ -2095,7 +2096,7 @@ static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbByNetwork, CallFunc_C
 static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbByNetwork, CallFunc_CapsuleTraceSingle_ReturnValue) == 0x000360, "Member 'BP_PalClimbingComponent_C_StartClimbByNetwork::CallFunc_CapsuleTraceSingle_ReturnValue' has a wrong offset!");
 
 // Function BP_PalClimbingComponent.BP_PalClimbingComponent_C.StartClimbing
-// 0x0528 (0x0528 - 0x0000)
+// 0x0530 (0x0530 - 0x0000)
 struct BP_PalClimbingComponent_C_StartClimbing final
 {
 public:
@@ -2112,78 +2113,79 @@ public:
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPalShooterComponent*                   CallFunc_GetComponentByClass_ReturnValue;          // 0x0178(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_2;                   // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_FloatToVector_ReturnValue;           // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPalShooterSpringArmComponent*          CallFunc_GetComponentByClass_ReturnValue_1;        // 0x01A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_3;                   // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalFootIKComponent*                    CallFunc_GetComponentByClass_ReturnValue_2;        // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BA[0x6];                                      // 0x01BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalShooterSpringArmComponent*          CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0188(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_FloatToVector_ReturnValue;           // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_3;                   // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalFootIKComponent*                    CallFunc_GetComponentByClass_ReturnValue_2;        // 0x01B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_4;                   // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_5;                   // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x01D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x01E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_5;                   // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x01F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_DynamicCast_AsPrimitive_Component;          // 0x0208(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_6;                   // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0239(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23A[0x2];                                      // 0x023A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x023C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0248(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0260(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0278(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0290(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x02A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x02B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x02B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x02D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x02D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x02E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x02F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0310(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit_1;            // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap_1;         // 0x0329(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32A[0x2];                                      // 0x032A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time_1;                    // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance_1;                // 0x0330(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_334[0x4];                                      // 0x0334(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location_1;                // 0x0338(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint_1;             // 0x0350(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal_1;                  // 0x0368(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal_1;            // 0x0380(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat_1;                 // 0x0398(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor_1;                // 0x03A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent_1;            // 0x03A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName_1;             // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName_1;                // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem_1;                 // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex_1;            // 0x03C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex_1;               // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart_1;              // 0x03D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd_1;                // 0x03E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0400(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x04E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E9[0x7];                                      // 0x04E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x04F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_7;                   // 0x0508(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0510(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_511[0x7];                                      // 0x0511(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalCharacterMovementComponent*         CallFunc_GetComponentByClass_ReturnValue_3;        // 0x0518(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0520(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0208(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_DynamicCast_AsPrimitive_Component;          // 0x0210(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_6;                   // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0228(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0241(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_242[0x2];                                      // 0x0242(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x0244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0250(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0268(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0280(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0298(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x02B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x02C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x02DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E4[0x4];                                      // 0x02E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x02E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0300(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0318(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit_1;            // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap_1;         // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_332[0x2];                                      // 0x0332(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time_1;                    // 0x0334(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance_1;                // 0x0338(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_33C[0x4];                                      // 0x033C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location_1;                // 0x0340(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint_1;             // 0x0358(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal_1;                  // 0x0370(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal_1;            // 0x0388(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat_1;                 // 0x03A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor_1;                // 0x03A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent_1;            // 0x03B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName_1;             // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName_1;                // 0x03C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem_1;                 // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex_1;            // 0x03CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex_1;               // 0x03D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D4[0x4];                                      // 0x03D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart_1;              // 0x03D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd_1;                // 0x03F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0408(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x04F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F1[0x7];                                      // 0x04F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x04F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_7;                   // 0x0510(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0518(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_519[0x7];                                      // 0x0519(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalCharacterMovementComponent*         CallFunc_GetComponentByClass_ReturnValue_3;        // 0x0520(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0528(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PalClimbingComponent_C_StartClimbing) == 0x000008, "Wrong alignment on BP_PalClimbingComponent_C_StartClimbing");
-static_assert(sizeof(BP_PalClimbingComponent_C_StartClimbing) == 0x000528, "Wrong size on BP_PalClimbingComponent_C_StartClimbing");
+static_assert(sizeof(BP_PalClimbingComponent_C_StartClimbing) == 0x000530, "Wrong size on BP_PalClimbingComponent_C_StartClimbing");
 static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, HitResult) == 0x000000, "Member 'BP_PalClimbingComponent_C_StartClimbing::HitResult' has a wrong offset!");
 static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, IsLocalPlayer) == 0x0000E8, "Member 'BP_PalClimbingComponent_C_StartClimbing::IsLocalPlayer' has a wrong offset!");
 static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, ShooterComponent) == 0x0000F0, "Member 'BP_PalClimbingComponent_C_StartClimbing::ShooterComponent' has a wrong offset!");
@@ -2195,65 +2197,65 @@ static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, K2Node_MakeStruc
 static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetOwner_ReturnValue_1) == 0x000170, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetComponentByClass_ReturnValue) == 0x000178, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetOwner_ReturnValue_2) == 0x000180, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetOwner_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_Conv_FloatToVector_ReturnValue) == 0x000188, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_Conv_FloatToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetComponentByClass_ReturnValue_1) == 0x0001A0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetOwner_ReturnValue_3) == 0x0001A8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetOwner_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetComponentByClass_ReturnValue_2) == 0x0001B0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_IsValid_ReturnValue) == 0x0001B8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_IsValid_ReturnValue_1) == 0x0001B9, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000188, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_Conv_FloatToVector_ReturnValue) == 0x000190, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_Conv_FloatToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_IsValid_ReturnValue) == 0x0001A8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetOwner_ReturnValue_3) == 0x0001B0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetOwner_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetComponentByClass_ReturnValue_2) == 0x0001B8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetOwner_ReturnValue_4) == 0x0001C0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetOwner_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetOwner_ReturnValue_5) == 0x0001C8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetOwner_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_IsValid_ReturnValue_1) == 0x0001C8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_Normal_ReturnValue) == 0x0001D0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_Normal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_K2_GetRootComponent_ReturnValue) == 0x0001E8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetOwner_ReturnValue_5) == 0x0001E8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetOwner_ReturnValue_5' has a wrong offset!");
 static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_Multiply_VectorVector_ReturnValue) == 0x0001F0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, K2Node_DynamicCast_AsPrimitive_Component) == 0x000208, "Member 'BP_PalClimbingComponent_C_StartClimbing::K2Node_DynamicCast_AsPrimitive_Component' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, K2Node_DynamicCast_bSuccess) == 0x000210, "Member 'BP_PalClimbingComponent_C_StartClimbing::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetOwner_ReturnValue_6) == 0x000218, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetOwner_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000220, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_bBlockingHit) == 0x000238, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_bInitialOverlap) == 0x000239, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Time) == 0x00023C, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Distance) == 0x000240, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Location) == 0x000248, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_ImpactPoint) == 0x000260, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Normal) == 0x000278, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_ImpactNormal) == 0x000290, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_PhysMat) == 0x0002A8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitActor) == 0x0002B0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitComponent) == 0x0002B8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitBoneName) == 0x0002C0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_BoneName) == 0x0002C8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitItem) == 0x0002D0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_ElementIndex) == 0x0002D4, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_FaceIndex) == 0x0002D8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_TraceStart) == 0x0002E0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_TraceEnd) == 0x0002F8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_Add_VectorVector_ReturnValue) == 0x000310, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_bBlockingHit_1) == 0x000328, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_bBlockingHit_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_bInitialOverlap_1) == 0x000329, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_bInitialOverlap_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Time_1) == 0x00032C, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Time_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Distance_1) == 0x000330, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Distance_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Location_1) == 0x000338, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Location_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_ImpactPoint_1) == 0x000350, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_ImpactPoint_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Normal_1) == 0x000368, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Normal_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_ImpactNormal_1) == 0x000380, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_ImpactNormal_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_PhysMat_1) == 0x000398, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_PhysMat_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitActor_1) == 0x0003A0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitActor_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitComponent_1) == 0x0003A8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitComponent_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitBoneName_1) == 0x0003B0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitBoneName_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_BoneName_1) == 0x0003B8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_BoneName_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitItem_1) == 0x0003C0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitItem_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_ElementIndex_1) == 0x0003C4, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_ElementIndex_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_FaceIndex_1) == 0x0003C8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_FaceIndex_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_TraceStart_1) == 0x0003D0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_TraceStart_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_TraceEnd_1) == 0x0003E8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_TraceEnd_1' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000400, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0004E8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0004F0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetOwner_ReturnValue_7) == 0x000508, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetOwner_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_IsValid_ReturnValue_2) == 0x000510, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetComponentByClass_ReturnValue_3) == 0x000518, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetComponentByClass_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_IsValid_ReturnValue_3) == 0x000520, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000208, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, K2Node_DynamicCast_AsPrimitive_Component) == 0x000210, "Member 'BP_PalClimbingComponent_C_StartClimbing::K2Node_DynamicCast_AsPrimitive_Component' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, K2Node_DynamicCast_bSuccess) == 0x000218, "Member 'BP_PalClimbingComponent_C_StartClimbing::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetOwner_ReturnValue_6) == 0x000220, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetOwner_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000228, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_bBlockingHit) == 0x000240, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_bInitialOverlap) == 0x000241, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Time) == 0x000244, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Time' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Distance) == 0x000248, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Distance' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Location) == 0x000250, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Location' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_ImpactPoint) == 0x000268, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Normal) == 0x000280, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Normal' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_ImpactNormal) == 0x000298, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_PhysMat) == 0x0002B0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitActor) == 0x0002B8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitComponent) == 0x0002C0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitBoneName) == 0x0002C8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_BoneName) == 0x0002D0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitItem) == 0x0002D8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_ElementIndex) == 0x0002DC, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_FaceIndex) == 0x0002E0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_TraceStart) == 0x0002E8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_TraceEnd) == 0x000300, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_Add_VectorVector_ReturnValue) == 0x000318, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_bBlockingHit_1) == 0x000330, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_bBlockingHit_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_bInitialOverlap_1) == 0x000331, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_bInitialOverlap_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Time_1) == 0x000334, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Time_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Distance_1) == 0x000338, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Distance_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Location_1) == 0x000340, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Location_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_ImpactPoint_1) == 0x000358, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_ImpactPoint_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_Normal_1) == 0x000370, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_Normal_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_ImpactNormal_1) == 0x000388, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_ImpactNormal_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_PhysMat_1) == 0x0003A0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_PhysMat_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitActor_1) == 0x0003A8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitActor_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitComponent_1) == 0x0003B0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitComponent_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitBoneName_1) == 0x0003B8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitBoneName_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_BoneName_1) == 0x0003C0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_BoneName_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_HitItem_1) == 0x0003C8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_HitItem_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_ElementIndex_1) == 0x0003CC, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_ElementIndex_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_FaceIndex_1) == 0x0003D0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_FaceIndex_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_TraceStart_1) == 0x0003D8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_TraceStart_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_BreakHitResult_TraceEnd_1) == 0x0003F0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_BreakHitResult_TraceEnd_1' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000408, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0004F0, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0004F8, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetOwner_ReturnValue_7) == 0x000510, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetOwner_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_IsValid_ReturnValue_2) == 0x000518, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_GetComponentByClass_ReturnValue_3) == 0x000520, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_GetComponentByClass_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_PalClimbingComponent_C_StartClimbing, CallFunc_IsValid_ReturnValue_3) == 0x000528, "Member 'BP_PalClimbingComponent_C_StartClimbing::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
 
 // Function BP_PalClimbingComponent.BP_PalClimbingComponent_C.TryClimbAfterGrappling
 // 0x02E0 (0x02E0 - 0x0000)

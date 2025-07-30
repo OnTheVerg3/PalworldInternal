@@ -504,39 +504,42 @@ static_assert(offsetof(BP_Action_FishingSalvage_C_SetMoveState_Gravity, CallFunc
 static_assert(offsetof(BP_Action_FishingSalvage_C_SetMoveState_Gravity, CallFunc_SetGravityZMultiplier_rate_ImplicitCast) == 0x000020, "Member 'BP_Action_FishingSalvage_C_SetMoveState_Gravity::CallFunc_SetGravityZMultiplier_rate_ImplicitCast' has a wrong offset!");
 
 // Function BP_Action_FishingSalvage.BP_Action_FishingSalvage_C.SetupAnim
-// 0x0078 (0x0078 - 0x0000)
+// 0x0380 (0x0380 - 0x0000)
 struct BP_Action_FishingSalvage_C_SetupAnim final
 {
 public:
-	EPalGeneralMontageType                        Temp_byte_Variable;                                // 0x0000(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalGeneralMontageType                        Temp_byte_Variable_1;                              // 0x0001(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalGeneralMontageType                        Temp_byte_Variable_2;                              // 0x0002(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalGeneralMontageType                        Temp_byte_Variable_3;                              // 0x0003(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalGeneralMontageType                        Temp_byte_Variable_4;                              // 0x0004(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalGeneralMontageType                        Temp_byte_Variable_5;                              // 0x0005(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalFishingMotionType                         Temp_byte_Variable;                                // 0x0000(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalFishingMotionType                         Temp_byte_Variable_1;                              // 0x0001(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalFishingMotionType                         Temp_byte_Variable_2;                              // 0x0002(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalFishingMotionType                         Temp_byte_Variable_3;                              // 0x0003(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalFishingMotionType                         Temp_byte_Variable_4;                              // 0x0004(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalFishingMotionType                         Temp_byte_Variable_5;                              // 0x0005(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalStaticCharacterParameterComponent*  CallFunc_GetComponentByClass_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           CallFunc_Map_Find_Value;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           CallFunc_Map_Find_Value_1;                         // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           CallFunc_Map_Find_Value_2;                         // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           CallFunc_Map_Find_Value_3;                         // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           CallFunc_Map_Find_Value_4;                         // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           CallFunc_Map_Find_Value_5;                         // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_5;                   // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPalShooterComponent*                   CallFunc_GetComponentByClass_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FWeaponAnimationInfo                   CallFunc_GetCurrentWeaponAnimationInfo_ReturnValue; // 0x0018(0x0300)(ConstParm)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_319[0x7];                                      // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           CallFunc_Map_Find_Value;                           // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_329[0x7];                                      // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           CallFunc_Map_Find_Value_1;                         // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_339[0x7];                                      // 0x0339(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           CallFunc_Map_Find_Value_2;                         // 0x0340(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           CallFunc_Map_Find_Value_3;                         // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_359[0x7];                                      // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           CallFunc_Map_Find_Value_4;                         // 0x0360(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x0368(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_369[0x7];                                      // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           CallFunc_Map_Find_Value_5;                         // 0x0370(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_5;                   // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_Action_FishingSalvage_C_SetupAnim) == 0x000008, "Wrong alignment on BP_Action_FishingSalvage_C_SetupAnim");
-static_assert(sizeof(BP_Action_FishingSalvage_C_SetupAnim) == 0x000078, "Wrong size on BP_Action_FishingSalvage_C_SetupAnim");
+static_assert(sizeof(BP_Action_FishingSalvage_C_SetupAnim) == 0x000380, "Wrong size on BP_Action_FishingSalvage_C_SetupAnim");
 static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, Temp_byte_Variable) == 0x000000, "Member 'BP_Action_FishingSalvage_C_SetupAnim::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, Temp_byte_Variable_1) == 0x000001, "Member 'BP_Action_FishingSalvage_C_SetupAnim::Temp_byte_Variable_1' has a wrong offset!");
 static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, Temp_byte_Variable_2) == 0x000002, "Member 'BP_Action_FishingSalvage_C_SetupAnim::Temp_byte_Variable_2' has a wrong offset!");
@@ -545,18 +548,20 @@ static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, Temp_byte_Variable_
 static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, Temp_byte_Variable_5) == 0x000005, "Member 'BP_Action_FishingSalvage_C_SetupAnim::Temp_byte_Variable_5' has a wrong offset!");
 static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_GetActionCharacter_ReturnValue) == 0x000008, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_GetActionCharacter_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_GetComponentByClass_ReturnValue) == 0x000010, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_Value) == 0x000018, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_ReturnValue) == 0x000020, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_Value_1) == 0x000028, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_ReturnValue_1) == 0x000030, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_Value_2) == 0x000038, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_Value_2' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_ReturnValue_2) == 0x000040, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_Value_3) == 0x000048, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_Value_3' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_ReturnValue_3) == 0x000050, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_Value_4) == 0x000058, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_Value_4' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_ReturnValue_4) == 0x000060, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_Value_5) == 0x000068, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_Value_5' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_ReturnValue_5) == 0x000070, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_GetCurrentWeaponAnimationInfo_ReturnValue) == 0x000018, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_GetCurrentWeaponAnimationInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_IsValid_ReturnValue) == 0x000318, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_Value) == 0x000320, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_ReturnValue) == 0x000328, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_Value_1) == 0x000330, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_ReturnValue_1) == 0x000338, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_Value_2) == 0x000340, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_Value_2' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_ReturnValue_2) == 0x000348, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_Value_3) == 0x000350, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_Value_3' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_ReturnValue_3) == 0x000358, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_Value_4) == 0x000360, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_Value_4' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_ReturnValue_4) == 0x000368, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_Value_5) == 0x000370, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_Value_5' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_SetupAnim, CallFunc_Map_Find_ReturnValue_5) == 0x000378, "Member 'BP_Action_FishingSalvage_C_SetupAnim::CallFunc_Map_Find_ReturnValue_5' has a wrong offset!");
 
 // Function BP_Action_FishingSalvage.BP_Action_FishingSalvage_C.SetUseUpperBodyOnly
 // 0x0030 (0x0030 - 0x0000)

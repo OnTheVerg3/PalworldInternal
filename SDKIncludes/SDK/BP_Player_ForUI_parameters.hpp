@@ -76,7 +76,7 @@ static_assert(offsetof(BP_Player_ForUI_C_CopyGlider, K2Node_DynamicCast_AsBP_Gli
 static_assert(offsetof(BP_Player_ForUI_C_CopyGlider, K2Node_DynamicCast_bSuccess_2) == 0x000238, "Member 'BP_Player_ForUI_C_CopyGlider::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
 
 // Function BP_Player_ForUI.BP_Player_ForUI_C.CopyWeapon
-// 0x0360 (0x0360 - 0x0000)
+// 0x0400 (0x0400 - 0x0000)
 struct BP_Player_ForUI_C_CopyWeapon final
 {
 public:
@@ -95,26 +95,26 @@ public:
 	class APalWeaponBase*                         CallFunc_FinishSpawningActor_ReturnValue;          // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWeaponAnimationInfo                   CallFunc_GetCurrentWeaponAnimationInfo_ReturnValue; // 0x00A0(0x0260)(ConstParm)
-	class USceneComponent*                        CallFunc_GetMainMesh_ReturnValue;                  // 0x0300(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequence*                          CallFunc_Map_Find_Value;                           // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_311[0x7];                                      // 0x0311(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 K2Node_DynamicCast_AsSkeletal_Mesh_Component;      // 0x0318(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_321[0x3];                                      // 0x0321(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetEquipSocketName_ReturnValue;           // 0x0324(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32C[0x4];                                      // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         CallFunc_GetAttachedActors_OutActors;              // 0x0330(0x0010)(ReferenceParm)
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0340(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APalWeaponBase*                         K2Node_DynamicCast_AsPal_Weapon_Base;              // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0359(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWeaponAnimationInfo                   CallFunc_GetCurrentWeaponAnimationInfo_ReturnValue; // 0x00A0(0x0300)(ConstParm)
+	class USceneComponent*                        CallFunc_GetMainMesh_ReturnValue;                  // 0x03A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequence*                          CallFunc_Map_Find_Value;                           // 0x03A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B1[0x7];                                      // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 K2Node_DynamicCast_AsSkeletal_Mesh_Component;      // 0x03B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x03C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C1[0x3];                                      // 0x03C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetEquipSocketName_ReturnValue;           // 0x03C4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         CallFunc_GetAttachedActors_OutActors;              // 0x03D0(0x0010)(ReferenceParm)
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x03E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x03E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3EC[0x4];                                      // 0x03EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APalWeaponBase*                         K2Node_DynamicCast_AsPal_Weapon_Base;              // 0x03F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x03F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_Player_ForUI_C_CopyWeapon) == 0x000010, "Wrong alignment on BP_Player_ForUI_C_CopyWeapon");
-static_assert(sizeof(BP_Player_ForUI_C_CopyWeapon) == 0x000360, "Wrong size on BP_Player_ForUI_C_CopyWeapon");
+static_assert(sizeof(BP_Player_ForUI_C_CopyWeapon) == 0x000400, "Wrong size on BP_Player_ForUI_C_CopyWeapon");
 static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, WeaponClass) == 0x000000, "Member 'BP_Player_ForUI_C_CopyWeapon::WeaponClass' has a wrong offset!");
 static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, Temp_byte_Variable) == 0x000008, "Member 'BP_Player_ForUI_C_CopyWeapon::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_IsValidClass_ReturnValue) == 0x000009, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
@@ -128,18 +128,18 @@ static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_BeginDeferredActor
 static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_FinishSpawningActor_ReturnValue) == 0x000090, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_IsValid_ReturnValue_1) == 0x000098, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_GetCurrentWeaponAnimationInfo_ReturnValue) == 0x0000A0, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_GetCurrentWeaponAnimationInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_GetMainMesh_ReturnValue) == 0x000300, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_GetMainMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_Map_Find_Value) == 0x000308, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_Map_Find_ReturnValue) == 0x000310, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, K2Node_DynamicCast_AsSkeletal_Mesh_Component) == 0x000318, "Member 'BP_Player_ForUI_C_CopyWeapon::K2Node_DynamicCast_AsSkeletal_Mesh_Component' has a wrong offset!");
-static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, K2Node_DynamicCast_bSuccess) == 0x000320, "Member 'BP_Player_ForUI_C_CopyWeapon::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_GetEquipSocketName_ReturnValue) == 0x000324, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_GetEquipSocketName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_GetAttachedActors_OutActors) == 0x000330, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_GetAttachedActors_OutActors' has a wrong offset!");
-static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_Array_Get_Item) == 0x000340, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_Array_Length_ReturnValue) == 0x000348, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, K2Node_DynamicCast_AsPal_Weapon_Base) == 0x000350, "Member 'BP_Player_ForUI_C_CopyWeapon::K2Node_DynamicCast_AsPal_Weapon_Base' has a wrong offset!");
-static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, K2Node_DynamicCast_bSuccess_1) == 0x000358, "Member 'BP_Player_ForUI_C_CopyWeapon::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_Less_IntInt_ReturnValue) == 0x000359, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_GetMainMesh_ReturnValue) == 0x0003A0, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_GetMainMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_Map_Find_Value) == 0x0003A8, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_Map_Find_ReturnValue) == 0x0003B0, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, K2Node_DynamicCast_AsSkeletal_Mesh_Component) == 0x0003B8, "Member 'BP_Player_ForUI_C_CopyWeapon::K2Node_DynamicCast_AsSkeletal_Mesh_Component' has a wrong offset!");
+static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, K2Node_DynamicCast_bSuccess) == 0x0003C0, "Member 'BP_Player_ForUI_C_CopyWeapon::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_GetEquipSocketName_ReturnValue) == 0x0003C4, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_GetEquipSocketName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_GetAttachedActors_OutActors) == 0x0003D0, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_GetAttachedActors_OutActors' has a wrong offset!");
+static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_Array_Get_Item) == 0x0003E0, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_Array_Length_ReturnValue) == 0x0003E8, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, K2Node_DynamicCast_AsPal_Weapon_Base) == 0x0003F0, "Member 'BP_Player_ForUI_C_CopyWeapon::K2Node_DynamicCast_AsPal_Weapon_Base' has a wrong offset!");
+static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, K2Node_DynamicCast_bSuccess_1) == 0x0003F8, "Member 'BP_Player_ForUI_C_CopyWeapon::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_Player_ForUI_C_CopyWeapon, CallFunc_Less_IntInt_ReturnValue) == 0x0003F9, "Member 'BP_Player_ForUI_C_CopyWeapon::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function BP_Player_ForUI.BP_Player_ForUI_C.ExecuteUbergraph_BP_Player_ForUI
 // 0x0038 (0x0038 - 0x0000)

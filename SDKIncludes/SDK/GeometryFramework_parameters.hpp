@@ -17,6 +17,53 @@
 namespace SDK::Params
 {
 
+// Function GeometryFramework.DynamicMeshActor.AllocateComputeMesh
+// 0x0008 (0x0008 - 0x0000)
+struct DynamicMeshActor_AllocateComputeMesh final
+{
+public:
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DynamicMeshActor_AllocateComputeMesh) == 0x000008, "Wrong alignment on DynamicMeshActor_AllocateComputeMesh");
+static_assert(sizeof(DynamicMeshActor_AllocateComputeMesh) == 0x000008, "Wrong size on DynamicMeshActor_AllocateComputeMesh");
+static_assert(offsetof(DynamicMeshActor_AllocateComputeMesh, ReturnValue) == 0x000000, "Member 'DynamicMeshActor_AllocateComputeMesh::ReturnValue' has a wrong offset!");
+
+// Function GeometryFramework.DynamicMeshActor.GetComputeMeshPool
+// 0x0008 (0x0008 - 0x0000)
+struct DynamicMeshActor_GetComputeMeshPool final
+{
+public:
+	class UDynamicMeshPool*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DynamicMeshActor_GetComputeMeshPool) == 0x000008, "Wrong alignment on DynamicMeshActor_GetComputeMeshPool");
+static_assert(sizeof(DynamicMeshActor_GetComputeMeshPool) == 0x000008, "Wrong size on DynamicMeshActor_GetComputeMeshPool");
+static_assert(offsetof(DynamicMeshActor_GetComputeMeshPool, ReturnValue) == 0x000000, "Member 'DynamicMeshActor_GetComputeMeshPool::ReturnValue' has a wrong offset!");
+
+// Function GeometryFramework.DynamicMeshActor.ReleaseComputeMesh
+// 0x0010 (0x0010 - 0x0000)
+struct DynamicMeshActor_ReleaseComputeMesh final
+{
+public:
+	class UDynamicMesh*                           Mesh;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(DynamicMeshActor_ReleaseComputeMesh) == 0x000008, "Wrong alignment on DynamicMeshActor_ReleaseComputeMesh");
+static_assert(sizeof(DynamicMeshActor_ReleaseComputeMesh) == 0x000010, "Wrong size on DynamicMeshActor_ReleaseComputeMesh");
+static_assert(offsetof(DynamicMeshActor_ReleaseComputeMesh, Mesh) == 0x000000, "Member 'DynamicMeshActor_ReleaseComputeMesh::Mesh' has a wrong offset!");
+static_assert(offsetof(DynamicMeshActor_ReleaseComputeMesh, ReturnValue) == 0x000008, "Member 'DynamicMeshActor_ReleaseComputeMesh::ReturnValue' has a wrong offset!");
+
+// Function GeometryFramework.DynamicMeshActor.GetDynamicMeshComponent
+// 0x0008 (0x0008 - 0x0000)
+struct DynamicMeshActor_GetDynamicMeshComponent final
+{
+public:
+	class UDynamicMeshComponent*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DynamicMeshActor_GetDynamicMeshComponent) == 0x000008, "Wrong alignment on DynamicMeshActor_GetDynamicMeshComponent");
+static_assert(sizeof(DynamicMeshActor_GetDynamicMeshComponent) == 0x000008, "Wrong size on DynamicMeshActor_GetDynamicMeshComponent");
+static_assert(offsetof(DynamicMeshActor_GetDynamicMeshComponent, ReturnValue) == 0x000000, "Member 'DynamicMeshActor_GetDynamicMeshComponent::ReturnValue' has a wrong offset!");
+
 // Function GeometryFramework.BaseDynamicMeshComponent.GetDynamicMesh
 // 0x0008 (0x0008 - 0x0000)
 struct BaseDynamicMeshComponent_GetDynamicMesh final
@@ -33,11 +80,11 @@ static_assert(offsetof(BaseDynamicMeshComponent_GetDynamicMesh, ReturnValue) == 
 struct BaseDynamicMeshComponent_SetColorOverrideMode final
 {
 public:
-	EDynamicMeshComponentColorOverrideMode        newMode;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDynamicMeshComponentColorOverrideMode        NewMode;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(BaseDynamicMeshComponent_SetColorOverrideMode) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_SetColorOverrideMode");
 static_assert(sizeof(BaseDynamicMeshComponent_SetColorOverrideMode) == 0x000001, "Wrong size on BaseDynamicMeshComponent_SetColorOverrideMode");
-static_assert(offsetof(BaseDynamicMeshComponent_SetColorOverrideMode, newMode) == 0x000000, "Member 'BaseDynamicMeshComponent_SetColorOverrideMode::newMode' has a wrong offset!");
+static_assert(offsetof(BaseDynamicMeshComponent_SetColorOverrideMode, NewMode) == 0x000000, "Member 'BaseDynamicMeshComponent_SetColorOverrideMode::NewMode' has a wrong offset!");
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetConstantOverrideColor
 // 0x0004 (0x0004 - 0x0000)
@@ -360,53 +407,6 @@ public:
 static_assert(alignof(DynamicMeshComponent_GetTangentsType) == 0x000001, "Wrong alignment on DynamicMeshComponent_GetTangentsType");
 static_assert(sizeof(DynamicMeshComponent_GetTangentsType) == 0x000001, "Wrong size on DynamicMeshComponent_GetTangentsType");
 static_assert(offsetof(DynamicMeshComponent_GetTangentsType, ReturnValue) == 0x000000, "Member 'DynamicMeshComponent_GetTangentsType::ReturnValue' has a wrong offset!");
-
-// Function GeometryFramework.DynamicMeshActor.AllocateComputeMesh
-// 0x0008 (0x0008 - 0x0000)
-struct DynamicMeshActor_AllocateComputeMesh final
-{
-public:
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(DynamicMeshActor_AllocateComputeMesh) == 0x000008, "Wrong alignment on DynamicMeshActor_AllocateComputeMesh");
-static_assert(sizeof(DynamicMeshActor_AllocateComputeMesh) == 0x000008, "Wrong size on DynamicMeshActor_AllocateComputeMesh");
-static_assert(offsetof(DynamicMeshActor_AllocateComputeMesh, ReturnValue) == 0x000000, "Member 'DynamicMeshActor_AllocateComputeMesh::ReturnValue' has a wrong offset!");
-
-// Function GeometryFramework.DynamicMeshActor.GetComputeMeshPool
-// 0x0008 (0x0008 - 0x0000)
-struct DynamicMeshActor_GetComputeMeshPool final
-{
-public:
-	class UDynamicMeshPool*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(DynamicMeshActor_GetComputeMeshPool) == 0x000008, "Wrong alignment on DynamicMeshActor_GetComputeMeshPool");
-static_assert(sizeof(DynamicMeshActor_GetComputeMeshPool) == 0x000008, "Wrong size on DynamicMeshActor_GetComputeMeshPool");
-static_assert(offsetof(DynamicMeshActor_GetComputeMeshPool, ReturnValue) == 0x000000, "Member 'DynamicMeshActor_GetComputeMeshPool::ReturnValue' has a wrong offset!");
-
-// Function GeometryFramework.DynamicMeshActor.ReleaseComputeMesh
-// 0x0010 (0x0010 - 0x0000)
-struct DynamicMeshActor_ReleaseComputeMesh final
-{
-public:
-	class UDynamicMesh*                           Mesh;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(DynamicMeshActor_ReleaseComputeMesh) == 0x000008, "Wrong alignment on DynamicMeshActor_ReleaseComputeMesh");
-static_assert(sizeof(DynamicMeshActor_ReleaseComputeMesh) == 0x000010, "Wrong size on DynamicMeshActor_ReleaseComputeMesh");
-static_assert(offsetof(DynamicMeshActor_ReleaseComputeMesh, Mesh) == 0x000000, "Member 'DynamicMeshActor_ReleaseComputeMesh::Mesh' has a wrong offset!");
-static_assert(offsetof(DynamicMeshActor_ReleaseComputeMesh, ReturnValue) == 0x000008, "Member 'DynamicMeshActor_ReleaseComputeMesh::ReturnValue' has a wrong offset!");
-
-// Function GeometryFramework.DynamicMeshActor.GetDynamicMeshComponent
-// 0x0008 (0x0008 - 0x0000)
-struct DynamicMeshActor_GetDynamicMeshComponent final
-{
-public:
-	class UDynamicMeshComponent*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(DynamicMeshActor_GetDynamicMeshComponent) == 0x000008, "Wrong alignment on DynamicMeshActor_GetDynamicMeshComponent");
-static_assert(sizeof(DynamicMeshActor_GetDynamicMeshComponent) == 0x000008, "Wrong size on DynamicMeshActor_GetDynamicMeshComponent");
-static_assert(offsetof(DynamicMeshActor_GetDynamicMeshComponent, ReturnValue) == 0x000000, "Member 'DynamicMeshActor_GetDynamicMeshComponent::ReturnValue' has a wrong offset!");
 
 // Function GeometryFramework.DynamicMesh.Reset
 // 0x0008 (0x0008 - 0x0000)

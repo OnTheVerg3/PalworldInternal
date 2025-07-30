@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BP_AIAction_CanCombatBase_classes.hpp"
 #include "AIModule_structs.hpp"
+#include "BP_AIAction_CanCombatBase_classes.hpp"
 
 
 namespace SDK

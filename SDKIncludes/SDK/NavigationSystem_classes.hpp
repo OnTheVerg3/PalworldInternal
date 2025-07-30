@@ -10,15 +10,70 @@
 
 #include "Basic.hpp"
 
+#include "NavigationSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "NavigationSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
 namespace SDK
 {
+
+// Class NavigationSystem.NavRelevantComponent
+// 0x0050 (0x00F0 - 0x00A0)
+class UNavRelevantComponent : public UActorComponent
+{
+public:
+	uint8                                         Pad_A0[0x40];                                      // 0x00A0(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bAttachToOwnersRoot : 1;                           // 0x00E0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CachedNavParent;                                   // 0x00E8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void SetNavigationRelevancy(bool bRelevant);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NavRelevantComponent">();
+	}
+	static class UNavRelevantComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNavRelevantComponent>();
+	}
+};
+static_assert(alignof(UNavRelevantComponent) == 0x000008, "Wrong alignment on UNavRelevantComponent");
+static_assert(sizeof(UNavRelevantComponent) == 0x0000F0, "Wrong size on UNavRelevantComponent");
+static_assert(offsetof(UNavRelevantComponent, CachedNavParent) == 0x0000E8, "Member 'UNavRelevantComponent::CachedNavParent' has a wrong offset!");
+
+// Class NavigationSystem.NavModifierComponent
+// 0x00A0 (0x0190 - 0x00F0)
+class alignas(0x10) UNavModifierComponent final : public UNavRelevantComponent
+{
+public:
+	TSubclassOf<class UNavArea>                   AreaClass;                                         // 0x00F0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                FailsafeExtent;                                    // 0x00F8(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bIncludeAgentHeight : 1;                           // 0x0110(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_111[0x7F];                                     // 0x0111(0x007F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetAreaClass(TSubclassOf<class UNavArea> NewAreaClass);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NavModifierComponent">();
+	}
+	static class UNavModifierComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNavModifierComponent>();
+	}
+};
+static_assert(alignof(UNavModifierComponent) == 0x000010, "Wrong alignment on UNavModifierComponent");
+static_assert(sizeof(UNavModifierComponent) == 0x000190, "Wrong size on UNavModifierComponent");
+static_assert(offsetof(UNavModifierComponent, AreaClass) == 0x0000F0, "Member 'UNavModifierComponent::AreaClass' has a wrong offset!");
+static_assert(offsetof(UNavModifierComponent, FailsafeExtent) == 0x0000F8, "Member 'UNavModifierComponent::FailsafeExtent' has a wrong offset!");
 
 // Class NavigationSystem.NavArea
 // 0x0018 (0x0048 - 0x0030)
@@ -64,22 +119,22 @@ static_assert(offsetof(UNavArea, FixedAreaEnteringCost) == 0x000034, "Member 'UN
 static_assert(offsetof(UNavArea, DrawColor) == 0x000038, "Member 'UNavArea::DrawColor' has a wrong offset!");
 static_assert(offsetof(UNavArea, SupportedAgents) == 0x00003C, "Member 'UNavArea::SupportedAgents' has a wrong offset!");
 
-// Class NavigationSystem.NavigationGraphNode
-// 0x0000 (0x0290 - 0x0290)
-class ANavigationGraphNode final : public AActor
+// Class NavigationSystem.CrowdManagerBase
+// 0x0000 (0x0028 - 0x0028)
+class UCrowdManagerBase : public UObject
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NavigationGraphNode">();
+		return StaticClassImpl<"CrowdManagerBase">();
 	}
-	static class ANavigationGraphNode* GetDefaultObj()
+	static class UCrowdManagerBase* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ANavigationGraphNode>();
+		return GetDefaultObjImpl<UCrowdManagerBase>();
 	}
 };
-static_assert(alignof(ANavigationGraphNode) == 0x000008, "Wrong alignment on ANavigationGraphNode");
-static_assert(sizeof(ANavigationGraphNode) == 0x000290, "Wrong size on ANavigationGraphNode");
+static_assert(alignof(UCrowdManagerBase) == 0x000008, "Wrong alignment on UCrowdManagerBase");
+static_assert(sizeof(UCrowdManagerBase) == 0x000028, "Wrong size on UCrowdManagerBase");
 
 // Class NavigationSystem.NavigationInvokerComponent
 // 0x0008 (0x00A8 - 0x00A0)
@@ -103,32 +158,6 @@ static_assert(alignof(UNavigationInvokerComponent) == 0x000008, "Wrong alignment
 static_assert(sizeof(UNavigationInvokerComponent) == 0x0000A8, "Wrong size on UNavigationInvokerComponent");
 static_assert(offsetof(UNavigationInvokerComponent, TileGenerationRadius) == 0x0000A0, "Member 'UNavigationInvokerComponent::TileGenerationRadius' has a wrong offset!");
 static_assert(offsetof(UNavigationInvokerComponent, TileRemovalRadius) == 0x0000A4, "Member 'UNavigationInvokerComponent::TileRemovalRadius' has a wrong offset!");
-
-// Class NavigationSystem.NavigationGraphNodeComponent
-// 0x0030 (0x02D0 - 0x02A0)
-class UNavigationGraphNodeComponent final : public USceneComponent
-{
-public:
-	struct FNavGraphNode                          Node;                                              // 0x02A0(0x0018)(NativeAccessSpecifierPublic)
-	class UNavigationGraphNodeComponent*          NextNodeComponent;                                 // 0x02B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UNavigationGraphNodeComponent*          PrevNodeComponent;                                 // 0x02C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C8[0x8];                                      // 0x02C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NavigationGraphNodeComponent">();
-	}
-	static class UNavigationGraphNodeComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNavigationGraphNodeComponent>();
-	}
-};
-static_assert(alignof(UNavigationGraphNodeComponent) == 0x000010, "Wrong alignment on UNavigationGraphNodeComponent");
-static_assert(sizeof(UNavigationGraphNodeComponent) == 0x0002D0, "Wrong size on UNavigationGraphNodeComponent");
-static_assert(offsetof(UNavigationGraphNodeComponent, Node) == 0x0002A0, "Member 'UNavigationGraphNodeComponent::Node' has a wrong offset!");
-static_assert(offsetof(UNavigationGraphNodeComponent, NextNodeComponent) == 0x0002B8, "Member 'UNavigationGraphNodeComponent::NextNodeComponent' has a wrong offset!");
-static_assert(offsetof(UNavigationGraphNodeComponent, PrevNodeComponent) == 0x0002C0, "Member 'UNavigationGraphNodeComponent::PrevNodeComponent' has a wrong offset!");
 
 // Class NavigationSystem.NavigationSystemV1
 // 0x1508 (0x1530 - 0x0028)
@@ -189,7 +218,7 @@ public:
 	void OnNavigationBoundsUpdated(class ANavMeshBoundsVolume* NavVolume);
 	void RegisterNavigationInvoker(class AActor* Invoker, float TileGenerationRadius, float TileRemovalRadius);
 	void ResetMaxSimultaneousTileGenerationJobsCount();
-	void SetGeometryGatheringMode(ENavDataGatheringModeConfig newMode);
+	void SetGeometryGatheringMode(ENavDataGatheringModeConfig NewMode);
 	void SetMaxSimultaneousTileGenerationJobsCount(int32 MaxNumberOfJobs);
 	void UnregisterNavigationInvoker(class AActor* Invoker);
 
@@ -223,22 +252,22 @@ static_assert(offsetof(UNavigationSystemV1, OnNavDataRegisteredEvent) == 0x00011
 static_assert(offsetof(UNavigationSystemV1, OnNavigationGenerationFinishedDelegate) == 0x000120, "Member 'UNavigationSystemV1::OnNavigationGenerationFinishedDelegate' has a wrong offset!");
 static_assert(offsetof(UNavigationSystemV1, OperationMode) == 0x00020C, "Member 'UNavigationSystemV1::OperationMode' has a wrong offset!");
 
-// Class NavigationSystem.CrowdManagerBase
-// 0x0000 (0x0028 - 0x0028)
-class UCrowdManagerBase : public UObject
+// Class NavigationSystem.NavigationGraphNode
+// 0x0000 (0x0290 - 0x0290)
+class ANavigationGraphNode final : public AActor
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CrowdManagerBase">();
+		return StaticClassImpl<"NavigationGraphNode">();
 	}
-	static class UCrowdManagerBase* GetDefaultObj()
+	static class ANavigationGraphNode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UCrowdManagerBase>();
+		return GetDefaultObjImpl<ANavigationGraphNode>();
 	}
 };
-static_assert(alignof(UCrowdManagerBase) == 0x000008, "Wrong alignment on UCrowdManagerBase");
-static_assert(sizeof(UCrowdManagerBase) == 0x000028, "Wrong size on UCrowdManagerBase");
+static_assert(alignof(ANavigationGraphNode) == 0x000008, "Wrong alignment on ANavigationGraphNode");
+static_assert(sizeof(ANavigationGraphNode) == 0x000290, "Wrong size on ANavigationGraphNode");
 
 // Class NavigationSystem.NavigationData
 // 0x0228 (0x04B8 - 0x0290)
@@ -281,6 +310,49 @@ static_assert(offsetof(ANavigationData, RuntimeGeneration) == 0x00033C, "Member 
 static_assert(offsetof(ANavigationData, ObservedPathsTickInterval) == 0x000340, "Member 'ANavigationData::ObservedPathsTickInterval' has a wrong offset!");
 static_assert(offsetof(ANavigationData, DataVersion) == 0x000344, "Member 'ANavigationData::DataVersion' has a wrong offset!");
 static_assert(offsetof(ANavigationData, SupportedAreas) == 0x000450, "Member 'ANavigationData::SupportedAreas' has a wrong offset!");
+
+// Class NavigationSystem.NavigationGraphNodeComponent
+// 0x0030 (0x02D0 - 0x02A0)
+class UNavigationGraphNodeComponent final : public USceneComponent
+{
+public:
+	struct FNavGraphNode                          Node;                                              // 0x02A0(0x0018)(NativeAccessSpecifierPublic)
+	class UNavigationGraphNodeComponent*          NextNodeComponent;                                 // 0x02B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UNavigationGraphNodeComponent*          PrevNodeComponent;                                 // 0x02C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C8[0x8];                                      // 0x02C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NavigationGraphNodeComponent">();
+	}
+	static class UNavigationGraphNodeComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNavigationGraphNodeComponent>();
+	}
+};
+static_assert(alignof(UNavigationGraphNodeComponent) == 0x000010, "Wrong alignment on UNavigationGraphNodeComponent");
+static_assert(sizeof(UNavigationGraphNodeComponent) == 0x0002D0, "Wrong size on UNavigationGraphNodeComponent");
+static_assert(offsetof(UNavigationGraphNodeComponent, Node) == 0x0002A0, "Member 'UNavigationGraphNodeComponent::Node' has a wrong offset!");
+static_assert(offsetof(UNavigationGraphNodeComponent, NextNodeComponent) == 0x0002B8, "Member 'UNavigationGraphNodeComponent::NextNodeComponent' has a wrong offset!");
+static_assert(offsetof(UNavigationGraphNodeComponent, PrevNodeComponent) == 0x0002C0, "Member 'UNavigationGraphNodeComponent::PrevNodeComponent' has a wrong offset!");
+
+// Class NavigationSystem.NavigationGraph
+// 0x0000 (0x04B8 - 0x04B8)
+class ANavigationGraph final : public ANavigationData
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NavigationGraph">();
+	}
+	static class ANavigationGraph* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ANavigationGraph>();
+	}
+};
+static_assert(alignof(ANavigationGraph) == 0x000008, "Wrong alignment on ANavigationGraph");
+static_assert(sizeof(ANavigationGraph) == 0x0004B8, "Wrong size on ANavigationGraph");
 
 // Class NavigationSystem.RecastNavMesh
 // 0x00E0 (0x0598 - 0x04B8)
@@ -751,23 +823,6 @@ public:
 static_assert(alignof(URecastFilter_UseDefaultArea) == 0x000008, "Wrong alignment on URecastFilter_UseDefaultArea");
 static_assert(sizeof(URecastFilter_UseDefaultArea) == 0x000048, "Wrong size on URecastFilter_UseDefaultArea");
 
-// Class NavigationSystem.NavigationGraph
-// 0x0000 (0x04B8 - 0x04B8)
-class ANavigationGraph final : public ANavigationData
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NavigationGraph">();
-	}
-	static class ANavigationGraph* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ANavigationGraph>();
-	}
-};
-static_assert(alignof(ANavigationGraph) == 0x000008, "Wrong alignment on ANavigationGraph");
-static_assert(sizeof(ANavigationGraph) == 0x0004B8, "Wrong size on ANavigationGraph");
-
 // Class NavigationSystem.NavigationPath
 // 0x0060 (0x0088 - 0x0028)
 class UNavigationPath final : public UObject
@@ -925,33 +980,6 @@ static_assert(alignof(UNavLinkComponent) == 0x000010, "Wrong alignment on UNavLi
 static_assert(sizeof(UNavLinkComponent) == 0x000550, "Wrong size on UNavLinkComponent");
 static_assert(offsetof(UNavLinkComponent, Links) == 0x000540, "Member 'UNavLinkComponent::Links' has a wrong offset!");
 
-// Class NavigationSystem.NavRelevantComponent
-// 0x0050 (0x00F0 - 0x00A0)
-class UNavRelevantComponent : public UActorComponent
-{
-public:
-	uint8                                         Pad_A0[0x40];                                      // 0x00A0(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bAttachToOwnersRoot : 1;                           // 0x00E0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CachedNavParent;                                   // 0x00E8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void SetNavigationRelevancy(bool bRelevant);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NavRelevantComponent">();
-	}
-	static class UNavRelevantComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNavRelevantComponent>();
-	}
-};
-static_assert(alignof(UNavRelevantComponent) == 0x000008, "Wrong alignment on UNavRelevantComponent");
-static_assert(sizeof(UNavRelevantComponent) == 0x0000F0, "Wrong size on UNavRelevantComponent");
-static_assert(offsetof(UNavRelevantComponent, CachedNavParent) == 0x0000E8, "Member 'UNavRelevantComponent::CachedNavParent' has a wrong offset!");
-
 // Class NavigationSystem.NavLinkCustomComponent
 // 0x00E0 (0x01D0 - 0x00F0)
 class UNavLinkCustomComponent final : public UNavRelevantComponent
@@ -1102,34 +1130,6 @@ public:
 };
 static_assert(alignof(URecastNavMeshDataChunk) == 0x000008, "Wrong alignment on URecastNavMeshDataChunk");
 static_assert(sizeof(URecastNavMeshDataChunk) == 0x000040, "Wrong size on URecastNavMeshDataChunk");
-
-// Class NavigationSystem.NavModifierComponent
-// 0x00A0 (0x0190 - 0x00F0)
-class alignas(0x10) UNavModifierComponent final : public UNavRelevantComponent
-{
-public:
-	TSubclassOf<class UNavArea>                   AreaClass;                                         // 0x00F0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                FailsafeExtent;                                    // 0x00F8(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bIncludeAgentHeight : 1;                           // 0x0110(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_111[0x7F];                                     // 0x0111(0x007F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetAreaClass(TSubclassOf<class UNavArea> NewAreaClass);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NavModifierComponent">();
-	}
-	static class UNavModifierComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNavModifierComponent>();
-	}
-};
-static_assert(alignof(UNavModifierComponent) == 0x000010, "Wrong alignment on UNavModifierComponent");
-static_assert(sizeof(UNavModifierComponent) == 0x000190, "Wrong size on UNavModifierComponent");
-static_assert(offsetof(UNavModifierComponent, AreaClass) == 0x0000F0, "Member 'UNavModifierComponent::AreaClass' has a wrong offset!");
-static_assert(offsetof(UNavModifierComponent, FailsafeExtent) == 0x0000F8, "Member 'UNavModifierComponent::FailsafeExtent' has a wrong offset!");
 
 // Class NavigationSystem.NavModifierVolume
 // 0x0018 (0x02E0 - 0x02C8)

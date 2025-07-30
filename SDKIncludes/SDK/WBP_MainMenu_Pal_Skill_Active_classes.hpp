@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -27,8 +27,8 @@ public:
 	class UWidgetAnimation*                       Anim_Empty;                                        // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_NormalToFocus;                                 // 0x0288(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Click;                                         // 0x0290(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_Focus;                                         // 0x0298(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_Normal;                                        // 0x02A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_focus;                                         // 0x0298(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_normal;                                        // 0x02A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UImage*                                 Image_Element;                                     // 0x02A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_Selected;                                    // 0x02B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_Selected_1;                                  // 0x02B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -74,8 +74,8 @@ static_assert(offsetof(UWBP_MainMenu_Pal_Skill_Active_C, UberGraphFrame) == 0x00
 static_assert(offsetof(UWBP_MainMenu_Pal_Skill_Active_C, Anim_Empty) == 0x000280, "Member 'UWBP_MainMenu_Pal_Skill_Active_C::Anim_Empty' has a wrong offset!");
 static_assert(offsetof(UWBP_MainMenu_Pal_Skill_Active_C, Anm_NormalToFocus) == 0x000288, "Member 'UWBP_MainMenu_Pal_Skill_Active_C::Anm_NormalToFocus' has a wrong offset!");
 static_assert(offsetof(UWBP_MainMenu_Pal_Skill_Active_C, Anm_Click) == 0x000290, "Member 'UWBP_MainMenu_Pal_Skill_Active_C::Anm_Click' has a wrong offset!");
-static_assert(offsetof(UWBP_MainMenu_Pal_Skill_Active_C, Anm_Focus) == 0x000298, "Member 'UWBP_MainMenu_Pal_Skill_Active_C::Anm_Focus' has a wrong offset!");
-static_assert(offsetof(UWBP_MainMenu_Pal_Skill_Active_C, Anm_Normal) == 0x0002A0, "Member 'UWBP_MainMenu_Pal_Skill_Active_C::Anm_Normal' has a wrong offset!");
+static_assert(offsetof(UWBP_MainMenu_Pal_Skill_Active_C, Anm_focus) == 0x000298, "Member 'UWBP_MainMenu_Pal_Skill_Active_C::Anm_focus' has a wrong offset!");
+static_assert(offsetof(UWBP_MainMenu_Pal_Skill_Active_C, Anm_normal) == 0x0002A0, "Member 'UWBP_MainMenu_Pal_Skill_Active_C::Anm_normal' has a wrong offset!");
 static_assert(offsetof(UWBP_MainMenu_Pal_Skill_Active_C, Image_Element) == 0x0002A8, "Member 'UWBP_MainMenu_Pal_Skill_Active_C::Image_Element' has a wrong offset!");
 static_assert(offsetof(UWBP_MainMenu_Pal_Skill_Active_C, Image_Selected) == 0x0002B0, "Member 'UWBP_MainMenu_Pal_Skill_Active_C::Image_Selected' has a wrong offset!");
 static_assert(offsetof(UWBP_MainMenu_Pal_Skill_Active_C, Image_Selected_1) == 0x0002B8, "Member 'UWBP_MainMenu_Pal_Skill_Active_C::Image_Selected_1' has a wrong offset!");

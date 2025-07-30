@@ -23,8 +23,8 @@ class UWBP_CharaCre_ListContent_C final : public UUserWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Anm_Focus;                                         // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_Normal;                                        // 0x0288(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_focus;                                         // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_normal;                                        // 0x0288(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UNamedSlot*                             NamedSlot_InnnerVerticalBox;                       // 0x0290(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UBP_PalTextBlock_C*                     Text_Title;                                        // 0x0298(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	struct FDataTableRowHandle                    titleMsgId;                                        // 0x02A0(0x0010)(Edit, BlueprintVisible, NoDestructor)
@@ -46,8 +46,8 @@ public:
 static_assert(alignof(UWBP_CharaCre_ListContent_C) == 0x000008, "Wrong alignment on UWBP_CharaCre_ListContent_C");
 static_assert(sizeof(UWBP_CharaCre_ListContent_C) == 0x0002B0, "Wrong size on UWBP_CharaCre_ListContent_C");
 static_assert(offsetof(UWBP_CharaCre_ListContent_C, UberGraphFrame) == 0x000278, "Member 'UWBP_CharaCre_ListContent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_CharaCre_ListContent_C, Anm_Focus) == 0x000280, "Member 'UWBP_CharaCre_ListContent_C::Anm_Focus' has a wrong offset!");
-static_assert(offsetof(UWBP_CharaCre_ListContent_C, Anm_Normal) == 0x000288, "Member 'UWBP_CharaCre_ListContent_C::Anm_Normal' has a wrong offset!");
+static_assert(offsetof(UWBP_CharaCre_ListContent_C, Anm_focus) == 0x000280, "Member 'UWBP_CharaCre_ListContent_C::Anm_focus' has a wrong offset!");
+static_assert(offsetof(UWBP_CharaCre_ListContent_C, Anm_normal) == 0x000288, "Member 'UWBP_CharaCre_ListContent_C::Anm_normal' has a wrong offset!");
 static_assert(offsetof(UWBP_CharaCre_ListContent_C, NamedSlot_InnnerVerticalBox) == 0x000290, "Member 'UWBP_CharaCre_ListContent_C::NamedSlot_InnnerVerticalBox' has a wrong offset!");
 static_assert(offsetof(UWBP_CharaCre_ListContent_C, Text_Title) == 0x000298, "Member 'UWBP_CharaCre_ListContent_C::Text_Title' has a wrong offset!");
 static_assert(offsetof(UWBP_CharaCre_ListContent_C, titleMsgId) == 0x0002A0, "Member 'UWBP_CharaCre_ListContent_C::titleMsgId' has a wrong offset!");

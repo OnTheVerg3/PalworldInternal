@@ -67,8 +67,10 @@ public:
 	void ExecuteUbergraph_BP_Action_Fishing(int32 EntryPoint);
 	void GetFloorLocation(const struct FVector& StartLocation, struct FVector* FloorLocation);
 	void GetJumpEndLocation(const struct FVector& StartLocation, struct FVector* EndLocation);
+	void GetPlayerShowFishMontage(EPalFishingPlayerMotionType MotionType, class UAnimMontage** Montage);
 	void NotifyCencelToWeapon();
 	void NotifyFinishToWeapon();
+	void NotifyShowFishToWeapon();
 	void NotifyStartToWeapon();
 	void OnBeginAction();
 	void OnBlendOut_054C66DE4779F170772F0797F0502C02(class FName NotifyName);

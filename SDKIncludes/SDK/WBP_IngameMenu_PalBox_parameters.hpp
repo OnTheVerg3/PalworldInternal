@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "EPalBoxHoveredSlotType_structs.hpp"
 #include "Pal_structs.hpp"
+#include "EPalBoxHoveredSlotType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

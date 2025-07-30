@@ -252,21 +252,6 @@ static_assert(offsetof(FPartyMemberPlatformData, Platform) == 0x000000, "Member 
 static_assert(offsetof(FPartyMemberPlatformData, UniqueId) == 0x000058, "Member 'FPartyMemberPlatformData::UniqueId' has a wrong offset!");
 static_assert(offsetof(FPartyMemberPlatformData, SessionId) == 0x000088, "Member 'FPartyMemberPlatformData::SessionId' has a wrong offset!");
 
-// ScriptStruct Party.PartyPlatformSessionInfo
-// 0x0050 (0x0050 - 0x0000)
-struct FPartyPlatformSessionInfo final
-{
-public:
-	class FString                                 SessionType;                                       // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SessionId;                                         // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       OwnerPrimaryId;                                    // 0x0020(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPartyPlatformSessionInfo) == 0x000008, "Wrong alignment on FPartyPlatformSessionInfo");
-static_assert(sizeof(FPartyPlatformSessionInfo) == 0x000050, "Wrong size on FPartyPlatformSessionInfo");
-static_assert(offsetof(FPartyPlatformSessionInfo, SessionType) == 0x000000, "Member 'FPartyPlatformSessionInfo::SessionType' has a wrong offset!");
-static_assert(offsetof(FPartyPlatformSessionInfo, SessionId) == 0x000010, "Member 'FPartyPlatformSessionInfo::SessionId' has a wrong offset!");
-static_assert(offsetof(FPartyPlatformSessionInfo, OwnerPrimaryId) == 0x000020, "Member 'FPartyPlatformSessionInfo::OwnerPrimaryId' has a wrong offset!");
-
 // ScriptStruct Party.PartyMemberJoinInProgressRequest
 // 0x0038 (0x0038 - 0x0000)
 struct FPartyMemberJoinInProgressRequest final
@@ -342,6 +327,21 @@ static_assert(offsetof(FPartyMemberRepData, PlatformData) == 0x000020, "Member '
 static_assert(offsetof(FPartyMemberRepData, CrossplayPreference) == 0x000148, "Member 'FPartyMemberRepData::CrossplayPreference' has a wrong offset!");
 static_assert(offsetof(FPartyMemberRepData, JoinMethod) == 0x000180, "Member 'FPartyMemberRepData::JoinMethod' has a wrong offset!");
 static_assert(offsetof(FPartyMemberRepData, JoinInProgressData) == 0x0001C0, "Member 'FPartyMemberRepData::JoinInProgressData' has a wrong offset!");
+
+// ScriptStruct Party.PartyPlatformSessionInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FPartyPlatformSessionInfo final
+{
+public:
+	class FString                                 SessionType;                                       // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SessionId;                                         // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       OwnerPrimaryId;                                    // 0x0020(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPartyPlatformSessionInfo) == 0x000008, "Wrong alignment on FPartyPlatformSessionInfo");
+static_assert(sizeof(FPartyPlatformSessionInfo) == 0x000050, "Wrong size on FPartyPlatformSessionInfo");
+static_assert(offsetof(FPartyPlatformSessionInfo, SessionType) == 0x000000, "Member 'FPartyPlatformSessionInfo::SessionType' has a wrong offset!");
+static_assert(offsetof(FPartyPlatformSessionInfo, SessionId) == 0x000010, "Member 'FPartyPlatformSessionInfo::SessionId' has a wrong offset!");
+static_assert(offsetof(FPartyPlatformSessionInfo, OwnerPrimaryId) == 0x000020, "Member 'FPartyPlatformSessionInfo::OwnerPrimaryId' has a wrong offset!");
 
 // ScriptStruct Party.PartyPrivacySettings
 // 0x0003 (0x0003 - 0x0000)

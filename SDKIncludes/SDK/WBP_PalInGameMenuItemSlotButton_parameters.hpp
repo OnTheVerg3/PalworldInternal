@@ -369,28 +369,6 @@ static_assert(alignof(WBP_PalInGameMenuItemSlotButton_C_OnUnhoveredEvent) == 0x0
 static_assert(sizeof(WBP_PalInGameMenuItemSlotButton_C_OnUnhoveredEvent) == 0x000008, "Wrong size on WBP_PalInGameMenuItemSlotButton_C_OnUnhoveredEvent");
 static_assert(offsetof(WBP_PalInGameMenuItemSlotButton_C_OnUnhoveredEvent, Widget) == 0x000000, "Member 'WBP_PalInGameMenuItemSlotButton_C_OnUnhoveredEvent::Widget' has a wrong offset!");
 
-// Function WBP_PalInGameMenuItemSlotButton.WBP_PalInGameMenuItemSlotButton_C.RegisterButton
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_PalInGameMenuItemSlotButton_C_RegisterButton final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_PalInGameMenuItemSlotButton_C_RegisterButton) == 0x000008, "Wrong alignment on WBP_PalInGameMenuItemSlotButton_C_RegisterButton");
-static_assert(sizeof(WBP_PalInGameMenuItemSlotButton_C_RegisterButton) == 0x000008, "Wrong size on WBP_PalInGameMenuItemSlotButton_C_RegisterButton");
-static_assert(offsetof(WBP_PalInGameMenuItemSlotButton_C_RegisterButton, Button) == 0x000000, "Member 'WBP_PalInGameMenuItemSlotButton_C_RegisterButton::Button' has a wrong offset!");
-
-// Function WBP_PalInGameMenuItemSlotButton.WBP_PalInGameMenuItemSlotButton_C.RegisterItemSlotWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget final
-{
-public:
-	class UWBP_PalItemSlotBase_C*                 itemSlotWidget;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget) == 0x000008, "Wrong alignment on WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget");
-static_assert(sizeof(WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget) == 0x000008, "Wrong size on WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget");
-static_assert(offsetof(WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget, itemSlotWidget) == 0x000000, "Member 'WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget::itemSlotWidget' has a wrong offset!");
-
 // Function WBP_PalInGameMenuItemSlotButton.WBP_PalInGameMenuItemSlotButton_C.Set Pal Gear Icon
 // 0x0058 (0x0058 - 0x0000)
 struct WBP_PalInGameMenuItemSlotButton_C_Set_Pal_Gear_Icon final
@@ -551,6 +529,28 @@ public:
 static_assert(alignof(WBP_PalInGameMenuItemSlotButton_C_ToggleLock) == 0x000001, "Wrong alignment on WBP_PalInGameMenuItemSlotButton_C_ToggleLock");
 static_assert(sizeof(WBP_PalInGameMenuItemSlotButton_C_ToggleLock) == 0x000001, "Wrong size on WBP_PalInGameMenuItemSlotButton_C_ToggleLock");
 static_assert(offsetof(WBP_PalInGameMenuItemSlotButton_C_ToggleLock, Lock) == 0x000000, "Member 'WBP_PalInGameMenuItemSlotButton_C_ToggleLock::Lock' has a wrong offset!");
+
+// Function WBP_PalInGameMenuItemSlotButton.WBP_PalInGameMenuItemSlotButton_C.RegisterButton
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_PalInGameMenuItemSlotButton_C_RegisterButton final
+{
+public:
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_PalInGameMenuItemSlotButton_C_RegisterButton) == 0x000008, "Wrong alignment on WBP_PalInGameMenuItemSlotButton_C_RegisterButton");
+static_assert(sizeof(WBP_PalInGameMenuItemSlotButton_C_RegisterButton) == 0x000008, "Wrong size on WBP_PalInGameMenuItemSlotButton_C_RegisterButton");
+static_assert(offsetof(WBP_PalInGameMenuItemSlotButton_C_RegisterButton, Button) == 0x000000, "Member 'WBP_PalInGameMenuItemSlotButton_C_RegisterButton::Button' has a wrong offset!");
+
+// Function WBP_PalInGameMenuItemSlotButton.WBP_PalInGameMenuItemSlotButton_C.RegisterItemSlotWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget final
+{
+public:
+	class UWBP_PalItemSlotBase_C*                 itemSlotWidget;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget) == 0x000008, "Wrong alignment on WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget");
+static_assert(sizeof(WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget) == 0x000008, "Wrong size on WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget");
+static_assert(offsetof(WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget, itemSlotWidget) == 0x000000, "Member 'WBP_PalInGameMenuItemSlotButton_C_RegisterItemSlotWidget::itemSlotWidget' has a wrong offset!");
 
 }
 

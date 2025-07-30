@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Pal_structs.hpp"
 #include "Pal_classes.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -73,7 +73,7 @@ public:
 	void OnCompleted_085F600F42305157C1A542B1D6539EF9(class FName NotifyName);
 	void OnEndClimbing();
 	void OnInterrupted_085F600F42305157C1A542B1D6539EF9(class FName NotifyName);
-	void OnMovementModeChangedDelegate_イベント_0(class UPalCharacterMovementComponent* Component, EMovementMode prevMode, EMovementMode newMode, EPalCharacterMovementCustomMode PrevCustomMode, EPalCharacterMovementCustomMode NewCustomMode);
+	void OnMovementModeChangedDelegate_イベント_0(class UPalCharacterMovementComponent* Component, EMovementMode PrevMode, EMovementMode NewMode, EPalCharacterMovementCustomMode PrevCustomMode, EPalCharacterMovementCustomMode NewCustomMode);
 	void OnNotifyBegin_085F600F42305157C1A542B1D6539EF9(class FName NotifyName);
 	void OnNotifyEnd_085F600F42305157C1A542B1D6539EF9(class FName NotifyName);
 	void RayCollisionCheckEndExtrusion();

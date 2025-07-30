@@ -91,26 +91,6 @@ static_assert(offsetof(URigVM, Parameters) == 0x000170, "Member 'URigVM::Paramet
 static_assert(offsetof(URigVM, ParametersNameMap) == 0x000180, "Member 'URigVM::ParametersNameMap' has a wrong offset!");
 static_assert(offsetof(URigVM, DeferredVMToCopy) == 0x000288, "Member 'URigVM::DeferredVMToCopy' has a wrong offset!");
 
-// Class RigVM.RigVMNativized
-// 0x0008 (0x02B0 - 0x02A8)
-class URigVMNativized final : public URigVM
-{
-public:
-	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"RigVMNativized">();
-	}
-	static class URigVMNativized* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URigVMNativized>();
-	}
-};
-static_assert(alignof(URigVMNativized) == 0x000008, "Wrong alignment on URigVMNativized");
-static_assert(sizeof(URigVMNativized) == 0x0002B0, "Wrong size on URigVMNativized");
-
 // Class RigVM.RigVMUserWorkflowOptions
 // 0x0070 (0x0098 - 0x0028)
 class URigVMUserWorkflowOptions : public UObject
@@ -179,6 +159,26 @@ public:
 };
 static_assert(alignof(URigVMMemoryStorage) == 0x000008, "Wrong alignment on URigVMMemoryStorage");
 static_assert(sizeof(URigVMMemoryStorage) == 0x000028, "Wrong size on URigVMMemoryStorage");
+
+// Class RigVM.RigVMNativized
+// 0x0008 (0x02B0 - 0x02A8)
+class URigVMNativized final : public URigVM
+{
+public:
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"RigVMNativized">();
+	}
+	static class URigVMNativized* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URigVMNativized>();
+	}
+};
+static_assert(alignof(URigVMNativized) == 0x000008, "Wrong alignment on URigVMNativized");
+static_assert(sizeof(URigVMNativized) == 0x0002B0, "Wrong size on URigVMNativized");
 
 }
 

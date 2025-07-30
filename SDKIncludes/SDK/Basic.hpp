@@ -16,15 +16,15 @@
 #include <functional>
 #include <type_traits>
 
-#include "PropertyFixup.hpp"
-#include "UnrealContainers.hpp"
+#include "../PropertyFixup.hpp"
+#include "../UnrealContainers.hpp"
 
 namespace SDK
 {
 
 using namespace UC;
 
-#include "NameCollisions.inl"
+#include "../SDKIncludes/SDK/NameCollisions.inl"
 
 /*
 * Disclaimer:
@@ -33,11 +33,11 @@ using namespace UC;
 */
 namespace Offsets
 {
-	constexpr int32 GObjects          = 0x08D4E800;
-	constexpr int32 AppendString      = 0x03095760;
-	constexpr int32 GNames            = 0x08CAF100;
-	constexpr int32 GWorld            = 0x08EBD030;
-	constexpr int32 ProcessEvent      = 0x032143E0;
+	constexpr int32 GObjects          = 0x08DBBC80;
+	constexpr int32 AppendString      = 0x03081760;
+	constexpr int32 GNames            = 0x08D1C580;
+	constexpr int32 GWorld            = 0x08F2A4B0;
+	constexpr int32 ProcessEvent      = 0x031FF330;
 	constexpr int32 ProcessEventIdx   = 0x0000004C;
 }
 
@@ -48,29 +48,15 @@ namespace InSDKUtils
 	template<typename FuncType>
 	inline FuncType GetVirtualFunction(const void* ObjectInstance, int32 Index)
 	{
-		if (!ObjectInstance || reinterpret_cast<uintptr_t>(ObjectInstance) < 0x10000)
-			return nullptr;
+		void** VTable = *reinterpret_cast<void***>(const_cast<void*>(ObjectInstance));
 
-		void*** vtablePtr = (void***)ObjectInstance;
-		if (!vtablePtr || reinterpret_cast<uintptr_t>(vtablePtr) < 0x10000)
-			return nullptr;
-
-		void** vtable = *vtablePtr;
-		if (!vtable || reinterpret_cast<uintptr_t>(vtable) < 0x10000)
-			return nullptr;
-
-		return reinterpret_cast<FuncType>(vtable[Index]);
+		return reinterpret_cast<FuncType>(VTable[Index]);
 	}
 
 	template<typename FuncType, typename... ParamTypes>
 	requires std::invocable<FuncType, ParamTypes...>
 	inline auto CallGameFunction(FuncType Function, ParamTypes&&... Args)
 	{
-		if (!Function)
-		{
-			OutputDebugStringA("Tried to call a null function pointer!\n");
-			return decltype(Function(std::forward<ParamTypes>(Args)...))();
-		}
 		return Function(std::forward<ParamTypes>(Args)...);
 	}
 }

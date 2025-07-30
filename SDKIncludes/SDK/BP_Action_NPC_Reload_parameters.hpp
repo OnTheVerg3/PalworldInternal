@@ -18,7 +18,7 @@ namespace SDK::Params
 {
 
 // Function BP_Action_NPC_Reload.BP_Action_NPC_Reload_C.ExecuteUbergraph_BP_Action_NPC_Reload
-// 0x0368 (0x0368 - 0x0000)
+// 0x03F8 (0x03F8 - 0x0000)
 struct BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload final
 {
 public:
@@ -36,25 +36,23 @@ public:
 	class FName                                   Temp_name_Variable;                                // 0x007C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue;           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_1;         // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalSkeletalMeshComponent*              CallFunc_GetMainMesh_ReturnValue;                  // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UPalShooterComponent*                   CallFunc_GetComponentByClass_ReturnValue;          // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FWeaponAnimationInfo                   CallFunc_GetCurrentWeaponAnimationInfo_ReturnValue; // 0x00A8(0x0260)(ConstParm)
-	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_2;         // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue; // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_319[0x7];                                      // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_3;         // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_329[0x7];                                      // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetActionVelocity_ReturnValue;            // 0x0330(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X;                            // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x0360(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPalSkeletalMeshComponent*              CallFunc_GetMainMesh_ReturnValue;                  // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UPalShooterComponent*                   CallFunc_GetComponentByClass_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FWeaponAnimationInfo                   CallFunc_GetCurrentWeaponAnimationInfo_ReturnValue; // 0x00A0(0x0300)(ConstParm)
+	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue; // 0x03A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue_1;         // 0x03B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B9[0x7];                                      // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetActionVelocity_ReturnValue;            // 0x03C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x03F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload) == 0x000008, "Wrong alignment on BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload");
-static_assert(sizeof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload) == 0x000368, "Wrong size on BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload");
+static_assert(sizeof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload) == 0x0003F8, "Wrong size on BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload");
 static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, EntryPoint) == 0x000000, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, K2Node_CustomEvent_NotifyName_4) == 0x000004, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::K2Node_CustomEvent_NotifyName_4' has a wrong offset!");
 static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, K2Node_CreateDelegate_OutputDelegate) == 0x00000C, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
@@ -68,20 +66,18 @@ static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Rel
 static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, K2Node_CreateDelegate_OutputDelegate_4) == 0x00006C, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
 static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, Temp_name_Variable) == 0x00007C, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::Temp_name_Variable' has a wrong offset!");
 static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_GetActionCharacter_ReturnValue) == 0x000088, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_GetActionCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_GetActionCharacter_ReturnValue_1) == 0x000090, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_GetActionCharacter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_GetMainMesh_ReturnValue) == 0x000098, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_GetMainMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_GetComponentByClass_ReturnValue) == 0x0000A0, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_GetCurrentWeaponAnimationInfo_ReturnValue) == 0x0000A8, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_GetCurrentWeaponAnimationInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_GetActionCharacter_ReturnValue_2) == 0x000308, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_GetActionCharacter_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue) == 0x000310, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_IsValid_ReturnValue) == 0x000318, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_GetActionCharacter_ReturnValue_3) == 0x000320, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_GetActionCharacter_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_IsValid_ReturnValue_1) == 0x000328, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_GetActionVelocity_ReturnValue) == 0x000330, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_GetActionVelocity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_BreakVector_X) == 0x000348, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_BreakVector_Y) == 0x000350, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_BreakVector_Z) == 0x000358, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_Delay_Duration_ImplicitCast) == 0x000360, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_GetMainMesh_ReturnValue) == 0x000090, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_GetMainMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_GetComponentByClass_ReturnValue) == 0x000098, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_GetCurrentWeaponAnimationInfo_ReturnValue) == 0x0000A0, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_GetCurrentWeaponAnimationInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue) == 0x0003A0, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_IsValid_ReturnValue) == 0x0003A8, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_GetActionCharacter_ReturnValue_1) == 0x0003B0, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_GetActionCharacter_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_IsValid_ReturnValue_1) == 0x0003B8, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_GetActionVelocity_ReturnValue) == 0x0003C0, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_GetActionVelocity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_BreakVector_X) == 0x0003D8, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_BreakVector_Y) == 0x0003E0, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_BreakVector_Z) == 0x0003E8, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload, CallFunc_Delay_Duration_ImplicitCast) == 0x0003F0, "Member 'BP_Action_NPC_Reload_C_ExecuteUbergraph_BP_Action_NPC_Reload::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
 
 // Function BP_Action_NPC_Reload.BP_Action_NPC_Reload_C.OnBlendOut_570932B749CF5A9A1DB665947E5643C9
 // 0x0008 (0x0008 - 0x0000)

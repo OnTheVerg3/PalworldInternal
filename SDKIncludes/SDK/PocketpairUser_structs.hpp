@@ -37,16 +37,6 @@ enum class ELoginStatusType : uint8
 	ELoginStatusType_MAX                     = 3,
 };
 
-// ScriptStruct PocketpairUser.SocialId
-// 0x0004 (0x0004 - 0x0000)
-struct alignas(0x04) FSocialId final
-{
-public:
-	uint8                                         Pad_0[0x4];                                        // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FSocialId) == 0x000004, "Wrong alignment on FSocialId");
-static_assert(sizeof(FSocialId) == 0x000004, "Wrong size on FSocialId");
-
 // ScriptStruct PocketpairUser.PocketpairTelemetry
 // 0x0040 (0x0040 - 0x0000)
 struct alignas(0x08) FPocketpairTelemetry final
@@ -56,6 +46,16 @@ public:
 };
 static_assert(alignof(FPocketpairTelemetry) == 0x000008, "Wrong alignment on FPocketpairTelemetry");
 static_assert(sizeof(FPocketpairTelemetry) == 0x000040, "Wrong size on FPocketpairTelemetry");
+
+// ScriptStruct PocketpairUser.SocialId
+// 0x0004 (0x0004 - 0x0000)
+struct alignas(0x04) FSocialId final
+{
+public:
+	uint8                                         Pad_0[0x4];                                        // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FSocialId) == 0x000004, "Wrong alignment on FSocialId");
+static_assert(sizeof(FSocialId) == 0x000004, "Wrong size on FSocialId");
 
 // ScriptStruct PocketpairUser.PocketpairTelemetry_Stat
 // 0x000C (0x000C - 0x0000)

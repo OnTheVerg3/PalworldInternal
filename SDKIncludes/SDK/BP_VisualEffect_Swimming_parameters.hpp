@@ -837,7 +837,7 @@ static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Dive, CallFunc_IsMov
 static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Dive, CallFunc_BooleanOR_ReturnValue) == 0x00006A, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Dive::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
 // Function BP_VisualEffect_Swimming.BP_VisualEffect_Swimming_C.Update NS InWater
-// 0x0048 (0x0048 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct BP_VisualEffect_Swimming_C_Update_NS_InWater final
 {
 public:
@@ -845,34 +845,39 @@ public:
 	bool                                          IsEffectActive;                                    // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalRiderComponent*                     CallFunc_GetComponentByClass_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDead_ReturnValue;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalRideMarkerComponent*                CallFunc_GetRideMarker_ReturnValue;                // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetVelocityLengthXY_Velocity;             // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSwimming_ReturnValue;                   // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPalRiderComponent*                     CallFunc_GetComponentByClass_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalRideMarkerComponent*                CallFunc_GetRideMarker_ReturnValue;                // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0043(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetVelocityLengthXY_Velocity;             // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSwimming_ReturnValue;                   // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_VisualEffect_Swimming_C_Update_NS_InWater) == 0x000008, "Wrong alignment on BP_VisualEffect_Swimming_C_Update_NS_InWater");
-static_assert(sizeof(BP_VisualEffect_Swimming_C_Update_NS_InWater) == 0x000048, "Wrong size on BP_VisualEffect_Swimming_C_Update_NS_InWater");
+static_assert(sizeof(BP_VisualEffect_Swimming_C_Update_NS_InWater) == 0x000058, "Wrong size on BP_VisualEffect_Swimming_C_Update_NS_InWater");
 static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, DeltaTime) == 0x000000, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::DeltaTime' has a wrong offset!");
 static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, IsEffectActive) == 0x000008, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::IsEffectActive' has a wrong offset!");
 static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_GetOwner_ReturnValue) == 0x000010, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_GetComponentByClass_ReturnValue) == 0x000018, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_GetRideMarker_ReturnValue) == 0x000028, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_GetRideMarker_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_IsValid_ReturnValue_1) == 0x000030, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_IsValid_ReturnValue_2) == 0x000031, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_IsValid_ReturnValue_3) == 0x000032, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_IsValid_ReturnValue_4) == 0x000033, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_GetVelocityLengthXY_Velocity) == 0x000038, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_GetVelocityLengthXY_Velocity' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000040, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_IsSwimming_ReturnValue) == 0x000041, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_IsSwimming_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_GetOwner_ReturnValue_1) == 0x000018, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_IsDead_ReturnValue) == 0x000020, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_IsDead_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_GetComponentByClass_ReturnValue) == 0x000028, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_GetRideMarker_ReturnValue) == 0x000038, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_GetRideMarker_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_IsValid_ReturnValue_1) == 0x000040, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_IsValid_ReturnValue_2) == 0x000041, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_IsValid_ReturnValue_3) == 0x000042, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_IsValid_ReturnValue_4) == 0x000043, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_GetVelocityLengthXY_Velocity) == 0x000048, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_GetVelocityLengthXY_Velocity' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000050, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_InWater, CallFunc_IsSwimming_ReturnValue) == 0x000051, "Member 'BP_VisualEffect_Swimming_C_Update_NS_InWater::CallFunc_IsSwimming_ReturnValue' has a wrong offset!");
 
 // Function BP_VisualEffect_Swimming.BP_VisualEffect_Swimming_C.Update Water Plane Effect Transform
 // 0x0330 (0x0330 - 0x0000)
@@ -1021,7 +1026,7 @@ static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_SplashFeet, CallFunc
 static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_SplashFeet, CallFunc_HasMovingVelocity_HasVelocity_1) == 0x000022, "Member 'BP_VisualEffect_Swimming_C_Update_NS_SplashFeet::CallFunc_HasMovingVelocity_HasVelocity_1' has a wrong offset!");
 
 // Function BP_VisualEffect_Swimming.BP_VisualEffect_Swimming_C.Update_NS_Swim
-// 0x0050 (0x0050 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct BP_VisualEffect_Swimming_C_Update_NS_Swim final
 {
 public:
@@ -1029,39 +1034,42 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetVelocityLengthXY_Velocity;             // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSwimming_ReturnValue;                   // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalRiderComponent*                     CallFunc_GetComponentByClass_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalRideMarkerComponent*                CallFunc_GetRideMarker_ReturnValue;                // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetVelocityLengthXY_Velocity_1;           // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetVariableFloat_InValue_ImplicitCast;    // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDead_ReturnValue;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalRiderComponent*                     CallFunc_GetComponentByClass_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalRideMarkerComponent*                CallFunc_GetRideMarker_ReturnValue;                // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetVelocityLengthXY_Velocity_1;           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetVariableFloat_InValue_ImplicitCast;    // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_VisualEffect_Swimming_C_Update_NS_Swim) == 0x000008, "Wrong alignment on BP_VisualEffect_Swimming_C_Update_NS_Swim");
-static_assert(sizeof(BP_VisualEffect_Swimming_C_Update_NS_Swim) == 0x000050, "Wrong size on BP_VisualEffect_Swimming_C_Update_NS_Swim");
+static_assert(sizeof(BP_VisualEffect_Swimming_C_Update_NS_Swim) == 0x000058, "Wrong size on BP_VisualEffect_Swimming_C_Update_NS_Swim");
 static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, IsEffectActive) == 0x000000, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::IsEffectActive' has a wrong offset!");
 static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_GetVelocityLengthXY_Velocity) == 0x000008, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_GetVelocityLengthXY_Velocity' has a wrong offset!");
 static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000011, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_IsSwimming_ReturnValue) == 0x000011, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_IsSwimming_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_GetOwner_ReturnValue) == 0x000018, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_GetComponentByClass_ReturnValue) == 0x000020, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_IsValid_ReturnValue_1) == 0x000028, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_GetRideMarker_ReturnValue) == 0x000030, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_GetRideMarker_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_IsValid_ReturnValue_2) == 0x000038, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_GetVelocityLengthXY_Velocity_1) == 0x000040, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_GetVelocityLengthXY_Velocity_1' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000048, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_IsValid_ReturnValue_3) == 0x000049, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_IsValid_ReturnValue_4) == 0x00004A, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_IsValid_ReturnValue_5) == 0x00004B, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_SetVariableFloat_InValue_ImplicitCast) == 0x00004C, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_SetVariableFloat_InValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_IsDead_ReturnValue) == 0x000020, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_IsDead_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_GetComponentByClass_ReturnValue) == 0x000028, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_IsValid_ReturnValue_1) == 0x000030, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_GetRideMarker_ReturnValue) == 0x000038, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_GetRideMarker_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_IsValid_ReturnValue_2) == 0x000040, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_GetVelocityLengthXY_Velocity_1) == 0x000048, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_GetVelocityLengthXY_Velocity_1' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000050, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_IsValid_ReturnValue_3) == 0x000051, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_IsValid_ReturnValue_4) == 0x000052, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_IsValid_ReturnValue_5) == 0x000053, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Swimming_C_Update_NS_Swim, CallFunc_SetVariableFloat_InValue_ImplicitCast) == 0x000054, "Member 'BP_VisualEffect_Swimming_C_Update_NS_Swim::CallFunc_SetVariableFloat_InValue_ImplicitCast' has a wrong offset!");
 
 }
 

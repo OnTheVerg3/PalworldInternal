@@ -12,10 +12,10 @@
 
 #include "DeveloperSettings_classes.hpp"
 #include "InteractiveToolsFramework_classes.hpp"
-#include "PhysicsCore_structs.hpp"
 #include "GeometryFramework_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "PhysicsCore_structs.hpp"
 #include "ModelingComponents_structs.hpp"
 #include "Engine_classes.hpp"
 

@@ -140,16 +140,21 @@ enum class ETriggerEventsSupported : uint8
 	ETriggerEventsSupported_MAX              = 8,
 };
 
-// ScriptStruct EnhancedInput.ModifyContextOptions
-// 0x0001 (0x0001 - 0x0000)
-struct FModifyContextOptions final
+// ScriptStruct EnhancedInput.MappingQueryIssue
+// 0x0018 (0x0018 - 0x0000)
+struct FMappingQueryIssue final
 {
 public:
-	uint8                                         bIgnoreAllPressedKeysUntilRelease : 1;             // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bForceImmediately : 1;                             // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	EMappingQueryIssue                            Issue;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInputMappingContext*                   BlockingContext;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInputAction*                           BlockingAction;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FModifyContextOptions) == 0x000001, "Wrong alignment on FModifyContextOptions");
-static_assert(sizeof(FModifyContextOptions) == 0x000001, "Wrong size on FModifyContextOptions");
+static_assert(alignof(FMappingQueryIssue) == 0x000008, "Wrong alignment on FMappingQueryIssue");
+static_assert(sizeof(FMappingQueryIssue) == 0x000018, "Wrong size on FMappingQueryIssue");
+static_assert(offsetof(FMappingQueryIssue, Issue) == 0x000000, "Member 'FMappingQueryIssue::Issue' has a wrong offset!");
+static_assert(offsetof(FMappingQueryIssue, BlockingContext) == 0x000008, "Member 'FMappingQueryIssue::BlockingContext' has a wrong offset!");
+static_assert(offsetof(FMappingQueryIssue, BlockingAction) == 0x000010, "Member 'FMappingQueryIssue::BlockingAction' has a wrong offset!");
 
 // ScriptStruct EnhancedInput.InputActionValue
 // 0x0020 (0x0020 - 0x0000)
@@ -200,22 +205,6 @@ static_assert(offsetof(FEnhancedActionKeyMapping, Modifiers) == 0x000050, "Membe
 static_assert(offsetof(FEnhancedActionKeyMapping, action) == 0x000060, "Member 'FEnhancedActionKeyMapping::action' has a wrong offset!");
 static_assert(offsetof(FEnhancedActionKeyMapping, Key) == 0x000068, "Member 'FEnhancedActionKeyMapping::Key' has a wrong offset!");
 
-// ScriptStruct EnhancedInput.MappingQueryIssue
-// 0x0018 (0x0018 - 0x0000)
-struct FMappingQueryIssue final
-{
-public:
-	EMappingQueryIssue                            Issue;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputMappingContext*                   BlockingContext;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInputAction*                           BlockingAction;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMappingQueryIssue) == 0x000008, "Wrong alignment on FMappingQueryIssue");
-static_assert(sizeof(FMappingQueryIssue) == 0x000018, "Wrong size on FMappingQueryIssue");
-static_assert(offsetof(FMappingQueryIssue, Issue) == 0x000000, "Member 'FMappingQueryIssue::Issue' has a wrong offset!");
-static_assert(offsetof(FMappingQueryIssue, BlockingContext) == 0x000008, "Member 'FMappingQueryIssue::BlockingContext' has a wrong offset!");
-static_assert(offsetof(FMappingQueryIssue, BlockingAction) == 0x000010, "Member 'FMappingQueryIssue::BlockingAction' has a wrong offset!");
-
 // ScriptStruct EnhancedInput.BlueprintEnhancedInputActionBinding
 // 0x0018 (0x0018 - 0x0000)
 struct FBlueprintEnhancedInputActionBinding final
@@ -232,6 +221,17 @@ static_assert(sizeof(FBlueprintEnhancedInputActionBinding) == 0x000018, "Wrong s
 static_assert(offsetof(FBlueprintEnhancedInputActionBinding, InputAction) == 0x000000, "Member 'FBlueprintEnhancedInputActionBinding::InputAction' has a wrong offset!");
 static_assert(offsetof(FBlueprintEnhancedInputActionBinding, TriggerEvent) == 0x000008, "Member 'FBlueprintEnhancedInputActionBinding::TriggerEvent' has a wrong offset!");
 static_assert(offsetof(FBlueprintEnhancedInputActionBinding, FunctionNameToBind) == 0x00000C, "Member 'FBlueprintEnhancedInputActionBinding::FunctionNameToBind' has a wrong offset!");
+
+// ScriptStruct EnhancedInput.ModifyContextOptions
+// 0x0001 (0x0001 - 0x0000)
+struct FModifyContextOptions final
+{
+public:
+	uint8                                         bIgnoreAllPressedKeysUntilRelease : 1;             // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bForceImmediately : 1;                             // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+static_assert(alignof(FModifyContextOptions) == 0x000001, "Wrong alignment on FModifyContextOptions");
+static_assert(sizeof(FModifyContextOptions) == 0x000001, "Wrong size on FModifyContextOptions");
 
 // ScriptStruct EnhancedInput.InjectedInputArray
 // 0x0010 (0x0010 - 0x0000)

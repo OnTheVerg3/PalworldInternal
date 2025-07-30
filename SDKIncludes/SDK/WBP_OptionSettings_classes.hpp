@@ -21,7 +21,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_OptionSettings.WBP_OptionSettings_C
-// 0x0128 (0x0558 - 0x0430)
+// 0x0130 (0x0560 - 0x0430)
 class UWBP_OptionSettings_C final : public UPalUserWidgetOverlayUI
 {
 public:
@@ -35,32 +35,33 @@ public:
 	class UWBP_OptionSettings_MenuButton_C*       WBP_OptionSettings_MenuButton_Key;                 // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_OptionSettings_MenuButton_C*       WBP_OptionSettings_MenuButton_Other;               // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_OptionSettings_MenuButton_C*       WBP_OptionSettings_MenuButton_Other_1;             // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_OptionSettings_MenuButton_C*       WBP_OptionSettings_MenuButton_Sound;               // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_OptionSettings_Tab_C*              WBP_OptionSettings_Tab;                            // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PalCommonScrollList_C*             WBP_PalCommonScrollList;                           // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PalKeyGuideIcon_C*                 WBP_PalKeyGuideIcon_Back;                          // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PalKeyGuideIcon_C*                 WBP_PalKeyGuideIcon_Default;                       // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          Switching;                                         // 0x04A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A9[0x3];                                      // 0x04A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DefaultActionName;                                 // 0x04AC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   PreTabActionName;                                  // 0x04B4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   NextTabActionName;                                 // 0x04BC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C4[0x4];                                      // 0x04C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_Graphic_Settings_C*                GraphicSettings;                                   // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_Sound_Settings_C*                  AudioSettings;                                     // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_Key_Settings_C*                    KeySettings;                                       // 0x04D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_Control_Settings_C*                GameSettings;                                      // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_Other_Settings_C*                  OtherSettings;                                     // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    SetDefaultMsgID;                                   // 0x04F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    CloseMsgID;                                        // 0x0500(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	TArray<struct FDataTableRowHandle>            ControlTabMsgIDs;                                  // 0x0510(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FPalUIActionBindData                   BackActionBinding;                                 // 0x0520(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FPalUIActionBindData                   DefaultActionBinding;                              // 0x0524(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FPalUIActionBindData                   PreTabActionBinding;                               // 0x0528(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FPalUIActionBindData                   NextTabActionBinding;                              // 0x052C(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	class UWidget*                                LastFocus;                                         // 0x0530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    ConflictMsgId;                                     // 0x0538(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ConflictMsgIdPS5;                                  // 0x0548(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class UWBP_OptionSettings_MenuButton_C*       WBP_OptionSettings_MenuButton_Other_2;             // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_OptionSettings_MenuButton_C*       WBP_OptionSettings_MenuButton_Sound;               // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_OptionSettings_Tab_C*              WBP_OptionSettings_Tab;                            // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PalCommonScrollList_C*             WBP_PalCommonScrollList;                           // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PalKeyGuideIcon_C*                 WBP_PalKeyGuideIcon_Back;                          // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PalKeyGuideIcon_C*                 WBP_PalKeyGuideIcon_Default;                       // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          Switching;                                         // 0x04B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B1[0x3];                                      // 0x04B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DefaultActionName;                                 // 0x04B4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   PreTabActionName;                                  // 0x04BC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   NextTabActionName;                                 // 0x04C4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4CC[0x4];                                      // 0x04CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_Graphic_Settings_C*                GraphicSettings;                                   // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Sound_Settings_C*                  AudioSettings;                                     // 0x04D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Key_Settings_C*                    KeySettings;                                       // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Control_Settings_C*                GameSettings;                                      // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Other_Settings_C*                  OtherSettings;                                     // 0x04F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    SetDefaultMsgID;                                   // 0x04F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FDataTableRowHandle                    CloseMsgID;                                        // 0x0508(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	TArray<struct FDataTableRowHandle>            ControlTabMsgIDs;                                  // 0x0518(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPalUIActionBindData                   BackActionBinding;                                 // 0x0528(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPalUIActionBindData                   DefaultActionBinding;                              // 0x052C(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPalUIActionBindData                   PreTabActionBinding;                               // 0x0530(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPalUIActionBindData                   NextTabActionBinding;                              // 0x0534(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class UWidget*                                LastFocus;                                         // 0x0538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    ConflictMsgId;                                     // 0x0540(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FDataTableRowHandle                    ConflictMsgIdPS5;                                  // 0x0550(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
 	void SwitchTabTo(int32 Index_0);
@@ -87,6 +88,7 @@ public:
 	void ClosePanel();
 	void BndEvt__WBP_OptionSettings_WBP_OptionSettings_MenuButton_Sound_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
 	void BndEvt__WBP_OptionSettings_WBP_OptionSettings_MenuButton_Other_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature();
+	void BndEvt__WBP_OptionSettings_WBP_OptionSettings_MenuButton_Other_2_K2Node_ComponentBoundEvent_6_OnClicked__DelegateSignature();
 	void BndEvt__WBP_OptionSettings_WBP_OptionSettings_MenuButton_Other_1_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature();
 	void BndEvt__WBP_OptionSettings_WBP_OptionSettings_MenuButton_Key_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature();
 	void BndEvt__WBP_OptionSettings_WBP_OptionSettings_MenuButton_Graphic_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
@@ -107,7 +109,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_OptionSettings_C) == 0x000008, "Wrong alignment on UWBP_OptionSettings_C");
-static_assert(sizeof(UWBP_OptionSettings_C) == 0x000558, "Wrong size on UWBP_OptionSettings_C");
+static_assert(sizeof(UWBP_OptionSettings_C) == 0x000560, "Wrong size on UWBP_OptionSettings_C");
 static_assert(offsetof(UWBP_OptionSettings_C, UberGraphFrame) == 0x000430, "Member 'UWBP_OptionSettings_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_OptionSettings_C, Anm_List_OutToIn) == 0x000438, "Member 'UWBP_OptionSettings_C::Anm_List_OutToIn' has a wrong offset!");
 static_assert(offsetof(UWBP_OptionSettings_C, Anm_CloseToOpen) == 0x000440, "Member 'UWBP_OptionSettings_C::Anm_CloseToOpen' has a wrong offset!");
@@ -118,30 +120,31 @@ static_assert(offsetof(UWBP_OptionSettings_C, WBP_OptionSettings_MenuButton_Grap
 static_assert(offsetof(UWBP_OptionSettings_C, WBP_OptionSettings_MenuButton_Key) == 0x000468, "Member 'UWBP_OptionSettings_C::WBP_OptionSettings_MenuButton_Key' has a wrong offset!");
 static_assert(offsetof(UWBP_OptionSettings_C, WBP_OptionSettings_MenuButton_Other) == 0x000470, "Member 'UWBP_OptionSettings_C::WBP_OptionSettings_MenuButton_Other' has a wrong offset!");
 static_assert(offsetof(UWBP_OptionSettings_C, WBP_OptionSettings_MenuButton_Other_1) == 0x000478, "Member 'UWBP_OptionSettings_C::WBP_OptionSettings_MenuButton_Other_1' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, WBP_OptionSettings_MenuButton_Sound) == 0x000480, "Member 'UWBP_OptionSettings_C::WBP_OptionSettings_MenuButton_Sound' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, WBP_OptionSettings_Tab) == 0x000488, "Member 'UWBP_OptionSettings_C::WBP_OptionSettings_Tab' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, WBP_PalCommonScrollList) == 0x000490, "Member 'UWBP_OptionSettings_C::WBP_PalCommonScrollList' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, WBP_PalKeyGuideIcon_Back) == 0x000498, "Member 'UWBP_OptionSettings_C::WBP_PalKeyGuideIcon_Back' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, WBP_PalKeyGuideIcon_Default) == 0x0004A0, "Member 'UWBP_OptionSettings_C::WBP_PalKeyGuideIcon_Default' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, Switching) == 0x0004A8, "Member 'UWBP_OptionSettings_C::Switching' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, DefaultActionName) == 0x0004AC, "Member 'UWBP_OptionSettings_C::DefaultActionName' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, PreTabActionName) == 0x0004B4, "Member 'UWBP_OptionSettings_C::PreTabActionName' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, NextTabActionName) == 0x0004BC, "Member 'UWBP_OptionSettings_C::NextTabActionName' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, GraphicSettings) == 0x0004C8, "Member 'UWBP_OptionSettings_C::GraphicSettings' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, AudioSettings) == 0x0004D0, "Member 'UWBP_OptionSettings_C::AudioSettings' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, KeySettings) == 0x0004D8, "Member 'UWBP_OptionSettings_C::KeySettings' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, GameSettings) == 0x0004E0, "Member 'UWBP_OptionSettings_C::GameSettings' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, OtherSettings) == 0x0004E8, "Member 'UWBP_OptionSettings_C::OtherSettings' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, SetDefaultMsgID) == 0x0004F0, "Member 'UWBP_OptionSettings_C::SetDefaultMsgID' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, CloseMsgID) == 0x000500, "Member 'UWBP_OptionSettings_C::CloseMsgID' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, ControlTabMsgIDs) == 0x000510, "Member 'UWBP_OptionSettings_C::ControlTabMsgIDs' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, BackActionBinding) == 0x000520, "Member 'UWBP_OptionSettings_C::BackActionBinding' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, DefaultActionBinding) == 0x000524, "Member 'UWBP_OptionSettings_C::DefaultActionBinding' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, PreTabActionBinding) == 0x000528, "Member 'UWBP_OptionSettings_C::PreTabActionBinding' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, NextTabActionBinding) == 0x00052C, "Member 'UWBP_OptionSettings_C::NextTabActionBinding' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, LastFocus) == 0x000530, "Member 'UWBP_OptionSettings_C::LastFocus' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, ConflictMsgId) == 0x000538, "Member 'UWBP_OptionSettings_C::ConflictMsgId' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_C, ConflictMsgIdPS5) == 0x000548, "Member 'UWBP_OptionSettings_C::ConflictMsgIdPS5' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, WBP_OptionSettings_MenuButton_Other_2) == 0x000480, "Member 'UWBP_OptionSettings_C::WBP_OptionSettings_MenuButton_Other_2' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, WBP_OptionSettings_MenuButton_Sound) == 0x000488, "Member 'UWBP_OptionSettings_C::WBP_OptionSettings_MenuButton_Sound' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, WBP_OptionSettings_Tab) == 0x000490, "Member 'UWBP_OptionSettings_C::WBP_OptionSettings_Tab' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, WBP_PalCommonScrollList) == 0x000498, "Member 'UWBP_OptionSettings_C::WBP_PalCommonScrollList' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, WBP_PalKeyGuideIcon_Back) == 0x0004A0, "Member 'UWBP_OptionSettings_C::WBP_PalKeyGuideIcon_Back' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, WBP_PalKeyGuideIcon_Default) == 0x0004A8, "Member 'UWBP_OptionSettings_C::WBP_PalKeyGuideIcon_Default' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, Switching) == 0x0004B0, "Member 'UWBP_OptionSettings_C::Switching' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, DefaultActionName) == 0x0004B4, "Member 'UWBP_OptionSettings_C::DefaultActionName' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, PreTabActionName) == 0x0004BC, "Member 'UWBP_OptionSettings_C::PreTabActionName' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, NextTabActionName) == 0x0004C4, "Member 'UWBP_OptionSettings_C::NextTabActionName' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, GraphicSettings) == 0x0004D0, "Member 'UWBP_OptionSettings_C::GraphicSettings' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, AudioSettings) == 0x0004D8, "Member 'UWBP_OptionSettings_C::AudioSettings' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, KeySettings) == 0x0004E0, "Member 'UWBP_OptionSettings_C::KeySettings' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, GameSettings) == 0x0004E8, "Member 'UWBP_OptionSettings_C::GameSettings' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, OtherSettings) == 0x0004F0, "Member 'UWBP_OptionSettings_C::OtherSettings' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, SetDefaultMsgID) == 0x0004F8, "Member 'UWBP_OptionSettings_C::SetDefaultMsgID' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, CloseMsgID) == 0x000508, "Member 'UWBP_OptionSettings_C::CloseMsgID' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, ControlTabMsgIDs) == 0x000518, "Member 'UWBP_OptionSettings_C::ControlTabMsgIDs' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, BackActionBinding) == 0x000528, "Member 'UWBP_OptionSettings_C::BackActionBinding' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, DefaultActionBinding) == 0x00052C, "Member 'UWBP_OptionSettings_C::DefaultActionBinding' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, PreTabActionBinding) == 0x000530, "Member 'UWBP_OptionSettings_C::PreTabActionBinding' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, NextTabActionBinding) == 0x000534, "Member 'UWBP_OptionSettings_C::NextTabActionBinding' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, LastFocus) == 0x000538, "Member 'UWBP_OptionSettings_C::LastFocus' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, ConflictMsgId) == 0x000540, "Member 'UWBP_OptionSettings_C::ConflictMsgId' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_C, ConflictMsgIdPS5) == 0x000550, "Member 'UWBP_OptionSettings_C::ConflictMsgIdPS5' has a wrong offset!");
 
 }
 

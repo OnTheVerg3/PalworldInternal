@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_VisualEffect_Proxy_ReturnToBallEmissive.BP_VisualEffect_Proxy_ReturnToBallEmissive_C.ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive
-// 0x0090 (0x0090 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive final
 {
 public:
@@ -27,17 +27,22 @@ public:
 	class APalCharacter*                          CallFunc_GetCharacter_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0020(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_CopyMesh_ReturnToBallEmissive_C*    CallFunc_FinishSpawningActor_ReturnValue;          // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_PalBossNPCMarker_C*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_CopyMesh_ReturnToBallEmissive_C*    CallFunc_FinishSpawningActor_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive) == 0x000010, "Wrong alignment on BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive");
-static_assert(sizeof(BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive) == 0x000090, "Wrong size on BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive");
+static_assert(sizeof(BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive) == 0x0000A0, "Wrong size on BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive");
 static_assert(offsetof(BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive, EntryPoint) == 0x000000, "Member 'BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive, CallFunc_GetOwner_ReturnValue) == 0x000008, "Member 'BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive, CallFunc_GetCharacter_ReturnValue) == 0x000010, "Member 'BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive::CallFunc_GetCharacter_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive, CallFunc_GetTransform_ReturnValue) == 0x000020, "Member 'BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000080, "Member 'BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive, CallFunc_FinishSpawningActor_ReturnValue) == 0x000088, "Member 'BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive, CallFunc_GetComponentByClass_ReturnValue) == 0x000080, "Member 'BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000088, "Member 'BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive, CallFunc_IsValid_ReturnValue) == 0x000090, "Member 'BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive, CallFunc_FinishSpawningActor_ReturnValue) == 0x000098, "Member 'BP_VisualEffect_Proxy_ReturnToBallEmissive_C_ExecuteUbergraph_BP_VisualEffect_Proxy_ReturnToBallEmissive::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
 
 }
 

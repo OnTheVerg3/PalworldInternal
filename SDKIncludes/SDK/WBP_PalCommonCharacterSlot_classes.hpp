@@ -12,8 +12,8 @@
 
 #include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
-#include "WBP_PalCharacterSlotBase_classes.hpp"
 #include "UMG_structs.hpp"
+#include "WBP_PalCharacterSlotBase_classes.hpp"
 
 
 namespace SDK

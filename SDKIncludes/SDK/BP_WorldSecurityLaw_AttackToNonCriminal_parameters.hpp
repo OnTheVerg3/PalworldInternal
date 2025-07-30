@@ -28,14 +28,11 @@ public:
 	class UPalCharacterParameterComponent*        AttackerCharacterParameter;                        // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UPalCharacterParameterComponent*        DefenderCharacterParameter;                        // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsWildNPC_ReturnValue;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalOrganizationType                          CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue; // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPalMonster_ReturnValue;                 // 0x0073(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPalRideMarkerComponent*                CallFunc_GetComponentByClass_ReturnValue;          // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsOtomo_ReturnValue;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsRiding_ReturnValue;                     // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsRiding_ReturnValue;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsOtomo_ReturnValue;                      // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsWildNPC_ReturnValue_1;                  // 0x0083(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetAttacker_Attacker;                     // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -45,9 +42,8 @@ public:
 	bool                                          CallFunc_IsValidCharacterActor_bValid_1;           // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPalCharacterParameterComponent*        CallFunc_IsValidCharacterActor_CharacterParameter_1; // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalOrganizationType                          CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue_1; // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsOrganizationCitizen_bCitizen;           // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalOrganizationType                          CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue; // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsOrganizationCitizen_bCitizen;           // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition) == 0x000008, "Wrong alignment on BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition");
 static_assert(sizeof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition) == 0x0000B8, "Wrong size on BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition");
@@ -57,22 +53,18 @@ static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, Retu
 static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, AttackerCharacterParameter) == 0x000060, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::AttackerCharacterParameter' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, DefenderCharacterParameter) == 0x000068, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::DefenderCharacterParameter' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsWildNPC_ReturnValue) == 0x000070, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsWildNPC_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue) == 0x000071, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000072, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsPalMonster_ReturnValue) == 0x000073, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsPalMonster_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_GetComponentByClass_ReturnValue) == 0x000078, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsOtomo_ReturnValue) == 0x000080, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsOtomo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsRiding_ReturnValue) == 0x000081, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsRiding_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsValid_ReturnValue) == 0x000082, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsRiding_ReturnValue) == 0x000080, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsRiding_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsValid_ReturnValue) == 0x000081, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsOtomo_ReturnValue) == 0x000082, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsOtomo_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsWildNPC_ReturnValue_1) == 0x000083, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsWildNPC_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_GetAttacker_Attacker) == 0x000088, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_GetAttacker_Attacker' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsValidCharacterActor_bValid) == 0x000090, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsValidCharacterActor_bValid' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsValidCharacterActor_CharacterParameter) == 0x000098, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsValidCharacterActor_CharacterParameter' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsValidCharacterActor_bValid_1) == 0x0000A0, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsValidCharacterActor_bValid_1' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsValidCharacterActor_CharacterParameter_1) == 0x0000A8, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsValidCharacterActor_CharacterParameter_1' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0000B0, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue_1) == 0x0000B1, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsOrganizationCitizen_bCitizen) == 0x0000B2, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsOrganizationCitizen_bCitizen' has a wrong offset!");
+static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue) == 0x0000B0, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition, CallFunc_IsOrganizationCitizen_bCitizen) == 0x0000B1, "Member 'BP_WorldSecurityLaw_AttackToNonCriminal_C_Condition::CallFunc_IsOrganizationCitizen_bCitizen' has a wrong offset!");
 
 // Function BP_WorldSecurityLaw_AttackToNonCriminal.BP_WorldSecurityLaw_AttackToNonCriminal_C.GetAttacker
 // 0x0070 (0x0070 - 0x0000)

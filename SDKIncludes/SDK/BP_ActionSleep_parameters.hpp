@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
-#include "AkAudio_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "AkAudio_structs.hpp"
 
 
 namespace SDK::Params
@@ -627,3 +627,41 @@ static_assert(offsetof(BP_ActionSleep_C_ShouldChangeSleepLoopMontage, CallFunc_G
 static_assert(offsetof(BP_ActionSleep_C_ShouldChangeSleepLoopMontage, CallFunc_GetAnimInstance_ReturnValue) == 0x000020, "Member 'BP_ActionSleep_C_ShouldChangeSleepLoopMontage::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_ActionSleep_C_ShouldChangeSleepLoopMontage, CallFunc_GetCurrentActiveMontage_ReturnValue) == 0x000028, "Member 'BP_ActionSleep_C_ShouldChangeSleepLoopMontage::CallFunc_GetCurrentActiveMontage_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_ActionSleep_C_ShouldChangeSleepLoopMontage, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000030, "Member 'BP_ActionSleep_C_ShouldChangeSleepLoopMontage::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
+
+// Function BP_ActionSleep.BP_ActionSleep_C.StartSleepSound
+// 0x0008 (0x0008 - 0x0000)
+struct BP_ActionSleep_C_StartSleepSound final
+{
+public:
+	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_ActionSleep_C_StartSleepSound) == 0x000008, "Wrong alignment on BP_ActionSleep_C_StartSleepSound");
+static_assert(sizeof(BP_ActionSleep_C_StartSleepSound) == 0x000008, "Wrong size on BP_ActionSleep_C_StartSleepSound");
+static_assert(offsetof(BP_ActionSleep_C_StartSleepSound, Montage) == 0x000000, "Member 'BP_ActionSleep_C_StartSleepSound::Montage' has a wrong offset!");
+
+// Function BP_ActionSleep.BP_ActionSleep_C.TickAction
+// 0x0004 (0x0004 - 0x0000)
+struct BP_ActionSleep_C_TickAction final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_ActionSleep_C_TickAction) == 0x000004, "Wrong alignment on BP_ActionSleep_C_TickAction");
+static_assert(sizeof(BP_ActionSleep_C_TickAction) == 0x000004, "Wrong size on BP_ActionSleep_C_TickAction");
+static_assert(offsetof(BP_ActionSleep_C_TickAction, DeltaTime) == 0x000000, "Member 'BP_ActionSleep_C_TickAction::DeltaTime' has a wrong offset!");
+
+// Function BP_ActionSleep.BP_ActionSleep_C.UnregisterSleepLoopEffect
+// 0x0010 (0x0010 - 0x0000)
+struct BP_ActionSleep_C_UnregisterSleepLoopEffect final
+{
+public:
+	class APalCharacter*                          Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalCharacterMovementComponent*         CallFunc_GetPalCharacterMovementComponent_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_ActionSleep_C_UnregisterSleepLoopEffect) == 0x000008, "Wrong alignment on BP_ActionSleep_C_UnregisterSleepLoopEffect");
+static_assert(sizeof(BP_ActionSleep_C_UnregisterSleepLoopEffect) == 0x000010, "Wrong size on BP_ActionSleep_C_UnregisterSleepLoopEffect");
+static_assert(offsetof(BP_ActionSleep_C_UnregisterSleepLoopEffect, Character) == 0x000000, "Member 'BP_ActionSleep_C_UnregisterSleepLoopEffect::Character' has a wrong offset!");
+static_assert(offsetof(BP_ActionSleep_C_UnregisterSleepLoopEffect, CallFunc_GetPalCharacterMovementComponent_ReturnValue) == 0x000008, "Member 'BP_ActionSleep_C_UnregisterSleepLoopEffect::CallFunc_GetPalCharacterMovementComponent_ReturnValue' has a wrong offset!");
+
+}
+

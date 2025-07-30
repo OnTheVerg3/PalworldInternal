@@ -45,3 +45,56 @@ public:
 	bool                                          bFadingBySleepLoop;                                // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void CheckSleepOnSideAndReplaceMontage();
+	void CustomEvent(class UAnimMontage* Montage);
+	void EffectPlayEvent();
+	void ExecuteUbergraph_BP_ActionSleep(int32 EntryPoint);
+	void GetSleepLoopMontage(class UAnimMontage** AnimMontage);
+	bool IsPlayingSleepLoop();
+	void OnBeginAction();
+	void OnBlendOut_6BF59DE942FABEC009135FAF74D0892D(class FName NotifyName);
+	void OnCompleted_6BF59DE942FABEC009135FAF74D0892D(class FName NotifyName);
+	void OnEndAction();
+	void OnInterrupted_6BF59DE942FABEC009135FAF74D0892D(class FName NotifyName);
+	void OnLoaded_25736171428620E543B76A903CB7DDF9(class UObject* Loaded);
+	void OnLoaded_49BB828F4B31C2356072F4BF56562BE4(class UObject* Loaded);
+	void OnLoaded_5EEF21F14544E3FF5966AEA11A939260(class UObject* Loaded);
+	void OnNotifyBegin_6BF59DE942FABEC009135FAF74D0892D(class FName NotifyName);
+	void OnNotifyEnd_6BF59DE942FABEC009135FAF74D0892D(class FName NotifyName);
+	void PlaySleepSound();
+	void SetSleepSightFlag(bool Disable);
+	void ShouldChangeSleepLoopMontage(bool* Return_Value);
+	void StartSleepSound(class UAnimMontage* Montage);
+	void StopSleepSound();
+	void TickAction(float DeltaTime);
+	void UnregisterSleepLoopEffect(class APalCharacter* Character);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticBPGeneratedClassImpl<"BP_ActionSleep_C">();
+	}
+	static class UBP_ActionSleep_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBP_ActionSleep_C>();
+	}
+};
+static_assert(alignof(UBP_ActionSleep_C) == 0x000010, "Wrong alignment on UBP_ActionSleep_C");
+static_assert(sizeof(UBP_ActionSleep_C) == 0x000240, "Wrong size on UBP_ActionSleep_C");
+static_assert(offsetof(UBP_ActionSleep_C, UberGraphFrame) == 0x000160, "Member 'UBP_ActionSleep_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_ActionSleep_C, tempMontage) == 0x000168, "Member 'UBP_ActionSleep_C::tempMontage' has a wrong offset!");
+static_assert(offsetof(UBP_ActionSleep_C, IsFlyPal) == 0x000170, "Member 'UBP_ActionSleep_C::IsFlyPal' has a wrong offset!");
+static_assert(offsetof(UBP_ActionSleep_C, TimeHandle) == 0x000178, "Member 'UBP_ActionSleep_C::TimeHandle' has a wrong offset!");
+static_assert(offsetof(UBP_ActionSleep_C, EyeCloseAble) == 0x000180, "Member 'UBP_ActionSleep_C::EyeCloseAble' has a wrong offset!");
+static_assert(offsetof(UBP_ActionSleep_C, Effect) == 0x000188, "Member 'UBP_ActionSleep_C::Effect' has a wrong offset!");
+static_assert(offsetof(UBP_ActionSleep_C, UseMontageFacial) == 0x000190, "Member 'UBP_ActionSleep_C::UseMontageFacial' has a wrong offset!");
+static_assert(offsetof(UBP_ActionSleep_C, FacialComp) == 0x000198, "Member 'UBP_ActionSleep_C::FacialComp' has a wrong offset!");
+static_assert(offsetof(UBP_ActionSleep_C, StartMontageNotifyExist) == 0x0001A0, "Member 'UBP_ActionSleep_C::StartMontageNotifyExist' has a wrong offset!");
+static_assert(offsetof(UBP_ActionSleep_C, LoopMontageNotifyExist) == 0x0001A1, "Member 'UBP_ActionSleep_C::LoopMontageNotifyExist' has a wrong offset!");
+static_assert(offsetof(UBP_ActionSleep_C, SmallSleepSound) == 0x0001A8, "Member 'UBP_ActionSleep_C::SmallSleepSound' has a wrong offset!");
+static_assert(offsetof(UBP_ActionSleep_C, MiddleSleepSound) == 0x0001D8, "Member 'UBP_ActionSleep_C::MiddleSleepSound' has a wrong offset!");
+static_assert(offsetof(UBP_ActionSleep_C, BigSleepSound) == 0x000208, "Member 'UBP_ActionSleep_C::BigSleepSound' has a wrong offset!");
+static_assert(offsetof(UBP_ActionSleep_C, bFadingBySleepLoop) == 0x000238, "Member 'UBP_ActionSleep_C::bFadingBySleepLoop' has a wrong offset!");
+
+}
+

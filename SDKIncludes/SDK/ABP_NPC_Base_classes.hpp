@@ -12,9 +12,9 @@
 
 #include "Pal_structs.hpp"
 #include "Pal_classes.hpp"
-#include "AnimGraphRuntime_structs.hpp"
-#include "ABP_NPC_Base_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ABP_NPC_Base_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -22,7 +22,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_NPC_Base.ABP_NPC_Base_C
-// 0x3440 (0x3B10 - 0x06D0)
+// 0x3580 (0x3C50 - 0x06D0)
 class UABP_NPC_Base_C : public UPalAnimInstance
 {
 public:
@@ -154,34 +154,34 @@ public:
 	struct FRotator                               K2Node_PropertyAccess_9;                           // 0x34A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                K2Node_PropertyAccess_8;                           // 0x34C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                K2Node_PropertyAccess_7;                           // 0x34D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FWeaponAnimationInfo                   K2Node_PropertyAccess_6;                           // 0x34F0(0x0260)()
-	struct FTransform                             K2Node_PropertyAccess_5;                           // 0x3750(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_PropertyAccess_4;                           // 0x37B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_PropertyAccess_3;                           // 0x37B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_PropertyAccess_2;                           // 0x37B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_PropertyAccess_1;                           // 0x37B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37B4[0x4];                                     // 0x37B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                K2Node_PropertyAccess;                             // 0x37B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FWeaponAnimationInfo                   WeaponInfo;                                        // 0x37D0(0x0260)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FVector2D                              VelocityXY;                                        // 0x3A30(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Speed;                                             // 0x3A40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsAim;                                             // 0x3A48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsReloading;                                       // 0x3A49(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isCrouch;                                          // 0x3A4A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A4B[0x5];                                     // 0x3A4B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               AimRotatorForSpine;                                // 0x3A50(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          IsEndJump;                                         // 0x3A68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsValidSprintAnimation;                            // 0x3A69(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsSprint;                                          // 0x3A6A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A6B[0x5];                                     // 0x3A6B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             LeftHandTransform;                                 // 0x3A70(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isAttachLeftHand;                                  // 0x3AD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3AD1[0x7];                                     // 0x3AD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalShooterComponent*                   TSCache_ShooterComponent;                          // 0x3AD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class APalCharacter*                          TSCache_OwnerPalCharacter;                         // 0x3AE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Look_At_Location;                                  // 0x3AE8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPalLookAtComponent*                    LookAtComponent;                                   // 0x3B00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsLookat;                                          // 0x3B08(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWeaponAnimationInfo                   K2Node_PropertyAccess_6;                           // 0x34F0(0x0300)()
+	struct FTransform                             K2Node_PropertyAccess_5;                           // 0x37F0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_PropertyAccess_4;                           // 0x3850(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_PropertyAccess_3;                           // 0x3851(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_PropertyAccess_2;                           // 0x3852(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_PropertyAccess_1;                           // 0x3853(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3854[0x4];                                     // 0x3854(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                K2Node_PropertyAccess;                             // 0x3858(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWeaponAnimationInfo                   WeaponInfo;                                        // 0x3870(0x0300)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FVector2D                              VelocityXY;                                        // 0x3B70(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Speed;                                             // 0x3B80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsAim;                                             // 0x3B88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsReloading;                                       // 0x3B89(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isCrouch;                                          // 0x3B8A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B8B[0x5];                                     // 0x3B8B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               AimRotatorForSpine;                                // 0x3B90(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsEndJump;                                         // 0x3BA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsValidSprintAnimation;                            // 0x3BA9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsSprint;                                          // 0x3BAA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3BAB[0x5];                                     // 0x3BAB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             LeftHandTransform;                                 // 0x3BB0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isAttachLeftHand;                                  // 0x3C10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C11[0x7];                                     // 0x3C11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalShooterComponent*                   TSCache_ShooterComponent;                          // 0x3C18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class APalCharacter*                          TSCache_OwnerPalCharacter;                         // 0x3C20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Look_At_Location;                                  // 0x3C28(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPalLookAtComponent*                    LookAtComponent;                                   // 0x3C40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsLookat;                                          // 0x3C48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -229,7 +229,7 @@ public:
 	}
 };
 static_assert(alignof(UABP_NPC_Base_C) == 0x000010, "Wrong alignment on UABP_NPC_Base_C");
-static_assert(sizeof(UABP_NPC_Base_C) == 0x003B10, "Wrong size on UABP_NPC_Base_C");
+static_assert(sizeof(UABP_NPC_Base_C) == 0x003C50, "Wrong size on UABP_NPC_Base_C");
 static_assert(offsetof(UABP_NPC_Base_C, UberGraphFrame) == 0x0006D0, "Member 'UABP_NPC_Base_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UABP_NPC_Base_C, __AnimBlueprintMutables) == 0x0006D8, "Member 'UABP_NPC_Base_C::__AnimBlueprintMutables' has a wrong offset!");
 static_assert(offsetof(UABP_NPC_Base_C, AnimBlueprintExtension_PropertyAccess) == 0x000710, "Member 'UABP_NPC_Base_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
@@ -355,29 +355,29 @@ static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_9) == 0x0034A8, "M
 static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_8) == 0x0034C0, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess_8' has a wrong offset!");
 static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_7) == 0x0034D8, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess_7' has a wrong offset!");
 static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_6) == 0x0034F0, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess_6' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_5) == 0x003750, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess_5' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_4) == 0x0037B0, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess_4' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_3) == 0x0037B1, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess_3' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_2) == 0x0037B2, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess_2' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_1) == 0x0037B3, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess_1' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess) == 0x0037B8, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, WeaponInfo) == 0x0037D0, "Member 'UABP_NPC_Base_C::WeaponInfo' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, VelocityXY) == 0x003A30, "Member 'UABP_NPC_Base_C::VelocityXY' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, Speed) == 0x003A40, "Member 'UABP_NPC_Base_C::Speed' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, IsAim) == 0x003A48, "Member 'UABP_NPC_Base_C::IsAim' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, IsReloading) == 0x003A49, "Member 'UABP_NPC_Base_C::IsReloading' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, isCrouch) == 0x003A4A, "Member 'UABP_NPC_Base_C::isCrouch' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, AimRotatorForSpine) == 0x003A50, "Member 'UABP_NPC_Base_C::AimRotatorForSpine' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, IsEndJump) == 0x003A68, "Member 'UABP_NPC_Base_C::IsEndJump' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, IsValidSprintAnimation) == 0x003A69, "Member 'UABP_NPC_Base_C::IsValidSprintAnimation' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, IsSprint) == 0x003A6A, "Member 'UABP_NPC_Base_C::IsSprint' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, LeftHandTransform) == 0x003A70, "Member 'UABP_NPC_Base_C::LeftHandTransform' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, isAttachLeftHand) == 0x003AD0, "Member 'UABP_NPC_Base_C::isAttachLeftHand' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, TSCache_ShooterComponent) == 0x003AD8, "Member 'UABP_NPC_Base_C::TSCache_ShooterComponent' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, TSCache_OwnerPalCharacter) == 0x003AE0, "Member 'UABP_NPC_Base_C::TSCache_OwnerPalCharacter' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, Look_At_Location) == 0x003AE8, "Member 'UABP_NPC_Base_C::Look_At_Location' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, LookAtComponent) == 0x003B00, "Member 'UABP_NPC_Base_C::LookAtComponent' has a wrong offset!");
-static_assert(offsetof(UABP_NPC_Base_C, IsLookat) == 0x003B08, "Member 'UABP_NPC_Base_C::IsLookat' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_5) == 0x0037F0, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess_5' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_4) == 0x003850, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess_4' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_3) == 0x003851, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess_3' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_2) == 0x003852, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess_2' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess_1) == 0x003853, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess_1' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, K2Node_PropertyAccess) == 0x003858, "Member 'UABP_NPC_Base_C::K2Node_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, WeaponInfo) == 0x003870, "Member 'UABP_NPC_Base_C::WeaponInfo' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, VelocityXY) == 0x003B70, "Member 'UABP_NPC_Base_C::VelocityXY' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, Speed) == 0x003B80, "Member 'UABP_NPC_Base_C::Speed' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, IsAim) == 0x003B88, "Member 'UABP_NPC_Base_C::IsAim' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, IsReloading) == 0x003B89, "Member 'UABP_NPC_Base_C::IsReloading' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, isCrouch) == 0x003B8A, "Member 'UABP_NPC_Base_C::isCrouch' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, AimRotatorForSpine) == 0x003B90, "Member 'UABP_NPC_Base_C::AimRotatorForSpine' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, IsEndJump) == 0x003BA8, "Member 'UABP_NPC_Base_C::IsEndJump' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, IsValidSprintAnimation) == 0x003BA9, "Member 'UABP_NPC_Base_C::IsValidSprintAnimation' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, IsSprint) == 0x003BAA, "Member 'UABP_NPC_Base_C::IsSprint' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, LeftHandTransform) == 0x003BB0, "Member 'UABP_NPC_Base_C::LeftHandTransform' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, isAttachLeftHand) == 0x003C10, "Member 'UABP_NPC_Base_C::isAttachLeftHand' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, TSCache_ShooterComponent) == 0x003C18, "Member 'UABP_NPC_Base_C::TSCache_ShooterComponent' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, TSCache_OwnerPalCharacter) == 0x003C20, "Member 'UABP_NPC_Base_C::TSCache_OwnerPalCharacter' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, Look_At_Location) == 0x003C28, "Member 'UABP_NPC_Base_C::Look_At_Location' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, LookAtComponent) == 0x003C40, "Member 'UABP_NPC_Base_C::LookAtComponent' has a wrong offset!");
+static_assert(offsetof(UABP_NPC_Base_C, IsLookat) == 0x003C48, "Member 'UABP_NPC_Base_C::IsLookat' has a wrong offset!");
 
 }
 

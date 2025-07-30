@@ -23,6 +23,7 @@ class IBI_PalFishingNotifyInterface_C final
 public:
 	void OnFishingActionCancel();
 	void OnFishingActionEnd();
+	void OnFishingActionShowFish();
 	void OnFishingActionStart();
 	void OnSalvageActionEnd();
 	void OnSalvageActionStart(const struct FVector& ThrowLocation);

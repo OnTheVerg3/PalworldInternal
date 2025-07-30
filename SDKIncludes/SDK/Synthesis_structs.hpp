@@ -1176,6 +1176,29 @@ static_assert(offsetof(FSubmixEffectDelaySettings, MaximumDelayLength) == 0x0000
 static_assert(offsetof(FSubmixEffectDelaySettings, InterpolationTime) == 0x000004, "Member 'FSubmixEffectDelaySettings::InterpolationTime' has a wrong offset!");
 static_assert(offsetof(FSubmixEffectDelaySettings, DelayLength) == 0x000008, "Member 'FSubmixEffectDelaySettings::DelayLength' has a wrong offset!");
 
+// ScriptStruct Synthesis.Synth2DSliderStyle
+// 0x0428 (0x0430 - 0x0008)
+struct FSynth2DSliderStyle final : public FSlateWidgetStyle
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            NormalThumbImage;                                  // 0x0010(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            DisabledThumbImage;                                // 0x00E0(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            NormalBarImage;                                    // 0x01B0(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            DisabledBarImage;                                  // 0x0280(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            BackgroundImage;                                   // 0x0350(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         BarThickness;                                      // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_424[0xC];                                      // 0x0424(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FSynth2DSliderStyle) == 0x000010, "Wrong alignment on FSynth2DSliderStyle");
+static_assert(sizeof(FSynth2DSliderStyle) == 0x000430, "Wrong size on FSynth2DSliderStyle");
+static_assert(offsetof(FSynth2DSliderStyle, NormalThumbImage) == 0x000010, "Member 'FSynth2DSliderStyle::NormalThumbImage' has a wrong offset!");
+static_assert(offsetof(FSynth2DSliderStyle, DisabledThumbImage) == 0x0000E0, "Member 'FSynth2DSliderStyle::DisabledThumbImage' has a wrong offset!");
+static_assert(offsetof(FSynth2DSliderStyle, NormalBarImage) == 0x0001B0, "Member 'FSynth2DSliderStyle::NormalBarImage' has a wrong offset!");
+static_assert(offsetof(FSynth2DSliderStyle, DisabledBarImage) == 0x000280, "Member 'FSynth2DSliderStyle::DisabledBarImage' has a wrong offset!");
+static_assert(offsetof(FSynth2DSliderStyle, BackgroundImage) == 0x000350, "Member 'FSynth2DSliderStyle::BackgroundImage' has a wrong offset!");
+static_assert(offsetof(FSynth2DSliderStyle, BarThickness) == 0x000420, "Member 'FSynth2DSliderStyle::BarThickness' has a wrong offset!");
+
 // ScriptStruct Synthesis.SubmixEffectFilterSettings
 // 0x000C (0x000C - 0x0000)
 struct FSubmixEffectFilterSettings final
@@ -1341,29 +1364,6 @@ static_assert(sizeof(FSubmixEffectTapDelaySettings) == 0x000018, "Wrong size on 
 static_assert(offsetof(FSubmixEffectTapDelaySettings, MaximumDelayLength) == 0x000000, "Member 'FSubmixEffectTapDelaySettings::MaximumDelayLength' has a wrong offset!");
 static_assert(offsetof(FSubmixEffectTapDelaySettings, InterpolationTime) == 0x000004, "Member 'FSubmixEffectTapDelaySettings::InterpolationTime' has a wrong offset!");
 static_assert(offsetof(FSubmixEffectTapDelaySettings, Taps) == 0x000008, "Member 'FSubmixEffectTapDelaySettings::Taps' has a wrong offset!");
-
-// ScriptStruct Synthesis.Synth2DSliderStyle
-// 0x0428 (0x0430 - 0x0008)
-struct FSynth2DSliderStyle final : public FSlateWidgetStyle
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            NormalThumbImage;                                  // 0x0010(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            DisabledThumbImage;                                // 0x00E0(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            NormalBarImage;                                    // 0x01B0(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            DisabledBarImage;                                  // 0x0280(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            BackgroundImage;                                   // 0x0350(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         BarThickness;                                      // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_424[0xC];                                      // 0x0424(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FSynth2DSliderStyle) == 0x000010, "Wrong alignment on FSynth2DSliderStyle");
-static_assert(sizeof(FSynth2DSliderStyle) == 0x000430, "Wrong size on FSynth2DSliderStyle");
-static_assert(offsetof(FSynth2DSliderStyle, NormalThumbImage) == 0x000010, "Member 'FSynth2DSliderStyle::NormalThumbImage' has a wrong offset!");
-static_assert(offsetof(FSynth2DSliderStyle, DisabledThumbImage) == 0x0000E0, "Member 'FSynth2DSliderStyle::DisabledThumbImage' has a wrong offset!");
-static_assert(offsetof(FSynth2DSliderStyle, NormalBarImage) == 0x0001B0, "Member 'FSynth2DSliderStyle::NormalBarImage' has a wrong offset!");
-static_assert(offsetof(FSynth2DSliderStyle, DisabledBarImage) == 0x000280, "Member 'FSynth2DSliderStyle::DisabledBarImage' has a wrong offset!");
-static_assert(offsetof(FSynth2DSliderStyle, BackgroundImage) == 0x000350, "Member 'FSynth2DSliderStyle::BackgroundImage' has a wrong offset!");
-static_assert(offsetof(FSynth2DSliderStyle, BarThickness) == 0x000420, "Member 'FSynth2DSliderStyle::BarThickness' has a wrong offset!");
 
 // ScriptStruct Synthesis.SynthKnobStyle
 // 0x0358 (0x0360 - 0x0008)

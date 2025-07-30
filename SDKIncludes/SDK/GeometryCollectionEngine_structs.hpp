@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Chaos_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Chaos_structs.hpp"
 
 
 namespace SDK
@@ -166,21 +166,25 @@ static_assert(offsetof(FChaosRemovalEventData, Location) == 0x000000, "Member 'F
 static_assert(offsetof(FChaosRemovalEventData, Mass) == 0x000018, "Member 'FChaosRemovalEventData::Mass' has a wrong offset!");
 static_assert(offsetof(FChaosRemovalEventData, ParticleIndex) == 0x00001C, "Member 'FChaosRemovalEventData::ParticleIndex' has a wrong offset!");
 
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionDebugDrawActorSelectedRigidBody
-// 0x0018 (0x0018 - 0x0000)
-struct FGeometryCollectionDebugDrawActorSelectedRigidBody final
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionSource
+// 0x00A0 (0x00A0 - 0x0000)
+struct FGeometryCollectionSource final
 {
 public:
-	int32                                         ID;                                                // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AChaosSolverActor*                      Solver;                                            // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AGeometryCollectionActor*               GeometryCollection;                                // 0x0010(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        SourceGeometryObject;                              // 0x0000(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             LocalTransform;                                    // 0x0020(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             SourceMaterial;                                    // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	bool                                          bAddInternalMaterials;                             // 0x0090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSplitComponents;                                  // 0x0091(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_92[0xE];                                       // 0x0092(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGeometryCollectionDebugDrawActorSelectedRigidBody) == 0x000008, "Wrong alignment on FGeometryCollectionDebugDrawActorSelectedRigidBody");
-static_assert(sizeof(FGeometryCollectionDebugDrawActorSelectedRigidBody) == 0x000018, "Wrong size on FGeometryCollectionDebugDrawActorSelectedRigidBody");
-static_assert(offsetof(FGeometryCollectionDebugDrawActorSelectedRigidBody, ID) == 0x000000, "Member 'FGeometryCollectionDebugDrawActorSelectedRigidBody::ID' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionDebugDrawActorSelectedRigidBody, Solver) == 0x000008, "Member 'FGeometryCollectionDebugDrawActorSelectedRigidBody::Solver' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionDebugDrawActorSelectedRigidBody, GeometryCollection) == 0x000010, "Member 'FGeometryCollectionDebugDrawActorSelectedRigidBody::GeometryCollection' has a wrong offset!");
+static_assert(alignof(FGeometryCollectionSource) == 0x000010, "Wrong alignment on FGeometryCollectionSource");
+static_assert(sizeof(FGeometryCollectionSource) == 0x0000A0, "Wrong size on FGeometryCollectionSource");
+static_assert(offsetof(FGeometryCollectionSource, SourceGeometryObject) == 0x000000, "Member 'FGeometryCollectionSource::SourceGeometryObject' has a wrong offset!");
+static_assert(offsetof(FGeometryCollectionSource, LocalTransform) == 0x000020, "Member 'FGeometryCollectionSource::LocalTransform' has a wrong offset!");
+static_assert(offsetof(FGeometryCollectionSource, SourceMaterial) == 0x000080, "Member 'FGeometryCollectionSource::SourceMaterial' has a wrong offset!");
+static_assert(offsetof(FGeometryCollectionSource, bAddInternalMaterials) == 0x000090, "Member 'FGeometryCollectionSource::bAddInternalMaterials' has a wrong offset!");
+static_assert(offsetof(FGeometryCollectionSource, bSplitComponents) == 0x000091, "Member 'FGeometryCollectionSource::bSplitComponents' has a wrong offset!");
 
 // ScriptStruct GeometryCollectionEngine.ChaosBreakingEventData
 // 0x0038 (0x0038 - 0x0000)
@@ -249,26 +253,6 @@ public:
 };
 static_assert(alignof(FGeometryCollectionRepData) == 0x000008, "Wrong alignment on FGeometryCollectionRepData");
 static_assert(sizeof(FGeometryCollectionRepData) == 0x000028, "Wrong size on FGeometryCollectionRepData");
-
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionSource
-// 0x00A0 (0x00A0 - 0x0000)
-struct FGeometryCollectionSource final
-{
-public:
-	struct FSoftObjectPath                        SourceGeometryObject;                              // 0x0000(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             LocalTransform;                                    // 0x0020(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             SourceMaterial;                                    // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	bool                                          bAddInternalMaterials;                             // 0x0090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSplitComponents;                                  // 0x0091(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_92[0xE];                                       // 0x0092(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGeometryCollectionSource) == 0x000010, "Wrong alignment on FGeometryCollectionSource");
-static_assert(sizeof(FGeometryCollectionSource) == 0x0000A0, "Wrong size on FGeometryCollectionSource");
-static_assert(offsetof(FGeometryCollectionSource, SourceGeometryObject) == 0x000000, "Member 'FGeometryCollectionSource::SourceGeometryObject' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionSource, LocalTransform) == 0x000020, "Member 'FGeometryCollectionSource::LocalTransform' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionSource, SourceMaterial) == 0x000080, "Member 'FGeometryCollectionSource::SourceMaterial' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionSource, bAddInternalMaterials) == 0x000090, "Member 'FGeometryCollectionSource::bAddInternalMaterials' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionSource, bSplitComponents) == 0x000091, "Member 'FGeometryCollectionSource::bSplitComponents' has a wrong offset!");
 
 // ScriptStruct GeometryCollectionEngine.GeometryCollectionDamagePropagationData
 // 0x000C (0x000C - 0x0000)
@@ -379,6 +363,22 @@ public:
 };
 static_assert(alignof(FGeometryCollectionDebugDrawWarningMessage) == 0x000001, "Wrong alignment on FGeometryCollectionDebugDrawWarningMessage");
 static_assert(sizeof(FGeometryCollectionDebugDrawWarningMessage) == 0x000001, "Wrong size on FGeometryCollectionDebugDrawWarningMessage");
+
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionDebugDrawActorSelectedRigidBody
+// 0x0018 (0x0018 - 0x0000)
+struct FGeometryCollectionDebugDrawActorSelectedRigidBody final
+{
+public:
+	int32                                         ID;                                                // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AChaosSolverActor*                      Solver;                                            // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AGeometryCollectionActor*               GeometryCollection;                                // 0x0010(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryCollectionDebugDrawActorSelectedRigidBody) == 0x000008, "Wrong alignment on FGeometryCollectionDebugDrawActorSelectedRigidBody");
+static_assert(sizeof(FGeometryCollectionDebugDrawActorSelectedRigidBody) == 0x000018, "Wrong size on FGeometryCollectionDebugDrawActorSelectedRigidBody");
+static_assert(offsetof(FGeometryCollectionDebugDrawActorSelectedRigidBody, ID) == 0x000000, "Member 'FGeometryCollectionDebugDrawActorSelectedRigidBody::ID' has a wrong offset!");
+static_assert(offsetof(FGeometryCollectionDebugDrawActorSelectedRigidBody, Solver) == 0x000008, "Member 'FGeometryCollectionDebugDrawActorSelectedRigidBody::Solver' has a wrong offset!");
+static_assert(offsetof(FGeometryCollectionDebugDrawActorSelectedRigidBody, GeometryCollection) == 0x000010, "Member 'FGeometryCollectionDebugDrawActorSelectedRigidBody::GeometryCollection' has a wrong offset!");
 
 // ScriptStruct GeometryCollectionEngine.GeometryCollectionAutoInstanceMesh
 // 0x0030 (0x0030 - 0x0000)
