@@ -122,6 +122,8 @@ void SetInfiniteAmmo()
 
 	APalWeaponBase* pWeapon = pShootComponent->HasWeapon;
 
+
+
 	if (pWeapon)
 	{
 		auto name = pWeapon->GetName();
@@ -135,6 +137,32 @@ void SetInfiniteAmmo()
 
 	pWeapon->IsRequiredBullet = cheatState.infAmmo ? false : true;
 
+}
+
+void IncreaseCurrentWeaponDurability()
+{
+	APalPlayerCharacter* pPalCharacter = GetPalPlayerCharacter();
+	if (!pPalCharacter) return;
+
+	UPalShooterComponent* pShootComponent = pPalCharacter->ShooterComponent;
+	if (!pShootComponent) return;
+
+	APalWeaponBase* pWeapon = pShootComponent->HasWeapon;
+	if (!pWeapon) return;
+
+	float currentDurability = pWeapon->GetDurability();
+
+	UPalDynamicWeaponItemDataBase* dynData = pWeapon->TryGetDynamicWeaponData();
+	if (dynData)
+	{
+		float newDurability = currentDurability + 99999.0f;
+
+		dynData->Durability = newDurability;
+	}
+	else
+	{
+		return;
+	}
 }
 
 void ResetStamina()
@@ -368,6 +396,88 @@ void CheckWeapon()
 		cheatState.weaponName = "No Weapon found";
 	}
 }
+
+void CollectAllRelicsInMap()
+{
+	UWorld* world = UWorld::GetWorld();
+	if (!world) return;
+
+	APalPlayerController* controller = GetPalPlayerController();
+	if (!controller || !controller->Transmitter || !controller->Transmitter->Player)
+	{
+		g_Console->cLog("Transmitter or Player component not found!\n", Console::EColor_blue);
+		return;
+	}
+
+	APalPlayerCharacter* player = GetPalPlayerCharacter();
+	if (!player || !player->InteractComponent)
+	{
+		g_Console->cLog("Player's InteractComponent is missing!\n", Console::EColor_blue);
+		return;
+	}
+
+	AActor* nearestRelic = nullptr;
+	float nearestDistance = FLT_MAX;
+	FVector playerLoc = player->K2_GetActorLocation();
+
+	for (ULevel* level : world->Levels)
+	{
+		if (!level) continue;
+
+		for (AActor* actor : level->Actors)
+		{
+			if (!actor) continue;
+
+			std::string className;
+			try { className = actor->Class->GetName(); }
+			catch (...) { continue; }
+
+			// Match relic class
+			if (className == "BP_LevelObject_Relic_C" || className.find("PalLevelObjectRelic") != std::string::npos)
+			{
+				APalLevelObjectObtainable* relic = reinterpret_cast<APalLevelObjectObtainable*>(actor);
+				if (!relic) continue;
+
+				// Skip relics that are already picked up
+				if (relic->bPickedInClient)
+				{
+					continue;
+				}
+
+				// Check the distance to the player
+				float dist = relic->K2_GetActorLocation().GetDistanceTo(playerLoc);
+				if (dist < nearestDistance)
+				{
+					nearestDistance = dist;
+					nearestRelic = relic;
+				}
+			}
+		}
+	}
+
+	if (!nearestRelic)
+	{
+		g_Console->cLog("No relics found!\n", Console::EColor_blue);
+		return;
+	}
+
+	APalLevelObjectObtainable* relic = reinterpret_cast<APalLevelObjectObtainable*>(nearestRelic);
+
+	if (relic && !relic->bPickedInClient)
+	{
+		g_Console->cLog("Triggering interaction with the nearest relic...\n", Console::EColor_blue);
+
+		// Request to collect the relic
+		player->InteractComponent->SetEnableInteract(true, false);
+
+		controller->Transmitter->Player->RequestObtainLevelObject_ToServer(relic);
+	}
+	else
+	{
+		g_Console->cLog("Relic already collected or invalid!\n", Console::EColor_blue);
+	}
+}
+
 
 
 //TODO: Implement in the future

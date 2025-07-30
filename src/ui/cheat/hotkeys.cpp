@@ -55,6 +55,28 @@ void TickHotkeys()
         }
 		
     }
+
+}
+
+void TickHotkeysOneShot()
+{
+    // Repair weapon: only run once per press
+    static bool repairKeyDown = false;
+
+    if (GetAsyncKeyState(key.hotkeyRepairWeapon) & 0x8000) // key is held
+    {
+        if (!repairKeyDown)
+        {
+            // First frame key is pressed
+            repairKeyDown = true;
+            IncreaseCurrentWeaponDurability();
+        }
+    }
+    else
+    {
+        // Key released → reset flag
+        repairKeyDown = false;
+    }
 }
 
 void DrawHotkeys()
@@ -66,7 +88,7 @@ void DrawHotkeys()
         bool* activeFlag;
     };
 
-    static bool waitingWorld = false, waitingESP = false, waitingStamina = false, waitingRelic = false, waitingAttack = false;
+    static bool waitingWorld = false, waitingESP = false, waitingStamina = false, waitingRelic = false, waitingAttack = false, waitingRepair = false;
 
     HotkeyEntry hotkeys[] = {
     { "World Speed 1:10", &key.hotkeyToggleWorldSpeed, &waitingWorld, &key.worldSpeedToggled },
@@ -74,6 +96,7 @@ void DrawHotkeys()
     { "Pal ESP", &key.hotkeyToggleESP, &waitingESP, &key.espToggled },
     { "Relic ESP", &key.hotkeyToggleRelic, &waitingRelic, &key.relicToggled },
     { "Attack 1:90000", &key.hotkeyToggleAttack, &waitingAttack, &key.attackToggled },
+    { "Repair Current Weapon", &key.hotkeyRepairWeapon, &waitingRepair, nullptr },
     };
 
     for (auto& entry : hotkeys)
@@ -90,11 +113,19 @@ void DrawHotkeys()
         ImGui::Text("%s", entry.label);
 
         // 2. Active status (aligned right to label)
-        ImGui::SameLine(250); // adjust spacing
-        if (entry.activeFlag && *entry.activeFlag)
-            ImGui::TextColored(ImVec4(0.2f, 1.0f, 0.2f, 1.0f), "ON");
+        ImGui::SameLine(250);
+
+        if (entry.activeFlag)
+        {
+            if (*entry.activeFlag)
+                ImGui::TextColored(ImVec4(0.2f, 1.0f, 0.2f, 1.0f), "ON");
+            else
+                ImGui::TextColored(ImVec4(1.0f, 0.3f, 0.3f, 1.0f), "OFF");
+        }
         else
-            ImGui::TextColored(ImVec4(1.0f, 0.3f, 0.3f, 1.0f), "OFF");
+        {
+            ImGui::TextDisabled("-");
+        }
 
         // 3. Hotkey button (far right)
         ImGui::SameLine(350); // align further right

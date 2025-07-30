@@ -27,7 +27,9 @@ void AddTechPoints();
 void AddAncientTechPoints();
 void AddWaypointLocation(const std::string& wpName);
 bool RemoveWaypointLocationByName(const std::string& wpName);
+void IncreaseCurrentWeaponDurability();
 void CheckWeapon();
+void CollectAllRelicsInMap();
 void InfHP();
 
 struct CheatState
@@ -92,12 +94,14 @@ struct Hotkeys
     int hotkeyToggleESP = VK_F3;
     int hotkeyToggleRelic = VK_F4;
     int hotkeyToggleAttack = VK_F5;
+    int hotkeyRepairWeapon = VK_F6;
 
     bool worldSpeedToggled = false;
 	bool staminaToggled = false;
     bool espToggled = false;
 	bool relicToggled = false;
 	bool attackToggled = false;
+    bool repairWeapon = false;
 
 };
 

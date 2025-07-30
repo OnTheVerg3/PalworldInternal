@@ -165,6 +165,17 @@ namespace DX11Base
                         {
                             ImGui::TextColored(ImVec4(0.2f, 1.0f, 0.2f, 1.0f), "%s", cheatState.weaponName.c_str()); // Green
                         }
+                        if (ImGui::Button("Repair Current Weapon"))
+                        {
+                            IncreaseCurrentWeaponDurability();
+                        }
+                        ImGui::Spacing();
+
+                        if (ImGui::Button("Collect All Relics"))
+                        {
+                            CollectAllRelicsInMap();
+                        }
+                        
 
                         ImGui::Spacing();
                         ImGui::SeparatorEx(1.0f);
@@ -405,6 +416,7 @@ namespace DX11Base
         ResetStamina();
         SetDemiGodMode();
         TickHotkeys();
+        TickHotkeysOneShot();
 
         if (cheatState.aimbotEnabled && (GetAsyncKeyState(cheatState.aimbotHotkey) & 0x8000))
         {

@@ -3,3 +3,4 @@
 
 void TickHotkeys();
 void DrawHotkeys();
+void TickHotkeysOneShot();
