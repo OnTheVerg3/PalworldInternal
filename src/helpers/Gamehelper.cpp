@@ -130,9 +130,17 @@ namespace Helper
 
     bool IsAlive(SDK::AActor* pChar)
     {
+        if (!pChar)
+            return false;
+
+        auto params = reinterpret_cast<SDK::APalCharacter*>(pChar)->CharacterParameterComponent;
+        if (!params)
+            return false;
+
         SDK::UPalUtility* pUtil = UPalUtility::GetDefaultObj();
         SDK::APalPlayerCharacter* pLocalChar = GetPalPlayerCharacter();
-        if (!pUtil || !pLocalChar || !pChar)
+
+        if (!pUtil || !pLocalChar)
             return false;
 
         return !pUtil->IsDead(pChar);
