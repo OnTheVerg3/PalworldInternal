@@ -69,7 +69,7 @@ void TickHotkeysOneShot()
         {
             // First frame key is pressed
             repairKeyDown = true;
-            IncreaseCurrentWeaponDurability();
+            IncreaseAllDurability();
         }
     }
     else

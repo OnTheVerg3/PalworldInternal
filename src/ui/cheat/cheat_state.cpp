@@ -139,12 +139,12 @@ void SetInfiniteAmmo()
 
 }
 
-void IncreaseCurrentWeaponDurability()
+void IncreaseAllDurability()
 {
-	APalPlayerCharacter* pPalCharacter = GetPalPlayerCharacter();
-	if (!pPalCharacter) return;
+	APalPlayerCharacter* player = GetPalPlayerCharacter();
+	if (!player) return;
 
-	UPalShooterComponent* pShootComponent = pPalCharacter->ShooterComponent;
+	UPalShooterComponent* pShootComponent = player->ShooterComponent;
 	if (!pShootComponent) return;
 
 	APalWeaponBase* pWeapon = pShootComponent->HasWeapon;
@@ -158,11 +158,40 @@ void IncreaseCurrentWeaponDurability()
 		float newDurability = currentDurability + 99999.0f;
 
 		dynData->Durability = newDurability;
+		
 	}
 	else
 	{
 		return;
 	}
+
+}
+
+int originalAttackValue = 0; // Global or static
+bool originalValueSaved = false;
+
+void SetWeaponDamage()
+{
+	APalPlayerCharacter* player = GetPalPlayerCharacter();
+	if (!player) return;
+
+	UPalShooterComponent* pShootComponent = player->ShooterComponent;
+	if (!pShootComponent) return;
+
+	APalWeaponBase* pWeapon = pShootComponent->HasWeapon;
+	if (!pWeapon) return;
+
+	UPalStaticWeaponItemData* stat = pWeapon->ownWeaponStaticData;
+	if (!stat)
+		return;
+
+	if (!originalValueSaved)
+	{
+		originalAttackValue = stat->AttackValue;
+		originalValueSaved = true;
+	}
+
+	stat->AttackValue = originalAttackValue * cheatState.weaponDamage;
 }
 
 void ResetStamina()
@@ -210,7 +239,7 @@ void TeleportPlayerTo(const FVector& pos)
 	if (!pPalPlayerController || !pPalPlayerState)
 		return;
 
-	// Adjust to avoid spawning inside terrain
+	// to avoid spawning inside terrain +100
 	FVector safeLocation = FVector(pos.X, pos.Y + 100.0f, pos.Z);
 	FQuat defaultRotation(0.f, 0.f, 0.f, 1.f);
 
@@ -219,10 +248,8 @@ void TeleportPlayerTo(const FVector& pos)
 	// Get player unique ID (needed for server call)
 	FGuid guid = pPalPlayerState->PlayerUId;
 
-	// Register the new location as respawn point
 	pPalPlayerController->Transmitter->Player->RegisterRespawnPoint_ToServer(guid, safeLocation, defaultRotation);
 
-	// Trigger the respawn to teleport
 	pPalPlayerState->RequestRespawn();
 }
 

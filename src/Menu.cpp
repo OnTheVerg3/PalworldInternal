@@ -64,7 +64,7 @@ namespace DX11Base
     {
         void TABMain()
         {
-            ImGui::SetNextWindowSize(ImVec2(620, 700), ImGuiCond_FirstUseEver);
+            ImGui::SetNextWindowSize(ImVec2(700, 700), ImGuiCond_FirstUseEver);
             if (ImGui::Begin("##trainer", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoTitleBar))
             {
                 if (ImGui::BeginTabBar("##tabs"))
@@ -128,15 +128,13 @@ namespace DX11Base
                         ImGui::EndTabItem();
                     }
 
-                    //Features Tab
-                    if (ImGui::BeginTabItem("Features"))
+                    //Online Tab
+                    if (ImGui::BeginTabItem("Online"))
                     {
 
                         ImGui::SeparatorEx(1.0f);
                         ImGui::Spacing();
-
-                        ImGui::SeparatorEx(1.0f);
-                        ImGui::Text("Online");
+                        ImGui::SeparatorText("Player Features");
 
                         if (ImGui::SliderFloat("World Speed", &cheatState.worldSpeed, 1.0f, 20.0f))
                         {
@@ -152,34 +150,76 @@ namespace DX11Base
                         }
                         ImGui::Checkbox("Inf Stamina", &cheatState.infStamina);
 
-                        if (ImGui::Checkbox("[Inf Ammo] Applied to:", &cheatState.infAmmo))
-                        {
-                            SetInfiniteAmmo();
-                        }
-                        ImGui::SameLine();
-                        if (cheatState.weaponName == "No Weapon found")
-                        {
-                            ImGui::TextColored(ImVec4(1.0f, 0.2f, 0.2f, 1.0f), "%s", cheatState.weaponName.c_str()); // Red
-                        }
-                        else
-                        {
-                            ImGui::TextColored(ImVec4(0.2f, 1.0f, 0.2f, 1.0f), "%s", cheatState.weaponName.c_str()); // Green
-                        }
-                        if (ImGui::Button("Repair Current Weapon"))
-                        {
-                            IncreaseCurrentWeaponDurability();
-                        }
                         ImGui::Spacing();
 
-                        if (ImGui::Button("Collect All Relics"))
+                        if (ImGui::Button("Collect All Relics (TODO)"))
                         {
                             CollectAllRelicsInMap();
                         }
-                        
+
+                        //Weapon Features start
+                        ImGui::Spacing();
+                        ImGui::SeparatorText("Weapon Features");
+
+                        // Weapon Finder row
+                        ImGui::Columns(2, nullptr, false);
+                        if (ImGui::Button("Find Weapon", ImVec2(ImGui::GetColumnWidth(), 0)))
+                        {
+                            CheckWeapon();
+                        }
+                        ImGui::NextColumn();
+
+                        // Weapon name in color
+                        if (cheatState.weaponName == "No Weapon")
+                            ImGui::TextColored(ImVec4(1.0f, 0.2f, 0.2f, 1.0f), "%s", cheatState.weaponName.c_str());
+                        else
+                            ImGui::TextColored(ImVec4(0.2f, 1.0f, 0.2f, 1.0f), "%s", cheatState.weaponName.c_str());
+
+                        ImGui::Columns(1);
+                        ImGui::Spacing();
+                        ImGui::Spacing();
+
+                        ImGui::TextDisabled("Increases damage against resources (trees, stones, etc.)");
+
+                        // Slider
+                        if (ImGui::SliderInt("Weapon Damage Multiply", &cheatState.weaponDamage, 1, 400))
+                        {
+                            SetWeaponDamage();
+                        }
+
+                        // Buttons below
+                        if (ImGui::Button("Add Inf Durability Current Weapon", ImVec2(-1, 0)))
+                        {
+                            IncreaseAllDurability();
+                        }
+
+                        ImGui::Checkbox("Infinite Ammo", &cheatState.infAmmo);
 
                         ImGui::Spacing();
                         ImGui::SeparatorEx(1.0f);
-                        ImGui::Text("Single Player");
+                        ImGui::SeparatorText("Camera");
+
+                        if (ImGui::SliderFloat("Fov", &cheatState.cameraFov, 25.0f, 170.0f, "%.0f"))
+                        {
+                            SetCameraFov();
+                        }
+
+                        if (ImGui::SliderFloat("Brightness", &cheatState.cameraBrightness, 0.0f, 5.0f, "%.2f"))
+                        {
+                            SetCameraBrightness();
+                        }                     
+
+                        ImGui::EndTabItem();
+                    }
+
+
+
+                    //Sinle Tab
+                    if (ImGui::BeginTabItem("Single Player"))
+                    {
+                        ImGui::SeparatorEx(1.0f);
+                        ImGui::Spacing();
+                        ImGui::Text("Single Player Features");
 
                         if (ImGui::SliderFloat("Movement Speed", &cheatState.speed, 400.0f, 5000.0f))
                         {
@@ -200,36 +240,21 @@ namespace DX11Base
 
                         ImGui::InputInt("Tech Points", &cheatState.techPoints, 1, 50);
                         ImGui::SameLine();
-                        if (ImGui::Button("Add"))
+                        if (ImGui::Button("Add##Tech"))
                         {
                             AddTechPoints();
                         }
                         ImGui::InputInt("Ancient Points", &cheatState.aTechPoints, 1, 50);
                         ImGui::SameLine();
-                        if (ImGui::Button("Add"))
+                        if (ImGui::Button("Add##Ancient"))
                         {
                             AddAncientTechPoints();
                         }
 
                         ImGui::Checkbox("Godmode", &cheatState.godmode);
 
-                        ImGui::Spacing();
-                        ImGui::SeparatorEx(1.0f);
-                        ImGui::Text("Camera");
-
-                        if (ImGui::SliderFloat("Fov", &cheatState.cameraFov, 25.0f, 170.0f, "%.0f"))
-                        {
-                            SetCameraFov();
-                        }
-
-                        if (ImGui::SliderFloat("Brightness", &cheatState.cameraBrightness, 0.0f, 5.0f, "%.2f"))
-                        {
-                            SetCameraBrightness();
-                        }
-
                         ImGui::EndTabItem();
                     }
-
                     //Tab3
                     if (ImGui::BeginTabItem("Item Spawner"))
                     {

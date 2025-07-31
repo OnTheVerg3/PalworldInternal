@@ -27,9 +27,10 @@ void AddTechPoints();
 void AddAncientTechPoints();
 void AddWaypointLocation(const std::string& wpName);
 bool RemoveWaypointLocationByName(const std::string& wpName);
-void IncreaseCurrentWeaponDurability();
+void IncreaseAllDurability();
 void CheckWeapon();
 void CollectAllRelicsInMap();
+void SetWeaponDamage();
 void InfHP();
 
 struct CheatState
@@ -38,6 +39,7 @@ struct CheatState
     //Features
     float speed = 600.0f;
     float worldSpeed = 1.0f;
+    int weaponDamage = 1;
     int attack = 1;
     int defence = 1;
     float weight = 600.0f;
