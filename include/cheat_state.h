@@ -31,6 +31,7 @@ void IncreaseAllDurability();
 void CheckWeapon();
 void CollectAllRelicsInMap();
 void SetWeaponDamage();
+void RepairTest();
 void InfHP();
 
 struct CheatState
@@ -52,7 +53,7 @@ struct CheatState
     float palCraftSpeed = 1.0f;
     __int32 techPoints = 0;
     __int32 aTechPoints = 0;
-    std::string weaponName = "No Weapon";
+    std::string weaponName = "No Weapon found";
 
     //Aimbot
 	bool aimbotEnabled = false;

@@ -14,9 +14,6 @@ using namespace SDK;
 using namespace Helper;
 using namespace DX11Base;
 
-std::vector<SDK::APalPlayerCharacter*> g_PlayerList;
-SDK::APalPlayerCharacter* selectedPlayer = nullptr;
-
 
 float GetDistanceToActor(AActor* pLocal, AActor* pTarget)
 {
@@ -101,9 +98,17 @@ void SetPlayerInventoryWeight()
 	pInventory->NowItemWeight = (std::min)(pInventory->NowItemWeight, cheatState.weight);
 	pInventory->PassiveBuffedCurrentWeight = 0.0f;
 
+	//Fix1
+	if (APalPlayerController* controller = GetPalPlayerController())
+	{
+		controller->OnOverWeightInventory(pInventory->NowItemWeight);
+	}
+
+	// Not really necessary, but just in case if there are checks in the game that rely on these values
 	pInventory->OnRep_maxInventoryWeight();
 	pInventory->OnRep_BuffMaxWeight();
 	pInventory->OnRep_BuffCurrentWeight();
+
 
 	// Force server inventory refresh
 	pInventory->RequestForceMarkAllDirty_ToServer(true);
@@ -122,8 +127,6 @@ void SetInfiniteAmmo()
 
 	APalWeaponBase* pWeapon = pShootComponent->HasWeapon;
 
-
-
 	if (pWeapon)
 	{
 		auto name = pWeapon->GetName();
@@ -134,7 +137,7 @@ void SetInfiniteAmmo()
 		cheatState.weaponName = "No Weapon found";
 		return;
 	}
-
+	//Dosnt work on all weapons
 	pWeapon->IsRequiredBullet = cheatState.infAmmo ? false : true;
 
 }
@@ -153,21 +156,15 @@ void IncreaseAllDurability()
 	float currentDurability = pWeapon->GetDurability();
 
 	UPalDynamicWeaponItemDataBase* dynData = pWeapon->TryGetDynamicWeaponData();
-	if (dynData)
-	{
-		float newDurability = currentDurability + 99999.0f;
-
-		dynData->Durability = newDurability;
-		
-	}
-	else
-	{
-		return;
-	}
+	if (!dynData)
+		return;	
+	
+	float newDurability = currentDurability + 99999.0f;
+	dynData->Durability = newDurability;
 
 }
 
-int originalAttackValue = 0; // Global or static
+int originalAttackValue = 0;
 bool originalValueSaved = false;
 
 void SetWeaponDamage()
@@ -196,7 +193,6 @@ void SetWeaponDamage()
 
 void ResetStamina()
 {
-	//TODO: Crashes game on multiplayer
 	if (!cheatState.infStamina)
 		return;
 
@@ -213,7 +209,6 @@ void ResetStamina()
 
 void AddItemToInventoryByName(std::string itemName, int count)
 {
-	// obtain lib instance
 	static UKismetStringLibrary* lib = UKismetStringLibrary::GetDefaultObj();
 
 	APalPlayerCharacter* pPalPlayerCharacter = GetPalPlayerCharacter();
@@ -228,6 +223,25 @@ void AddItemToInventoryByName(std::string itemName, int count)
 	FName Name = lib->Conv_StringToName(FString(std::wstring(itemName.begin(), itemName.end()).c_str()));
 	pInventoryData->RequestAddItem(Name, count, true);
 	pInventoryData->AddItem_ServerInternal(Name, count, true, 10.0f);
+
+}
+
+void RepairTest()
+{
+	APalPlayerState* state = GetPalPlayerState();
+	if (!state)
+		return;
+
+	//state->OnRelicNumAdded(55); Test In Multi
+	
+	APalPlayerCharacter* pCharacter = GetPalPlayerCharacter();
+
+	UPalCharacterMovementComponent* movement = static_cast<UPalCharacterMovementComponent*>(pCharacter->CharacterMovement);
+	if (!movement) return;
+
+	//movement->GliderGravityScale = -0.001f;
+	//movement->GliderAirControl = 5.0f;
+	//movement->GliderMaxSpeed = 1200.0f;
 
 }
 
@@ -505,37 +519,6 @@ void CollectAllRelicsInMap()
 	}
 }
 
-
-
-//TODO: Implement in the future
-/*void RenderWaypointsToScreen()
-{
-	if (!cheatState.espShowWaypoints)
-		return;
-	APalCharacter* pPalCharacater = GetPalPlayerCharacter();
-	APalPlayerController* pPalController = GetPalPlayerController();
-	if (!pPalCharacater || !pPalController)
-		return;
-
-	ImDrawList* draw = ImGui::GetWindowDrawList();
-
-	for (auto waypoint : g_Waypoints)
-	{
-		FVector2D vScreen;
-		if (!pPalController->ProjectWorldLocationToScreen(waypoint.waypointLocation, &vScreen, false))
-			continue;
-
-		auto color = ImColor(1.0f, 1.0f, 1.0f, 1.0f);
-
-		draw->AddText(
-			nullptr,                   
-			24.0f,                  
-			ImVec2(vScreen.X, vScreen.Y), 
-			ImColor(155, 255, 255),   
-			waypoint.waypointName.c_str()
-		);
-	}
-}*/
 
 
 

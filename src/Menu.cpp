@@ -157,6 +157,11 @@ namespace DX11Base
                             CollectAllRelicsInMap();
                         }
 
+                        if (ImGui::Button("Reapir Debug"))
+                        {
+                            RepairTest();
+                        }
+
                         //Weapon Features start
                         ImGui::Spacing();
                         ImGui::SeparatorText("Weapon Features");
@@ -170,7 +175,7 @@ namespace DX11Base
                         ImGui::NextColumn();
 
                         // Weapon name in color
-                        if (cheatState.weaponName == "No Weapon")
+                        if (cheatState.weaponName == "No Weapon found")
                             ImGui::TextColored(ImVec4(1.0f, 0.2f, 0.2f, 1.0f), "%s", cheatState.weaponName.c_str());
                         else
                             ImGui::TextColored(ImVec4(0.2f, 1.0f, 0.2f, 1.0f), "%s", cheatState.weaponName.c_str());
@@ -184,12 +189,14 @@ namespace DX11Base
                         // Slider
                         if (ImGui::SliderInt("Weapon Damage Multiply", &cheatState.weaponDamage, 1, 400))
                         {
+                            CheckWeapon();
                             SetWeaponDamage();
                         }
 
                         // Buttons below
                         if (ImGui::Button("Add Inf Durability Current Weapon", ImVec2(-1, 0)))
                         {
+                            CheckWeapon();
                             IncreaseAllDurability();
                         }
 
@@ -437,7 +444,6 @@ namespace DX11Base
 	{
         if (g_Engine->bShowMenu)
             MainMenu();
-
         ResetStamina();
         SetDemiGodMode();
         TickHotkeys();

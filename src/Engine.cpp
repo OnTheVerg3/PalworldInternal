@@ -457,6 +457,7 @@ namespace DX11Base
 		return true;
 	}
 
+
 	void Hooking::EnableHook(LPVOID lpTarget) { MH_EnableHook(lpTarget); }
 
 	void Hooking::DisableHook(LPVOID lpTarget) { MH_DisableHook(lpTarget); }
