@@ -31,6 +31,8 @@ void IncreaseAllDurability();
 void CheckWeapon();
 void CollectAllRelicsInMap();
 void SetWeaponDamage();
+void SetInfMag();
+void SpawnSimplePal();
 void InfHP();
 
 struct CheatState

@@ -191,6 +191,21 @@ void SetWeaponDamage()
 	stat->AttackValue = originalAttackValue * cheatState.weaponDamage;
 }
 
+void SetInfMag()
+{
+	APalPlayerCharacter* player = GetPalPlayerCharacter();
+	if (!player) return;
+
+	UPalShooterComponent* pShootComponent = player->ShooterComponent;
+	if (!pShootComponent) return;
+
+	APalWeaponBase* pWeapon = pShootComponent->HasWeapon;
+	if (!pWeapon) return;
+
+	pWeapon->IsInfinityMagazine = true;
+
+}
+
 void ResetStamina()
 {
 	if (!cheatState.infStamina)
@@ -493,7 +508,7 @@ void CollectAllRelicsInMap()
 
 
 //Work in Progress
-/*void SpawnSimplePal()
+void SpawnSimplePal()
 {
 	// Step 1: References
 	APalPlayerCharacter* playerChar = GetPalPlayerCharacter();
@@ -545,8 +560,6 @@ void CollectAllRelicsInMap()
 	}
 
 	// Step 5: Spawn networked Pal
-	controller->Transmitter->NetworkIndividualComponent->CreateIndividualID_ServerInternal(initParams, guid, playerId.A); 
-	controller->Transmitter->NetworkIndividualComponent->CreateFixedIndividualID_ServerInternal(instanceId, initParams, guid, playerId.A);
 	controller->Transmitter->NetworkIndividualComponent->SpawnIndividualActor_ServerInternal(instanceId, spawnParams, guid);
-}*/
+}
 

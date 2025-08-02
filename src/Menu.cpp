@@ -10,6 +10,7 @@
 #include "ui/cheat/aimbot.h"
 #include "include/hotkeys.h"
 #include "ConfigManager.h"
+#include "Tabs.h"
 
 namespace DX11Base
 {
@@ -69,7 +70,6 @@ namespace DX11Base
             {
                 if (ImGui::BeginTabBar("##tabs"))
                 {
-                    //ESP Tab
                     if (ImGui::BeginTabItem("Aimbot & ESP"))
                     {
                         ImGui::Spacing();
@@ -414,6 +414,16 @@ namespace DX11Base
                             LoadConfig("config.txt");
                         }
                         ImGui::EndTabItem();
+
+                        if (ImGui::Button("Mag"))
+                        {
+                            SetInfMag();
+                        }
+
+                        if (ImGui::Button("SpawnSimplePa"))
+                        {
+                            SpawnSimplePal();
+                        }
                     }
 
                     
@@ -421,13 +431,13 @@ namespace DX11Base
                 }
             }
 
-            /*
+            
             if (ImGui::Button("UNHOOK", ImVec2(ImGui::GetContentRegionAvail().x, 20))) {
 #if CONSOLE_OUTPUT
                 g_Console->printdbg("\n\n[+] UNHOOK INITIALIZED\n\n", Console::Colors::red);
 #endif
                 g_KillSwitch = TRUE;
-            }*/
+            }
             
             ImGui::End();
         }
