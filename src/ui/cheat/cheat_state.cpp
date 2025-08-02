@@ -226,26 +226,6 @@ void AddItemToInventoryByName(std::string itemName, int count)
 
 }
 
-void RepairTest()
-{
-	APalPlayerState* state = GetPalPlayerState();
-	if (!state)
-		return;
-
-	//state->OnRelicNumAdded(55); Test In Multi
-	
-	APalPlayerCharacter* pCharacter = GetPalPlayerCharacter();
-
-	UPalCharacterMovementComponent* movement = static_cast<UPalCharacterMovementComponent*>(pCharacter->CharacterMovement);
-	if (!movement) return;
-
-	//movement->GliderGravityScale = -0.001f;
-	//movement->GliderAirControl = 5.0f;
-	//movement->GliderMaxSpeed = 1200.0f;
-
-
-}
-
 void TeleportPlayerTo(const FVector& pos)
 {
 	APalPlayerState* pPalPlayerState = GetPalPlayerState();
@@ -447,14 +427,12 @@ void CollectAllRelicsInMap()
 	APalPlayerController* controller = GetPalPlayerController();
 	if (!controller || !controller->Transmitter || !controller->Transmitter->Player)
 	{
-		g_Console->cLog("Transmitter or Player component not found!\n", Console::EColor_blue);
 		return;
 	}
 
 	APalPlayerCharacter* player = GetPalPlayerCharacter();
 	if (!player || !player->InteractComponent)
 	{
-		g_Console->cLog("Player's InteractComponent is missing!\n", Console::EColor_blue);
 		return;
 	}
 
@@ -480,13 +458,11 @@ void CollectAllRelicsInMap()
 				APalLevelObjectObtainable* relic = reinterpret_cast<APalLevelObjectObtainable*>(actor);
 				if (!relic) continue;
 
-				// Skip relics that are already picked up
 				if (relic->bPickedInClient)
 				{
 					continue;
 				}
 
-				// Check the distance to the player
 				float dist = relic->K2_GetActorLocation().GetDistanceTo(playerLoc);
 				if (dist < nearestDistance)
 				{
@@ -499,7 +475,6 @@ void CollectAllRelicsInMap()
 
 	if (!nearestRelic)
 	{
-		g_Console->cLog("No relics found!\n", Console::EColor_blue);
 		return;
 	}
 
@@ -507,16 +482,10 @@ void CollectAllRelicsInMap()
 
 	if (relic && !relic->bPickedInClient)
 	{
-		g_Console->cLog("Triggering interaction with the nearest relic...\n", Console::EColor_blue);
-
 		// Request to collect the relic
 		player->InteractComponent->SetEnableInteract(true, false);
 
 		controller->Transmitter->Player->RequestObtainLevelObject_ToServer(relic);
-	}
-	else
-	{
-		g_Console->cLog("Relic already collected or invalid!\n", Console::EColor_blue);
 	}
 }
 

@@ -140,7 +140,7 @@ namespace DX11Base
                         {
                             ChangeWorldSpeed(cheatState.worldSpeed);
                         }
-                        if (ImGui::SliderInt("Attack Multiply", &cheatState.attack, 1, 1000))
+                        if (ImGui::SliderInt("Attack Multiplier", &cheatState.attack, 1, 1000))
                         {
                             SetPlayerAttackParam();
                         }
@@ -152,14 +152,9 @@ namespace DX11Base
 
                         ImGui::Spacing();
 
-                        if (ImGui::Button("Collect All Relics (TODO)"))
+                        if (ImGui::Button("Collect Relic/Lifemunk"))
                         {
                             CollectAllRelicsInMap();
-                        }
-
-                        if (ImGui::Button("Reapir Debug"))
-                        {
-                            RepairTest();
                         }
 
                         //Weapon Features start
@@ -187,7 +182,7 @@ namespace DX11Base
                         ImGui::TextDisabled("Increases damage against resources (trees, stones, etc.)");
 
                         // Slider
-                        if (ImGui::SliderInt("Weapon Damage Multiply", &cheatState.weaponDamage, 1, 400))
+                        if (ImGui::SliderInt("Weapon Damage Multiplier", &cheatState.weaponDamage, 1, 400))
                         {
                             CheckWeapon();
                             SetWeaponDamage();
@@ -426,12 +421,13 @@ namespace DX11Base
                 }
             }
 
+            /*
             if (ImGui::Button("UNHOOK", ImVec2(ImGui::GetContentRegionAvail().x, 20))) {
 #if CONSOLE_OUTPUT
                 g_Console->printdbg("\n\n[+] UNHOOK INITIALIZED\n\n", Console::Colors::red);
 #endif
                 g_KillSwitch = TRUE;
-            }
+            }*/
             
             ImGui::End();
         }
