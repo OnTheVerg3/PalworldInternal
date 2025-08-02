@@ -1,6 +1,8 @@
 #include <pch.h>  // Always include pch first
 #include "Engine_classes.hpp"
 #include "Pal_classes.hpp"
+#include <random>
+#include <ctime>
 
 using namespace SDK;
 
@@ -175,5 +177,4 @@ namespace Helper
             (a.Y - b.Y) * (a.Y - b.Y)
         );
     }
-
 }

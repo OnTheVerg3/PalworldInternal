@@ -14,7 +14,6 @@ using namespace SDK;
 using namespace Helper;
 using namespace DX11Base;
 
-
 float GetDistanceToActor(AActor* pLocal, AActor* pTarget)
 {
 	if (!pLocal || !pTarget)
@@ -25,17 +24,6 @@ float GetDistanceToActor(AActor* pLocal, AActor* pTarget)
 	double distance = sqrt(pow(pTargetLocation.X - pLocation.X, 2.0) + pow(pTargetLocation.Y - pLocation.Y, 2.0) + pow(pTargetLocation.Z - pLocation.Z, 2.0));
 
 	return distance / 100.0f;
-}
-
-void ChangeSpeed(float speed)
-{
-    APalPlayerCharacter* pCharacter = GetPalPlayerCharacter();
-
-    auto movement = pCharacter->CharacterMovement;
-	if (!movement) return;
-
-    movement->MaxWalkSpeed = speed;
-    movement->MaxAcceleration = 1000 * speed;
 }
 
 void ChangeWorldSpeed(float speed)
@@ -70,21 +58,6 @@ void SetPlayerAttackParam()
 	pParams->AttackUp = value;
 }
 
-
-void SetPlayerDefenceParam()
-{
-	APalPlayerCharacter* pPalPlayerCharacter = GetPalPlayerCharacter();
-	if (!pPalPlayerCharacter)
-		return;
-
-	UPalCharacterParameterComponent* pParams = pPalPlayerCharacter->CharacterParameterComponent;
-	if (!pParams)
-		return;
-
-	int value = cheatState.defence * 50;
-
-	pParams->DefenseUp = cheatState.defence;
-}
 
 void SetPlayerInventoryWeight()
 {
@@ -127,17 +100,11 @@ void SetInfiniteAmmo()
 
 	APalWeaponBase* pWeapon = pShootComponent->HasWeapon;
 
-	if (pWeapon)
+	if (!pWeapon)
 	{
-		auto name = pWeapon->GetName();
-		cheatState.weaponName = name;
-	}
-	else
-	{
-		cheatState.weaponName = "No Weapon found";
 		return;
 	}
-	//Dosnt work on all weapons
+
 	pWeapon->IsRequiredBullet = cheatState.infAmmo ? false : true;
 
 }
@@ -191,7 +158,7 @@ void SetWeaponDamage()
 	stat->AttackValue = originalAttackValue * cheatState.weaponDamage;
 }
 
-void SetInfMag()
+void SetInfiniteMagazine()
 {
 	APalPlayerCharacter* player = GetPalPlayerCharacter();
 	if (!player) return;
@@ -202,7 +169,7 @@ void SetInfMag()
 	APalWeaponBase* pWeapon = pShootComponent->HasWeapon;
 	if (!pWeapon) return;
 
-	pWeapon->IsInfinityMagazine = true;
+	pWeapon->IsInfinityMagazine = cheatState.infMag;
 
 }
 
@@ -222,6 +189,30 @@ void ResetStamina()
 	pParams->ResetSP();
 }
 
+FGuid GenerateGuidRandomly()
+{
+	// Seed the RNG once
+	static bool seeded = false;
+	if (!seeded)
+	{
+		std::srand(static_cast<unsigned int>(std::time(nullptr)));
+		seeded = true;
+	}
+
+	FGuid guid;
+
+	auto gen = []() -> uint32_t {
+		return static_cast<uint32_t>((std::rand() << 16) ^ std::rand());
+		};
+
+	guid.A = gen();
+	guid.B = gen();
+	guid.C = gen();
+	guid.D = gen();
+
+	return guid;
+}
+
 void AddItemToInventoryByName(std::string itemName, int count)
 {
 	static UKismetStringLibrary* lib = UKismetStringLibrary::GetDefaultObj();
@@ -236,8 +227,46 @@ void AddItemToInventoryByName(std::string itemName, int count)
 		return;
 
 	FName Name = lib->Conv_StringToName(FString(std::wstring(itemName.begin(), itemName.end()).c_str()));
+
+
+	UPalItemContainer* container = nullptr;
+
+	if (!pInventoryData->TryGetContainerFromStaticItemID(Name, &container) || !container)
+	{
+		printf("[DEBUG] Could not resolve container for item!\n");
+		return;
+	}
+
+	UPalItemSlot* slot = nullptr;
+	if (!pInventoryData->TryGetEmptySlot(
+		pInventoryData->GetInventoryTypeFromStaticItemID(Name),
+		&slot) || !slot)
+	{
+		printf("[DEBUG] No empty slot found!\n");
+		return;
+	}
+
 	pInventoryData->RequestAddItem(Name, count, true);
-	pInventoryData->AddItem_ServerInternal(Name, count, true, 10.0f);
+	pInventoryData->AddItem_ServerInternal(Name, count, true, 0.0f);
+
+	slot->ItemId.StaticId = Name;
+	slot->StackCount = count;
+	slot->OnRep_ItemId();
+	slot->OnRep_StackCount();
+	slot->OnRep_DynamicItemData();
+	container->OnRep_ItemSlotArray();
+	container->ForceMarkSlotDirty_ServerInternal();
+
+
+	FGuid RequestID = GenerateGuidRandomly();
+	FPalItemSlotId SlotId = slot->GetSlotId();
+	TArray<FPalItemSlotIdAndNum> Froms;
+	Froms.Add({ SlotId, count });
+
+	// Move from SlotId to itself
+	APalPlayerController* pPalPlayerController = GetPalPlayerController();
+	pPalPlayerController->Transmitter->Item->RequestMove_ToServer(RequestID, SlotId, Froms);
+	pInventoryData->RequestForceMarkAllDirty_ToServer(true);
 
 }
 
@@ -261,30 +290,6 @@ void TeleportPlayerTo(const FVector& pos)
 	pPalPlayerController->Transmitter->Player->RegisterRespawnPoint_ToServer(guid, safeLocation, defaultRotation);
 
 	pPalPlayerState->RequestRespawn();
-}
-
-void SetDemiGodMode()
-{
-	APalPlayerCharacter* pPalPlayerCharacter = GetPalPlayerCharacter();
-	if (!pPalPlayerCharacter)
-		return;
-
-	UPalCharacterParameterComponent* pParams = pPalPlayerCharacter->CharacterParameterComponent;
-	if (!pParams)
-		return;
-
-	UPalIndividualCharacterParameter* mIVs = pParams->IndividualParameter;
-	if (!mIVs)
-		return;
-
-	auto sParams = mIVs->SaveParameter;
-
-	sParams.Hp.Value = sParams.MaxHP.Value;
-	sParams.MP.Value = sParams.MaxMP.Value;
-	sParams.FullStomach = sParams.MaxFullStomach;
-	sParams.PhysicalHealth = EPalStatusPhysicalHealthType::Healthful;
-	sParams.SanityValue = 100.f;
-	sParams.HungerType = EPalStatusHungerType::Default;
 }
 
 void SetCameraFov()
@@ -314,85 +319,6 @@ void SetCameraBrightness()
 	cameraComp->PostProcessSettings.AutoExposureBias = cheatState.cameraBrightness;
 }
 
-void SetCraftSpeed()
-{
-	APalPlayerCharacter* pPalCharacter = GetPalPlayerCharacter();
-	if (!pPalCharacter)
-		return;
-
-	UPalCharacterParameterComponent* pParams = pPalCharacter->CharacterParameterComponent;
-	if (!pParams)
-		return;
-
-	UPalIndividualCharacterParameter* ivParams = pParams->IndividualParameter;
-	if (!ivParams)
-		return;
-
-	FPalIndividualCharacterSaveParameter sParams = ivParams->SaveParameter;
-	TArray<FFloatContainer_FloatPair> mCraftSpeedArray = sParams.CraftSpeedRates.Values;
-
-
-	if (mCraftSpeedArray.Num() > 0)
-		mCraftSpeedArray[0].Value = cheatState.craftSpeed;
-
-}
-
-void SetPalCraftSpeed()
-{
-
-	SDK::TArray<SDK::APalCharacter*> mPals;
-	if (GetTAllPals(&mPals))
-		return;
-
-	DWORD palsCount = mPals.Num();
-	for (int i = 0; i < palsCount; i++)
-	{
-		SDK::APalCharacter* obj = mPals[i];
-		if (!obj || !obj->IsA(SDK::APalMonsterCharacter::StaticClass()) || IsABaseWorker(obj))
-			continue;
-
-		UPalCharacterParameterComponent* pParams = obj->CharacterParameterComponent;
-		if (!pParams)
-			return;
-
-		UPalIndividualCharacterParameter* ivParams = pParams->IndividualParameter;
-		if (!ivParams)
-			return;
-
-		FPalIndividualCharacterSaveParameter sParams = ivParams->SaveParameter;
-		TArray<FFloatContainer_FloatPair> mCraftSpeedArray = sParams.CraftSpeedRates.Values;
-
-		if (mCraftSpeedArray.Num() > 0)
-			mCraftSpeedArray[0].Value = cheatState.palCraftSpeed;
-	}
-}
-
-void AddTechPoints()
-{
-	APalPlayerState* mPlayerState = GetPalPlayerState();
-	if (!mPlayerState)
-		return;
-
-	UPalTechnologyData* pTechData = mPlayerState->TechnologyData;
-	if (!pTechData)
-		return;
-
-	pTechData->TechnologyPoint += cheatState.techPoints;
-}
-
-void AddAncientTechPoints()
-{
-	APalPlayerState* mPlayerState = GetPalPlayerState();
-	if (!mPlayerState)
-		return;
-
-	UPalTechnologyData* pTechData = mPlayerState->TechnologyData;
-	if (!pTechData)
-		return;
-
-	pTechData->bossTechnologyPoint += cheatState.aTechPoints;
-}
-
 void AddWaypointLocation(const std::string& wpName)
 {
 	APalCharacter* pPalCharacter = GetPalPlayerCharacter();
@@ -415,23 +341,6 @@ bool RemoveWaypointLocationByName(const std::string& wpName)
 		}
 	}
 	return false;
-}
-
-void CheckWeapon()
-{
-	APalPlayerCharacter* player = GetPalPlayerCharacter();
-	if (!player) return;
-
-	auto shooter = player->ShooterComponent;
-	if (!shooter) return;
-
-	APalWeaponBase* weapon = shooter->HasWeapon;
-	if (weapon) {
-		cheatState.weaponName = weapon->GetName();
-	}
-	else {
-		cheatState.weaponName = "No Weapon found";
-	}
 }
 
 void CollectAllRelicsInMap()

@@ -175,6 +175,7 @@
     <ClInclude Include="include\hotkeys.h" />
     <ClInclude Include="include\ItemList.hpp" />
     <ClInclude Include="include\Menu.h" />
+    <ClInclude Include="include\Tabs.h" />
     <ClInclude Include="libs\ImGui\imconfig.h" />
     <ClInclude Include="libs\ImGui\imgui.h" />
     <ClInclude Include="libs\ImGui\imgui_impl_dx11.h" />
@@ -297,6 +298,10 @@
     <ClCompile Include="src\ui\cheat\esp.cpp" />
     <ClCompile Include="src\ui\cheat\hotkeys.cpp" />
     <ClCompile Include="src\ui\imgui_style.cpp" />
+    <ClCompile Include="src\ui\tabs\TabAimbotESP.cpp" />
+    <ClCompile Include="src\ui\tabs\TabFeatures.cpp" />
+    <ClCompile Include="src\ui\tabs\TabItemSpawner.cpp" />
+    <ClCompile Include="src\ui\tabs\TabTeleporter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="libs\MinHook\minhook.def" />

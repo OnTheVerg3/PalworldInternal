@@ -27,20 +27,12 @@ void SaveConfig(const std::string& filename)
     }
 
     // Features
-    file << "speed=" << cheatState.speed << "\n";
     file << "worldSpeed=" << cheatState.worldSpeed << "\n";
     file << "infAmmo=" << cheatState.infAmmo << "\n";
     file << "infStamina=" << cheatState.infStamina << "\n";
-    file << "godmode=" << cheatState.godmode << "\n";
     file << "cameraFov=" << cheatState.cameraFov << "\n";
     file << "cameraBrightness=" << cheatState.cameraBrightness << "\n";
-    file << "craftSpeed=" << cheatState.craftSpeed << "\n";
-    file << "palCraftSpeed=" << cheatState.palCraftSpeed << "\n";
-    file << "techPoints=" << cheatState.techPoints << "\n";
-    file << "aTechPoints=" << cheatState.aTechPoints << "\n";
-    file << "weaponName=" << cheatState.weaponName << "\n";
 	file << "attack=" << cheatState.attack << "\n";
-	file << "defence=" << cheatState.defence << "\n";
 
     // Aimbot
     file << "aimbotEnabled=" << cheatState.aimbotEnabled << "\n";
@@ -73,20 +65,12 @@ void ApplyCheatState()
     SetInfiniteAmmo();
     ChangeWorldSpeed(cheatState.worldSpeed);
     SetPlayerAttackParam();
-    SetPlayerDefenceParam();
     SetCameraFov();
     SetCameraBrightness();
-    SetCraftSpeed();
-    SetPalCraftSpeed();
 
     if (!cheatState.weight == 600)
     {
         SetPlayerInventoryWeight();
-    }
-
-    if (!cheatState.speed == 600)
-    {
-        ChangeSpeed(cheatState.speed);
     }
     
 }
@@ -119,20 +103,13 @@ void LoadConfig(const std::string& filename)
         std::string key = line.substr(0, sep);
         std::string value = line.substr(sep + 1);
 
-        if (key == "speed") cheatState.speed = std::stof(value);
+        if (key == "speed");
         else if (key == "worldSpeed") cheatState.worldSpeed = std::stof(value);
         else if (key == "infAmmo") cheatState.infAmmo = std::stoi(value);
         else if (key == "infStamina") cheatState.infStamina = std::stoi(value);
-        else if (key == "godmode") cheatState.godmode = std::stoi(value);
         else if (key == "cameraFov") cheatState.cameraFov = std::stof(value);
         else if (key == "cameraBrightness") cheatState.cameraBrightness = std::stof(value);
-        else if (key == "craftSpeed") cheatState.craftSpeed = std::stof(value);
-        else if (key == "palCraftSpeed") cheatState.palCraftSpeed = std::stof(value);
-        else if (key == "techPoints") cheatState.techPoints = std::stoi(value);
-        else if (key == "aTechPoints") cheatState.aTechPoints = std::stoi(value);
-        else if (key == "weaponName") cheatState.weaponName = value;
         else if (key == "attack") cheatState.attack = std::stoi(value);
-		else if (key == "defence") cheatState.defence = std::stoi(value);
 
         // Aimbot
         else if (key == "aimbotEnabled") cheatState.aimbotEnabled = std::stoi(value);
