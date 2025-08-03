@@ -162,6 +162,7 @@ void DrawPalStatsEditor(int selectedPalIndex)
     static int level, rank;
     static int64_t exp;
     static float hp;
+    static int gender; // 0 = Male, 1 = Female
 
     // Reload when switching Pal
     if (lastPalIndex != selectedPalIndex)
@@ -170,6 +171,7 @@ void DrawPalStatsEditor(int selectedPalIndex)
         rank = saveData.Rank;
         exp = saveData.Exp;
         hp = saveData.Hp.Value;
+        gender = (saveData.Gender == SDK::EPalGenderType::Male) ? 0 : 1;
 
         lastPalIndex = selectedPalIndex;
     }
@@ -180,6 +182,10 @@ void DrawPalStatsEditor(int selectedPalIndex)
     ImGui::InputInt("Skill Rank", &rank);
     ImGui::InputScalar("Exp", ImGuiDataType_S64, &exp);
 
+    // Gender Combo
+    const char* genderOptions[] = { "Male", "Female" };
+    ImGui::Combo("Gender", &gender, genderOptions, IM_ARRAYSIZE(genderOptions));
+
     ImGui::Spacing();
 
     if (ImGui::Button("Apply Stats Changes", ImVec2(-1, 30)))
@@ -189,10 +195,16 @@ void DrawPalStatsEditor(int selectedPalIndex)
         saveData.Level = level;
         saveData.Rank = rank;
         saveData.Exp = exp;
+        saveData.Gender = (gender == 0) ? SDK::EPalGenderType::Male : SDK::EPalGenderType::Female;
+
+        // Trigger update replication
+        params->OnRep_IndividualParameter();
+        individualParams->OnRep_SaveParameter();
 
         ImGui::TextColored(ImVec4(0.3f, 1.0f, 0.3f, 1.0f), "Stats updated!");
     }
 }
+
 
 void DrawPalRanksEditor(int selectedPalIndex)
 {
