@@ -19,12 +19,13 @@ void TabPalEditor()
         return;
     }
 
+    // ------------------- TOP SECTION -------------------
+    float topHeight = 220.0f;
+
+    // Pal List (Left)
+    ImGui::BeginChild("PalList", ImVec2(220, topHeight), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
     ImGui::Text("Tamed Pals: %zu", cachedTamedPals.size());
-
-    ImGui::Columns(2, nullptr, false);
-    ImGui::SetColumnWidth(0, 200);
-
-    ImGui::BeginChild("PalList", ImVec2(0, 300), true);
+    ImGui::Separator();
     for (int i = 0; i < cachedTamedPals.size(); i++)
     {
         SDK::APalCharacter* pal = cachedTamedPals[i];
@@ -39,18 +40,47 @@ void TabPalEditor()
     }
     ImGui::EndChild();
 
-    ImGui::NextColumn();
+    ImGui::SameLine();
 
-    ImGui::BeginChild("PalEditor", ImVec2(0, 0), true);
-    if (selectedPalIndex >= 0 && selectedPalIndex < cachedTamedPals.size())
-    {
-        ImGui::Text("Selected Pal: %s", selectedPalName.c_str());
-    }
-    else
-    {
-        ImGui::Text("Select a Pal");
-    }
+    // Pal Info (Right)
+    ImGui::BeginChild("PalInfo", ImVec2(0, topHeight), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
+    DrawPalInfo(selectedPalIndex);
     ImGui::EndChild();
 
-    ImGui::Columns(1);
+    ImGui::Spacing();
+
+    // ------------------- BOTTOM SECTION -------------------
+    ImGui::BeginChild("PalEditorFull", ImVec2(0, 0), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
+
+    // Stats Box
+    float childWidth = ImGui::GetContentRegionAvail().x * 0.5f; // Half the available width
+
+    ImGui::BeginChild("StatsBox", ImVec2(childWidth - 5, 300), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
+    ImGui::TextColored(ImVec4(1, 1, 0.5f, 1), "Stats Editor");
+    ImGui::Separator();
+    DrawPalStatsEditor(selectedPalIndex);
+    ImGui::EndChild();
+    ImGui::SameLine();
+    //Ranks Box
+    ImGui::BeginChild("Ranks", ImVec2(childWidth - 5, 300), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
+    ImGui::TextColored(ImVec4(1, 1, 0.5f, 1), "Ranks Editor");
+    ImGui::Separator();
+    DrawPalRanksEditor(selectedPalIndex);
+    ImGui::EndChild();
+    ImGui::Spacing();
+
+    // Work Suitability Box
+    ImGui::BeginChild("WorkBox", ImVec2(0, 200), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
+    DrawPalWorkSuitabilitiesEditor(selectedPalIndex);
+    ImGui::EndChild();
+    ImGui::Spacing();
+
+    // Passive Skills Box
+    ImGui::BeginChild("SkillsBox", ImVec2(0, 120), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
+    DrawPalPassiveSkillsEditor(selectedPalIndex);
+    ImGui::EndChild();
+
+
+    ImGui::EndChild();
 }
+

@@ -1189,4 +1189,14 @@ namespace database
     {"Paladius/Necromus (Lv.50)", { 187235, 349924, 2563.07 }},
     };
 
+    static const std::unordered_map<std::string, std::string> PassiveSkillDatabase = {
+    { "PAL_Sanity_Down_2", "Workaholic" },
+    { "CraftSpeed_up2",    "Artisan" },
+    { "Rare",              "Lucky" },
+    { "TrainerDEF_UP_1",   "Stronghold Strategist" },
+    { "TrainerATK_UP_1",   "Vanguard" },
+    { "MoveSpeed_up_2",    "Runner" },
+    { "MoveSpeed_up_3",    "Swift" }
+    };
+
 }

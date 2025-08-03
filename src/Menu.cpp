@@ -66,7 +66,7 @@ namespace DX11Base
         {
             static int selectedMenu = 0; // 0 = AimbotESP, 1 = Features, etc.
 
-            ImGui::SetNextWindowSize(ImVec2(700, 750), ImGuiCond_FirstUseEver);
+            ImGui::SetNextWindowSize(ImVec2(950, 700), ImGuiCond_FirstUseEver);
             if (ImGui::Begin("##trainer", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoTitleBar))
             {
                 // Split into 2 columns: left (menu), right (content)
