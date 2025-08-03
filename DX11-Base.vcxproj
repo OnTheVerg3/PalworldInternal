@@ -199,6 +199,7 @@
     <ClInclude Include="include\cheat_state.h" />
     <ClInclude Include="src\ui\cheat\aimbot.h" />
     <ClInclude Include="src\ui\cheat\esp.h" />
+    <ClInclude Include="include\pal_editor.h" />
     <ClInclude Include="src\ui\fonts.h" />
     <ClInclude Include="src\ui\imgui_style.h" />
   </ItemGroup>
@@ -297,10 +298,12 @@
     <ClCompile Include="src\ui\cheat\cheat_state.cpp" />
     <ClCompile Include="src\ui\cheat\esp.cpp" />
     <ClCompile Include="src\ui\cheat\hotkeys.cpp" />
+    <ClCompile Include="src\ui\cheat\pal_editor.cpp" />
     <ClCompile Include="src\ui\imgui_style.cpp" />
     <ClCompile Include="src\ui\tabs\TabAimbotESP.cpp" />
     <ClCompile Include="src\ui\tabs\TabFeatures.cpp" />
     <ClCompile Include="src\ui\tabs\TabItemSpawner.cpp" />
+    <ClCompile Include="src\ui\tabs\TabPalEditor.cpp" />
     <ClCompile Include="src\ui\tabs\TabTeleporter.cpp" />
   </ItemGroup>
   <ItemGroup>

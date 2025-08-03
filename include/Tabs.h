@@ -5,3 +5,4 @@ void TabAimbotESP();
 void TabFeatures();
 void TabItemSpawner();
 void TabTeleporter();
+void TabPalEditor();

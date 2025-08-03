@@ -226,7 +226,6 @@ void DrawPalESP()
         // Show name
         char label[128];
         snprintf(label, sizeof(label), "%s", palName.c_str());
-
         DrawESPText(ImVec2(screenPos.X, screenPos.Y), palName.c_str(), distance);
 
     }

@@ -9,6 +9,7 @@
 #include "include/hotkeys.h"
 #include "ConfigManager.h"
 #include "Tabs.h"
+#include "pal_editor.h"
 
 namespace DX11Base
 {
@@ -63,53 +64,65 @@ namespace DX11Base
     {
         void TABMain()
         {
-            ImGui::SetNextWindowSize(ImVec2(700, 700), ImGuiCond_FirstUseEver);
+            static int selectedMenu = 0; // 0 = AimbotESP, 1 = Features, etc.
+
+            ImGui::SetNextWindowSize(ImVec2(700, 750), ImGuiCond_FirstUseEver);
             if (ImGui::Begin("##trainer", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoTitleBar))
             {
-                if (ImGui::BeginTabBar("##tabs"))
+                // Split into 2 columns: left (menu), right (content)
+                ImGui::Columns(2, nullptr, false);
+                ImGui::SetColumnWidth(0, 150); // Left menu width
+
+                // LEFT MENU
+                if (ImGui::Button("Aimbot & ESP", ImVec2(-1, 40))) selectedMenu = 0;
+                if (ImGui::Button("Features", ImVec2(-1, 40)))     selectedMenu = 1;
+
+                if (ImGui::Button("Pal Editor", ImVec2(-1, 40)))
                 {
-                    TabAimbotESP();
-                    TabFeatures();
-                    TabItemSpawner();
-                    TabTeleporter();
-
-					//Settings Tab
-                    if (ImGui::BeginTabItem("Settings"))
-                    {
-                        DrawHotkeys();
-						ImGui::Separator();
-                        if (ImGui::Button("Save Config"))
-                        {
-                            SaveConfig("config.txt"); // will create c_settings/config.txt if not exists
-                        }
-
-                        ImGui::SameLine();
-
-                        if (ImGui::Button("Load Config"))
-                        {
-                            LoadConfig("config.txt");
-                        }
-                        ImGui::EndTabItem();
-
-                        if (ImGui::Button("SpawnSimplePa"))
-                        {
-                            SpawnSimplePal();
-                        }
-                    }
-
-                    
-                    ImGui::EndTabBar();
+                    selectedMenu = 2;
+                    cachedTamedPals.clear();          // std::vector clear
+                    GetAllTamedPals(cachedTamedPals);
                 }
-            }
+                if (ImGui::Button("Item Spawner", ImVec2(-1, 40))) selectedMenu = 3;
+                if (ImGui::Button("Teleporter", ImVec2(-1, 40)))   selectedMenu = 4;
+                if (ImGui::Button("Settings", ImVec2(-1, 40)))     selectedMenu = 5;
 
-            
-            if (ImGui::Button("UNHOOK", ImVec2(ImGui::GetContentRegionAvail().x, 20))) {
+                ImGui::NextColumn();
+
+                // RIGHT CONTENT AREA
+                ImGui::BeginChild("ContentRegion", ImVec2(0, 0), true);
+
+                switch (selectedMenu)
+                {
+                case 0: TabAimbotESP(); break;
+                case 1: TabFeatures(); break;
+                case 2: TabPalEditor(); break;
+                case 3: TabItemSpawner(); break;
+                case 4: TabTeleporter(); break;
+                case 5:
+                    DrawHotkeys();
+                    ImGui::Separator();
+                    if (ImGui::Button("Save Config"))
+                        SaveConfig("config.txt");
+                    ImGui::SameLine();
+                    if (ImGui::Button("Load Config"))
+                        LoadConfig("config.txt");
+                    break;
+                }
+
+                ImGui::EndChild();
+
+                ImGui::Columns(1);
+
+                // UNHOOK button at bottom (full width)
+                if (ImGui::Button("UNHOOK", ImVec2(ImGui::GetContentRegionAvail().x, 20))) {
 #if CONSOLE_OUTPUT
-                g_Console->printdbg("\n\n[+] UNHOOK INITIALIZED\n\n", Console::Colors::red);
+                    g_Console->printdbg("\n\n[+] UNHOOK INITIALIZED\n\n", Console::Colors::red);
 #endif
-                g_KillSwitch = TRUE;
+                    g_KillSwitch = TRUE;
+                }
+
             }
-            
             ImGui::End();
         }
 	}

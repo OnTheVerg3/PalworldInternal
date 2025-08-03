@@ -24,7 +24,6 @@ void IncreaseAllDurability();
 void CollectAllRelicsInMap();
 void SetWeaponDamage();
 void SetInfiniteMagazine();
-void SpawnSimplePal();
 
 struct CheatState
 { 

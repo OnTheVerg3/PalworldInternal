@@ -129,6 +129,9 @@
     <ClInclude Include="include\Tabs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\pal_editor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -228,6 +231,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\ui\tabs\TabAimbotESP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\tabs\TabPalEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\cheat\pal_editor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
