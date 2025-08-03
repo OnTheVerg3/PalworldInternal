@@ -1190,13 +1190,61 @@ namespace database
     };
 
     static const std::unordered_map<std::string, std::string> PassiveSkillDatabase = {
-    { "PAL_Sanity_Down_2", "Workaholic" },
-    { "CraftSpeed_up2",    "Artisan" },
-    { "Rare",              "Lucky" },
-    { "TrainerDEF_UP_1",   "Stronghold Strategist" },
-    { "TrainerATK_UP_1",   "Vanguard" },
-    { "MoveSpeed_up_2",    "Runner" },
-    { "MoveSpeed_up_3",    "Swift" }
+        // Your original ones
+        { "Rare", "Lucky" },
+        { "TrainerDEF_UP_1", "Stronghold Strategist" },
+        { "TrainerATK_UP_1", "Vanguard" },
+
+        // Updated from images (prefix PalPassiveSkillChange_ removed)
+        { "PAL_ALLAttack_up1", "Brave" },
+        { "PAL_ALLAttack_up2", "Ferocious" },
+        { "PAL_ALLAttack_up3", "Demon God" },
+
+        { "Deffence_up1", "Hard Skin" },
+        { "Deffence_up2", "Burly Body" },
+        { "Deffence_up3", "Diamond Body" },
+
+        { "CraftSpeed_up1", "Serious" },
+        { "CraftSpeed_up2", "Artisan" },
+        { "CraftSpeed_up3", "Remarkable Craftsman" },
+
+        { "Noukin", "Musclehead" },
+        { "NonKilling", "Mery Hit" },
+        { "Nocturnal", "Nocturnal" },
+
+        { "CoolTimeReduction_Up_2", "Serenity" },
+        { "CoolTimeReduction_Up_1", "Impatient" },
+
+        { "Stamina_Up_1", "Infinite Stamina" },
+        { "Stamina_Up_2", "Fit as a Fiddle (who names a skill like this)" },
+        { "Stamina_Up_3", "Eternal Engine" },
+
+        { "Witch", "SirenOfTheVoid" },
+        { "Vampire", "Vampiric" },
+
+        { "ElementBoost_Normal_1_PAL", "Celestial Emperor0" },
+        { "ElementBoost_Normal_2_PAL", "Celestial Emperor1" },
+
+        { "ElementBoost_Dragon_1_PAL", "Blood of The Dragon" },
+        { "ElementBoost_Dragon_2_PAL", "Divine Dragon" },
+
+        { "Test_PalEgg_HatchingSpeed_Up", "Philanthropist" },
+
+        { "TrainerMining_up1", "MineForeman" },
+        { "TrainerLogging_up1", "LoggingForeman" },
+        { "TrainerWorkSpeed_UP_1", "Motivational Leader" },
+
+        { "MoveSpeed_up_1", "Nimble" },
+        { "MoveSpeed_up_2", "Runner" },
+        { "MoveSpeed_up_3", "Swift" },
+
+        { "PAL_FullStomach_Down_1", "Dainty Eater" },
+        { "PAL_FullStomach_Down_2", "Diet Lover" },
+        { "PAL_FullStomach_Down_3", "Mastery of Fasting" },
+
+        { "PAL_Sanity_Down_1", "Positive Thinker" },
+        { "PAL_Sanity_Down_2", "Workaholic" },
+        { "PAL_Sanity_Down_3", "Heart of the Immovable King" }
     };
 
 }

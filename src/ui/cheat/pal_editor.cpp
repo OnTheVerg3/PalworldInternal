@@ -4,6 +4,8 @@
 #include <unordered_set>
 #include <iostream>
 #include "database.h"
+#include <vector>
+#include <algorithm>
 
 using namespace Helper;
 using namespace SDK;
@@ -37,7 +39,7 @@ std::string GetCleanPalName2(const std::string& rawName)
 FName MakeFName(const char* name)
 {
     FName fname;
-    // TEMPORARY: use hash (only for testing)
+    // TEMPORARY: hash (only for testing)
     fname.ComparisonIndex = std::hash<std::string>{}(name) & 0x7FFFFFFF;
     fname.Number = 0;
     return fname;
@@ -277,39 +279,92 @@ void DrawPalWorkSuitabilitiesEditor(int selectedPalIndex)
 
     static const char* suitabilityNames[] = {
         "None", "Kindling", "Watering", "Planting", "Generate Electricity",
-        "Handiwork", "Gathering", "Cooling", "Mining", "Oil Extraction",
+        "Handcraft", "Gathering", "Cooling", "Mining", "Oil Extraction",
         "Medicine", "Cool", "Transporting", "Farming", "Anyone"
     };
 
+    auto& suitabilities = saveData.CraftSpeeds;
+    auto& extraSuitabilities = saveData.GotWorkSuitabilityAddRankList;
+
     ImGui::TextColored(ImVec4(0.8f, 0.9f, 1, 1), "Current Work Suitabilities");
 
-    auto& suitabilities = saveData.CraftSpeeds;
+    bool changed = false;
 
-    bool hasSuitability = false;
+    static std::vector<int> tempRanks(100, 0);
+
     for (int i = 0; i < suitabilities.Num(); i++)
     {
         auto& suitabilityInfo = suitabilities[i];
+        int baseRank = suitabilityInfo.Rank;
 
-        // Only display if Rank > 0
-        if (suitabilityInfo.Rank > 0)
+        // Find extra rank
+        int extraRank = 0;
+        for (int j = 0; j < extraSuitabilities.Num(); j++)
         {
-            hasSuitability = true;
-            const char* name = suitabilityNames[(int)suitabilityInfo.WorkSuitability];
+            if (extraSuitabilities[j].WorkSuitability == suitabilityInfo.WorkSuitability)
+            {
+                extraRank = extraSuitabilities[j].Rank;
+                break;
+            }
+        }
 
+        int finalRank = baseRank + extraRank;
+
+        // Only display if rank > 0
+        if (finalRank > 0)
+        {
+            const char* name = suitabilityNames[(int)suitabilityInfo.WorkSuitability];
             ImGui::Text("%s", name);
             ImGui::SameLine(200);
 
-            int rank = suitabilityInfo.Rank;
-            ImGui::InputInt(("Rank##" + std::to_string(i)).c_str(), &rank);
-            suitabilityInfo.Rank = rank; // apply change
+            if (tempRanks.size() <= i)
+                tempRanks.resize(i + 1, finalRank);
+            if (tempRanks[i] == 0)
+                tempRanks[i] = finalRank;
+
+            ImGui::InputInt(("Rank##" + std::to_string(i)).c_str(), &tempRanks[i]);
+
+            // Apply changes if value changed
+            if (tempRanks[i] != finalRank)
+            {
+                int desiredRank = tempRanks[i];
+
+                // If user sets rank <= baseRank, directly modify CraftSpeeds (base)
+                if (desiredRank <= baseRank)
+                {
+                    suitabilityInfo.Rank = desiredRank;
+                }
+                else
+                {
+                    for (int j = 0; j < extraSuitabilities.Num(); j++)
+                    {
+                        if (extraSuitabilities[j].WorkSuitability == suitabilityInfo.WorkSuitability)
+                        {
+                            // Remove old entry
+                            extraSuitabilities.Remove(j);
+                            break;
+                        }
+                    }
+
+                    // Now set the new value
+                    individualParams->SetWorkSuitabilityAddRank(
+                        suitabilityInfo.WorkSuitability, desiredRank - baseRank
+                    );
+                }
+
+                changed = true;
+            }
         }
     }
 
-    if (!hasSuitability)
+    if (changed)
     {
-        ImGui::Text("This Pal has no active work suitabilities!");
+        // Trigger replication/update
+        params->OnRep_IndividualParameter();
+        individualParams->OnRep_SaveParameter();
     }
 }
+
 
 void DumpAllPassiveSkills();
 
@@ -339,7 +394,7 @@ void DrawPalPassiveSkillsEditor(int selectedPalIndex)
     auto& saveData = individualParams->SaveParameter;
     auto& passiveSkills = saveData.PassiveSkillList;
 
-    // Show current passive skills
+    // --- Show current passive skills ---
     ImGui::TextColored(ImVec4(1, 1, 0.5f, 1), "Passive Skills:");
     for (int i = 0; i < passiveSkills.Num(); i++)
     {
@@ -350,34 +405,66 @@ void DrawPalPassiveSkillsEditor(int selectedPalIndex)
         if (ImGui::Button(("Remove##" + std::to_string(i)).c_str()))
         {
             passiveSkills.Remove(i);
-            break;
+            break; // break to avoid iterator issues
         }
     }
 
-    // Combo box for adding new passive skills from the database
-    static int selectedIndex = 0;
+    ImGui::Separator();
+
+    // --- Search bar ---
+    static char searchBuffer[64] = "";
+    ImGui::InputText("Search", searchBuffer, IM_ARRAYSIZE(searchBuffer));
+    std::string searchText = searchBuffer;
+    std::transform(searchText.begin(), searchText.end(), searchText.begin(), ::tolower);
+
+    // --- Select skill ---
+    static std::string selectedKey;
     const auto& skillDB = database::PassiveSkillDatabase;
 
-    if (ImGui::BeginCombo("New Passive Skill", skillDB[selectedIndex].displayName.c_str()))
+    ImGui::BeginChild("SkillList", ImVec2(0, 150), true);
+    for (auto& kv : skillDB)
     {
-        for (int i = 0; i < skillDB.size(); i++)
-        {
-            bool isSelected = (selectedIndex == i);
-            if (ImGui::Selectable(skillDB[i].displayName.c_str(), isSelected))
-            {
-                selectedIndex = i;
-            }
-            if (isSelected)
-                ImGui::SetItemDefaultFocus();
-        }
-        ImGui::EndCombo();
-    }
+        std::string display = kv.second;
+        std::string lowerDisplay = display;
+        std::transform(lowerDisplay.begin(), lowerDisplay.end(), lowerDisplay.begin(), ::tolower);
 
+        // Filter
+        if (!searchText.empty() && lowerDisplay.find(searchText) == std::string::npos)
+            continue;
+
+        bool isSelected = (selectedKey == kv.first);
+        if (ImGui::Selectable(display.c_str(), isSelected))
+        {
+            selectedKey = kv.first;
+        }
+    }
+    ImGui::EndChild();
+
+    // --- Add button ---
     if (ImGui::Button("Add Passive Skill"))
     {
-        if (selectedIndex >= 0 && selectedIndex < skillDB.size())
+        if (!selectedKey.empty())
         {
-            passiveSkills.Add(skillDB[selectedIndex].fName);
+            // Check if already exists
+            bool exists = false;
+            for (int i = 0; i < passiveSkills.Num(); i++)
+            {
+                if (passiveSkills[i].ToString() == selectedKey)
+                {
+                    exists = true;
+                    break;
+                }
+            }
+
+            if (!exists)
+            {
+                static UKismetStringLibrary* lib = UKismetStringLibrary::GetDefaultObj();
+                SDK::FName fname = lib->Conv_StringToName(
+                    SDK::FString(std::wstring(selectedKey.begin(), selectedKey.end()).c_str())
+                );
+
+                passiveSkills.Add(fname);
+            }
         }
     }
 }

@@ -11,3 +11,4 @@ void DrawPalStatsEditor(int selectedPalIndex);
 void DrawPalRanksEditor(int selectedPalIndex);
 void DrawPalWorkSuitabilitiesEditor(int selectedPalIndex);
 void DrawPalPassiveSkillsEditor(int selectedPalIndex);
+void DumpAllPassiveSkills();
