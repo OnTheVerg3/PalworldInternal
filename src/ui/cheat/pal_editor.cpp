@@ -11,6 +11,7 @@ using namespace Helper;
 using namespace SDK;
 
 std::vector<APalCharacter*> cachedTamedPals;
+std::vector<APalCharacter*> cachedBaseWorkers;
 
 std::string GetCleanPalName2(const std::string& rawName)
 {
@@ -75,16 +76,63 @@ bool GetAllTamedPals(std::vector<APalCharacter*>& outResult)
     return !outResult.empty();
 }
 
+bool GetAllBaseWorkers(std::vector<SDK::APalCharacter*>& outResult)
+{
+    outResult.clear();
+
+    TArray<SDK::APalCharacter*> allPals;
+    if (!GetTAllPals(&allPals))
+        return false;
+
+    for (int i = 0; i < allPals.Num(); ++i)
+    {
+        if (!allPals.IsValidIndex(i)) continue;
+
+        SDK::APalCharacter* pal = allPals[i];
+        if (!pal) continue;
+
+        bool baseWorker = IsABaseWorker(pal, true);
+        bool isAlive = IsAlive(pal);
+
+        if (baseWorker && isAlive)
+        {
+            outResult.push_back(pal);
+        }
+    }
+
+    return !outResult.empty();
+}
+
 
 void DrawPalInfo(int selectedPalIndex)
 {
-    if (selectedPalIndex < 0 || selectedPalIndex >= cachedTamedPals.size())
+    SDK::APalCharacter* pal = nullptr;
+
+    if (selectedPalIndex < 0)
     {
         ImGui::Text("Select a Pal from the list");
         return;
     }
+    else if (selectedPalIndex >= 10000) // Base Worker list
+    {
+        int index = selectedPalIndex - 10000;
+        if (index >= cachedBaseWorkers.size())
+        {
+            ImGui::Text("Invalid Base Worker index");
+            return;
+        }
+        pal = cachedBaseWorkers[index];
+    }
+    else // Tamed Pal list
+    {
+        if (selectedPalIndex >= cachedTamedPals.size())
+        {
+            ImGui::Text("Invalid Tamed Pal index");
+            return;
+        }
+        pal = cachedTamedPals[selectedPalIndex];
+    }
 
-    APalCharacter* pal = cachedTamedPals[selectedPalIndex];
     if (!pal || !pal->CharacterParameterComponent)
     {
         ImGui::Text("Invalid Pal or missing parameters");
@@ -130,13 +178,33 @@ void DrawPalInfo(int selectedPalIndex)
 
 void DrawPalStatsEditor(int selectedPalIndex)
 {
-    if (selectedPalIndex < 0 || selectedPalIndex >= cachedTamedPals.size())
+    SDK::APalCharacter* pal = nullptr;
+
+    if (selectedPalIndex < 0)
     {
-        ImGui::Text("Select a Pal to edit stats");
+        ImGui::Text("Select a Pal from the list");
         return;
     }
+    else if (selectedPalIndex >= 10000) // Base Worker list
+    {
+        int index = selectedPalIndex - 10000;
+        if (index >= cachedBaseWorkers.size())
+        {
+            ImGui::Text("Invalid Base Worker index");
+            return;
+        }
+        pal = cachedBaseWorkers[index];
+    }
+    else // Tamed Pal list
+    {
+        if (selectedPalIndex >= cachedTamedPals.size())
+        {
+            ImGui::Text("Invalid Tamed Pal index");
+            return;
+        }
+        pal = cachedTamedPals[selectedPalIndex];
+    }
 
-    APalCharacter* pal = cachedTamedPals[selectedPalIndex];
     if (!pal || !pal->CharacterParameterComponent)
     {
         ImGui::Text("Invalid Pal or missing parameters");
@@ -198,16 +266,35 @@ void DrawPalStatsEditor(int selectedPalIndex)
     }
 }
 
-
 void DrawPalRanksEditor(int selectedPalIndex)
 {
-    if (selectedPalIndex < 0 || selectedPalIndex >= cachedTamedPals.size())
+    SDK::APalCharacter* pal = nullptr;
+
+    if (selectedPalIndex < 0)
     {
-        ImGui::Text("Select a Pal to edit ranks");
+        ImGui::Text("Select a Pal from the list");
         return;
     }
+    else if (selectedPalIndex >= 10000) // Base Worker list
+    {
+        int index = selectedPalIndex - 10000;
+        if (index >= cachedBaseWorkers.size())
+        {
+            ImGui::Text("Invalid Base Worker index");
+            return;
+        }
+        pal = cachedBaseWorkers[index];
+    }
+    else // Tamed Pal list
+    {
+        if (selectedPalIndex >= cachedTamedPals.size())
+        {
+            ImGui::Text("Invalid Tamed Pal index");
+            return;
+        }
+        pal = cachedTamedPals[selectedPalIndex];
+    }
 
-    APalCharacter* pal = cachedTamedPals[selectedPalIndex];
     if (!pal || !pal->CharacterParameterComponent)
     {
         ImGui::Text("Invalid Pal or missing parameters");
@@ -257,13 +344,33 @@ void DrawPalRanksEditor(int selectedPalIndex)
 
 void DrawPalWorkSuitabilitiesEditor(int selectedPalIndex)
 {
-    if (selectedPalIndex < 0 || selectedPalIndex >= cachedTamedPals.size())
+    SDK::APalCharacter* pal = nullptr;
+
+    if (selectedPalIndex < 0)
     {
-        ImGui::Text("Select a Pal to edit work suitabilities");
+        ImGui::Text("Select a Pal from the list");
         return;
     }
+    else if (selectedPalIndex >= 10000) // Base Worker list
+    {
+        int index = selectedPalIndex - 10000;
+        if (index >= cachedBaseWorkers.size())
+        {
+            ImGui::Text("Invalid Base Worker index");
+            return;
+        }
+        pal = cachedBaseWorkers[index];
+    }
+    else // Tamed Pal list
+    {
+        if (selectedPalIndex >= cachedTamedPals.size())
+        {
+            ImGui::Text("Invalid Tamed Pal index");
+            return;
+        }
+        pal = cachedTamedPals[selectedPalIndex];
+    }
 
-    SDK::APalCharacter* pal = cachedTamedPals[selectedPalIndex];
     if (!pal || !pal->CharacterParameterComponent)
     {
         ImGui::Text("Invalid Pal or missing parameters");
@@ -372,13 +479,33 @@ void DumpAllPassiveSkills();
 
 void DrawPalPassiveSkillsEditor(int selectedPalIndex)
 {
-    if (selectedPalIndex < 0 || selectedPalIndex >= cachedTamedPals.size())
+    SDK::APalCharacter* pal = nullptr;
+
+    if (selectedPalIndex < 0)
     {
-        ImGui::Text("Select a Pal to edit passive skills");
+        ImGui::Text("Select a Pal from the list");
         return;
     }
+    else if (selectedPalIndex >= 10000) // Base Worker list
+    {
+        int index = selectedPalIndex - 10000;
+        if (index >= cachedBaseWorkers.size())
+        {
+            ImGui::Text("Invalid Base Worker index");
+            return;
+        }
+        pal = cachedBaseWorkers[index];
+    }
+    else // Tamed Pal list
+    {
+        if (selectedPalIndex >= cachedTamedPals.size())
+        {
+            ImGui::Text("Invalid Tamed Pal index");
+            return;
+        }
+        pal = cachedTamedPals[selectedPalIndex];
+    }
 
-    SDK::APalCharacter* pal = cachedTamedPals[selectedPalIndex];
     if (!pal || !pal->CharacterParameterComponent)
     {
         ImGui::Text("Invalid Pal or missing parameters");

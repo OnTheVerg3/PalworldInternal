@@ -80,8 +80,10 @@ namespace DX11Base
                 if (ImGui::Button("Pal Editor", ImVec2(-1, 40)))
                 {
                     selectedMenu = 2;
-                    cachedTamedPals.clear();          // std::vector clear
+                    cachedTamedPals.clear();     
+                    cachedBaseWorkers.clear();
                     GetAllTamedPals(cachedTamedPals);
+                    GetAllBaseWorkers(cachedBaseWorkers);
                 }
                 if (ImGui::Button("Item Spawner", ImVec2(-1, 40))) selectedMenu = 3;
                 if (ImGui::Button("Teleporter", ImVec2(-1, 40)))   selectedMenu = 4;

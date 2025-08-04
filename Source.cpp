@@ -54,6 +54,7 @@ DWORD WINAPI MainThread_Initialize(LPVOID dwModule)
             if (wasMenuOpen && !g_Engine->bShowMenu)
             {
                 cachedTamedPals.clear();
+                cachedBaseWorkers.clear();
             }
 
             wasMenuOpen = g_Engine->bShowMenu;
