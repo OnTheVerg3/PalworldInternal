@@ -26,15 +26,24 @@ void TabPalEditor()
     for (int i = 0; i < cachedTamedPals.size(); i++)
     {
         SDK::APalCharacter* pal = cachedTamedPals[i];
-        if (!pal) continue;
+        if (!pal || !pal->CharacterParameterComponent) continue;
+
+        auto* params = pal->CharacterParameterComponent;
+        auto* individualParams = params->GetIndividualParameter();
+        if (!individualParams) continue;
+
+        int level = individualParams->SaveParameter.Level;
 
         std::string name = GetCleanPalName2(pal->GetName());
-        if (ImGui::Selectable(name.c_str(), selectedPalIndex == i))
+        std::string label = name + " [Lv. " + std::to_string(level) + "]##" + std::to_string(i);
+
+        if (ImGui::Selectable(label.c_str(), selectedPalIndex == i))
         {
             selectedPalIndex = i;
             selectedPalName = name;
         }
     }
+
     ImGui::EndChild();
 
     ImGui::SameLine();

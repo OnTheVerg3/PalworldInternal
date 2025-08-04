@@ -10,7 +10,7 @@
 using namespace Helper;
 using namespace SDK;
 
-std::vector<SDK::APalCharacter*> cachedTamedPals;
+std::vector<APalCharacter*> cachedTamedPals;
 
 std::string GetCleanPalName2(const std::string& rawName)
 {
@@ -45,11 +45,11 @@ FName MakeFName(const char* name)
     return fname;
 }
 
-bool GetAllTamedPals(std::vector<SDK::APalCharacter*>& outResult)
+bool GetAllTamedPals(std::vector<APalCharacter*>& outResult)
 {
     outResult.clear();
 
-    SDK::TArray<SDK::APalCharacter*> allPals;
+    TArray<APalCharacter*> allPals;
     if (!GetTAllPals(&allPals))
         return false;
 
@@ -93,7 +93,6 @@ void DrawPalInfo(int selectedPalIndex)
 
     auto* params = pal->CharacterParameterComponent;
 
-    // Access UPalIndividualCharacterParameter
     UPalIndividualCharacterParameter* individualParams = params->GetIndividualParameter();
     if (!individualParams)
     {
@@ -101,7 +100,6 @@ void DrawPalInfo(int selectedPalIndex)
         return;
     }
 
-    // Grab Save Data
     FPalIndividualCharacterSaveParameter saveData = individualParams->SaveParameter;
 
     std::string charID = saveData.CharacterID.ToString();
@@ -111,7 +109,6 @@ void DrawPalInfo(int selectedPalIndex)
     int rankExp = saveData.RankUpExp;
     std::string gender = (saveData.Gender == EPalGenderType::Male) ? "Male" : "Female";
 
-    // UI Rendering
     ImGui::TextColored(ImVec4(1, 1, 0.5f, 1), "Selected Pal: %s", charID.c_str());
     ImGui::Separator();
     ImGui::Spacing();
@@ -124,7 +121,6 @@ void DrawPalInfo(int selectedPalIndex)
 
     ImGui::Spacing();
 
-    // HP bar
     float currentHP = params->GetHP().Value;
     float maxHP = params->GetMaxHP().Value;
 
@@ -140,7 +136,7 @@ void DrawPalStatsEditor(int selectedPalIndex)
         return;
     }
 
-    SDK::APalCharacter* pal = cachedTamedPals[selectedPalIndex];
+    APalCharacter* pal = cachedTamedPals[selectedPalIndex];
     if (!pal || !pal->CharacterParameterComponent)
     {
         ImGui::Text("Invalid Pal or missing parameters");
@@ -155,23 +151,21 @@ void DrawPalStatsEditor(int selectedPalIndex)
         return;
     }
 
-    SDK::FPalIndividualCharacterSaveParameter& saveData = individualParams->SaveParameter;
+    FPalIndividualCharacterSaveParameter& saveData = individualParams->SaveParameter;
 
-    // Editable values (persistent)
     static int lastPalIndex = -1;
     static int level, rank;
     static int64_t exp;
     static float hp;
     static int gender; // 0 = Male, 1 = Female
 
-    // Reload when switching Pal
     if (lastPalIndex != selectedPalIndex)
     {
         level = saveData.Level;
         rank = saveData.Rank;
         exp = saveData.Exp;
         hp = saveData.Hp.Value;
-        gender = (saveData.Gender == SDK::EPalGenderType::Male) ? 0 : 1;
+        gender = (saveData.Gender == EPalGenderType::Male) ? 0 : 1;
 
         lastPalIndex = selectedPalIndex;
     }
@@ -190,12 +184,11 @@ void DrawPalStatsEditor(int selectedPalIndex)
 
     if (ImGui::Button("Apply Stats Changes", ImVec2(-1, 30)))
     {
-        // Save changes only when Apply is pressed
-        saveData.Hp = SDK::FFixedPoint64(hp);
+        saveData.Hp = FFixedPoint64(hp);
         saveData.Level = level;
         saveData.Rank = rank;
         saveData.Exp = exp;
-        saveData.Gender = (gender == 0) ? SDK::EPalGenderType::Male : SDK::EPalGenderType::Female;
+        saveData.Gender = (gender == 0) ? EPalGenderType::Male : EPalGenderType::Female;
 
         // Trigger update replication
         params->OnRep_IndividualParameter();
@@ -214,7 +207,7 @@ void DrawPalRanksEditor(int selectedPalIndex)
         return;
     }
 
-    SDK::APalCharacter* pal = cachedTamedPals[selectedPalIndex];
+    APalCharacter* pal = cachedTamedPals[selectedPalIndex];
     if (!pal || !pal->CharacterParameterComponent)
     {
         ImGui::Text("Invalid Pal or missing parameters");
@@ -229,13 +222,11 @@ void DrawPalRanksEditor(int selectedPalIndex)
         return;
     }
 
-    // Editable Rank stats
-    SDK::FPalIndividualCharacterSaveParameter& saveData = individualParams->SaveParameter;
+    FPalIndividualCharacterSaveParameter& saveData = individualParams->SaveParameter;
 
     static int rankHp, rankAtk, rankDef, rankCraft;
     static int lastPalIndex = -1;
 
-    // Load when Pal changes
     if (lastPalIndex != selectedPalIndex)
     {
         rankHp = saveData.Rank_HP;
@@ -245,7 +236,6 @@ void DrawPalRanksEditor(int selectedPalIndex)
         lastPalIndex = selectedPalIndex;
     }
 
-    // UI
     ImGui::InputInt("Rank HP", &rankHp);
     ImGui::InputInt("Rank Attack", &rankAtk);
     ImGui::InputInt("Rank Defence", &rankDef);
@@ -260,6 +250,7 @@ void DrawPalRanksEditor(int selectedPalIndex)
         saveData.Rank_Defence = rankDef;
         saveData.Rank_CraftSpeed = rankCraft;
 
+		params->OnRep_IndividualParameter();
         ImGui::TextColored(ImVec4(0.3f, 1.0f, 0.3f, 1.0f), "Rank stats updated!");
     }
 }
@@ -287,7 +278,7 @@ void DrawPalWorkSuitabilitiesEditor(int selectedPalIndex)
         return;
     }
 
-    SDK::FPalIndividualCharacterSaveParameter& saveData = individualParams->SaveParameter;
+    FPalIndividualCharacterSaveParameter& saveData = individualParams->SaveParameter;
 
     static const char* suitabilityNames[] = {
         "None", "Kindling", "Watering", "Planting", "Generate Electricity",
@@ -371,7 +362,6 @@ void DrawPalWorkSuitabilitiesEditor(int selectedPalIndex)
 
     if (changed)
     {
-        // Trigger replication/update
         params->OnRep_IndividualParameter();
         individualParams->OnRep_SaveParameter();
     }

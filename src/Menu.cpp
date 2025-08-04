@@ -181,15 +181,8 @@ namespace DX11Base
         if (!g_Engine->bShowDemoWindow && !g_Engine->bShowStyleEditor)
             Styles::BaseStyle();
 
-        if (!ImGui::Begin("2", &g_Engine->bShowMenu, 96))
-        {
-            ImGui::End();
-            return;
-        }
-        
         Tabs::TABMain();
 
-        ImGui::End();
 	}
 
 	void Menu::HUD()

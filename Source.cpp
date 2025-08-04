@@ -2,6 +2,8 @@
 #include <pch.h>
 #include <Engine.h>
 #include <Menu.h>
+#include "pal_editor.h"
+
 using namespace DX11Base;
 
 void ClientBGThread()
@@ -40,6 +42,7 @@ DWORD WINAPI MainThread_Initialize(LPVOID dwModule)
     //  RENDER LOOP
     g_Running = true;
     static int LastTick = 0;
+    bool wasMenuOpen = g_Engine->bShowMenu;
     while (g_Running)
     {
         if ((Engine::GamePadGetKeyState(XINPUT_GAMEPAD_RIGHT_THUMB | XINPUT_GAMEPAD_LEFT_THUMB) || Engine::GetKeyState(VK_INSERT, 0)) && ((GetTickCount64() - LastTick) > 500))
@@ -47,6 +50,13 @@ DWORD WINAPI MainThread_Initialize(LPVOID dwModule)
             g_Engine->bShowMenu = !g_Engine->bShowMenu;           //  Main Menu Window
             g_Engine->bShowHud = !g_Engine->bShowMenu;            //  Render Window
             LastTick = GetTickCount64();
+
+            if (wasMenuOpen && !g_Engine->bShowMenu)
+            {
+                cachedTamedPals.clear();
+            }
+
+            wasMenuOpen = g_Engine->bShowMenu;
         }
 
         std::this_thread::sleep_for(1ms);
