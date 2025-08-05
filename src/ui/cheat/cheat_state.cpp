@@ -413,3 +413,92 @@ void CollectAllRelicsInMap()
 	}
 }
 
+void ForceClearOverlap()
+{
+	SDK::APalPlayerCharacter* player = GetPalPlayerCharacter();
+	if (!player || !player->BuilderComponent) return;
+
+	auto* checker = player->BuilderComponent->InstallChecker;
+	if (!checker || !checker->TargetBuildObject) return;
+
+	auto* target = checker->TargetBuildObject;
+
+	printf("[BuildAnywhere] Forcing clear on: %s\n", target->GetName().c_str());
+
+	// Disable overlap collision checks
+	if (target->OverlapCheckCollision)
+	{
+		target->OverlapCheckCollision->bGenerateOverlapEvents = false;
+		target->LocalBounds.Min = FVector(FLT_MAX);
+		target->LocalBounds.Max = FVector(-FLT_MAX);
+		
+	}
+	// Optional: Visual Debug Output
+	printf("[BuildAnywhere] Cleared overlaps & disabled collision.\n");
+}
+
+///////////////////////////////////// DEBUG FUNCTIONS ///////////////////////////////////////
+void DebugBuildOverlap()
+{
+	SDK::APalPlayerCharacter* player = GetPalPlayerCharacter();
+	if (!player)
+	{
+		printf("[DebugBuildOverlap] Player not found\n");
+		return;
+	}
+
+	auto* builder = player->BuilderComponent;
+	if (!builder)
+	{
+		printf("[DebugBuildOverlap] BuilderComponent is null\n");
+		return;
+	}
+
+	auto* installChecker = builder->InstallChecker;
+	if (!installChecker)
+	{
+		printf("[DebugBuildOverlap] InstallChecker is null\n");
+		return;
+	}
+
+	auto* overlapChecker = installChecker->OverlapChecker;
+	if (!overlapChecker)
+	{
+		printf("[DebugBuildOverlap] OverlapChecker is null\n");
+		return;
+	}
+
+	printf("------ Build Overlap Debug ------\n");
+
+	AActor* overlappedActor = overlapChecker->OverlappedActor;
+	const auto& overlapBuildObjects = overlapChecker->OverlapBuildObjects;
+	const auto& otherObjects = overlapChecker->OverlapOtherObjects;
+
+	if (overlappedActor)
+	{
+		printf("  Overlapped Actor: %s\n", overlappedActor->GetName().c_str());
+	}
+
+	printf("OverlapBuildObjects (%d):\n", overlapBuildObjects.Num());
+	for (int i = 0; i < overlapBuildObjects.Num(); ++i)
+	{
+		auto* obj = overlapBuildObjects[i];
+		if (obj)
+		{
+			printf("  BuildObject [%d]: %s\n", i, obj->GetName().c_str());
+		}
+	}
+
+	printf("OverlapOtherObjects (%d):\n", otherObjects.Num());
+	for (int i = 0; i < otherObjects.Num(); ++i)
+	{
+		auto* obj = otherObjects[i];
+		if (obj)
+		{
+			printf("  OtherObject [%d]: %s\n", i, obj->GetName().c_str());
+		}
+	}
+
+	printf("---------------------------------\n");
+}
+

@@ -137,6 +137,10 @@ namespace DX11Base
         if (g_Engine->bShowMenu)
             MainMenu();
 
+        if(cheatState.buildAnywhere)
+        {
+            ForceClearOverlap();
+		}
         ResetStamina();
         TickHotkeys();
         TickHotkeysOneShot();

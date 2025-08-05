@@ -20,7 +20,9 @@ void TabFeatures()
 	{
 		SetPlayerInventoryWeight();
 	}
+
 	ImGui::Checkbox("Inf Stamina", &cheatState.infStamina);
+	ImGui::Checkbox("Build Anywhere", &cheatState.buildAnywhere);
 
 	ImGui::Spacing();
 

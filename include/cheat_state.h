@@ -24,6 +24,9 @@ void IncreaseAllDurability();
 void CollectAllRelicsInMap();
 void SetWeaponDamage();
 void SetInfiniteMagazine();
+void ForceClearOverlap();
+//Debug
+void DebugBuildOverlap();
 
 struct CheatState
 { 
@@ -36,6 +39,7 @@ struct CheatState
     bool infAmmo = false;
     bool infMag = false;
     bool infStamina = false;
+	bool buildAnywhere = false;
     float cameraFov = 90.0f;
     float cameraBrightness = 0.0f;
 
