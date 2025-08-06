@@ -50,7 +50,31 @@ namespace itemlist
         "Accessory_ThunderResist_3|Ring Of Lightning Resistance+2",
         "Accessory_CoolResist_1|Thermal Underwear",
         "Accessory_CoolResist_2|Thermal Underwear+1",
-        "Accessory_CoolResist_3|Thermal Underwear+2"
+        "Accessory_CoolResist_3|Thermal Underwear+2",
+        "Accessory_AirDash1|Air Dash Boots I",
+        "Accessory_AirDash2|Air Dash Boots II",
+        "Accessory_AirDash3|Air Dash Boots III",
+        "Accessory_AirDash4|Air Dash Boots IV",
+        "Accessory_JumpCount_Increase1|Double Jump Boots",
+        "Accessory_JumpCount_Increase2|Triple Jump Boots",
+        "Accessory_JumpCount_Increase3|Quad Jump Boots",
+        "Accessory_JumpPower_Increase|Anti-Gravity Belt",
+        "AdditionalInventory_001|Small Expansion Backpack",
+        "AdditionalInventory_002|Medium Expansion Backpack",
+        "AdditionalInventory_003|Large Expansion Backpack",
+        "AdditionalInventory_004|Giant Expansion Backpack",
+        "Otomo_ElementBoost_Normal_1|Neutral Element Whistle (Common)",
+        "Otomo_ElementBoost_Fire_1|Fire Element Whistle (Common)",
+        "Otomo_ElementBoost_Water_1|Water Element Whistle (Common)",
+        "Otomo_ElementBoost_Electricity_1|Electric Element Whistle (Common)",
+        "Otomo_ElementBoost_Leaf_1|Leaf Element Whistle (Common)",
+        "Otomo_ElementBoost_Ice_1|Ice Element Whistle (Common)",
+
+        "Otomo_Defense_up3|Defense Support Whistle +2 (Rare)",
+
+        "Otomo_PalExp_Increase_1|Growth Bell (Common)",
+        "Otomo_PalExp_Increase_2|Growth Bell (Uncommon)",
+        "Otomo_PalExp_Increase_3|Growth Bell (Rare)",
     };
 
     const std::vector<const char*> ammo =
@@ -67,7 +91,13 @@ namespace itemlist
         "Arrow_Poison|Poison Arrow",
         "ExplosiveBullet|Rocket Ammo",
         "RifleBullet|Rifle Ammo",
-        "ShotgunBullet|Shotgun Shells"
+        "ShotgunBullet|Shotgun Shells",
+        "ChargeLaserRifleBullet|Charge Laser Bullet",
+        "OverheatRifleBullet|Overheat Rifle Bullet",
+        "EnergyShotgunBullet|Energy Shotgun Shell",
+        "PalDopingShotBullet|Doping Syringe Round",
+        "SFArrow|Tech Arrows",
+        "ReinforcedArrow|Reinforced Arrows",
     };
 
     const std::vector<const char*> armor =
@@ -172,6 +202,27 @@ namespace itemlist
         "ClothArmorHeat_3|Tropical Outfit(Rare)",
         "ClothArmorHeat_4|Tropical Outfit(Epic)",
         "ClothArmorHeat_5|Tropical Outfit(Legendary)",
+        "SFArmor|Hex Crystal Armor",
+        "SFArmor_2|Hex Crystal Armor",
+        "SFArmor_3|Hex Crystal Armor",
+        "SFArmor_4|Hex Crystal Armor",
+        "SFArmor_5|Hex Crystal Armor",
+        "SFArmorCold|Cold-Resistant Hex Crystal Armor",
+        "SFArmorCold_2|Cold-Resistant Hex Crystal Armor",
+        "SFArmorCold_3|Cold-Resistant Hex Crystal Armor",
+        "SFArmorCold_4|Cold-Resistant Hex Crystal Armor",
+        "SFArmorCold_5|Cold-Resistant Hex Crystal Armor",
+        "SFArmorHeat|Heat-Resistant Hex Crystal Armor",
+        "SFArmorHeat_2|Heat-Resistant Hex Crystal Armor",
+        "SFArmorHeat_3|Heat-Resistant Hex Crystal Armor",
+        "SFArmorHeat_4|Heat-Resistant Hex Crystal Armor",
+        "SFArmorHeat_5|Heat-Resistant Hex Crystal Armor",
+        "SFArmorWeight|Lightweight Hex Crystal Armor",
+        "SFArmorWeight_2|Lightweight Hex Crystal Armor",
+        "SFArmorWeight_3|Lightweight Hex Crystal Armor",
+        "SFArmorWeight_4|Lightweight Hex Crystal Armor",
+        "SFArmorWeight_5|Lightweight Hex Crystal Armor",
+        "YakushimaArmor001|Holy Armor"
     };
 
     const std::vector<const char*> blueprints =
@@ -340,6 +391,29 @@ namespace itemlist
         "Blueprint_Launcher_Default_3|Blueprint Rocket Launcher(Rare)",
         "Blueprint_Launcher_Default_4|Blueprint Rocket Launcher(Epic)",
         "Blueprint_Launcher_Default_5|Blueprint Rocket Launcher(Legendary)",
+        "Blueprint_SemiAutoShotgun_2|Semi-Auto Shotgun(Uncommon)",
+        "Blueprint_SemiAutoShotgun_3|Semi-Auto Shotgun(Rare)",
+        "Blueprint_SemiAutoShotgun_4|Semi-Auto Shotgun(Epic)",
+        "Blueprint_SemiAutoShotgun_5|Semi-Auto Shotgun(Legendary)",
+
+        "Blueprint_SemiAutoRifle_3|Semi-Auto Rifle(Rare)",
+        "Blueprint_SemiAutoRifle_4|Semi-Auto Rifle(Epic)",
+        "Blueprint_SemiAutoRifle_5|Semi-Auto Rifle(Legendary)",
+
+        "Blueprint_SFArmor_2|Hex Crystal Armor(Uncommon)",
+        "Blueprint_SFArmor_3|Hex Crystal Armor(Rare)",
+        "Blueprint_SFArmor_4|Hex Crystal Armor(Epic)",
+        "Blueprint_SFArmor_5|Hex Crystal Armor(Legendary)",
+
+        "Blueprint_SFHelmet_2|Hex Crystal Helmet(Uncommon)",
+        "Blueprint_SFHelmet_3|Hex Crystal Helmet(Rare)",
+        "Blueprint_SFHelmet_4|Hex Crystal Helmet(Epic)",
+        "Blueprint_SFHelmet_5|Hex Crystal Helmet(Legendary)",
+
+        "Blueprint_SFArmorCold_2|Cold-Resistant Hex Crystal Armor(Uncommon)",
+        "Blueprint_SFArmorCold_3|Cold-Resistant Hex Crystal Armor(Rare)",
+        "Blueprint_SFArmorCold_4|Cold-Resistant Hex Crystal Armor(Epic)",
+        "Blueprint_SFArmorCold_5|Cold-Resistant Hex Crystal Armor(Legendary)"
     };
 
     const std::vector<const char*> craftingmaterials =
@@ -506,7 +580,19 @@ namespace itemlist
         "Salad|Salad",
         "MushroomStew|Stewed Mushrooms",
         "Tomato|Tomato",
-        "Wheat|Wheat"
+        "Wheat|Wheat",
+        "Carrot|Carrot",
+        "Onion|Onion",
+        "Potato|Potato",
+        "CheeseBurger|Cheeseburger",
+        "Curry|Savannah Mammoth Curry",
+        "Gratin|Gratin",
+        "Gyoza|Wild Boar Dumplings",
+        "MeatAndPotatoes|Stewed Meat & Potatoes",
+        "Minestrone|Minestrone Soup",
+        "PotatoChips|Potato Chips",
+        "Quiche|Mushroom Quiche",
+        "StirFriedVegetables|Stir-fried Vegetables"
     };
 
     const std::vector<const char*> hats =
@@ -595,8 +681,34 @@ namespace itemlist
         "Head004_2|Witch Hat(Uncommon)",
         "Head004_3|Witch Hat(Rare)",
         "Head004_4|Witch Hat(Epic)",
-        "Head004_5|Witch Hat(Legendary)"
-    };
+        "Head004_5|Witch Hat(Legendary)",
+        "GYM_Head_Viking|Bjorn's Hat",
+        "HeadEquip044|JenoDoran Headgear",
+        "SFHelmet|Hex Crystal Helmet (Common)",
+        "SFHelmet_2|Hex Crystal Helmet (Uncommon)",
+        "SFHelmet_3|Hex Crystal Helmet (Rare)",
+        "SFHelmet_4|Hex Crystal Helmet (Epic)",
+        "SFHelmet_5|Hex Crystal Helmet (Legendary)",
+        "YakushimaHeadEquip001|Holy Mask (Common)",
+        "YakushimaHeadEquip001_2|Holy Mask (Uncommon)",
+        "YakushimaHeadEquip001_3|Holy Mask (Rare)",
+        "YakushimaHeadEquip001_4|Holy Mask (Epic)",
+        "YakushimaHeadEquip001_5|Holy Mask (Legendary)",
+
+        "YakushimaHeadEquip002|Holy Circlet (Common)",
+        "YakushimaHeadEquip002_2|Holy Circlet (Uncommon)",
+        "YakushimaHeadEquip002_3|Holy Circlet (Rare)",
+        "YakushimaHeadEquip002_4|Holy Circlet (Epic)",
+        "YakushimaHeadEquip002_5|Holy Circlet (Legendary)",
+
+        "YakushimaHeadEquip003|Holy Helmet (Rare)",
+        "YakushimaHeadEquip004|Holy Hood (Epic)",
+        "YakushimaHeadEquip004_4|Holy Hood (Legendary)",
+        "YakushimaHeadEquip004_5|Holy Hood (Mythic)",
+
+        "YakushimaHeadEquip005|Moon Lord Mask (Legendary)",
+        "YakushimaHeadEquip006|Eye of Cthulhu Mask (Epic)"
+     };
 
     const std::vector<const char*> medicine =
     {
@@ -606,7 +718,9 @@ namespace itemlist
         "MindControlDrug|Mind Control Meds",
         "StatusPointResetSan|Memory Wiping Medicine",
         "Narcotic|Strange Juice",
-        "Opium|Suspicious Juice"
+        "Opium|Suspicious Juice",
+        "PalRevive|Revival Medicine",
+        "Potion_Extreme|Supreme Healing Potion"
     };
 
     const std::vector<const char*> other =
@@ -624,7 +738,13 @@ namespace itemlist
         "PalItem_ToSell_03|Precious Entrails",
         "PalItem_ToSell_04|Precious Claw",
         "PalItem_ToSell_05|Precious Pelt",
-        "PalUpgradeStone|Small Pal Soul"
+        "PalUpgradeStone|Small Pal Soul",
+        "QuestItem_Farmer_1|Farmer's Special Dish",
+        "QuestItem_Zoe_1|Zoe’s Memory Cloth",
+        "QuestItem_Breeder_1|Breeder’s Beloved Pal",
+        "BattleTicket|Battle Ticket",
+        "MeaninglessItem_ButcheringImportPal|Discarded Genetic Sample",
+        "PalSummon_YakushimaBoss002|Celestial Sigil"
     };
 
     const std::vector<const char*> palspheres =
@@ -645,6 +765,9 @@ namespace itemlist
         "LettuceSeeds|Lettuce Seeds",
         "TomatoSeeds|Tomato Seeds",
         "WheatSeeds|Wheat Seeds",
+        "CarrotSeeds|Carrot Seeds",
+        "OnionSeeds|Onion Seeds",
+        "PotatoSeeds|Potato Seed Potatoes",
     };
 
     const std::vector<const char*> tools =
@@ -656,6 +779,7 @@ namespace itemlist
         "TreasureBoxKey03|Golden Key",
         "Glider_Legendary|Legendary Glider",
         "Lantern|Hip Lantern",
+        "Lantern_High|High-Powered Waist Lantern",
         "Shield_04|HyperShield",
         "Torch|Hand-held Torch",
         "Axe_Tier_01|Metal Ax",
@@ -669,7 +793,15 @@ namespace itemlist
         "RepairKit|Repair Kit",
         "Axe_Tier_00|Stone Ax",
         "Pickaxe_Tier_00|Stone Pickaxe",
-        "TreasureBoxKey02|Silver Key"
+        "TreasureBoxKey02|Silver Key",
+        "Axe_Steal|Pal Metal Axe",
+        "Pickaxe_Steal|Pal Metal Pickaxe",
+        "MetalDetector|Metal Detector",
+        "GrapplingGun|Grappling Gun",
+        "GrapplingGun2|Mega Grappling Gun",
+        "GrapplingGun3|Giga Grappling Gun",
+        "GrapplingGun4|Hyper Grappling Gun",
+        "GrapplingGun5|Super Grappling Gun"
     };
 
     const std::vector<const char*> weapons =
@@ -697,10 +829,6 @@ namespace itemlist
         "Bow_Fifth|Five Shot Bow",
         "Bow_Fire|Fire Bow",
         "FragGrenade|Frag Grenade",
-        "GrapplingGun|Grappling Gun",
-        "GrapplingGun2|Mega Grappling Gun",
-        "GrapplingGun3|Giga Grappling Gun",
-        "GrapplingGun4|Hyper Grappling Gun",
         "HomingSphereLauncher|Homing Sphere Launcher",
         "FragGrenade_Fire|Incendiary Grenade",
         "FragGrenade_Ice|Ice Grenade",
@@ -743,6 +871,78 @@ namespace itemlist
         "Sword|Sword",
         "Bow_triple|Triple Shot Bow",
         "Bat|Wooden Club",
+        "BeamSword|Beam Sword",
+        "Katana|Katana",
+
+        "SemiAutoRifle|Semi-Auto Rifle(Common)",
+        "SemiAutoRifle_2|Semi-Auto Rifle(Uncommon)",
+        "SemiAutoRifle_3|Semi-Auto Rifle(Rare)",
+        "SemiAutoRifle_4|Semi-Auto Rifle(Epic)",
+        "SemiAutoRifle_5|Semi-Auto Rifle(Legendary)",
+
+        "SemiAutoShotgun|Semi-Auto Shotgun(Common)",
+        "SemiAutoShotgun_2|Semi-Auto Shotgun(Uncommon)",
+        "SemiAutoShotgun_3|Semi-Auto Shotgun(Rare)",
+        "SemiAutoShotgun_4|Semi-Auto Shotgun(Epic)",
+        "SemiAutoShotgun_5|Semi-Auto Shotgun(Legendary)",
+
+        "MakeshiftAssaultRifle|Makeshift Assault Rifle(Common)",
+        "MakeshiftAssaultRifle_2|Makeshift Assault Rifle(Uncommon)",
+        "MakeshiftAssaultRifle_3|Makeshift Assault Rifle(Rare)",
+        "MakeshiftAssaultRifle_4|Makeshift Assault Rifle(Epic)",
+        "MakeshiftAssaultRifle_5|Makeshift Assault Rifle(Legendary)",
+
+        "MakeshiftShotgun|Makeshift Shotgun(Common)",
+        "MakeshiftShotgun_2|Makeshift Shotgun(Uncommon)",
+        "MakeshiftShotgun_3|Makeshift Shotgun(Rare)",
+        "MakeshiftShotgun_4|Makeshift Shotgun(Epic)",
+        "MakeshiftShotgun_5|Makeshift Shotgun(Legendary)",
+
+        "MakeshiftSubmachineGun_2|Makeshift Submachine Gun(Uncommon)",
+        "MakeshiftSubmachineGun_3|Makeshift Submachine Gun(Rare)",
+        "MakeshiftSubmachineGun_4|Makeshift Submachine Gun(Epic)",
+        "MakeshiftSubmachineGun_5|Makeshift Submachine Gun(Legendary)",
+
+        "LaserGatlingGun_2|Laser Gatling Gun(Uncommon)",
+        "LaserGatlingGun_3|Laser Gatling Gun(Rare)",
+        "LaserGatlingGun_4|Laser Gatling Gun(Epic)",
+        "LaserGatlingGun_5|Laser Gatling Gun(Legendary)",
+
+        "SFBow_2|Tech Bow(Uncommon)",
+        "SFBow_3|Tech Bow(Rare)",
+        "SFBow_4|Tech Bow(Epic)",
+        "SFBow_5|Tech Bow(Legendary)",
+
+        "OverheatRifle|Overheat Rifle",
+        "ChargeLaserRifle|Charge Laser Rifle",
+        "EnergyShotgun|Energy Shotgun",
+        "PalDopingShot|Pal Doping Shot",
+        "PalDopingShot_2|Pal Doping Shot (Uncommon)",
+        "PalHealingGrenade|Pal Healing Grenade",
+
+        "YakushimaBlade002_4|Terra Blade (Epic)",
+        "YakushimaBlade002_5|Terra Blade (Legendary)",
+
+        "YakushimaBlade003|Terra Prism (Common)",
+        "YakushimaBlade003_1|Terra Prism (Ucommon)",
+        "YakushimaBlade003_2|Terra Prism (Rare)",
+        "YakushimaBlade003_3|Terra Prism (Epic)",
+        "YakushimaBlade003_4|Terra Prism (Legendary)",
+        "YakushimaBlade003_5|Terra Prism (Mythic)",
+
+        "YakushimaBlade004|Excalibur (Common)",
+        "YakushimaBlade004_1|Excalibur (Uncommon)",
+        "YakushimaBlade004_2|Excalibur (Rare)",
+        "YakushimaBlade004_3|Excalibur (Epic)",
+        "YakushimaBlade004_4|Excalibur (Legendary)",
+        "YakushimaBlade004_5|Excalibur (Mythic)",
+
+        "YakushimaGun001|Vortex Beater (Common)",
+        "YakushimaGun001_1|Vortex Beater (Uncommon)",
+        "YakushimaGun001_2|Vortex Beater (Rare)",
+        "YakushimaGun001_3|Vortex Beater (Epic)",
+        "YakushimaGun001_4|Vortex Beater (Legendary)",
+        "YakushimaGun001_5|Vortex Beater (Mythic)",
     };
 
     const std::vector<const char*> money =
