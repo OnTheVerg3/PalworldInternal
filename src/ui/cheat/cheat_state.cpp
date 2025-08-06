@@ -246,15 +246,11 @@ void AddItemToInventoryByName(std::string itemName, int count)
 		return;
 	}
 
-	pInventoryData->RequestAddItem(Name, count, true);
+
 	pInventoryData->AddItem_ServerInternal(Name, count, true, 0.0f);
 
 	slot->ItemId.StaticId = Name;
 	slot->StackCount = count;
-	slot->OnRep_ItemId();
-	slot->OnRep_StackCount();
-	slot->OnRep_DynamicItemData();
-	container->OnRep_ItemSlotArray();
 	container->ForceMarkSlotDirty_ServerInternal();
 
 
