@@ -4,6 +4,7 @@
 #include "Pal_classes.hpp"
 #include "Menu.h"
 #include "Engine.h"
+#include "pal_editor.h"
 #include <libs/MinHook/MinHook.h>
 #include <algorithm>
 #include <string>
@@ -288,6 +289,29 @@ void TeleportPlayerTo(const FVector& pos)
 	pPalPlayerState->RequestRespawn();
 }
 
+void TeleportPlayerToHome()
+{
+	TArray<SDK::APalCharacter*> allPals;
+	if (!GetTAllPals(&allPals))
+		return;
+
+	for(SDK::APalCharacter* pal : allPals)
+	{
+		if (!pal)
+			continue;
+		APalPlayerCharacter* palPlayer = static_cast<APalPlayerCharacter*>(pal);
+		if (!palPlayer)
+			continue;
+
+		if (IsAlive(palPlayer) && IsABaseWorker(palPlayer))
+		{
+			FVector homeLocation = palPlayer->K2_GetActorLocation();
+			TeleportPlayerTo(homeLocation);
+			return;
+		}	
+	}
+}
+
 void SetCameraFov()
 {
 	APalPlayerCharacter* player = GetPalPlayerCharacter();
@@ -409,29 +433,30 @@ void CollectAllRelicsInMap()
 	}
 }
 
-void ForceClearOverlap()
+void RevealMapAroundPlayer()
 {
-	SDK::APalPlayerCharacter* player = GetPalPlayerCharacter();
-	if (!player || !player->BuilderComponent) return;
+	static UKismetStringLibrary* lib = UKismetStringLibrary::GetDefaultObj();
 
-	auto* checker = player->BuilderComponent->InstallChecker;
-	if (!checker || !checker->TargetBuildObject) return;
+	APalCharacter* player = GetPalPlayerCharacter();
+	if (!player) return;
 
-	auto* target = checker->TargetBuildObject;
-
-	printf("[BuildAnywhere] Forcing clear on: %s\n", target->GetName().c_str());
-
-	// Disable overlap collision checks
-	if (target->OverlapCheckCollision)
+	APalPlayerState* playerState = GetPalPlayerState();
+	if (!playerState || !playerState->WorldMapData)
 	{
-		target->OverlapCheckCollision->bGenerateOverlapEvents = false;
-		target->LocalBounds.Min = FVector(FLT_MAX);
-		target->LocalBounds.Max = FVector(-FLT_MAX);
-		
+		printf("[MapDebug] PlayerState or WorldMapData is null.\n");
+		return;
 	}
-	// Optional: Visual Debug Output
-	printf("[BuildAnywhere] Cleared overlaps & disabled collision.\n");
+
+	UPalWorldMapUIData* mapData = playerState->WorldMapData;
+
+	FName regionName = lib->Conv_StringToName(FString(L"M"));
+	mapData->UnlockMap(regionName, 0);
+
+	FVector playerLoc = player->K2_GetActorLocation();
+	FVector2f flatLoc(playerLoc.X, playerLoc.Y);
+	mapData->UnlockByScroll(100000.0f, flatLoc);
 }
+
 
 ///////////////////////////////////// DEBUG FUNCTIONS ///////////////////////////////////////
 void DebugBuildOverlap()

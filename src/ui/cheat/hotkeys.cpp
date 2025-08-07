@@ -56,6 +56,8 @@ void TickHotkeys()
 		
     }
 
+    
+
 }
 
 void TickHotkeysOneShot()
@@ -77,6 +79,11 @@ void TickHotkeysOneShot()
         // Key released → reset flag
         repairKeyDown = false;
     }
+
+    if (GetAsyncKeyState(key.hotkeyTeleportHome) & 1)
+    {
+		TeleportPlayerToHome();
+    }
 }
 
 void DrawHotkeys()
@@ -88,7 +95,8 @@ void DrawHotkeys()
         bool* activeFlag;
     };
 
-    static bool waitingWorld = false, waitingESP = false, waitingStamina = false, waitingRelic = false, waitingAttack = false, waitingRepair = false;
+    static bool waitingWorld = false, waitingESP = false, waitingStamina = false, waitingRelic = false, waitingAttack = false, waitingRepair = false, 
+        waitingTeleportHome = false;
 
     HotkeyEntry hotkeys[] = {
     { "World Speed 1:10", &key.hotkeyToggleWorldSpeed, &waitingWorld, &key.worldSpeedToggled },
@@ -97,6 +105,7 @@ void DrawHotkeys()
     { "Relic ESP", &key.hotkeyToggleRelic, &waitingRelic, &key.relicToggled },
     { "Attack 1:90000", &key.hotkeyToggleAttack, &waitingAttack, &key.attackToggled },
     { "Repair Current Weapon", &key.hotkeyRepairWeapon, &waitingRepair, nullptr },
+    { "Teleport Home", &key.hotkeyTeleportHome, &waitingTeleportHome, nullptr },
     };
 
     for (auto& entry : hotkeys)
@@ -106,13 +115,10 @@ void DrawHotkeys()
         if (scanCode)
             GetKeyNameTextA(scanCode << 16, keyName, sizeof(keyName));
 
-        // Create a horizontal line for each hotkey
         ImGui::BeginGroup();
 
-        // 1. Label (left side)
         ImGui::Text("%s", entry.label);
 
-        // 2. Active status (aligned right to label)
         ImGui::SameLine(250);
 
         if (entry.activeFlag)

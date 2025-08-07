@@ -24,7 +24,8 @@ void IncreaseAllDurability();
 void CollectAllRelicsInMap();
 void SetWeaponDamage();
 void SetInfiniteMagazine();
-void ForceClearOverlap();
+void TeleportPlayerToHome();
+void RevealMapAroundPlayer();
 //Debug
 void DebugBuildOverlap();
 
@@ -39,7 +40,6 @@ struct CheatState
     bool infAmmo = false;
     bool infMag = false;
     bool infStamina = false;
-	bool buildAnywhere = false;
     float cameraFov = 90.0f;
     float cameraBrightness = 0.0f;
 
@@ -86,6 +86,7 @@ struct Hotkeys
     int hotkeyToggleRelic = VK_F4;
     int hotkeyToggleAttack = VK_F5;
     int hotkeyRepairWeapon = VK_F6;
+	int hotkeyTeleportHome = VK_F7;
 
     bool worldSpeedToggled = false;
 	bool staminaToggled = false;

@@ -22,6 +22,11 @@ void TabTeleporter()
 		}
 	}
 
+	if(ImGui::Button("Teleport Home(F7)"))
+	{
+		TeleportPlayerToHome();
+	}
+
 	// Show saved waypoints
 	for (int i = 0; i < g_Waypoints.size(); ++i)
 	{

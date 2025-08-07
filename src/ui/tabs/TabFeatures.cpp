@@ -8,6 +8,11 @@ void TabFeatures()
 	ImGui::Spacing();
 	ImGui::SeparatorText("Player Features");
 
+	if (ImGui::Button("tey"))
+	{
+		RevealMapAroundPlayer();
+	}
+
 	if (ImGui::SliderFloat("World Speed", &cheatState.worldSpeed, 1.0f, 20.0f))
 	{
 		ChangeWorldSpeed(cheatState.worldSpeed);
@@ -22,7 +27,6 @@ void TabFeatures()
 	}
 
 	ImGui::Checkbox("Inf Stamina", &cheatState.infStamina);
-	ImGui::Checkbox("Build Anywhere", &cheatState.buildAnywhere);
 
 	ImGui::Spacing();
 
