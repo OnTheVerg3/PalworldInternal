@@ -2,121 +2,108 @@
 #include "Tabs.h"
 #include "cheat_state.h"
 #include "pal_editor.h"
+#include "src/ui/imgui_style.h"
 
 void TabPalEditor()
 {
-    static int selectedPalIndex = -1;
-    static std::string selectedPalName;
+	static int selectedPalIndex = -1;
+	static std::string selectedPalName;
+	ImVec4 headerColor = ImVec4(1.0f, 0.9f, 0.6f, 1.0f);
 
-    // ------------------- TOP SECTION -------------------
-    float topHeight = 220.0f;
+	ColoredSeparatorText("Pal Editor", headerColor);
+	ImGui::Spacing();
 
-    ImGui::BeginChild("TopSection", ImVec2(0, topHeight), false);
+	// === TOP PANEL ===
+	float leftPanelWidth = 320.0f;
 
-    // Split into two columns: Tamed and Base Workers
-    ImGui::Columns(3, nullptr, false);
+	ImGui::BeginGroup();
 
-    // ------------------- Tamed Pals -------------------
-    ImGui::BeginChild("PalList", ImVec2(0, topHeight), true);
-    ImGui::Text("Tamed Pals: %zu", cachedTamedPals.size());
-    ImGui::Separator();
+	// -- Pal List (Tamed + Base Workers)
+	ImGui::BeginChild("PalList", ImVec2(leftPanelWidth, 250.0f), true);
+	ImGui::TextColored(headerColor, "Tamed Pals");
+	for (int i = 0; i < cachedTamedPals.size(); ++i)
+	{
+		auto* pal = cachedTamedPals[i];
+		if (!pal || !pal->CharacterParameterComponent) continue;
+		auto* individualParams = pal->CharacterParameterComponent->GetIndividualParameter();
+		if (!individualParams) continue;
 
-    for (int i = 0; i < cachedTamedPals.size(); i++)
-    {
-        SDK::APalCharacter* pal = cachedTamedPals[i];
-        if (!pal || !pal->CharacterParameterComponent) continue;
+		std::string name = GetCleanPalName2(pal->GetName());
+		int level = individualParams->SaveParameter.Level;
+		std::string label = name + " [Lv. " + std::to_string(level) + "]##t" + std::to_string(i);
 
-        auto* params = pal->CharacterParameterComponent;
-        auto* individualParams = params->GetIndividualParameter();
-        if (!individualParams) continue;
+		if (ImGui::Selectable(label.c_str(), selectedPalIndex == i))
+		{
+			selectedPalIndex = i;
+			selectedPalName = name;
+		}
+	}
 
-        int level = individualParams->SaveParameter.Level;
-        std::string name = GetCleanPalName2(pal->GetName());
-        std::string label = name + " [Lv. " + std::to_string(level) + "]##tamed" + std::to_string(i);
+	ImGui::Spacing();
+	ImGui::Separator();
+	ImGui::TextColored(headerColor, "Base Workers");
+	for (int i = 0; i < cachedBaseWorkers.size(); ++i)
+	{
+		auto* pal = cachedBaseWorkers[i];
+		if (!pal || !pal->CharacterParameterComponent) continue;
+		auto* individualParams = pal->CharacterParameterComponent->GetIndividualParameter();
+		if (!individualParams) continue;
 
-        if (ImGui::Selectable(label.c_str(), selectedPalIndex == i))
-        {
-            selectedPalIndex = i;
-            selectedPalName = name;
-        }
-    }
-    ImGui::EndChild();
-    ImGui::NextColumn();
+		std::string name = GetCleanPalName2(pal->GetName());
+		int level = individualParams->SaveParameter.Level;
+		int actualIndex = 10000 + i;
+		std::string label = name + " [Lv. " + std::to_string(level) + "]##b" + std::to_string(i);
 
-    // ------------------- Base Workers -------------------
-    ImGui::BeginChild("BaseWorkers", ImVec2(0, topHeight), true);
-    ImGui::Text("Base Workers: %zu", cachedBaseWorkers.size());
-    ImGui::Separator();
+		if (ImGui::Selectable(label.c_str(), selectedPalIndex == actualIndex))
+		{
+			selectedPalIndex = actualIndex;
+			selectedPalName = name;
+		}
+	}
+	ImGui::EndChild();
+	ImGui::EndGroup();
 
-    for (int i = 0; i < cachedBaseWorkers.size(); i++)
-    {
-        SDK::APalCharacter* pal = cachedBaseWorkers[i];
-        if (!pal || !pal->CharacterParameterComponent) continue;
+	ImGui::SameLine();
 
-        auto* params = pal->CharacterParameterComponent;
-        auto* individualParams = params->GetIndividualParameter();
-        if (!individualParams) continue;
+	// -- Pal Info (Smaller Box)
+	ImGui::BeginGroup();
+	ImGui::BeginChild("PalInfo", ImVec2(0, 250.0f), true);
+	ImGui::TextColored(headerColor, "Pal Info");
+	DrawPalInfo(selectedPalIndex);
+	ImGui::EndChild();
+	ImGui::EndGroup();
 
-        int level = individualParams->SaveParameter.Level;
-        std::string name = GetCleanPalName2(pal->GetName());
-        std::string label = name + " [Lv. " + std::to_string(level) + "]##bw" + std::to_string(i);
+	ImGui::Spacing();
 
-        // NOTE: You may want to offset index (e.g., +10000) to avoid clashing with tamed selection
-        int actualIndex = 10000 + i;
+	// === MIDDLE PANEL ===
+	float half = ImGui::GetContentRegionAvail().x * 0.5f;
 
-        if (ImGui::Selectable(label.c_str(), selectedPalIndex == actualIndex))
-        {
-            selectedPalIndex = actualIndex;
-            selectedPalName = name;
-        }
-    }
-    ImGui::EndChild();
-    ImGui::NextColumn();
+	ImGui::BeginChild("StatsBox", ImVec2(half - 5, 240), true);
+	ImGui::TextColored(headerColor, "Stats");
+	DrawPalStatsEditor(selectedPalIndex);
+	ImGui::EndChild();
 
-    // ------------------- Pal Info -------------------
-    ImGui::BeginChild("PalInfo", ImVec2(0, topHeight), true);
-    DrawPalInfo(selectedPalIndex);
-    ImGui::EndChild();
+	ImGui::SameLine();
 
-    ImGui::Columns(1);
-    ImGui::EndChild();
+	ImGui::BeginChild("RanksBox", ImVec2(half - 5, 240), true);
+	ImGui::TextColored(headerColor, "Ranks");
+	DrawPalRanksEditor(selectedPalIndex);
+	ImGui::EndChild();
 
-    ImGui::Spacing();
+	ImGui::Spacing();
 
-    // ------------------- BOTTOM SECTION -------------------
-    ImGui::BeginChild("PalEditorFull", ImVec2(0, 0), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
+	// === Work Suitability ===
+	ImGui::BeginChild("WorkSuitabilityBox", ImVec2(0, 170), true);
+	ImGui::TextColored(headerColor, "Work Suitability");
+	DrawPalWorkSuitabilitiesEditor(selectedPalIndex);
+	ImGui::EndChild();
 
-    // Stats Box
-    float childWidth = ImGui::GetContentRegionAvail().x * 0.5f;
+	ImGui::Spacing();
 
-    ImGui::BeginChild("StatsBox", ImVec2(childWidth - 5, 300), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
-    ImGui::TextColored(ImVec4(1, 1, 0.5f, 1), "Stats Editor");
-    ImGui::Separator();
-    DrawPalStatsEditor(selectedPalIndex);
-    ImGui::EndChild();
-
-    ImGui::SameLine();
-
-    // Ranks Box
-    ImGui::BeginChild("Ranks", ImVec2(childWidth - 5, 300), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
-    ImGui::TextColored(ImVec4(1, 1, 0.5f, 1), "Ranks Editor");
-    ImGui::Separator();
-    DrawPalRanksEditor(selectedPalIndex);
-    ImGui::EndChild();
-
-    ImGui::Spacing();
-
-    // Work Suitability Box (with forceRefresh)
-    ImGui::BeginChild("WorkBox", ImVec2(0, 200), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
-    DrawPalWorkSuitabilitiesEditor(selectedPalIndex);
-    ImGui::EndChild();
-
-    ImGui::Spacing();
-
-    // Passive Skills Box
-    ImGui::BeginChild("SkillsBox", ImVec2(0, 350), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
-    DrawPalPassiveSkillsEditor(selectedPalIndex);
-    ImGui::EndChild();
-
-    ImGui::EndChild();
+	// === Passive Skills ===
+	ImGui::BeginChild("SkillsBox", ImVec2(0, 320), true);
+	ImGui::TextColored(headerColor, "Passive Skills");
+	DrawPalPassiveSkillsEditor(selectedPalIndex);
+	ImGui::EndChild();
 }
+

@@ -301,6 +301,7 @@
     <ClCompile Include="src\ui\cheat\pal_editor.cpp" />
     <ClCompile Include="src\ui\imgui_style.cpp" />
     <ClCompile Include="src\ui\tabs\TabAimbotESP.cpp" />
+    <ClCompile Include="src\ui\tabs\TabChangeLog.cpp" />
     <ClCompile Include="src\ui\tabs\TabFeatures.cpp" />
     <ClCompile Include="src\ui\tabs\TabItemSpawner.cpp" />
     <ClCompile Include="src\ui\tabs\TabPalEditor.cpp" />

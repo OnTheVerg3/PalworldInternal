@@ -1,73 +1,101 @@
 #include <pch.h>
+#include <algorithm>
 #include "Tabs.h"
 #include "cheat_state.h"
 #include "ItemList.hpp"
-
+#include "src/ui/imgui_style.h"
 
 void TabItemSpawner()
 {
-	static int selectedCategoryIndex = 0;
-	static char searchBuf[128] = "";
-	static std::string selectedItemID = "";
+    static int selectedCategoryIndex = 0;
+    static char searchBuf[128] = "";
+    static std::string selectedItemID = "";
+    static int spawnCount = 1;
 
-	// Generate list of category names
-	std::vector<std::string> categoryNames;
-	for (const auto& [name, _] : itemlist::itemCategories)
-		categoryNames.push_back(name);
+    ImVec4 headerColor = ImVec4(1.0f, 0.9f, 0.6f, 1.0f);
+    ColoredSeparatorText("Item Spawner", headerColor);
+    ImGui::Spacing();
 
-	// Draw category combo box
-	if (ImGui::BeginCombo("Category", categoryNames[selectedCategoryIndex].c_str()))
-	{
-		for (int i = 0; i < categoryNames.size(); ++i)
-		{
-			bool isSelected = (i == selectedCategoryIndex);
-			if (ImGui::Selectable(categoryNames[i].c_str(), isSelected))
-				selectedCategoryIndex = i;
-			if (isSelected)
-				ImGui::SetItemDefaultFocus();
-		}
-		ImGui::EndCombo();
-	}
+    // === CATEGORY COMBO ===
+    std::vector<std::string> categoryNames;
+    categoryNames.push_back("All");
 
-	// Filter input
-	ImGui::InputText("Search", searchBuf, IM_ARRAYSIZE(searchBuf));
+    for (const auto& [name, _] : itemlist::itemCategories)
+        categoryNames.push_back(name);
 
-	// Get the selected category list
-	const auto& selectedList = *itemlist::itemCategories.at(categoryNames[selectedCategoryIndex]);
+    ImGui::Text("Category");
+    if (ImGui::BeginCombo("##Category", categoryNames[selectedCategoryIndex].c_str(), ImGuiComboFlags_HeightLarge))
+    {
+        for (int i = 0; i < categoryNames.size(); ++i)
+        {
+            bool isSelected = (i == selectedCategoryIndex);
+            if (ImGui::Selectable(categoryNames[i].c_str(), isSelected))
+                selectedCategoryIndex = i;
+            if (isSelected)
+                ImGui::SetItemDefaultFocus();
+        }
+        ImGui::EndCombo();
+    }
 
-	// Show filtered list
-	ImGui::BeginChild("ItemList", ImVec2(0, 300), true);
-	for (const auto& entry : selectedList)
-	{
-		std::string str = entry;
-		auto sep = str.find('|');
-		std::string id = str.substr(0, sep);
-		std::string label = (sep != std::string::npos) ? str.substr(sep + 1) : id;
+    ImGui::Spacing();
 
-		// Search filter
-		if (strstr(id.c_str(), searchBuf) || strstr(label.c_str(), searchBuf))
-		{
-			if (ImGui::Selectable(label.c_str(), selectedItemID == id))
-				selectedItemID = id;
-		}
-	}
-	ImGui::EndChild();
+    // === SEARCH FIELD ===
+    ImGui::SetNextItemWidth(-1);
+    ImGui::InputTextWithHint("##SearchBox", "Search for items...", searchBuf, IM_ARRAYSIZE(searchBuf));
+    ImGui::Spacing();
 
-	static int spawnCount = 1;
-	// Spawn button
-	if (!selectedItemID.empty())
-	{
-		ImGui::Text("Selected: %s", selectedItemID.c_str());
+    // === BUILD ITEM LIST ===
+    std::vector<const char*> selectedList;
+    if (selectedCategoryIndex == 0) // All
+    {
+        for (const auto& [_, items] : itemlist::itemCategories)
+            selectedList.insert(selectedList.end(), items->begin(), items->end());
+    }
+    else
+    {
+        const auto& selectedCatName = categoryNames[selectedCategoryIndex];
+        selectedList = *itemlist::itemCategories.at(selectedCatName);
+    }
 
-		ImGui::InputInt("Count", &spawnCount);
+    // === ITEM LIST WINDOW ===
+    ImGui::BeginChild("ItemListChild", ImVec2(0, 500), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
+    for (const char* entry : selectedList)
+    {
+        std::string str = entry;
+        auto sep = str.find('|');
+        std::string id = str.substr(0, sep);
+        std::string label = (sep != std::string::npos) ? str.substr(sep + 1) : id;
 
-		// Optional: Clamp count to safe values
-		if (spawnCount < 1) spawnCount = 1;
-		if (spawnCount > 9999) spawnCount = 9999;
+        std::string idLower = id;
+        std::string labelLower = label;
+        std::string searchLower = searchBuf;
 
-		if (ImGui::Button("Spawn Item"))
-		{
-			AddItemToInventoryByName(selectedItemID, spawnCount);
-		}
-	}
+        std::transform(idLower.begin(), idLower.end(), idLower.begin(), ::tolower);
+        std::transform(labelLower.begin(), labelLower.end(), labelLower.begin(), ::tolower);
+        std::transform(searchLower.begin(), searchLower.end(), searchLower.begin(), ::tolower);
+
+        if (idLower.find(searchLower) != std::string::npos || labelLower.find(searchLower) != std::string::npos)
+        {
+            if (ImGui::Selectable(label.c_str(), selectedItemID == id))
+                selectedItemID = id;
+        }
+    }
+    ImGui::EndChild();
+
+    ImGui::Spacing();
+
+    // === ITEM SELECTED + COUNT + SPAWN ===
+    if (!selectedItemID.empty())
+    {
+        ImGui::TextColored(headerColor, "Selected Item: %s", selectedItemID.c_str());
+        ImGui::SetNextItemWidth(160);
+        ImGui::SliderInt("##countslider", &spawnCount, 1, 9999, "Count: %d");
+
+        if (ImGui::Button("Spawn Item", ImVec2(-1, 0)))
+        {
+            AddItemToInventoryByName(selectedItemID, spawnCount);
+        }
+    }
+
+    ImGui::Separator();
 }

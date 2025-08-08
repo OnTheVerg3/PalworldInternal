@@ -1,4 +1,4 @@
-#include <pch.h>
+﻿#include <pch.h>
 #include <Engine.h>
 #include <Menu.h>
 #include <map>
@@ -60,74 +60,98 @@ namespace DX11Base
         }
 	}
 
-	namespace Tabs 
+    namespace Tabs
     {
         void TABMain()
         {
-            static int selectedMenu = 0; // 0 = AimbotESP, 1 = Features, etc.
+            static int selectedMenu = 0;
+            const char* menuItems[] = {
+                "Aimbot & ESP",
+                "Features",
+                "Pal Editor",
+                "Item Spawner",
+                "Teleporter",
+                "Settings",
+                "Changelog"
+            };
 
             ImGui::SetNextWindowSize(ImVec2(950, 700), ImGuiCond_FirstUseEver);
-            if (ImGui::Begin("##trainer", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoTitleBar))
+            ImGui::SetNextWindowPos(ImVec2(80, 60), ImGuiCond_FirstUseEver);
+
+            ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 8.0f);
+            ImGui::PushStyleVar(ImGuiStyleVar_FrameRounding, 6.0f);
+            ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(12, 12));
+
+            if (ImGui::Begin("##main", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoTitleBar))
             {
-                // Split into 2 columns: left (menu), right (content)
+                // Header
+                ImGui::TextColored(ImVec4(0.85f, 0.95f, 1.0f, 1.0f), "Palworld Trainer v1.5");
+                ImGui::Spacing();
+                ImGui::Separator();
+
                 ImGui::Columns(2, nullptr, false);
-                ImGui::SetColumnWidth(0, 150); // Left menu width
+                ImGui::SetColumnWidth(0, 180);
 
-                // LEFT MENU
-                if (ImGui::Button("Aimbot & ESP", ImVec2(-1, 40))) selectedMenu = 0;
-                if (ImGui::Button("Features", ImVec2(-1, 40)))     selectedMenu = 1;
+                // ==== SIDEBAR ====
+                ImGui::BeginChild("Sidebar", ImVec2(0, 0), true);
 
-                if (ImGui::Button("Pal Editor", ImVec2(-1, 40)))
+                for (int i = 0; i < IM_ARRAYSIZE(menuItems); ++i)
                 {
-                    selectedMenu = 2;
-                    cachedTamedPals.clear();     
-                    cachedBaseWorkers.clear();
-                    GetAllTamedPals(cachedTamedPals);
-                    GetAllBaseWorkers(cachedBaseWorkers);
+                    if (CustomButton(menuItems[i], ImVec2(-1, 36), selectedMenu == i))
+                        selectedMenu = i;
                 }
-                if (ImGui::Button("Item Spawner", ImVec2(-1, 40))) selectedMenu = 3;
-                if (ImGui::Button("Teleporter", ImVec2(-1, 40)))   selectedMenu = 4;
-                if (ImGui::Button("Settings", ImVec2(-1, 40)))     selectedMenu = 5;
 
+                ImGui::Spacing();
+                ImGui::Separator();
+                ImGui::Spacing();
+
+                // Exit button with red theme
+                ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.75f, 0.1f, 0.1f, 1.0f));
+                ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.9f, 0.2f, 0.2f, 1.0f));
+                ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(1.0f, 0.3f, 0.3f, 1.0f));
+
+                if (ImGui::Button("EXIT", ImVec2(-1, 32)))
+                    g_KillSwitch = TRUE;
+
+                ImGui::PopStyleColor(3);
+                ImGui::EndChild();
                 ImGui::NextColumn();
 
-                // RIGHT CONTENT AREA
-                ImGui::BeginChild("ContentRegion", ImVec2(0, 0), true);
+                // ==== CONTENT ====
+                ImGui::BeginChild("Content", ImVec2(0, 0), true);
 
                 switch (selectedMenu)
                 {
                 case 0: TabAimbotESP(); break;
                 case 1: TabFeatures(); break;
-                case 2: TabPalEditor(); break;
+                case 2:
+                    cachedTamedPals.clear();
+                    cachedBaseWorkers.clear();
+                    GetAllTamedPals(cachedTamedPals);
+                    GetAllBaseWorkers(cachedBaseWorkers);
+                    TabPalEditor();
+                    break;
                 case 3: TabItemSpawner(); break;
                 case 4: TabTeleporter(); break;
                 case 5:
                     DrawHotkeys();
                     ImGui::Separator();
-                    if (ImGui::Button("Save Config"))
-                        SaveConfig("config.txt");
+                    if (ImGui::Button("Save Config")) SaveConfig("config.txt");
                     ImGui::SameLine();
-                    if (ImGui::Button("Load Config"))
-                        LoadConfig("config.txt");
+                    if (ImGui::Button("Load Config")) LoadConfig("config.txt");
                     break;
+                case 6: TabChangeLog(); break;
                 }
 
                 ImGui::EndChild();
-
                 ImGui::Columns(1);
-
-                // UNHOOK button at bottom (full width)
-                if (ImGui::Button("UNHOOK", ImVec2(ImGui::GetContentRegionAvail().x, 20))) {
-#if CONSOLE_OUTPUT
-                    g_Console->printdbg("\n\n[+] UNHOOK INITIALIZED\n\n", Console::Colors::red);
-#endif
-                    g_KillSwitch = TRUE;
-                }
-
             }
+
             ImGui::End();
+            ImGui::PopStyleVar(3);
         }
-	}
+    }
+
 
     //----------------------------------------------------------------------------------------------------
     //										MENU

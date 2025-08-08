@@ -6,3 +6,4 @@ void TabFeatures();
 void TabItemSpawner();
 void TabTeleporter();
 void TabPalEditor();
+void TabChangeLog();

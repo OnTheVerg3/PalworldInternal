@@ -46,9 +46,6 @@ void SetupImGuiStyle()
 	style.Colors[ImGuiCol_PopupBg] = ImVec4(0.0784313753247261f, 0.08627451211214066f, 0.1019607856869698f, 0.9f);
 	style.Colors[ImGuiCol_Border] = ImVec4(0.1568627506494522f, 0.168627455830574f, 0.1921568661928177f, 0.9f);
 	style.Colors[ImGuiCol_BorderShadow] = ImVec4(0.0784313753247261f, 0.08627451211214066f, 0.1019607856869698f, 0.9f);
-	style.Colors[ImGuiCol_FrameBg] = ImVec4(0.1120669096708298f, 0.1262156516313553f, 0.1545064449310303f, 0.9f);
-	style.Colors[ImGuiCol_FrameBgHovered] = ImVec4(0.1568627506494522f, 0.168627455830574f, 0.1921568661928177f, 1.0f);
-	style.Colors[ImGuiCol_FrameBgActive] = ImVec4(0.1568627506494522f, 0.168627455830574f, 0.1921568661928177f, 1.0f);
 	style.Colors[ImGuiCol_TitleBg] = ImVec4(0.0470588244497776f, 0.05490196123719215f, 0.07058823853731155f, 1.0f);
 	style.Colors[ImGuiCol_TitleBgActive] = ImVec4(0.0470588244497776f, 0.05490196123719215f, 0.07058823853731155f, 1.0f);
 	style.Colors[ImGuiCol_TitleBgCollapsed] = ImVec4(0.0784313753247261f, 0.08627451211214066f, 0.1019607856869698f, 1.0f);
@@ -57,9 +54,7 @@ void SetupImGuiStyle()
 	style.Colors[ImGuiCol_ScrollbarGrab] = ImVec4(0.1176470592617989f, 0.1333333402872086f, 0.1490196138620377f, 1.0f);
 	style.Colors[ImGuiCol_ScrollbarGrabHovered] = ImVec4(0.1568627506494522f, 0.168627455830574f, 0.1921568661928177f, 1.0f);
 	style.Colors[ImGuiCol_ScrollbarGrabActive] = ImVec4(0.1176470592617989f, 0.1333333402872086f, 0.1490196138620377f, 1.0f);
-	style.Colors[ImGuiCol_CheckMark] = ImVec4(0.9725490212440491f, 1.0f, 0.4980392158031464f, 1.0f);
-	style.Colors[ImGuiCol_SliderGrab] = ImVec4(0.971993625164032f, 1.0f, 0.4980392456054688f, 1.0f);
-	style.Colors[ImGuiCol_SliderGrabActive] = ImVec4(1.0f, 0.7953379154205322f, 0.4980392456054688f, 1.0f);
+	style.Colors[ImGuiCol_CheckMark] = ImVec4(1.0f, 0.9f, 0.3f, 1.0f); // Soft yellow
 	style.Colors[ImGuiCol_Button] = ImVec4(0.1176470592617989f, 0.1333333402872086f, 0.1490196138620377f, 1.0f);
 	style.Colors[ImGuiCol_ButtonHovered] = ImVec4(0.1821731775999069f, 0.1897992044687271f, 0.1974248886108398f, 1.0f);
 	style.Colors[ImGuiCol_ButtonActive] = ImVec4(0.1545050293207169f, 0.1545048952102661f, 0.1545064449310303f, 1.0f);
@@ -92,4 +87,71 @@ void SetupImGuiStyle()
 	style.Colors[ImGuiCol_NavWindowingHighlight] = ImVec4(0.4980392158031464f, 0.5137255191802979f, 1.0f, 1.0f);
 	style.Colors[ImGuiCol_NavWindowingDimBg] = ImVec4(0.196078434586525f, 0.1764705926179886f, 0.5450980663299561f, 0.501960813999176f);
 	style.Colors[ImGuiCol_ModalWindowDimBg] = ImVec4(0.196078434586525f, 0.1764705926179886f, 0.5450980663299561f, 0.501960813999176f);
+	style.Colors[ImGuiCol_SliderGrab] = ImVec4(1.0f, 0.9f, 0.3f, 1.0f); // Thumb (grabber)
+	style.Colors[ImGuiCol_SliderGrabActive] = ImVec4(1.0f, 0.95f, 0.6f, 1.0f); // While held
+	style.Colors[ImGuiCol_FrameBg] = ImVec4(0.12f, 0.13f, 0.15f, 1.0f); // Track background
+	style.Colors[ImGuiCol_FrameBgHovered] = ImVec4(0.14f, 0.15f, 0.17f, 1.0f); // Track hover
+	style.Colors[ImGuiCol_FrameBgActive] = ImVec4(0.16f, 0.17f, 0.2f, 1.0f);
+}
+
+bool CustomButton(const char* label, ImVec2 size = ImVec2(0, 36), bool active = false)
+{
+	ImVec4 baseColor = active ? ImVec4(0.17f, 0.17f, 0.17f, 1.0f) : ImVec4(0.13f, 0.13f, 0.13f, 1.0f);
+	ImVec4 hoverColor = active ? ImVec4(0.20f, 0.20f, 0.20f, 1.0f) : ImVec4(0.18f, 0.18f, 0.18f, 1.0f);
+	ImVec4 activeColor = ImVec4(0.25f, 0.25f, 0.25f, 1.0f);
+	ImVec4 textColor = ImVec4(1.0f, 1.0f, 1.0f, 1.0f);
+	ImVec4 borderColor = active ? ImVec4(1.0f, 0.84f, 0.0f, 0.8f) : ImVec4(0, 0, 0, 0); // yellow border if active
+
+	ImGui::PushStyleColor(ImGuiCol_Button, baseColor);
+	ImGui::PushStyleColor(ImGuiCol_ButtonHovered, hoverColor);
+	ImGui::PushStyleColor(ImGuiCol_ButtonActive, activeColor);
+	ImGui::PushStyleColor(ImGuiCol_Text, textColor);
+	ImGui::PushStyleColor(ImGuiCol_Border, borderColor);
+
+	ImGui::PushStyleVar(ImGuiStyleVar_FrameRounding, 4.0f);
+	ImGui::PushStyleVar(ImGuiStyleVar_FrameBorderSize, active ? 1.0f : 0.0f); // subtle border only when selected
+
+	bool clicked = ImGui::Button(label, size);
+
+	ImGui::PopStyleVar(2);
+	ImGui::PopStyleColor(5);
+
+	return clicked;
+}
+
+void ColoredSeparatorText(const char* text, ImVec4 textColor, float thickness = 1.5f, float padding = 6.0f)
+{
+	ImGuiWindow* window = ImGui::GetCurrentWindow();
+	if (window->SkipItems) return;
+
+	ImGuiStyle& style = ImGui::GetStyle();
+	ImVec2 cursorPos = ImGui::GetCursorScreenPos();
+	float textWidth = ImGui::CalcTextSize(text).x;
+	float textHeight = ImGui::GetTextLineHeight();
+
+	// Position of the text
+	ImVec2 textPos = cursorPos;
+	textPos.y += -2.0f;
+
+	// Position of the line (right side of text)
+	float lineStartX = textPos.x + textWidth + 8.0f;
+	float lineEndX = cursorPos.x + ImGui::GetContentRegionAvail().x;
+	float lineY = textPos.y + textHeight * 0.5f;
+
+	// Add spacing to reserve height
+	ImGui::Dummy(ImVec2(0.0f, textHeight + -2.0f + 2.0f));
+
+	// Draw the right line
+	window->DrawList->AddLine(
+		ImVec2(lineStartX, lineY),
+		ImVec2(lineEndX, lineY),
+		ImGui::GetColorU32(ImGuiCol_Separator),
+		thickness
+	);
+
+	// Draw the colored text
+	ImGui::SetCursorScreenPos(textPos);
+	ImGui::PushStyleColor(ImGuiCol_Text, textColor);
+	ImGui::TextUnformatted(text);
+	ImGui::PopStyleColor();
 }

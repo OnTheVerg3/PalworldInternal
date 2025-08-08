@@ -323,10 +323,14 @@ void DrawPalRanksEditor(int selectedPalIndex)
         lastPalIndex = selectedPalIndex;
     }
 
-    ImGui::InputInt("Rank HP", &rankHp);
-    ImGui::InputInt("Rank Attack", &rankAtk);
-    ImGui::InputInt("Rank Defence", &rankDef);
-    ImGui::InputInt("Rank Craft Speed", &rankCraft);
+    ImGui::SetNextItemWidth(-1);
+    ImGui::SliderInt("##rankhp", &rankHp, 0, 255, "Rank HP = %d");
+    ImGui::SetNextItemWidth(-1);
+    ImGui::SliderInt("##rankatk", &rankAtk, 0, 255, "Rank Attack = %d");
+    ImGui::SetNextItemWidth(-1);
+    ImGui::SliderInt("##rankdef", &rankDef, 0, 255, "Rank Defence = %d");
+    ImGui::SetNextItemWidth(-1);
+    ImGui::SliderInt("##rankcraft", &rankCraft, 0, 255, "Rank Craft = %d");
 
     ImGui::Spacing();
 
@@ -483,100 +487,102 @@ void DrawPalPassiveSkillsEditor(int selectedPalIndex)
 
     if (selectedPalIndex < 0)
     {
-        ImGui::Text("Select a Pal from the list");
+        ImGui::TextColored(ImVec4(1, 0.5f, 0.5f, 1), "Select a Pal from the list.");
         return;
     }
-    else if (selectedPalIndex >= 10000) // Base Worker list
+
+    // Determine pal type
+    if (selectedPalIndex >= 10000)
     {
         int index = selectedPalIndex - 10000;
-        if (index >= cachedBaseWorkers.size())
-        {
-            ImGui::Text("Invalid Base Worker index");
-            return;
-        }
+        if (index >= cachedBaseWorkers.size()) return;
         pal = cachedBaseWorkers[index];
     }
-    else // Tamed Pal list
+    else
     {
-        if (selectedPalIndex >= cachedTamedPals.size())
-        {
-            ImGui::Text("Invalid Tamed Pal index");
-            return;
-        }
+        if (selectedPalIndex >= cachedTamedPals.size()) return;
         pal = cachedTamedPals[selectedPalIndex];
     }
 
-    if (!pal || !pal->CharacterParameterComponent)
-    {
-        ImGui::Text("Invalid Pal or missing parameters");
-        return;
-    }
+    if (!pal || !pal->CharacterParameterComponent) return;
 
     auto* params = pal->CharacterParameterComponent;
     auto* individualParams = params->GetIndividualParameter();
-    if (!individualParams)
-    {
-        ImGui::Text("No individual parameter found!");
-        return;
-    }
+    if (!individualParams) return;
 
     auto& saveData = individualParams->SaveParameter;
     auto& passiveSkills = saveData.PassiveSkillList;
 
-    // --- Show current passive skills ---
-    ImGui::TextColored(ImVec4(1, 1, 0.5f, 1), "Passive Skills:");
-    for (int i = 0; i < passiveSkills.Num(); i++)
+    // === CURRENT SKILLS LIST ===
+    if (passiveSkills.Num() > 0)
     {
-        std::string skillName = passiveSkills[i].ToString();
-        ImGui::BulletText("%s", skillName.c_str());
-
-        ImGui::SameLine();
-        if (ImGui::Button(("Remove##" + std::to_string(i)).c_str()))
+        ImGui::BeginChild("CurrentSkills", ImVec2(0, 110), true);
+        for (int i = 0; i < passiveSkills.Num(); ++i)
         {
-            passiveSkills.Remove(i);
-            break; // break to avoid iterator issues
+            const std::string skillName = passiveSkills[i].ToString();
+
+            ImGui::Columns(2, nullptr, false);
+            ImGui::Text("• %s", skillName.c_str());
+            ImGui::NextColumn();
+
+            ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 2);
+            std::string btnLabel = "Remove##" + std::to_string(i);
+            if (ImGui::SmallButton(btnLabel.c_str()))
+            {
+                passiveSkills.Remove(i);
+                break;
+            }
+
+            ImGui::Columns(1);
         }
+        ImGui::EndChild();
+    }
+    else
+    {
+        ImGui::TextDisabled("No passive skills assigned.");
     }
 
-    ImGui::Separator();
+    ImGui::Spacing();
 
-    // --- Search bar ---
+    // === SEARCH + SELECT ===
     static char searchBuffer[64] = "";
-    ImGui::InputText("Search", searchBuffer, IM_ARRAYSIZE(searchBuffer));
+    ImGui::SetNextItemWidth(-1);
+    ImGui::InputTextWithHint("##SearchSkill", "Search for a skill...", searchBuffer, IM_ARRAYSIZE(searchBuffer));
+
     std::string searchText = searchBuffer;
     std::transform(searchText.begin(), searchText.end(), searchText.begin(), ::tolower);
 
-    // --- Select skill ---
     static std::string selectedKey;
     const auto& skillDB = database::PassiveSkillDatabase;
 
-    ImGui::BeginChild("SkillList", ImVec2(0, 150), true);
-    for (auto& kv : skillDB)
-    {
-        std::string display = kv.second;
-        std::string lowerDisplay = display;
-        std::transform(lowerDisplay.begin(), lowerDisplay.end(), lowerDisplay.begin(), ::tolower);
+    ImGui::Spacing();
+    ImGui::BeginChild("SkillListSelectable", ImVec2(0, 170), true);
 
-        // Filter
-        if (!searchText.empty() && lowerDisplay.find(searchText) == std::string::npos)
+    for (const auto& kv : skillDB)
+    {
+        std::string label = kv.second;
+        std::string lower = label;
+        std::transform(lower.begin(), lower.end(), lower.begin(), ::tolower);
+
+        if (!searchText.empty() && lower.find(searchText) == std::string::npos)
             continue;
 
-        bool isSelected = (selectedKey == kv.first);
-        if (ImGui::Selectable(display.c_str(), isSelected))
-        {
+        bool selected = (selectedKey == kv.first);
+        if (ImGui::Selectable(label.c_str(), selected))
             selectedKey = kv.first;
-        }
     }
-    ImGui::EndChild();
 
-    // --- Add button ---
-    if (ImGui::Button("Add Passive Skill"))
+    ImGui::EndChild();
+    ImGui::Spacing();
+
+    // === ADD BUTTON ===
+    ImVec2 buttonSize = ImVec2(-1, 30);
+    if (ImGui::Button("Add Selected Skill", buttonSize))
     {
         if (!selectedKey.empty())
         {
-            // Check if already exists
             bool exists = false;
-            for (int i = 0; i < passiveSkills.Num(); i++)
+            for (int i = 0; i < passiveSkills.Num(); ++i)
             {
                 if (passiveSkills[i].ToString() == selectedKey)
                 {
@@ -588,15 +594,13 @@ void DrawPalPassiveSkillsEditor(int selectedPalIndex)
             if (!exists)
             {
                 static UKismetStringLibrary* lib = UKismetStringLibrary::GetDefaultObj();
-                SDK::FName fname = lib->Conv_StringToName(
-                    SDK::FString(std::wstring(selectedKey.begin(), selectedKey.end()).c_str())
-                );
-
+                SDK::FName fname = lib->Conv_StringToName(SDK::FString(std::wstring(selectedKey.begin(), selectedKey.end()).c_str()));
                 passiveSkills.Add(fname);
             }
         }
     }
 }
+
 
 void DumpAllPassiveSkills()
 {
