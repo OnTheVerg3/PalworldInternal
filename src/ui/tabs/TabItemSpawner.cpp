@@ -58,7 +58,7 @@ void TabItemSpawner()
     }
 
     // === ITEM LIST WINDOW ===
-    ImGui::BeginChild("ItemListChild", ImVec2(0, 500), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
+    ImGui::BeginChild("ItemListChild", ImVec2(0, 400), true, ImGuiWindowFlags_AlwaysUseWindowPadding);
     for (const char* entry : selectedList)
     {
         std::string str = entry;

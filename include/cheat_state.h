@@ -26,8 +26,20 @@ void SetWeaponDamage();
 void SetInfiniteMagazine();
 void TeleportPlayerToHome();
 void RevealMapAroundPlayer();
+
 //Debug
 void DebugBuildOverlap();
+
+//SinglePlayer
+void ExploitFly();
+void SetPlayerDefenseParam();
+void SetCraftingSpeed();
+void AddTechPoints();
+void AddAncientTechPoints();
+void RemoveTechPoints();
+void RemoveAncientTechPoint();
+void SetPlayerSpeed();
+void SetPlayerLevel();
 
 struct CheatState
 { 
@@ -44,12 +56,14 @@ struct CheatState
     float cameraBrightness = 0.0f;
 
     //Aimbot
+    bool isSilent = true;
 	bool aimbotEnabled = false;
 	bool aimbotShowFov = false;
 	bool aimbotDrawFOV = false;
 	float aimbotFov = 120.0f;
 	float aimbotSmooth = 0.1f;
     int aimbotHotkey = VK_MENU;
+    bool aimbotVisibilityCheck = true;
 
     // ESP
     bool espEnabled = true;
@@ -62,6 +76,19 @@ struct CheatState
     bool espShowPals = true;
     bool espShowRelics = true;
     bool espShowWaypoints = false;
+
+    //SinglePlayer
+    bool isFly = false;
+    float craftingSpeed = 1.0f;
+    __int32 addTechPoints = 0;
+    __int32 addAnchientTechPoints = 0;
+    __int32 removeTechPoints = 0;
+    __int32 removeAnchientTechPoints = 0;
+    int defence = 0;
+    float speedMultiplier = 600.0f;
+    __int32 playerLevel = 0;
+    __int32 palCaptureCount = 0;
+    int expToAdd = 0;
 
     // Misc
     bool showMenu = true;
@@ -96,6 +123,11 @@ struct Hotkeys
     bool repairWeapon = false;
 
 };
+
+namespace gSilent
+{
+    inline SDK::APalCharacter* targetPal = nullptr;
+}
 
 inline CheatState cheatState;
 extern Hotkeys key;

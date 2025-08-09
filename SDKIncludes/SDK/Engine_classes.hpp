@@ -5934,6 +5934,7 @@ public:
 	uint8                                         bAttachToPawn : 1;                                 // 0x0320(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         Pad_321[0x7];                                      // 0x0321(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
+
 public:
 	void ClientSetLocation(const struct FVector& NewLocation, const struct FRotator& NewRotation);
 	void ClientSetRotation(const struct FRotator& NewRotation, bool bResetCamera);

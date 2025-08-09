@@ -1,19 +1,10 @@
 ﻿#include <pch.h>
 #include "cheat_state.h"
-#include "Engine_classes.hpp"
-#include "Pal_classes.hpp"
 #include "Menu.h"
-#include "Engine.h"
 #include "pal_editor.h"
-#include <libs/MinHook/MinHook.h>
-#include <algorithm>
-#include <string>
-#include <locale>
-#include <codecvt>
 
 using namespace SDK;
 using namespace Helper;
-using namespace DX11Base;
 
 float GetDistanceToActor(AActor* pLocal, AActor* pTarget)
 {

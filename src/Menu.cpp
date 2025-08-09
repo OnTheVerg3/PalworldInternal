@@ -67,7 +67,8 @@ namespace DX11Base
             static int selectedMenu = 0;
             const char* menuItems[] = {
                 "Aimbot & ESP",
-                "Features",
+                "Online Features",
+                "Single Player",
                 "Pal Editor",
                 "Item Spawner",
                 "Teleporter",
@@ -124,23 +125,25 @@ namespace DX11Base
                 {
                 case 0: TabAimbotESP(); break;
                 case 1: TabFeatures(); break;
-                case 2:
+                case 2: TabSinglePlayer(); break;
+                case 3:
                     cachedTamedPals.clear();
                     cachedBaseWorkers.clear();
                     GetAllTamedPals(cachedTamedPals);
                     GetAllBaseWorkers(cachedBaseWorkers);
                     TabPalEditor();
                     break;
-                case 3: TabItemSpawner(); break;
-                case 4: TabTeleporter(); break;
-                case 5:
+                case 4: TabItemSpawner(); break;
+                case 5: TabTeleporter(); break;
+                case 6:
                     DrawHotkeys();
                     ImGui::Separator();
                     if (ImGui::Button("Save Config")) SaveConfig("config.txt");
                     ImGui::SameLine();
                     if (ImGui::Button("Load Config")) LoadConfig("config.txt");
                     break;
-                case 6: TabChangeLog(); break;
+                case 7: TabChangeLog(); break;
+                
                 }
 
                 ImGui::EndChild();

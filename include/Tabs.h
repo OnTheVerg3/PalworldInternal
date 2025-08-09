@@ -7,3 +7,4 @@ void TabItemSpawner();
 void TabTeleporter();
 void TabPalEditor();
 void TabChangeLog();
+void TabSinglePlayer();

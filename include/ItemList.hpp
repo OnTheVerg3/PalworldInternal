@@ -756,7 +756,7 @@ namespace itemlist
         "PalSphere|Pal Sphere",
         "PalSphere_Robbery|Radar Sphere",
         "PalSphere_Master|Ultra Sphere",
-        "PalSphere_Debug|Dev Sphere",
+        "PalSphere_Debug|Dev Sphere [Palguard Detected]",
     };
 
     const std::vector<const char*> seeds =

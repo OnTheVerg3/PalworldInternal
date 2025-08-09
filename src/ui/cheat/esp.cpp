@@ -73,7 +73,7 @@ void DrawRelicESPText(ImVec2 screenPos, const char* nameLabel, float distance)
     }
 }
 
-void DrawESPText(ImVec2 screenPos, const char* name, float distance = -1.0f)
+void DrawESPText(ImVec2 screenPos, const char* name, float distance = -1.0f, ImU32 color = IM_COL32(255, 255, 255, 255))
 {
     // Skip entire ESP if out of range
     if (distance >= 0.0f && distance > cheatState.espDistance)
@@ -83,13 +83,14 @@ void DrawESPText(ImVec2 screenPos, const char* name, float distance = -1.0f)
     ImVec2 pos = screenPos;
     pos.x -= nameSize.x / 2.0f;
 
-    // Name box
-    ImVec2 bgMin = ImVec2(pos.x - 4, pos.y - 2);
-    ImVec2 bgMax = ImVec2(pos.x + nameSize.x + 4, pos.y + nameSize.y + 2);
-    ImGui::GetBackgroundDrawList()->AddText(ImVec2(pos.x + 1, pos.y + 1), IM_COL32(0, 0, 0, 200), name);
-    ImGui::GetBackgroundDrawList()->AddText(pos, IM_COL32(255, 255, 255, 255), name);
+    // Outline
+    ImGui::GetBackgroundDrawList()->AddText(ImVec2(pos.x + 1, pos.y + 1),
+        IM_COL32(0, 0, 0, 200), name);
 
-    // Optional distance label (only if in range)
+    // Main text with passed color
+    ImGui::GetBackgroundDrawList()->AddText(pos, color, name);
+
+    // Optional distance label
     if (cheatState.espShowDistance && distance >= 0.0f && distance <= cheatState.espDistance)
     {
         char distText[32];
@@ -98,14 +99,18 @@ void DrawESPText(ImVec2 screenPos, const char* name, float distance = -1.0f)
         ImVec2 distSize = ImGui::CalcTextSize(distText);
         ImVec2 distPos = ImVec2(screenPos.x - distSize.x / 2.0f, pos.y + nameSize.y + 4);
 
-        ImVec2 distBgMin = ImVec2(distPos.x - 4, distPos.y - 2);
-        ImVec2 distBgMax = ImVec2(distPos.x + distSize.x + 4, distPos.y + distSize.y + 2);
-        ImGui::GetBackgroundDrawList()->AddRectFilled(distBgMin, distBgMax, IM_COL32(0, 0, 0, 140), 4.0f);
-        ImGui::GetBackgroundDrawList()->AddText(ImVec2(distPos.x + 1, distPos.y + 1), IM_COL32(0, 0, 0, 200), distText);
-        ImGui::GetBackgroundDrawList()->AddText(distPos, IM_COL32(120, 255, 120, 255), distText);
+        ImGui::GetBackgroundDrawList()->AddRectFilled(
+            ImVec2(distPos.x - 4, distPos.y - 2),
+            ImVec2(distPos.x + distSize.x + 4, distPos.y + distSize.y + 2),
+            IM_COL32(0, 0, 0, 140), 4.0f);
+
+        ImGui::GetBackgroundDrawList()->AddText(ImVec2(distPos.x + 1, distPos.y + 1),
+            IM_COL32(0, 0, 0, 200), distText);
+
+        ImGui::GetBackgroundDrawList()->AddText(distPos,
+            IM_COL32(120, 255, 120, 255), distText);
     }
 }
-
 
 void DrawPalESP()
 {
@@ -166,6 +171,8 @@ void DrawPalESP()
 
         UPalCharacterParameterComponent* params = pal->CharacterParameterComponent;
 
+        const bool isVisible = Helper::HasCameraLOS_Kismet(controller, player, pal);
+
         if (cheatState.espShowPalHealth && params)
         {
             float currentHealth = 0.0f;
@@ -222,11 +229,13 @@ void DrawPalESP()
                 palName = GetCleanPalName(rawName);
         }
 
-
         // Show name
         char label[128];
         snprintf(label, sizeof(label), "%s", palName.c_str());
-        DrawESPText(ImVec2(screenPos.X, screenPos.Y), palName.c_str(), distance);
+        DrawESPText(ImVec2(screenPos.X, screenPos.Y),
+            palName.c_str(),
+            distance,
+            isVisible ? IM_COL32(200, 255, 200, 255) : IM_COL32(160, 160, 160, 200));
 
     }
 }
@@ -386,7 +395,6 @@ void DrawRelicESP()
     }
 }
 
-
 void DebugNearbyActors(float radius)
 {
     uintptr_t moduleBase = (uintptr_t)GetModuleHandle(NULL); // Only works if injected into game process
@@ -427,6 +435,7 @@ void DebugNearbyActors(float radius)
     }
     g_Console->cLog("[RelicDebug] Total matching objects: %d\n", Console::EColor_green, found);
 }
+
 
 
 

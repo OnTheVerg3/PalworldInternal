@@ -177,4 +177,74 @@ namespace Helper
             (a.Y - b.Y) * (a.Y - b.Y)
         );
     }
+
+    bool HasCameraLOS_Kismet(SDK::APlayerController* PC,
+        SDK::APalPlayerCharacter* Player,
+        SDK::APalCharacter* Pal)
+    {
+        if (!PC || !Player || !Pal) return false;
+
+        // Camera origin
+        FVector camLoc; FRotator camRot;
+        PC->GetPlayerViewPoint(&camLoc, &camRot);
+
+        // Target points (remove head if your dump lacks it)
+        const FVector head = Pal->GetHPGaugeLocation();
+        const FVector base = Pal->K2_GetActorLocation();
+        const FVector chest = base + FVector(0.f, 0.f, 40.f);
+
+        // Use TraceTypeQuery1 (commonly Visibility)
+        const SDK::ETraceTypeQuery visTrace = SDK::ETraceTypeQuery::TraceTypeQuery1;
+
+        auto TryPoint = [&](const FVector& tgt)->bool
+            {
+                // Pass 1: ignore only the local player
+                SDK::TArray<SDK::AActor*> ignore1;
+                ignore1.Add(Player);
+
+                SDK::FHitResult hit1{};
+                const bool pass1 =
+                    SDK::UKismetSystemLibrary::LineTraceSingle(
+                        /*WorldContextObject*/ Player,
+                        /*Start*/ camLoc,
+                        /*End*/   tgt,
+                        /*TraceChannel*/ visTrace,
+                        /*bTraceComplex*/ true,
+                        /*ActorsToIgnore*/ ignore1,
+                        /*DrawDebugType*/ SDK::EDrawDebugTrace::ForDuration,
+                        /*OutHit*/ &hit1,
+                        /*bIgnoreSelf*/ true,
+                        /*TraceColor*/   SDK::FLinearColor(0, 0, 0, 0),
+                        /*TraceHitColor*/SDK::FLinearColor(0, 0, 0, 0),
+                        /*DrawTime*/     3.0f
+                    );
+
+                if (!hit1.bBlockingHit)
+                    return true; // clear path
+
+                // Pass 2: also ignore the Pal; if it becomes clear, first hit was the Pal
+                SDK::TArray<SDK::AActor*> ignore2 = ignore1;
+                ignore2.Add(Pal);
+
+                SDK::FHitResult hit2{};
+                const bool pass2 =
+                    SDK::UKismetSystemLibrary::LineTraceSingle(
+                        Player, camLoc, tgt, visTrace, true, ignore2,
+                        SDK::EDrawDebugTrace::None, &hit2, true,
+                        SDK::FLinearColor(0, 0, 0, 0), SDK::FLinearColor(0, 0, 0, 0), 0.0f
+                    );
+
+                if (!hit2.bBlockingHit)
+                    return true; // after ignoring Pal, nothing blocks => Pal was first hit
+
+                return false;    // still blocked by world/other
+            };
+
+        if (TryPoint(head))  return true;
+        if (TryPoint(chest)) return true;
+        if (TryPoint(base))  return true;
+
+        return false;
+    }
+
 }

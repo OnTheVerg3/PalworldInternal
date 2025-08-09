@@ -299,12 +299,14 @@
     <ClCompile Include="src\ui\cheat\esp.cpp" />
     <ClCompile Include="src\ui\cheat\hotkeys.cpp" />
     <ClCompile Include="src\ui\cheat\pal_editor.cpp" />
+    <ClCompile Include="src\ui\cheat\singleplayer_state.cpp" />
     <ClCompile Include="src\ui\imgui_style.cpp" />
     <ClCompile Include="src\ui\tabs\TabAimbotESP.cpp" />
     <ClCompile Include="src\ui\tabs\TabChangeLog.cpp" />
     <ClCompile Include="src\ui\tabs\TabFeatures.cpp" />
     <ClCompile Include="src\ui\tabs\TabItemSpawner.cpp" />
     <ClCompile Include="src\ui\tabs\TabPalEditor.cpp" />
+    <ClCompile Include="src\ui\tabs\TabSinglePlayer.cpp" />
     <ClCompile Include="src\ui\tabs\TabTeleporter.cpp" />
   </ItemGroup>
   <ItemGroup>

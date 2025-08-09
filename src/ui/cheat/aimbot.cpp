@@ -75,6 +75,8 @@ AimbotTarget FindBestPalTarget(APlayerController* controller, FVector2D screenCe
         if (!controller || !controller->K2_GetPawn())
             continue;
 
+        gSilent::targetPal = pal; // Store globally for silent aim
+
         // Validate distance
         float distance = controller->K2_GetPawn()->GetDistanceTo(pal);
         if (distance > maxDistance)
@@ -108,31 +110,33 @@ void MoveMouseRelative(int dx, int dy)
 
 void RunPalAimbot()
 {
-    // Get player and controller
     APalPlayerCharacter* player = GetPalPlayerCharacter();
     if (!player) return;
 
     APalPlayerController* controller = GetPalPlayerController();
     if (!controller) return;
 
-    // Screen center for FOV
     FVector2D screenCenter(ImGui::GetIO().DisplaySize.x / 2.0f, ImGui::GetIO().DisplaySize.y / 2.0f);
 
-    // Find best target
     AimbotTarget target = FindBestPalTarget(controller, screenCenter, cheatState.aimbotFov);
 
-    // Ensure target is valid and alive
     if (!target.Pal || !IsAlive(target.Pal))
         return;
 
-    // Try to get the head bone location
+    //Visibility check :)
+    if (cheatState.aimbotVisibilityCheck)
+    {
+        const bool isVisible = Helper::HasCameraLOS_Kismet(controller, player, target.Pal);
+        if (!isVisible)
+            return;
+    }
     FVector targetLoc = FVector(0, 0, 0);
-    targetLoc = target.Pal->K2_GetActorLocation(); // default fallback
+    targetLoc = target.Pal->K2_GetActorLocation();
     USkeletalMeshComponent* mesh = target.Pal->Mesh;
 
     if (mesh)
     {
-        int boneIndex = 6; // Head bone index (adjust if needed)
+        int boneIndex = 6;
         if (boneIndex >= 0 && boneIndex < mesh->GetNumBones())
         {
             FName headBoneName = mesh->GetBoneName(boneIndex);
@@ -147,25 +151,20 @@ void RunPalAimbot()
 
     if (!controller) return;
 
-    // Get current camera location & rotation
     FVector cameraLoc;
     FRotator cameraRot;
     controller->GetPlayerViewPoint(&cameraLoc, &cameraRot);
 
-    // Calculate desired aim rotation
     FRotator desiredRot = CalcLookAtRotation(cameraLoc, targetLoc);
     desiredRot.Roll = 0.0f;
 
-    // Smooth factor
     float smooth = cheatState.aimbotSmooth;
     if (smooth < 0.0f) smooth = 0.0f;
     if (smooth > 1.0f) smooth = 1.0f;
 
-    // Calculate pitch & yaw delta
     float deltaYaw = desiredRot.Yaw - cameraRot.Yaw;
     float deltaPitch = desiredRot.Pitch - cameraRot.Pitch;
 
-    // Normalize angle deltas
     if (deltaYaw > 180.f) deltaYaw -= 360.f;
     if (deltaYaw < -180.f) deltaYaw += 360.f;
 
@@ -189,7 +188,6 @@ void RunPalAimbot()
     int mouseX = static_cast<int>(rawX);
     int mouseY = static_cast<int>(rawY);
 
-    // If smooth = 0 (snap mode) force movement
     if (smooth <= 0.001f)
     {
         if (mouseX == 0 && fabsf(rawX) > 0.01f)
@@ -199,7 +197,6 @@ void RunPalAimbot()
             mouseY = (rawY > 0.0f ? 1 : -1);
     }
 
-    // Move mouse relative to delta
     MoveMouseRelative(mouseX, mouseY);
 }
 

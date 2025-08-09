@@ -20,6 +20,9 @@
 #include <chrono>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
+#include <locale>
+#include <codecvt>
 
 // DIRECTX
 #include <d3d11.h>

@@ -239,10 +239,13 @@
     <ClCompile Include="src\ui\cheat\pal_editor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\TabChangeLog.cpp">
+    <ClCompile Include="src\ui\tabs\TabChangeLog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ui\tabs\TabChangeLog.cpp">
+    <ClCompile Include="src\ui\cheat\singleplayer_state.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\tabs\TabSinglePlayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
