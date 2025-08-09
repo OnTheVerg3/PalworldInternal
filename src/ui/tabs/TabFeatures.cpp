@@ -40,8 +40,12 @@ void TabFeatures()
 	if (ImGui::Button("Collect Relics/Lifemunks", ImVec2(-1, 0)))
 		CollectAllRelicsInMap();
 
-	if (ImGui::Button("Reveal Nearby Map", ImVec2(-1, 0)))
+	if (ImGui::Button("Reveal Map", ImVec2(-1, 0)))
 		RevealMapAroundPlayer();
+
+	if (ImGui::Button("Open Map"))
+		OpenFastTravelMap();
+
 
 	ImGui::EndGroup();
 

@@ -58,16 +58,6 @@ void SetPlayerInventoryWeight()
 		return;
 
 	pInventory->MaxInventoryWeight = cheatState.weight;
-	pInventory->PassiveBuffedMaxWeight = cheatState.weight;
-
-	pInventory->NowItemWeight = (std::min)(pInventory->NowItemWeight, cheatState.weight);
-	pInventory->PassiveBuffedCurrentWeight = 0.0f;
-
-	//Fix1
-	if (APalPlayerController* controller = GetPalPlayerController())
-	{
-		controller->OnOverWeightInventory(pInventory->NowItemWeight);
-	}
 
 	// Not really necessary, but just in case if there are checks in the game that rely on these values
 	pInventory->OnRep_maxInventoryWeight();
@@ -426,30 +416,153 @@ void CollectAllRelicsInMap()
 
 void RevealMapAroundPlayer()
 {
-	static UKismetStringLibrary* lib = UKismetStringLibrary::GetDefaultObj();
+	int touched = 0;
+	int nullStreak = 0, idx = 0;
 
-	APalCharacter* player = GetPalPlayerCharacter();
-	if (!player) return;
-
-	APalPlayerState* playerState = GetPalPlayerState();
-	if (!playerState || !playerState->WorldMapData)
+	while (nullStreak < 50000)
 	{
-		printf("[MapDebug] PlayerState or WorldMapData is null.\n");
-		return;
+		SDK::UObject* obj = SDK::UObject::GObjects->GetByIndex(idx++);
+		if (!obj) { ++nullStreak; continue; }
+		nullStreak = 0;
+
+		if (obj->IsA(SDK::UPalGameSetting::StaticClass()) && !obj->IsDefaultObject())
+		{
+			static_cast<SDK::UPalGameSetting*>(obj)->worldmapUIMaskClearSize = 20000.0f;
+			++touched;
+		}
 	}
 
-	UPalWorldMapUIData* mapData = playerState->WorldMapData;
-
-	FName regionName = lib->Conv_StringToName(FString(L"M"));
-	mapData->UnlockMap(regionName, 0);
-
-	FVector playerLoc = player->K2_GetActorLocation();
-	FVector2f flatLoc(playerLoc.X, playerLoc.Y);
-	mapData->UnlockByScroll(100000.0f, flatLoc);
+	int touchedCDO = 0;
+	if (auto* cdo = static_cast<SDK::UPalGameSetting*>(
+		SDK::UObject::FindObjectFastImpl("Default__PalGameSetting")))
+	{
+		cdo->worldmapUIMaskClearSize = 20000.0f;
+		touchedCDO = 1;
+	}
 }
 
+void UnlockAllFastTravelPoints()
+{
+	APalPlayerController* PC = GetPalPlayerController();
+	APalPlayerCharacter* Player = GetPalPlayerCharacter();
+	if (!PC || !Player) { printf("[FTUnlock] missing PC/Player\n"); return; }
+
+	// announce start (like the Lua)
+	if (auto* Util = SDK::UPalUtility::GetDefaultObj())
+		Util->SendSystemAnnounce(PC, FString(L"Attempting to unlock all Fast Travel Points..."));
+
+	const bool bAuthority =
+		(APalPlayerState*)Player->PlayerState ? ((APalPlayerState*)Player->PlayerState)->HasAuthority()
+		: Player->HasAuthority();
+
+	auto* NetPlayer = (PC->Transmitter ? PC->Transmitter->Player : nullptr);
+
+	int total = 0, changed = 0, nulls = 0, idx = 0;
+	while (nulls < 50000)
+	{
+		SDK::UObject* obj = SDK::UObject::GObjects->GetByIndex(idx++);
+		if (!obj) { ++nulls; continue; }
+		nulls = 0;
+
+		if (!obj->IsA(SDK::APalLevelObjectUnlockableFastTravelPoint::StaticClass())) continue;
+		auto* FT = static_cast<SDK::APalLevelObjectUnlockableFastTravelPoint*>(obj);
+		++total;
+
+		if (FT->bUnlocked) continue;
+
+		if (bAuthority)
+		{
+			// Host/SP: exact same path as the Nexus Lua (ID 26 == UnlockFastTravel)
+			FT->OnTriggerInteract(Player, EPalInteractiveObjectIndicatorType::UnlockFastTravel);
+			++changed;
+		}
+		else if (NetPlayer)
+		{
+			// Client fallback: ask the server to unlock by ID
+			NetPlayer->RequestUnlockFastTravelPoint_ToServer(FT->FastTravelPointID);
+			++changed;
+		}
+	}
+}
+
+static int gFT_RetryFrames = 0;
+
+void OpenFastTravelMap()
+{
+	// 0) PC / HUD
+	auto* PC = GetPalPlayerController();
+	if (!PC) { printf("[FTMap] No PC\n"); return; }
+
+	// 1) Flip the default parameter once
+	auto* DefParam = SDK::UPalHUDDispatchParameter_WorldMap::GetDefaultObj();
+	if (DefParam && !DefParam->CanFastTravel)
+	{
+		DefParam->CanFastTravel = true;
+		printf("[FTMap] CDO: CanFastTravel = true\n");
+	}
+
+	// 2) Use HUD SERVICE to push the map with our param (the CDO). This avoids constructing a new UObject.
+	SDK::UPalHUDService* HS = SDK::UPalUtility::GetHUDService(PC);
+	if (!HS) { printf("[FTMap] No HUDService\n"); return; }
+
+	// Push and immediately get the real instance back
+	const FGuid id = HS->Push(SDK::UPalUIWorldMap::StaticClass(),
+		DefParam /* pass CDO as parameter */);
+	if (!id.A) { printf("[FTMap] Push failed\n"); return; }
+
+	if (SDK::UPalUserWidgetStackableUI* base = HS->GetWidget(id))
+	{
+		if (auto* map = static_cast<SDK::UPalUIWorldMap*>(base))
+		{
+			// Initialize normal map data
+			map->CreateWorldMapData(SDK::EPalWorldMapType::Normal);
+			printf("[FTMap] Map opened (fast travel param passed)\n");
+			return;
+		}
+	}
+
+	// Fallback: if GetWidget didn’t return our instance yet, at least we pushed it.
+	printf("[FTMap] Map pushed; instance not yet resolved\n");
+}
+
+void FastTravelRetryStep()
+{
+	if (gFT_RetryFrames <= 0) return;
+	--gFT_RetryFrames;
+
+	// Only work while the map is actually open
+	bool mapOpen = false;
+	for (int i = 0; i < SDK::UObject::GObjects->Num(); ++i)
+	{
+		auto* Obj = SDK::UObject::GObjects->GetByIndex(i);
+		if (!Obj) continue;
+		if (Obj->IsA(SDK::UPalUIWorldMap::StaticClass())) { mapOpen = true; break; }
+	}
+	if (!mapOpen) return;
+
+	// Flip any newly-created dispatch params to true (if CDO timing missed)
+	int found = 0, changed = 0;
+	for (int i = 0; i < SDK::UObject::GObjects->Num(); ++i)
+	{
+		auto* Obj = SDK::UObject::GObjects->GetByIndex(i);
+		if (!Obj) continue;
+		if (!Obj->IsA(SDK::UPalHUDDispatchParameter_WorldMap::StaticClass())) continue;
+
+		++found;
+		auto* Param = static_cast<SDK::UPalHUDDispatchParameter_WorldMap*>(Obj);
+		if (!Param->CanFastTravel)
+		{
+			Param->CanFastTravel = true;
+			++changed;
+			printf("[FTMap] Enabled fast travel on param: %s\n", Obj->GetFullName().c_str());
+			break; // one is enough
+		}
+	}
+	if (found) printf("[FTMap] Params seen: %d (changed %d)\n", found, changed);
+}
 
 ///////////////////////////////////// DEBUG FUNCTIONS ///////////////////////////////////////
+
 void DebugBuildOverlap()
 {
 	SDK::APalPlayerCharacter* player = GetPalPlayerCharacter();

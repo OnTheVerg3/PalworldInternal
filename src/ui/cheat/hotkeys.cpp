@@ -56,8 +56,10 @@ void TickHotkeys()
 		
     }
 
-    
-
+    if (GetAsyncKeyState(key.hotkeyFastTravelMap) & 1)
+    {
+        OpenFastTravelMap(); // Your function that sets CDO + opens map
+    }   
 }
 
 void TickHotkeysOneShot()
@@ -96,7 +98,7 @@ void DrawHotkeys()
     };
 
     static bool waitingWorld = false, waitingESP = false, waitingStamina = false, waitingRelic = false, waitingAttack = false, waitingRepair = false, 
-        waitingTeleportHome = false;
+        waitingTeleportHome = false, waitingFastTravelMap = false;
 
     HotkeyEntry hotkeys[] = {
     { "World Speed 1:10", &key.hotkeyToggleWorldSpeed, &waitingWorld, &key.worldSpeedToggled },
@@ -106,6 +108,7 @@ void DrawHotkeys()
     { "Attack 1:90000", &key.hotkeyToggleAttack, &waitingAttack, &key.attackToggled },
     { "Repair Current Weapon", &key.hotkeyRepairWeapon, &waitingRepair, nullptr },
     { "Teleport Home", &key.hotkeyTeleportHome, &waitingTeleportHome, nullptr },
+    { "Open Fast Travel Map", &key.hotkeyFastTravelMap, &waitingFastTravelMap, nullptr },
     };
 
     for (auto& entry : hotkeys)

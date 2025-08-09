@@ -749,14 +749,16 @@ namespace itemlist
 
     const std::vector<const char*> palspheres =
     {
-        "PalSphere_Giga|Giga Sphere",
-        "PalSphere_Tera|Hyper Sphere",
-        "PalSphere_Legend|Legendary Sphere",
-        "PalSphere_Mega|Mega Sphere",
-        "PalSphere|Pal Sphere",
-        "PalSphere_Robbery|Radar Sphere",
-        "PalSphere_Master|Ultra Sphere",
+        "PalSphere|Pal Sphere [Power 7]",
+        "PalSphere_Mega|Mega Sphere [Power 14]",
+        "PalSphere_Giga|Giga Sphere [Power 20]",
+        "PalSphere_Tera|Hyper Sphere [Power 26]",
+        "PalSphere_Master|Ultra Sphere [Power 32]",
+        "PalSphere_Legend|Legendary Sphere [Power 37]",
+        "PalSphere_Ultimate|Ultimate Sphere [Power 43]",
+        "PalSphere_Exotic|Exotic Sphere [Power 48]",
         "PalSphere_Debug|Dev Sphere [Palguard Detected]",
+        "PalSphere_Robbery|Radar Sphere",
     };
 
     const std::vector<const char*> seeds =

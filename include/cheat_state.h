@@ -26,6 +26,9 @@ void SetWeaponDamage();
 void SetInfiniteMagazine();
 void TeleportPlayerToHome();
 void RevealMapAroundPlayer();
+void UnlockAllFastTravelPoints();
+void OpenFastTravelMap();
+void FastTravelRetryStep();
 
 //Debug
 void DebugBuildOverlap();
@@ -114,6 +117,7 @@ struct Hotkeys
     int hotkeyToggleAttack = VK_F5;
     int hotkeyRepairWeapon = VK_F6;
 	int hotkeyTeleportHome = VK_F7;
+    int hotkeyFastTravelMap = 0x4D;
 
     bool worldSpeedToggled = false;
 	bool staminaToggled = false;

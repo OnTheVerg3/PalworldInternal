@@ -66,4 +66,10 @@ void TabSinglePlayer()
     ImGui::SameLine();
     if (ImGui::Button("Remove Ancient"))
         RemoveAncientTechPoint();
+
+
+    if (ImGui::Button("Unlock Teleport Towers"))
+    {
+        UnlockAllFastTravelPoints();
+    }
 }
