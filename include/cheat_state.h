@@ -27,8 +27,6 @@ void SetInfiniteMagazine();
 void TeleportPlayerToHome();
 void RevealMapAroundPlayer();
 void UnlockAllFastTravelPoints();
-void OpenFastTravelMap();
-void FastTravelRetryStep();
 
 //Debug
 void DebugBuildOverlap();
@@ -56,7 +54,7 @@ struct CheatState
     bool infMag = false;
     bool infStamina = false;
     float cameraFov = 90.0f;
-    float cameraBrightness = 0.0f;
+    float cameraBrightness = 1.0f;
 
     //Aimbot
     bool isSilent = true;

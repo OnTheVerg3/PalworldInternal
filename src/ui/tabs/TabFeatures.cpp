@@ -22,30 +22,19 @@ void TabFeatures()
 	// Attack Multiplier
 	ImGui::SliderInt("##attackmult", &cheatState.attack, 1, 5000, "Attack: %d");
 	if (ImGui::IsItemDeactivatedAfterEdit()) SetPlayerAttackParam();
-	ImGui::SameLine();
-	if (ImGui::Button("Reset TODO"))
-	{
-	}
 
 	// Weight
 	ImGui::SliderFloat("##weight", &cheatState.weight, 1.0f, 100000.0f, "Weight: %.0f");
 	if (ImGui::IsItemDeactivatedAfterEdit()) SetPlayerInventoryWeight();
 	ImGui::SameLine();
-	if (ImGui::Button("Reset TODO"))
-	{
-	}
 
 	ImGui::Spacing();
 
 	if (ImGui::Button("Collect Relics/Lifemunks", ImVec2(-1, 0)))
 		CollectAllRelicsInMap();
 
-	if (ImGui::Button("Reveal Map", ImVec2(-1, 0)))
+	if (ImGui::Button("Reveal Map [Requires Rejoin Server]", ImVec2(-1, 0)))
 		RevealMapAroundPlayer();
-
-	if (ImGui::Button("Open Map"))
-		OpenFastTravelMap();
-
 
 	ImGui::EndGroup();
 
@@ -61,9 +50,6 @@ void TabFeatures()
 	ImGui::SliderInt("##weaponmult", &cheatState.weaponDamage, 1, 400, "Weapon DMG: %d");
 	if (ImGui::IsItemDeactivatedAfterEdit()) SetWeaponDamage();
 	ImGui::SameLine();
-	if (ImGui::Button("Reset TODO"))
-	{
-	}
 
 	if (ImGui::Button("Inf Durability (Current Weapon)", ImVec2(-1, 0)))
 		IncreaseAllDurability();

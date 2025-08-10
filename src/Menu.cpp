@@ -167,7 +167,6 @@ namespace DX11Base
         ResetStamina();
         TickHotkeys();
         TickHotkeysOneShot();
-        FastTravelRetryStep();
 
         if (cheatState.aimbotEnabled && (GetAsyncKeyState(cheatState.aimbotHotkey) & 0x8000))
         {

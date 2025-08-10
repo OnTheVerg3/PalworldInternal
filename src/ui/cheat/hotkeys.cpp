@@ -54,12 +54,7 @@ void TickHotkeys()
             SetPlayerAttackParam();
         }
 		
-    }
-
-    if (GetAsyncKeyState(key.hotkeyFastTravelMap) & 1)
-    {
-        OpenFastTravelMap(); // Your function that sets CDO + opens map
-    }   
+    } 
 }
 
 void TickHotkeysOneShot()
@@ -108,7 +103,6 @@ void DrawHotkeys()
     { "Attack 1:90000", &key.hotkeyToggleAttack, &waitingAttack, &key.attackToggled },
     { "Repair Current Weapon", &key.hotkeyRepairWeapon, &waitingRepair, nullptr },
     { "Teleport Home", &key.hotkeyTeleportHome, &waitingTeleportHome, nullptr },
-    { "Open Fast Travel Map", &key.hotkeyFastTravelMap, &waitingFastTravelMap, nullptr },
     };
 
     for (auto& entry : hotkeys)

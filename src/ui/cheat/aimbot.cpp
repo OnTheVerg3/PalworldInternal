@@ -65,7 +65,7 @@ AimbotTarget FindBestPalTarget(APlayerController* controller, FVector2D screenCe
     for (int i = 0; i < pals.Num(); ++i)
     {
         APalCharacter* pal = pals[i];
-        if (!pal || !IsAlive(pal))
+        if (!pal || !IsAlive(pal) || IsABaseWorker(pal))
             continue;
 
         if (!IsValidAimbotTarget(pal))
