@@ -27,8 +27,8 @@ public:
 	class UWidgetAnimation*                       Anm_Pal_Alive;                                     // 0x0610(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Pal_Dead;                                      // 0x0618(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_NormalToFocus;                                 // 0x0620(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_focus;                                         // 0x0628(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_normal;                                        // 0x0630(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_Focus;                                         // 0x0628(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_Normal;                                        // 0x0630(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UBP_PalTextBlock_C*                     BP_PalTextBlock_LvText;                            // 0x0638(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UCanvasPanel*                           CanvasPanel_119;                                   // 0x0640(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Empty;                                             // 0x0648(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -99,8 +99,8 @@ static_assert(offsetof(UWBP_IngameMenu_PalBox_PalList_C, UberGraphFrame_WBP_Inga
 static_assert(offsetof(UWBP_IngameMenu_PalBox_PalList_C, Anm_Pal_Alive) == 0x000610, "Member 'UWBP_IngameMenu_PalBox_PalList_C::Anm_Pal_Alive' has a wrong offset!");
 static_assert(offsetof(UWBP_IngameMenu_PalBox_PalList_C, Anm_Pal_Dead) == 0x000618, "Member 'UWBP_IngameMenu_PalBox_PalList_C::Anm_Pal_Dead' has a wrong offset!");
 static_assert(offsetof(UWBP_IngameMenu_PalBox_PalList_C, Anm_NormalToFocus) == 0x000620, "Member 'UWBP_IngameMenu_PalBox_PalList_C::Anm_NormalToFocus' has a wrong offset!");
-static_assert(offsetof(UWBP_IngameMenu_PalBox_PalList_C, Anm_focus) == 0x000628, "Member 'UWBP_IngameMenu_PalBox_PalList_C::Anm_focus' has a wrong offset!");
-static_assert(offsetof(UWBP_IngameMenu_PalBox_PalList_C, Anm_normal) == 0x000630, "Member 'UWBP_IngameMenu_PalBox_PalList_C::Anm_normal' has a wrong offset!");
+static_assert(offsetof(UWBP_IngameMenu_PalBox_PalList_C, Anm_Focus) == 0x000628, "Member 'UWBP_IngameMenu_PalBox_PalList_C::Anm_Focus' has a wrong offset!");
+static_assert(offsetof(UWBP_IngameMenu_PalBox_PalList_C, Anm_Normal) == 0x000630, "Member 'UWBP_IngameMenu_PalBox_PalList_C::Anm_Normal' has a wrong offset!");
 static_assert(offsetof(UWBP_IngameMenu_PalBox_PalList_C, BP_PalTextBlock_LvText) == 0x000638, "Member 'UWBP_IngameMenu_PalBox_PalList_C::BP_PalTextBlock_LvText' has a wrong offset!");
 static_assert(offsetof(UWBP_IngameMenu_PalBox_PalList_C, CanvasPanel_119) == 0x000640, "Member 'UWBP_IngameMenu_PalBox_PalList_C::CanvasPanel_119' has a wrong offset!");
 static_assert(offsetof(UWBP_IngameMenu_PalBox_PalList_C, Empty) == 0x000648, "Member 'UWBP_IngameMenu_PalBox_PalList_C::Empty' has a wrong offset!");

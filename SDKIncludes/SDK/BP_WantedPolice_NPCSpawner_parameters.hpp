@@ -807,7 +807,7 @@ public:
 	struct FVector                                Location;                                          // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsSuccess;                                         // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                preLocation;                                       // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PreLocation;                                       // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        CallFunc_CorrectPoints_Points;                     // 0x0040(0x0010)(ReferenceParm)
@@ -842,7 +842,7 @@ static_assert(alignof(BP_WantedPolice_NPCSpawner_C_FindSpawnLocation) == 0x00000
 static_assert(sizeof(BP_WantedPolice_NPCSpawner_C_FindSpawnLocation) == 0x000158, "Wrong size on BP_WantedPolice_NPCSpawner_C_FindSpawnLocation");
 static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_FindSpawnLocation, Location) == 0x000000, "Member 'BP_WantedPolice_NPCSpawner_C_FindSpawnLocation::Location' has a wrong offset!");
 static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_FindSpawnLocation, IsSuccess) == 0x000018, "Member 'BP_WantedPolice_NPCSpawner_C_FindSpawnLocation::IsSuccess' has a wrong offset!");
-static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_FindSpawnLocation, preLocation) == 0x000020, "Member 'BP_WantedPolice_NPCSpawner_C_FindSpawnLocation::preLocation' has a wrong offset!");
+static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_FindSpawnLocation, PreLocation) == 0x000020, "Member 'BP_WantedPolice_NPCSpawner_C_FindSpawnLocation::PreLocation' has a wrong offset!");
 static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_FindSpawnLocation, Temp_int_Array_Index_Variable) == 0x000038, "Member 'BP_WantedPolice_NPCSpawner_C_FindSpawnLocation::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_FindSpawnLocation, CallFunc_CorrectPoints_Points) == 0x000040, "Member 'BP_WantedPolice_NPCSpawner_C_FindSpawnLocation::CallFunc_CorrectPoints_Points' has a wrong offset!");
 static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_FindSpawnLocation, CallFunc_CorrectPoints_Points_1) == 0x000050, "Member 'BP_WantedPolice_NPCSpawner_C_FindSpawnLocation::CallFunc_CorrectPoints_Points_1' has a wrong offset!");

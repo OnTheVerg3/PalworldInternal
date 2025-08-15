@@ -2,8 +2,6 @@
 #include "cheat_state.h"
 #include "ConfigManager.h"
 
-
-
 namespace fs = std::filesystem;
 
 void SaveConfig(const std::string& filename)
@@ -33,6 +31,7 @@ void SaveConfig(const std::string& filename)
     file << "cameraFov=" << cheatState.cameraFov << "\n";
     file << "cameraBrightness=" << cheatState.cameraBrightness << "\n";
 	file << "attack=" << cheatState.attack << "\n";
+    file << "weight=" << cheatState.weight << "\n";
 
     // Aimbot
     file << "aimbotEnabled=" << cheatState.aimbotEnabled << "\n";
@@ -56,6 +55,12 @@ void SaveConfig(const std::string& filename)
     // Misc
     file << "showMenu=" << cheatState.showMenu << "\n";
 
+    //Bulk Item Spawner
+    for (const auto& bi : cheatState.bulkItems)
+    {
+        file << "bulkItem=" << bi.id << "," << bi.count << "\n";
+    }
+
     file.close();
 }
 
@@ -68,7 +73,7 @@ void ApplyCheatState()
     SetCameraFov();
     SetCameraBrightness();
 
-    if (!cheatState.weight == 600)
+    if (cheatState.weight != 600.0f)
     {
         SetPlayerInventoryWeight();
     }
@@ -94,6 +99,8 @@ void LoadConfig(const std::string& filename)
         return;
     }
 
+    cheatState.bulkItems.clear();
+
     std::string line;
     while (std::getline(file, line))
     {
@@ -110,6 +117,7 @@ void LoadConfig(const std::string& filename)
         else if (key == "cameraFov") cheatState.cameraFov = std::stof(value);
         else if (key == "cameraBrightness") cheatState.cameraBrightness = std::stof(value);
         else if (key == "attack") cheatState.attack = std::stoi(value);
+        else if (key == "weight") cheatState.weight = std::stoi(value);
 
         // Aimbot
         else if (key == "aimbotEnabled") cheatState.aimbotEnabled = std::stoi(value);
@@ -132,6 +140,20 @@ void LoadConfig(const std::string& filename)
 
         // Misc
         else if (key == "showMenu") cheatState.showMenu = std::stoi(value);
+
+        //Bulk ItemSpawn
+        else if (key == "bulkItem")
+        {
+            // value: id,count
+            size_t comma = value.find(',');
+            if (comma != std::string::npos)
+            {
+                std::string id = value.substr(0, comma);
+                int count = atoi(value.substr(comma + 1).c_str());
+                if (count < 1) count = 1;
+                cheatState.bulkItems.push_back({ id, count });
+            }
+        }
     }
 
     file.close();

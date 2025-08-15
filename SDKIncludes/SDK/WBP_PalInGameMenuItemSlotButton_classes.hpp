@@ -27,7 +27,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_WBP_PalInGameMenuItemSlotButton_C;  // 0x05A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWidgetAnimation*                       Anm_UnselectToSelect;                              // 0x05B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Bg_Lock;                                       // 0x05B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_focus;                                         // 0x05C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_Focus;                                         // 0x05C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Rarity_0To4;                                   // 0x05C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UImage*                                 Base;                                              // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Base_Empty;                                        // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -109,7 +109,7 @@ static_assert(sizeof(UWBP_PalInGameMenuItemSlotButton_C) == 0x0006C8, "Wrong siz
 static_assert(offsetof(UWBP_PalInGameMenuItemSlotButton_C, UberGraphFrame_WBP_PalInGameMenuItemSlotButton_C) == 0x0005A8, "Member 'UWBP_PalInGameMenuItemSlotButton_C::UberGraphFrame_WBP_PalInGameMenuItemSlotButton_C' has a wrong offset!");
 static_assert(offsetof(UWBP_PalInGameMenuItemSlotButton_C, Anm_UnselectToSelect) == 0x0005B0, "Member 'UWBP_PalInGameMenuItemSlotButton_C::Anm_UnselectToSelect' has a wrong offset!");
 static_assert(offsetof(UWBP_PalInGameMenuItemSlotButton_C, Anm_Bg_Lock) == 0x0005B8, "Member 'UWBP_PalInGameMenuItemSlotButton_C::Anm_Bg_Lock' has a wrong offset!");
-static_assert(offsetof(UWBP_PalInGameMenuItemSlotButton_C, Anm_focus) == 0x0005C0, "Member 'UWBP_PalInGameMenuItemSlotButton_C::Anm_focus' has a wrong offset!");
+static_assert(offsetof(UWBP_PalInGameMenuItemSlotButton_C, Anm_Focus) == 0x0005C0, "Member 'UWBP_PalInGameMenuItemSlotButton_C::Anm_Focus' has a wrong offset!");
 static_assert(offsetof(UWBP_PalInGameMenuItemSlotButton_C, Anm_Rarity_0To4) == 0x0005C8, "Member 'UWBP_PalInGameMenuItemSlotButton_C::Anm_Rarity_0To4' has a wrong offset!");
 static_assert(offsetof(UWBP_PalInGameMenuItemSlotButton_C, Base) == 0x0005D0, "Member 'UWBP_PalInGameMenuItemSlotButton_C::Base' has a wrong offset!");
 static_assert(offsetof(UWBP_PalInGameMenuItemSlotButton_C, Base_Empty) == 0x0005D8, "Member 'UWBP_PalInGameMenuItemSlotButton_C::Base_Empty' has a wrong offset!");

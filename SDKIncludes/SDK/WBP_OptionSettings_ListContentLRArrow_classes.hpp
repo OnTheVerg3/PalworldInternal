@@ -23,7 +23,7 @@ class UWBP_OptionSettings_ListContentLRArrow_C final : public UUserWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Anm_push;                                          // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_Push;                                          // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UImage*                                 ArrowHover;                                        // 0x0288(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UButton*                                Button_Dummy;                                      // 0x0290(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_PalCommonButton_C*                 WBP_PalCommonButton;                               // 0x0298(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -50,7 +50,7 @@ public:
 static_assert(alignof(UWBP_OptionSettings_ListContentLRArrow_C) == 0x000008, "Wrong alignment on UWBP_OptionSettings_ListContentLRArrow_C");
 static_assert(sizeof(UWBP_OptionSettings_ListContentLRArrow_C) == 0x0002B0, "Wrong size on UWBP_OptionSettings_ListContentLRArrow_C");
 static_assert(offsetof(UWBP_OptionSettings_ListContentLRArrow_C, UberGraphFrame) == 0x000278, "Member 'UWBP_OptionSettings_ListContentLRArrow_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_OptionSettings_ListContentLRArrow_C, Anm_push) == 0x000280, "Member 'UWBP_OptionSettings_ListContentLRArrow_C::Anm_push' has a wrong offset!");
+static_assert(offsetof(UWBP_OptionSettings_ListContentLRArrow_C, Anm_Push) == 0x000280, "Member 'UWBP_OptionSettings_ListContentLRArrow_C::Anm_Push' has a wrong offset!");
 static_assert(offsetof(UWBP_OptionSettings_ListContentLRArrow_C, ArrowHover) == 0x000288, "Member 'UWBP_OptionSettings_ListContentLRArrow_C::ArrowHover' has a wrong offset!");
 static_assert(offsetof(UWBP_OptionSettings_ListContentLRArrow_C, Button_Dummy) == 0x000290, "Member 'UWBP_OptionSettings_ListContentLRArrow_C::Button_Dummy' has a wrong offset!");
 static_assert(offsetof(UWBP_OptionSettings_ListContentLRArrow_C, WBP_PalCommonButton) == 0x000298, "Member 'UWBP_OptionSettings_ListContentLRArrow_C::WBP_PalCommonButton' has a wrong offset!");

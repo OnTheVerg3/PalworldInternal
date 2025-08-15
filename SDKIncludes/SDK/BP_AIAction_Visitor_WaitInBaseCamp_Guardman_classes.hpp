@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "AIModule_structs.hpp"
-#include "BP_AIAction_CanCombatBase_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
+#include "BP_AIAction_CanCombatBase_classes.hpp"
 
 
 namespace SDK
@@ -32,12 +32,12 @@ public:
 	class APalCharacter*                          VisitorLeader;                                     // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ActionFinished(class APawn* ControlledPawn, EPawnActionResult WithResult);
 	void ActionTick(class APawn* ControlledPawn, float DeltaSeconds);
 	void ExecuteUbergraph_BP_AIAction_Visitor_WaitInBaseCamp_Guardman(int32 EntryPoint);
 	void IsVisitorLeaderTalking(bool* IsTalking);
 	void OnLeaderArrived();
 	void Tick_Move_to_Base_Camp(class AActor* ControlledPawn, float DeltaTime);
+	void ActionFinished(class APawn* ControlledPawn, EPawnActionResult WithResult);
 	void ActionResume(class APawn* ControlledPawn);
 	void ActionStart(class APawn* ControlledPawn);
 	void Fun_Damage_AIResponse(const struct FPalDamageResult& DamageResult);

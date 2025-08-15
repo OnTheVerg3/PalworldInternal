@@ -93,23 +93,27 @@ void SetInfiniteAmmo()
 
 void IncreaseAllDurability()
 {
-	APalPlayerCharacter* player = GetPalPlayerCharacter();
-	if (!player) return;
+	APalPlayerCharacter* player = nullptr;
+	if (!Try([&] { player = GetPalPlayerCharacter(); }) || !IsProbablyValidPtr(player))
+		return;
 
-	UPalShooterComponent* pShootComponent = player->ShooterComponent;
-	if (!pShootComponent) return;
+	UPalShooterComponent* pShootComponent = nullptr;
+	if (!Try([&] { pShootComponent = player->ShooterComponent; }) || !IsProbablyValidPtr(pShootComponent))
+		return;
 
-	APalWeaponBase* pWeapon = pShootComponent->HasWeapon;
-	if (!pWeapon) return;
+	APalWeaponBase* pWeapon = nullptr;
+	if (!Try([&] { pWeapon = pShootComponent->HasWeapon; }) || !IsProbablyValidPtr(pWeapon))
+		return;
 
-	float currentDurability = pWeapon->GetDurability();
+	float currentDurability = 0.f;
+	if (!Try([&] { currentDurability = pWeapon->GetDurability(); }))
+		return;
 
-	UPalDynamicWeaponItemDataBase* dynData = pWeapon->TryGetDynamicWeaponData();
-	if (!dynData)
-		return;	
-	
-	float newDurability = currentDurability + 99999.0f;
-	dynData->Durability = newDurability;
+	UPalDynamicWeaponItemDataBase* dynData = nullptr;
+	if (!Try([&] { dynData = pWeapon->TryGetDynamicWeaponData(); }) || !IsProbablyValidPtr(dynData))
+		return;
+
+	Try([&] { dynData->Durability = currentDurability + 99999.0f; });
 
 }
 
@@ -484,6 +488,7 @@ void UnlockAllFastTravelPoints()
 		}
 	}
 }
+
 
 ///////////////////////////////////// DEBUG FUNCTIONS ///////////////////////////////////////
 

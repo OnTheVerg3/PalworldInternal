@@ -27,7 +27,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWidgetAnimation*                       Anm_Press;                                         // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Push_long_nogauge;                             // 0x0288(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_push;                                          // 0x0290(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_Push;                                          // 0x0290(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Push_long_Arrow;                               // 0x0298(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Push_long;                                     // 0x02A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Close;                                         // 0x02A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
@@ -81,7 +81,7 @@ static_assert(sizeof(UWBP_Ingame_Interact_C) == 0x0003B0, "Wrong size on UWBP_In
 static_assert(offsetof(UWBP_Ingame_Interact_C, UberGraphFrame) == 0x000278, "Member 'UWBP_Ingame_Interact_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_Ingame_Interact_C, Anm_Press) == 0x000280, "Member 'UWBP_Ingame_Interact_C::Anm_Press' has a wrong offset!");
 static_assert(offsetof(UWBP_Ingame_Interact_C, Anm_Push_long_nogauge) == 0x000288, "Member 'UWBP_Ingame_Interact_C::Anm_Push_long_nogauge' has a wrong offset!");
-static_assert(offsetof(UWBP_Ingame_Interact_C, Anm_push) == 0x000290, "Member 'UWBP_Ingame_Interact_C::Anm_push' has a wrong offset!");
+static_assert(offsetof(UWBP_Ingame_Interact_C, Anm_Push) == 0x000290, "Member 'UWBP_Ingame_Interact_C::Anm_Push' has a wrong offset!");
 static_assert(offsetof(UWBP_Ingame_Interact_C, Anm_Push_long_Arrow) == 0x000298, "Member 'UWBP_Ingame_Interact_C::Anm_Push_long_Arrow' has a wrong offset!");
 static_assert(offsetof(UWBP_Ingame_Interact_C, Anm_Push_long) == 0x0002A0, "Member 'UWBP_Ingame_Interact_C::Anm_Push_long' has a wrong offset!");
 static_assert(offsetof(UWBP_Ingame_Interact_C, Anm_Close) == 0x0002A8, "Member 'UWBP_Ingame_Interact_C::Anm_Close' has a wrong offset!");

@@ -167,3 +167,4 @@ namespace DX11Base
 	};
 	inline std::unique_ptr<Hooking> g_Hooking;
 }
+extern void InitHooks();

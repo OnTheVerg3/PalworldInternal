@@ -25,7 +25,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWidgetAnimation*                       Anm_NormalToFocus;                                 // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_OpenFocus;                                     // 0x0288(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_normal;                                        // 0x0290(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_Normal;                                        // 0x0290(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UNamedSlot*                             IconSlot;                                          // 0x0298(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UBP_PalTextBlock_C*                     Text_Main;                                         // 0x02A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_PalInvisibleButton_C*              WBP_PalInvisibleButton;                            // 0x02A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -69,7 +69,7 @@ static_assert(sizeof(UWBP_CommonButton_2_C) == 0x000318, "Wrong size on UWBP_Com
 static_assert(offsetof(UWBP_CommonButton_2_C, UberGraphFrame) == 0x000278, "Member 'UWBP_CommonButton_2_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_CommonButton_2_C, Anm_NormalToFocus) == 0x000280, "Member 'UWBP_CommonButton_2_C::Anm_NormalToFocus' has a wrong offset!");
 static_assert(offsetof(UWBP_CommonButton_2_C, Anm_OpenFocus) == 0x000288, "Member 'UWBP_CommonButton_2_C::Anm_OpenFocus' has a wrong offset!");
-static_assert(offsetof(UWBP_CommonButton_2_C, Anm_normal) == 0x000290, "Member 'UWBP_CommonButton_2_C::Anm_normal' has a wrong offset!");
+static_assert(offsetof(UWBP_CommonButton_2_C, Anm_Normal) == 0x000290, "Member 'UWBP_CommonButton_2_C::Anm_Normal' has a wrong offset!");
 static_assert(offsetof(UWBP_CommonButton_2_C, IconSlot) == 0x000298, "Member 'UWBP_CommonButton_2_C::IconSlot' has a wrong offset!");
 static_assert(offsetof(UWBP_CommonButton_2_C, Text_Main) == 0x0002A0, "Member 'UWBP_CommonButton_2_C::Text_Main' has a wrong offset!");
 static_assert(offsetof(UWBP_CommonButton_2_C, WBP_PalInvisibleButton) == 0x0002A8, "Member 'UWBP_CommonButton_2_C::WBP_PalInvisibleButton' has a wrong offset!");

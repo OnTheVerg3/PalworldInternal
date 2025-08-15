@@ -11,6 +11,15 @@
 #include "Tabs.h"
 #include "pal_editor.h"
 
+static bool IsGameReady()
+{
+    using namespace SDK;
+    UWorld* w = UWorld::GetWorld();
+    if (!w || !w->OwningGameInstance) return false;
+    const auto& locals = w->OwningGameInstance->LocalPlayers;
+    return locals.Num() > 0 && locals[0] && locals[0]->PlayerController;
+}
+
 namespace DX11Base
 {
 	namespace Styles 
@@ -86,7 +95,7 @@ namespace DX11Base
             if (ImGui::Begin("##main", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoTitleBar))
             {
                 // Header
-                ImGui::TextColored(ImVec4(0.85f, 0.95f, 1.0f, 1.0f), "Palworld Trainer v1.5");
+                ImGui::TextColored(ImVec4(0.85f, 0.95f, 1.0f, 1.0f), "Palworld Trainer v1.6");
                 ImGui::Spacing();
                 ImGui::Separator();
 
@@ -161,6 +170,12 @@ namespace DX11Base
     //-----------------------------------------------------------------------------------
 	void Menu::Draw()
 	{
+        static bool s_loaded = false;
+        if (!s_loaded && IsGameReady()) {
+            LoadConfig("config.txt");
+            s_loaded = true;
+        }
+
         if (g_Engine->bShowMenu)
             MainMenu();
 
@@ -173,10 +188,12 @@ namespace DX11Base
             RunPalAimbot();
         }
 
-        DrawPalESP();
-        DrawRelicESP();
+        if (cheatState.espEnabled)
+        {
+            DrawPalESP();
+            DrawRelicESP();
+        }
 
-		//Draw aimbot FOV circle if enabled
         if (cheatState.aimbotEnabled && cheatState.aimbotDrawFOV)
         {
             ImVec2 screenCenter = ImVec2(ImGui::GetIO().DisplaySize.x / 2.0f,

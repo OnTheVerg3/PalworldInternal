@@ -14,146 +14,12 @@
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "E_PalUIStatusDIsplayParameter_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnSelectedSkill
-// 0x0002 (0x0002 - 0x0000)
-struct WBP_MainMenu_Pal_00_C_OnSelectedSkill final
-{
-public:
-	EPalWazaID                                    WazaID;                                            // 0x0000(0x0002)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MainMenu_Pal_00_C_OnSelectedSkill) == 0x000002, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnSelectedSkill");
-static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnSelectedSkill) == 0x000002, "Wrong size on WBP_MainMenu_Pal_00_C_OnSelectedSkill");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnSelectedSkill, WazaID) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnSelectedSkill::WazaID' has a wrong offset!");
-
-// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnHoveredPassiveSkillButtonEvent
-// 0x0040 (0x0040 - 0x0000)
-struct WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent final
-{
-public:
-	class UWBP_MainMenu_Pal_Skill_Passive_C*      SelfWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetBindedPassiveSkillName_passiveSkillName; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_BuildPassiveSkillDescText_text;           // 0x0010(0x0018)()
-	class FText                                   CallFunc_GetPassiveSkillName_outName;              // 0x0028(0x0018)()
-};
-static_assert(alignof(WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent");
-static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent) == 0x000040, "Wrong size on WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent, SelfWidget) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent::SelfWidget' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent, CallFunc_GetBindedPassiveSkillName_passiveSkillName) == 0x000008, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent::CallFunc_GetBindedPassiveSkillName_passiveSkillName' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent, CallFunc_BuildPassiveSkillDescText_text) == 0x000010, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent::CallFunc_BuildPassiveSkillDescText_text' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent, CallFunc_GetPassiveSkillName_outName) == 0x000028, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent::CallFunc_GetPassiveSkillName_outName' has a wrong offset!");
-
-// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnHoveredPalButtonEvent
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent final
-{
-public:
-	class UPalIndividualCharacterHandle*          Handle;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APalPlayerCharacter*                    CallFunc_GetPalmi_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalIndividualCharacterParameter*       CallFunc_TryGetIndividualParameter_ReturnValue;    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalIndividualCharacterParameter*       CallFunc_GetIndividualCharacterParameterByActor_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsInArena_ReturnValue;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFavoritePal_ReturnValue;                // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent");
-static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent) == 0x000028, "Wrong size on WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, Handle) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::Handle' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_GetPalmi_ReturnValue) == 0x000008, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_GetPalmi_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_TryGetIndividualParameter_ReturnValue) == 0x000010, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_TryGetIndividualParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_GetIndividualCharacterParameterByActor_ReturnValue) == 0x000018, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_GetIndividualCharacterParameterByActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_IsInArena_ReturnValue) == 0x000021, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_IsInArena_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_IsFavoritePal_ReturnValue) == 0x000022, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_IsFavoritePal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_BooleanOR_ReturnValue) == 0x000023, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-
-// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnHoveredConditionButtonEvent
-// 0x0038 (0x0038 - 0x0000)
-struct WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent final
-{
-public:
-	class UWBP_MainMenu_Pal_State_C*              StateWidget;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetPalConditionName_outName;              // 0x0008(0x0018)()
-	class FText                                   CallFunc_GetPalConditionDesc_outDesc;              // 0x0020(0x0018)()
-};
-static_assert(alignof(WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent");
-static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent) == 0x000038, "Wrong size on WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent, StateWidget) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent::StateWidget' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent, CallFunc_GetPalConditionName_outName) == 0x000008, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent::CallFunc_GetPalConditionName_outName' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent, CallFunc_GetPalConditionDesc_outDesc) == 0x000020, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent::CallFunc_GetPalConditionDesc_outDesc' has a wrong offset!");
-
-// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnHoveredActiveSkillButtonEvent
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent final
-{
-public:
-	class UWBP_MainMenu_Pal_Skill_Active_C*       SelfWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent");
-static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent) == 0x000008, "Wrong size on WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent, SelfWidget) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent::SelfWidget' has a wrong offset!");
-
-// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnCloseNameEditWindow
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow final
-{
-public:
-	class UPalHUDDispatchParameterBase*           Param_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_CharaCreNameEditWindowDispatchParameter_C* K2Node_DynamicCast_AsBP_Chara_Cre_Name_Edit_Window_Dispatch_Parameter; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow");
-static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow) == 0x000018, "Wrong size on WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow, Param_0) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow::Param_0' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow, K2Node_DynamicCast_AsBP_Chara_Cre_Name_Edit_Window_Dispatch_Parameter) == 0x000008, "Member 'WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow::K2Node_DynamicCast_AsBP_Chara_Cre_Name_Edit_Window_Dispatch_Parameter' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnClickedPalButtonEvent
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent final
-{
-public:
-	class UPalIndividualCharacterHandle*          Handle;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent");
-static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent) == 0x000008, "Wrong size on WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent, Handle) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent::Handle' has a wrong offset!");
-
-// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.ListToStatus
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_MainMenu_Pal_00_C_ListToStatus final
-{
-public:
-	class UPalIndividualCharacterHandle*          Handle;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterParameter*       CallFunc_TryGetIndividualParameter_ReturnValue;    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MainMenu_Pal_00_C_ListToStatus) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_ListToStatus");
-static_assert(sizeof(WBP_MainMenu_Pal_00_C_ListToStatus) == 0x000020, "Wrong size on WBP_MainMenu_Pal_00_C_ListToStatus");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_ListToStatus, Handle) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_ListToStatus::Handle' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_ListToStatus, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'WBP_MainMenu_Pal_00_C_ListToStatus::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_ListToStatus, CallFunc_TryGetIndividualParameter_ReturnValue) == 0x000010, "Member 'WBP_MainMenu_Pal_00_C_ListToStatus::CallFunc_TryGetIndividualParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_ListToStatus, CallFunc_IsValid_ReturnValue_1) == 0x000018, "Member 'WBP_MainMenu_Pal_00_C_ListToStatus::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-
-// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.IsShowingStatusWithList
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_MainMenu_Pal_00_C_IsShowingStatusWithList final
-{
-public:
-	bool                                          isShowing;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MainMenu_Pal_00_C_IsShowingStatusWithList) == 0x000001, "Wrong alignment on WBP_MainMenu_Pal_00_C_IsShowingStatusWithList");
-static_assert(sizeof(WBP_MainMenu_Pal_00_C_IsShowingStatusWithList) == 0x000001, "Wrong size on WBP_MainMenu_Pal_00_C_IsShowingStatusWithList");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_IsShowingStatusWithList, isShowing) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_IsShowingStatusWithList::isShowing' has a wrong offset!");
 
 // Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.UpdateSanity_Binded
 // 0x0018 (0x0018 - 0x0000)
@@ -885,9 +751,9 @@ static_assert(alignof(WBP_MainMenu_Pal_00_C_SetGender) == 0x000001, "Wrong align
 static_assert(sizeof(WBP_MainMenu_Pal_00_C_SetGender) == 0x000001, "Wrong size on WBP_MainMenu_Pal_00_C_SetGender");
 static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetGender, GenderType) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_SetGender::GenderType' has a wrong offset!");
 
-// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.SetFriendShip
+// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.SetFriendship
 // 0x0050 (0x0050 - 0x0000)
-struct WBP_MainMenu_Pal_00_C_SetFriendShip final
+struct WBP_MainMenu_Pal_00_C_SetFriendship final
 {
 public:
 	int32                                         FriendshipRank;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -900,16 +766,16 @@ public:
 	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_CalcFriendshipProgress_ReturnValue;       // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_MainMenu_Pal_00_C_SetFriendShip) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_SetFriendShip");
-static_assert(sizeof(WBP_MainMenu_Pal_00_C_SetFriendShip) == 0x000050, "Wrong size on WBP_MainMenu_Pal_00_C_SetFriendShip");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendShip, FriendshipRank) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_SetFriendShip::FriendshipRank' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendShip, FriendshipPoint) == 0x000004, "Member 'WBP_MainMenu_Pal_00_C_SetFriendShip::FriendshipPoint' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendShip, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WBP_MainMenu_Pal_00_C_SetFriendShip::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendShip, CallFunc_GetFriendshipUIColor_IconColor) == 0x000020, "Member 'WBP_MainMenu_Pal_00_C_SetFriendShip::CallFunc_GetFriendshipUIColor_IconColor' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendShip, CallFunc_GetFriendshipUIColor_GaugeColor) == 0x000030, "Member 'WBP_MainMenu_Pal_00_C_SetFriendShip::CallFunc_GetFriendshipUIColor_GaugeColor' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendShip, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x000040, "Member 'WBP_MainMenu_Pal_00_C_SetFriendShip::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendShip, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'WBP_MainMenu_Pal_00_C_SetFriendShip::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendShip, CallFunc_CalcFriendshipProgress_ReturnValue) == 0x00004C, "Member 'WBP_MainMenu_Pal_00_C_SetFriendShip::CallFunc_CalcFriendshipProgress_ReturnValue' has a wrong offset!");
+static_assert(alignof(WBP_MainMenu_Pal_00_C_SetFriendship) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_SetFriendship");
+static_assert(sizeof(WBP_MainMenu_Pal_00_C_SetFriendship) == 0x000050, "Wrong size on WBP_MainMenu_Pal_00_C_SetFriendship");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendship, FriendshipRank) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_SetFriendship::FriendshipRank' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendship, FriendshipPoint) == 0x000004, "Member 'WBP_MainMenu_Pal_00_C_SetFriendship::FriendshipPoint' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendship, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WBP_MainMenu_Pal_00_C_SetFriendship::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendship, CallFunc_GetFriendshipUIColor_IconColor) == 0x000020, "Member 'WBP_MainMenu_Pal_00_C_SetFriendship::CallFunc_GetFriendshipUIColor_IconColor' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendship, CallFunc_GetFriendshipUIColor_GaugeColor) == 0x000030, "Member 'WBP_MainMenu_Pal_00_C_SetFriendship::CallFunc_GetFriendshipUIColor_GaugeColor' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendship, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x000040, "Member 'WBP_MainMenu_Pal_00_C_SetFriendship::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendship, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'WBP_MainMenu_Pal_00_C_SetFriendship::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_SetFriendship, CallFunc_CalcFriendshipProgress_ReturnValue) == 0x00004C, "Member 'WBP_MainMenu_Pal_00_C_SetFriendship::CallFunc_CalcFriendshipProgress_ReturnValue' has a wrong offset!");
 
 // Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.SetFoodAmount
 // 0x0004 (0x0004 - 0x0000)
@@ -1163,6 +1029,140 @@ public:
 static_assert(alignof(WBP_MainMenu_Pal_00_C_OnUnhoveredActiveSkillButtonEvent) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnUnhoveredActiveSkillButtonEvent");
 static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnUnhoveredActiveSkillButtonEvent) == 0x000008, "Wrong size on WBP_MainMenu_Pal_00_C_OnUnhoveredActiveSkillButtonEvent");
 static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnUnhoveredActiveSkillButtonEvent, SelfWidget) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnUnhoveredActiveSkillButtonEvent::SelfWidget' has a wrong offset!");
+
+// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnSelectedSkill
+// 0x0002 (0x0002 - 0x0000)
+struct WBP_MainMenu_Pal_00_C_OnSelectedSkill final
+{
+public:
+	EPalWazaID                                    WazaID;                                            // 0x0000(0x0002)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MainMenu_Pal_00_C_OnSelectedSkill) == 0x000002, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnSelectedSkill");
+static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnSelectedSkill) == 0x000002, "Wrong size on WBP_MainMenu_Pal_00_C_OnSelectedSkill");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnSelectedSkill, WazaID) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnSelectedSkill::WazaID' has a wrong offset!");
+
+// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnHoveredPassiveSkillButtonEvent
+// 0x0040 (0x0040 - 0x0000)
+struct WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent final
+{
+public:
+	class UWBP_MainMenu_Pal_Skill_Passive_C*      SelfWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetBindedPassiveSkillName_passiveSkillName; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_BuildPassiveSkillDescText_text;           // 0x0010(0x0018)()
+	class FText                                   CallFunc_GetPassiveSkillName_outName;              // 0x0028(0x0018)()
+};
+static_assert(alignof(WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent");
+static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent) == 0x000040, "Wrong size on WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent, SelfWidget) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent::SelfWidget' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent, CallFunc_GetBindedPassiveSkillName_passiveSkillName) == 0x000008, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent::CallFunc_GetBindedPassiveSkillName_passiveSkillName' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent, CallFunc_BuildPassiveSkillDescText_text) == 0x000010, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent::CallFunc_BuildPassiveSkillDescText_text' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent, CallFunc_GetPassiveSkillName_outName) == 0x000028, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPassiveSkillButtonEvent::CallFunc_GetPassiveSkillName_outName' has a wrong offset!");
+
+// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnHoveredPalButtonEvent
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent final
+{
+public:
+	class UPalIndividualCharacterHandle*          Handle;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APalPlayerCharacter*                    CallFunc_GetPalmi_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalIndividualCharacterParameter*       CallFunc_TryGetIndividualParameter_ReturnValue;    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalIndividualCharacterParameter*       CallFunc_GetIndividualCharacterParameterByActor_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsInArena_ReturnValue;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsFavoritePal_ReturnValue;                // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent");
+static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent) == 0x000028, "Wrong size on WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, Handle) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::Handle' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_GetPalmi_ReturnValue) == 0x000008, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_GetPalmi_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_TryGetIndividualParameter_ReturnValue) == 0x000010, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_TryGetIndividualParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_GetIndividualCharacterParameterByActor_ReturnValue) == 0x000018, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_GetIndividualCharacterParameterByActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_IsInArena_ReturnValue) == 0x000021, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_IsInArena_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_IsFavoritePal_ReturnValue) == 0x000022, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_IsFavoritePal_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent, CallFunc_BooleanOR_ReturnValue) == 0x000023, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredPalButtonEvent::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+
+// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnHoveredConditionButtonEvent
+// 0x0038 (0x0038 - 0x0000)
+struct WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent final
+{
+public:
+	class UWBP_MainMenu_Pal_State_C*              StateWidget;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetPalConditionName_outName;              // 0x0008(0x0018)()
+	class FText                                   CallFunc_GetPalConditionDesc_outDesc;              // 0x0020(0x0018)()
+};
+static_assert(alignof(WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent");
+static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent) == 0x000038, "Wrong size on WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent, StateWidget) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent::StateWidget' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent, CallFunc_GetPalConditionName_outName) == 0x000008, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent::CallFunc_GetPalConditionName_outName' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent, CallFunc_GetPalConditionDesc_outDesc) == 0x000020, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredConditionButtonEvent::CallFunc_GetPalConditionDesc_outDesc' has a wrong offset!");
+
+// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnHoveredActiveSkillButtonEvent
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent final
+{
+public:
+	class UWBP_MainMenu_Pal_Skill_Active_C*       SelfWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent");
+static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent) == 0x000008, "Wrong size on WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent, SelfWidget) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnHoveredActiveSkillButtonEvent::SelfWidget' has a wrong offset!");
+
+// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnCloseNameEditWindow
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow final
+{
+public:
+	class UPalHUDDispatchParameterBase*           Param_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_CharaCreNameEditWindowDispatchParameter_C* K2Node_DynamicCast_AsBP_Chara_Cre_Name_Edit_Window_Dispatch_Parameter; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow");
+static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow) == 0x000018, "Wrong size on WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow, Param_0) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow::Param_0' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow, K2Node_DynamicCast_AsBP_Chara_Cre_Name_Edit_Window_Dispatch_Parameter) == 0x000008, "Member 'WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow::K2Node_DynamicCast_AsBP_Chara_Cre_Name_Edit_Window_Dispatch_Parameter' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'WBP_MainMenu_Pal_00_C_OnCloseNameEditWindow::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.OnClickedPalButtonEvent
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent final
+{
+public:
+	class UPalIndividualCharacterHandle*          Handle;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent");
+static_assert(sizeof(WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent) == 0x000008, "Wrong size on WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent, Handle) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_OnClickedPalButtonEvent::Handle' has a wrong offset!");
+
+// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.ListToStatus
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_MainMenu_Pal_00_C_ListToStatus final
+{
+public:
+	class UPalIndividualCharacterHandle*          Handle;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterParameter*       CallFunc_TryGetIndividualParameter_ReturnValue;    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MainMenu_Pal_00_C_ListToStatus) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_00_C_ListToStatus");
+static_assert(sizeof(WBP_MainMenu_Pal_00_C_ListToStatus) == 0x000020, "Wrong size on WBP_MainMenu_Pal_00_C_ListToStatus");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_ListToStatus, Handle) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_ListToStatus::Handle' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_ListToStatus, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'WBP_MainMenu_Pal_00_C_ListToStatus::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_ListToStatus, CallFunc_TryGetIndividualParameter_ReturnValue) == 0x000010, "Member 'WBP_MainMenu_Pal_00_C_ListToStatus::CallFunc_TryGetIndividualParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_ListToStatus, CallFunc_IsValid_ReturnValue_1) == 0x000018, "Member 'WBP_MainMenu_Pal_00_C_ListToStatus::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+
+// Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.IsShowingStatusWithList
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_MainMenu_Pal_00_C_IsShowingStatusWithList final
+{
+public:
+	bool                                          isShowing;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MainMenu_Pal_00_C_IsShowingStatusWithList) == 0x000001, "Wrong alignment on WBP_MainMenu_Pal_00_C_IsShowingStatusWithList");
+static_assert(sizeof(WBP_MainMenu_Pal_00_C_IsShowingStatusWithList) == 0x000001, "Wrong size on WBP_MainMenu_Pal_00_C_IsShowingStatusWithList");
+static_assert(offsetof(WBP_MainMenu_Pal_00_C_IsShowingStatusWithList, isShowing) == 0x000000, "Member 'WBP_MainMenu_Pal_00_C_IsShowingStatusWithList::isShowing' has a wrong offset!");
 
 // Function WBP_MainMenu_Pal_00.WBP_MainMenu_Pal_00_C.GetRestoreFocusSkillPanelTarget
 // 0x0010 (0x0010 - 0x0000)

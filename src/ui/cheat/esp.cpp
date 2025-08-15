@@ -265,8 +265,8 @@ void UpdateRelicCache(UWorld* world)
             AActor* actor = actors[j];
             if (!actor || !actor->Class) continue;
 
-            if(actor->bHidden)
-				continue;
+            if (actor->bHidden)
+                continue;
 
             std::string className = actor->Class->GetName();
             if (className == "BP_LevelObject_Relic_C")
@@ -435,7 +435,6 @@ void DebugNearbyActors(float radius)
     }
     g_Console->cLog("[RelicDebug] Total matching objects: %d\n", Console::EColor_green, found);
 }
-
 
 
 

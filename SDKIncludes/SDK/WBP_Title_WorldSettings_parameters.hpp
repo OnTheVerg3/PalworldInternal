@@ -19,6 +19,61 @@
 namespace SDK::Params
 {
 
+// Function WBP_Title_WorldSettings.WBP_Title_WorldSettings_C.ConvertUIIndexToDeathPenalty
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty final
+{
+public:
+	int32                                         UIIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalOptionWorldDeathPenalty                   DeathPenaltyType;                                  // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty) == 0x000004, "Wrong alignment on WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty");
+static_assert(sizeof(WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty) == 0x000008, "Wrong size on WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty");
+static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty, UIIndex) == 0x000000, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty::UIIndex' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty, DeathPenaltyType) == 0x000004, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty::DeathPenaltyType' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty, K2Node_SwitchInteger_CmpSuccess) == 0x000005, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+
+// Function WBP_Title_WorldSettings.WBP_Title_WorldSettings_C.ConvertUIIndexToBuildingLimitNum
+// 0x01A0 (0x01A0 - 0x0000)
+struct WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum final
+{
+public:
+	int32                                         UIIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BuildingNum;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPalOptionSubsystem*                    CallFunc_GetOptionSubsystem_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalOptionWorldStaticSettings          CallFunc_GetOptionWorldStaticSettings_ReturnValue; // 0x0010(0x0178)(ConstParm)
+	TArray<int32>                                 CallFunc_Map_Values_Values;                        // 0x0188(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_199[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Get_Item;                           // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum) == 0x000008, "Wrong alignment on WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum");
+static_assert(sizeof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum) == 0x0001A0, "Wrong size on WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum");
+static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, UIIndex) == 0x000000, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::UIIndex' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, BuildingNum) == 0x000004, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::BuildingNum' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, CallFunc_GetOptionSubsystem_ReturnValue) == 0x000008, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::CallFunc_GetOptionSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, CallFunc_GetOptionWorldStaticSettings_ReturnValue) == 0x000010, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::CallFunc_GetOptionWorldStaticSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, CallFunc_Map_Values_Values) == 0x000188, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::CallFunc_Map_Values_Values' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000198, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, CallFunc_Array_Get_Item) == 0x00019C, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::CallFunc_Array_Get_Item' has a wrong offset!");
+
+// Function WBP_Title_WorldSettings.WBP_Title_WorldSettings_C.ConvertRandomizerModeToUIIndex
+// 0x000C (0x000C - 0x0000)
+struct WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex final
+{
+public:
+	EPalRandomizerType                            RandomizerType;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         UIIndex;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex) == 0x000004, "Wrong alignment on WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex");
+static_assert(sizeof(WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex) == 0x00000C, "Wrong size on WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex");
+static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex, RandomizerType) == 0x000000, "Member 'WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex::RandomizerType' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex, UIIndex) == 0x000004, "Member 'WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex::UIIndex' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex, K2Node_SwitchEnum_CmpSuccess) == 0x000008, "Member 'WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+
 // Function WBP_Title_WorldSettings.WBP_Title_WorldSettings_C.ConvertIndexToAutoSaveTime
 // 0x0028 (0x0028 - 0x0000)
 struct WBP_Title_WorldSettings_C_ConvertIndexToAutoSaveTime final
@@ -940,61 +995,6 @@ static_assert(offsetof(WBP_Title_WorldSettings_C_ApplyDifficultyPreset, TmpPrese
 static_assert(offsetof(WBP_Title_WorldSettings_C_ApplyDifficultyPreset, K2Node_SwitchEnum_CmpSuccess) == 0x00000C, "Member 'WBP_Title_WorldSettings_C_ApplyDifficultyPreset::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(WBP_Title_WorldSettings_C_ApplyDifficultyPreset, CallFunc_GetDataTableRowFromName_OutRow) == 0x000010, "Member 'WBP_Title_WorldSettings_C_ApplyDifficultyPreset::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
 static_assert(offsetof(WBP_Title_WorldSettings_C_ApplyDifficultyPreset, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000A8, "Member 'WBP_Title_WorldSettings_C_ApplyDifficultyPreset::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-
-// Function WBP_Title_WorldSettings.WBP_Title_WorldSettings_C.ConvertUIIndexToDeathPenalty
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty final
-{
-public:
-	int32                                         UIIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalOptionWorldDeathPenalty                   DeathPenaltyType;                                  // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty) == 0x000004, "Wrong alignment on WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty");
-static_assert(sizeof(WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty) == 0x000008, "Wrong size on WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty");
-static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty, UIIndex) == 0x000000, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty::UIIndex' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty, DeathPenaltyType) == 0x000004, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty::DeathPenaltyType' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty, K2Node_SwitchInteger_CmpSuccess) == 0x000005, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToDeathPenalty::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-
-// Function WBP_Title_WorldSettings.WBP_Title_WorldSettings_C.ConvertUIIndexToBuildingLimitNum
-// 0x01A0 (0x01A0 - 0x0000)
-struct WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum final
-{
-public:
-	int32                                         UIIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BuildingNum;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPalOptionSubsystem*                    CallFunc_GetOptionSubsystem_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FPalOptionWorldStaticSettings          CallFunc_GetOptionWorldStaticSettings_ReturnValue; // 0x0010(0x0178)(ConstParm)
-	TArray<int32>                                 CallFunc_Map_Values_Values;                        // 0x0188(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_199[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Get_Item;                           // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum) == 0x000008, "Wrong alignment on WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum");
-static_assert(sizeof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum) == 0x0001A0, "Wrong size on WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum");
-static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, UIIndex) == 0x000000, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::UIIndex' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, BuildingNum) == 0x000004, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::BuildingNum' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, CallFunc_GetOptionSubsystem_ReturnValue) == 0x000008, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::CallFunc_GetOptionSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, CallFunc_GetOptionWorldStaticSettings_ReturnValue) == 0x000010, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::CallFunc_GetOptionWorldStaticSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, CallFunc_Map_Values_Values) == 0x000188, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::CallFunc_Map_Values_Values' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000198, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum, CallFunc_Array_Get_Item) == 0x00019C, "Member 'WBP_Title_WorldSettings_C_ConvertUIIndexToBuildingLimitNum::CallFunc_Array_Get_Item' has a wrong offset!");
-
-// Function WBP_Title_WorldSettings.WBP_Title_WorldSettings_C.ConvertRandomizerModeToUIIndex
-// 0x000C (0x000C - 0x0000)
-struct WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex final
-{
-public:
-	EPalRandomizerType                            RandomizerType;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         UIIndex;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex) == 0x000004, "Wrong alignment on WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex");
-static_assert(sizeof(WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex) == 0x00000C, "Wrong size on WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex");
-static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex, RandomizerType) == 0x000000, "Member 'WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex::RandomizerType' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex, UIIndex) == 0x000004, "Member 'WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex::UIIndex' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex, K2Node_SwitchEnum_CmpSuccess) == 0x000008, "Member 'WBP_Title_WorldSettings_C_ConvertRandomizerModeToUIIndex::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function WBP_Title_WorldSettings.WBP_Title_WorldSettings_C.ConvertUIIndexToDifficulty
 // 0x0008 (0x0008 - 0x0000)

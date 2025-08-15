@@ -11,24 +11,36 @@
 
 namespace ABP_NPC_Child { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_YakushimaBoss002_L_Implementation { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_YakushimaBoss002_L { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_YakushimaBoss002_B_Implementation { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_RidingBoss { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ABP_NPC_Male_DarkTrader01 { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_RidingBoss { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_YakushimaBoss002_R { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_YakushimaBoss002_L_Implementation { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ABP_YakushimaBoss002_R_Implementation { struct FAnimBlueprintGeneratedConstantData; }
 
+namespace ABP_YakushimaBoss002_B_Implementation { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_YakushimaBoss002_L { struct FAnimBlueprintGeneratedConstantData; }
+
 namespace ABP_YakushimaBoss002_B { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_YakushimaBoss002_R { struct FAnimBlueprintGeneratedConstantData; }
 
 
 namespace ABP_NPC_Base
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace ABP_Player_Hair
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace ABP_Player_Head
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
@@ -41,18 +53,6 @@ namespace ABP_Player
 }
 
 namespace ABP_MonsterBase
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace ABP_Player_Head
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace ABP_Player_Hair
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;

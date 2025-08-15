@@ -3,6 +3,11 @@
 #include "Pal_classes.hpp"
 #include <random>
 #include <ctime>
+#include <mutex>
+#include <queue>
+#include <future>
+#include <memory>
+#include <type_traits>
 
 using namespace SDK;
 
@@ -132,42 +137,64 @@ namespace Helper
 
     bool IsAlive(SDK::AActor* pChar)
     {
-        if (!pChar)
+        if (!Helper::IsProbablyValidPtr(pChar)) return false;
+
+        // Cast then verify again as APalCharacter
+        SDK::APalCharacter* pal = static_cast<SDK::APalCharacter*>(pChar);
+        if (!Helper::IsProbablyValidPtr(pal)) return false;
+
+        // Access member safely (read can fault if owner is stale)
+        auto* params = (SDK::UPalCharacterParameterComponent*)nullptr;
+        if (!Helper::Try([&] { params = pal->CharacterParameterComponent; }) ||
+            !Helper::IsProbablyValidPtr(params))
             return false;
 
-        auto params = reinterpret_cast<SDK::APalCharacter*>(pChar)->CharacterParameterComponent;
-        if (!params)
+        // Get default utility safely
+        SDK::UPalUtility* util = nullptr;
+        if (!Helper::Try([&] { util = SDK::UPalUtility::GetDefaultObj(); }) ||
+            !Helper::IsProbablyValidPtr(util))
             return false;
 
-        SDK::UPalUtility* pUtil = UPalUtility::GetDefaultObj();
-        SDK::APalPlayerCharacter* pLocalChar = GetPalPlayerCharacter();
+        bool isDead = false;
+        if (!Helper::SafeCallRet(isDead, [&] { return util->IsDead(pal); }))
+            return false;                     // treat failed call as "not safe"
 
-        if (!pUtil || !pLocalChar)
-            return false;
-
-        return !pUtil->IsDead(pChar);
+        return !isDead;
     }
 
     bool IsABaseWorker(SDK::APalCharacter* pChar, bool bLocalControlled)
     {
-        SDK::UPalUtility* pUtil = UPalUtility::GetDefaultObj();
-        SDK::APalPlayerCharacter* pLocalChar = GetPalPlayerCharacter();
-        if (!pUtil || !pLocalChar || !pChar || !IsAlive(pChar))
+        if (!Helper::IsProbablyValidPtr(pChar)) return false;
+        if (!IsAlive(pChar)) return false;
+
+        SDK::UPalUtility* util = nullptr;
+        if (!Helper::Try([&] { util = SDK::UPalUtility::GetDefaultObj(); }) ||
+            !Helper::IsProbablyValidPtr(util))
             return false;
 
-        bool bResult = bLocalControlled ? pUtil->IsLocalPlayerCampPal(pChar) : pUtil->IsBaseCampPal(pChar);
-        return bResult;
+        bool out = false;
+        bool ok = bLocalControlled
+            ? Helper::SafeCallRet(out, [&] { return util->IsLocalPlayerCampPal(pChar); })
+            : Helper::SafeCallRet(out, [&] { return util->IsBaseCampPal(pChar); });
+
+        return ok && out;
     }
 
     bool IsTamed(SDK::APalCharacter* pChar)
     {
-        SDK::UPalUtility* pUtil = UPalUtility::GetDefaultObj();
-        SDK::APalPlayerCharacter* pLocalChar = GetPalPlayerCharacter();
-        if (!pUtil || !pLocalChar || !pChar || !IsAlive(pChar))
+        if (!Helper::IsProbablyValidPtr(pChar)) return false;
+        if (!IsAlive(pChar)) return false;
+
+        SDK::UPalUtility* util = nullptr;
+        if (!Helper::Try([&] { util = SDK::UPalUtility::GetDefaultObj(); }) ||
+            !Helper::IsProbablyValidPtr(util))
             return false;
 
-        bool bResult = pUtil->IsPlayersOtomo(pChar);
-        return bResult;
+        bool isOtomo = false;
+        if (!Helper::SafeCallRet(isOtomo, [&] { return util->IsPlayersOtomo(pChar); }))
+            return false;
+
+        return isOtomo;
     }
 
     float GetDistance(const SDK::FVector2D& a, const SDK::FVector2D& b)
@@ -246,5 +273,4 @@ namespace Helper
 
         return false;
     }
-
 }

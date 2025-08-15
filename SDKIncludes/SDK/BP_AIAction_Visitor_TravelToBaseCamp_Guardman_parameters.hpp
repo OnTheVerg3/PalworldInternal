@@ -18,19 +18,6 @@
 namespace SDK::Params
 {
 
-// Function BP_AIAction_Visitor_TravelToBaseCamp_Guardman.BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C.ActionFinished
-// 0x0010 (0x0010 - 0x0000)
-struct BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished final
-{
-public:
-	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EPawnActionResult                             WithResult;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished) == 0x000008, "Wrong alignment on BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished");
-static_assert(sizeof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished) == 0x000010, "Wrong size on BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished");
-static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished, ControlledPawn) == 0x000000, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished::ControlledPawn' has a wrong offset!");
-static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished, WithResult) == 0x000008, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished::WithResult' has a wrong offset!");
-
 // Function BP_AIAction_Visitor_TravelToBaseCamp_Guardman.BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C.ActionTick
 // 0x0010 (0x0010 - 0x0000)
 struct BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionTick final
@@ -197,6 +184,19 @@ static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Tick_Move
 static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Tick_Move_to_Base_Camp, CallFunc_GetController_ReturnValue_2) == 0x000120, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Tick_Move_to_Base_Camp::CallFunc_GetController_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Tick_Move_to_Base_Camp, CallFunc_IsNearTwoPoint_ReturnValue_1) == 0x000128, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Tick_Move_to_Base_Camp::CallFunc_IsNearTwoPoint_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Tick_Move_to_Base_Camp, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x000130, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Tick_Move_to_Base_Camp::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+
+// Function BP_AIAction_Visitor_TravelToBaseCamp_Guardman.BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C.ActionFinished
+// 0x0010 (0x0010 - 0x0000)
+struct BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished final
+{
+public:
+	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EPawnActionResult                             WithResult;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished) == 0x000008, "Wrong alignment on BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished");
+static_assert(sizeof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished) == 0x000010, "Wrong size on BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished");
+static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished, ControlledPawn) == 0x000000, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished::ControlledPawn' has a wrong offset!");
+static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished, WithResult) == 0x000008, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ActionFinished::WithResult' has a wrong offset!");
 
 // Function BP_AIAction_Visitor_TravelToBaseCamp_Guardman.BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C.ActionResume
 // 0x0008 (0x0008 - 0x0000)

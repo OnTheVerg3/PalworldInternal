@@ -14,8 +14,8 @@
 #include "Engine_structs.hpp"
 #include "WBP_IndividualParameterBindWidget_classes.hpp"
 #include "UMG_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "E_PalUIStatusDIsplayParameter_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
@@ -182,16 +182,6 @@ public:
 	struct FDataTableRowHandle                    FriendShipDescMsgID;                               // 0x0BB0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
-	void OnSelectedSkill(EPalWazaID WazaID);
-	void OnInitialized();
-	void OnHoveredPassiveSkillButtonEvent(class UWBP_MainMenu_Pal_Skill_Passive_C* SelfWidget);
-	void OnHoveredPalButtonEvent(class UPalIndividualCharacterHandle* Handle);
-	void OnHoveredConditionButtonEvent(class UWBP_MainMenu_Pal_State_C* StateWidget);
-	void OnHoveredActiveSkillButtonEvent(class UWBP_MainMenu_Pal_Skill_Active_C* SelfWidget);
-	void OnCloseNameEditWindow(class UPalHUDDispatchParameterBase* Param_0);
-	void OnClickedPalButtonEvent(class UPalIndividualCharacterHandle* Handle);
-	void ListToStatus(class UPalIndividualCharacterHandle* Handle);
-	void IsShowingStatusWithList(bool* isShowing);
 	void UpdateSanity_Binded(double nowSanity, double nowMaxSanity);
 	void UpdateOverlaySkillInfoWindow();
 	void UpdateNickName_Binded(const class FString& NewNickName);
@@ -218,7 +208,7 @@ public:
 	void SetLockEdit(bool IsLock);
 	void SetImportedFlag(bool bImportedFlag);
 	void SetGender(EPalGenderType GenderType);
-	void SetFriendShip(int32 FriendshipRank, int32 FriendshipPoint);
+	void SetFriendship(int32 FriendshipRank, int32 FriendshipPoint);
 	void SetFoodAmount(int32 FoodAmount);
 	void SetElementType(EPalElementType type1, EPalElementType type2);
 	void Set_Work_Suitability(const TMap<EPalWorkSuitability, int32>& WorkSuitabilities);
@@ -233,6 +223,16 @@ public:
 	void OnUnhoveredConditionButtonEvent(class UWBP_MainMenu_Pal_State_C* SelfWidget);
 	void OnUnhoveredActiveSkillButtonEvent(class UWBP_MainMenu_Pal_Skill_Active_C* SelfWidget);
 	void OnTriggeredRemoveWazaAction();
+	void OnSelectedSkill(EPalWazaID WazaID);
+	void OnInitialized();
+	void OnHoveredPassiveSkillButtonEvent(class UWBP_MainMenu_Pal_Skill_Passive_C* SelfWidget);
+	void OnHoveredPalButtonEvent(class UPalIndividualCharacterHandle* Handle);
+	void OnHoveredConditionButtonEvent(class UWBP_MainMenu_Pal_State_C* StateWidget);
+	void OnHoveredActiveSkillButtonEvent(class UWBP_MainMenu_Pal_Skill_Active_C* SelfWidget);
+	void OnCloseNameEditWindow(class UPalHUDDispatchParameterBase* Param_0);
+	void OnClickedPalButtonEvent(class UPalIndividualCharacterHandle* Handle);
+	void ListToStatus(class UPalIndividualCharacterHandle* Handle);
+	void IsShowingStatusWithList(bool* isShowing);
 	void GetRestoreFocusSkillPanelTarget(class UWidget** TargetWidget);
 	void Get_Partner_Skill_Lock_Item_Name(class FName ItemId, class FText* ReturnText);
 	void FocusToSkillPanel();

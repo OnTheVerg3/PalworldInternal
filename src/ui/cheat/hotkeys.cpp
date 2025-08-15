@@ -55,6 +55,11 @@ void TickHotkeys()
         }
 		
     } 
+
+    if (GetAsyncKeyState(key.hotkeyRefreshWeight) & 1)
+    {
+        SetPlayerInventoryWeight();
+    }
 }
 
 void TickHotkeysOneShot()
@@ -93,7 +98,7 @@ void DrawHotkeys()
     };
 
     static bool waitingWorld = false, waitingESP = false, waitingStamina = false, waitingRelic = false, waitingAttack = false, waitingRepair = false, 
-        waitingTeleportHome = false, waitingFastTravelMap = false;
+        waitingTeleportHome = false, waitingFastTravelMap = false, waitingWeight = false;
 
     HotkeyEntry hotkeys[] = {
     { "World Speed 1:10", &key.hotkeyToggleWorldSpeed, &waitingWorld, &key.worldSpeedToggled },
@@ -103,6 +108,7 @@ void DrawHotkeys()
     { "Attack 1:90000", &key.hotkeyToggleAttack, &waitingAttack, &key.attackToggled },
     { "Repair Current Weapon", &key.hotkeyRepairWeapon, &waitingRepair, nullptr },
     { "Teleport Home", &key.hotkeyTeleportHome, &waitingTeleportHome, nullptr },
+    { "Refresh Weight", &key.hotkeyRefreshWeight, &waitingWeight, nullptr },
     };
 
     for (auto& entry : hotkeys)

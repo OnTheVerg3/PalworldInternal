@@ -32,7 +32,7 @@ public:
 	bool                                          DownForceAble;                                     // 0x01D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NoEffect;                                          // 0x01D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1DA[0x6];                                      // 0x01DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                preLocation;                                       // 0x01E0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PreLocation;                                       // 0x01E0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Velocity;                                          // 0x01F8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EnableRagdoll;                                     // 0x0210(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_211[0x3];                                      // 0x0211(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -77,7 +77,7 @@ static_assert(offsetof(UBP_ActionDeath_C, DefaultTransform) == 0x000170, "Member
 static_assert(offsetof(UBP_ActionDeath_C, DestoryHandle) == 0x0001D0, "Member 'UBP_ActionDeath_C::DestoryHandle' has a wrong offset!");
 static_assert(offsetof(UBP_ActionDeath_C, DownForceAble) == 0x0001D8, "Member 'UBP_ActionDeath_C::DownForceAble' has a wrong offset!");
 static_assert(offsetof(UBP_ActionDeath_C, NoEffect) == 0x0001D9, "Member 'UBP_ActionDeath_C::NoEffect' has a wrong offset!");
-static_assert(offsetof(UBP_ActionDeath_C, preLocation) == 0x0001E0, "Member 'UBP_ActionDeath_C::preLocation' has a wrong offset!");
+static_assert(offsetof(UBP_ActionDeath_C, PreLocation) == 0x0001E0, "Member 'UBP_ActionDeath_C::PreLocation' has a wrong offset!");
 static_assert(offsetof(UBP_ActionDeath_C, Velocity) == 0x0001F8, "Member 'UBP_ActionDeath_C::Velocity' has a wrong offset!");
 static_assert(offsetof(UBP_ActionDeath_C, EnableRagdoll) == 0x000210, "Member 'UBP_ActionDeath_C::EnableRagdoll' has a wrong offset!");
 static_assert(offsetof(UBP_ActionDeath_C, flagName) == 0x000214, "Member 'UBP_ActionDeath_C::flagName' has a wrong offset!");

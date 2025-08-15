@@ -26,7 +26,7 @@ struct WBP_Graphic_Settings_C_GetDisplayGraphicLevel final
 {
 public:
 	struct FPalOptionGraphicsSettings             GraphicLevel;                                      // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	EPalOptionGraphicsLevel                       Graphicsレベル;                                    // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalOptionGraphicsLevel                       Graphicsレベル; // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)

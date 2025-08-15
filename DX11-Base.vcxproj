@@ -297,6 +297,7 @@
     <ClCompile Include="src\ui\cheat\aimbot.cpp" />
     <ClCompile Include="src\ui\cheat\cheat_state.cpp" />
     <ClCompile Include="src\ui\cheat\esp.cpp" />
+    <ClCompile Include="src\ui\cheat\Hooking.cpp" />
     <ClCompile Include="src\ui\cheat\hotkeys.cpp" />
     <ClCompile Include="src\ui\cheat\pal_editor.cpp" />
     <ClCompile Include="src\ui\cheat\singleplayer_state.cpp" />

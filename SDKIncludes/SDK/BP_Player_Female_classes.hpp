@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BP_PlayerBase_classes.hpp"
 #include "PhysicsCore_structs.hpp"
+#include "BP_PlayerBase_classes.hpp"
 
 
 namespace SDK
@@ -66,9 +66,9 @@ public:
 	void OnSlidingBegin();
 	void OnSlidingEnd();
 	void OnUpdateSliding();
+	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()

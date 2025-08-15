@@ -36,7 +36,7 @@ public:
 	bool                                          IsMeleeWeapon;                                     // 0x0180(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Const_DownRayDistance;                             // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                preLocation;                                       // 0x0190(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PreLocation;                                       // 0x0190(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        StackTimer;                                        // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         StackCount;                                        // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
@@ -94,7 +94,7 @@ static_assert(offsetof(UBP_AIAction_NPC_CombatBase_C, tempDeltaTime) == 0x000170
 static_assert(offsetof(UBP_AIAction_NPC_CombatBase_C, StateMachine) == 0x000178, "Member 'UBP_AIAction_NPC_CombatBase_C::StateMachine' has a wrong offset!");
 static_assert(offsetof(UBP_AIAction_NPC_CombatBase_C, IsMeleeWeapon) == 0x000180, "Member 'UBP_AIAction_NPC_CombatBase_C::IsMeleeWeapon' has a wrong offset!");
 static_assert(offsetof(UBP_AIAction_NPC_CombatBase_C, Const_DownRayDistance) == 0x000188, "Member 'UBP_AIAction_NPC_CombatBase_C::Const_DownRayDistance' has a wrong offset!");
-static_assert(offsetof(UBP_AIAction_NPC_CombatBase_C, preLocation) == 0x000190, "Member 'UBP_AIAction_NPC_CombatBase_C::preLocation' has a wrong offset!");
+static_assert(offsetof(UBP_AIAction_NPC_CombatBase_C, PreLocation) == 0x000190, "Member 'UBP_AIAction_NPC_CombatBase_C::PreLocation' has a wrong offset!");
 static_assert(offsetof(UBP_AIAction_NPC_CombatBase_C, StackTimer) == 0x0001A8, "Member 'UBP_AIAction_NPC_CombatBase_C::StackTimer' has a wrong offset!");
 static_assert(offsetof(UBP_AIAction_NPC_CombatBase_C, StackCount) == 0x0001B0, "Member 'UBP_AIAction_NPC_CombatBase_C::StackCount' has a wrong offset!");
 static_assert(offsetof(UBP_AIAction_NPC_CombatBase_C, Const_StackTime) == 0x0001B8, "Member 'UBP_AIAction_NPC_CombatBase_C::Const_StackTime' has a wrong offset!");

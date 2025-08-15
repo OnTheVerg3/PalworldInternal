@@ -18,25 +18,25 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PalGameInstance.BP_PalGameInstance_C
-// 0x00C8 (0x0950 - 0x0888)
+// 0x00C8 (0x0958 - 0x0890)
 class UBP_PalGameInstance_C final : public UPalGameInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0888(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class ULoadingProcessTask*                    CurrentLoadingTask;                                // 0x0890(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UPalHUDDispatchParameter_FadeWidget*    LoadingFadeParameter;                              // 0x0898(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UWorld>                  LoadWorld;                                         // 0x08A0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
-	bool                                          ShowedCharaMake;                                   // 0x08D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D1[0x7];                                      // 0x08D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   OpeningActor;                                      // 0x08D8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class FName                                   CutsceneName;                                      // 0x0908(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APalCutsceneActor*                      OpeningCutscene;                                   // 0x0910(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FName                                   flagName;                                          // 0x0918(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         PlayingID;                                         // 0x0920(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_924[0x4];                                      // 0x0924(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataTableRowHandle                    CreateSessionErrorMsgId;                           // 0x0928(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    CreateSessionErrorMsgId_Console;                   // 0x0938(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	bool                                          IsStartingGame;                                    // 0x0948(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0890(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class ULoadingProcessTask*                    CurrentLoadingTask;                                // 0x0898(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UPalHUDDispatchParameter_FadeWidget*    LoadingFadeParameter;                              // 0x08A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UWorld>                  LoadWorld;                                         // 0x08A8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
+	bool                                          ShowedCharaMake;                                   // 0x08D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8D9[0x7];                                      // 0x08D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   OpeningActor;                                      // 0x08E0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class FName                                   CutsceneName;                                      // 0x0910(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APalCutsceneActor*                      OpeningCutscene;                                   // 0x0918(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FName                                   flagName;                                          // 0x0920(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         PlayingID;                                         // 0x0928(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_92C[0x4];                                      // 0x092C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataTableRowHandle                    CreateSessionErrorMsgId;                           // 0x0930(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FDataTableRowHandle                    CreateSessionErrorMsgId_Console;                   // 0x0940(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	bool                                          IsStartingGame;                                    // 0x0950(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_PalGameInstance_AutoGenFunc(bool bResult);
@@ -71,20 +71,20 @@ public:
 	}
 };
 static_assert(alignof(UBP_PalGameInstance_C) == 0x000008, "Wrong alignment on UBP_PalGameInstance_C");
-static_assert(sizeof(UBP_PalGameInstance_C) == 0x000950, "Wrong size on UBP_PalGameInstance_C");
-static_assert(offsetof(UBP_PalGameInstance_C, UberGraphFrame) == 0x000888, "Member 'UBP_PalGameInstance_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_PalGameInstance_C, CurrentLoadingTask) == 0x000890, "Member 'UBP_PalGameInstance_C::CurrentLoadingTask' has a wrong offset!");
-static_assert(offsetof(UBP_PalGameInstance_C, LoadingFadeParameter) == 0x000898, "Member 'UBP_PalGameInstance_C::LoadingFadeParameter' has a wrong offset!");
-static_assert(offsetof(UBP_PalGameInstance_C, LoadWorld) == 0x0008A0, "Member 'UBP_PalGameInstance_C::LoadWorld' has a wrong offset!");
-static_assert(offsetof(UBP_PalGameInstance_C, ShowedCharaMake) == 0x0008D0, "Member 'UBP_PalGameInstance_C::ShowedCharaMake' has a wrong offset!");
-static_assert(offsetof(UBP_PalGameInstance_C, OpeningActor) == 0x0008D8, "Member 'UBP_PalGameInstance_C::OpeningActor' has a wrong offset!");
-static_assert(offsetof(UBP_PalGameInstance_C, CutsceneName) == 0x000908, "Member 'UBP_PalGameInstance_C::CutsceneName' has a wrong offset!");
-static_assert(offsetof(UBP_PalGameInstance_C, OpeningCutscene) == 0x000910, "Member 'UBP_PalGameInstance_C::OpeningCutscene' has a wrong offset!");
-static_assert(offsetof(UBP_PalGameInstance_C, flagName) == 0x000918, "Member 'UBP_PalGameInstance_C::flagName' has a wrong offset!");
-static_assert(offsetof(UBP_PalGameInstance_C, PlayingID) == 0x000920, "Member 'UBP_PalGameInstance_C::PlayingID' has a wrong offset!");
-static_assert(offsetof(UBP_PalGameInstance_C, CreateSessionErrorMsgId) == 0x000928, "Member 'UBP_PalGameInstance_C::CreateSessionErrorMsgId' has a wrong offset!");
-static_assert(offsetof(UBP_PalGameInstance_C, CreateSessionErrorMsgId_Console) == 0x000938, "Member 'UBP_PalGameInstance_C::CreateSessionErrorMsgId_Console' has a wrong offset!");
-static_assert(offsetof(UBP_PalGameInstance_C, IsStartingGame) == 0x000948, "Member 'UBP_PalGameInstance_C::IsStartingGame' has a wrong offset!");
+static_assert(sizeof(UBP_PalGameInstance_C) == 0x000958, "Wrong size on UBP_PalGameInstance_C");
+static_assert(offsetof(UBP_PalGameInstance_C, UberGraphFrame) == 0x000890, "Member 'UBP_PalGameInstance_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_PalGameInstance_C, CurrentLoadingTask) == 0x000898, "Member 'UBP_PalGameInstance_C::CurrentLoadingTask' has a wrong offset!");
+static_assert(offsetof(UBP_PalGameInstance_C, LoadingFadeParameter) == 0x0008A0, "Member 'UBP_PalGameInstance_C::LoadingFadeParameter' has a wrong offset!");
+static_assert(offsetof(UBP_PalGameInstance_C, LoadWorld) == 0x0008A8, "Member 'UBP_PalGameInstance_C::LoadWorld' has a wrong offset!");
+static_assert(offsetof(UBP_PalGameInstance_C, ShowedCharaMake) == 0x0008D8, "Member 'UBP_PalGameInstance_C::ShowedCharaMake' has a wrong offset!");
+static_assert(offsetof(UBP_PalGameInstance_C, OpeningActor) == 0x0008E0, "Member 'UBP_PalGameInstance_C::OpeningActor' has a wrong offset!");
+static_assert(offsetof(UBP_PalGameInstance_C, CutsceneName) == 0x000910, "Member 'UBP_PalGameInstance_C::CutsceneName' has a wrong offset!");
+static_assert(offsetof(UBP_PalGameInstance_C, OpeningCutscene) == 0x000918, "Member 'UBP_PalGameInstance_C::OpeningCutscene' has a wrong offset!");
+static_assert(offsetof(UBP_PalGameInstance_C, flagName) == 0x000920, "Member 'UBP_PalGameInstance_C::flagName' has a wrong offset!");
+static_assert(offsetof(UBP_PalGameInstance_C, PlayingID) == 0x000928, "Member 'UBP_PalGameInstance_C::PlayingID' has a wrong offset!");
+static_assert(offsetof(UBP_PalGameInstance_C, CreateSessionErrorMsgId) == 0x000930, "Member 'UBP_PalGameInstance_C::CreateSessionErrorMsgId' has a wrong offset!");
+static_assert(offsetof(UBP_PalGameInstance_C, CreateSessionErrorMsgId_Console) == 0x000940, "Member 'UBP_PalGameInstance_C::CreateSessionErrorMsgId_Console' has a wrong offset!");
+static_assert(offsetof(UBP_PalGameInstance_C, IsStartingGame) == 0x000950, "Member 'UBP_PalGameInstance_C::IsStartingGame' has a wrong offset!");
 
 }
 

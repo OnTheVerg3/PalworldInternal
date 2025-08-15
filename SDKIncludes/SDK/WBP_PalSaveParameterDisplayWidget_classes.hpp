@@ -42,7 +42,7 @@ public:
 	void SetElement(EPalElementType type1, EPalElementType type2);
 	void SetFavorite(int32 FavoriteIndex);
 	void SetFoodAmount(int32 FoddAmount);
-	void SetFriendShip(int32 FriendshipRank, int32 FriendshipPoint);
+	void SetFriendship(int32 FriendshipRank, int32 FriendshipPoint);
 	void SetGender(EPalGenderType GenderType);
 	void SetHP(int32 nowHP, int32 MaxHP);
 	void SetHunger(double nowHunger, double maxHunger);

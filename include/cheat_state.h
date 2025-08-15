@@ -7,7 +7,6 @@ extern std::vector<SDK::APalPlayerCharacter*> g_PlayerList;
 extern SDK::APalPlayerCharacter* selectedPlayer;
 extern SDK::APalWeaponBase* playerWeapon;
 
-
 void SetInfiniteAmmo();
 void ChangeWorldSpeed(float speed);
 void SetPlayerAttackParam();
@@ -41,6 +40,8 @@ void RemoveTechPoints();
 void RemoveAncientTechPoint();
 void SetPlayerSpeed();
 void SetPlayerLevel();
+
+struct BulkItem { std::string id; int count; };
 
 struct CheatState
 { 
@@ -93,6 +94,8 @@ struct CheatState
 
     // Misc
     bool showMenu = true;
+
+    std::vector<BulkItem> bulkItems;
 };
 
 struct SWaypoint
@@ -115,6 +118,7 @@ struct Hotkeys
     int hotkeyToggleAttack = VK_F5;
     int hotkeyRepairWeapon = VK_F6;
 	int hotkeyTeleportHome = VK_F7;
+    int hotkeyRefreshWeight = VK_F8;
     int hotkeyFastTravelMap = 0x4D;
 
     bool worldSpeedToggled = false;

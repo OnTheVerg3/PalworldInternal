@@ -301,17 +301,6 @@ static_assert(offsetof(BP_Player_Female_C_OnUpdateSliding, CallFunc_Divide_Doubl
 static_assert(offsetof(BP_Player_Female_C_OnUpdateSliding, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x000048, "Member 'BP_Player_Female_C_OnUpdateSliding::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_Player_Female_C_OnUpdateSliding, CallFunc_SetRTPCValueByActor_value_ImplicitCast) == 0x000050, "Member 'BP_Player_Female_C_OnUpdateSliding::CallFunc_SetRTPCValueByActor_value_ImplicitCast' has a wrong offset!");
 
-// Function BP_Player_Female.BP_Player_Female_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BP_Player_Female_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_Player_Female_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_Player_Female_C_ReceiveEndPlay");
-static_assert(sizeof(BP_Player_Female_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_Player_Female_C_ReceiveEndPlay");
-static_assert(offsetof(BP_Player_Female_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_Player_Female_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
-
 // Function BP_Player_Female.BP_Player_Female_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
 struct BP_Player_Female_C_ReceiveTick final
@@ -322,6 +311,17 @@ public:
 static_assert(alignof(BP_Player_Female_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_Player_Female_C_ReceiveTick");
 static_assert(sizeof(BP_Player_Female_C_ReceiveTick) == 0x000004, "Wrong size on BP_Player_Female_C_ReceiveTick");
 static_assert(offsetof(BP_Player_Female_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_Player_Female_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_Player_Female.BP_Player_Female_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BP_Player_Female_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_Player_Female_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_Player_Female_C_ReceiveEndPlay");
+static_assert(sizeof(BP_Player_Female_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_Player_Female_C_ReceiveEndPlay");
+static_assert(offsetof(BP_Player_Female_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_Player_Female_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
 
 }
 

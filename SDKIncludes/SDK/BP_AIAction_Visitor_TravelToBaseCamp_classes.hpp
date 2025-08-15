@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "AIModule_structs.hpp"
-#include "BP_AIAction_CanCombatBase_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
+#include "BP_AIAction_CanCombatBase_classes.hpp"
 
 
 namespace SDK
@@ -36,11 +36,11 @@ public:
 	bool                                          IsStuck;                                           // 0x01C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ActionAbort(class APawn* ControlledPawn);
-	void ActionFinished(class APawn* ControlledPawn, EPawnActionResult WithResult);
 	void ActionTick(class APawn* ControlledPawn, float DeltaSeconds);
 	void ExecuteUbergraph_BP_AIAction_Visitor_TravelToBaseCamp(int32 EntryPoint);
 	void Tick_Move_to_Base_Camp(class AActor* ControlledPawn, float DeltaTime);
+	void ActionAbort(class APawn* ControlledPawn);
+	void ActionFinished(class APawn* ControlledPawn, EPawnActionResult WithResult);
 	void ActionPause(class APawn* ControlledPawn);
 	void ActionResume(class APawn* ControlledPawn);
 	void ActionStart(class APawn* ControlledPawn);

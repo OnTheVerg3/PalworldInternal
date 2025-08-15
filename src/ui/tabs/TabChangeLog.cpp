@@ -10,7 +10,41 @@ void TabChangeLog()
         ImGui::Separator();
         ImGui::Spacing();
 
-        // Predeclare notes arrays for each version
+        static const char* notes_v160[] = {
+            "Updated for game patch 0.6.5.",
+            "New: Refresh Weight key (use when weight resets).",
+            "Fix: Saving Weight now persists correctly.",
+            "New: Quick Re-Spawn list (client-side temporary items).",
+            "  - Ammo/Spheres/Blueprints are fully usable.",
+            "  - Equipment auto-equips if the slot is empty.",
+            "  - Not saved to server; pickups/sorts/relog can overwrite/remove.",
+            "New: Auto-load saved settings on launch.",
+            "Fix: Crash when increasing durability while riding a Pal.",
+            "Fix: Several ESP-related crashes.",
+            nullptr
+        };
+
+        static const char* notes_v150[] = {
+            "Added Infinite Magazine feature.",
+            "Added Pal Editor.",
+            "Updated Item List.",
+            "Added Teleport Home option.",
+            "Added Changelogs tab in the menu.",
+            "Added ESP and Aimbot Visibility Check.",
+            "Added Clear Map Fog option.",
+            "Added Search bar for bosses.",
+            "Singleplayer: Added Fly mode.",
+            "Singleplayer: Added option to change player level.",
+            "Singleplayer: Added option to unlock Teleport Towers.",
+            "Improved menu layout and navigation.",
+            "Improved search function accuracy.",
+            "Fixed Infinite Ammo not working.",
+            "Fixed issue where weight sometimes prevented sprinting.",
+            "Fixed weight calculation bug.",
+            "Aimbot no longer targets base worker Pals.",
+            nullptr
+        };
+
         static const char* notes_v140[] = {
             "Added Repair Current Weapon feature (bindable).",
             "Added Weapon Damage Against Resources (trees, stones, etc.).",
@@ -56,6 +90,8 @@ void TabChangeLog()
 
         struct ChangeLogEntry { const char* version; const char* date; const char* const* notes; };
         static const ChangeLogEntry logs[] = {
+            { "v1.6.0", "", notes_v160 },
+            { "v1.5.0", "", notes_v150 },
             { "v1.4.0", "", notes_v140 },
             { "v1.3.0", "", notes_v130 },
             { "v1.2.0", "", notes_v120 },

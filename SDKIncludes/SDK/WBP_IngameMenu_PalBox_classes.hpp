@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "EPalBoxHoveredSlotType_structs.hpp"
 #include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 #include "SlateCore_structs.hpp"
+#include "EPalBoxHoveredSlotType_structs.hpp"
 
 
 namespace SDK

@@ -120,9 +120,6 @@
     <ClInclude Include="src\ui\cheat\aimbot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\hotkeys.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\ConfigManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -130,6 +127,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\pal_editor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hotkeys.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -246,6 +246,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\ui\tabs\TabSinglePlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\cheat\Hooking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

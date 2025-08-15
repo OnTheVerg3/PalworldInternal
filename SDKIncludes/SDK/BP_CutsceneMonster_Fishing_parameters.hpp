@@ -163,7 +163,7 @@ public:
 	EPalFishingPlayerMotionType                   PlayerMotionType;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                MeshScale;                                         // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                preLocation;                                       // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PreLocation;                                       // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x0040(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -186,7 +186,7 @@ static_assert(alignof(BP_CutsceneMonster_Fishing_C_SetupMeshScale) == 0x000010, 
 static_assert(sizeof(BP_CutsceneMonster_Fishing_C_SetupMeshScale) == 0x0002D0, "Wrong size on BP_CutsceneMonster_Fishing_C_SetupMeshScale");
 static_assert(offsetof(BP_CutsceneMonster_Fishing_C_SetupMeshScale, PlayerMotionType) == 0x000000, "Member 'BP_CutsceneMonster_Fishing_C_SetupMeshScale::PlayerMotionType' has a wrong offset!");
 static_assert(offsetof(BP_CutsceneMonster_Fishing_C_SetupMeshScale, MeshScale) == 0x000008, "Member 'BP_CutsceneMonster_Fishing_C_SetupMeshScale::MeshScale' has a wrong offset!");
-static_assert(offsetof(BP_CutsceneMonster_Fishing_C_SetupMeshScale, preLocation) == 0x000020, "Member 'BP_CutsceneMonster_Fishing_C_SetupMeshScale::preLocation' has a wrong offset!");
+static_assert(offsetof(BP_CutsceneMonster_Fishing_C_SetupMeshScale, PreLocation) == 0x000020, "Member 'BP_CutsceneMonster_Fishing_C_SetupMeshScale::PreLocation' has a wrong offset!");
 static_assert(offsetof(BP_CutsceneMonster_Fishing_C_SetupMeshScale, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000038, "Member 'BP_CutsceneMonster_Fishing_C_SetupMeshScale::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_CutsceneMonster_Fishing_C_SetupMeshScale, CallFunc_GetSocketTransform_ReturnValue) == 0x000040, "Member 'BP_CutsceneMonster_Fishing_C_SetupMeshScale::CallFunc_GetSocketTransform_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_CutsceneMonster_Fishing_C_SetupMeshScale, CallFunc_GetSocketTransform_ReturnValue_1) == 0x0000A0, "Member 'BP_CutsceneMonster_Fishing_C_SetupMeshScale::CallFunc_GetSocketTransform_ReturnValue_1' has a wrong offset!");

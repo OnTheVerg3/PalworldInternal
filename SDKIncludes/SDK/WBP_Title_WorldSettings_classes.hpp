@@ -120,6 +120,9 @@ public:
 	bool                                          Is_CrossPlay_On;                                   // 0x0B58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ConvertUIIndexToDeathPenalty(int32 UIIndex, EPalOptionWorldDeathPenalty* DeathPenaltyType);
+	void ConvertUIIndexToBuildingLimitNum(int32 UIIndex, int32* BuildingNum);
+	void ConvertRandomizerModeToUIIndex(EPalRandomizerType RandomizerType, int32* UIIndex);
 	void ConvertIndexToAutoSaveTime(int32 Index_0, double* Time);
 	void ConvertDifficultyToUIIndex(EPalOptionWorldDifficulty DifficultyType, int32* UIIndex);
 	void ConvertDeathPenaltyToUIIndex(EPalOptionWorldDeathPenalty DeathPenaltyType, int32* UIIndex);
@@ -187,9 +190,6 @@ public:
 	void BndEvt__WBP_Title_WorldSettings_WBP_Title_SettingsButton_1_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
 	void ApplyWorldSettingToUI(const struct FPalOptionWorldSettings& WorldSetting);
 	void ApplyDifficultyPreset(EPalOptionWorldDifficulty DifficultyType);
-	void ConvertUIIndexToDeathPenalty(int32 UIIndex, EPalOptionWorldDeathPenalty* DeathPenaltyType);
-	void ConvertUIIndexToBuildingLimitNum(int32 UIIndex, int32* BuildingNum);
-	void ConvertRandomizerModeToUIIndex(EPalRandomizerType RandomizerType, int32* UIIndex);
 	void ConvertUIIndexToDifficulty(int32 UIIndex, EPalOptionWorldDifficulty* DifficultyType);
 	void ConvertUIIndexToRandomizerMode(int32 UIIndex, EPalRandomizerType* RandomizerType);
 	void ConvertValueToBuildingLimitUIIndex(int32 BuildingLimitNum, int32* UIIndex);

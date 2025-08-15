@@ -40,6 +40,7 @@ void TabAimbotESP()
 	}
 
 	ImGui::Checkbox("Draw FOV", &cheatState.aimbotDrawFOV);
+	ImGui::Checkbox("Visibility Check", &cheatState.aimbotVisibilityCheck);
 	ImGui::SliderFloat("##aimfov", &cheatState.aimbotFov, 1.0f, 280.0f, "FOV: %.0f");
 	ImGui::SliderFloat("##aimsmooth", &cheatState.aimbotSmooth, 0.0f, 1.0f, "Smooth: %.2f");
 	ImGui::EndGroup();

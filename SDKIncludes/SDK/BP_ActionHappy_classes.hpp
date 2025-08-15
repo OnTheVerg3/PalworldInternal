@@ -28,7 +28,7 @@ public:
 	double                                        Timer;                                             // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ChangeFace(bool Smile);
+	void ChangeFace(bool smile);
 	void ExecuteUbergraph_BP_ActionHappy(int32 EntryPoint);
 	void OnBeginAction();
 	void OnEndAction();

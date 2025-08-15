@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "AIModule_structs.hpp"
 #include "BP_AIAction_CanCombatBase_classes.hpp"
+#include "AIModule_structs.hpp"
 
 
 namespace SDK
@@ -31,9 +31,9 @@ public:
 	bool                                          SingleEffectAble;                                  // 0x0173(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ActionFinished(class APawn* ControlledPawn, EPawnActionResult WithResult);
 	void ActionTick(class APawn* ControlledPawn, float DeltaSeconds);
 	void ExecuteUbergraph_BP_AIAction_FriendlyLookat(int32 EntryPoint);
+	void ActionFinished(class APawn* ControlledPawn, EPawnActionResult WithResult);
 	void ActionStart(class APawn* ControlledPawn);
 
 public:

@@ -29,9 +29,9 @@ public:
 	class UWidgetAnimation*                       Anm_EmptyNormalToFocus;                            // 0x0620(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_NormalToFocus;                                 // 0x0628(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Open_normal;                                   // 0x0630(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_normal;                                        // 0x0638(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_focus;                                         // 0x0640(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_push;                                          // 0x0648(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_Normal;                                        // 0x0638(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_Focus;                                         // 0x0640(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_Push;                                          // 0x0648(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Open_focus;                                    // 0x0650(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UImage*                                 Empty;                                             // 0x0658(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_Icon;                                        // 0x0660(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -97,9 +97,9 @@ static_assert(offsetof(UWBP_Menu_PalList_C, Anm_Pal_Dead) == 0x000618, "Member '
 static_assert(offsetof(UWBP_Menu_PalList_C, Anm_EmptyNormalToFocus) == 0x000620, "Member 'UWBP_Menu_PalList_C::Anm_EmptyNormalToFocus' has a wrong offset!");
 static_assert(offsetof(UWBP_Menu_PalList_C, Anm_NormalToFocus) == 0x000628, "Member 'UWBP_Menu_PalList_C::Anm_NormalToFocus' has a wrong offset!");
 static_assert(offsetof(UWBP_Menu_PalList_C, Anm_Open_normal) == 0x000630, "Member 'UWBP_Menu_PalList_C::Anm_Open_normal' has a wrong offset!");
-static_assert(offsetof(UWBP_Menu_PalList_C, Anm_normal) == 0x000638, "Member 'UWBP_Menu_PalList_C::Anm_normal' has a wrong offset!");
-static_assert(offsetof(UWBP_Menu_PalList_C, Anm_focus) == 0x000640, "Member 'UWBP_Menu_PalList_C::Anm_focus' has a wrong offset!");
-static_assert(offsetof(UWBP_Menu_PalList_C, Anm_push) == 0x000648, "Member 'UWBP_Menu_PalList_C::Anm_push' has a wrong offset!");
+static_assert(offsetof(UWBP_Menu_PalList_C, Anm_Normal) == 0x000638, "Member 'UWBP_Menu_PalList_C::Anm_Normal' has a wrong offset!");
+static_assert(offsetof(UWBP_Menu_PalList_C, Anm_Focus) == 0x000640, "Member 'UWBP_Menu_PalList_C::Anm_Focus' has a wrong offset!");
+static_assert(offsetof(UWBP_Menu_PalList_C, Anm_Push) == 0x000648, "Member 'UWBP_Menu_PalList_C::Anm_Push' has a wrong offset!");
 static_assert(offsetof(UWBP_Menu_PalList_C, Anm_Open_focus) == 0x000650, "Member 'UWBP_Menu_PalList_C::Anm_Open_focus' has a wrong offset!");
 static_assert(offsetof(UWBP_Menu_PalList_C, Empty) == 0x000658, "Member 'UWBP_Menu_PalList_C::Empty' has a wrong offset!");
 static_assert(offsetof(UWBP_Menu_PalList_C, Image_Icon) == 0x000660, "Member 'UWBP_Menu_PalList_C::Image_Icon' has a wrong offset!");

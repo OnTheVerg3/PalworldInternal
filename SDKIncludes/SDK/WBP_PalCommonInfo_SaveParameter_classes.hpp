@@ -30,7 +30,7 @@ public:
 	void SetBaseParameter(int32 MeleeAttack, int32 ShotAttack, int32 Defense, int32 Support, int32 Speed);
 	void SetElement(EPalElementType type1, EPalElementType type2);
 	void SetFoodAmount(int32 FoddAmount);
-	void SetFriendShip(int32 FriendshipRank, int32 FriendshipPoint);
+	void SetFriendship(int32 FriendshipRank, int32 FriendshipPoint);
 	void SetGender(EPalGenderType GenderType);
 	void SetHP(int32 nowHP, int32 MaxHP);
 	void SetHunger(double nowHunger, double maxHunger);

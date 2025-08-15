@@ -372,18 +372,18 @@ static_assert(alignof(WBP_PalSaveParameterDisplayWidget_C_SetFoodAmount) == 0x00
 static_assert(sizeof(WBP_PalSaveParameterDisplayWidget_C_SetFoodAmount) == 0x000004, "Wrong size on WBP_PalSaveParameterDisplayWidget_C_SetFoodAmount");
 static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_SetFoodAmount, FoddAmount) == 0x000000, "Member 'WBP_PalSaveParameterDisplayWidget_C_SetFoodAmount::FoddAmount' has a wrong offset!");
 
-// Function WBP_PalSaveParameterDisplayWidget.WBP_PalSaveParameterDisplayWidget_C.SetFriendShip
+// Function WBP_PalSaveParameterDisplayWidget.WBP_PalSaveParameterDisplayWidget_C.SetFriendship
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_PalSaveParameterDisplayWidget_C_SetFriendShip final
+struct WBP_PalSaveParameterDisplayWidget_C_SetFriendship final
 {
 public:
 	int32                                         FriendshipRank;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         FriendshipPoint;                                   // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_PalSaveParameterDisplayWidget_C_SetFriendShip) == 0x000004, "Wrong alignment on WBP_PalSaveParameterDisplayWidget_C_SetFriendShip");
-static_assert(sizeof(WBP_PalSaveParameterDisplayWidget_C_SetFriendShip) == 0x000008, "Wrong size on WBP_PalSaveParameterDisplayWidget_C_SetFriendShip");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_SetFriendShip, FriendshipRank) == 0x000000, "Member 'WBP_PalSaveParameterDisplayWidget_C_SetFriendShip::FriendshipRank' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_SetFriendShip, FriendshipPoint) == 0x000004, "Member 'WBP_PalSaveParameterDisplayWidget_C_SetFriendShip::FriendshipPoint' has a wrong offset!");
+static_assert(alignof(WBP_PalSaveParameterDisplayWidget_C_SetFriendship) == 0x000004, "Wrong alignment on WBP_PalSaveParameterDisplayWidget_C_SetFriendship");
+static_assert(sizeof(WBP_PalSaveParameterDisplayWidget_C_SetFriendship) == 0x000008, "Wrong size on WBP_PalSaveParameterDisplayWidget_C_SetFriendship");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_SetFriendship, FriendshipRank) == 0x000000, "Member 'WBP_PalSaveParameterDisplayWidget_C_SetFriendship::FriendshipRank' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_SetFriendship, FriendshipPoint) == 0x000004, "Member 'WBP_PalSaveParameterDisplayWidget_C_SetFriendship::FriendshipPoint' has a wrong offset!");
 
 // Function WBP_PalSaveParameterDisplayWidget.WBP_PalSaveParameterDisplayWidget_C.SetGender
 // 0x0001 (0x0001 - 0x0000)
