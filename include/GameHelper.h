@@ -1,9 +1,10 @@
 #pragma once
-#include "Pal_classes.hpp"
+
+
 
 namespace Helper
 {
-    SDK::APalPlayerCharacter* GetPalPlayerCharacter();
+    APalPlayerCharacter* GetPalPlayerCharacter();
     SDK::ULocalPlayer* GetLocalPlayer();
     SDK::APalPlayerController* GetPalPlayerController();
     SDK::UPalPlayerInventoryData* GetInventoryComponent();

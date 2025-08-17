@@ -95,7 +95,7 @@ namespace DX11Base
             if (ImGui::Begin("##main", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoTitleBar))
             {
                 // Header
-                ImGui::TextColored(ImVec4(0.85f, 0.95f, 1.0f, 1.0f), "Palworld Trainer v1.6");
+                ImGui::TextColored(ImVec4(0.85f, 0.95f, 1.0f, 1.0f), "Palworld v1.8");
                 ImGui::Spacing();
                 ImGui::Separator();
 
@@ -182,6 +182,15 @@ namespace DX11Base
         ResetStamina();
         TickHotkeys();
         TickHotkeysOneShot();
+
+        static auto lastCallTime = std::chrono::steady_clock::now();
+        auto now = std::chrono::steady_clock::now();
+        auto msSinceLastCall = std::chrono::duration_cast<std::chrono::milliseconds>(now - lastCallTime).count();
+
+        if (cheatState.godmode && msSinceLastCall >= 600) {  // 600 ms = 1,8 times per second
+            Godmode();
+            lastCallTime = now;
+        }
 
         if (cheatState.aimbotEnabled && (GetAsyncKeyState(cheatState.aimbotHotkey) & 0x8000))
         {

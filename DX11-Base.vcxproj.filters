@@ -132,6 +132,9 @@
     <ClInclude Include="include\hotkeys.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\sdk_selector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -249,6 +252,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\ui\cheat\Hooking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKIncludesXBox\Basic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKIncludesXBox\Pal_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKIncludesXBox\CoreUObject_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKIncludesXBox\Engine_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

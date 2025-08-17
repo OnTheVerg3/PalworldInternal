@@ -17,6 +17,11 @@ void TabFeatures()
         // Call your stamina apply func here if you have one, e.g. SetInfiniteStamina();
         SaveConfig("config.txt");
     }
+
+    if (ImGui::Checkbox("Godmode", &cheatState.godmode)) {
+        // Call your stamina apply func here if you have one, e.g. SetInfiniteStamina();
+        SaveConfig("config.txt");
+    }
     ImGui::Spacing();
 
     // World Speed

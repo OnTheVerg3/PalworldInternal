@@ -16,8 +16,8 @@
 #include <functional>
 #include <type_traits>
 
-#include "../PropertyFixup.hpp"
-#include "../UnrealContainers.hpp"
+#include "PropertyFixup.hpp"
+#include "UnrealContainers.hpp"
 
 namespace SDK
 {

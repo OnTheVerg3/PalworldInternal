@@ -270,8 +270,9 @@ void TeleportPlayerTo(const FVector& pos)
 	FGuid guid = pPalPlayerState->PlayerUId;
 
 	pPalPlayerController->Transmitter->Player->RegisterRespawnPoint_ToServer(guid, safeLocation, defaultRotation);
+	pPalPlayerController->TeleportToSafePoint_ToServer();
 
-	pPalPlayerState->RequestRespawn();
+	//pPalPlayerState->RequestRespawn();
 }
 
 void TeleportPlayerToHome()
@@ -487,6 +488,26 @@ void UnlockAllFastTravelPoints()
 			++changed;
 		}
 	}
+}
+
+void Godmode()
+{
+	APalPlayerCharacter* player = GetPalPlayerCharacter();
+	if (!player)
+		return;
+
+	APalPlayerController* PC = GetPalPlayerController();
+	if (!PC)
+		return;
+
+	UPalCharacterParameterComponent* pParams = player->CharacterParameterComponent;
+	if (!pParams)
+		return;
+
+	FFixedPoint newHealthPoint = FFixedPoint(5000);
+
+	PC->Transmitter->CharacterStatusOperation->RequestReviveCharacterFromDying_ToServer(player);
+	//	pPalPlayerCharacter->ReviveCharacter_ToServer(newHealthPoint);
 }
 
 

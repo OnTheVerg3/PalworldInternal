@@ -3,7 +3,6 @@
 #include <string>
 #include <Windows.h>
 
-extern std::vector<SDK::APalPlayerCharacter*> g_PlayerList;
 extern SDK::APalPlayerCharacter* selectedPlayer;
 extern SDK::APalWeaponBase* playerWeapon;
 
@@ -26,6 +25,7 @@ void SetInfiniteMagazine();
 void TeleportPlayerToHome();
 void RevealMapAroundPlayer();
 void UnlockAllFastTravelPoints();
+void Godmode();
 
 //Debug
 void DebugBuildOverlap();
@@ -56,6 +56,7 @@ struct CheatState
     bool infStamina = false;
     float cameraFov = 90.0f;
     float cameraBrightness = 1.0f;
+    bool godmode = false;
 
     //Aimbot
     bool isSilent = true;

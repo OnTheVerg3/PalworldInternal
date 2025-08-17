@@ -10,6 +10,17 @@ void TabChangeLog()
         ImGui::Separator();
         ImGui::Spacing();
 
+        static const char* notes_v180[] = {
+            "New: Added Godmode.",
+            "Fix: Telelport now works in PalGuard Servers.",
+            nullptr
+        };
+
+        static const char* notes_v170[] = {
+            "Added XBOX Gamepass Support.",
+            nullptr
+        };
+
         static const char* notes_v160[] = {
             "Updated for game patch 0.6.5.",
             "New: Refresh Weight key (use when weight resets).",
@@ -90,6 +101,8 @@ void TabChangeLog()
 
         struct ChangeLogEntry { const char* version; const char* date; const char* const* notes; };
         static const ChangeLogEntry logs[] = {
+            { "v1.8.0", "", notes_v180 },
+            { "v1.7.0", "", notes_v170 },
             { "v1.6.0", "", notes_v160 },
             { "v1.5.0", "", notes_v150 },
             { "v1.4.0", "", notes_v140 },

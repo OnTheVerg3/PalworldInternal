@@ -40,6 +40,9 @@
 // MINHOOK
 #include "libs/MinHook/MinHook.h"
 
+//SDK SELECTOR
+#include "sdk_selector.hpp"
+using namespace SDK;
 
 // DEAR IMGUI
 #include "libs/ImGui/imgui.h"
