@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
 #include "Pal_classes.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_PalCharacterSlotBase.WBP_PalCharacterSlotBase_C
-// 0x0490 (0x0898 - 0x0408)
+// 0x0498 (0x08A0 - 0x0408)
 class UWBP_PalCharacterSlotBase_C : public UPalUserWidget
 {
 public:
@@ -50,7 +50,7 @@ public:
 	TMulticastInlineDelegate<void(bool bIsAssigned)> OnChangedAssignToExpedition;                    // 0x0548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(class UPalStatusComponent* StatusComponent, EPalStatusID statusID, class UPalStatusBase* StatusBase)> OnAddStatus; // 0x0558(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(class UPalStatusComponent* StatusComponent, EPalStatusID statusID)> OnRemoveStatus; // 0x0568(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FPalIndividualCharacterSaveParameter   TargetSaveParam;                                   // 0x0578(0x0320)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPalIndividualCharacterSaveParameter   TargetSaveParam;                                   // 0x0578(0x0328)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void BindActorEvent(class UPalIndividualCharacterHandle* Handle);
@@ -94,7 +94,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_PalCharacterSlotBase_C) == 0x000008, "Wrong alignment on UWBP_PalCharacterSlotBase_C");
-static_assert(sizeof(UWBP_PalCharacterSlotBase_C) == 0x000898, "Wrong size on UWBP_PalCharacterSlotBase_C");
+static_assert(sizeof(UWBP_PalCharacterSlotBase_C) == 0x0008A0, "Wrong size on UWBP_PalCharacterSlotBase_C");
 static_assert(offsetof(UWBP_PalCharacterSlotBase_C, UberGraphFrame) == 0x000408, "Member 'UWBP_PalCharacterSlotBase_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_PalCharacterSlotBase_C, myIconWidget) == 0x000410, "Member 'UWBP_PalCharacterSlotBase_C::myIconWidget' has a wrong offset!");
 static_assert(offsetof(UWBP_PalCharacterSlotBase_C, TargetSlot) == 0x000418, "Member 'UWBP_PalCharacterSlotBase_C::TargetSlot' has a wrong offset!");

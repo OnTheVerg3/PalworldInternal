@@ -38,7 +38,7 @@ public:
 	struct FShooterSpringCameraParameter          CameraOffset_Idle;                                 // 0x01B0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	struct FShooterSpringCameraParameter          CameraOffset_Hit;                                  // 0x01D8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	class ABP_CutsceneMonster_Fishing_C*          CutsceneMonsterActor;                              // 0x0200(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                PreLocation;                                       // 0x0208(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                preLocation;                                       // 0x0208(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsLarge;                                           // 0x0220(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPalFishingCutsceneInfo                CutsceneInfo;                                      // 0x0228(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -154,7 +154,7 @@ static_assert(offsetof(UBP_Action_Fishing_C, FishingComponent) == 0x0001A8, "Mem
 static_assert(offsetof(UBP_Action_Fishing_C, CameraOffset_Idle) == 0x0001B0, "Member 'UBP_Action_Fishing_C::CameraOffset_Idle' has a wrong offset!");
 static_assert(offsetof(UBP_Action_Fishing_C, CameraOffset_Hit) == 0x0001D8, "Member 'UBP_Action_Fishing_C::CameraOffset_Hit' has a wrong offset!");
 static_assert(offsetof(UBP_Action_Fishing_C, CutsceneMonsterActor) == 0x000200, "Member 'UBP_Action_Fishing_C::CutsceneMonsterActor' has a wrong offset!");
-static_assert(offsetof(UBP_Action_Fishing_C, PreLocation) == 0x000208, "Member 'UBP_Action_Fishing_C::PreLocation' has a wrong offset!");
+static_assert(offsetof(UBP_Action_Fishing_C, preLocation) == 0x000208, "Member 'UBP_Action_Fishing_C::preLocation' has a wrong offset!");
 static_assert(offsetof(UBP_Action_Fishing_C, IsLarge) == 0x000220, "Member 'UBP_Action_Fishing_C::IsLarge' has a wrong offset!");
 static_assert(offsetof(UBP_Action_Fishing_C, CutsceneInfo) == 0x000228, "Member 'UBP_Action_Fishing_C::CutsceneInfo' has a wrong offset!");
 static_assert(offsetof(UBP_Action_Fishing_C, IsOnLargePal) == 0x0002C0, "Member 'UBP_Action_Fishing_C::IsOnLargePal' has a wrong offset!");

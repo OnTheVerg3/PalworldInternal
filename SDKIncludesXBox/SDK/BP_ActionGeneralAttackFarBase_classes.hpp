@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_ActionGeneralAttackBase_classes.hpp"
+#include "Engine_structs.hpp"
 #include "EEffectSpawnParametersType_structs.hpp"
 
 
@@ -20,8 +20,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_ActionGeneralAttackFarBase.BP_ActionGeneralAttackFarBase_C
 // 0x0070 (0x02E0 - 0x0270)
-#pragma pack(push, 0x1)
-class alignas(0x10) UBP_ActionGeneralAttackFarBase_C : public UBP_ActionGeneralAttackBase_C
+class UBP_ActionGeneralAttackFarBase_C : public UBP_ActionGeneralAttackBase_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ActionGeneralAttackFarBase_C;    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -91,7 +90,6 @@ public:
 		return GetDefaultObjImpl<UBP_ActionGeneralAttackFarBase_C>();
 	}
 };
-#pragma pack(pop)
 static_assert(alignof(UBP_ActionGeneralAttackFarBase_C) == 0x000010, "Wrong alignment on UBP_ActionGeneralAttackFarBase_C");
 static_assert(sizeof(UBP_ActionGeneralAttackFarBase_C) == 0x0002E0, "Wrong size on UBP_ActionGeneralAttackFarBase_C");
 static_assert(offsetof(UBP_ActionGeneralAttackFarBase_C, UberGraphFrame_BP_ActionGeneralAttackFarBase_C) == 0x000270, "Member 'UBP_ActionGeneralAttackFarBase_C::UberGraphFrame_BP_ActionGeneralAttackFarBase_C' has a wrong offset!");

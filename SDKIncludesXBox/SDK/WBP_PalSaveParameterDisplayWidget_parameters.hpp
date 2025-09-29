@@ -60,7 +60,7 @@ static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_Calc_HP, CallFunc_Get
 static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_Calc_HP, CallFunc_Convert_FixedPoint64ToInt_ReturnValue) == 0x00001C, "Member 'WBP_PalSaveParameterDisplayWidget_C_Calc_HP::CallFunc_Convert_FixedPoint64ToInt_ReturnValue' has a wrong offset!");
 
 // Function WBP_PalSaveParameterDisplayWidget.WBP_PalSaveParameterDisplayWidget_C.CalcBuffedWorkSuitabilityRank
-// 0x0528 (0x0528 - 0x0000)
+// 0x0530 (0x0530 - 0x0000)
 struct WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank final
 {
 public:
@@ -77,30 +77,30 @@ public:
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_parameter;               // 0x0118(0x0320)()
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x0438(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TMap<EPalWorkSuitability, int32>              CallFunc_GetSaveParameterValue_WorkSuitabilityBonusRank_ReturnValue; // 0x0440(0x0050)()
-	class FName                                   CallFunc_GetSaveParameterValue_CharacterID_ReturnValue; // 0x0490(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<EPalWorkSuitability, int32>              CallFunc_GetWorkSuitabilityRank_WorkSuitabilities; // 0x0498(0x0050)()
-	TArray<EPalWorkSuitability>                   CallFunc_Map_Keys_Keys;                            // 0x04E8(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x04F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalWorkSuitability                           CallFunc_Array_Get_Item;                           // 0x04FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x04FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FE[0x2];                                      // 0x04FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Map_Find_Value;                           // 0x0500(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0504(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_505[0x3];                                      // 0x0505(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0508(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Map_Find_Value_1;                         // 0x050C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0510(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_511[0x3];                                      // 0x0511(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Min_ReturnValue;                          // 0x0514(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0518(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x051C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Min_ReturnValue_1;                        // 0x0520(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_parameter;               // 0x0118(0x0328)()
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x0440(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TMap<EPalWorkSuitability, int32>              CallFunc_GetSaveParameterValue_WorkSuitabilityBonusRank_ReturnValue; // 0x0448(0x0050)()
+	class FName                                   CallFunc_GetSaveParameterValue_CharacterID_ReturnValue; // 0x0498(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<EPalWorkSuitability, int32>              CallFunc_GetWorkSuitabilityRank_WorkSuitabilities; // 0x04A0(0x0050)()
+	TArray<EPalWorkSuitability>                   CallFunc_Map_Keys_Keys;                            // 0x04F0(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0500(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalWorkSuitability                           CallFunc_Array_Get_Item;                           // 0x0504(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0505(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_506[0x2];                                      // 0x0506(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Map_Find_Value;                           // 0x0508(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x050C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_50D[0x3];                                      // 0x050D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0510(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Map_Find_Value_1;                         // 0x0514(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0518(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_519[0x3];                                      // 0x0519(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Min_ReturnValue;                          // 0x051C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0520(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0524(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Min_ReturnValue_1;                        // 0x0528(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank) == 0x000008, "Wrong alignment on WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank");
-static_assert(sizeof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank) == 0x000528, "Wrong size on WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank");
+static_assert(sizeof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank) == 0x000530, "Wrong size on WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank");
 static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, RankMap) == 0x000000, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::RankMap' has a wrong offset!");
 static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, NewLocalVar) == 0x000050, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::NewLocalVar' has a wrong offset!");
 static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, Temp_int_Array_Index_Variable) == 0x0000A0, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::Temp_int_Array_Index_Variable' has a wrong offset!");
@@ -112,23 +112,23 @@ static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabi
 static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000110, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_SelectInt_ReturnValue) == 0x000114, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_GetSaveParameter_parameter) == 0x000118, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_GetSaveParameter_parameter' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x000438, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_GetSaveParameterValue_WorkSuitabilityBonusRank_ReturnValue) == 0x000440, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_GetSaveParameterValue_WorkSuitabilityBonusRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_GetSaveParameterValue_CharacterID_ReturnValue) == 0x000490, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_GetSaveParameterValue_CharacterID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_GetWorkSuitabilityRank_WorkSuitabilities) == 0x000498, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_GetWorkSuitabilityRank_WorkSuitabilities' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Map_Keys_Keys) == 0x0004E8, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Array_Length_ReturnValue) == 0x0004F8, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Array_Get_Item) == 0x0004FC, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Less_IntInt_ReturnValue) == 0x0004FD, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Map_Find_Value) == 0x000500, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Map_Find_ReturnValue) == 0x000504, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Add_IntInt_ReturnValue_1) == 0x000508, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Map_Find_Value_1) == 0x00050C, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Map_Find_ReturnValue_1) == 0x000510, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Min_ReturnValue) == 0x000514, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Min_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Add_IntInt_ReturnValue_2) == 0x000518, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Add_IntInt_ReturnValue_3) == 0x00051C, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Min_ReturnValue_1) == 0x000520, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Min_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x000440, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_GetSaveParameterValue_WorkSuitabilityBonusRank_ReturnValue) == 0x000448, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_GetSaveParameterValue_WorkSuitabilityBonusRank_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_GetSaveParameterValue_CharacterID_ReturnValue) == 0x000498, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_GetSaveParameterValue_CharacterID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_GetWorkSuitabilityRank_WorkSuitabilities) == 0x0004A0, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_GetWorkSuitabilityRank_WorkSuitabilities' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Map_Keys_Keys) == 0x0004F0, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Array_Length_ReturnValue) == 0x000500, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Array_Get_Item) == 0x000504, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Less_IntInt_ReturnValue) == 0x000505, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Map_Find_Value) == 0x000508, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Map_Find_ReturnValue) == 0x00050C, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Add_IntInt_ReturnValue_1) == 0x000510, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Map_Find_Value_1) == 0x000514, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Map_Find_ReturnValue_1) == 0x000518, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Min_ReturnValue) == 0x00051C, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Min_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Add_IntInt_ReturnValue_2) == 0x000520, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Add_IntInt_ReturnValue_3) == 0x000524, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank, CallFunc_Min_ReturnValue_1) == 0x000528, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcBuffedWorkSuitabilityRank::CallFunc_Min_ReturnValue_1' has a wrong offset!");
 
 // Function WBP_PalSaveParameterDisplayWidget.WBP_PalSaveParameterDisplayWidget_C.CalcExp
 // 0x0070 (0x0070 - 0x0000)
@@ -174,106 +174,106 @@ static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcExp, CallFunc_Con
 static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_CalcExp, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000068, "Member 'WBP_PalSaveParameterDisplayWidget_C_CalcExp::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
 
 // Function WBP_PalSaveParameterDisplayWidget.WBP_PalSaveParameterDisplayWidget_C.DisplaySaveParameter
-// 0x0478 (0x0478 - 0x0000)
+// 0x0480 (0x0480 - 0x0000)
 struct WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter final
 {
 public:
-	struct FPalIndividualCharacterSaveParameter   displayParameter;                                  // 0x0000(0x0320)(BlueprintVisible, BlueprintReadOnly, Parm)
-	TMap<EPalWorkSuitability, int32>              CallFunc_CalcBuffedWorkSuitabilityRank_RankMap;    // 0x0320(0x0050)()
-	int32                                         CallFunc_GetSaveParameterValue_FriendshipPoint_ReturnValue; // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSaveParameterValue_Rank_CraftSpeed_ReturnValue; // 0x0374(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetSaveParameterValue_bImportedCharacter_ReturnValue; // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_379[0x3];                                      // 0x0379(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetSaveParameterValue_FavoriteIndexl_ReturnValue; // 0x037C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           CallFunc_GetSaveParameterValue_PassiveSkillList_ReturnValue; // 0x0380(0x0010)(ConstParm, ReferenceParm)
-	float                                         CallFunc_GetSaveParameterValue_MaxFullStomach_ReturnValue; // 0x0390(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetSaveParameterValue_FullStomach_ReturnValue; // 0x0394(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<EPalWazaID>                            CallFunc_GetSaveParameterValue_EquipWaza_ReturnValue; // 0x0398(0x0010)(ConstParm, ReferenceParm)
-	bool                                          CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue; // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_GetSaveParameterValue_Exp_ReturnValue;    // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSaveParameterValue_Rank_Defence_ReturnValue; // 0x03B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSaveParameterValue_Rank_Attack_ReturnValue; // 0x03BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSaveParameterValue_Rank_HP_ReturnValue; // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSaveParameterValue_Rank_ReturnValue;   // 0x03C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x03CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSaveParameterValue_Level_ReturnValue;  // 0x03D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x03D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalGenderType                                CallFunc_GetSaveParameterValue_Gender_ReturnValue; // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D9[0x3];                                      // 0x03D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetSaveParameterValue_CharacterID_ReturnValue; // 0x03DC(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x03E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalGameInstance*                       CallFunc_GetPalGameInstance_ReturnValue;           // 0x03F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetCraftSpeedBySaveParameter_ReturnValue; // 0x03F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetNickNameWithOnlineID_OutName;          // 0x0400(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_1; // 0x0410(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetFriendshipRank_ReturnValue;            // 0x0418(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalElementType                               CallFunc_GetElementType_Element1;                  // 0x041C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalElementType                               CallFunc_GetElementType_Element2;                  // 0x041D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41E[0x2];                                      // 0x041E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetFoodAmount_ReturnValue;                // 0x0420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_424[0x4];                                      // 0x0424(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_2; // 0x0428(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetDefenseBySaveParameter_ReturnValue;    // 0x0430(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_434[0x4];                                      // 0x0434(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_3; // 0x0438(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSupportBySaveParameter_ReturnValue;    // 0x0440(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_444[0x4];                                      // 0x0444(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_4; // 0x0448(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetMeleeAttackBySaveParameter_ReturnValue; // 0x0450(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_454[0x4];                                      // 0x0454(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_5; // 0x0458(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetShotAttackBySaveParameter_ReturnValue; // 0x0460(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_464[0x4];                                      // 0x0464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SetHunger_maxHunger_ImplicitCast;         // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetHunger_nowHunger_ImplicitCast;         // 0x0470(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   displayParameter;                                  // 0x0000(0x0328)(BlueprintVisible, BlueprintReadOnly, Parm)
+	TMap<EPalWorkSuitability, int32>              CallFunc_CalcBuffedWorkSuitabilityRank_RankMap;    // 0x0328(0x0050)()
+	int32                                         CallFunc_GetSaveParameterValue_FriendshipPoint_ReturnValue; // 0x0378(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSaveParameterValue_Rank_CraftSpeed_ReturnValue; // 0x037C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetSaveParameterValue_bImportedCharacter_ReturnValue; // 0x0380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_381[0x3];                                      // 0x0381(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetSaveParameterValue_FavoriteIndexl_ReturnValue; // 0x0384(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           CallFunc_GetSaveParameterValue_PassiveSkillList_ReturnValue; // 0x0388(0x0010)(ConstParm, ReferenceParm)
+	float                                         CallFunc_GetSaveParameterValue_MaxFullStomach_ReturnValue; // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetSaveParameterValue_FullStomach_ReturnValue; // 0x039C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<EPalWazaID>                            CallFunc_GetSaveParameterValue_EquipWaza_ReturnValue; // 0x03A0(0x0010)(ConstParm, ReferenceParm)
+	bool                                          CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue; // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B1[0x7];                                      // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_GetSaveParameterValue_Exp_ReturnValue;    // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSaveParameterValue_Rank_Defence_ReturnValue; // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSaveParameterValue_Rank_Attack_ReturnValue; // 0x03C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSaveParameterValue_Rank_HP_ReturnValue; // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSaveParameterValue_Rank_ReturnValue;   // 0x03CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x03D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x03D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSaveParameterValue_Level_ReturnValue;  // 0x03D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x03DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalGenderType                                CallFunc_GetSaveParameterValue_Gender_ReturnValue; // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E1[0x3];                                      // 0x03E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetSaveParameterValue_CharacterID_ReturnValue; // 0x03E4(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3EC[0x4];                                      // 0x03EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x03F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalGameInstance*                       CallFunc_GetPalGameInstance_ReturnValue;           // 0x03F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetCraftSpeedBySaveParameter_ReturnValue; // 0x0400(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetNickNameWithOnlineID_OutName;          // 0x0408(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_1; // 0x0418(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetFriendshipRank_ReturnValue;            // 0x0420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalElementType                               CallFunc_GetElementType_Element1;                  // 0x0424(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalElementType                               CallFunc_GetElementType_Element2;                  // 0x0425(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_426[0x2];                                      // 0x0426(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetFoodAmount_ReturnValue;                // 0x0428(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_2; // 0x0430(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetDefenseBySaveParameter_ReturnValue;    // 0x0438(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43C[0x4];                                      // 0x043C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_3; // 0x0440(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSupportBySaveParameter_ReturnValue;    // 0x0448(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44C[0x4];                                      // 0x044C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_4; // 0x0450(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetMeleeAttackBySaveParameter_ReturnValue; // 0x0458(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45C[0x4];                                      // 0x045C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_5; // 0x0460(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetShotAttackBySaveParameter_ReturnValue; // 0x0468(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46C[0x4];                                      // 0x046C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SetHunger_maxHunger_ImplicitCast;         // 0x0470(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetHunger_nowHunger_ImplicitCast;         // 0x0478(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter) == 0x000008, "Wrong alignment on WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter");
-static_assert(sizeof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter) == 0x000478, "Wrong size on WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter");
+static_assert(sizeof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter) == 0x000480, "Wrong size on WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter");
 static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, displayParameter) == 0x000000, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::displayParameter' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_CalcBuffedWorkSuitabilityRank_RankMap) == 0x000320, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_CalcBuffedWorkSuitabilityRank_RankMap' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_FriendshipPoint_ReturnValue) == 0x000370, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_FriendshipPoint_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Rank_CraftSpeed_ReturnValue) == 0x000374, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Rank_CraftSpeed_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_bImportedCharacter_ReturnValue) == 0x000378, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_bImportedCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_FavoriteIndexl_ReturnValue) == 0x00037C, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_FavoriteIndexl_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_PassiveSkillList_ReturnValue) == 0x000380, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_PassiveSkillList_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_MaxFullStomach_ReturnValue) == 0x000390, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_MaxFullStomach_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_FullStomach_ReturnValue) == 0x000394, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_FullStomach_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_EquipWaza_ReturnValue) == 0x000398, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_EquipWaza_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue) == 0x0003A8, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Exp_ReturnValue) == 0x0003B0, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Exp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Rank_Defence_ReturnValue) == 0x0003B8, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Rank_Defence_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Rank_Attack_ReturnValue) == 0x0003BC, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Rank_Attack_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Rank_HP_ReturnValue) == 0x0003C0, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Rank_HP_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Rank_ReturnValue) == 0x0003C4, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Rank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_Add_IntInt_ReturnValue) == 0x0003C8, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_Add_IntInt_ReturnValue_1) == 0x0003CC, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Level_ReturnValue) == 0x0003D0, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Level_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_Add_IntInt_ReturnValue_2) == 0x0003D4, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Gender_ReturnValue) == 0x0003D8, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Gender_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_CharacterID_ReturnValue) == 0x0003DC, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_CharacterID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x0003E8, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetPalGameInstance_ReturnValue) == 0x0003F0, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetPalGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetCraftSpeedBySaveParameter_ReturnValue) == 0x0003F8, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetCraftSpeedBySaveParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetNickNameWithOnlineID_OutName) == 0x000400, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetNickNameWithOnlineID_OutName' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue_1) == 0x000410, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetFriendshipRank_ReturnValue) == 0x000418, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetFriendshipRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetElementType_Element1) == 0x00041C, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetElementType_Element1' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetElementType_Element2) == 0x00041D, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetElementType_Element2' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetFoodAmount_ReturnValue) == 0x000420, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetFoodAmount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue_2) == 0x000428, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDefenseBySaveParameter_ReturnValue) == 0x000430, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDefenseBySaveParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue_3) == 0x000438, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSupportBySaveParameter_ReturnValue) == 0x000440, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSupportBySaveParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue_4) == 0x000448, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetMeleeAttackBySaveParameter_ReturnValue) == 0x000450, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetMeleeAttackBySaveParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue_5) == 0x000458, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetShotAttackBySaveParameter_ReturnValue) == 0x000460, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetShotAttackBySaveParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_SetHunger_maxHunger_ImplicitCast) == 0x000468, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_SetHunger_maxHunger_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_SetHunger_nowHunger_ImplicitCast) == 0x000470, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_SetHunger_nowHunger_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_CalcBuffedWorkSuitabilityRank_RankMap) == 0x000328, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_CalcBuffedWorkSuitabilityRank_RankMap' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_FriendshipPoint_ReturnValue) == 0x000378, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_FriendshipPoint_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Rank_CraftSpeed_ReturnValue) == 0x00037C, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Rank_CraftSpeed_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_bImportedCharacter_ReturnValue) == 0x000380, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_bImportedCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_FavoriteIndexl_ReturnValue) == 0x000384, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_FavoriteIndexl_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_PassiveSkillList_ReturnValue) == 0x000388, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_PassiveSkillList_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_MaxFullStomach_ReturnValue) == 0x000398, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_MaxFullStomach_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_FullStomach_ReturnValue) == 0x00039C, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_FullStomach_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_EquipWaza_ReturnValue) == 0x0003A0, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_EquipWaza_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue) == 0x0003B0, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Exp_ReturnValue) == 0x0003B8, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Exp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Rank_Defence_ReturnValue) == 0x0003C0, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Rank_Defence_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Rank_Attack_ReturnValue) == 0x0003C4, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Rank_Attack_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Rank_HP_ReturnValue) == 0x0003C8, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Rank_HP_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Rank_ReturnValue) == 0x0003CC, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Rank_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_Add_IntInt_ReturnValue) == 0x0003D0, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_Add_IntInt_ReturnValue_1) == 0x0003D4, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Level_ReturnValue) == 0x0003D8, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Level_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_Add_IntInt_ReturnValue_2) == 0x0003DC, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Gender_ReturnValue) == 0x0003E0, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Gender_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_CharacterID_ReturnValue) == 0x0003E4, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_CharacterID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x0003F0, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetPalGameInstance_ReturnValue) == 0x0003F8, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetPalGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetCraftSpeedBySaveParameter_ReturnValue) == 0x000400, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetCraftSpeedBySaveParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetNickNameWithOnlineID_OutName) == 0x000408, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetNickNameWithOnlineID_OutName' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue_1) == 0x000418, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetFriendshipRank_ReturnValue) == 0x000420, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetFriendshipRank_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetElementType_Element1) == 0x000424, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetElementType_Element1' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetElementType_Element2) == 0x000425, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetElementType_Element2' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetFoodAmount_ReturnValue) == 0x000428, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetFoodAmount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue_2) == 0x000430, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDefenseBySaveParameter_ReturnValue) == 0x000438, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDefenseBySaveParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue_3) == 0x000440, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetSupportBySaveParameter_ReturnValue) == 0x000448, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetSupportBySaveParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue_4) == 0x000450, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetMeleeAttackBySaveParameter_ReturnValue) == 0x000458, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetMeleeAttackBySaveParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue_5) == 0x000460, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_GetShotAttackBySaveParameter_ReturnValue) == 0x000468, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_GetShotAttackBySaveParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_SetHunger_maxHunger_ImplicitCast) == 0x000470, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_SetHunger_maxHunger_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter, CallFunc_SetHunger_nowHunger_ImplicitCast) == 0x000478, "Member 'WBP_PalSaveParameterDisplayWidget_C_DisplaySaveParameter::CallFunc_SetHunger_nowHunger_ImplicitCast' has a wrong offset!");
 
 // Function WBP_PalSaveParameterDisplayWidget.WBP_PalSaveParameterDisplayWidget_C.ExecuteUbergraph_WBP_PalSaveParameterDisplayWidget
 // 0x0004 (0x0004 - 0x0000)
@@ -287,14 +287,14 @@ static_assert(sizeof(WBP_PalSaveParameterDisplayWidget_C_ExecuteUbergraph_WBP_Pa
 static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_ExecuteUbergraph_WBP_PalSaveParameterDisplayWidget, EntryPoint) == 0x000000, "Member 'WBP_PalSaveParameterDisplayWidget_C_ExecuteUbergraph_WBP_PalSaveParameterDisplayWidget::EntryPoint' has a wrong offset!");
 
 // Function WBP_PalSaveParameterDisplayWidget.WBP_PalSaveParameterDisplayWidget_C.GetSaveParameter
-// 0x0320 (0x0320 - 0x0000)
+// 0x0328 (0x0328 - 0x0000)
 struct WBP_PalSaveParameterDisplayWidget_C_GetSaveParameter final
 {
 public:
-	struct FPalIndividualCharacterSaveParameter   Parameter;                                         // 0x0000(0x0320)(Parm, OutParm)
+	struct FPalIndividualCharacterSaveParameter   Parameter;                                         // 0x0000(0x0328)(Parm, OutParm)
 };
 static_assert(alignof(WBP_PalSaveParameterDisplayWidget_C_GetSaveParameter) == 0x000008, "Wrong alignment on WBP_PalSaveParameterDisplayWidget_C_GetSaveParameter");
-static_assert(sizeof(WBP_PalSaveParameterDisplayWidget_C_GetSaveParameter) == 0x000320, "Wrong size on WBP_PalSaveParameterDisplayWidget_C_GetSaveParameter");
+static_assert(sizeof(WBP_PalSaveParameterDisplayWidget_C_GetSaveParameter) == 0x000328, "Wrong size on WBP_PalSaveParameterDisplayWidget_C_GetSaveParameter");
 static_assert(offsetof(WBP_PalSaveParameterDisplayWidget_C_GetSaveParameter, Parameter) == 0x000000, "Member 'WBP_PalSaveParameterDisplayWidget_C_GetSaveParameter::Parameter' has a wrong offset!");
 
 // Function WBP_PalSaveParameterDisplayWidget.WBP_PalSaveParameterDisplayWidget_C.OnSessionMemberChangeEvent

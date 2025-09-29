@@ -11,8 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "E_PalUITitleMenuButtonType_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -28,6 +29,19 @@ public:
 static_assert(alignof(WBP_TItle_C_WBP_TItle_AutoGenFunc) == 0x000001, "Wrong alignment on WBP_TItle_C_WBP_TItle_AutoGenFunc");
 static_assert(sizeof(WBP_TItle_C_WBP_TItle_AutoGenFunc) == 0x000001, "Wrong size on WBP_TItle_C_WBP_TItle_AutoGenFunc");
 static_assert(offsetof(WBP_TItle_C_WBP_TItle_AutoGenFunc, bResult) == 0x000000, "Member 'WBP_TItle_C_WBP_TItle_AutoGenFunc::bResult' has a wrong offset!");
+
+// Function WBP_TItle.WBP_TItle_C.Tick
+// 0x0048 (0x0048 - 0x0000)
+struct WBP_TItle_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_TItle_C_Tick) == 0x000008, "Wrong alignment on WBP_TItle_C_Tick");
+static_assert(sizeof(WBP_TItle_C_Tick) == 0x000048, "Wrong size on WBP_TItle_C_Tick");
+static_assert(offsetof(WBP_TItle_C_Tick, MyGeometry) == 0x000000, "Member 'WBP_TItle_C_Tick::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_Tick, InDeltaTime) == 0x000040, "Member 'WBP_TItle_C_Tick::InDeltaTime' has a wrong offset!");
 
 // Function WBP_TItle.WBP_TItle_C.SetupForSteamDeck
 // 0x0018 (0x0018 - 0x0000)
@@ -112,238 +126,251 @@ static_assert(offsetof(WBP_TItle_C_OnClosedQuitGameDialog, bResult) == 0x000000,
 static_assert(offsetof(WBP_TItle_C_OnClosedQuitGameDialog, CallFunc_GetLocalPlayerController_ReturnValue) == 0x000008, "Member 'WBP_TItle_C_OnClosedQuitGameDialog::CallFunc_GetLocalPlayerController_ReturnValue' has a wrong offset!");
 
 // Function WBP_TItle.WBP_TItle_C.OnClickedMenu_Internal
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00E0 (0x00E0 - 0x0000)
 struct WBP_TItle_C_OnClickedMenu_Internal final
 {
 public:
 	class UWBP_Title_MenuButton_C*                ButtonWidget;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue;                         // 0x0008(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetEuraBaseURL_ReturnValue;               // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue_1;                       // 0x0038(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShowWebURL_ReturnValue;                   // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_PalUITitleMenuButtonType                    CallFunc_GetMenuType_BindedMenuType;               // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue;                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalHUDDispatchParame_JoinGameInputCode* CallFunc_SpawnObject_ReturnValue;                 // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue_2;                       // 0x0068(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue_3;                       // 0x0078(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue_4;                       // 0x0088(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue_5;                       // 0x0098(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue_6;                       // 0x00A8(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetEuraBaseURL_ReturnValue;               // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UWBP_Title_MenuButton_C> CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue; // 0x0018(0x0030)(InstancedReference, UObjectWrapper, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShowWebURL_ReturnValue;                   // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_PalUITitleMenuButtonType                    CallFunc_GetMenuType_BindedMenuType;               // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5B[0x1];                                       // 0x005B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  CallFunc_Push_ReturnValue;                         // 0x005C(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Push_ReturnValue_1;                       // 0x006C(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue;                // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalHUDDispatchParame_JoinGameInputCode* CallFunc_SpawnObject_ReturnValue;                 // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Push_ReturnValue_2;                       // 0x0090(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Push_ReturnValue_3;                       // 0x00A0(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Push_ReturnValue_4;                       // 0x00B0(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Push_ReturnValue_5;                       // 0x00C0(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Push_ReturnValue_6;                       // 0x00D0(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_TItle_C_OnClickedMenu_Internal) == 0x000008, "Wrong alignment on WBP_TItle_C_OnClickedMenu_Internal");
-static_assert(sizeof(WBP_TItle_C_OnClickedMenu_Internal) == 0x0000B8, "Wrong size on WBP_TItle_C_OnClickedMenu_Internal");
+static_assert(sizeof(WBP_TItle_C_OnClickedMenu_Internal) == 0x0000E0, "Wrong size on WBP_TItle_C_OnClickedMenu_Internal");
 static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, ButtonWidget) == 0x000000, "Member 'WBP_TItle_C_OnClickedMenu_Internal::ButtonWidget' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue) == 0x000008, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_GetEuraBaseURL_ReturnValue) == 0x000018, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_GetEuraBaseURL_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Concat_StrStr_ReturnValue) == 0x000028, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue_1) == 0x000038, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_ShowWebURL_ReturnValue) == 0x000048, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_ShowWebURL_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_GetMenuType_BindedMenuType) == 0x000049, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_GetMenuType_BindedMenuType' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_GetHUDService_ReturnValue) == 0x000050, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_GetHUDService_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, K2Node_SwitchEnum_CmpSuccess) == 0x000058, "Member 'WBP_TItle_C_OnClickedMenu_Internal::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_SpawnObject_ReturnValue) == 0x000060, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue_2) == 0x000068, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue_3) == 0x000078, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue_4) == 0x000088, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue_5) == 0x000098, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue_6) == 0x0000A8, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_GetEuraBaseURL_ReturnValue) == 0x000008, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_GetEuraBaseURL_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue) == 0x000018, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Concat_StrStr_ReturnValue) == 0x000048, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_ShowWebURL_ReturnValue) == 0x000058, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_ShowWebURL_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_GetMenuType_BindedMenuType) == 0x000059, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_GetMenuType_BindedMenuType' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, K2Node_SwitchEnum_CmpSuccess) == 0x00005A, "Member 'WBP_TItle_C_OnClickedMenu_Internal::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue) == 0x00005C, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue_1) == 0x00006C, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_GetHUDService_ReturnValue) == 0x000080, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_GetHUDService_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_SpawnObject_ReturnValue) == 0x000088, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue_2) == 0x000090, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue_3) == 0x0000A0, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue_4) == 0x0000B0, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue_5) == 0x0000C0, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_OnClickedMenu_Internal, CallFunc_Push_ReturnValue_6) == 0x0000D0, "Member 'WBP_TItle_C_OnClickedMenu_Internal::CallFunc_Push_ReturnValue_6' has a wrong offset!");
 
 // Function WBP_TItle.WBP_TItle_C.ExecuteUbergraph_WBP_TItle
-// 0x0278 (0x0278 - 0x0000)
+// 0x02D0 (0x02D0 - 0x0000)
 struct WBP_TItle_C_ExecuteUbergraph_WBP_TItle final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bIsReset;                       // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bCanPlay;                       // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool bIsReset, bool bCanPlay)> K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalCheckMultiplayRestrictionLatent*    CallFunc_PalCheckMultiplayRestrictionLatent_ReturnValue; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UPalHUDDispatchParameterBase* Param)> K2Node_CreateDelegate_OutputDelegate_1; // 0x002C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 EuraCurrentVersion)>     K2Node_CreateDelegate_OutputDelegate_2;            // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalGameInstance*                       K2Node_DynamicCast_AsPal_Game_Instance;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool bResult)>                 K2Node_CreateDelegate_OutputDelegate_3;            // 0x0064(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_ConvertNetworkErrorMessage_OutMessage;    // 0x0078(0x0018)()
-	struct FGuid                                  CallFunc_Dialog_ReturnValue;                       // 0x0090(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWBP_Title_MenuButton_C*                K2Node_ComponentBoundEvent_ButtonWidget;           // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	E_PalUITitleMenuButtonType                    CallFunc_GetMenuType_BindedMenuType;               // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalDebugSetting*                       CallFunc_GetPalDebugSetting_ReturnValue;           // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalGameInstance*                       CallFunc_GetPalGameInstance_ReturnValue;           // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue;                // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue;                         // 0x00D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsCanOpenExternalWebSite_ReturnValue;     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool bResult)>                 K2Node_CreateDelegate_OutputDelegate_4;            // 0x00F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalGameInstance*                       K2Node_DynamicCast_AsPal_Game_Instance_1;          // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_ConvertNetworkErrorMessage_OutMessage_1;  // 0x0118(0x0018)()
-	bool                                          CallFunc_IsGDK_ReturnValue;                        // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_131[0x3];                                      // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  CallFunc_Dialog_ReturnValue_1;                     // 0x0134(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0144(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSteamDeck_ReturnValue;                  // 0x0145(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0146(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0147(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsMeasureStatUnit_ReturnValue;            // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14A[0x6];                                      // 0x014A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalSaveGameManager*                    CallFunc_GetSaveGameManager_ReturnValue;           // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_PalGameInstance_C*                  K2Node_DynamicCast_AsBP_Pal_Game_Instance;         // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ForceLoadPerformanceChecktWorld_ReturnValue; // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16A[0x6];                                      // 0x016A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPocketpairUserSubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USwitchUserUIDefaultOnlineSubsystemAsyncFunction* CallFunc_SwitchUserUIAsyncFunction_ReturnValue; // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPS5_ReturnValue;                        // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_182[0x6];                                      // 0x0182(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue_1;              // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue_1;                       // 0x0190(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetCurrentCulture_ReturnValue;            // 0x01A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x01B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsMac_ReturnValue;                        // 0x01B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue_2;              // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDisplayTermsOfService_ReturnValue;      // 0x01C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C3[0x5];                                      // 0x01C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue_3;              // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPocketpairUserInfo*                    Temp_object_Variable;                              // 0x01D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalHUDDispatchParameterBase*           CallFunc_SpawnObject_ReturnValue;                  // 0x01D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E1[0x3];                                      // 0x01E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  CallFunc_Push_ReturnValue_2;                       // 0x01E4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F4[0x4];                                      // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalHUDDispatchParameterBase*           K2Node_CustomEvent_Param;                          // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetDisplayTermsOfService_ReturnValue;     // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Temp_string_Variable;                              // 0x0208(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0218(0x0018)()
-	bool                                          CallFunc_ShouldShowGlobalPalStorageNewMark_ReturnValue; // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalCheckMultiplayRestrictionLatent*    CallFunc_PalCheckMultiplayRestrictionLatent_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UPalHUDDispatchParameterBase* Param)> K2Node_CreateDelegate_OutputDelegate; // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 EuraCurrentVersion)>     K2Node_CreateDelegate_OutputDelegate_1;            // 0x0024(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalGameInstance*                       CallFunc_GetPalGameInstance_ReturnValue;           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue;                // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Push_ReturnValue;                         // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsCanOpenExternalWebSite_ReturnValue;     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool bResult)>                 K2Node_CreateDelegate_OutputDelegate_2;            // 0x0068(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalGameInstance*                       K2Node_DynamicCast_AsPal_Game_Instance;            // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_ConvertNetworkErrorMessage_OutMessage;    // 0x0088(0x0018)()
+	bool                                          K2Node_CustomEvent_bIsReset;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bCanPlay;                       // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  CallFunc_Dialog_ReturnValue;                       // 0x00A4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGDK_ReturnValue;                        // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSteamDeck_ReturnValue;                  // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00B6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x00B7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsMeasureStatUnit_ReturnValue;            // 0x00BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BB[0x5];                                       // 0x00BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_PalGameInstance_C*                  K2Node_DynamicCast_AsBP_Pal_Game_Instance;         // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalSaveGameManager*                    CallFunc_GetSaveGameManager_ReturnValue;           // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ForceLoadPerformanceChecktWorld_ReturnValue; // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalDebugSetting*                       CallFunc_GetPalDebugSetting_ReturnValue;           // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const class UPocketpairUserInfo* UserInfo, bool bSuccess, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_3; // 0x00F4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool bIsReset, bool bCanPlay)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x0104(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPS5_ReturnValue;                        // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_115[0x3];                                      // 0x0115(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue_1;              // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Push_ReturnValue_1;                       // 0x0120(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetCurrentCulture_ReturnValue;            // 0x0130(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsMac_ReturnValue;                        // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_152[0x6];                                      // 0x0152(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue_2;              // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDisplayTermsOfService_ReturnValue;      // 0x0162(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_163[0x5];                                      // 0x0163(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue_3;              // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalHUDDispatchParameterBase*           CallFunc_SpawnObject_ReturnValue;                  // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetDisplayTermsOfService_ReturnValue;     // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_179[0x3];                                      // 0x0179(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  CallFunc_Push_ReturnValue_2;                       // 0x017C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalHUDDispatchParameterBase*           K2Node_CustomEvent_Param;                          // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldShowGlobalPalStorageNewMark_ReturnValue; // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalGameInstance*                       CallFunc_GetPalGameInstance_ReturnValue_1;         // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_EuraCurrentVersion;             // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x01AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1AD[0x3];                                      // 0x01AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool bResult)>                 K2Node_CreateDelegate_OutputDelegate_5;            // 0x01B0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPocketpairUserInfo*                    Temp_object_Variable;                              // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x01D0(0x0040)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_214[0x4];                                      // 0x0214(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalGameInstance*                       K2Node_DynamicCast_AsPal_Game_Instance_1;          // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalGameInstance*                       CallFunc_GetPalGameInstance_ReturnValue_1;         // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_EuraCurrentVersion;             // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0244(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_245[0x3];                                      // 0x0245(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UPocketpairUserInfo*              K2Node_CustomEvent_UserInfo;                       // 0x0248(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bSuccess;                       // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_ErrorStr;                       // 0x0258(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(const class UPocketpairUserInfo* UserInfo, bool bSuccess, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_5; // 0x0268(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_ConvertNetworkErrorMessage_OutMessage_1;  // 0x0238(0x0018)()
+	struct FGuid                                  CallFunc_Dialog_ReturnValue_1;                     // 0x0250(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Title_MenuButton_C*                K2Node_ComponentBoundEvent_ButtonWidget;           // 0x0260(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_PalUITitleMenuButtonType                    CallFunc_GetMenuType_BindedMenuType;               // 0x0269(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x026A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_PalUITitleMenuButtonType                    CallFunc_GetMenuType_BindedMenuType_1;             // 0x026B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x026C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x026D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x026E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26F[0x1];                                      // 0x026F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPocketpairUserSubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable;                              // 0x0278(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class USwitchUserUIDefaultOnlineSubsystemAsyncFunction* CallFunc_SwitchUserUIAsyncFunction_ReturnValue; // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0290(0x0018)()
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UPocketpairUserInfo*              K2Node_CustomEvent_UserInfo;                       // 0x02B0(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bSuccess;                       // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B9[0x7];                                      // 0x02B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_ErrorStr;                       // 0x02C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle) == 0x000008, "Wrong alignment on WBP_TItle_C_ExecuteUbergraph_WBP_TItle");
-static_assert(sizeof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle) == 0x000278, "Wrong size on WBP_TItle_C_ExecuteUbergraph_WBP_TItle");
+static_assert(sizeof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle) == 0x0002D0, "Wrong size on WBP_TItle_C_ExecuteUbergraph_WBP_TItle");
 static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, EntryPoint) == 0x000000, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_bool_IsClosed_Variable) == 0x000004, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_bIsReset) == 0x000005, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_bIsReset' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_bCanPlay) == 0x000006, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_bCanPlay' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_bool_Variable) == 0x000018, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_bool_Variable_1) == 0x000019, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Not_PreBool_ReturnValue) == 0x00001A, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_PalCheckMultiplayRestrictionLatent_ReturnValue) == 0x000020, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_PalCheckMultiplayRestrictionLatent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_BooleanAND_ReturnValue) == 0x000028, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsValid_ReturnValue) == 0x000029, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CreateDelegate_OutputDelegate_1) == 0x00002C, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetGameInstance_ReturnValue) == 0x000040, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CreateDelegate_OutputDelegate_2) == 0x000048, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_DynamicCast_AsPal_Game_Instance) == 0x000058, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_DynamicCast_AsPal_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CreateDelegate_OutputDelegate_3) == 0x000064, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_ConvertNetworkErrorMessage_OutMessage) == 0x000078, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_ConvertNetworkErrorMessage_OutMessage' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Dialog_ReturnValue) == 0x000090, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Dialog_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetLocalPlayerController_ReturnValue) == 0x0000A0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_ComponentBoundEvent_ButtonWidget) == 0x0000A8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_ComponentBoundEvent_ButtonWidget' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetMenuType_BindedMenuType) == 0x0000B0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetMenuType_BindedMenuType' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0000B1, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x0000B2, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_BooleanOR_ReturnValue) == 0x0000B3, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetPalDebugSetting_ReturnValue) == 0x0000B8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetPalDebugSetting_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsValid_ReturnValue_1) == 0x0000C0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetPalGameInstance_ReturnValue) == 0x0000C8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetPalGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetHUDService_ReturnValue) == 0x0000D0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetHUDService_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Push_ReturnValue) == 0x0000D8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Push_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsCanOpenExternalWebSite_ReturnValue) == 0x0000E8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsCanOpenExternalWebSite_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetGameInstance_ReturnValue_1) == 0x0000F0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CreateDelegate_OutputDelegate_4) == 0x0000F8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_DynamicCast_AsPal_Game_Instance_1) == 0x000108, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_DynamicCast_AsPal_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_DynamicCast_bSuccess_1) == 0x000110, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_ConvertNetworkErrorMessage_OutMessage_1) == 0x000118, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_ConvertNetworkErrorMessage_OutMessage_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsGDK_ReturnValue) == 0x000130, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsGDK_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Dialog_ReturnValue_1) == 0x000134, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Dialog_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Not_PreBool_ReturnValue_1) == 0x000144, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsSteamDeck_ReturnValue) == 0x000145, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsSteamDeck_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_BooleanAND_ReturnValue_1) == 0x000146, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Not_PreBool_ReturnValue_2) == 0x000147, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsMeasureStatUnit_ReturnValue) == 0x000148, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsMeasureStatUnit_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_BooleanAND_ReturnValue_2) == 0x000149, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetGameInstance_ReturnValue_2) == 0x000150, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetSaveGameManager_ReturnValue) == 0x000158, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetSaveGameManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_DynamicCast_AsBP_Pal_Game_Instance) == 0x000160, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_DynamicCast_AsBP_Pal_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_DynamicCast_bSuccess_2) == 0x000168, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_ForceLoadPerformanceChecktWorld_ReturnValue) == 0x000169, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_ForceLoadPerformanceChecktWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000170, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_SwitchUserUIAsyncFunction_ReturnValue) == 0x000178, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_SwitchUserUIAsyncFunction_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsValid_ReturnValue_2) == 0x000180, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsPS5_ReturnValue) == 0x000181, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsPS5_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetHUDService_ReturnValue_1) == 0x000188, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetHUDService_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Push_ReturnValue_1) == 0x000190, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Push_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetCurrentCulture_ReturnValue) == 0x0001A0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetCurrentCulture_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_bool_Has_Been_Initd_Variable) == 0x0001B0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x0001B1, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_BooleanAND_ReturnValue_3) == 0x0001B2, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsMac_ReturnValue) == 0x0001B3, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsMac_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetHUDService_ReturnValue_2) == 0x0001B8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetHUDService_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Not_PreBool_ReturnValue_3) == 0x0001C0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_BooleanAND_ReturnValue_4) == 0x0001C1, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsDisplayTermsOfService_ReturnValue) == 0x0001C2, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsDisplayTermsOfService_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetHUDService_ReturnValue_3) == 0x0001C8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetHUDService_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_object_Variable) == 0x0001D0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_SpawnObject_ReturnValue) == 0x0001D8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_bool_Variable_2) == 0x0001E0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Push_ReturnValue_2) == 0x0001E4, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Push_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_Param) == 0x0001F8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_Param' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_SetDisplayTermsOfService_ReturnValue) == 0x000200, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_SetDisplayTermsOfService_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_string_Variable) == 0x000208, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_string_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Conv_StringToText_ReturnValue) == 0x000218, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_ShouldShowGlobalPalStorageNewMark_ReturnValue) == 0x000230, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_ShouldShowGlobalPalStorageNewMark_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetPalGameInstance_ReturnValue_1) == 0x000238, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetPalGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_EuraCurrentVersion) == 0x000240, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_EuraCurrentVersion' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Greater_IntInt_ReturnValue) == 0x000244, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_UserInfo) == 0x000248, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_UserInfo' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_bSuccess) == 0x000250, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_ErrorStr) == 0x000258, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_ErrorStr' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CreateDelegate_OutputDelegate_5) == 0x000268, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_bool_Variable) == 0x000004, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_bool_Variable_1) == 0x000005, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_PalCheckMultiplayRestrictionLatent_ReturnValue) == 0x000008, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_PalCheckMultiplayRestrictionLatent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Not_PreBool_ReturnValue) == 0x000010, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_BooleanAND_ReturnValue) == 0x000011, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsValid_ReturnValue) == 0x000012, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CreateDelegate_OutputDelegate) == 0x000014, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CreateDelegate_OutputDelegate_1) == 0x000024, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetPalGameInstance_ReturnValue) == 0x000038, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetPalGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetHUDService_ReturnValue) == 0x000040, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetHUDService_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Push_ReturnValue) == 0x000048, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Push_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsCanOpenExternalWebSite_ReturnValue) == 0x000058, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsCanOpenExternalWebSite_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetGameInstance_ReturnValue) == 0x000060, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CreateDelegate_OutputDelegate_2) == 0x000068, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_DynamicCast_AsPal_Game_Instance) == 0x000078, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_DynamicCast_AsPal_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_ConvertNetworkErrorMessage_OutMessage) == 0x000088, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_ConvertNetworkErrorMessage_OutMessage' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_bIsReset) == 0x0000A0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_bIsReset' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_bCanPlay) == 0x0000A1, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_bCanPlay' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Dialog_ReturnValue) == 0x0000A4, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Dialog_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsGDK_ReturnValue) == 0x0000B4, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsGDK_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsSteamDeck_ReturnValue) == 0x0000B5, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsSteamDeck_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Not_PreBool_ReturnValue_1) == 0x0000B6, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Not_PreBool_ReturnValue_2) == 0x0000B7, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_BooleanAND_ReturnValue_1) == 0x0000B8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_BooleanAND_ReturnValue_2) == 0x0000B9, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsMeasureStatUnit_ReturnValue) == 0x0000BA, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsMeasureStatUnit_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetGameInstance_ReturnValue_1) == 0x0000C0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_DynamicCast_AsBP_Pal_Game_Instance) == 0x0000C8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_DynamicCast_AsBP_Pal_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_DynamicCast_bSuccess_1) == 0x0000D0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetSaveGameManager_ReturnValue) == 0x0000D8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetSaveGameManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_ForceLoadPerformanceChecktWorld_ReturnValue) == 0x0000E0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_ForceLoadPerformanceChecktWorld_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetPalDebugSetting_ReturnValue) == 0x0000E8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetPalDebugSetting_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsValid_ReturnValue_1) == 0x0000F0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CreateDelegate_OutputDelegate_3) == 0x0000F4, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CreateDelegate_OutputDelegate_4) == 0x000104, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsPS5_ReturnValue) == 0x000114, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsPS5_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetHUDService_ReturnValue_1) == 0x000118, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetHUDService_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Push_ReturnValue_1) == 0x000120, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Push_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetCurrentCulture_ReturnValue) == 0x000130, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetCurrentCulture_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000140, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetLocalPlayerController_ReturnValue) == 0x000148, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetLocalPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_BooleanAND_ReturnValue_3) == 0x000150, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsMac_ReturnValue) == 0x000151, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsMac_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetHUDService_ReturnValue_2) == 0x000158, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetHUDService_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Not_PreBool_ReturnValue_3) == 0x000160, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_BooleanAND_ReturnValue_4) == 0x000161, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsDisplayTermsOfService_ReturnValue) == 0x000162, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsDisplayTermsOfService_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetHUDService_ReturnValue_3) == 0x000168, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetHUDService_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_SpawnObject_ReturnValue) == 0x000170, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_SetDisplayTermsOfService_ReturnValue) == 0x000178, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_SetDisplayTermsOfService_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Push_ReturnValue_2) == 0x00017C, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Push_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_Param) == 0x000190, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_Param' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_ShouldShowGlobalPalStorageNewMark_ReturnValue) == 0x000198, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_ShouldShowGlobalPalStorageNewMark_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetPalGameInstance_ReturnValue_1) == 0x0001A0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetPalGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_EuraCurrentVersion) == 0x0001A8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_EuraCurrentVersion' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Greater_IntInt_ReturnValue) == 0x0001AC, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CreateDelegate_OutputDelegate_5) == 0x0001B0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_object_Variable) == 0x0001C0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_object_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_bool_Variable_2) == 0x0001C8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_Event_MyGeometry) == 0x0001D0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_Event_InDeltaTime) == 0x000210, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetGameInstance_ReturnValue_2) == 0x000218, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_bool_Has_Been_Initd_Variable) == 0x000220, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_DynamicCast_AsPal_Game_Instance_1) == 0x000228, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_DynamicCast_AsPal_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_DynamicCast_bSuccess_2) == 0x000230, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_ConvertNetworkErrorMessage_OutMessage_1) == 0x000238, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_ConvertNetworkErrorMessage_OutMessage_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Dialog_ReturnValue_1) == 0x000250, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Dialog_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_ComponentBoundEvent_ButtonWidget) == 0x000260, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_ComponentBoundEvent_ButtonWidget' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_bool_IsClosed_Variable) == 0x000268, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_bool_IsClosed_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetMenuType_BindedMenuType) == 0x000269, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetMenuType_BindedMenuType' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00026A, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetMenuType_BindedMenuType_1) == 0x00026B, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetMenuType_BindedMenuType_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x00026C, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x00026D, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_BooleanOR_ReturnValue) == 0x00026E, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000270, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, Temp_string_Variable) == 0x000278, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::Temp_string_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_SwitchUserUIAsyncFunction_ReturnValue) == 0x000288, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_SwitchUserUIAsyncFunction_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_Conv_StringToText_ReturnValue) == 0x000290, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, CallFunc_IsValid_ReturnValue_2) == 0x0002A8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_UserInfo) == 0x0002B0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_UserInfo' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_bSuccess) == 0x0002B8, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_ExecuteUbergraph_WBP_TItle, K2Node_CustomEvent_ErrorStr) == 0x0002C0, "Member 'WBP_TItle_C_ExecuteUbergraph_WBP_TItle::K2Node_CustomEvent_ErrorStr' has a wrong offset!");
 
 // Function WBP_TItle.WBP_TItle_C.ConvertNetworkErrorMessage
 // 0x0060 (0x0060 - 0x0000)
@@ -393,20 +420,28 @@ static_assert(sizeof(WBP_TItle_C_BndEvt__WBP_TItle_WBP_TitleMenu_K2Node_Componen
 static_assert(offsetof(WBP_TItle_C_BndEvt__WBP_TItle_WBP_TitleMenu_K2Node_ComponentBoundEvent_6_OnClickedMenu__DelegateSignature, ButtonWidget) == 0x000000, "Member 'WBP_TItle_C_BndEvt__WBP_TItle_WBP_TitleMenu_K2Node_ComponentBoundEvent_6_OnClickedMenu__DelegateSignature::ButtonWidget' has a wrong offset!");
 
 // Function WBP_TItle.WBP_TItle_C.BP_GetDesiredFocusTarget
-// 0x0018 (0x0018 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WBP_TItle_C_BP_GetDesiredFocusTarget final
 {
 public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetTopButton_TargetWidget;                // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Title_MenuButton_C*                K2Node_DynamicCast_AsWBP_Title_Menu_Button;        // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetTopButton_TargetWidget;                // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_TItle_C_BP_GetDesiredFocusTarget) == 0x000008, "Wrong alignment on WBP_TItle_C_BP_GetDesiredFocusTarget");
-static_assert(sizeof(WBP_TItle_C_BP_GetDesiredFocusTarget) == 0x000018, "Wrong size on WBP_TItle_C_BP_GetDesiredFocusTarget");
+static_assert(sizeof(WBP_TItle_C_BP_GetDesiredFocusTarget) == 0x000028, "Wrong size on WBP_TItle_C_BP_GetDesiredFocusTarget");
 static_assert(offsetof(WBP_TItle_C_BP_GetDesiredFocusTarget, ReturnValue) == 0x000000, "Member 'WBP_TItle_C_BP_GetDesiredFocusTarget::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_BP_GetDesiredFocusTarget, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'WBP_TItle_C_BP_GetDesiredFocusTarget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TItle_C_BP_GetDesiredFocusTarget, CallFunc_GetTopButton_TargetWidget) == 0x000010, "Member 'WBP_TItle_C_BP_GetDesiredFocusTarget::CallFunc_GetTopButton_TargetWidget' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_BP_GetDesiredFocusTarget, CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue) == 0x000008, "Member 'WBP_TItle_C_BP_GetDesiredFocusTarget::CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_BP_GetDesiredFocusTarget, K2Node_DynamicCast_AsWBP_Title_Menu_Button) == 0x000010, "Member 'WBP_TItle_C_BP_GetDesiredFocusTarget::K2Node_DynamicCast_AsWBP_Title_Menu_Button' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_BP_GetDesiredFocusTarget, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WBP_TItle_C_BP_GetDesiredFocusTarget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_BP_GetDesiredFocusTarget, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000019, "Member 'WBP_TItle_C_BP_GetDesiredFocusTarget::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_BP_GetDesiredFocusTarget, CallFunc_IsValid_ReturnValue) == 0x00001A, "Member 'WBP_TItle_C_BP_GetDesiredFocusTarget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TItle_C_BP_GetDesiredFocusTarget, CallFunc_GetTopButton_TargetWidget) == 0x000020, "Member 'WBP_TItle_C_BP_GetDesiredFocusTarget::CallFunc_GetTopButton_TargetWidget' has a wrong offset!");
 
 }
 

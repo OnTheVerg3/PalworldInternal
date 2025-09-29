@@ -64,15 +64,15 @@ enum class EGameplayTagSelectionType : uint8
 	EGameplayTagSelectionType_MAX            = 4,
 };
 
-// ScriptStruct GameplayTags.GameplayTagReferenceHelper
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FGameplayTagReferenceHelper final
+// ScriptStruct GameplayTags.GameplayTagCreationWidgetHelper
+// 0x0001 (0x0001 - 0x0000)
+struct FGameplayTagCreationWidgetHelper final
 {
 public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayTagReferenceHelper) == 0x000008, "Wrong alignment on FGameplayTagReferenceHelper");
-static_assert(sizeof(FGameplayTagReferenceHelper) == 0x000010, "Wrong size on FGameplayTagReferenceHelper");
+static_assert(alignof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong alignment on FGameplayTagCreationWidgetHelper");
+static_assert(sizeof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong size on FGameplayTagCreationWidgetHelper");
 
 // ScriptStruct GameplayTags.GameplayTag
 // 0x0008 (0x0008 - 0x0000)
@@ -84,6 +84,16 @@ public:
 static_assert(alignof(FGameplayTag) == 0x000004, "Wrong alignment on FGameplayTag");
 static_assert(sizeof(FGameplayTag) == 0x000008, "Wrong size on FGameplayTag");
 static_assert(offsetof(FGameplayTag, TagName) == 0x000000, "Member 'FGameplayTag::TagName' has a wrong offset!");
+
+// ScriptStruct GameplayTags.GameplayTagNetSerializerConfig
+// 0x0001 (0x0001 - 0x0000)
+struct FGameplayTagNetSerializerConfig final : public FNetSerializerConfig
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FGameplayTagNetSerializerConfig) == 0x000001, "Wrong alignment on FGameplayTagNetSerializerConfig");
+static_assert(sizeof(FGameplayTagNetSerializerConfig) == 0x000001, "Wrong size on FGameplayTagNetSerializerConfig");
 
 // ScriptStruct GameplayTags.GameplayTagContainer
 // 0x0020 (0x0020 - 0x0000)
@@ -108,16 +118,6 @@ public:
 static_assert(alignof(FGameplayTagContainerNetSerializerConfig) == 0x000001, "Wrong alignment on FGameplayTagContainerNetSerializerConfig");
 static_assert(sizeof(FGameplayTagContainerNetSerializerConfig) == 0x000001, "Wrong size on FGameplayTagContainerNetSerializerConfig");
 
-// ScriptStruct GameplayTags.GameplayTagNetSerializerConfig
-// 0x0001 (0x0001 - 0x0000)
-struct FGameplayTagNetSerializerConfig final : public FNetSerializerConfig
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGameplayTagNetSerializerConfig) == 0x000001, "Wrong alignment on FGameplayTagNetSerializerConfig");
-static_assert(sizeof(FGameplayTagNetSerializerConfig) == 0x000001, "Wrong size on FGameplayTagNetSerializerConfig");
-
 // ScriptStruct GameplayTags.GameplayTagContainerNetSerializerSerializationHelper
 // 0x0010 (0x0010 - 0x0000)
 struct FGameplayTagContainerNetSerializerSerializationHelper final
@@ -129,15 +129,15 @@ static_assert(alignof(FGameplayTagContainerNetSerializerSerializationHelper) == 
 static_assert(sizeof(FGameplayTagContainerNetSerializerSerializationHelper) == 0x000010, "Wrong size on FGameplayTagContainerNetSerializerSerializationHelper");
 static_assert(offsetof(FGameplayTagContainerNetSerializerSerializationHelper, GameplayTags) == 0x000000, "Member 'FGameplayTagContainerNetSerializerSerializationHelper::GameplayTags' has a wrong offset!");
 
-// ScriptStruct GameplayTags.GameplayTagCreationWidgetHelper
-// 0x0001 (0x0001 - 0x0000)
-struct FGameplayTagCreationWidgetHelper final
+// ScriptStruct GameplayTags.GameplayTagReferenceHelper
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FGameplayTagReferenceHelper final
 {
 public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong alignment on FGameplayTagCreationWidgetHelper");
-static_assert(sizeof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong size on FGameplayTagCreationWidgetHelper");
+static_assert(alignof(FGameplayTagReferenceHelper) == 0x000008, "Wrong alignment on FGameplayTagReferenceHelper");
+static_assert(sizeof(FGameplayTagReferenceHelper) == 0x000010, "Wrong size on FGameplayTagReferenceHelper");
 
 // ScriptStruct GameplayTags.GameplayTagQuery
 // 0x0048 (0x0048 - 0x0000)

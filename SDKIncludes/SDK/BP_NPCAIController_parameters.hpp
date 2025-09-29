@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "F_NPC_PathWalkArray_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function BP_NPCAIController.BP_NPCAIController_C.ExecuteUbergraph_BP_NPCAIController
-// 0x0628 (0x0628 - 0x0000)
+// 0x0630 (0x0630 - 0x0000)
 struct BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController final
 {
 public:
@@ -52,75 +52,75 @@ public:
 	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AController*                            K2Node_CustomEvent_HolderController;               // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APalCharacter*                          K2Node_CustomEvent_OtomoPal;                       // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_NPCOtomo_outParameter; // 0x00E8(0x0320)()
-	bool                                          CallFunc_GetInitializedCharacterSaveParemter_NPCOtomo_ReturnValue; // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_409[0x7];                                      // 0x0409(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_MonsterBase_C*                      K2Node_DynamicCast_AsBP_Monster_Base;              // 0x0410(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_419[0x7];                                      // 0x0419(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalCharacterParameterComponent*        CallFunc_GetComponentByClass_ReturnValue_2;        // 0x0420(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class APalAIController*                       K2Node_DynamicCast_AsPal_AIController;             // 0x0428(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0430(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_431[0x7];                                      // 0x0431(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalInstanceID                         CallFunc_GetIndividualID_ReturnValue;              // 0x0438(0x0030)(HasGetValueTypeHash)
-	class UPalSquad*                              CallFunc_GetSquad_ReturnValue;                     // 0x0468(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0470(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_471[0x3];                                      // 0x0471(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0474(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  K2Node_Event_PossessedPawn;                        // 0x0478(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_2;                 // 0x0480(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalCharacterParameterComponent*        CallFunc_GetComponentByClass_ReturnValue_3;        // 0x0488(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UPalNPCAIWeaponHandle*                  CallFunc_SpawnObject_ReturnValue_1;                // 0x0490(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_3;                 // 0x0498(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalNPCAIWeaponHandle*                  CallFunc_GetWeaponHandle_WeaponHandle;             // 0x04A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEndInitialize_ReturnValue;              // 0x04A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A9[0x7];                                      // 0x04A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_4;                 // 0x04B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x04B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalCharacterParameterComponent*        CallFunc_GetComponentByClass_ReturnValue_4;        // 0x04C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_5;                 // 0x04C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetCharacterID_ReturnValue;               // 0x04D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPalDamageReactionComponent*            CallFunc_GetComponentByClass_ReturnValue_5;        // 0x04D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EPalWeaponType                                CallFunc_GetWeaponType_ReturnValue;                // 0x04E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x04E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E2[0x6];                                      // 0x04E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalDeadInfo                           K2Node_CustomEvent_DeadInfo;                       // 0x04E8(0x0050)(NoDestructor)
-	class UPalSquad*                              CallFunc_GetSquad_ReturnValue_1;                   // 0x0538(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0540(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsSquadBehaviour_ReturnValue;          // 0x0541(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0542(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0543(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsSquadBehaviour_ReturnValue_1;        // 0x0544(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_545[0x3];                                      // 0x0545(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalSquad*                              CallFunc_GetSquad_ReturnValue_2;                   // 0x0548(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class AActor* StartActor)>     K2Node_CreateDelegate_OutputDelegate_3;            // 0x0550(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0560(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0561(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_562[0x6];                                      // 0x0562(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_PalAIBlackboard_Common_C*           CallFunc_GetMyBB_PalBrackboard;                    // 0x0568(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FPalInstanceID& ID)> K2Node_CreateDelegate_OutputDelegate_4;         // 0x0570(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UPalIncidentNotifyListener* Listener, EPalIncidentState IncidentState, const struct FPalIncidentNotifyParameter& Parameter)> K2Node_CreateDelegate_OutputDelegate_5; // 0x0580(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalIndividualCharacterHandle*          CallFunc_CreateIndividual_ReturnValue;             // 0x0590(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalIncidentNotifyListener*             K2Node_CustomEvent_Listener;                       // 0x0598(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EPalIncidentState                             K2Node_CustomEvent_IncidentState;                  // 0x05A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A1[0x7];                                      // 0x05A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalIncidentNotifyParameter            K2Node_CustomEvent_Parameter;                      // 0x05A8(0x0028)(ConstParm, NoDestructor)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x05D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D1[0x7];                                      // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIncidentDynamicParameter*           CallFunc_GetDynamicParameter_ReturnValue;          // 0x05D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x05E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E1[0x7];                                      // 0x05E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_6;                 // 0x05E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalSquad*                              CallFunc_GetSquad_ReturnValue_3;                   // 0x05F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalSquad*                              CallFunc_GetSquad_ReturnValue_4;                   // 0x05F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class AActor* StartActor, class AActor* TargetActor)> K2Node_CreateDelegate_OutputDelegate_6; // 0x0600(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0610(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_611[0x7];                                      // 0x0611(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APalPlayerCharacter*                    K2Node_Event_TalkPlayer_1;                         // 0x0618(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APalPlayerCharacter*                    K2Node_Event_TalkPlayer;                           // 0x0620(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_NPCOtomo_outParameter; // 0x00E8(0x0328)()
+	bool                                          CallFunc_GetInitializedCharacterSaveParemter_NPCOtomo_ReturnValue; // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_MonsterBase_C*                      K2Node_DynamicCast_AsBP_Monster_Base;              // 0x0418(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_421[0x7];                                      // 0x0421(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalCharacterParameterComponent*        CallFunc_GetComponentByClass_ReturnValue_2;        // 0x0428(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class APalAIController*                       K2Node_DynamicCast_AsPal_AIController;             // 0x0430(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_439[0x7];                                      // 0x0439(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPalInstanceID                         CallFunc_GetIndividualID_ReturnValue;              // 0x0440(0x0030)(HasGetValueTypeHash)
+	class UPalSquad*                              CallFunc_GetSquad_ReturnValue;                     // 0x0470(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0478(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_479[0x3];                                      // 0x0479(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x047C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  K2Node_Event_PossessedPawn;                        // 0x0480(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_2;                 // 0x0488(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalCharacterParameterComponent*        CallFunc_GetComponentByClass_ReturnValue_3;        // 0x0490(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UPalNPCAIWeaponHandle*                  CallFunc_SpawnObject_ReturnValue_1;                // 0x0498(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_3;                 // 0x04A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalNPCAIWeaponHandle*                  CallFunc_GetWeaponHandle_WeaponHandle;             // 0x04A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEndInitialize_ReturnValue;              // 0x04B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B1[0x7];                                      // 0x04B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_4;                 // 0x04B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x04C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalCharacterParameterComponent*        CallFunc_GetComponentByClass_ReturnValue_4;        // 0x04C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_5;                 // 0x04D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetCharacterID_ReturnValue;               // 0x04D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPalDamageReactionComponent*            CallFunc_GetComponentByClass_ReturnValue_5;        // 0x04E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	EPalWeaponType                                CallFunc_GetWeaponType_ReturnValue;                // 0x04E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x04E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4EA[0x6];                                      // 0x04EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPalDeadInfo                           K2Node_CustomEvent_DeadInfo;                       // 0x04F0(0x0050)(NoDestructor)
+	class UPalSquad*                              CallFunc_GetSquad_ReturnValue_1;                   // 0x0540(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0548(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsSquadBehaviour_ReturnValue;          // 0x0549(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x054A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x054B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsSquadBehaviour_ReturnValue_1;        // 0x054C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54D[0x3];                                      // 0x054D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalSquad*                              CallFunc_GetSquad_ReturnValue_2;                   // 0x0550(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class AActor* StartActor)>     K2Node_CreateDelegate_OutputDelegate_3;            // 0x0558(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0568(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0569(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_56A[0x6];                                      // 0x056A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_PalAIBlackboard_Common_C*           CallFunc_GetMyBB_PalBrackboard;                    // 0x0570(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FPalInstanceID& ID)> K2Node_CreateDelegate_OutputDelegate_4;         // 0x0578(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UPalIncidentNotifyListener* Listener, EPalIncidentState IncidentState, const struct FPalIncidentNotifyParameter& Parameter)> K2Node_CreateDelegate_OutputDelegate_5; // 0x0588(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalIndividualCharacterHandle*          CallFunc_CreateIndividual_ReturnValue;             // 0x0598(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalIncidentNotifyListener*             K2Node_CustomEvent_Listener;                       // 0x05A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EPalIncidentState                             K2Node_CustomEvent_IncidentState;                  // 0x05A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5A9[0x7];                                      // 0x05A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPalIncidentNotifyParameter            K2Node_CustomEvent_Parameter;                      // 0x05B0(0x0028)(ConstParm, NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x05D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5D9[0x7];                                      // 0x05D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIncidentDynamicParameter*           CallFunc_GetDynamicParameter_ReturnValue;          // 0x05E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x05E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5E9[0x7];                                      // 0x05E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_6;                 // 0x05F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalSquad*                              CallFunc_GetSquad_ReturnValue_3;                   // 0x05F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalSquad*                              CallFunc_GetSquad_ReturnValue_4;                   // 0x0600(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class AActor* StartActor, class AActor* TargetActor)> K2Node_CreateDelegate_OutputDelegate_6; // 0x0608(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0618(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_619[0x7];                                      // 0x0619(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APalPlayerCharacter*                    K2Node_Event_TalkPlayer_1;                         // 0x0620(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APalPlayerCharacter*                    K2Node_Event_TalkPlayer;                           // 0x0628(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController) == 0x000008, "Wrong alignment on BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController");
-static_assert(sizeof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController) == 0x000628, "Wrong size on BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController");
+static_assert(sizeof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController) == 0x000630, "Wrong size on BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController");
 static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, EntryPoint) == 0x000000, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_SpawnObject_ReturnValue) == 0x000018, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
@@ -143,59 +143,59 @@ static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController,
 static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CustomEvent_HolderController) == 0x0000D8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CustomEvent_HolderController' has a wrong offset!");
 static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CustomEvent_OtomoPal) == 0x0000E0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CustomEvent_OtomoPal' has a wrong offset!");
 static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetInitializedCharacterSaveParemter_NPCOtomo_outParameter) == 0x0000E8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetInitializedCharacterSaveParemter_NPCOtomo_outParameter' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetInitializedCharacterSaveParemter_NPCOtomo_ReturnValue) == 0x000408, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetInitializedCharacterSaveParemter_NPCOtomo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_DynamicCast_AsBP_Monster_Base) == 0x000410, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_DynamicCast_AsBP_Monster_Base' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_DynamicCast_bSuccess) == 0x000418, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetComponentByClass_ReturnValue_2) == 0x000420, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_DynamicCast_AsPal_AIController) == 0x000428, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_DynamicCast_AsPal_AIController' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_DynamicCast_bSuccess_1) == 0x000430, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetIndividualID_ReturnValue) == 0x000438, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetIndividualID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetSquad_ReturnValue) == 0x000468, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetSquad_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_HasAuthority_ReturnValue_1) == 0x000470, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_Event_DeltaSeconds) == 0x000474, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_Event_PossessedPawn) == 0x000478, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_Event_PossessedPawn' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_K2_GetPawn_ReturnValue_2) == 0x000480, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_K2_GetPawn_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetComponentByClass_ReturnValue_3) == 0x000488, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetComponentByClass_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_SpawnObject_ReturnValue_1) == 0x000490, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_SpawnObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_K2_GetPawn_ReturnValue_3) == 0x000498, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_K2_GetPawn_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetWeaponHandle_WeaponHandle) == 0x0004A0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetWeaponHandle_WeaponHandle' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_IsEndInitialize_ReturnValue) == 0x0004A8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_IsEndInitialize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_K2_GetPawn_ReturnValue_4) == 0x0004B0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_K2_GetPawn_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x0004B8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetComponentByClass_ReturnValue_4) == 0x0004C0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetComponentByClass_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_K2_GetPawn_ReturnValue_5) == 0x0004C8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_K2_GetPawn_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetCharacterID_ReturnValue) == 0x0004D0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetCharacterID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetComponentByClass_ReturnValue_5) == 0x0004D8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetComponentByClass_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetWeaponType_ReturnValue) == 0x0004E0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetWeaponType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0004E1, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CustomEvent_DeadInfo) == 0x0004E8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CustomEvent_DeadInfo' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetSquad_ReturnValue_1) == 0x000538, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetSquad_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_IsValid_ReturnValue) == 0x000540, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetIsSquadBehaviour_ReturnValue) == 0x000541, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetIsSquadBehaviour_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_Event_EndPlayReason) == 0x000542, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_Event_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_BooleanAND_ReturnValue) == 0x000543, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetIsSquadBehaviour_ReturnValue_1) == 0x000544, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetIsSquadBehaviour_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetSquad_ReturnValue_2) == 0x000548, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetSquad_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CreateDelegate_OutputDelegate_3) == 0x000550, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_IsValid_ReturnValue_1) == 0x000560, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_BooleanAND_ReturnValue_1) == 0x000561, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetMyBB_PalBrackboard) == 0x000568, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetMyBB_PalBrackboard' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CreateDelegate_OutputDelegate_4) == 0x000570, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CreateDelegate_OutputDelegate_5) == 0x000580, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_CreateIndividual_ReturnValue) == 0x000590, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_CreateIndividual_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CustomEvent_Listener) == 0x000598, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CustomEvent_Listener' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CustomEvent_IncidentState) == 0x0005A0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CustomEvent_IncidentState' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CustomEvent_Parameter) == 0x0005A8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CustomEvent_Parameter' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_SwitchEnum_CmpSuccess) == 0x0005D0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetDynamicParameter_ReturnValue) == 0x0005D8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetDynamicParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_IsValid_ReturnValue_2) == 0x0005E0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_K2_GetPawn_ReturnValue_6) == 0x0005E8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_K2_GetPawn_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetSquad_ReturnValue_3) == 0x0005F0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetSquad_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetSquad_ReturnValue_4) == 0x0005F8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetSquad_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CreateDelegate_OutputDelegate_6) == 0x000600, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_IsDedicatedServer_ReturnValue) == 0x000610, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_Event_TalkPlayer_1) == 0x000618, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_Event_TalkPlayer_1' has a wrong offset!");
-static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_Event_TalkPlayer) == 0x000620, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_Event_TalkPlayer' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetInitializedCharacterSaveParemter_NPCOtomo_ReturnValue) == 0x000410, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetInitializedCharacterSaveParemter_NPCOtomo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_DynamicCast_AsBP_Monster_Base) == 0x000418, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_DynamicCast_AsBP_Monster_Base' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_DynamicCast_bSuccess) == 0x000420, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetComponentByClass_ReturnValue_2) == 0x000428, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_DynamicCast_AsPal_AIController) == 0x000430, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_DynamicCast_AsPal_AIController' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_DynamicCast_bSuccess_1) == 0x000438, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetIndividualID_ReturnValue) == 0x000440, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetIndividualID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetSquad_ReturnValue) == 0x000470, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetSquad_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_HasAuthority_ReturnValue_1) == 0x000478, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_Event_DeltaSeconds) == 0x00047C, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_Event_PossessedPawn) == 0x000480, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_Event_PossessedPawn' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_K2_GetPawn_ReturnValue_2) == 0x000488, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_K2_GetPawn_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetComponentByClass_ReturnValue_3) == 0x000490, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetComponentByClass_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_SpawnObject_ReturnValue_1) == 0x000498, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_SpawnObject_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_K2_GetPawn_ReturnValue_3) == 0x0004A0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_K2_GetPawn_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetWeaponHandle_WeaponHandle) == 0x0004A8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetWeaponHandle_WeaponHandle' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_IsEndInitialize_ReturnValue) == 0x0004B0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_IsEndInitialize_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_K2_GetPawn_ReturnValue_4) == 0x0004B8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_K2_GetPawn_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x0004C0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetComponentByClass_ReturnValue_4) == 0x0004C8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetComponentByClass_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_K2_GetPawn_ReturnValue_5) == 0x0004D0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_K2_GetPawn_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetCharacterID_ReturnValue) == 0x0004D8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetCharacterID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetComponentByClass_ReturnValue_5) == 0x0004E0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetComponentByClass_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetWeaponType_ReturnValue) == 0x0004E8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetWeaponType_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0004E9, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CustomEvent_DeadInfo) == 0x0004F0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CustomEvent_DeadInfo' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetSquad_ReturnValue_1) == 0x000540, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetSquad_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_IsValid_ReturnValue) == 0x000548, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetIsSquadBehaviour_ReturnValue) == 0x000549, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetIsSquadBehaviour_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_Event_EndPlayReason) == 0x00054A, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_Event_EndPlayReason' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_BooleanAND_ReturnValue) == 0x00054B, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetIsSquadBehaviour_ReturnValue_1) == 0x00054C, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetIsSquadBehaviour_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetSquad_ReturnValue_2) == 0x000550, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetSquad_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CreateDelegate_OutputDelegate_3) == 0x000558, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_IsValid_ReturnValue_1) == 0x000568, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_BooleanAND_ReturnValue_1) == 0x000569, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetMyBB_PalBrackboard) == 0x000570, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetMyBB_PalBrackboard' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CreateDelegate_OutputDelegate_4) == 0x000578, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CreateDelegate_OutputDelegate_5) == 0x000588, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_CreateIndividual_ReturnValue) == 0x000598, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_CreateIndividual_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CustomEvent_Listener) == 0x0005A0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CustomEvent_Listener' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CustomEvent_IncidentState) == 0x0005A8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CustomEvent_IncidentState' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CustomEvent_Parameter) == 0x0005B0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CustomEvent_Parameter' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_SwitchEnum_CmpSuccess) == 0x0005D8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetDynamicParameter_ReturnValue) == 0x0005E0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetDynamicParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_IsValid_ReturnValue_2) == 0x0005E8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_K2_GetPawn_ReturnValue_6) == 0x0005F0, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_K2_GetPawn_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetSquad_ReturnValue_3) == 0x0005F8, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetSquad_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_GetSquad_ReturnValue_4) == 0x000600, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_GetSquad_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_CreateDelegate_OutputDelegate_6) == 0x000608, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, CallFunc_IsDedicatedServer_ReturnValue) == 0x000618, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_Event_TalkPlayer_1) == 0x000620, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_Event_TalkPlayer_1' has a wrong offset!");
+static_assert(offsetof(BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController, K2Node_Event_TalkPlayer) == 0x000628, "Member 'BP_NPCAIController_C_ExecuteUbergraph_BP_NPCAIController::K2Node_Event_TalkPlayer' has a wrong offset!");
 
 // Function BP_NPCAIController.BP_NPCAIController_C.ForceBattleStartForOutside
 // 0x0080 (0x0080 - 0x0000)

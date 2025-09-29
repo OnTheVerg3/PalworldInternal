@@ -12,9 +12,9 @@
 
 #include "Pal_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "F_NPC_PathWalkPoint_structs.hpp"
 #include "Engine_structs.hpp"
 #include "F_NPC_PathWalkArray_structs.hpp"
-#include "F_NPC_PathWalkPoint_structs.hpp"
 
 
 namespace SDK::Params
@@ -628,7 +628,7 @@ static_assert(offsetof(BP_MonoNPCSpawner_C_SetSaveData, CallFunc_GetComponentByC
 static_assert(offsetof(BP_MonoNPCSpawner_C_SetSaveData, CallFunc_IsBossPal_Database_ReturnValue) == 0x000018, "Member 'BP_MonoNPCSpawner_C_SetSaveData::CallFunc_IsBossPal_Database_ReturnValue' has a wrong offset!");
 
 // Function BP_MonoNPCSpawner.BP_MonoNPCSpawner_C.Spawn
-// 0x0420 (0x0420 - 0x0000)
+// 0x0428 (0x0428 - 0x0000)
 struct BP_MonoNPCSpawner_C_Spawn final
 {
 public:
@@ -640,13 +640,13 @@ public:
 	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  K2Node_MakeStruct_Guid;                            // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x0078(0x0078)(NoDestructor)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00F0(0x0320)()
-	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0418(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00F0(0x0328)()
+	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_419[0x7];                                      // 0x0419(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0420(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MonoNPCSpawner_C_Spawn) == 0x000008, "Wrong alignment on BP_MonoNPCSpawner_C_Spawn");
-static_assert(sizeof(BP_MonoNPCSpawner_C_Spawn) == 0x000420, "Wrong size on BP_MonoNPCSpawner_C_Spawn");
+static_assert(sizeof(BP_MonoNPCSpawner_C_Spawn) == 0x000428, "Wrong size on BP_MonoNPCSpawner_C_Spawn");
 static_assert(offsetof(BP_MonoNPCSpawner_C_Spawn, K2Node_CreateDelegate_OutputDelegate) == 0x000000, "Member 'BP_MonoNPCSpawner_C_Spawn::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(BP_MonoNPCSpawner_C_Spawn, CallFunc_GetCharacterManager_ReturnValue) == 0x000010, "Member 'BP_MonoNPCSpawner_C_Spawn::CallFunc_GetCharacterManager_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_MonoNPCSpawner_C_Spawn, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000018, "Member 'BP_MonoNPCSpawner_C_Spawn::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
@@ -656,8 +656,8 @@ static_assert(offsetof(BP_MonoNPCSpawner_C_Spawn, CallFunc_GetLocalPlayerControl
 static_assert(offsetof(BP_MonoNPCSpawner_C_Spawn, K2Node_MakeStruct_Guid) == 0x000068, "Member 'BP_MonoNPCSpawner_C_Spawn::K2Node_MakeStruct_Guid' has a wrong offset!");
 static_assert(offsetof(BP_MonoNPCSpawner_C_Spawn, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x000078, "Member 'BP_MonoNPCSpawner_C_Spawn::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
 static_assert(offsetof(BP_MonoNPCSpawner_C_Spawn, CallFunc_GetInitializedCharacterSaveParemter_outParameter) == 0x0000F0, "Member 'BP_MonoNPCSpawner_C_Spawn::CallFunc_GetInitializedCharacterSaveParemter_outParameter' has a wrong offset!");
-static_assert(offsetof(BP_MonoNPCSpawner_C_Spawn, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000410, "Member 'BP_MonoNPCSpawner_C_Spawn::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MonoNPCSpawner_C_Spawn, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000418, "Member 'BP_MonoNPCSpawner_C_Spawn::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MonoNPCSpawner_C_Spawn, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000418, "Member 'BP_MonoNPCSpawner_C_Spawn::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MonoNPCSpawner_C_Spawn, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000420, "Member 'BP_MonoNPCSpawner_C_Spawn::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
 
 // Function BP_MonoNPCSpawner.BP_MonoNPCSpawner_C.SpawnDelegate
 // 0x0080 (0x0080 - 0x0000)

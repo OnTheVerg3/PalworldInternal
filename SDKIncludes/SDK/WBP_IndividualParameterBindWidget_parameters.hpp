@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function WBP_IndividualParameterBindWidget.WBP_IndividualParameterBindWidget_C.Bind Event
-// 0x0640 (0x0640 - 0x0000)
+// 0x0648 (0x0648 - 0x0000)
 struct WBP_IndividualParameterBindWidget_C_Bind_Event final
 {
 public:
@@ -33,81 +33,81 @@ public:
 	bool                                          CallFunc_IsRarePal_ReturnValue;                    // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EPalGenderType                                CallFunc_GetGenderType_ReturnValue;                // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x0038(0x0320)(ConstParm)
-	struct FPalWorkSuitabilityPreferenceInfo      CallFunc_GetSaveParameterValue_WorkSuitabilityOptionInfo_ReturnValue; // 0x0358(0x0018)(ConstParm)
-	TMap<EPalWorkSuitability, int32>              CallFunc_GetWorkSuitabilityRanksWithCharacterRank_ReturnValue; // 0x0370(0x0050)()
-	TArray<class FName>                           CallFunc_GetPassiveSkillList_ReturnValue;          // 0x03C0(0x0010)(ConstParm, ReferenceParm)
-	int32                                         CallFunc_GetPalSoulRank_ReturnValue;               // 0x03D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetRank_ReturnValue;                      // 0x03D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsOverrideLevel_ReturnValue;              // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D9[0x3];                                      // 0x03D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetLevel_ReturnValue;                     // 0x03DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetOverrideLevel_ReturnValue;             // 0x03E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_GetExp_ReturnValue;                       // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x03F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetSanityValue_ReturnValue;               // 0x03F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMaxSanityValue_ReturnValue;            // 0x03F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetNickNameWithOnlineID_OutName;          // 0x0400(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMaxFullStomach_ReturnValue;            // 0x0410(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetFullStomach_ReturnValue;               // 0x0414(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFixedPoint64                          CallFunc_GetHP_ReturnValue;                        // 0x0418(0x0008)(NoDestructor)
-	struct FFixedPoint64                          CallFunc_GetMaxHP_withBuff_ReturnValue;            // 0x0420(0x0008)(NoDestructor)
-	class FName                                   CallFunc_GetCharacterID_ReturnValue;               // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FFixedPoint64& nowShieldMaxHP, const struct FFixedPoint64& nowShieldHP)> K2Node_CreateDelegate_OutputDelegate; // 0x0430(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPS5_ReturnValue;                        // 0x0440(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_441[0x3];                                      // 0x0441(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const int32 NewIndex)>         K2Node_CreateDelegate_OutputDelegate_1;            // 0x0444(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_454[0x4];                                      // 0x0454(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalGameInstance*                       CallFunc_GetPalGameInstance_ReturnValue;           // 0x0458(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FPalWorkSuitabilityPreferenceInfo& NewWorkSuitabilityOption)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0460(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0470(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0480(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x0490(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsBoss_ReturnValue;                    // 0x0498(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_499[0x7];                                      // 0x0499(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterHandle*          CallFunc_GetBindedHandle_targetHandle;             // 0x04A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APalCharacter*                          CallFunc_TryGetIndividualActor_ReturnValue;        // 0x04A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x04B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B1[0x7];                                      // 0x04B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APalPlayerCharacter*                    CallFunc_GetTrainerPlayer_ReturnValue;             // 0x04B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x04C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C1[0x7];                                      // 0x04C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterParameter*       CallFunc_GetIndividualParameter_ReturnValue;       // 0x04C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APalPlayerCharacter*                    CallFunc_GetPalmi_ReturnValue;                     // 0x04D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalIndividualCharacterParameter*       CallFunc_GetIndividualParameter_ReturnValue_1;     // 0x04D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 addLevel, int32 nowLevel)> K2Node_CreateDelegate_OutputDelegate_5;          // 0x04E0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_6;            // 0x04F0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_7;            // 0x0500(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalGameInstance*                       CallFunc_GetPalGameInstance_ReturnValue_1;         // 0x0510(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalOnlineManager*                      CallFunc_GetOnlineManager_ReturnValue;             // 0x0518(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const class FString& UserId, const EPalSessionMemberChange ChangeType)> K2Node_CreateDelegate_OutputDelegate_8; // 0x0520(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_9;            // 0x0530(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UPalIndividualCharacterParameter* IndividualParameter, EPalWazaID WazaID)> K2Node_CreateDelegate_OutputDelegate_10; // 0x0540(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_1; // 0x0550(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetFoodAmount_ReturnValue;                // 0x0558(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EPalWazaID WazaID)>            K2Node_CreateDelegate_OutputDelegate_11;           // 0x055C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56C[0x4];                                      // 0x056C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_2; // 0x0570(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EPalElementType                               CallFunc_GetElementType_Element1;                  // 0x0578(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalElementType                               CallFunc_GetElementType_Element2;                  // 0x0579(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57A[0x2];                                      // 0x057A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_12;           // 0x057C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const TArray<class FName>& PassiveIds)> K2Node_CreateDelegate_OutputDelegate_13;  // 0x058C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EPalGenderType NewGender)>     K2Node_CreateDelegate_OutputDelegate_14;           // 0x059C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 addLevel, int32 nowLevel)> K2Node_CreateDelegate_OutputDelegate_15;         // 0x05AC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int64 addExp, int64 NowExp, EPalExpCalcType ExpType)> K2Node_CreateDelegate_OutputDelegate_16; // 0x05BC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UPalIndividualCharacterParameter* IndividualParameter, const int32 NewFriendshipRank, const int32 OldRank, bool bFavoriteChanged)> K2Node_CreateDelegate_OutputDelegate_17; // 0x05CC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(float nowSanity, float oldSanity)> K2Node_CreateDelegate_OutputDelegate_18;       // 0x05DC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UPalIndividualCharacterParameter* IndividualParameter, const class FString& NewNickName)> K2Node_CreateDelegate_OutputDelegate_19; // 0x05EC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(float Current, float Last)>    K2Node_CreateDelegate_OutputDelegate_20;           // 0x05FC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UPalIndividualCharacterParameter* IndividualParameter, const int32 NewPoint)> K2Node_CreateDelegate_OutputDelegate_21; // 0x060C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FFixedPoint64& nowSP, const struct FFixedPoint64& nowMaxSP, bool isOverHeated)> K2Node_CreateDelegate_OutputDelegate_22; // 0x061C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FFixedPoint64& nowHP, const struct FFixedPoint64& nowMaxHP)> K2Node_CreateDelegate_OutputDelegate_23; // 0x062C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x0038(0x0328)(ConstParm)
+	struct FPalWorkSuitabilityPreferenceInfo      CallFunc_GetSaveParameterValue_WorkSuitabilityOptionInfo_ReturnValue; // 0x0360(0x0018)(ConstParm)
+	TMap<EPalWorkSuitability, int32>              CallFunc_GetWorkSuitabilityRanksWithCharacterRank_ReturnValue; // 0x0378(0x0050)()
+	TArray<class FName>                           CallFunc_GetPassiveSkillList_ReturnValue;          // 0x03C8(0x0010)(ConstParm, ReferenceParm)
+	int32                                         CallFunc_GetPalSoulRank_ReturnValue;               // 0x03D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetRank_ReturnValue;                      // 0x03DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsOverrideLevel_ReturnValue;              // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E1[0x3];                                      // 0x03E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetLevel_ReturnValue;                     // 0x03E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetOverrideLevel_ReturnValue;             // 0x03E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3EC[0x4];                                      // 0x03EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_GetExp_ReturnValue;                       // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x03F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetSanityValue_ReturnValue;               // 0x03FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMaxSanityValue_ReturnValue;            // 0x0400(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetNickNameWithOnlineID_OutName;          // 0x0408(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMaxFullStomach_ReturnValue;            // 0x0418(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetFullStomach_ReturnValue;               // 0x041C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFixedPoint64                          CallFunc_GetHP_ReturnValue;                        // 0x0420(0x0008)(NoDestructor)
+	struct FFixedPoint64                          CallFunc_GetMaxHP_withBuff_ReturnValue;            // 0x0428(0x0008)(NoDestructor)
+	class FName                                   CallFunc_GetCharacterID_ReturnValue;               // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FFixedPoint64& nowShieldMaxHP, const struct FFixedPoint64& nowShieldHP)> K2Node_CreateDelegate_OutputDelegate; // 0x0438(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPS5_ReturnValue;                        // 0x0448(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_449[0x3];                                      // 0x0449(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const int32 NewIndex)>         K2Node_CreateDelegate_OutputDelegate_1;            // 0x044C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45C[0x4];                                      // 0x045C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalGameInstance*                       CallFunc_GetPalGameInstance_ReturnValue;           // 0x0460(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FPalWorkSuitabilityPreferenceInfo& NewWorkSuitabilityOption)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0468(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0478(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0488(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x0498(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsBoss_ReturnValue;                    // 0x04A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A1[0x7];                                      // 0x04A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterHandle*          CallFunc_GetBindedHandle_targetHandle;             // 0x04A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APalCharacter*                          CallFunc_TryGetIndividualActor_ReturnValue;        // 0x04B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x04B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APalPlayerCharacter*                    CallFunc_GetTrainerPlayer_ReturnValue;             // 0x04C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x04C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C9[0x7];                                      // 0x04C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterParameter*       CallFunc_GetIndividualParameter_ReturnValue;       // 0x04D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APalPlayerCharacter*                    CallFunc_GetPalmi_ReturnValue;                     // 0x04D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalIndividualCharacterParameter*       CallFunc_GetIndividualParameter_ReturnValue_1;     // 0x04E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 addLevel, int32 nowLevel)> K2Node_CreateDelegate_OutputDelegate_5;          // 0x04E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_6;            // 0x04F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_7;            // 0x0508(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalGameInstance*                       CallFunc_GetPalGameInstance_ReturnValue_1;         // 0x0518(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalOnlineManager*                      CallFunc_GetOnlineManager_ReturnValue;             // 0x0520(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const class FString& UserId, const EPalSessionMemberChange ChangeType)> K2Node_CreateDelegate_OutputDelegate_8; // 0x0528(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_9;            // 0x0538(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UPalIndividualCharacterParameter* IndividualParameter, EPalWazaID WazaID)> K2Node_CreateDelegate_OutputDelegate_10; // 0x0548(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_1; // 0x0558(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetFoodAmount_ReturnValue;                // 0x0560(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EPalWazaID WazaID)>            K2Node_CreateDelegate_OutputDelegate_11;           // 0x0564(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_574[0x4];                                      // 0x0574(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue_2; // 0x0578(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EPalElementType                               CallFunc_GetElementType_Element1;                  // 0x0580(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalElementType                               CallFunc_GetElementType_Element2;                  // 0x0581(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_582[0x2];                                      // 0x0582(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_12;           // 0x0584(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const TArray<class FName>& PassiveIds)> K2Node_CreateDelegate_OutputDelegate_13;  // 0x0594(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EPalGenderType NewGender)>     K2Node_CreateDelegate_OutputDelegate_14;           // 0x05A4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 addLevel, int32 nowLevel)> K2Node_CreateDelegate_OutputDelegate_15;         // 0x05B4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int64 addExp, int64 NowExp, EPalExpCalcType ExpType)> K2Node_CreateDelegate_OutputDelegate_16; // 0x05C4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UPalIndividualCharacterParameter* IndividualParameter, const int32 NewFriendshipRank, const int32 OldRank, bool bFavoriteChanged)> K2Node_CreateDelegate_OutputDelegate_17; // 0x05D4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(float nowSanity, float oldSanity)> K2Node_CreateDelegate_OutputDelegate_18;       // 0x05E4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UPalIndividualCharacterParameter* IndividualParameter, const class FString& NewNickName)> K2Node_CreateDelegate_OutputDelegate_19; // 0x05F4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(float Current, float Last)>    K2Node_CreateDelegate_OutputDelegate_20;           // 0x0604(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UPalIndividualCharacterParameter* IndividualParameter, const int32 NewPoint)> K2Node_CreateDelegate_OutputDelegate_21; // 0x0614(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FFixedPoint64& nowSP, const struct FFixedPoint64& nowMaxSP, bool isOverHeated)> K2Node_CreateDelegate_OutputDelegate_22; // 0x0624(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FFixedPoint64& nowHP, const struct FFixedPoint64& nowMaxHP)> K2Node_CreateDelegate_OutputDelegate_23; // 0x0634(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_IndividualParameterBindWidget_C_Bind_Event) == 0x000008, "Wrong alignment on WBP_IndividualParameterBindWidget_C_Bind_Event");
-static_assert(sizeof(WBP_IndividualParameterBindWidget_C_Bind_Event) == 0x000640, "Wrong size on WBP_IndividualParameterBindWidget_C_Bind_Event");
+static_assert(sizeof(WBP_IndividualParameterBindWidget_C_Bind_Event) == 0x000648, "Wrong size on WBP_IndividualParameterBindWidget_C_Bind_Event");
 static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, targetParam) == 0x000000, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::targetParam' has a wrong offset!");
 static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CharacterID) == 0x000008, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CharacterID' has a wrong offset!");
 static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetFriendshipRank_ReturnValue) == 0x000010, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetFriendshipRank_ReturnValue' has a wrong offset!");
@@ -119,67 +119,67 @@ static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_
 static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_IsRarePal_ReturnValue) == 0x000034, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_IsRarePal_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetGenderType_ReturnValue) == 0x000035, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetGenderType_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetSaveParameter_ReturnValue) == 0x000038, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetSaveParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetSaveParameterValue_WorkSuitabilityOptionInfo_ReturnValue) == 0x000358, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetSaveParameterValue_WorkSuitabilityOptionInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetWorkSuitabilityRanksWithCharacterRank_ReturnValue) == 0x000370, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetWorkSuitabilityRanksWithCharacterRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetPassiveSkillList_ReturnValue) == 0x0003C0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetPassiveSkillList_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetPalSoulRank_ReturnValue) == 0x0003D0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetPalSoulRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetRank_ReturnValue) == 0x0003D4, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_IsOverrideLevel_ReturnValue) == 0x0003D8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_IsOverrideLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetLevel_ReturnValue) == 0x0003DC, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetOverrideLevel_ReturnValue) == 0x0003E0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetOverrideLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetExp_ReturnValue) == 0x0003E8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetExp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_SelectInt_ReturnValue) == 0x0003F0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetSanityValue_ReturnValue) == 0x0003F4, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetSanityValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetMaxSanityValue_ReturnValue) == 0x0003F8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetMaxSanityValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetNickNameWithOnlineID_OutName) == 0x000400, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetNickNameWithOnlineID_OutName' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetMaxFullStomach_ReturnValue) == 0x000410, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetMaxFullStomach_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetFullStomach_ReturnValue) == 0x000414, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetFullStomach_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetHP_ReturnValue) == 0x000418, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetHP_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetMaxHP_withBuff_ReturnValue) == 0x000420, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetMaxHP_withBuff_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetCharacterID_ReturnValue) == 0x000428, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetCharacterID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate) == 0x000430, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_IsPS5_ReturnValue) == 0x000440, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_IsPS5_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_1) == 0x000444, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetPalGameInstance_ReturnValue) == 0x000458, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetPalGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_2) == 0x000460, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_3) == 0x000470, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_4) == 0x000480, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x000490, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetIsBoss_ReturnValue) == 0x000498, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetIsBoss_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetBindedHandle_targetHandle) == 0x0004A0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetBindedHandle_targetHandle' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_TryGetIndividualActor_ReturnValue) == 0x0004A8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_TryGetIndividualActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_IsValid_ReturnValue) == 0x0004B0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetTrainerPlayer_ReturnValue) == 0x0004B8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetTrainerPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_IsValid_ReturnValue_1) == 0x0004C0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetIndividualParameter_ReturnValue) == 0x0004C8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetIndividualParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetPalmi_ReturnValue) == 0x0004D0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetPalmi_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetIndividualParameter_ReturnValue_1) == 0x0004D8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetIndividualParameter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_5) == 0x0004E0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_6) == 0x0004F0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_7) == 0x000500, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetPalGameInstance_ReturnValue_1) == 0x000510, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetPalGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetOnlineManager_ReturnValue) == 0x000518, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetOnlineManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_8) == 0x000520, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_9) == 0x000530, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_10) == 0x000540, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetDatabaseCharacterParameter_ReturnValue_1) == 0x000550, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetDatabaseCharacterParameter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetFoodAmount_ReturnValue) == 0x000558, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetFoodAmount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_11) == 0x00055C, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetDatabaseCharacterParameter_ReturnValue_2) == 0x000570, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetDatabaseCharacterParameter_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetElementType_Element1) == 0x000578, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetElementType_Element1' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetElementType_Element2) == 0x000579, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetElementType_Element2' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_12) == 0x00057C, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_13) == 0x00058C, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_14) == 0x00059C, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_14' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_15) == 0x0005AC, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_15' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_16) == 0x0005BC, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_16' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_17) == 0x0005CC, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_17' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_18) == 0x0005DC, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_18' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_19) == 0x0005EC, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_19' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_20) == 0x0005FC, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_20' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_21) == 0x00060C, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_21' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_22) == 0x00061C, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_22' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_23) == 0x00062C, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_23' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetSaveParameterValue_WorkSuitabilityOptionInfo_ReturnValue) == 0x000360, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetSaveParameterValue_WorkSuitabilityOptionInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetWorkSuitabilityRanksWithCharacterRank_ReturnValue) == 0x000378, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetWorkSuitabilityRanksWithCharacterRank_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetPassiveSkillList_ReturnValue) == 0x0003C8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetPassiveSkillList_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetPalSoulRank_ReturnValue) == 0x0003D8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetPalSoulRank_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetRank_ReturnValue) == 0x0003DC, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetRank_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_IsOverrideLevel_ReturnValue) == 0x0003E0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_IsOverrideLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetLevel_ReturnValue) == 0x0003E4, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetOverrideLevel_ReturnValue) == 0x0003E8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetOverrideLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetExp_ReturnValue) == 0x0003F0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetExp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_SelectInt_ReturnValue) == 0x0003F8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetSanityValue_ReturnValue) == 0x0003FC, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetSanityValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetMaxSanityValue_ReturnValue) == 0x000400, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetMaxSanityValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetNickNameWithOnlineID_OutName) == 0x000408, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetNickNameWithOnlineID_OutName' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetMaxFullStomach_ReturnValue) == 0x000418, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetMaxFullStomach_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetFullStomach_ReturnValue) == 0x00041C, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetFullStomach_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetHP_ReturnValue) == 0x000420, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetHP_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetMaxHP_withBuff_ReturnValue) == 0x000428, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetMaxHP_withBuff_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetCharacterID_ReturnValue) == 0x000430, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetCharacterID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate) == 0x000438, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_IsPS5_ReturnValue) == 0x000448, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_IsPS5_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_1) == 0x00044C, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetPalGameInstance_ReturnValue) == 0x000460, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetPalGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_2) == 0x000468, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_3) == 0x000478, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_4) == 0x000488, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x000498, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetIsBoss_ReturnValue) == 0x0004A0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetIsBoss_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetBindedHandle_targetHandle) == 0x0004A8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetBindedHandle_targetHandle' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_TryGetIndividualActor_ReturnValue) == 0x0004B0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_TryGetIndividualActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_IsValid_ReturnValue) == 0x0004B8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetTrainerPlayer_ReturnValue) == 0x0004C0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetTrainerPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_IsValid_ReturnValue_1) == 0x0004C8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetIndividualParameter_ReturnValue) == 0x0004D0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetIndividualParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetPalmi_ReturnValue) == 0x0004D8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetPalmi_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetIndividualParameter_ReturnValue_1) == 0x0004E0, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetIndividualParameter_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_5) == 0x0004E8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_6) == 0x0004F8, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_7) == 0x000508, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetPalGameInstance_ReturnValue_1) == 0x000518, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetPalGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetOnlineManager_ReturnValue) == 0x000520, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetOnlineManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_8) == 0x000528, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_9) == 0x000538, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_10) == 0x000548, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetDatabaseCharacterParameter_ReturnValue_1) == 0x000558, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetDatabaseCharacterParameter_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetFoodAmount_ReturnValue) == 0x000560, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetFoodAmount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_11) == 0x000564, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetDatabaseCharacterParameter_ReturnValue_2) == 0x000578, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetDatabaseCharacterParameter_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetElementType_Element1) == 0x000580, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetElementType_Element1' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, CallFunc_GetElementType_Element2) == 0x000581, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::CallFunc_GetElementType_Element2' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_12) == 0x000584, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_13) == 0x000594, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_14) == 0x0005A4, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_14' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_15) == 0x0005B4, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_15' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_16) == 0x0005C4, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_16' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_17) == 0x0005D4, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_17' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_18) == 0x0005E4, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_18' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_19) == 0x0005F4, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_19' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_20) == 0x000604, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_20' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_21) == 0x000614, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_21' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_22) == 0x000624, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_22' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_Bind_Event, K2Node_CreateDelegate_OutputDelegate_23) == 0x000634, "Member 'WBP_IndividualParameterBindWidget_C_Bind_Event::K2Node_CreateDelegate_OutputDelegate_23' has a wrong offset!");
 
 // Function WBP_IndividualParameterBindWidget.WBP_IndividualParameterBindWidget_C.BindFromHandle
 // 0x00A0 (0x00A0 - 0x0000)
@@ -684,18 +684,18 @@ static_assert(alignof(WBP_IndividualParameterBindWidget_C_SetFoodAmount) == 0x00
 static_assert(sizeof(WBP_IndividualParameterBindWidget_C_SetFoodAmount) == 0x000004, "Wrong size on WBP_IndividualParameterBindWidget_C_SetFoodAmount");
 static_assert(offsetof(WBP_IndividualParameterBindWidget_C_SetFoodAmount, FoodAmount) == 0x000000, "Member 'WBP_IndividualParameterBindWidget_C_SetFoodAmount::FoodAmount' has a wrong offset!");
 
-// Function WBP_IndividualParameterBindWidget.WBP_IndividualParameterBindWidget_C.SetFriendship
+// Function WBP_IndividualParameterBindWidget.WBP_IndividualParameterBindWidget_C.SetFriendShip
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_IndividualParameterBindWidget_C_SetFriendship final
+struct WBP_IndividualParameterBindWidget_C_SetFriendShip final
 {
 public:
 	int32                                         FriendshipRank;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         FriendshipPoint;                                   // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_IndividualParameterBindWidget_C_SetFriendship) == 0x000004, "Wrong alignment on WBP_IndividualParameterBindWidget_C_SetFriendship");
-static_assert(sizeof(WBP_IndividualParameterBindWidget_C_SetFriendship) == 0x000008, "Wrong size on WBP_IndividualParameterBindWidget_C_SetFriendship");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_SetFriendship, FriendshipRank) == 0x000000, "Member 'WBP_IndividualParameterBindWidget_C_SetFriendship::FriendshipRank' has a wrong offset!");
-static_assert(offsetof(WBP_IndividualParameterBindWidget_C_SetFriendship, FriendshipPoint) == 0x000004, "Member 'WBP_IndividualParameterBindWidget_C_SetFriendship::FriendshipPoint' has a wrong offset!");
+static_assert(alignof(WBP_IndividualParameterBindWidget_C_SetFriendShip) == 0x000004, "Wrong alignment on WBP_IndividualParameterBindWidget_C_SetFriendShip");
+static_assert(sizeof(WBP_IndividualParameterBindWidget_C_SetFriendShip) == 0x000008, "Wrong size on WBP_IndividualParameterBindWidget_C_SetFriendShip");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_SetFriendShip, FriendshipRank) == 0x000000, "Member 'WBP_IndividualParameterBindWidget_C_SetFriendShip::FriendshipRank' has a wrong offset!");
+static_assert(offsetof(WBP_IndividualParameterBindWidget_C_SetFriendShip, FriendshipPoint) == 0x000004, "Member 'WBP_IndividualParameterBindWidget_C_SetFriendShip::FriendshipPoint' has a wrong offset!");
 
 // Function WBP_IndividualParameterBindWidget.WBP_IndividualParameterBindWidget_C.SetGender
 // 0x0001 (0x0001 - 0x0000)

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -536,7 +536,7 @@ static_assert(offsetof(BP_PalIncidentInvaderBase_C_SetNullHandleWhenDestoryOtomo
 static_assert(offsetof(BP_PalIncidentInvaderBase_C_SetNullHandleWhenDestoryOtomo, CallFunc_Array_RemoveItem_ReturnValue) == 0x000010, "Member 'BP_PalIncidentInvaderBase_C_SetNullHandleWhenDestoryOtomo::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
 
 // Function BP_PalIncidentInvaderBase.BP_PalIncidentInvaderBase_C.SpawnCharacter
-// 0x0478 (0x0478 - 0x0000)
+// 0x0480 (0x0480 - 0x0000)
 struct BP_PalIncidentInvaderBase_C_SpawnCharacter final
 {
 public:
@@ -560,17 +560,17 @@ public:
 	struct FGuid                                  K2Node_MakeStruct_Guid;                            // 0x0094(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(const struct FPalInstanceID& ID)> K2Node_CreateDelegate_OutputDelegate;           // 0x00A4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00B8(0x0320)()
-	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D9[0x7];                                      // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalCharacterManager*                   CallFunc_GetCharacterManager_ReturnValue;          // 0x03E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x03E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x03F0(0x0078)(NoDestructor)
-	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0468(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0470(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00B8(0x0328)()
+	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalCharacterManager*                   CallFunc_GetCharacterManager_ReturnValue;          // 0x03E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x03F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x03F8(0x0078)(NoDestructor)
+	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0470(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0478(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PalIncidentInvaderBase_C_SpawnCharacter) == 0x000008, "Wrong alignment on BP_PalIncidentInvaderBase_C_SpawnCharacter");
-static_assert(sizeof(BP_PalIncidentInvaderBase_C_SpawnCharacter) == 0x000478, "Wrong size on BP_PalIncidentInvaderBase_C_SpawnCharacter");
+static_assert(sizeof(BP_PalIncidentInvaderBase_C_SpawnCharacter) == 0x000480, "Wrong size on BP_PalIncidentInvaderBase_C_SpawnCharacter");
 static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, SpawnParameter) == 0x000000, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::SpawnParameter' has a wrong offset!");
 static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, Index_0) == 0x000018, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::Index_0' has a wrong offset!");
 static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, SpawnRot) == 0x000020, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::SpawnRot' has a wrong offset!");
@@ -588,12 +588,12 @@ static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, CallFunc_Arra
 static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, K2Node_MakeStruct_Guid) == 0x000094, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::K2Node_MakeStruct_Guid' has a wrong offset!");
 static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, K2Node_CreateDelegate_OutputDelegate) == 0x0000A4, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, CallFunc_GetInitializedCharacterSaveParemter_outParameter) == 0x0000B8, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::CallFunc_GetInitializedCharacterSaveParemter_outParameter' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x0003D8, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, CallFunc_GetCharacterManager_ReturnValue) == 0x0003E0, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::CallFunc_GetCharacterManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, CallFunc_GetLocalPlayerController_ReturnValue) == 0x0003E8, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::CallFunc_GetLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x0003F0, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000468, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, CallFunc_Array_Add_ReturnValue_1) == 0x000470, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x0003E0, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, CallFunc_GetCharacterManager_ReturnValue) == 0x0003E8, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::CallFunc_GetCharacterManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, CallFunc_GetLocalPlayerController_ReturnValue) == 0x0003F0, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::CallFunc_GetLocalPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x0003F8, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000470, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderBase_C_SpawnCharacter, CallFunc_Array_Add_ReturnValue_1) == 0x000478, "Member 'BP_PalIncidentInvaderBase_C_SpawnCharacter::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
 
 // Function BP_PalIncidentInvaderBase.BP_PalIncidentInvaderBase_C.SpawnDelegate
 // 0x0168 (0x0168 - 0x0000)

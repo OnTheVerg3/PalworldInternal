@@ -97,6 +97,16 @@ static_assert(sizeof(FDataRegistryId) == 0x000010, "Wrong size on FDataRegistryI
 static_assert(offsetof(FDataRegistryId, RegistryType) == 0x000000, "Member 'FDataRegistryId::RegistryType' has a wrong offset!");
 static_assert(offsetof(FDataRegistryId, ItemName) == 0x000008, "Member 'FDataRegistryId::ItemName' has a wrong offset!");
 
+// ScriptStruct DataRegistry.DataRegistrySourceItemId
+// 0x0040 (0x0040 - 0x0000)
+struct alignas(0x08) FDataRegistrySourceItemId final
+{
+public:
+	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FDataRegistrySourceItemId) == 0x000008, "Wrong alignment on FDataRegistrySourceItemId");
+static_assert(sizeof(FDataRegistrySourceItemId) == 0x000040, "Wrong size on FDataRegistrySourceItemId");
+
 // ScriptStruct DataRegistry.DataRegistrySource_DataTableRules
 // 0x0008 (0x0008 - 0x0000)
 struct FDataRegistrySource_DataTableRules final
@@ -143,16 +153,6 @@ static_assert(offsetof(FDataRegistryCachePolicy, MinNumberKept) == 0x000004, "Me
 static_assert(offsetof(FDataRegistryCachePolicy, MaxNumberKept) == 0x000008, "Member 'FDataRegistryCachePolicy::MaxNumberKept' has a wrong offset!");
 static_assert(offsetof(FDataRegistryCachePolicy, ForceKeepSeconds) == 0x00000C, "Member 'FDataRegistryCachePolicy::ForceKeepSeconds' has a wrong offset!");
 static_assert(offsetof(FDataRegistryCachePolicy, ForceReleaseSeconds) == 0x000010, "Member 'FDataRegistryCachePolicy::ForceReleaseSeconds' has a wrong offset!");
-
-// ScriptStruct DataRegistry.DataRegistrySourceItemId
-// 0x0040 (0x0040 - 0x0000)
-struct alignas(0x08) FDataRegistrySourceItemId final
-{
-public:
-	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FDataRegistrySourceItemId) == 0x000008, "Wrong alignment on FDataRegistrySourceItemId");
-static_assert(sizeof(FDataRegistrySourceItemId) == 0x000040, "Wrong size on FDataRegistrySourceItemId");
 
 }
 

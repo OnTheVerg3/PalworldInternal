@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "StructUtils_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK

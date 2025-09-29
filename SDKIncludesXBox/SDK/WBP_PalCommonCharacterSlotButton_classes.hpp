@@ -34,7 +34,7 @@ public:
 	class UImage*                                 PushEff;                                           // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_PalCommonCharacterSlot_C*          WBP_PalCommonCharacterSlot;                        // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_PalInvisibleButton_C*              WBP_PalInvisibleButton;                            // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bIsDisplayDopingEffect;                            // 0x0520(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsDIsplayDopingEffect;                            // 0x0520(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bCheckAnimPlayed;                                  // 0x0521(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
@@ -76,7 +76,7 @@ static_assert(offsetof(UWBP_PalCommonCharacterSlotButton_C, FocusedFrame) == 0x0
 static_assert(offsetof(UWBP_PalCommonCharacterSlotButton_C, PushEff) == 0x000508, "Member 'UWBP_PalCommonCharacterSlotButton_C::PushEff' has a wrong offset!");
 static_assert(offsetof(UWBP_PalCommonCharacterSlotButton_C, WBP_PalCommonCharacterSlot) == 0x000510, "Member 'UWBP_PalCommonCharacterSlotButton_C::WBP_PalCommonCharacterSlot' has a wrong offset!");
 static_assert(offsetof(UWBP_PalCommonCharacterSlotButton_C, WBP_PalInvisibleButton) == 0x000518, "Member 'UWBP_PalCommonCharacterSlotButton_C::WBP_PalInvisibleButton' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlotButton_C, bIsDisplayDopingEffect) == 0x000520, "Member 'UWBP_PalCommonCharacterSlotButton_C::bIsDisplayDopingEffect' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlotButton_C, bIsDIsplayDopingEffect) == 0x000520, "Member 'UWBP_PalCommonCharacterSlotButton_C::bIsDIsplayDopingEffect' has a wrong offset!");
 static_assert(offsetof(UWBP_PalCommonCharacterSlotButton_C, bCheckAnimPlayed) == 0x000521, "Member 'UWBP_PalCommonCharacterSlotButton_C::bCheckAnimPlayed' has a wrong offset!");
 
 }

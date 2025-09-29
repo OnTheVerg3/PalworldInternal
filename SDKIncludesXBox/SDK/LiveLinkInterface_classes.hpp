@@ -52,23 +52,6 @@ public:
 static_assert(alignof(ULiveLinkFrameInterpolationProcessor) == 0x000008, "Wrong alignment on ULiveLinkFrameInterpolationProcessor");
 static_assert(sizeof(ULiveLinkFrameInterpolationProcessor) == 0x000028, "Wrong size on ULiveLinkFrameInterpolationProcessor");
 
-// Class LiveLinkInterface.LiveLinkRole
-// 0x0000 (0x0028 - 0x0028)
-class ULiveLinkRole : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"LiveLinkRole">();
-	}
-	static class ULiveLinkRole* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULiveLinkRole>();
-	}
-};
-static_assert(alignof(ULiveLinkRole) == 0x000008, "Wrong alignment on ULiveLinkRole");
-static_assert(sizeof(ULiveLinkRole) == 0x000028, "Wrong size on ULiveLinkRole");
-
 // Class LiveLinkInterface.LiveLinkSourceSettings
 // 0x0080 (0x00A8 - 0x0028)
 class ULiveLinkSourceSettings : public UObject
@@ -143,6 +126,23 @@ public:
 static_assert(alignof(ULiveLinkSourceFactory) == 0x000008, "Wrong alignment on ULiveLinkSourceFactory");
 static_assert(sizeof(ULiveLinkSourceFactory) == 0x000028, "Wrong size on ULiveLinkSourceFactory");
 
+// Class LiveLinkInterface.LiveLinkFrameTranslator
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkFrameTranslator : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkFrameTranslator">();
+	}
+	static class ULiveLinkFrameTranslator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkFrameTranslator>();
+	}
+};
+static_assert(alignof(ULiveLinkFrameTranslator) == 0x000008, "Wrong alignment on ULiveLinkFrameTranslator");
+static_assert(sizeof(ULiveLinkFrameTranslator) == 0x000028, "Wrong size on ULiveLinkFrameTranslator");
+
 // Class LiveLinkInterface.LiveLinkController
 // 0x0000 (0x0028 - 0x0028)
 class ULiveLinkController final : public UObject
@@ -160,22 +160,22 @@ public:
 static_assert(alignof(ULiveLinkController) == 0x000008, "Wrong alignment on ULiveLinkController");
 static_assert(sizeof(ULiveLinkController) == 0x000028, "Wrong size on ULiveLinkController");
 
-// Class LiveLinkInterface.LiveLinkFrameTranslator
+// Class LiveLinkInterface.LiveLinkRole
 // 0x0000 (0x0028 - 0x0028)
-class ULiveLinkFrameTranslator : public UObject
+class ULiveLinkRole : public UObject
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkFrameTranslator">();
+		return StaticClassImpl<"LiveLinkRole">();
 	}
-	static class ULiveLinkFrameTranslator* GetDefaultObj()
+	static class ULiveLinkRole* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ULiveLinkFrameTranslator>();
+		return GetDefaultObjImpl<ULiveLinkRole>();
 	}
 };
-static_assert(alignof(ULiveLinkFrameTranslator) == 0x000008, "Wrong alignment on ULiveLinkFrameTranslator");
-static_assert(sizeof(ULiveLinkFrameTranslator) == 0x000028, "Wrong size on ULiveLinkFrameTranslator");
+static_assert(alignof(ULiveLinkRole) == 0x000008, "Wrong alignment on ULiveLinkRole");
+static_assert(sizeof(ULiveLinkRole) == 0x000028, "Wrong size on ULiveLinkRole");
 
 // Class LiveLinkInterface.LiveLinkCurveRemapSettings
 // 0x0050 (0x00F8 - 0x00A8)

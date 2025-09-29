@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "Chaos_structs.hpp"
 #include "PhysicsCore_structs.hpp"
+#include "Chaos_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 

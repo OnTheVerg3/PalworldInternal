@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PalArenaWorldSubsystem.BP_PalArenaWorldSubsystem_C
-// 0x0000 (0x0130 - 0x0130)
+// 0x0000 (0x0138 - 0x0138)
 class UBP_PalArenaWorldSubsystem_C final : public UPalArenaWorldSubsystem
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_PalArenaWorldSubsystem_C) == 0x000008, "Wrong alignment on UBP_PalArenaWorldSubsystem_C");
-static_assert(sizeof(UBP_PalArenaWorldSubsystem_C) == 0x000130, "Wrong size on UBP_PalArenaWorldSubsystem_C");
+static_assert(sizeof(UBP_PalArenaWorldSubsystem_C) == 0x000138, "Wrong size on UBP_PalArenaWorldSubsystem_C");
 
 }
 

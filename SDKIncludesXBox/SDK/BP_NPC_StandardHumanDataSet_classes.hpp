@@ -17,12 +17,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_NPC_StandardHumanDataSet.BP_NPC_StandardHumanDataSet_C
-// 0x0010 (0x0A90 - 0x0A80)
-class ABP_NPC_StandardHumanDataSet_C : public ABP_NPC_Base_C
+// 0x0010 (0x0AA0 - 0x0A90)
+#pragma pack(push, 0x1)
+class alignas(0x10) ABP_NPC_StandardHumanDataSet_C : public ABP_NPC_Base_C
 {
 public:
-	class UBP_HumanCryComponent_C*                BP_HumanCryComponent;                              // 0x0A80(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPalBodyPartsSphereComponent*           PalBodyPartsSphere;                                // 0x0A88(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_HumanCryComponent_C*                BP_HumanCryComponent;                              // 0x0A88(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPalBodyPartsSphereComponent*           PalBodyPartsSphere;                                // 0x0A90(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,10 +35,11 @@ public:
 		return GetDefaultObjImpl<ABP_NPC_StandardHumanDataSet_C>();
 	}
 };
+#pragma pack(pop)
 static_assert(alignof(ABP_NPC_StandardHumanDataSet_C) == 0x000010, "Wrong alignment on ABP_NPC_StandardHumanDataSet_C");
-static_assert(sizeof(ABP_NPC_StandardHumanDataSet_C) == 0x000A90, "Wrong size on ABP_NPC_StandardHumanDataSet_C");
-static_assert(offsetof(ABP_NPC_StandardHumanDataSet_C, BP_HumanCryComponent) == 0x000A80, "Member 'ABP_NPC_StandardHumanDataSet_C::BP_HumanCryComponent' has a wrong offset!");
-static_assert(offsetof(ABP_NPC_StandardHumanDataSet_C, PalBodyPartsSphere) == 0x000A88, "Member 'ABP_NPC_StandardHumanDataSet_C::PalBodyPartsSphere' has a wrong offset!");
+static_assert(sizeof(ABP_NPC_StandardHumanDataSet_C) == 0x000AA0, "Wrong size on ABP_NPC_StandardHumanDataSet_C");
+static_assert(offsetof(ABP_NPC_StandardHumanDataSet_C, BP_HumanCryComponent) == 0x000A88, "Member 'ABP_NPC_StandardHumanDataSet_C::BP_HumanCryComponent' has a wrong offset!");
+static_assert(offsetof(ABP_NPC_StandardHumanDataSet_C, PalBodyPartsSphere) == 0x000A90, "Member 'ABP_NPC_StandardHumanDataSet_C::PalBodyPartsSphere' has a wrong offset!");
 
 }
 

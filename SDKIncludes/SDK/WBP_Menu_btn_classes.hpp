@@ -23,7 +23,7 @@ class UWBP_Menu_btn_C final : public UUserWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Anm_Push;                                          // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_push;                                          // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Normal;                                        // 0x0288(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Focus;                                         // 0x0290(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWBP_PalInvisibleButton_C*              WBP_PalInvisibleButton;                            // 0x0298(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -52,7 +52,7 @@ public:
 static_assert(alignof(UWBP_Menu_btn_C) == 0x000008, "Wrong alignment on UWBP_Menu_btn_C");
 static_assert(sizeof(UWBP_Menu_btn_C) == 0x0002B0, "Wrong size on UWBP_Menu_btn_C");
 static_assert(offsetof(UWBP_Menu_btn_C, UberGraphFrame) == 0x000278, "Member 'UWBP_Menu_btn_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_Menu_btn_C, Anm_Push) == 0x000280, "Member 'UWBP_Menu_btn_C::Anm_Push' has a wrong offset!");
+static_assert(offsetof(UWBP_Menu_btn_C, Anm_push) == 0x000280, "Member 'UWBP_Menu_btn_C::Anm_push' has a wrong offset!");
 static_assert(offsetof(UWBP_Menu_btn_C, Anm_Normal) == 0x000288, "Member 'UWBP_Menu_btn_C::Anm_Normal' has a wrong offset!");
 static_assert(offsetof(UWBP_Menu_btn_C, Anm_Focus) == 0x000290, "Member 'UWBP_Menu_btn_C::Anm_Focus' has a wrong offset!");
 static_assert(offsetof(UWBP_Menu_btn_C, WBP_PalInvisibleButton) == 0x000298, "Member 'UWBP_Menu_btn_C::WBP_PalInvisibleButton' has a wrong offset!");

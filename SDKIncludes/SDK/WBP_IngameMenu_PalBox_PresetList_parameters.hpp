@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "Pal_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -177,7 +177,7 @@ static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupAdd, CallFunc_Get
 static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupAdd, CallFunc_Format_ReturnValue) == 0x000088, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupAdd::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WBP_IngameMenu_PalBox_PresetList.WBP_IngameMenu_PalBox_PresetList_C.SetupPreset
-// 0x0480 (0x0480 - 0x0000)
+// 0x0488 (0x0488 - 0x0000)
 struct WBP_IngameMenu_PalBox_PresetList_C_SetupPreset final
 {
 public:
@@ -193,21 +193,21 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalOtomoLoadoutElementData            CallFunc_Array_Get_Item;                           // 0x00B8(0x0358)()
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0410(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x0414(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0424(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_425[0x3];                                      // 0x0425(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_PalCommonCharacterSlotButton_C*    CallFunc_Array_Get_Item_1;                         // 0x0428(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0430(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0434(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_435[0x3];                                      // 0x0435(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetLocalizedText_ReturnValue;             // 0x0438(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0450(0x0018)()
-	class FText                                   CallFunc_SelectText_ReturnValue;                   // 0x0468(0x0018)()
+	struct FPalOtomoLoadoutElementData            CallFunc_Array_Get_Item;                           // 0x00B8(0x0360)()
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0418(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x041C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x042C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_42D[0x3];                                      // 0x042D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_PalCommonCharacterSlotButton_C*    CallFunc_Array_Get_Item_1;                         // 0x0430(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0438(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x043C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43D[0x3];                                      // 0x043D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetLocalizedText_ReturnValue;             // 0x0440(0x0018)()
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0458(0x0018)()
+	class FText                                   CallFunc_SelectText_ReturnValue;                   // 0x0470(0x0018)()
 };
 static_assert(alignof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBox_PresetList_C_SetupPreset");
-static_assert(sizeof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset) == 0x000480, "Wrong size on WBP_IngameMenu_PalBox_PresetList_C_SetupPreset");
+static_assert(sizeof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset) == 0x000488, "Wrong size on WBP_IngameMenu_PalBox_PresetList_C_SetupPreset");
 static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, LoadoutData) == 0x000000, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::LoadoutData' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, Param_Index_0) == 0x000020, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::Param_Index_0' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Add_IntInt_ReturnValue) == 0x000024, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
@@ -219,15 +219,15 @@ static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_
 static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, Temp_int_Array_Index_Variable) == 0x0000AC, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, Temp_int_Loop_Counter_Variable) == 0x0000B0, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Array_Get_Item) == 0x0000B8, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Add_IntInt_ReturnValue_1) == 0x000410, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_SelectColor_ReturnValue) == 0x000414, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_SelectColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000424, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Array_Get_Item_1) == 0x000428, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Array_Length_ReturnValue) == 0x000430, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Less_IntInt_ReturnValue) == 0x000434, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_GetLocalizedText_ReturnValue) == 0x000438, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_GetLocalizedText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Format_ReturnValue) == 0x000450, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_SelectText_ReturnValue) == 0x000468, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_SelectText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Add_IntInt_ReturnValue_1) == 0x000418, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_SelectColor_ReturnValue) == 0x00041C, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_SelectColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Array_IsValidIndex_ReturnValue) == 0x00042C, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Array_Get_Item_1) == 0x000430, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Array_Length_ReturnValue) == 0x000438, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Less_IntInt_ReturnValue) == 0x00043C, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_GetLocalizedText_ReturnValue) == 0x000440, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_GetLocalizedText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_Format_ReturnValue) == 0x000458, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PresetList_C_SetupPreset, CallFunc_SelectText_ReturnValue) == 0x000470, "Member 'WBP_IngameMenu_PalBox_PresetList_C_SetupPreset::CallFunc_SelectText_ReturnValue' has a wrong offset!");
 
 // Function WBP_IngameMenu_PalBox_PresetList.WBP_IngameMenu_PalBox_PresetList_C.TogglePresetButton
 // 0x0030 (0x0030 - 0x0000)

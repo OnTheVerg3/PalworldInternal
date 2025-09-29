@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TitleLocalWorldSelect.WBP_TitleLocalWorldSelect_C
-// 0x00B0 (0x0530 - 0x0480)
+// 0x0250 (0x06D0 - 0x0480)
 class UWBP_TitleLocalWorldSelect_C final : public UPalUILocalWorldSelectBase
 {
 public:
@@ -33,16 +33,20 @@ public:
 	TMap<class FString, struct FPalUILocalWorldDisplayData> CachedDisplayInfo;                       // 0x04C0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FString                                 Selected_World_Name;                               // 0x0510(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	class FString                                 Options;                                           // 0x0520(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPalOptionWorldSettings                SelectedWorldOptionSettings;                       // 0x0530(0x01A0)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
+	void TryOpenWorldSettingThresholdsCautionDialog(bool* bOpened);
 	void SetupWorldList();
 	void OpenRestoreWorldCheckDialog();
 	void OnSetup();
 	void OnInitialized();
 	void OnCompleted_9E90A95E4884F409B5BB1E8F7B4194E1(bool bIsReset, bool bCanPlay);
+	void OnClosedWorldSettingThresholdsCautionDialog(class UPalHUDDispatchParameterBase* Param_0);
 	void OnClosedSuccessedRestoreDialog(bool bResult);
 	void OnClosedRestoreDataDialog(bool bResult);
 	void OnClosedFailedRestoreDialog(bool bResult);
+	void OnClickedStartWorldButtonEventInternal();
 	void OnCancelAction();
 	void On_Closed_World_Setting_Window(class UPalHUDDispatchParameterBase* Param_0);
 	void On_Closed_Delete_World_Window(class UPalHUDDispatchParameterBase* Param_0);
@@ -70,7 +74,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_TitleLocalWorldSelect_C) == 0x000008, "Wrong alignment on UWBP_TitleLocalWorldSelect_C");
-static_assert(sizeof(UWBP_TitleLocalWorldSelect_C) == 0x000530, "Wrong size on UWBP_TitleLocalWorldSelect_C");
+static_assert(sizeof(UWBP_TitleLocalWorldSelect_C) == 0x0006D0, "Wrong size on UWBP_TitleLocalWorldSelect_C");
 static_assert(offsetof(UWBP_TitleLocalWorldSelect_C, UberGraphFrame) == 0x000480, "Member 'UWBP_TitleLocalWorldSelect_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_TitleLocalWorldSelect_C, Image_69) == 0x000488, "Member 'UWBP_TitleLocalWorldSelect_C::Image_69' has a wrong offset!");
 static_assert(offsetof(UWBP_TitleLocalWorldSelect_C, Overlay_Root) == 0x000490, "Member 'UWBP_TitleLocalWorldSelect_C::Overlay_Root' has a wrong offset!");
@@ -81,6 +85,7 @@ static_assert(offsetof(UWBP_TitleLocalWorldSelect_C, ForceFocusTarget) == 0x0004
 static_assert(offsetof(UWBP_TitleLocalWorldSelect_C, CachedDisplayInfo) == 0x0004C0, "Member 'UWBP_TitleLocalWorldSelect_C::CachedDisplayInfo' has a wrong offset!");
 static_assert(offsetof(UWBP_TitleLocalWorldSelect_C, Selected_World_Name) == 0x000510, "Member 'UWBP_TitleLocalWorldSelect_C::Selected_World_Name' has a wrong offset!");
 static_assert(offsetof(UWBP_TitleLocalWorldSelect_C, Options) == 0x000520, "Member 'UWBP_TitleLocalWorldSelect_C::Options' has a wrong offset!");
+static_assert(offsetof(UWBP_TitleLocalWorldSelect_C, SelectedWorldOptionSettings) == 0x000530, "Member 'UWBP_TitleLocalWorldSelect_C::SelectedWorldOptionSettings' has a wrong offset!");
 
 }
 

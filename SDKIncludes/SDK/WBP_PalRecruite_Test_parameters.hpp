@@ -17,14 +17,14 @@ namespace SDK::Params
 {
 
 // Function WBP_PalRecruite_Test.WBP_PalRecruite_Test_C.DisplayPalInfo
-// 0x0320 (0x0320 - 0x0000)
+// 0x0328 (0x0328 - 0x0000)
 struct WBP_PalRecruite_Test_C_DisplayPalInfo final
 {
 public:
-	struct FPalIndividualCharacterSaveParameter   displayParameter;                                  // 0x0000(0x0320)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FPalIndividualCharacterSaveParameter   displayParameter;                                  // 0x0000(0x0328)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_PalRecruite_Test_C_DisplayPalInfo) == 0x000008, "Wrong alignment on WBP_PalRecruite_Test_C_DisplayPalInfo");
-static_assert(sizeof(WBP_PalRecruite_Test_C_DisplayPalInfo) == 0x000320, "Wrong size on WBP_PalRecruite_Test_C_DisplayPalInfo");
+static_assert(sizeof(WBP_PalRecruite_Test_C_DisplayPalInfo) == 0x000328, "Wrong size on WBP_PalRecruite_Test_C_DisplayPalInfo");
 static_assert(offsetof(WBP_PalRecruite_Test_C_DisplayPalInfo, displayParameter) == 0x000000, "Member 'WBP_PalRecruite_Test_C_DisplayPalInfo::displayParameter' has a wrong offset!");
 
 // Function WBP_PalRecruite_Test.WBP_PalRecruite_Test_C.ExecuteUbergraph_WBP_PalRecruite_Test

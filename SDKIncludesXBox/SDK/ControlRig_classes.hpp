@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "PropertyPath_structs.hpp"
 #include "ControlRig_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "PropertyPath_structs.hpp"
 #include "Constraints_structs.hpp"
 #include "Constraints_classes.hpp"
 #include "RigVM_structs.hpp"

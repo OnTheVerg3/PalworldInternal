@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "Pal_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Title_WorldSelect.WBP_Title_WorldSelect_C
-// 0x0468 (0x06E0 - 0x0278)
+// 0x0460 (0x06D8 - 0x0278)
 class UWBP_Title_WorldSelect_C final : public UUserWidget
 {
 public:
@@ -68,87 +68,86 @@ public:
 	class UWBP_Title_WorldSelectButton_C*         WBP_Title_WorldSelectButton_ServerList_Help_Server; // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_Title_WorldSelectButton_C*         WBP_Title_WorldSelectButton_ServerList_History;    // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_Title_WorldSelectButton_C*         WBP_Title_WorldSelectButton_ServerList_Official;   // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_Title_WorldSelectButton_C*         WBP_Title_WorldSelectButton_ServerList_StatusPage; // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class UWBP_Title_WorldSelect_ListContent_C* ButtonWidget)> OnClickedWorldButton; // 0x03D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(class UWBP_Title_WorldSelect_CreateWorld_ListContent_C* ButtonWidget)> OnClickedNewWorldButton; // 0x03E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              OnClickedStartWorldButton;                         // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          IsOpenedLocalWorldMenu;                            // 0x0408(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_409[0x7];                                      // 0x0409(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_Title_WorldSelect_ListContent_C*   CachedLastClickedWorldButton;                      // 0x0410(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnClickedWorldSettingButton;                       // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UWBP_Title_SettingsButton_C*            CachedLastClickLocalWorldMenuButton;               // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnClickedDeleteWorldButton;                        // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(class UWBP_Title_WorldSelect_ListContent_C* Widget)> OnClickedServerButton; // 0x0440(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FDataTableRowHandle                    ServerSearchHintTextMsgID;                         // 0x0450(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ServerSearchButtonMsgID;                           // 0x0460(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	TMulticastInlineDelegate<void(const class FString& SearchWord)> OnClickedServerSearchButton;     // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(EPalUIServerListSortType SortType)> OnSelectedServerSortType;      // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMap<EPalUIServerListSortType, struct FDataTableRowHandle> SortTypeMsgIDMap;                     // 0x0490(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class FString, EPalUIServerListSortType> SortTypeStringTypeMap;                             // 0x04E0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<EPalUIServerListFilterType, struct FDataTableRowHandle> FilterTypeMsgIDMap;                 // 0x0530(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class FString, EPalUIServerListFilterType> FilterStringTypeMap;                             // 0x0580(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMulticastInlineDelegate<void()>              OnClickedServerList_OfficialButton;                // 0x05D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              OnClickedServerList_CommunityButton;               // 0x05E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              OnClickedServerList_HistoryButton;                 // 0x05F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FDataTableRowHandle                    ServerNextButtonMsgID;                             // 0x0600(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	TMulticastInlineDelegate<void()>              OnClickedServerList_NextButton;                    // 0x0610(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FDataTableRowHandle                    ServerConnectButtonMsgID;                          // 0x0620(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	TMulticastInlineDelegate<void(const class FString& Address)> OnClicked_JoinByIPButton;           // 0x0630(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(class UWBP_Title_WorldSelect_ListContent_C* SelectedWorldButton)> OnClickedOpenDirectoryButton; // 0x0640(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMap<class FString, class UWBP_Title_WorldSelect_ListContent_C*> World_Directory_Name;           // 0x0650(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TMulticastInlineDelegate<void(class UWBP_Title_WorldSelect_ListContent_C* SelectedWorldButton)> OnClickedSelectBackupButton; // 0x06A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FDataTableRowHandle                    ServerPreviousButtonMsgID;                         // 0x06B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	TMulticastInlineDelegate<void()>              OnClickedServerList_PreviousButton;                // 0x06C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(bool bChecked)> OnCheckStateChanged_IgnoreVersionCheck;            // 0x06D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class UWBP_Title_WorldSelect_ListContent_C* ButtonWidget)> OnClickedWorldButton; // 0x03D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class UWBP_Title_WorldSelect_CreateWorld_ListContent_C* ButtonWidget)> OnClickedNewWorldButton; // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnClickedStartWorldButton;                         // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsOpenedLocalWorldMenu;                            // 0x0400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_401[0x7];                                      // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_Title_WorldSelect_ListContent_C*   CachedLastClickedWorldButton;                      // 0x0408(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnClickedWorldSettingButton;                       // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UWBP_Title_SettingsButton_C*            CachedLastClickLocalWorldMenuButton;               // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnClickedDeleteWorldButton;                        // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class UWBP_Title_WorldSelect_ListContent_C* Widget)> OnClickedServerButton; // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FDataTableRowHandle                    ServerSearchHintTextMsgID;                         // 0x0448(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FDataTableRowHandle                    ServerSearchButtonMsgID;                           // 0x0458(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	TMulticastInlineDelegate<void(const class FString& SearchWord)> OnClickedServerSearchButton;     // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(EPalUIServerListSortType SortType)> OnSelectedServerSortType;      // 0x0478(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMap<EPalUIServerListSortType, struct FDataTableRowHandle> SortTypeMsgIDMap;                     // 0x0488(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FString, EPalUIServerListSortType> SortTypeStringTypeMap;                             // 0x04D8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<EPalUIServerListFilterType, struct FDataTableRowHandle> FilterTypeMsgIDMap;                 // 0x0528(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FString, EPalUIServerListFilterType> FilterStringTypeMap;                             // 0x0578(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMulticastInlineDelegate<void()>              OnClickedServerList_OfficialButton;                // 0x05C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnClickedServerList_CommunityButton;               // 0x05D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnClickedServerList_HistoryButton;                 // 0x05E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FDataTableRowHandle                    ServerNextButtonMsgID;                             // 0x05F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	TMulticastInlineDelegate<void()>              OnClickedServerList_NextButton;                    // 0x0608(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FDataTableRowHandle                    ServerConnectButtonMsgID;                          // 0x0618(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	TMulticastInlineDelegate<void(const class FString& Address)> OnClicked_JoinByIPButton;           // 0x0628(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class UWBP_Title_WorldSelect_ListContent_C* SelectedWorldButton)> OnClickedOpenDirectoryButton; // 0x0638(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMap<class FString, class UWBP_Title_WorldSelect_ListContent_C*> World_Directory_Name;           // 0x0648(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TMulticastInlineDelegate<void(class UWBP_Title_WorldSelect_ListContent_C* SelectedWorldButton)> OnClickedSelectBackupButton; // 0x0698(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FDataTableRowHandle                    ServerPreviousButtonMsgID;                         // 0x06A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	TMulticastInlineDelegate<void()>              OnClickedServerList_PreviousButton;                // 0x06B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool bChecked)> OnCheckStateChanged_IgnoreVersionCheck;            // 0x06C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void Update_Local_World_List_Content(const class FString& WorldPathName, const struct FPalUILocalWorldDisplayData& DisplayData);
-	void SortTypeStringToSortType(const class FString& SortTypeString, EPalUIServerListSortType* SortType);
-	void SetupComboboxStringData();
-	void SetRegions(TArray<class FString>& Regions);
-	void SearchCommit(const class FText& Text);
-	void OpenLocalWorldMenu();
-	void OnInitialized();
-	void OnClickedWorldButton_Internal(class UWBP_Title_WorldSelect_ListContent_C* Widget);
-	void OnClickedServerButton_Internal(class UWBP_Title_WorldSelect_ListContent_C* Widget);
-	void OnClickedNewWorldButton_Internal(class UWBP_Title_WorldSelect_CreateWorld_ListContent_C* Widget);
-	void IsEditingSearchWord(bool* IsEditing);
-	void GetServerSearchWord(class FString* Word);
-	void GetSelectRegion(class FString* Region);
-	void GetFocusTargetForServerList(class UWidget** Widget);
-	void GetFocusTargetForLocalWorldList(class UWidget** TargetWidget);
-	void FlterTypeStringToFilterType(const class FString& FilterTypeString, EPalUIServerListFilterType* FilterType);
-	void ExecuteUbergraph_WBP_Title_WorldSelect(int32 EntryPoint);
-	void Destruct();
-	class UWidget* CustomNavi_ToServerTop(EUINavigation Navigation_0);
-	class UWidget* CustomNavi_ToListSetting(EUINavigation Navigation_0);
-	class UWidget* CustomNavi_ToLeftListBottom(EUINavigation Navigation_0);
-	class UWidget* CustomNavi_ToInputPasswordCheckBoxOrServerTop(EUINavigation Navigation_0);
-	class UWidget* CustomNavi_LeftListTop(EUINavigation Navigation_0);
-	void Construct();
-	void Close_Local_World_Menu();
-	void BndEvt__WBP_Title_WorldSelect_WBP_Title_WorldSelectButton_ServerList_StatusPage_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_WBP_Title_WorldSelectButton_ServerList_History_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_WBP_Title_WorldSelectButton_ServerList_History_1_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_WBP_Title_WorldSelectButton_ServerList_Community_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_WBP_Title_WorldSelectButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_WBP_Title_SettingsButtonBackupSelect_K2Node_ComponentBoundEvent_7_OnClicked__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_WBP_Title_SettingsButton_WorldSetting_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_WBP_Title_SettingsButton_Start_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_WBP_Title_SettingsButton_DeleteWorld_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_WBP_SortoComboBox_Region_K2Node_ComponentBoundEvent_5_OnSelected__DelegateSignature(const class FString& SelectedOption);
-	void BndEvt__WBP_Title_WorldSelect_WBP_SearchButton_K2Node_ComponentBoundEvent_4_OnClickedSingleButton__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_WBP_PreviousButton_K2Node_ComponentBoundEvent_6_OnClickedSingleButton__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_WBP_PalInvisibleButton_Password_K2Node_ComponentBoundEvent_8_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__WBP_Title_WorldSelect_WBP_PalInvisibleButton_OpenDirectory_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__WBP_Title_WorldSelect_WBP_PalInvisibleButton_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__WBP_Title_WorldSelect_WBP_NextButton_K2Node_ComponentBoundEvent_7_OnClickedSingleButton__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_WBP_JoinByIPButton_K2Node_ComponentBoundEvent_5_OnClickedSingleButton__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_WBP_GuildHeadButton_3_K2Node_ComponentBoundEvent_3_OnSelected__DelegateSignature(const class FString& SelectedOption);
-	void AnmEvent_ToStartGameMode();
-	void AnmEvent_ToJoinServerMode();
-	void AddServerList(TArray<struct FPalUIServerDisplayData>& ServerDisplayData);
 	void AddLocalWorldDisplayData(TArray<struct FPalUILocalWorldDisplayData>& DisplayDataArray);
+	void AddServerList(TArray<struct FPalUIServerDisplayData>& ServerDisplayData);
+	void AnmEvent_ToJoinServerMode();
+	void AnmEvent_ToStartGameMode();
+	void BndEvt__WBP_Title_WorldSelect_PalEditableTextBox_IP_K2Node_ComponentBoundEvent_3_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
+	void BndEvt__WBP_Title_WorldSelect_WBP_GuildHeadButton_3_K2Node_ComponentBoundEvent_3_OnSelected__DelegateSignature(const class FString& SelectedOption);
+	void BndEvt__WBP_Title_WorldSelect_WBP_JoinByIPButton_K2Node_ComponentBoundEvent_5_OnClickedSingleButton__DelegateSignature();
+	void BndEvt__WBP_Title_WorldSelect_WBP_NextButton_K2Node_ComponentBoundEvent_7_OnClickedSingleButton__DelegateSignature();
+	void BndEvt__WBP_Title_WorldSelect_WBP_PalInvisibleButton_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__WBP_Title_WorldSelect_WBP_PalInvisibleButton_OpenDirectory_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__WBP_Title_WorldSelect_WBP_PalInvisibleButton_Password_K2Node_ComponentBoundEvent_8_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__WBP_Title_WorldSelect_WBP_PreviousButton_K2Node_ComponentBoundEvent_6_OnClickedSingleButton__DelegateSignature();
+	void BndEvt__WBP_Title_WorldSelect_WBP_SearchButton_K2Node_ComponentBoundEvent_4_OnClickedSingleButton__DelegateSignature();
+	void BndEvt__WBP_Title_WorldSelect_WBP_SortoComboBox_Region_K2Node_ComponentBoundEvent_5_OnSelected__DelegateSignature(const class FString& SelectedOption);
+	void BndEvt__WBP_Title_WorldSelect_WBP_Title_SettingsButton_DeleteWorld_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
+	void BndEvt__WBP_Title_WorldSelect_WBP_Title_SettingsButton_Start_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature();
+	void BndEvt__WBP_Title_WorldSelect_WBP_Title_SettingsButton_WorldSetting_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
+	void BndEvt__WBP_Title_WorldSelect_WBP_Title_SettingsButtonBackupSelect_K2Node_ComponentBoundEvent_7_OnClicked__DelegateSignature();
+	void BndEvt__WBP_Title_WorldSelect_WBP_Title_WorldSelectButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
+	void BndEvt__WBP_Title_WorldSelect_WBP_Title_WorldSelectButton_ServerList_Community_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature();
+	void BndEvt__WBP_Title_WorldSelect_WBP_Title_WorldSelectButton_ServerList_History_1_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature();
+	void BndEvt__WBP_Title_WorldSelect_WBP_Title_WorldSelectButton_ServerList_History_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
+	void Close_Local_World_Menu();
+	void Construct();
+	class UWidget* CustomNavi_LeftListTop(EUINavigation Navigation_0);
+	class UWidget* CustomNavi_ToInputPasswordCheckBoxOrServerTop(EUINavigation Navigation_0);
+	class UWidget* CustomNavi_ToLeftListBottom(EUINavigation Navigation_0);
+	class UWidget* CustomNavi_ToListSetting(EUINavigation Navigation_0);
+	class UWidget* CustomNavi_ToServerTop(EUINavigation Navigation_0);
+	void Destruct();
+	void ExecuteUbergraph_WBP_Title_WorldSelect(int32 EntryPoint);
+	void FlterTypeStringToFilterType(const class FString& FilterTypeString, EPalUIServerListFilterType* FilterType);
+	void GetFocusTargetForLocalWorldList(class UWidget** TargetWidget);
+	void GetFocusTargetForServerList(class UWidget** Widget);
+	void GetSelectRegion(class FString* Region);
+	void GetServerSearchWord(class FString* Word);
+	void IsEditingSearchWord(bool* IsEditing);
+	void OnClickedNewWorldButton_Internal(class UWBP_Title_WorldSelect_CreateWorld_ListContent_C* Widget);
+	void OnClickedServerButton_Internal(class UWBP_Title_WorldSelect_ListContent_C* Widget);
+	void OnClickedWorldButton_Internal(class UWBP_Title_WorldSelect_ListContent_C* Widget);
+	void OnInitialized();
+	void OpenLocalWorldMenu();
+	void SearchCommit(const class FText& Text);
+	void SetRegions(TArray<class FString>& Regions);
+	void SetupComboboxStringData();
+	void SortTypeStringToSortType(const class FString& SortTypeString, EPalUIServerListSortType* SortType);
+	void Update_Local_World_List_Content(const class FString& WorldPathName, const struct FPalUILocalWorldDisplayData& DisplayData);
 
 public:
 	static class UClass* StaticClass()
@@ -161,7 +160,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_Title_WorldSelect_C) == 0x000008, "Wrong alignment on UWBP_Title_WorldSelect_C");
-static_assert(sizeof(UWBP_Title_WorldSelect_C) == 0x0006E0, "Wrong size on UWBP_Title_WorldSelect_C");
+static_assert(sizeof(UWBP_Title_WorldSelect_C) == 0x0006D8, "Wrong size on UWBP_Title_WorldSelect_C");
 static_assert(offsetof(UWBP_Title_WorldSelect_C, UberGraphFrame) == 0x000278, "Member 'UWBP_Title_WorldSelect_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_WorldSelect_C, Anm_Multi_OpenMenu) == 0x000280, "Member 'UWBP_Title_WorldSelect_C::Anm_Multi_OpenMenu' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_WorldSelect_C, Anm_Solo_OpenMenu) == 0x000288, "Member 'UWBP_Title_WorldSelect_C::Anm_Solo_OpenMenu' has a wrong offset!");
@@ -205,37 +204,36 @@ static_assert(offsetof(UWBP_Title_WorldSelect_C, WBP_Title_WorldSelectButton_Ser
 static_assert(offsetof(UWBP_Title_WorldSelect_C, WBP_Title_WorldSelectButton_ServerList_Help_Server) == 0x0003B8, "Member 'UWBP_Title_WorldSelect_C::WBP_Title_WorldSelectButton_ServerList_Help_Server' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_WorldSelect_C, WBP_Title_WorldSelectButton_ServerList_History) == 0x0003C0, "Member 'UWBP_Title_WorldSelect_C::WBP_Title_WorldSelectButton_ServerList_History' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_WorldSelect_C, WBP_Title_WorldSelectButton_ServerList_Official) == 0x0003C8, "Member 'UWBP_Title_WorldSelect_C::WBP_Title_WorldSelectButton_ServerList_Official' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, WBP_Title_WorldSelectButton_ServerList_StatusPage) == 0x0003D0, "Member 'UWBP_Title_WorldSelect_C::WBP_Title_WorldSelectButton_ServerList_StatusPage' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedWorldButton) == 0x0003D8, "Member 'UWBP_Title_WorldSelect_C::OnClickedWorldButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedNewWorldButton) == 0x0003E8, "Member 'UWBP_Title_WorldSelect_C::OnClickedNewWorldButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedStartWorldButton) == 0x0003F8, "Member 'UWBP_Title_WorldSelect_C::OnClickedStartWorldButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, IsOpenedLocalWorldMenu) == 0x000408, "Member 'UWBP_Title_WorldSelect_C::IsOpenedLocalWorldMenu' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, CachedLastClickedWorldButton) == 0x000410, "Member 'UWBP_Title_WorldSelect_C::CachedLastClickedWorldButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedWorldSettingButton) == 0x000418, "Member 'UWBP_Title_WorldSelect_C::OnClickedWorldSettingButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, CachedLastClickLocalWorldMenuButton) == 0x000428, "Member 'UWBP_Title_WorldSelect_C::CachedLastClickLocalWorldMenuButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedDeleteWorldButton) == 0x000430, "Member 'UWBP_Title_WorldSelect_C::OnClickedDeleteWorldButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerButton) == 0x000440, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, ServerSearchHintTextMsgID) == 0x000450, "Member 'UWBP_Title_WorldSelect_C::ServerSearchHintTextMsgID' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, ServerSearchButtonMsgID) == 0x000460, "Member 'UWBP_Title_WorldSelect_C::ServerSearchButtonMsgID' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerSearchButton) == 0x000470, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerSearchButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnSelectedServerSortType) == 0x000480, "Member 'UWBP_Title_WorldSelect_C::OnSelectedServerSortType' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, SortTypeMsgIDMap) == 0x000490, "Member 'UWBP_Title_WorldSelect_C::SortTypeMsgIDMap' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, SortTypeStringTypeMap) == 0x0004E0, "Member 'UWBP_Title_WorldSelect_C::SortTypeStringTypeMap' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, FilterTypeMsgIDMap) == 0x000530, "Member 'UWBP_Title_WorldSelect_C::FilterTypeMsgIDMap' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, FilterStringTypeMap) == 0x000580, "Member 'UWBP_Title_WorldSelect_C::FilterStringTypeMap' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerList_OfficialButton) == 0x0005D0, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerList_OfficialButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerList_CommunityButton) == 0x0005E0, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerList_CommunityButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerList_HistoryButton) == 0x0005F0, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerList_HistoryButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, ServerNextButtonMsgID) == 0x000600, "Member 'UWBP_Title_WorldSelect_C::ServerNextButtonMsgID' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerList_NextButton) == 0x000610, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerList_NextButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, ServerConnectButtonMsgID) == 0x000620, "Member 'UWBP_Title_WorldSelect_C::ServerConnectButtonMsgID' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClicked_JoinByIPButton) == 0x000630, "Member 'UWBP_Title_WorldSelect_C::OnClicked_JoinByIPButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedOpenDirectoryButton) == 0x000640, "Member 'UWBP_Title_WorldSelect_C::OnClickedOpenDirectoryButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, World_Directory_Name) == 0x000650, "Member 'UWBP_Title_WorldSelect_C::World_Directory_Name' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedSelectBackupButton) == 0x0006A0, "Member 'UWBP_Title_WorldSelect_C::OnClickedSelectBackupButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, ServerPreviousButtonMsgID) == 0x0006B0, "Member 'UWBP_Title_WorldSelect_C::ServerPreviousButtonMsgID' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerList_PreviousButton) == 0x0006C0, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerList_PreviousButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSelect_C, OnCheckStateChanged_IgnoreVersionCheck) == 0x0006D0, "Member 'UWBP_Title_WorldSelect_C::OnCheckStateChanged_IgnoreVersionCheck' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedWorldButton) == 0x0003D0, "Member 'UWBP_Title_WorldSelect_C::OnClickedWorldButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedNewWorldButton) == 0x0003E0, "Member 'UWBP_Title_WorldSelect_C::OnClickedNewWorldButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedStartWorldButton) == 0x0003F0, "Member 'UWBP_Title_WorldSelect_C::OnClickedStartWorldButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, IsOpenedLocalWorldMenu) == 0x000400, "Member 'UWBP_Title_WorldSelect_C::IsOpenedLocalWorldMenu' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, CachedLastClickedWorldButton) == 0x000408, "Member 'UWBP_Title_WorldSelect_C::CachedLastClickedWorldButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedWorldSettingButton) == 0x000410, "Member 'UWBP_Title_WorldSelect_C::OnClickedWorldSettingButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, CachedLastClickLocalWorldMenuButton) == 0x000420, "Member 'UWBP_Title_WorldSelect_C::CachedLastClickLocalWorldMenuButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedDeleteWorldButton) == 0x000428, "Member 'UWBP_Title_WorldSelect_C::OnClickedDeleteWorldButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerButton) == 0x000438, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, ServerSearchHintTextMsgID) == 0x000448, "Member 'UWBP_Title_WorldSelect_C::ServerSearchHintTextMsgID' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, ServerSearchButtonMsgID) == 0x000458, "Member 'UWBP_Title_WorldSelect_C::ServerSearchButtonMsgID' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerSearchButton) == 0x000468, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerSearchButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnSelectedServerSortType) == 0x000478, "Member 'UWBP_Title_WorldSelect_C::OnSelectedServerSortType' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, SortTypeMsgIDMap) == 0x000488, "Member 'UWBP_Title_WorldSelect_C::SortTypeMsgIDMap' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, SortTypeStringTypeMap) == 0x0004D8, "Member 'UWBP_Title_WorldSelect_C::SortTypeStringTypeMap' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, FilterTypeMsgIDMap) == 0x000528, "Member 'UWBP_Title_WorldSelect_C::FilterTypeMsgIDMap' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, FilterStringTypeMap) == 0x000578, "Member 'UWBP_Title_WorldSelect_C::FilterStringTypeMap' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerList_OfficialButton) == 0x0005C8, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerList_OfficialButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerList_CommunityButton) == 0x0005D8, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerList_CommunityButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerList_HistoryButton) == 0x0005E8, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerList_HistoryButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, ServerNextButtonMsgID) == 0x0005F8, "Member 'UWBP_Title_WorldSelect_C::ServerNextButtonMsgID' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerList_NextButton) == 0x000608, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerList_NextButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, ServerConnectButtonMsgID) == 0x000618, "Member 'UWBP_Title_WorldSelect_C::ServerConnectButtonMsgID' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClicked_JoinByIPButton) == 0x000628, "Member 'UWBP_Title_WorldSelect_C::OnClicked_JoinByIPButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedOpenDirectoryButton) == 0x000638, "Member 'UWBP_Title_WorldSelect_C::OnClickedOpenDirectoryButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, World_Directory_Name) == 0x000648, "Member 'UWBP_Title_WorldSelect_C::World_Directory_Name' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedSelectBackupButton) == 0x000698, "Member 'UWBP_Title_WorldSelect_C::OnClickedSelectBackupButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, ServerPreviousButtonMsgID) == 0x0006A8, "Member 'UWBP_Title_WorldSelect_C::ServerPreviousButtonMsgID' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnClickedServerList_PreviousButton) == 0x0006B8, "Member 'UWBP_Title_WorldSelect_C::OnClickedServerList_PreviousButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSelect_C, OnCheckStateChanged_IgnoreVersionCheck) == 0x0006C8, "Member 'UWBP_Title_WorldSelect_C::OnCheckStateChanged_IgnoreVersionCheck' has a wrong offset!");
 
 }
 

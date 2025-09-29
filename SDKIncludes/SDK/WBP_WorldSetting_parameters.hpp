@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -218,40 +218,44 @@ static_assert(offsetof(WBP_WorldSetting_C_On_Closed_Start_Game_Dialog, CallFunc_
 static_assert(offsetof(WBP_WorldSetting_C_On_Closed_Start_Game_Dialog, CallFunc_CompleteSetting_ReturnValue) == 0x0001B0, "Member 'WBP_WorldSetting_C_On_Closed_Start_Game_Dialog::CallFunc_CompleteSetting_ReturnValue' has a wrong offset!");
 
 // Function WBP_WorldSetting.WBP_WorldSetting_C.ExecuteUbergraph_WBP_WorldSetting
-// 0x0070 (0x0070 - 0x0000)
+// 0x0218 (0x0218 - 0x0000)
 struct WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalGameInstance*                       CallFunc_GetPalGameInstance_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsChatDisabled_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalHUDDispatchParameterBase*           CallFunc_GetParam_ReturnValue;                     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalHUDDispatchParameter_WorldSetting*  K2Node_DynamicCast_AsPal_HUDDispatch_Parameter_World_Setting; // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetLocalizedTextFromHandle_Text;          // 0x0040(0x0018)()
-	bool                                          CallFunc_IsEditedSetting_IsEdited;                 // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsSuccess;                            // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_Event_NewWorldName;                         // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalHUDDispatchParameterBase*           CallFunc_GetParam_ReturnValue;                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalHUDDispatchParameter_WorldSetting*  K2Node_DynamicCast_AsPal_HUDDispatch_Parameter_World_Setting; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetLocalizedTextFromHandle_Text;          // 0x0030(0x0018)()
+	struct FPalOptionWorldSettings                CallFunc_GetEditedWorldSetting_WorldSetting;       // 0x0048(0x01A0)()
+	bool                                          CallFunc_IsEditedSetting_IsEdited;                 // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsSuccess;                            // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1EA[0x6];                                      // 0x01EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_Event_NewWorldName;                         // 0x01F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UPalGameInstance*                       CallFunc_GetPalGameInstance_ReturnValue;           // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalOptionSubsystem*                    CallFunc_GetOptionSubsystem_ReturnValue;           // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_VerifyWorldSettingThresholds_ReturnValue; // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChatDisabled_ReturnValue;               // 0x0211(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting) == 0x000008, "Wrong alignment on WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting");
-static_assert(sizeof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting) == 0x000070, "Wrong size on WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting");
+static_assert(sizeof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting) == 0x000218, "Wrong size on WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting");
 static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, EntryPoint) == 0x000000, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, CallFunc_GetPalGameInstance_ReturnValue) == 0x000008, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::CallFunc_GetPalGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, CallFunc_IsChatDisabled_ReturnValue) == 0x000010, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::CallFunc_IsChatDisabled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, K2Node_CreateDelegate_OutputDelegate) == 0x000014, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, CallFunc_GetParam_ReturnValue) == 0x000028, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::CallFunc_GetParam_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, K2Node_DynamicCast_AsPal_HUDDispatch_Parameter_World_Setting) == 0x000030, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::K2Node_DynamicCast_AsPal_HUDDispatch_Parameter_World_Setting' has a wrong offset!");
-static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, CallFunc_GetLocalizedTextFromHandle_Text) == 0x000040, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::CallFunc_GetLocalizedTextFromHandle_Text' has a wrong offset!");
-static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, CallFunc_IsEditedSetting_IsEdited) == 0x000058, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::CallFunc_IsEditedSetting_IsEdited' has a wrong offset!");
-static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, K2Node_Event_IsSuccess) == 0x000059, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::K2Node_Event_IsSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, K2Node_Event_NewWorldName) == 0x000060, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::K2Node_Event_NewWorldName' has a wrong offset!");
+static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, CallFunc_GetParam_ReturnValue) == 0x000018, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::CallFunc_GetParam_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, K2Node_DynamicCast_AsPal_HUDDispatch_Parameter_World_Setting) == 0x000020, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::K2Node_DynamicCast_AsPal_HUDDispatch_Parameter_World_Setting' has a wrong offset!");
+static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, CallFunc_GetLocalizedTextFromHandle_Text) == 0x000030, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::CallFunc_GetLocalizedTextFromHandle_Text' has a wrong offset!");
+static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, CallFunc_GetEditedWorldSetting_WorldSetting) == 0x000048, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::CallFunc_GetEditedWorldSetting_WorldSetting' has a wrong offset!");
+static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, CallFunc_IsEditedSetting_IsEdited) == 0x0001E8, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::CallFunc_IsEditedSetting_IsEdited' has a wrong offset!");
+static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, K2Node_Event_IsSuccess) == 0x0001E9, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::K2Node_Event_IsSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, K2Node_Event_NewWorldName) == 0x0001F0, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::K2Node_Event_NewWorldName' has a wrong offset!");
+static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, CallFunc_GetPalGameInstance_ReturnValue) == 0x000200, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::CallFunc_GetPalGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, CallFunc_GetOptionSubsystem_ReturnValue) == 0x000208, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::CallFunc_GetOptionSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, CallFunc_VerifyWorldSettingThresholds_ReturnValue) == 0x000210, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::CallFunc_VerifyWorldSettingThresholds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting, CallFunc_IsChatDisabled_ReturnValue) == 0x000211, "Member 'WBP_WorldSetting_C_ExecuteUbergraph_WBP_WorldSetting::CallFunc_IsChatDisabled_ReturnValue' has a wrong offset!");
 
 // Function WBP_WorldSetting.WBP_WorldSetting_C.BP_GetDesiredFocusTarget
 // 0x0010 (0x0010 - 0x0000)

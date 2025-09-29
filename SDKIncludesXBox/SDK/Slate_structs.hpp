@@ -233,6 +233,28 @@ enum class EListItemAlignment : uint8
 	EListItemAlignment_MAX                   = 7,
 };
 
+// ScriptStruct Slate.CustomizedToolMenuEntry
+// 0x0004 (0x0004 - 0x0000)
+struct FCustomizedToolMenuEntry final
+{
+public:
+	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FCustomizedToolMenuEntry) == 0x000004, "Wrong alignment on FCustomizedToolMenuEntry");
+static_assert(sizeof(FCustomizedToolMenuEntry) == 0x000004, "Wrong size on FCustomizedToolMenuEntry");
+static_assert(offsetof(FCustomizedToolMenuEntry, Visibility) == 0x000000, "Member 'FCustomizedToolMenuEntry::Visibility' has a wrong offset!");
+
+// ScriptStruct Slate.CustomizedToolMenuSection
+// 0x0004 (0x0004 - 0x0000)
+struct FCustomizedToolMenuSection final
+{
+public:
+	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FCustomizedToolMenuSection) == 0x000004, "Wrong alignment on FCustomizedToolMenuSection");
+static_assert(sizeof(FCustomizedToolMenuSection) == 0x000004, "Wrong size on FCustomizedToolMenuSection");
+static_assert(offsetof(FCustomizedToolMenuSection, Visibility) == 0x000000, "Member 'FCustomizedToolMenuSection::Visibility' has a wrong offset!");
+
 // ScriptStruct Slate.CustomizedToolMenuNameArray
 // 0x0010 (0x0010 - 0x0000)
 struct FCustomizedToolMenuNameArray final
@@ -243,6 +265,26 @@ public:
 static_assert(alignof(FCustomizedToolMenuNameArray) == 0x000008, "Wrong alignment on FCustomizedToolMenuNameArray");
 static_assert(sizeof(FCustomizedToolMenuNameArray) == 0x000010, "Wrong size on FCustomizedToolMenuNameArray");
 static_assert(offsetof(FCustomizedToolMenuNameArray, Names) == 0x000000, "Member 'FCustomizedToolMenuNameArray::Names' has a wrong offset!");
+
+// ScriptStruct Slate.CustomizedToolMenu
+// 0x01F0 (0x01F0 - 0x0000)
+struct FCustomizedToolMenu final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FCustomizedToolMenuEntry> Entries;                                      // 0x0008(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FCustomizedToolMenuSection> Sections;                                   // 0x0058(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FCustomizedToolMenuNameArray> EntryOrder;                               // 0x00A8(0x0050)(NativeAccessSpecifierPublic)
+	TArray<class FName>                           SectionOrder;                                      // 0x00F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_108[0xE8];                                     // 0x0108(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FCustomizedToolMenu) == 0x000008, "Wrong alignment on FCustomizedToolMenu");
+static_assert(sizeof(FCustomizedToolMenu) == 0x0001F0, "Wrong size on FCustomizedToolMenu");
+static_assert(offsetof(FCustomizedToolMenu, Name) == 0x000000, "Member 'FCustomizedToolMenu::Name' has a wrong offset!");
+static_assert(offsetof(FCustomizedToolMenu, Entries) == 0x000008, "Member 'FCustomizedToolMenu::Entries' has a wrong offset!");
+static_assert(offsetof(FCustomizedToolMenu, Sections) == 0x000058, "Member 'FCustomizedToolMenu::Sections' has a wrong offset!");
+static_assert(offsetof(FCustomizedToolMenu, EntryOrder) == 0x0000A8, "Member 'FCustomizedToolMenu::EntryOrder' has a wrong offset!");
+static_assert(offsetof(FCustomizedToolMenu, SectionOrder) == 0x0000F8, "Member 'FCustomizedToolMenu::SectionOrder' has a wrong offset!");
 
 // ScriptStruct Slate.Anchors
 // 0x0020 (0x0020 - 0x0000)
@@ -268,17 +310,6 @@ static_assert(alignof(FVirtualKeyboardOptions) == 0x000001, "Wrong alignment on 
 static_assert(sizeof(FVirtualKeyboardOptions) == 0x000001, "Wrong size on FVirtualKeyboardOptions");
 static_assert(offsetof(FVirtualKeyboardOptions, bEnableAutocorrect) == 0x000000, "Member 'FVirtualKeyboardOptions::bEnableAutocorrect' has a wrong offset!");
 
-// ScriptStruct Slate.CustomizedToolMenuSection
-// 0x0004 (0x0004 - 0x0000)
-struct FCustomizedToolMenuSection final
-{
-public:
-	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FCustomizedToolMenuSection) == 0x000004, "Wrong alignment on FCustomizedToolMenuSection");
-static_assert(sizeof(FCustomizedToolMenuSection) == 0x000004, "Wrong size on FCustomizedToolMenuSection");
-static_assert(offsetof(FCustomizedToolMenuSection, Visibility) == 0x000000, "Member 'FCustomizedToolMenuSection::Visibility' has a wrong offset!");
-
 // ScriptStruct Slate.InputChord
 // 0x0020 (0x0020 - 0x0000)
 struct FInputChord final
@@ -294,37 +325,6 @@ public:
 static_assert(alignof(FInputChord) == 0x000008, "Wrong alignment on FInputChord");
 static_assert(sizeof(FInputChord) == 0x000020, "Wrong size on FInputChord");
 static_assert(offsetof(FInputChord, Key) == 0x000000, "Member 'FInputChord::Key' has a wrong offset!");
-
-// ScriptStruct Slate.CustomizedToolMenuEntry
-// 0x0004 (0x0004 - 0x0000)
-struct FCustomizedToolMenuEntry final
-{
-public:
-	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FCustomizedToolMenuEntry) == 0x000004, "Wrong alignment on FCustomizedToolMenuEntry");
-static_assert(sizeof(FCustomizedToolMenuEntry) == 0x000004, "Wrong size on FCustomizedToolMenuEntry");
-static_assert(offsetof(FCustomizedToolMenuEntry, Visibility) == 0x000000, "Member 'FCustomizedToolMenuEntry::Visibility' has a wrong offset!");
-
-// ScriptStruct Slate.CustomizedToolMenu
-// 0x01F0 (0x01F0 - 0x0000)
-struct FCustomizedToolMenu final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FCustomizedToolMenuEntry> Entries;                                      // 0x0008(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, struct FCustomizedToolMenuSection> Sections;                                   // 0x0058(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, struct FCustomizedToolMenuNameArray> EntryOrder;                               // 0x00A8(0x0050)(NativeAccessSpecifierPublic)
-	TArray<class FName>                           SectionOrder;                                      // 0x00F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_108[0xE8];                                     // 0x0108(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FCustomizedToolMenu) == 0x000008, "Wrong alignment on FCustomizedToolMenu");
-static_assert(sizeof(FCustomizedToolMenu) == 0x0001F0, "Wrong size on FCustomizedToolMenu");
-static_assert(offsetof(FCustomizedToolMenu, Name) == 0x000000, "Member 'FCustomizedToolMenu::Name' has a wrong offset!");
-static_assert(offsetof(FCustomizedToolMenu, Entries) == 0x000008, "Member 'FCustomizedToolMenu::Entries' has a wrong offset!");
-static_assert(offsetof(FCustomizedToolMenu, Sections) == 0x000058, "Member 'FCustomizedToolMenu::Sections' has a wrong offset!");
-static_assert(offsetof(FCustomizedToolMenu, EntryOrder) == 0x0000A8, "Member 'FCustomizedToolMenu::EntryOrder' has a wrong offset!");
-static_assert(offsetof(FCustomizedToolMenu, SectionOrder) == 0x0000F8, "Member 'FCustomizedToolMenu::SectionOrder' has a wrong offset!");
 
 }
 

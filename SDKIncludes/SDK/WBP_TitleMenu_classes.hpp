@@ -52,6 +52,7 @@ public:
 	void UpdateUserName();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void SetEnableGlobalPalStorageAttention(bool bEnableAttention);
+	void OnCheckedJoinServerCertification();
 	void GetTopButton(class UWidget** TargetWidget);
 	void ExecuteUbergraph_WBP_TitleMenu(int32 EntryPoint);
 	void Construct();

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Pal_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Pal_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "UMG_structs.hpp"
 
@@ -366,14 +366,14 @@ static_assert(offsetof(WBP_PalCharacterSlotButtonBase_C_SetupByIndividualId, K2N
 static_assert(offsetof(WBP_PalCharacterSlotButtonBase_C_SetupByIndividualId, CallFunc_IsValid_ReturnValue_1) == 0x000051, "Member 'WBP_PalCharacterSlotButtonBase_C_SetupByIndividualId::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function WBP_PalCharacterSlotButtonBase.WBP_PalCharacterSlotButtonBase_C.SetupBySaveParameter
-// 0x0320 (0x0320 - 0x0000)
+// 0x0328 (0x0328 - 0x0000)
 struct WBP_PalCharacterSlotButtonBase_C_SetupBySaveParameter final
 {
 public:
-	struct FPalIndividualCharacterSaveParameter   SaveParam;                                         // 0x0000(0x0320)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FPalIndividualCharacterSaveParameter   SaveParam;                                         // 0x0000(0x0328)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_PalCharacterSlotButtonBase_C_SetupBySaveParameter) == 0x000008, "Wrong alignment on WBP_PalCharacterSlotButtonBase_C_SetupBySaveParameter");
-static_assert(sizeof(WBP_PalCharacterSlotButtonBase_C_SetupBySaveParameter) == 0x000320, "Wrong size on WBP_PalCharacterSlotButtonBase_C_SetupBySaveParameter");
+static_assert(sizeof(WBP_PalCharacterSlotButtonBase_C_SetupBySaveParameter) == 0x000328, "Wrong size on WBP_PalCharacterSlotButtonBase_C_SetupBySaveParameter");
 static_assert(offsetof(WBP_PalCharacterSlotButtonBase_C_SetupBySaveParameter, SaveParam) == 0x000000, "Member 'WBP_PalCharacterSlotButtonBase_C_SetupBySaveParameter::SaveParam' has a wrong offset!");
 
 }

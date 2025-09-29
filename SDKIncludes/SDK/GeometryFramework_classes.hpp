@@ -21,40 +21,40 @@
 namespace SDK
 {
 
-// Class GeometryFramework.DynamicMeshActor
-// 0x0018 (0x02A8 - 0x0290)
-class ADynamicMeshActor final : public AActor
+// Class GeometryFramework.DynamicMesh
+// 0x0088 (0x00B0 - 0x0028)
+class UDynamicMesh final : public UObject
 {
 public:
-	class UDynamicMeshComponent*                  DynamicMeshComponent;                              // 0x0290(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bEnableComputeMeshPool;                            // 0x0298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMeshPool*                       DynamicMeshPool;                                   // 0x02A0(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_28[0x48];                                      // 0x0028(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class UDynamicMesh* Mesh)> MeshModifiedBPEvent;                    // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_80[0x20];                                      // 0x0080(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMeshGenerator*                  MeshGenerator;                                     // 0x00A0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEnableMeshGenerator;                              // 0x00A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	class UDynamicMesh* AllocateComputeMesh();
-	void FreeAllComputeMeshes();
-	class UDynamicMeshPool* GetComputeMeshPool();
-	void ReleaseAllComputeMeshes();
-	bool ReleaseComputeMesh(class UDynamicMesh* Mesh);
+	class UDynamicMesh* Reset();
+	class UDynamicMesh* ResetToCube();
 
-	class UDynamicMeshComponent* GetDynamicMeshComponent() const;
+	int32 GetTriangleCount() const;
+	bool IsEmpty() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DynamicMeshActor">();
+		return StaticClassImpl<"DynamicMesh">();
 	}
-	static class ADynamicMeshActor* GetDefaultObj()
+	static class UDynamicMesh* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ADynamicMeshActor>();
+		return GetDefaultObjImpl<UDynamicMesh>();
 	}
 };
-static_assert(alignof(ADynamicMeshActor) == 0x000008, "Wrong alignment on ADynamicMeshActor");
-static_assert(sizeof(ADynamicMeshActor) == 0x0002A8, "Wrong size on ADynamicMeshActor");
-static_assert(offsetof(ADynamicMeshActor, DynamicMeshComponent) == 0x000290, "Member 'ADynamicMeshActor::DynamicMeshComponent' has a wrong offset!");
-static_assert(offsetof(ADynamicMeshActor, bEnableComputeMeshPool) == 0x000298, "Member 'ADynamicMeshActor::bEnableComputeMeshPool' has a wrong offset!");
-static_assert(offsetof(ADynamicMeshActor, DynamicMeshPool) == 0x0002A0, "Member 'ADynamicMeshActor::DynamicMeshPool' has a wrong offset!");
+static_assert(alignof(UDynamicMesh) == 0x000008, "Wrong alignment on UDynamicMesh");
+static_assert(sizeof(UDynamicMesh) == 0x0000B0, "Wrong size on UDynamicMesh");
+static_assert(offsetof(UDynamicMesh, MeshModifiedBPEvent) == 0x000070, "Member 'UDynamicMesh::MeshModifiedBPEvent' has a wrong offset!");
+static_assert(offsetof(UDynamicMesh, MeshGenerator) == 0x0000A0, "Member 'UDynamicMesh::MeshGenerator' has a wrong offset!");
+static_assert(offsetof(UDynamicMesh, bEnableMeshGenerator) == 0x0000A8, "Member 'UDynamicMesh::bEnableMeshGenerator' has a wrong offset!");
 
 // Class GeometryFramework.BaseDynamicMeshComponent
 // 0x0070 (0x05E0 - 0x0570)
@@ -261,6 +261,41 @@ static_assert(offsetof(UDynamicMeshComponent, MeshBodySetup) == 0x000728, "Membe
 static_assert(offsetof(UDynamicMeshComponent, AggGeom) == 0x000768, "Member 'UDynamicMeshComponent::AggGeom' has a wrong offset!");
 static_assert(offsetof(UDynamicMeshComponent, AsyncBodySetupQueue) == 0x0007D0, "Member 'UDynamicMeshComponent::AsyncBodySetupQueue' has a wrong offset!");
 
+// Class GeometryFramework.DynamicMeshActor
+// 0x0018 (0x02A8 - 0x0290)
+class ADynamicMeshActor final : public AActor
+{
+public:
+	class UDynamicMeshComponent*                  DynamicMeshComponent;                              // 0x0290(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEnableComputeMeshPool;                            // 0x0298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMeshPool*                       DynamicMeshPool;                                   // 0x02A0(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	class UDynamicMesh* AllocateComputeMesh();
+	void FreeAllComputeMeshes();
+	class UDynamicMeshPool* GetComputeMeshPool();
+	void ReleaseAllComputeMeshes();
+	bool ReleaseComputeMesh(class UDynamicMesh* Mesh);
+
+	class UDynamicMeshComponent* GetDynamicMeshComponent() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"DynamicMeshActor">();
+	}
+	static class ADynamicMeshActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ADynamicMeshActor>();
+	}
+};
+static_assert(alignof(ADynamicMeshActor) == 0x000008, "Wrong alignment on ADynamicMeshActor");
+static_assert(sizeof(ADynamicMeshActor) == 0x0002A8, "Wrong size on ADynamicMeshActor");
+static_assert(offsetof(ADynamicMeshActor, DynamicMeshComponent) == 0x000290, "Member 'ADynamicMeshActor::DynamicMeshComponent' has a wrong offset!");
+static_assert(offsetof(ADynamicMeshActor, bEnableComputeMeshPool) == 0x000298, "Member 'ADynamicMeshActor::bEnableComputeMeshPool' has a wrong offset!");
+static_assert(offsetof(ADynamicMeshActor, DynamicMeshPool) == 0x0002A0, "Member 'ADynamicMeshActor::DynamicMeshPool' has a wrong offset!");
+
 // Class GeometryFramework.DynamicMeshGenerator
 // 0x0000 (0x0028 - 0x0028)
 class UDynamicMeshGenerator final : public UObject
@@ -277,41 +312,6 @@ public:
 };
 static_assert(alignof(UDynamicMeshGenerator) == 0x000008, "Wrong alignment on UDynamicMeshGenerator");
 static_assert(sizeof(UDynamicMeshGenerator) == 0x000028, "Wrong size on UDynamicMeshGenerator");
-
-// Class GeometryFramework.DynamicMesh
-// 0x0088 (0x00B0 - 0x0028)
-class UDynamicMesh final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x48];                                      // 0x0028(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class UDynamicMesh* Mesh)> MeshModifiedBPEvent;                    // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_80[0x20];                                      // 0x0080(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMeshGenerator*                  MeshGenerator;                                     // 0x00A0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bEnableMeshGenerator;                              // 0x00A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UDynamicMesh* Reset();
-	class UDynamicMesh* ResetToCube();
-
-	int32 GetTriangleCount() const;
-	bool IsEmpty() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"DynamicMesh">();
-	}
-	static class UDynamicMesh* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDynamicMesh>();
-	}
-};
-static_assert(alignof(UDynamicMesh) == 0x000008, "Wrong alignment on UDynamicMesh");
-static_assert(sizeof(UDynamicMesh) == 0x0000B0, "Wrong size on UDynamicMesh");
-static_assert(offsetof(UDynamicMesh, MeshModifiedBPEvent) == 0x000070, "Member 'UDynamicMesh::MeshModifiedBPEvent' has a wrong offset!");
-static_assert(offsetof(UDynamicMesh, MeshGenerator) == 0x0000A0, "Member 'UDynamicMesh::MeshGenerator' has a wrong offset!");
-static_assert(offsetof(UDynamicMesh, bEnableMeshGenerator) == 0x0000A8, "Member 'UDynamicMesh::bEnableMeshGenerator' has a wrong offset!");
 
 // Class GeometryFramework.DynamicMeshPool
 // 0x0020 (0x0048 - 0x0028)

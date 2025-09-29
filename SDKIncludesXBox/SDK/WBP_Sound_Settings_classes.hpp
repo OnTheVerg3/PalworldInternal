@@ -39,17 +39,17 @@ public:
 	struct FPalOptionAudioSettings                OriginalSettingCache;                              // 0x02EC(0x001C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
-	void ApplySettings(bool ApplyOriginal);
-	void Construct();
-	void ExecuteUbergraph_WBP_Sound_Settings(int32 EntryPoint);
-	void OnAmbientChanged(double Value);
 	void OnBGMChanged(double Value);
-	void OnHumanVoiceChanged(double Value);
-	void OnMasterChanged(double Value);
-	void OnPalVoiceChanged(double Value);
-	void OnSEChanged(double Value);
-	void OnUIChanged(double Value);
+	void OnAmbientChanged(double Value);
+	void ExecuteUbergraph_WBP_Sound_Settings(int32 EntryPoint);
+	void Construct();
+	void ApplySettings(bool ApplyOriginal);
 	void SetDefault();
+	void OnUIChanged(double Value);
+	void OnSEChanged(double Value);
+	void OnPalVoiceChanged(double Value);
+	void OnMasterChanged(double Value);
+	void OnHumanVoiceChanged(double Value);
 
 public:
 	static class UClass* StaticClass()

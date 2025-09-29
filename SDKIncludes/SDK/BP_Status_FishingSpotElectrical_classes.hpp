@@ -27,8 +27,8 @@ public:
 
 public:
 	void ExecuteUbergraph_BP_Status_FishingSpotElectrical(int32 EntryPoint);
-	void OnBeginStatus();
 	void PlayFishingSpotElecShockAction();
+	void OnBeginStatus();
 
 public:
 	static class UClass* StaticClass()

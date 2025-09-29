@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PalOptionSubsystem.BP_PalOptionSubsystem_C
-// 0x0000 (0x0A08 - 0x0A08)
+// 0x0000 (0x0B00 - 0x0B00)
 class UBP_PalOptionSubsystem_C final : public UPalOptionSubsystem
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_PalOptionSubsystem_C) == 0x000008, "Wrong alignment on UBP_PalOptionSubsystem_C");
-static_assert(sizeof(UBP_PalOptionSubsystem_C) == 0x000A08, "Wrong size on UBP_PalOptionSubsystem_C");
+static_assert(sizeof(UBP_PalOptionSubsystem_C) == 0x000B00, "Wrong size on UBP_PalOptionSubsystem_C");
 
 }
 

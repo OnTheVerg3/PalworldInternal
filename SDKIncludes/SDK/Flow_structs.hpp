@@ -103,17 +103,31 @@ enum class EFlowLogVerbosity : uint8
 	EFlowLogVerbosity_MAX                    = 6,
 };
 
-// ScriptStruct Flow.MovieSceneFlowTemplateBase
-// 0x0008 (0x0028 - 0x0020)
-struct FMovieSceneFlowTemplateBase : public FMovieSceneEvalTemplate
+// ScriptStruct Flow.FlowOwnerFunctionRef
+// 0x0010 (0x0010 - 0x0000)
+struct FFlowOwnerFunctionRef final
 {
 public:
-	uint8                                         bFireEventsWhenForwards : 1;                       // 0x0020(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bFireEventsWhenBackwards : 1;                      // 0x0020(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   FunctionName;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UFunction*                              Function;                                          // 0x0008(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-static_assert(alignof(FMovieSceneFlowTemplateBase) == 0x000008, "Wrong alignment on FMovieSceneFlowTemplateBase");
-static_assert(sizeof(FMovieSceneFlowTemplateBase) == 0x000028, "Wrong size on FMovieSceneFlowTemplateBase");
+static_assert(alignof(FFlowOwnerFunctionRef) == 0x000008, "Wrong alignment on FFlowOwnerFunctionRef");
+static_assert(sizeof(FFlowOwnerFunctionRef) == 0x000010, "Wrong size on FFlowOwnerFunctionRef");
+static_assert(offsetof(FFlowOwnerFunctionRef, FunctionName) == 0x000000, "Member 'FFlowOwnerFunctionRef::FunctionName' has a wrong offset!");
+static_assert(offsetof(FFlowOwnerFunctionRef, Function) == 0x000008, "Member 'FFlowOwnerFunctionRef::Function' has a wrong offset!");
+
+// ScriptStruct Flow.ConnectedPin
+// 0x0018 (0x0018 - 0x0000)
+struct FConnectedPin final
+{
+public:
+	struct FGuid                                  NodeGuid;                                          // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   PinName;                                           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FConnectedPin) == 0x000004, "Wrong alignment on FConnectedPin");
+static_assert(sizeof(FConnectedPin) == 0x000018, "Wrong size on FConnectedPin");
+static_assert(offsetof(FConnectedPin, NodeGuid) == 0x000000, "Member 'FConnectedPin::NodeGuid' has a wrong offset!");
+static_assert(offsetof(FConnectedPin, PinName) == 0x000010, "Member 'FConnectedPin::PinName' has a wrong offset!");
 
 // ScriptStruct Flow.NotifyTagReplication
 // 0x0010 (0x0010 - 0x0000)
@@ -158,18 +172,28 @@ static_assert(offsetof(FFlowAssetSaveData, InstanceName) == 0x000010, "Member 'F
 static_assert(offsetof(FFlowAssetSaveData, AssetData) == 0x000020, "Member 'FFlowAssetSaveData::AssetData' has a wrong offset!");
 static_assert(offsetof(FFlowAssetSaveData, NodeRecords) == 0x000030, "Member 'FFlowAssetSaveData::NodeRecords' has a wrong offset!");
 
-// ScriptStruct Flow.FlowOwnerFunctionRef
-// 0x0010 (0x0010 - 0x0000)
-struct FFlowOwnerFunctionRef final
+// ScriptStruct Flow.MovieSceneFlowTemplateBase
+// 0x0008 (0x0028 - 0x0020)
+struct FMovieSceneFlowTemplateBase : public FMovieSceneEvalTemplate
 {
 public:
-	class FName                                   FunctionName;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UFunction*                              Function;                                          // 0x0008(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         bFireEventsWhenForwards : 1;                       // 0x0020(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bFireEventsWhenBackwards : 1;                      // 0x0020(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FFlowOwnerFunctionRef) == 0x000008, "Wrong alignment on FFlowOwnerFunctionRef");
-static_assert(sizeof(FFlowOwnerFunctionRef) == 0x000010, "Wrong size on FFlowOwnerFunctionRef");
-static_assert(offsetof(FFlowOwnerFunctionRef, FunctionName) == 0x000000, "Member 'FFlowOwnerFunctionRef::FunctionName' has a wrong offset!");
-static_assert(offsetof(FFlowOwnerFunctionRef, Function) == 0x000008, "Member 'FFlowOwnerFunctionRef::Function' has a wrong offset!");
+static_assert(alignof(FMovieSceneFlowTemplateBase) == 0x000008, "Wrong alignment on FMovieSceneFlowTemplateBase");
+static_assert(sizeof(FMovieSceneFlowTemplateBase) == 0x000028, "Wrong size on FMovieSceneFlowTemplateBase");
+
+// ScriptStruct Flow.MovieSceneFlowRepeaterTemplate
+// 0x0010 (0x0038 - 0x0028)
+struct FMovieSceneFlowRepeaterTemplate final : public FMovieSceneFlowTemplateBase
+{
+public:
+	class FString                                 EventName;                                         // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMovieSceneFlowRepeaterTemplate) == 0x000008, "Wrong alignment on FMovieSceneFlowRepeaterTemplate");
+static_assert(sizeof(FMovieSceneFlowRepeaterTemplate) == 0x000038, "Wrong size on FMovieSceneFlowRepeaterTemplate");
+static_assert(offsetof(FMovieSceneFlowRepeaterTemplate, EventName) == 0x000028, "Member 'FMovieSceneFlowRepeaterTemplate::EventName' has a wrong offset!");
 
 // ScriptStruct Flow.FlowComponentSaveData
 // 0x0030 (0x0030 - 0x0000)
@@ -198,17 +222,6 @@ static_assert(alignof(FMovieSceneFlowTriggerTemplate) == 0x000008, "Wrong alignm
 static_assert(sizeof(FMovieSceneFlowTriggerTemplate) == 0x000048, "Wrong size on FMovieSceneFlowTriggerTemplate");
 static_assert(offsetof(FMovieSceneFlowTriggerTemplate, EventTimes) == 0x000028, "Member 'FMovieSceneFlowTriggerTemplate::EventTimes' has a wrong offset!");
 static_assert(offsetof(FMovieSceneFlowTriggerTemplate, EventNames) == 0x000038, "Member 'FMovieSceneFlowTriggerTemplate::EventNames' has a wrong offset!");
-
-// ScriptStruct Flow.MovieSceneFlowRepeaterTemplate
-// 0x0010 (0x0038 - 0x0028)
-struct FMovieSceneFlowRepeaterTemplate final : public FMovieSceneFlowTemplateBase
-{
-public:
-	class FString                                 EventName;                                         // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMovieSceneFlowRepeaterTemplate) == 0x000008, "Wrong alignment on FMovieSceneFlowRepeaterTemplate");
-static_assert(sizeof(FMovieSceneFlowRepeaterTemplate) == 0x000038, "Wrong size on FMovieSceneFlowRepeaterTemplate");
-static_assert(offsetof(FMovieSceneFlowRepeaterTemplate, EventName) == 0x000028, "Member 'FMovieSceneFlowRepeaterTemplate::EventName' has a wrong offset!");
 
 // ScriptStruct Flow.FlowPin
 // 0x0030 (0x0030 - 0x0000)
@@ -251,19 +264,6 @@ struct FFlowOutputPinHandle final : public FFlowPinHandle
 };
 static_assert(alignof(FFlowOutputPinHandle) == 0x000004, "Wrong alignment on FFlowOutputPinHandle");
 static_assert(sizeof(FFlowOutputPinHandle) == 0x000008, "Wrong size on FFlowOutputPinHandle");
-
-// ScriptStruct Flow.ConnectedPin
-// 0x0018 (0x0018 - 0x0000)
-struct FConnectedPin final
-{
-public:
-	struct FGuid                                  NodeGuid;                                          // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   PinName;                                           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FConnectedPin) == 0x000004, "Wrong alignment on FConnectedPin");
-static_assert(sizeof(FConnectedPin) == 0x000018, "Wrong size on FConnectedPin");
-static_assert(offsetof(FConnectedPin, NodeGuid) == 0x000000, "Member 'FConnectedPin::NodeGuid' has a wrong offset!");
-static_assert(offsetof(FConnectedPin, PinName) == 0x000010, "Member 'FConnectedPin::PinName' has a wrong offset!");
 
 // ScriptStruct Flow.FlowPinTrait
 // 0x0001 (0x0001 - 0x0000)

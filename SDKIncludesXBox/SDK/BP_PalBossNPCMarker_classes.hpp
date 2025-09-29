@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "ST_RideBossAnimation_structs.hpp"
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "ST_BossAnimations_structs.hpp"
 #include "Pal_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK

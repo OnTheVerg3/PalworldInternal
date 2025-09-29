@@ -12,9 +12,9 @@
 
 #include "UMG_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Pal_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Pal_structs.hpp"
 
 
 namespace SDK::Params
@@ -640,9 +640,9 @@ static_assert(alignof(WBP_IngameMenu_PalBox_PalDetail_C_SetFoodAmount) == 0x0000
 static_assert(sizeof(WBP_IngameMenu_PalBox_PalDetail_C_SetFoodAmount) == 0x000004, "Wrong size on WBP_IngameMenu_PalBox_PalDetail_C_SetFoodAmount");
 static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFoodAmount, FoodAmount) == 0x000000, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFoodAmount::FoodAmount' has a wrong offset!");
 
-// Function WBP_IngameMenu_PalBox_PalDetail.WBP_IngameMenu_PalBox_PalDetail_C.SetFriendship
+// Function WBP_IngameMenu_PalBox_PalDetail.WBP_IngameMenu_PalBox_PalDetail_C.SetFriendShip
 // 0x0050 (0x0050 - 0x0000)
-struct WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship final
+struct WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip final
 {
 public:
 	int32                                         FriendshipRank;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -654,15 +654,15 @@ public:
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0038(0x0018)()
 };
-static_assert(alignof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship");
-static_assert(sizeof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship) == 0x000050, "Wrong size on WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship, FriendshipRank) == 0x000000, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship::FriendshipRank' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship, FriendshipPoint) == 0x000004, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship::FriendshipPoint' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship, CallFunc_GetFriendshipUIColor_IconColor) == 0x000008, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship::CallFunc_GetFriendshipUIColor_IconColor' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship, CallFunc_GetFriendshipUIColor_GaugeColor) == 0x000018, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship::CallFunc_GetFriendshipUIColor_GaugeColor' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x000028, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship, CallFunc_CalcFriendshipProgress_ReturnValue) == 0x000030, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship::CallFunc_CalcFriendshipProgress_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship, CallFunc_Conv_IntToText_ReturnValue) == 0x000038, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendship::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(alignof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip");
+static_assert(sizeof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip) == 0x000050, "Wrong size on WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip, FriendshipRank) == 0x000000, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip::FriendshipRank' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip, FriendshipPoint) == 0x000004, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip::FriendshipPoint' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip, CallFunc_GetFriendshipUIColor_IconColor) == 0x000008, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip::CallFunc_GetFriendshipUIColor_IconColor' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip, CallFunc_GetFriendshipUIColor_GaugeColor) == 0x000018, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip::CallFunc_GetFriendshipUIColor_GaugeColor' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x000028, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip, CallFunc_CalcFriendshipProgress_ReturnValue) == 0x000030, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip::CallFunc_CalcFriendshipProgress_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip, CallFunc_Conv_IntToText_ReturnValue) == 0x000038, "Member 'WBP_IngameMenu_PalBox_PalDetail_C_SetFriendShip::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function WBP_IngameMenu_PalBox_PalDetail.WBP_IngameMenu_PalBox_PalDetail_C.SetGender
 // 0x0001 (0x0001 - 0x0000)

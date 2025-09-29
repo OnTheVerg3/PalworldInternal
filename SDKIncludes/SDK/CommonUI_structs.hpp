@@ -77,6 +77,21 @@ enum class ETransitionCurve : uint8
 	ETransitionCurve_MAX                     = 7,
 };
 
+// ScriptStruct CommonUI.RichTextIconData
+// 0x0058 (0x0060 - 0x0008)
+struct FRichTextIconData final : public FTableRowBase
+{
+public:
+	class FText                                   DisplayName;                                       // 0x0008(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UObject>                 ResourceObject;                                    // 0x0020(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ImageSize;                                         // 0x0050(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRichTextIconData) == 0x000008, "Wrong alignment on FRichTextIconData");
+static_assert(sizeof(FRichTextIconData) == 0x000060, "Wrong size on FRichTextIconData");
+static_assert(offsetof(FRichTextIconData, DisplayName) == 0x000008, "Member 'FRichTextIconData::DisplayName' has a wrong offset!");
+static_assert(offsetof(FRichTextIconData, ResourceObject) == 0x000020, "Member 'FRichTextIconData::ResourceObject' has a wrong offset!");
+static_assert(offsetof(FRichTextIconData, ImageSize) == 0x000050, "Member 'FRichTextIconData::ImageSize' has a wrong offset!");
+
 // ScriptStruct CommonUI.CommonNumberFormattingOptions
 // 0x0014 (0x0014 - 0x0000)
 struct FCommonNumberFormattingOptions final
@@ -99,51 +114,6 @@ static_assert(offsetof(FCommonNumberFormattingOptions, MaximumIntegralDigits) ==
 static_assert(offsetof(FCommonNumberFormattingOptions, MinimumFractionalDigits) == 0x00000C, "Member 'FCommonNumberFormattingOptions::MinimumFractionalDigits' has a wrong offset!");
 static_assert(offsetof(FCommonNumberFormattingOptions, MaximumFractionalDigits) == 0x000010, "Member 'FCommonNumberFormattingOptions::MaximumFractionalDigits' has a wrong offset!");
 
-// ScriptStruct CommonUI.UITag
-// 0x0000 (0x0008 - 0x0008)
-struct FUITag : public FGameplayTag
-{
-};
-static_assert(alignof(FUITag) == 0x000004, "Wrong alignment on FUITag");
-static_assert(sizeof(FUITag) == 0x000008, "Wrong size on FUITag");
-
-// ScriptStruct CommonUI.UIActionTag
-// 0x0000 (0x0008 - 0x0008)
-struct FUIActionTag final : public FUITag
-{
-};
-static_assert(alignof(FUIActionTag) == 0x000004, "Wrong alignment on FUIActionTag");
-static_assert(sizeof(FUIActionTag) == 0x000008, "Wrong size on FUIActionTag");
-
-// ScriptStruct CommonUI.UIActionKeyMapping
-// 0x0020 (0x0020 - 0x0000)
-struct FUIActionKeyMapping final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HoldTime;                                          // 0x0018(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FUIActionKeyMapping) == 0x000008, "Wrong alignment on FUIActionKeyMapping");
-static_assert(sizeof(FUIActionKeyMapping) == 0x000020, "Wrong size on FUIActionKeyMapping");
-static_assert(offsetof(FUIActionKeyMapping, Key) == 0x000000, "Member 'FUIActionKeyMapping::Key' has a wrong offset!");
-static_assert(offsetof(FUIActionKeyMapping, HoldTime) == 0x000018, "Member 'FUIActionKeyMapping::HoldTime' has a wrong offset!");
-
-// ScriptStruct CommonUI.UIInputAction
-// 0x0030 (0x0030 - 0x0000)
-struct FUIInputAction final
-{
-public:
-	struct FUIActionTag                           ActionTag;                                         // 0x0000(0x0008)(Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   DefaultDisplayName;                                // 0x0008(0x0018)(Edit, Config, NativeAccessSpecifierPublic)
-	TArray<struct FUIActionKeyMapping>            KeyMappings;                                       // 0x0020(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FUIInputAction) == 0x000008, "Wrong alignment on FUIInputAction");
-static_assert(sizeof(FUIInputAction) == 0x000030, "Wrong size on FUIInputAction");
-static_assert(offsetof(FUIInputAction, ActionTag) == 0x000000, "Member 'FUIInputAction::ActionTag' has a wrong offset!");
-static_assert(offsetof(FUIInputAction, DefaultDisplayName) == 0x000008, "Member 'FUIInputAction::DefaultDisplayName' has a wrong offset!");
-static_assert(offsetof(FUIInputAction, KeyMappings) == 0x000020, "Member 'FUIInputAction::KeyMappings' has a wrong offset!");
-
 // ScriptStruct CommonUI.CommonRegisteredTabInfo
 // 0x0018 (0x0018 - 0x0000)
 struct FCommonRegisteredTabInfo final
@@ -159,6 +129,22 @@ static_assert(sizeof(FCommonRegisteredTabInfo) == 0x000018, "Wrong size on FComm
 static_assert(offsetof(FCommonRegisteredTabInfo, TabIndex) == 0x000000, "Member 'FCommonRegisteredTabInfo::TabIndex' has a wrong offset!");
 static_assert(offsetof(FCommonRegisteredTabInfo, TabButton) == 0x000008, "Member 'FCommonRegisteredTabInfo::TabButton' has a wrong offset!");
 static_assert(offsetof(FCommonRegisteredTabInfo, ContentInstance) == 0x000010, "Member 'FCommonRegisteredTabInfo::ContentInstance' has a wrong offset!");
+
+// ScriptStruct CommonUI.UITag
+// 0x0000 (0x0008 - 0x0008)
+struct FUITag : public FGameplayTag
+{
+};
+static_assert(alignof(FUITag) == 0x000004, "Wrong alignment on FUITag");
+static_assert(sizeof(FUITag) == 0x000008, "Wrong size on FUITag");
+
+// ScriptStruct CommonUI.UIActionTag
+// 0x0000 (0x0008 - 0x0008)
+struct FUIActionTag final : public FUITag
+{
+};
+static_assert(alignof(FUIActionTag) == 0x000004, "Wrong alignment on FUIActionTag");
+static_assert(sizeof(FUIActionTag) == 0x000008, "Wrong size on FUIActionTag");
 
 // ScriptStruct CommonUI.CommonInputActionHandlerData
 // 0x0020 (0x0020 - 0x0000)
@@ -187,21 +173,6 @@ static_assert(alignof(FCommonButtonStyleOptionalSlateSound) == 0x000008, "Wrong 
 static_assert(sizeof(FCommonButtonStyleOptionalSlateSound) == 0x000020, "Wrong size on FCommonButtonStyleOptionalSlateSound");
 static_assert(offsetof(FCommonButtonStyleOptionalSlateSound, bHasSound) == 0x000000, "Member 'FCommonButtonStyleOptionalSlateSound::bHasSound' has a wrong offset!");
 static_assert(offsetof(FCommonButtonStyleOptionalSlateSound, Sound) == 0x000008, "Member 'FCommonButtonStyleOptionalSlateSound::Sound' has a wrong offset!");
-
-// ScriptStruct CommonUI.RichTextIconData
-// 0x0058 (0x0060 - 0x0008)
-struct FRichTextIconData final : public FTableRowBase
-{
-public:
-	class FText                                   DisplayName;                                       // 0x0008(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UObject>                 ResourceObject;                                    // 0x0020(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ImageSize;                                         // 0x0050(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRichTextIconData) == 0x000008, "Wrong alignment on FRichTextIconData");
-static_assert(sizeof(FRichTextIconData) == 0x000060, "Wrong size on FRichTextIconData");
-static_assert(offsetof(FRichTextIconData, DisplayName) == 0x000008, "Member 'FRichTextIconData::DisplayName' has a wrong offset!");
-static_assert(offsetof(FRichTextIconData, ResourceObject) == 0x000020, "Member 'FRichTextIconData::ResourceObject' has a wrong offset!");
-static_assert(offsetof(FRichTextIconData, ImageSize) == 0x000050, "Member 'FRichTextIconData::ImageSize' has a wrong offset!");
 
 // ScriptStruct CommonUI.CommonInputTypeInfo
 // 0x00F0 (0x00F0 - 0x0000)
@@ -246,6 +217,35 @@ static_assert(offsetof(FCommonInputActionDataBase, KeyboardInputTypeInfo) == 0x0
 static_assert(offsetof(FCommonInputActionDataBase, DefaultGamepadInputTypeInfo) == 0x000130, "Member 'FCommonInputActionDataBase::DefaultGamepadInputTypeInfo' has a wrong offset!");
 static_assert(offsetof(FCommonInputActionDataBase, GamepadInputOverrides) == 0x000220, "Member 'FCommonInputActionDataBase::GamepadInputOverrides' has a wrong offset!");
 static_assert(offsetof(FCommonInputActionDataBase, TouchInputTypeInfo) == 0x000270, "Member 'FCommonInputActionDataBase::TouchInputTypeInfo' has a wrong offset!");
+
+// ScriptStruct CommonUI.UIActionKeyMapping
+// 0x0020 (0x0020 - 0x0000)
+struct FUIActionKeyMapping final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HoldTime;                                          // 0x0018(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FUIActionKeyMapping) == 0x000008, "Wrong alignment on FUIActionKeyMapping");
+static_assert(sizeof(FUIActionKeyMapping) == 0x000020, "Wrong size on FUIActionKeyMapping");
+static_assert(offsetof(FUIActionKeyMapping, Key) == 0x000000, "Member 'FUIActionKeyMapping::Key' has a wrong offset!");
+static_assert(offsetof(FUIActionKeyMapping, HoldTime) == 0x000018, "Member 'FUIActionKeyMapping::HoldTime' has a wrong offset!");
+
+// ScriptStruct CommonUI.UIInputAction
+// 0x0030 (0x0030 - 0x0000)
+struct FUIInputAction final
+{
+public:
+	struct FUIActionTag                           ActionTag;                                         // 0x0000(0x0008)(Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   DefaultDisplayName;                                // 0x0008(0x0018)(Edit, Config, NativeAccessSpecifierPublic)
+	TArray<struct FUIActionKeyMapping>            KeyMappings;                                       // 0x0020(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FUIInputAction) == 0x000008, "Wrong alignment on FUIInputAction");
+static_assert(sizeof(FUIInputAction) == 0x000030, "Wrong size on FUIInputAction");
+static_assert(offsetof(FUIInputAction, ActionTag) == 0x000000, "Member 'FUIInputAction::ActionTag' has a wrong offset!");
+static_assert(offsetof(FUIInputAction, DefaultDisplayName) == 0x000008, "Member 'FUIInputAction::DefaultDisplayName' has a wrong offset!");
+static_assert(offsetof(FUIInputAction, KeyMappings) == 0x000020, "Member 'FUIInputAction::KeyMappings' has a wrong offset!");
 
 // ScriptStruct CommonUI.CommonAnalogCursorSettings
 // 0x0024 (0x0024 - 0x0000)

@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_PalCommonInfo_SaveParameter.WBP_PalCommonInfo_SaveParameter_C
-// 0x0008 (0x0738 - 0x0730)
+// 0x0008 (0x0740 - 0x0738)
 class UWBP_PalCommonInfo_SaveParameter_C final : public UWBP_PalSaveParameterDisplayWidget_C
 {
 public:
-	class UWBP_IngameMenu_PalBox_PalDetail_C*     WBP_IngameMenu_PalBox_PalDetail;                   // 0x0730(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_IngameMenu_PalBox_PalDetail_C*     WBP_IngameMenu_PalBox_PalDetail;                   // 0x0738(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void DisplaySaveParameter(const struct FPalIndividualCharacterSaveParameter& displayParameter);
@@ -55,8 +55,8 @@ public:
 	}
 };
 static_assert(alignof(UWBP_PalCommonInfo_SaveParameter_C) == 0x000008, "Wrong alignment on UWBP_PalCommonInfo_SaveParameter_C");
-static_assert(sizeof(UWBP_PalCommonInfo_SaveParameter_C) == 0x000738, "Wrong size on UWBP_PalCommonInfo_SaveParameter_C");
-static_assert(offsetof(UWBP_PalCommonInfo_SaveParameter_C, WBP_IngameMenu_PalBox_PalDetail) == 0x000730, "Member 'UWBP_PalCommonInfo_SaveParameter_C::WBP_IngameMenu_PalBox_PalDetail' has a wrong offset!");
+static_assert(sizeof(UWBP_PalCommonInfo_SaveParameter_C) == 0x000740, "Wrong size on UWBP_PalCommonInfo_SaveParameter_C");
+static_assert(offsetof(UWBP_PalCommonInfo_SaveParameter_C, WBP_IngameMenu_PalBox_PalDetail) == 0x000738, "Member 'UWBP_PalCommonInfo_SaveParameter_C::WBP_IngameMenu_PalBox_PalDetail' has a wrong offset!");
 
 }
 

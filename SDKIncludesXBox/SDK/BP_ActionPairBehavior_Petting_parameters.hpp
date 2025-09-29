@@ -99,7 +99,7 @@ static_assert(offsetof(BP_ActionPairBehavior_Petting_C_OnCompleted, CallFunc_IsV
 static_assert(offsetof(BP_ActionPairBehavior_Petting_C_OnCompleted, CallFunc_IsServer_ReturnValue) == 0x000021, "Member 'BP_ActionPairBehavior_Petting_C_OnCompleted::CallFunc_IsServer_ReturnValue' has a wrong offset!");
 
 // Function BP_ActionPairBehavior_Petting.BP_ActionPairBehavior_Petting_C.SpawnNiagara
-// 0x0078 (0x0078 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct BP_ActionPairBehavior_Petting_C_SpawnNiagara final
 {
 public:
@@ -109,25 +109,28 @@ public:
 	class AActor*                                 CallFunc_GetActionTarget_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      CallFunc_SpawnNiagara_ReturnValue;                 // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 CallFunc_GetMainMeshByActor_ReturnValue;           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentScale_ReturnValue;         // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X;                            // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetComponentScale_ReturnValue;         // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_ActionPairBehavior_Petting_C_SpawnNiagara) == 0x000008, "Wrong alignment on BP_ActionPairBehavior_Petting_C_SpawnNiagara");
-static_assert(sizeof(BP_ActionPairBehavior_Petting_C_SpawnNiagara) == 0x000078, "Wrong size on BP_ActionPairBehavior_Petting_C_SpawnNiagara");
+static_assert(sizeof(BP_ActionPairBehavior_Petting_C_SpawnNiagara) == 0x000080, "Wrong size on BP_ActionPairBehavior_Petting_C_SpawnNiagara");
 static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, Location) == 0x000000, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::Location' has a wrong offset!");
 static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, Object) == 0x000018, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::Object' has a wrong offset!");
 static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, ReturnValue) == 0x000020, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_GetActionTarget_ReturnValue) == 0x000028, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_GetActionTarget_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_SpawnNiagara_ReturnValue) == 0x000030, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_SpawnNiagara_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_GetMainMeshByActor_ReturnValue) == 0x000038, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_GetMainMeshByActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_K2_GetComponentScale_ReturnValue) == 0x000040, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_K2_GetComponentScale_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_BreakVector_X) == 0x000058, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_BreakVector_Y) == 0x000060, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_BreakVector_Z) == 0x000068, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_SetFloatParameter_Param_ImplicitCast) == 0x000070, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_SetFloatParameter_Param_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_IsValid_ReturnValue) == 0x000040, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_K2_GetComponentScale_ReturnValue) == 0x000048, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_K2_GetComponentScale_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_BreakVector_X) == 0x000060, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_BreakVector_Y) == 0x000068, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_BreakVector_Z) == 0x000070, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_ActionPairBehavior_Petting_C_SpawnNiagara, CallFunc_SetFloatParameter_Param_ImplicitCast) == 0x000078, "Member 'BP_ActionPairBehavior_Petting_C_SpawnNiagara::CallFunc_SetFloatParameter_Param_ImplicitCast' has a wrong offset!");
 
 }
 

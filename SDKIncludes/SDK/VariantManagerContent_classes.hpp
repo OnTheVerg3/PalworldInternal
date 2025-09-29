@@ -179,6 +179,49 @@ public:
 static_assert(alignof(UPropertyValueVisibility) == 0x000008, "Wrong alignment on UPropertyValueVisibility");
 static_assert(sizeof(UPropertyValueVisibility) == 0x0001C0, "Wrong size on UPropertyValueVisibility");
 
+// Class VariantManagerContent.VariantSet
+// 0x0050 (0x0078 - 0x0028)
+class UVariantSet final : public UObject
+{
+public:
+	class FText                                   DisplayText;                                       // 0x0028(0x0018)(Deprecated, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_40[0x18];                                      // 0x0040(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bExpanded;                                         // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UVariant*>                       Variants;                                          // 0x0060(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	class UTexture2D*                             Thumbnail;                                         // 0x0070(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	class ULevelVariantSets* GetParent();
+	class UTexture2D* GetThumbnail();
+	class UVariant* GetVariant(int32 VariantIndex);
+	class UVariant* GetVariantByName(const class FString& VariantName);
+	void SetDisplayText(const class FText& NewDisplayText);
+	void SetThumbnailFromCamera(class UObject* WorldContextObject, const struct FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma);
+	void SetThumbnailFromEditorViewport();
+	void SetThumbnailFromFile(const class FString& FilePath);
+	void SetThumbnailFromTexture(class UTexture2D* NewThumbnail);
+
+	class FText GetDisplayText() const;
+	int32 GetNumVariants() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VariantSet">();
+	}
+	static class UVariantSet* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVariantSet>();
+	}
+};
+static_assert(alignof(UVariantSet) == 0x000008, "Wrong alignment on UVariantSet");
+static_assert(sizeof(UVariantSet) == 0x000078, "Wrong size on UVariantSet");
+static_assert(offsetof(UVariantSet, DisplayText) == 0x000028, "Member 'UVariantSet::DisplayText' has a wrong offset!");
+static_assert(offsetof(UVariantSet, bExpanded) == 0x000058, "Member 'UVariantSet::bExpanded' has a wrong offset!");
+static_assert(offsetof(UVariantSet, Variants) == 0x000060, "Member 'UVariantSet::Variants' has a wrong offset!");
+static_assert(offsetof(UVariantSet, Thumbnail) == 0x000070, "Member 'UVariantSet::Thumbnail' has a wrong offset!");
+
 // Class VariantManagerContent.PropertyValueColor
 // 0x0000 (0x01C0 - 0x01C0)
 class UPropertyValueColor final : public UPropertyValue
@@ -356,49 +399,6 @@ static_assert(offsetof(UVariantObjectBinding, ObjectPtr) == 0x000038, "Member 'U
 static_assert(offsetof(UVariantObjectBinding, LazyObjectPtr) == 0x000058, "Member 'UVariantObjectBinding::LazyObjectPtr' has a wrong offset!");
 static_assert(offsetof(UVariantObjectBinding, CapturedProperties) == 0x000078, "Member 'UVariantObjectBinding::CapturedProperties' has a wrong offset!");
 static_assert(offsetof(UVariantObjectBinding, FunctionCallers) == 0x000088, "Member 'UVariantObjectBinding::FunctionCallers' has a wrong offset!");
-
-// Class VariantManagerContent.VariantSet
-// 0x0050 (0x0078 - 0x0028)
-class UVariantSet final : public UObject
-{
-public:
-	class FText                                   DisplayText;                                       // 0x0028(0x0018)(Deprecated, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_40[0x18];                                      // 0x0040(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bExpanded;                                         // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UVariant*>                       Variants;                                          // 0x0060(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class UTexture2D*                             Thumbnail;                                         // 0x0070(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	class ULevelVariantSets* GetParent();
-	class UTexture2D* GetThumbnail();
-	class UVariant* GetVariant(int32 VariantIndex);
-	class UVariant* GetVariantByName(const class FString& VariantName);
-	void SetDisplayText(const class FText& NewDisplayText);
-	void SetThumbnailFromCamera(class UObject* WorldContextObject, const struct FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma);
-	void SetThumbnailFromEditorViewport();
-	void SetThumbnailFromFile(const class FString& FilePath);
-	void SetThumbnailFromTexture(class UTexture2D* NewThumbnail);
-
-	class FText GetDisplayText() const;
-	int32 GetNumVariants() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"VariantSet">();
-	}
-	static class UVariantSet* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVariantSet>();
-	}
-};
-static_assert(alignof(UVariantSet) == 0x000008, "Wrong alignment on UVariantSet");
-static_assert(sizeof(UVariantSet) == 0x000078, "Wrong size on UVariantSet");
-static_assert(offsetof(UVariantSet, DisplayText) == 0x000028, "Member 'UVariantSet::DisplayText' has a wrong offset!");
-static_assert(offsetof(UVariantSet, bExpanded) == 0x000058, "Member 'UVariantSet::bExpanded' has a wrong offset!");
-static_assert(offsetof(UVariantSet, Variants) == 0x000060, "Member 'UVariantSet::Variants' has a wrong offset!");
-static_assert(offsetof(UVariantSet, Thumbnail) == 0x000070, "Member 'UVariantSet::Thumbnail' has a wrong offset!");
 
 }
 

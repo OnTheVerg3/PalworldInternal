@@ -36,6 +36,14 @@ static_assert(alignof(FElementID) == 0x000004, "Wrong alignment on FElementID");
 static_assert(sizeof(FElementID) == 0x000004, "Wrong size on FElementID");
 static_assert(offsetof(FElementID, IDValue) == 0x000000, "Member 'FElementID::IDValue' has a wrong offset!");
 
+// ScriptStruct MeshDescription.EdgeID
+// 0x0000 (0x0004 - 0x0004)
+struct FEdgeID final : public FElementID
+{
+};
+static_assert(alignof(FEdgeID) == 0x000004, "Wrong alignment on FEdgeID");
+static_assert(sizeof(FEdgeID) == 0x000004, "Wrong size on FEdgeID");
+
 // ScriptStruct MeshDescription.VertexID
 // 0x0000 (0x0004 - 0x0004)
 struct FVertexID final : public FElementID
@@ -51,14 +59,6 @@ struct FVertexInstanceID final : public FElementID
 };
 static_assert(alignof(FVertexInstanceID) == 0x000004, "Wrong alignment on FVertexInstanceID");
 static_assert(sizeof(FVertexInstanceID) == 0x000004, "Wrong size on FVertexInstanceID");
-
-// ScriptStruct MeshDescription.EdgeID
-// 0x0000 (0x0004 - 0x0004)
-struct FEdgeID final : public FElementID
-{
-};
-static_assert(alignof(FEdgeID) == 0x000004, "Wrong alignment on FEdgeID");
-static_assert(sizeof(FEdgeID) == 0x000004, "Wrong size on FEdgeID");
 
 // ScriptStruct MeshDescription.UVID
 // 0x0000 (0x0004 - 0x0004)

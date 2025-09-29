@@ -10,713 +10,35 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function WBP_Control_Settings.WBP_Control_Settings_C.GetDesiredFocusTarget
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_Control_Settings_C_GetDesiredFocusTarget final
-{
-public:
-	class UWidget*                                Target;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_PalCommonButtonBase_C*             CallFunc_Array_Get_Item;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_GetDesiredFocusTarget) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_GetDesiredFocusTarget");
-static_assert(sizeof(WBP_Control_Settings_C_GetDesiredFocusTarget) == 0x000010, "Wrong size on WBP_Control_Settings_C_GetDesiredFocusTarget");
-static_assert(offsetof(WBP_Control_Settings_C_GetDesiredFocusTarget, Target) == 0x000000, "Member 'WBP_Control_Settings_C_GetDesiredFocusTarget::Target' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_GetDesiredFocusTarget, CallFunc_Array_Get_Item) == 0x000008, "Member 'WBP_Control_Settings_C_GetDesiredFocusTarget::CallFunc_Array_Get_Item' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.ExecuteUbergraph_WBP_Control_Settings
-// 0x0698 (0x0698 - 0x0000)
-struct WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalOptionSubsystem*                    CallFunc_GetOptionSubsystem_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalOptionSubsystem*                    CallFunc_GetOptionSubsystem_ReturnValue_1;         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FPalOptionCommonSettings               CallFunc_GetCommonSettings_ReturnValue;            // 0x0028(0x0030)(ConstParm)
-	struct FPalOptionUISettings                   CallFunc_GetUISettings_ReturnValue;                // 0x0058(0x001C)(ConstParm, NoDestructor)
-	struct FPalOptionPadSettings                  CallFunc_GetPadSettings_ReturnValue;               // 0x0074(0x001C)(ConstParm, NoDestructor)
-	struct FPalOptionLocalStaticSettings          CallFunc_GetOptionLocalStaticSettings_ReturnValue; // 0x0090(0x00A8)(ConstParm)
-	struct FPalOptionKeyboardSettings             CallFunc_GetKeyboardSettings_ReturnValue;          // 0x0138(0x0014)(ConstParm, NoDestructor)
-	bool                                          K2Node_CustomEvent_Next;                           // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x014D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14E[0x2];                                      // 0x014E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVerticalBox*                           CallFunc_Array_Get_Item;                           // 0x0150(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_159[0x3];                                      // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_1;                               // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UVerticalBox*                           CallFunc_Array_Get_Item_1;                         // 0x0160(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x016C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16D[0x3];                                      // 0x016D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVerticalBox*                           CallFunc_Array_Get_Item_2;                         // 0x0170(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UVerticalBox*                           CallFunc_Array_Get_Item_3;                         // 0x0178(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_185[0x3];                                      // 0x0185(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x018C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18D[0x3];                                      // 0x018D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_Index;                          // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UVerticalBox*                           CallFunc_Array_Get_Item_4;                         // 0x0198(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A5[0x3];                                      // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate;              // 0x01A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_15;                        // 0x01BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x01BB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_1;            // 0x01BC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_CustomEvent_Value_10;                       // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_CustomEvent_Value_9;                        // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_14;                        // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_13;                        // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x01E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E3[0x1];                                      // 0x01E3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_2;            // 0x01E4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_3;            // 0x01F4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0204(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_205[0x3];                                      // 0x0205(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_4;            // 0x0208(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetDesiredFocusTarget_Target;             // 0x0218(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetDesiredFocusTarget_Target_1;           // 0x0220(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_239[0x3];                                      // 0x0239(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_5;            // 0x023C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_6;            // 0x024C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_7;            // 0x025C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_8;            // 0x026C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_9;            // 0x027C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_10;           // 0x028C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_11;           // 0x029C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_12;                        // 0x02AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x02AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2AE[0x2];                                      // 0x02AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_CustomEvent_Value_8;                        // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_CustomEvent_Value_7;                        // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_CustomEvent_Value_6;                        // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_CustomEvent_Value_5;                        // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_11;                        // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_10;                        // 0x02E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_9;                         // 0x02E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E3[0x1];                                      // 0x02E3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_12;           // 0x02E4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EPalSupportedPlatformType                     CallFunc_GetPlatformType_ReturnValue;              // 0x02F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x02F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x02F6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x02F7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_13;           // 0x02F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_8;                         // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x0309(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_30A[0x2];                                      // 0x030A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_14;           // 0x030C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_7;                         // 0x031C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_6;                         // 0x031D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31E[0x2];                                      // 0x031E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_15;           // 0x0320(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsUGCFilter_ReturnValue;                  // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_332[0x2];                                      // 0x0332(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_16;           // 0x0334(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_344[0x4];                                      // 0x0344(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_CustomEvent_Value_4;                        // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UVerticalBox*>                   K2Node_MakeArray_Array;                            // 0x0350(0x0010)(ReferenceParm, ContainsInstancedReference)
-	TArray<class UVerticalBox*>                   K2Node_MakeArray_Array_1;                          // 0x0360(0x0010)(ReferenceParm, ContainsInstancedReference)
-	TArray<class UVerticalBox*>                   K2Node_Select_Default_1;                           // 0x0370(0x0010)(ReferenceParm, ContainsInstancedReference)
-	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_17;           // 0x0380(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_CustomEvent_Value_3;                        // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_18;           // 0x03A4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_5;                         // 0x03B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B5[0x3];                                      // 0x03B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_19;           // 0x03B8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_4;                         // 0x03C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C9[0x3];                                      // 0x03C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(int32 Selection)>              K2Node_CreateDelegate_OutputDelegate_20;           // 0x03CC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_ColorIndex;                     // 0x03DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_CustomEvent_Value_2;                        // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_21;           // 0x03E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UVerticalBox*                           CallFunc_Array_Get_Item_5;                         // 0x03F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UWBP_PalCommonButtonBase_C*>     K2Node_MakeArray_Array_2;                          // 0x0400(0x0010)(ReferenceParm, ContainsInstancedReference)
-	TArray<class UWBP_PalCommonButtonBase_C*>     K2Node_MakeArray_Array_3;                          // 0x0410(0x0010)(ReferenceParm, ContainsInstancedReference)
-	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_22;           // 0x0420(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class UWBP_PalCommonButtonBase_C*>     K2Node_Select_Default_2;                           // 0x0430(0x0010)(ReferenceParm, ContainsInstancedReference)
-	double                                        K2Node_CustomEvent_Value_1;                        // 0x0440(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 Selection)>              K2Node_CreateDelegate_OutputDelegate_23;           // 0x0448(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_Value;                          // 0x0458(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Map_Find_Value;                           // 0x045C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0460(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_461[0x7];                                      // 0x0461(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 CallFunc_Map_Keys_Keys;                            // 0x0468(0x0010)(ReferenceParm)
-	TArray<int32>                                 CallFunc_Map_Values_Values;                        // 0x0478(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x0488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Get_Item_6;                         // 0x048C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_3;                         // 0x0490(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_491[0x3];                                      // 0x0491(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_24;           // 0x0494(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_25;           // 0x04A4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_2;                         // 0x04B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B5[0x3];                                      // 0x04B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle;              // 0x04B8(0x0010)(NoDestructor)
-	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_1;            // 0x04C8(0x0010)(NoDestructor)
-	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_2;            // 0x04D8(0x0010)(NoDestructor)
-	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_3;            // 0x04E8(0x0010)(NoDestructor)
-	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_4;            // 0x04F8(0x0010)(NoDestructor)
-	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_5;            // 0x0508(0x0010)(NoDestructor)
-	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_6;            // 0x0518(0x0010)(NoDestructor)
-	bool                                          CallFunc_IsPS5_ReturnValue;                        // 0x0528(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_529[0x7];                                      // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetLocalizedTextFromHandle_Text;          // 0x0530(0x0018)()
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_26;           // 0x0548(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn_1;                         // 0x0558(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_559[0x3];                                      // 0x0559(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_27;           // 0x055C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsOn;                           // 0x056C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56D[0x3];                                      // 0x056D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast;      // 0x0570(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast_1;    // 0x0578(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_SetFieldsInStruct_MouseSensitivity_ImplicitCast; // 0x0580(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_584[0x4];                                      // 0x0584(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SetSlider_Min_ImplicitCast;               // 0x0588(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Max_ImplicitCast;               // 0x0590(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_SetFieldsInStruct_MouseAimSensitivity_ImplicitCast; // 0x0598(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59C[0x4];                                      // 0x059C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SetSlider_Min_ImplicitCast_1;             // 0x05A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Max_ImplicitCast_1;             // 0x05A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x05B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast_2;    // 0x05B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast_3;    // 0x05C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x05C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Min_ImplicitCast_2;             // 0x05D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Max_ImplicitCast_2;             // 0x05D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Min_ImplicitCast_3;             // 0x05E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Max_ImplicitCast_3;             // 0x05E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Min_ImplicitCast_4;             // 0x05F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Max_ImplicitCast_4;             // 0x05F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Min_ImplicitCast_5;             // 0x0600(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Max_ImplicitCast_5;             // 0x0608(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_SetFieldsInStruct_RightStickAimSensitivity_ImplicitCast; // 0x0610(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_SetFieldsInStruct_RightStickThreshold_ImplicitCast; // 0x0614(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_SetFieldsInStruct_LeftStickThreshold_ImplicitCast; // 0x0618(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_SetFieldsInStruct_RightStickSensitivity_ImplicitCast; // 0x061C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast_4;    // 0x0620(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_Value_ImplicitCast;              // 0x0628(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast_5;    // 0x0630(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetOutline_OutlineOpacity_ImplicitCast;   // 0x0638(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Min_ImplicitCast_6;             // 0x0640(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_Min_ImplicitCast;                // 0x0648(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Max_ImplicitCast_6;             // 0x0650(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_Max_ImplicitCast;                // 0x0658(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_SetFieldsInStruct_DamageTextScale_ImplicitCast; // 0x0660(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_664[0x4];                                      // 0x0664(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SetSlider_Min_ImplicitCast_7;             // 0x0668(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Max_ImplicitCast_7;             // 0x0670(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Min_ImplicitCast_8;             // 0x0678(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_Max_ImplicitCast_8;             // 0x0680(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast_6;    // 0x0688(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_SetFieldsInStruct_ReticleOutlineOpacity_ImplicitCast; // 0x0690(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_SetFieldsInStruct_ChatUICloseDelayTime_ImplicitCast; // 0x0694(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings");
-static_assert(sizeof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings) == 0x000698, "Wrong size on WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, EntryPoint) == 0x000000, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_int_Variable) == 0x000004, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_int_Array_Index_Variable) == 0x000010, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetOptionSubsystem_ReturnValue) == 0x000018, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetOptionSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetOptionSubsystem_ReturnValue_1) == 0x000020, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetOptionSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetCommonSettings_ReturnValue) == 0x000028, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetCommonSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetUISettings_ReturnValue) == 0x000058, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetUISettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetPadSettings_ReturnValue) == 0x000074, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetPadSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetOptionLocalStaticSettings_ReturnValue) == 0x000090, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetOptionLocalStaticSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetKeyboardSettings_ReturnValue) == 0x000138, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetKeyboardSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Next) == 0x00014C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Next' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_bool_Variable) == 0x00014D, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item) == 0x000150, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_bool_Variable_1) == 0x000158, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_int_Variable_1) == 0x00015C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item_1) == 0x000160, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Add_IntInt_ReturnValue_1) == 0x000168, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Greater_IntInt_ReturnValue) == 0x00016C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item_2) == 0x000170, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item_3) == 0x000178, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Length_ReturnValue) == 0x000180, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_byte_Variable) == 0x000184, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Subtract_IntInt_ReturnValue) == 0x000188, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Less_IntInt_ReturnValue) == 0x00018C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x000190, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Index) == 0x000194, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Index' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item_4) == 0x000198, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Length_ReturnValue_1) == 0x0001A0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Less_IntInt_ReturnValue_1) == 0x0001A4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate) == 0x0001A8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Not_PreBool_ReturnValue) == 0x0001B8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Not_PreBool_ReturnValue_1) == 0x0001B9, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_15) == 0x0001BA, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_15' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Not_PreBool_ReturnValue_2) == 0x0001BB, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_1) == 0x0001BC, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_10) == 0x0001D0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_10' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_9) == 0x0001D8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_9' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_14) == 0x0001E0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_14' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_13) == 0x0001E1, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_13' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_byte_Variable_1) == 0x0001E2, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_2) == 0x0001E4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_3) == 0x0001F4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_bool_Variable_2) == 0x000204, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_4) == 0x000208, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetDesiredFocusTarget_Target) == 0x000218, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetDesiredFocusTarget_Target' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetDesiredFocusTarget_Target_1) == 0x000220, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetDesiredFocusTarget_Target_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000228, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000230, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Not_PreBool_ReturnValue_3) == 0x000238, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_5) == 0x00023C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_6) == 0x00024C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_7) == 0x00025C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_8) == 0x00026C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_9) == 0x00027C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_10) == 0x00028C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_11) == 0x00029C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_12) == 0x0002AC, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_12' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Not_PreBool_ReturnValue_4) == 0x0002AD, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_8) == 0x0002B0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_8' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_7) == 0x0002B8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_7' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x0002C0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_6) == 0x0002C8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_6' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x0002D0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_5) == 0x0002D8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_5' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_11) == 0x0002E0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_11' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_10) == 0x0002E1, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_10' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_9) == 0x0002E2, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_9' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_12) == 0x0002E4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetPlatformType_ReturnValue) == 0x0002F4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetPlatformType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0002F5, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x0002F6, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_BooleanOR_ReturnValue) == 0x0002F7, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_13) == 0x0002F8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_8) == 0x000308, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_8' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Not_PreBool_ReturnValue_5) == 0x000309, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Not_PreBool_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_14) == 0x00030C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_14' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_7) == 0x00031C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_7' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_6) == 0x00031D, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_6' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_15) == 0x000320, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_15' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_IsUGCFilter_ReturnValue) == 0x000330, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_IsUGCFilter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_Select_Default) == 0x000331, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_16) == 0x000334, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_16' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_4) == 0x000348, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_4' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeArray_Array) == 0x000350, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeArray_Array_1) == 0x000360, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_Select_Default_1) == 0x000370, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_17) == 0x000380, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_17' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000390, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_3) == 0x000398, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_3' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_FTrunc_ReturnValue) == 0x0003A0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_18) == 0x0003A4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_18' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_5) == 0x0003B4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_5' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_19) == 0x0003B8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_19' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_4) == 0x0003C8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_4' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_20) == 0x0003CC, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_20' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_ColorIndex) == 0x0003DC, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_ColorIndex' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_2) == 0x0003E0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_2' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_21) == 0x0003E8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_21' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item_5) == 0x0003F8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item_5' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeArray_Array_2) == 0x000400, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeArray_Array_3) == 0x000410, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_22) == 0x000420, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_22' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_Select_Default_2) == 0x000430, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_1) == 0x000440, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_23) == 0x000448, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_23' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value) == 0x000458, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Map_Find_Value) == 0x00045C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Map_Find_ReturnValue) == 0x000460, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Map_Keys_Keys) == 0x000468, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Map_Values_Values) == 0x000478, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Map_Values_Values' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Find_ReturnValue) == 0x000488, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item_6) == 0x00048C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item_6' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_3) == 0x000490, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_3' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_24) == 0x000494, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_24' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_25) == 0x0004A4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_25' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_2) == 0x0004B4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_2' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle) == 0x0004B8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle_1) == 0x0004C8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle_2) == 0x0004D8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle_2' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle_3) == 0x0004E8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle_3' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle_4) == 0x0004F8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle_4' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle_5) == 0x000508, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle_5' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle_6) == 0x000518, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle_6' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_IsPS5_ReturnValue) == 0x000528, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_IsPS5_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetLocalizedTextFromHandle_Text) == 0x000530, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetLocalizedTextFromHandle_Text' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_26) == 0x000548, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_26' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_1) == 0x000558, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_27) == 0x00055C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_27' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn) == 0x00056C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast) == 0x000570, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast_1) == 0x000578, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_MouseSensitivity_ImplicitCast) == 0x000580, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_MouseSensitivity_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast) == 0x000588, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast) == 0x000590, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_MouseAimSensitivity_ImplicitCast) == 0x000598, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_MouseAimSensitivity_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_1) == 0x0005A0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_1) == 0x0005A8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0005B0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast_2) == 0x0005B8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast_3) == 0x0005C0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0005C8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_2) == 0x0005D0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_2) == 0x0005D8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_3) == 0x0005E0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_3) == 0x0005E8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_4) == 0x0005F0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_4) == 0x0005F8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_5) == 0x000600, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_5) == 0x000608, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_RightStickAimSensitivity_ImplicitCast) == 0x000610, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_RightStickAimSensitivity_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_RightStickThreshold_ImplicitCast) == 0x000614, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_RightStickThreshold_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_LeftStickThreshold_ImplicitCast) == 0x000618, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_LeftStickThreshold_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_RightStickSensitivity_ImplicitCast) == 0x00061C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_RightStickSensitivity_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast_4) == 0x000620, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetValue_Value_ImplicitCast) == 0x000628, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetValue_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast_5) == 0x000630, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetOutline_OutlineOpacity_ImplicitCast) == 0x000638, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetOutline_OutlineOpacity_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_6) == 0x000640, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_6' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetValue_Min_ImplicitCast) == 0x000648, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetValue_Min_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_6) == 0x000650, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_6' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetValue_Max_ImplicitCast) == 0x000658, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetValue_Max_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_DamageTextScale_ImplicitCast) == 0x000660, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_DamageTextScale_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_7) == 0x000668, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_7' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_7) == 0x000670, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_7' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_8) == 0x000678, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_8' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_8) == 0x000680, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_8' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast_6) == 0x000688, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast_6' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_ReticleOutlineOpacity_ImplicitCast) == 0x000690, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_ReticleOutlineOpacity_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_ChatUICloseDelayTime_ImplicitCast) == 0x000694, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_ChatUICloseDelayTime_ImplicitCast' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedDamageTextScale
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Control_Settings_C_OnChangedDamageTextScale final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnChangedDamageTextScale) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnChangedDamageTextScale");
-static_assert(sizeof(WBP_Control_Settings_C_OnChangedDamageTextScale) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnChangedDamageTextScale");
-static_assert(offsetof(WBP_Control_Settings_C_OnChangedDamageTextScale, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedDamageTextScale::Value' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedDisableAutoItemPick
+// Function WBP_Control_Settings.WBP_Control_Settings_C.SwitchTab
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnChangedDisableAutoItemPick final
+struct WBP_Control_Settings_C_SwitchTab final
 {
 public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Next;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Control_Settings_C_OnChangedDisableAutoItemPick) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnChangedDisableAutoItemPick");
-static_assert(sizeof(WBP_Control_Settings_C_OnChangedDisableAutoItemPick) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnChangedDisableAutoItemPick");
-static_assert(offsetof(WBP_Control_Settings_C_OnChangedDisableAutoItemPick, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedDisableAutoItemPick::IsOn' has a wrong offset!");
+static_assert(alignof(WBP_Control_Settings_C_SwitchTab) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_SwitchTab");
+static_assert(sizeof(WBP_Control_Settings_C_SwitchTab) == 0x000001, "Wrong size on WBP_Control_Settings_C_SwitchTab");
+static_assert(offsetof(WBP_Control_Settings_C_SwitchTab, Next) == 0x000000, "Member 'WBP_Control_Settings_C_SwitchTab::Next' has a wrong offset!");
 
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedDisableGuildJoined
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnChangedDisableGuildJoined final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnChangedDisableGuildJoined) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnChangedDisableGuildJoined");
-static_assert(sizeof(WBP_Control_Settings_C_OnChangedDisableGuildJoined) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnChangedDisableGuildJoined");
-static_assert(offsetof(WBP_Control_Settings_C_OnChangedDisableGuildJoined, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedDisableGuildJoined::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedHideCraftExpLog
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnChangedHideCraftExpLog final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnChangedHideCraftExpLog) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnChangedHideCraftExpLog");
-static_assert(sizeof(WBP_Control_Settings_C_OnChangedHideCraftExpLog) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnChangedHideCraftExpLog");
-static_assert(offsetof(WBP_Control_Settings_C_OnChangedHideCraftExpLog, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedHideCraftExpLog::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedHideUINotInBattle
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnChangedHideUINotInBattle final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnChangedHideUINotInBattle) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnChangedHideUINotInBattle");
-static_assert(sizeof(WBP_Control_Settings_C_OnChangedHideUINotInBattle) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnChangedHideUINotInBattle");
-static_assert(offsetof(WBP_Control_Settings_C_OnChangedHideUINotInBattle, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedHideUINotInBattle::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedMaxDamageDisplayNum
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum");
-static_assert(sizeof(WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum");
-static_assert(offsetof(WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum::Value' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedReticleColor
+// Function WBP_Control_Settings.WBP_Control_Settings_C.SwitchPanel
 // 0x0004 (0x0004 - 0x0000)
-struct WBP_Control_Settings_C_OnChangedReticleColor final
+struct WBP_Control_Settings_C_SwitchPanel final
 {
 public:
-	int32                                         ColorIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Control_Settings_C_OnChangedReticleColor) == 0x000004, "Wrong alignment on WBP_Control_Settings_C_OnChangedReticleColor");
-static_assert(sizeof(WBP_Control_Settings_C_OnChangedReticleColor) == 0x000004, "Wrong size on WBP_Control_Settings_C_OnChangedReticleColor");
-static_assert(offsetof(WBP_Control_Settings_C_OnChangedReticleColor, ColorIndex) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedReticleColor::ColorIndex' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedReticleOutline
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Control_Settings_C_OnChangedReticleOutline final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnChangedReticleOutline) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnChangedReticleOutline");
-static_assert(sizeof(WBP_Control_Settings_C_OnChangedReticleOutline) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnChangedReticleOutline");
-static_assert(offsetof(WBP_Control_Settings_C_OnChangedReticleOutline, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedReticleOutline::Value' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChatUICloseDelayChanged
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Control_Settings_C_OnChatUICloseDelayChanged final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnChatUICloseDelayChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnChatUICloseDelayChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnChatUICloseDelayChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnChatUICloseDelayChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnChatUICloseDelayChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnChatUICloseDelayChanged::Value' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnDashChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnDashChanged final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnDashChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnDashChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnDashChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnDashChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnDashChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnDashChanged::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnGPAimChanged
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Control_Settings_C_OnGPAimChanged final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnGPAimChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnGPAimChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnGPAimChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnGPAimChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnGPAimChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnGPAimChanged::Value' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnGPDashChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnGPDashChanged final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnGPDashChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnGPDashChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnGPDashChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnGPDashChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnGPDashChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnGPDashChanged::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnHideChatChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnHideChatChanged final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnHideChatChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnHideChatChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnHideChatChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnHideChatChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnHideChatChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnHideChatChanged::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnLStickThreChanged
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Control_Settings_C_OnLStickThreChanged final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnLStickThreChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnLStickThreChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnLStickThreChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnLStickThreChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnLStickThreChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnLStickThreChanged::Value' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnMinFontSizeChanged
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Control_Settings_C_OnMinFontSizeChanged final
-{
-public:
-	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnMinFontSizeChanged) == 0x000004, "Wrong alignment on WBP_Control_Settings_C_OnMinFontSizeChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnMinFontSizeChanged) == 0x000004, "Wrong size on WBP_Control_Settings_C_OnMinFontSizeChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnMinFontSizeChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnMinFontSizeChanged::Value' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnMouseAIMChanged
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Control_Settings_C_OnMouseAIMChanged final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnMouseAIMChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnMouseAIMChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnMouseAIMChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnMouseAIMChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnMouseAIMChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnMouseAIMChanged::Value' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnMouseSensiChanged
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Control_Settings_C_OnMouseSensiChanged final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnMouseSensiChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnMouseSensiChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnMouseSensiChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnMouseSensiChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnMouseSensiChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnMouseSensiChanged::Value' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnMouseXChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnMouseXChanged final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnMouseXChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnMouseXChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnMouseXChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnMouseXChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnMouseXChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnMouseXChanged::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnMouseYChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnMouseYChanged final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnMouseYChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnMouseYChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnMouseYChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnMouseYChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnMouseYChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnMouseYChanged::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnRStickSensiChanged
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Control_Settings_C_OnRStickSensiChanged final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnRStickSensiChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnRStickSensiChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnRStickSensiChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnRStickSensiChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnRStickSensiChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnRStickSensiChanged::Value' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnRStickThreChanged
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Control_Settings_C_OnRStickThreChanged final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnRStickThreChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnRStickThreChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnRStickThreChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnRStickThreChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnRStickThreChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnRStickThreChanged::Value' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnRStickXChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnRStickXChanged final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnRStickXChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnRStickXChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnRStickXChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnRStickXChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnRStickXChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnRStickXChanged::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnRStickYChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnRStickYChanged final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnRStickYChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnRStickYChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnRStickYChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnRStickYChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnRStickYChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnRStickYChanged::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnToggleBuildModeChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnToggleBuildModeChanged final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnToggleBuildModeChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnToggleBuildModeChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnToggleBuildModeChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnToggleBuildModeChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnToggleBuildModeChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnToggleBuildModeChanged::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnToggleBuildModeChanged_GP
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnToggleBuildModeChanged_GP final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnToggleBuildModeChanged_GP) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnToggleBuildModeChanged_GP");
-static_assert(sizeof(WBP_Control_Settings_C_OnToggleBuildModeChanged_GP) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnToggleBuildModeChanged_GP");
-static_assert(offsetof(WBP_Control_Settings_C_OnToggleBuildModeChanged_GP, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnToggleBuildModeChanged_GP::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnToggleLongPressChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnToggleLongPressChanged final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnToggleLongPressChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnToggleLongPressChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnToggleLongPressChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnToggleLongPressChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnToggleLongPressChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnToggleLongPressChanged::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnToggleLongPressChanged_GP
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnToggleLongPressChanged_GP final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnToggleLongPressChanged_GP) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnToggleLongPressChanged_GP");
-static_assert(sizeof(WBP_Control_Settings_C_OnToggleLongPressChanged_GP) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnToggleLongPressChanged_GP");
-static_assert(offsetof(WBP_Control_Settings_C_OnToggleLongPressChanged_GP, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnToggleLongPressChanged_GP::IsOn' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.OnVibChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_OnVibChanged final
-{
-public:
-	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_OnVibChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnVibChanged");
-static_assert(sizeof(WBP_Control_Settings_C_OnVibChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnVibChanged");
-static_assert(offsetof(WBP_Control_Settings_C_OnVibChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnVibChanged::IsOn' has a wrong offset!");
+static_assert(alignof(WBP_Control_Settings_C_SwitchPanel) == 0x000004, "Wrong alignment on WBP_Control_Settings_C_SwitchPanel");
+static_assert(sizeof(WBP_Control_Settings_C_SwitchPanel) == 0x000004, "Wrong size on WBP_Control_Settings_C_SwitchPanel");
+static_assert(offsetof(WBP_Control_Settings_C_SwitchPanel, Index_0) == 0x000000, "Member 'WBP_Control_Settings_C_SwitchPanel::Index_0' has a wrong offset!");
 
 // Function WBP_Control_Settings.WBP_Control_Settings_C.SetDefault
 // 0x0190 (0x0190 - 0x0000)
@@ -813,27 +135,702 @@ static_assert(offsetof(WBP_Control_Settings_C_SetDefault, CallFunc_SetSlider_Max
 static_assert(offsetof(WBP_Control_Settings_C_SetDefault, CallFunc_SetSlider_Min_ImplicitCast_8) == 0x000180, "Member 'WBP_Control_Settings_C_SetDefault::CallFunc_SetSlider_Min_ImplicitCast_8' has a wrong offset!");
 static_assert(offsetof(WBP_Control_Settings_C_SetDefault, CallFunc_SetSlider_Max_ImplicitCast_8) == 0x000188, "Member 'WBP_Control_Settings_C_SetDefault::CallFunc_SetSlider_Max_ImplicitCast_8' has a wrong offset!");
 
-// Function WBP_Control_Settings.WBP_Control_Settings_C.SwitchPanel
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Control_Settings_C_SwitchPanel final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Control_Settings_C_SwitchPanel) == 0x000004, "Wrong alignment on WBP_Control_Settings_C_SwitchPanel");
-static_assert(sizeof(WBP_Control_Settings_C_SwitchPanel) == 0x000004, "Wrong size on WBP_Control_Settings_C_SwitchPanel");
-static_assert(offsetof(WBP_Control_Settings_C_SwitchPanel, Index_0) == 0x000000, "Member 'WBP_Control_Settings_C_SwitchPanel::Index_0' has a wrong offset!");
-
-// Function WBP_Control_Settings.WBP_Control_Settings_C.SwitchTab
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnVibChanged
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_Control_Settings_C_SwitchTab final
+struct WBP_Control_Settings_C_OnVibChanged final
 {
 public:
-	bool                                          Next;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Control_Settings_C_SwitchTab) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_SwitchTab");
-static_assert(sizeof(WBP_Control_Settings_C_SwitchTab) == 0x000001, "Wrong size on WBP_Control_Settings_C_SwitchTab");
-static_assert(offsetof(WBP_Control_Settings_C_SwitchTab, Next) == 0x000000, "Member 'WBP_Control_Settings_C_SwitchTab::Next' has a wrong offset!");
+static_assert(alignof(WBP_Control_Settings_C_OnVibChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnVibChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnVibChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnVibChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnVibChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnVibChanged::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnToggleLongPressChanged_GP
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnToggleLongPressChanged_GP final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnToggleLongPressChanged_GP) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnToggleLongPressChanged_GP");
+static_assert(sizeof(WBP_Control_Settings_C_OnToggleLongPressChanged_GP) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnToggleLongPressChanged_GP");
+static_assert(offsetof(WBP_Control_Settings_C_OnToggleLongPressChanged_GP, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnToggleLongPressChanged_GP::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnToggleLongPressChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnToggleLongPressChanged final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnToggleLongPressChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnToggleLongPressChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnToggleLongPressChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnToggleLongPressChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnToggleLongPressChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnToggleLongPressChanged::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnToggleBuildModeChanged_GP
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnToggleBuildModeChanged_GP final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnToggleBuildModeChanged_GP) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnToggleBuildModeChanged_GP");
+static_assert(sizeof(WBP_Control_Settings_C_OnToggleBuildModeChanged_GP) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnToggleBuildModeChanged_GP");
+static_assert(offsetof(WBP_Control_Settings_C_OnToggleBuildModeChanged_GP, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnToggleBuildModeChanged_GP::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnToggleBuildModeChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnToggleBuildModeChanged final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnToggleBuildModeChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnToggleBuildModeChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnToggleBuildModeChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnToggleBuildModeChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnToggleBuildModeChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnToggleBuildModeChanged::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnRStickYChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnRStickYChanged final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnRStickYChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnRStickYChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnRStickYChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnRStickYChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnRStickYChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnRStickYChanged::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnRStickXChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnRStickXChanged final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnRStickXChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnRStickXChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnRStickXChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnRStickXChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnRStickXChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnRStickXChanged::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnRStickThreChanged
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Control_Settings_C_OnRStickThreChanged final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnRStickThreChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnRStickThreChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnRStickThreChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnRStickThreChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnRStickThreChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnRStickThreChanged::Value' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnRStickSensiChanged
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Control_Settings_C_OnRStickSensiChanged final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnRStickSensiChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnRStickSensiChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnRStickSensiChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnRStickSensiChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnRStickSensiChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnRStickSensiChanged::Value' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnMouseYChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnMouseYChanged final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnMouseYChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnMouseYChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnMouseYChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnMouseYChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnMouseYChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnMouseYChanged::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnMouseXChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnMouseXChanged final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnMouseXChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnMouseXChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnMouseXChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnMouseXChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnMouseXChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnMouseXChanged::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnMouseSensiChanged
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Control_Settings_C_OnMouseSensiChanged final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnMouseSensiChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnMouseSensiChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnMouseSensiChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnMouseSensiChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnMouseSensiChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnMouseSensiChanged::Value' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnMouseAIMChanged
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Control_Settings_C_OnMouseAIMChanged final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnMouseAIMChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnMouseAIMChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnMouseAIMChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnMouseAIMChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnMouseAIMChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnMouseAIMChanged::Value' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnMinFontSizeChanged
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Control_Settings_C_OnMinFontSizeChanged final
+{
+public:
+	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnMinFontSizeChanged) == 0x000004, "Wrong alignment on WBP_Control_Settings_C_OnMinFontSizeChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnMinFontSizeChanged) == 0x000004, "Wrong size on WBP_Control_Settings_C_OnMinFontSizeChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnMinFontSizeChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnMinFontSizeChanged::Value' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnLStickThreChanged
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Control_Settings_C_OnLStickThreChanged final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnLStickThreChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnLStickThreChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnLStickThreChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnLStickThreChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnLStickThreChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnLStickThreChanged::Value' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnHideChatChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnHideChatChanged final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnHideChatChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnHideChatChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnHideChatChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnHideChatChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnHideChatChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnHideChatChanged::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnGPDashChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnGPDashChanged final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnGPDashChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnGPDashChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnGPDashChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnGPDashChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnGPDashChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnGPDashChanged::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnGPAimChanged
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Control_Settings_C_OnGPAimChanged final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnGPAimChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnGPAimChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnGPAimChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnGPAimChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnGPAimChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnGPAimChanged::Value' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnDashChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnDashChanged final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnDashChanged) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnDashChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnDashChanged) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnDashChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnDashChanged, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnDashChanged::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChatUICloseDelayChanged
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Control_Settings_C_OnChatUICloseDelayChanged final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnChatUICloseDelayChanged) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnChatUICloseDelayChanged");
+static_assert(sizeof(WBP_Control_Settings_C_OnChatUICloseDelayChanged) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnChatUICloseDelayChanged");
+static_assert(offsetof(WBP_Control_Settings_C_OnChatUICloseDelayChanged, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnChatUICloseDelayChanged::Value' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedReticleOutline
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Control_Settings_C_OnChangedReticleOutline final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnChangedReticleOutline) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnChangedReticleOutline");
+static_assert(sizeof(WBP_Control_Settings_C_OnChangedReticleOutline) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnChangedReticleOutline");
+static_assert(offsetof(WBP_Control_Settings_C_OnChangedReticleOutline, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedReticleOutline::Value' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedReticleColor
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Control_Settings_C_OnChangedReticleColor final
+{
+public:
+	int32                                         ColorIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnChangedReticleColor) == 0x000004, "Wrong alignment on WBP_Control_Settings_C_OnChangedReticleColor");
+static_assert(sizeof(WBP_Control_Settings_C_OnChangedReticleColor) == 0x000004, "Wrong size on WBP_Control_Settings_C_OnChangedReticleColor");
+static_assert(offsetof(WBP_Control_Settings_C_OnChangedReticleColor, ColorIndex) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedReticleColor::ColorIndex' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedMaxDamageDisplayNum
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum");
+static_assert(sizeof(WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum");
+static_assert(offsetof(WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedMaxDamageDisplayNum::Value' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedHideUINotInBattle
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnChangedHideUINotInBattle final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnChangedHideUINotInBattle) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnChangedHideUINotInBattle");
+static_assert(sizeof(WBP_Control_Settings_C_OnChangedHideUINotInBattle) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnChangedHideUINotInBattle");
+static_assert(offsetof(WBP_Control_Settings_C_OnChangedHideUINotInBattle, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedHideUINotInBattle::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedHideCraftExpLog
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnChangedHideCraftExpLog final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnChangedHideCraftExpLog) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnChangedHideCraftExpLog");
+static_assert(sizeof(WBP_Control_Settings_C_OnChangedHideCraftExpLog) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnChangedHideCraftExpLog");
+static_assert(offsetof(WBP_Control_Settings_C_OnChangedHideCraftExpLog, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedHideCraftExpLog::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedDisableGuildJoined
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnChangedDisableGuildJoined final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnChangedDisableGuildJoined) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnChangedDisableGuildJoined");
+static_assert(sizeof(WBP_Control_Settings_C_OnChangedDisableGuildJoined) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnChangedDisableGuildJoined");
+static_assert(offsetof(WBP_Control_Settings_C_OnChangedDisableGuildJoined, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedDisableGuildJoined::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedDisableAutoItemPick
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Control_Settings_C_OnChangedDisableAutoItemPick final
+{
+public:
+	bool                                          IsOn;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnChangedDisableAutoItemPick) == 0x000001, "Wrong alignment on WBP_Control_Settings_C_OnChangedDisableAutoItemPick");
+static_assert(sizeof(WBP_Control_Settings_C_OnChangedDisableAutoItemPick) == 0x000001, "Wrong size on WBP_Control_Settings_C_OnChangedDisableAutoItemPick");
+static_assert(offsetof(WBP_Control_Settings_C_OnChangedDisableAutoItemPick, IsOn) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedDisableAutoItemPick::IsOn' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.OnChangedDamageTextScale
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Control_Settings_C_OnChangedDamageTextScale final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_OnChangedDamageTextScale) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_OnChangedDamageTextScale");
+static_assert(sizeof(WBP_Control_Settings_C_OnChangedDamageTextScale) == 0x000008, "Wrong size on WBP_Control_Settings_C_OnChangedDamageTextScale");
+static_assert(offsetof(WBP_Control_Settings_C_OnChangedDamageTextScale, Value) == 0x000000, "Member 'WBP_Control_Settings_C_OnChangedDamageTextScale::Value' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.GetDesiredFocusTarget
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_Control_Settings_C_GetDesiredFocusTarget final
+{
+public:
+	class UWidget*                                Target;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_PalCommonButtonBase_C*             CallFunc_Array_Get_Item;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_GetDesiredFocusTarget) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_GetDesiredFocusTarget");
+static_assert(sizeof(WBP_Control_Settings_C_GetDesiredFocusTarget) == 0x000010, "Wrong size on WBP_Control_Settings_C_GetDesiredFocusTarget");
+static_assert(offsetof(WBP_Control_Settings_C_GetDesiredFocusTarget, Target) == 0x000000, "Member 'WBP_Control_Settings_C_GetDesiredFocusTarget::Target' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_GetDesiredFocusTarget, CallFunc_Array_Get_Item) == 0x000008, "Member 'WBP_Control_Settings_C_GetDesiredFocusTarget::CallFunc_Array_Get_Item' has a wrong offset!");
+
+// Function WBP_Control_Settings.WBP_Control_Settings_C.ExecuteUbergraph_WBP_Control_Settings
+// 0x0690 (0x0690 - 0x0000)
+struct WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsXB1_ReturnValue;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPalOptionSubsystem*                    CallFunc_GetOptionSubsystem_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalOptionSubsystem*                    CallFunc_GetOptionSubsystem_ReturnValue_1;         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalOptionCommonSettings               CallFunc_GetCommonSettings_ReturnValue;            // 0x0028(0x0030)(ConstParm)
+	struct FPalOptionUISettings                   CallFunc_GetUISettings_ReturnValue;                // 0x0058(0x001C)(ConstParm, NoDestructor)
+	struct FPalOptionPadSettings                  CallFunc_GetPadSettings_ReturnValue;               // 0x0074(0x001C)(ConstParm, NoDestructor)
+	struct FPalOptionLocalStaticSettings          CallFunc_GetOptionLocalStaticSettings_ReturnValue; // 0x0090(0x00A8)(ConstParm)
+	struct FPalOptionKeyboardSettings             CallFunc_GetKeyboardSettings_ReturnValue;          // 0x0138(0x0014)(ConstParm, NoDestructor)
+	bool                                          K2Node_CustomEvent_Next;                           // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x014D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14E[0x2];                                      // 0x014E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVerticalBox*                           CallFunc_Array_Get_Item;                           // 0x0150(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159[0x3];                                      // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_1;                               // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UVerticalBox*                           CallFunc_Array_Get_Item_1;                         // 0x0160(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x016C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16D[0x3];                                      // 0x016D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVerticalBox*                           CallFunc_Array_Get_Item_2;                         // 0x0170(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UVerticalBox*                           CallFunc_Array_Get_Item_3;                         // 0x0178(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_185[0x3];                                      // 0x0185(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x018C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18D[0x3];                                      // 0x018D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_Index;                          // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UVerticalBox*                           CallFunc_Array_Get_Item_4;                         // 0x0198(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A5[0x3];                                      // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate;              // 0x01A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_15;                        // 0x01BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x01BB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_1;            // 0x01BC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_CustomEvent_Value_10;                       // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_Value_9;                        // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_14;                        // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_13;                        // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x01E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E3[0x1];                                      // 0x01E3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_2;            // 0x01E4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_3;            // 0x01F4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0204(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_205[0x3];                                      // 0x0205(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_4;            // 0x0208(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetDesiredFocusTarget_Target;             // 0x0218(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetDesiredFocusTarget_Target_1;           // 0x0220(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_239[0x3];                                      // 0x0239(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_5;            // 0x023C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_6;            // 0x024C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_7;            // 0x025C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_8;            // 0x026C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_9;            // 0x027C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_10;           // 0x028C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_11;           // 0x029C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_12;                        // 0x02AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x02AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2AE[0x2];                                      // 0x02AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_CustomEvent_Value_8;                        // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_Value_7;                        // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_Value_6;                        // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_Value_5;                        // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_11;                        // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_10;                        // 0x02E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_9;                         // 0x02E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E3[0x1];                                      // 0x02E3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_12;           // 0x02E4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_13;           // 0x02F4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_8;                         // 0x0304(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x0305(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_306[0x2];                                      // 0x0306(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_14;           // 0x0308(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_7;                         // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_6;                         // 0x0319(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31A[0x2];                                      // 0x031A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_15;           // 0x031C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsUGCFilter_ReturnValue;                  // 0x032C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x032D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32E[0x2];                                      // 0x032E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_16;           // 0x0330(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_Value_4;                        // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UVerticalBox*>                   K2Node_MakeArray_Array;                            // 0x0348(0x0010)(ReferenceParm, ContainsInstancedReference)
+	TArray<class UVerticalBox*>                   K2Node_MakeArray_Array_1;                          // 0x0358(0x0010)(ReferenceParm, ContainsInstancedReference)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_17;           // 0x0370(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_Value_3;                        // 0x0380(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0388(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_18;           // 0x038C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_5;                         // 0x039C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39D[0x3];                                      // 0x039D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_19;           // 0x03A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_4;                         // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B1[0x3];                                      // 0x03B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(int32 Selection)>              K2Node_CreateDelegate_OutputDelegate_20;           // 0x03B4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_ColorIndex;                     // 0x03C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_Value_2;                        // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_21;           // 0x03D0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UVerticalBox*                           CallFunc_Array_Get_Item_5;                         // 0x03E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWBP_PalCommonButtonBase_C*>     K2Node_MakeArray_Array_2;                          // 0x03E8(0x0010)(ReferenceParm, ContainsInstancedReference)
+	TArray<class UWBP_PalCommonButtonBase_C*>     K2Node_MakeArray_Array_3;                          // 0x03F8(0x0010)(ReferenceParm, ContainsInstancedReference)
+	TDelegate<void(double Value)>                 K2Node_CreateDelegate_OutputDelegate_22;           // 0x0408(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_Value_1;                        // 0x0418(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 Selection)>              K2Node_CreateDelegate_OutputDelegate_23;           // 0x0420(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_Value;                          // 0x0430(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Map_Find_Value;                           // 0x0434(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_439[0x7];                                      // 0x0439(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 CallFunc_Map_Keys_Keys;                            // 0x0440(0x0010)(ReferenceParm)
+	TArray<int32>                                 CallFunc_Map_Values_Values;                        // 0x0450(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x0460(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Get_Item_6;                         // 0x0464(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_3;                         // 0x0468(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_469[0x3];                                      // 0x0469(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_24;           // 0x046C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_25;           // 0x047C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_2;                         // 0x048C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_48D[0x3];                                      // 0x048D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle;              // 0x0490(0x0010)(NoDestructor)
+	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_1;            // 0x04A0(0x0010)(NoDestructor)
+	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_2;            // 0x04B0(0x0010)(NoDestructor)
+	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_3;            // 0x04C0(0x0010)(NoDestructor)
+	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_4;            // 0x04D0(0x0010)(NoDestructor)
+	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_5;            // 0x04E0(0x0010)(NoDestructor)
+	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_6;            // 0x04F0(0x0010)(NoDestructor)
+	bool                                          CallFunc_IsPS5_ReturnValue;                        // 0x0500(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_501[0x7];                                      // 0x0501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetLocalizedTextFromHandle_Text;          // 0x0508(0x0018)()
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_26;           // 0x0520(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn_1;                         // 0x0530(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_531[0x3];                                      // 0x0531(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool IsOn)>                    K2Node_CreateDelegate_OutputDelegate_27;           // 0x0534(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsOn;                           // 0x0544(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsXSX_ReturnValue;                        // 0x0545(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0546(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_547[0x1];                                      // 0x0547(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UVerticalBox*>                   K2Node_Select_Default_1;                           // 0x0548(0x0010)(ReferenceParm, ContainsInstancedReference)
+	TArray<class UWBP_PalCommonButtonBase_C*>     K2Node_Select_Default_2;                           // 0x0558(0x0010)(ReferenceParm, ContainsInstancedReference)
+	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast;      // 0x0568(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast_1;    // 0x0570(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_SetFieldsInStruct_MouseSensitivity_ImplicitCast; // 0x0578(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_57C[0x4];                                      // 0x057C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SetSlider_Min_ImplicitCast;               // 0x0580(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Max_ImplicitCast;               // 0x0588(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_SetFieldsInStruct_MouseAimSensitivity_ImplicitCast; // 0x0590(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_594[0x4];                                      // 0x0594(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SetSlider_Min_ImplicitCast_1;             // 0x0598(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Max_ImplicitCast_1;             // 0x05A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x05A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast_2;    // 0x05B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast_3;    // 0x05B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x05C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Min_ImplicitCast_2;             // 0x05C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Max_ImplicitCast_2;             // 0x05D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Min_ImplicitCast_3;             // 0x05D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Max_ImplicitCast_3;             // 0x05E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Min_ImplicitCast_4;             // 0x05E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Max_ImplicitCast_4;             // 0x05F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Min_ImplicitCast_5;             // 0x05F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Max_ImplicitCast_5;             // 0x0600(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_SetFieldsInStruct_RightStickAimSensitivity_ImplicitCast; // 0x0608(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_SetFieldsInStruct_RightStickThreshold_ImplicitCast; // 0x060C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_SetFieldsInStruct_LeftStickThreshold_ImplicitCast; // 0x0610(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_SetFieldsInStruct_RightStickSensitivity_ImplicitCast; // 0x0614(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast_4;    // 0x0618(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_Value_ImplicitCast;              // 0x0620(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast_5;    // 0x0628(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetOutline_OutlineOpacity_ImplicitCast;   // 0x0630(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Min_ImplicitCast_6;             // 0x0638(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_Min_ImplicitCast;                // 0x0640(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Max_ImplicitCast_6;             // 0x0648(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_Max_ImplicitCast;                // 0x0650(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_SetFieldsInStruct_DamageTextScale_ImplicitCast; // 0x0658(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_65C[0x4];                                      // 0x065C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SetSlider_CurrentValue_ImplicitCast_6;    // 0x0660(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Min_ImplicitCast_7;             // 0x0668(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Max_ImplicitCast_7;             // 0x0670(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Min_ImplicitCast_8;             // 0x0678(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetSlider_Max_ImplicitCast_8;             // 0x0680(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_SetFieldsInStruct_ReticleOutlineOpacity_ImplicitCast; // 0x0688(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_SetFieldsInStruct_ChatUICloseDelayTime_ImplicitCast; // 0x068C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings) == 0x000008, "Wrong alignment on WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings");
+static_assert(sizeof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings) == 0x000690, "Wrong size on WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, EntryPoint) == 0x000000, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_IsXB1_ReturnValue) == 0x000004, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_IsXB1_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_int_Variable) == 0x000008, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_int_Array_Index_Variable) == 0x000014, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetOptionSubsystem_ReturnValue) == 0x000018, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetOptionSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetOptionSubsystem_ReturnValue_1) == 0x000020, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetOptionSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetCommonSettings_ReturnValue) == 0x000028, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetCommonSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetUISettings_ReturnValue) == 0x000058, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetUISettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetPadSettings_ReturnValue) == 0x000074, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetPadSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetOptionLocalStaticSettings_ReturnValue) == 0x000090, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetOptionLocalStaticSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetKeyboardSettings_ReturnValue) == 0x000138, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetKeyboardSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Next) == 0x00014C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Next' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_bool_Variable) == 0x00014D, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item) == 0x000150, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_bool_Variable_1) == 0x000158, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_int_Variable_1) == 0x00015C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item_1) == 0x000160, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Add_IntInt_ReturnValue_1) == 0x000168, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Greater_IntInt_ReturnValue) == 0x00016C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item_2) == 0x000170, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item_3) == 0x000178, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Length_ReturnValue) == 0x000180, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_byte_Variable) == 0x000184, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Subtract_IntInt_ReturnValue) == 0x000188, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Less_IntInt_ReturnValue) == 0x00018C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x000190, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Index) == 0x000194, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Index' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item_4) == 0x000198, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item_4' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Length_ReturnValue_1) == 0x0001A0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Less_IntInt_ReturnValue_1) == 0x0001A4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate) == 0x0001A8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Not_PreBool_ReturnValue) == 0x0001B8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Not_PreBool_ReturnValue_1) == 0x0001B9, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_15) == 0x0001BA, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_15' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Not_PreBool_ReturnValue_2) == 0x0001BB, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_1) == 0x0001BC, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_10) == 0x0001D0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_10' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_9) == 0x0001D8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_9' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_14) == 0x0001E0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_14' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_13) == 0x0001E1, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_13' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_byte_Variable_1) == 0x0001E2, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_2) == 0x0001E4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_3) == 0x0001F4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, Temp_bool_Variable_2) == 0x000204, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_4) == 0x000208, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetDesiredFocusTarget_Target) == 0x000218, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetDesiredFocusTarget_Target' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetDesiredFocusTarget_Target_1) == 0x000220, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetDesiredFocusTarget_Target_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000228, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000230, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Not_PreBool_ReturnValue_3) == 0x000238, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_5) == 0x00023C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_6) == 0x00024C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_7) == 0x00025C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_8) == 0x00026C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_9) == 0x00027C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_10) == 0x00028C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_11) == 0x00029C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_12) == 0x0002AC, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_12' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Not_PreBool_ReturnValue_4) == 0x0002AD, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_8) == 0x0002B0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_8' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_7) == 0x0002B8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_7' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x0002C0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_6) == 0x0002C8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_6' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x0002D0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_5) == 0x0002D8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_5' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_11) == 0x0002E0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_11' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_10) == 0x0002E1, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_10' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_9) == 0x0002E2, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_9' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_12) == 0x0002E4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_13) == 0x0002F4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_8) == 0x000304, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_8' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Not_PreBool_ReturnValue_5) == 0x000305, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Not_PreBool_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_14) == 0x000308, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_14' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_7) == 0x000318, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_7' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_6) == 0x000319, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_6' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_15) == 0x00031C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_15' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_IsUGCFilter_ReturnValue) == 0x00032C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_IsUGCFilter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_Select_Default) == 0x00032D, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_16) == 0x000330, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_16' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_4) == 0x000340, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_4' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeArray_Array) == 0x000348, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeArray_Array_1) == 0x000358, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000368, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_17) == 0x000370, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_17' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_3) == 0x000380, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_3' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_FTrunc_ReturnValue) == 0x000388, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_18) == 0x00038C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_18' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_5) == 0x00039C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_5' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_19) == 0x0003A0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_19' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_4) == 0x0003B0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_4' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_20) == 0x0003B4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_20' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_ColorIndex) == 0x0003C4, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_ColorIndex' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_2) == 0x0003C8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_2' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_21) == 0x0003D0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_21' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item_5) == 0x0003E0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item_5' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeArray_Array_2) == 0x0003E8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeArray_Array_3) == 0x0003F8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeArray_Array_3' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_22) == 0x000408, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_22' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value_1) == 0x000418, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_23) == 0x000420, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_23' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_Value) == 0x000430, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_Value' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Map_Find_Value) == 0x000434, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Map_Find_ReturnValue) == 0x000438, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Map_Keys_Keys) == 0x000440, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Map_Values_Values) == 0x000450, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Map_Values_Values' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Find_ReturnValue) == 0x000460, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Array_Get_Item_6) == 0x000464, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Array_Get_Item_6' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_3) == 0x000468, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_3' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_24) == 0x00046C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_24' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_25) == 0x00047C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_25' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_2) == 0x00048C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_2' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle) == 0x000490, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle_1) == 0x0004A0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle_2) == 0x0004B0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle_2' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle_3) == 0x0004C0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle_3' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle_4) == 0x0004D0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle_4' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle_5) == 0x0004E0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle_5' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_MakeStruct_DataTableRowHandle_6) == 0x0004F0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_MakeStruct_DataTableRowHandle_6' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_IsPS5_ReturnValue) == 0x000500, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_IsPS5_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_GetLocalizedTextFromHandle_Text) == 0x000508, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_GetLocalizedTextFromHandle_Text' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_26) == 0x000520, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_26' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn_1) == 0x000530, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CreateDelegate_OutputDelegate_27) == 0x000534, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CreateDelegate_OutputDelegate_27' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_CustomEvent_IsOn) == 0x000544, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_CustomEvent_IsOn' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_IsXSX_ReturnValue) == 0x000545, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_IsXSX_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_BooleanOR_ReturnValue) == 0x000546, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_Select_Default_1) == 0x000548, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_Select_Default_2) == 0x000558, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast) == 0x000568, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast_1) == 0x000570, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_MouseSensitivity_ImplicitCast) == 0x000578, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_MouseSensitivity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast) == 0x000580, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast) == 0x000588, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_MouseAimSensitivity_ImplicitCast) == 0x000590, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_MouseAimSensitivity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_1) == 0x000598, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_1) == 0x0005A0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0005A8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast_2) == 0x0005B0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast_3) == 0x0005B8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast_3' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0005C0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_2) == 0x0005C8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_2) == 0x0005D0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_3) == 0x0005D8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_3' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_3) == 0x0005E0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_3' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_4) == 0x0005E8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_4' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_4) == 0x0005F0, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_4' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_5) == 0x0005F8, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_5' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_5) == 0x000600, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_5' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_RightStickAimSensitivity_ImplicitCast) == 0x000608, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_RightStickAimSensitivity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_RightStickThreshold_ImplicitCast) == 0x00060C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_RightStickThreshold_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_LeftStickThreshold_ImplicitCast) == 0x000610, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_LeftStickThreshold_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_RightStickSensitivity_ImplicitCast) == 0x000614, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_RightStickSensitivity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast_4) == 0x000618, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast_4' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetValue_Value_ImplicitCast) == 0x000620, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetValue_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast_5) == 0x000628, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast_5' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetOutline_OutlineOpacity_ImplicitCast) == 0x000630, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetOutline_OutlineOpacity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_6) == 0x000638, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_6' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetValue_Min_ImplicitCast) == 0x000640, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetValue_Min_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_6) == 0x000648, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_6' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetValue_Max_ImplicitCast) == 0x000650, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetValue_Max_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_DamageTextScale_ImplicitCast) == 0x000658, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_DamageTextScale_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_CurrentValue_ImplicitCast_6) == 0x000660, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_CurrentValue_ImplicitCast_6' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_7) == 0x000668, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_7' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_7) == 0x000670, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_7' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Min_ImplicitCast_8) == 0x000678, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Min_ImplicitCast_8' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, CallFunc_SetSlider_Max_ImplicitCast_8) == 0x000680, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::CallFunc_SetSlider_Max_ImplicitCast_8' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_ReticleOutlineOpacity_ImplicitCast) == 0x000688, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_ReticleOutlineOpacity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings, K2Node_SetFieldsInStruct_ChatUICloseDelayTime_ImplicitCast) == 0x00068C, "Member 'WBP_Control_Settings_C_ExecuteUbergraph_WBP_Control_Settings::K2Node_SetFieldsInStruct_ChatUICloseDelayTime_ImplicitCast' has a wrong offset!");
 
 }
 

@@ -17,28 +17,6 @@
 namespace SDK::Params
 {
 
-// Function NavigationSystem.NavRelevantComponent.SetNavigationRelevancy
-// 0x0001 (0x0001 - 0x0000)
-struct NavRelevantComponent_SetNavigationRelevancy final
-{
-public:
-	bool                                          bRelevant;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(NavRelevantComponent_SetNavigationRelevancy) == 0x000001, "Wrong alignment on NavRelevantComponent_SetNavigationRelevancy");
-static_assert(sizeof(NavRelevantComponent_SetNavigationRelevancy) == 0x000001, "Wrong size on NavRelevantComponent_SetNavigationRelevancy");
-static_assert(offsetof(NavRelevantComponent_SetNavigationRelevancy, bRelevant) == 0x000000, "Member 'NavRelevantComponent_SetNavigationRelevancy::bRelevant' has a wrong offset!");
-
-// Function NavigationSystem.NavModifierComponent.SetAreaClass
-// 0x0008 (0x0008 - 0x0000)
-struct NavModifierComponent_SetAreaClass final
-{
-public:
-	TSubclassOf<class UNavArea>                   NewAreaClass;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(NavModifierComponent_SetAreaClass) == 0x000008, "Wrong alignment on NavModifierComponent_SetAreaClass");
-static_assert(sizeof(NavModifierComponent_SetAreaClass) == 0x000008, "Wrong size on NavModifierComponent_SetAreaClass");
-static_assert(offsetof(NavModifierComponent_SetAreaClass, NewAreaClass) == 0x000000, "Member 'NavModifierComponent_SetAreaClass::NewAreaClass' has a wrong offset!");
-
 // Function NavigationSystem.NavigationSystemV1.FindPathToActorSynchronously
 // 0x0048 (0x0048 - 0x0000)
 struct NavigationSystemV1_FindPathToActorSynchronously final
@@ -485,6 +463,28 @@ public:
 static_assert(alignof(NavigationPath_IsValid) == 0x000001, "Wrong alignment on NavigationPath_IsValid");
 static_assert(sizeof(NavigationPath_IsValid) == 0x000001, "Wrong size on NavigationPath_IsValid");
 static_assert(offsetof(NavigationPath_IsValid, ReturnValue) == 0x000000, "Member 'NavigationPath_IsValid::ReturnValue' has a wrong offset!");
+
+// Function NavigationSystem.NavRelevantComponent.SetNavigationRelevancy
+// 0x0001 (0x0001 - 0x0000)
+struct NavRelevantComponent_SetNavigationRelevancy final
+{
+public:
+	bool                                          bRelevant;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(NavRelevantComponent_SetNavigationRelevancy) == 0x000001, "Wrong alignment on NavRelevantComponent_SetNavigationRelevancy");
+static_assert(sizeof(NavRelevantComponent_SetNavigationRelevancy) == 0x000001, "Wrong size on NavRelevantComponent_SetNavigationRelevancy");
+static_assert(offsetof(NavRelevantComponent_SetNavigationRelevancy, bRelevant) == 0x000000, "Member 'NavRelevantComponent_SetNavigationRelevancy::bRelevant' has a wrong offset!");
+
+// Function NavigationSystem.NavModifierComponent.SetAreaClass
+// 0x0008 (0x0008 - 0x0000)
+struct NavModifierComponent_SetAreaClass final
+{
+public:
+	TSubclassOf<class UNavArea>                   NewAreaClass;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(NavModifierComponent_SetAreaClass) == 0x000008, "Wrong alignment on NavModifierComponent_SetAreaClass");
+static_assert(sizeof(NavModifierComponent_SetAreaClass) == 0x000008, "Wrong size on NavModifierComponent_SetAreaClass");
+static_assert(offsetof(NavModifierComponent_SetAreaClass, NewAreaClass) == 0x000000, "Member 'NavModifierComponent_SetAreaClass::NewAreaClass' has a wrong offset!");
 
 // Function NavigationSystem.NavModifierVolume.SetAreaClass
 // 0x0008 (0x0008 - 0x0000)

@@ -199,91 +199,6 @@ static_assert(alignof(LevelSequenceActor_LoadSequence) == 0x000008, "Wrong align
 static_assert(sizeof(LevelSequenceActor_LoadSequence) == 0x000008, "Wrong size on LevelSequenceActor_LoadSequence");
 static_assert(offsetof(LevelSequenceActor_LoadSequence, ReturnValue) == 0x000000, "Member 'LevelSequenceActor_LoadSequence::ReturnValue' has a wrong offset!");
 
-// Function LevelSequence.LevelSequenceDirector.GetBoundActor
-// 0x0020 (0x0020 - 0x0000)
-struct LevelSequenceDirector_GetBoundActor final
-{
-public:
-	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(LevelSequenceDirector_GetBoundActor) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetBoundActor");
-static_assert(sizeof(LevelSequenceDirector_GetBoundActor) == 0x000020, "Wrong size on LevelSequenceDirector_GetBoundActor");
-static_assert(offsetof(LevelSequenceDirector_GetBoundActor, ObjectBinding) == 0x000000, "Member 'LevelSequenceDirector_GetBoundActor::ObjectBinding' has a wrong offset!");
-static_assert(offsetof(LevelSequenceDirector_GetBoundActor, ReturnValue) == 0x000018, "Member 'LevelSequenceDirector_GetBoundActor::ReturnValue' has a wrong offset!");
-
-// Function LevelSequence.LevelSequenceDirector.GetBoundActors
-// 0x0028 (0x0028 - 0x0000)
-struct LevelSequenceDirector_GetBoundActors final
-{
-public:
-	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                         ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(LevelSequenceDirector_GetBoundActors) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetBoundActors");
-static_assert(sizeof(LevelSequenceDirector_GetBoundActors) == 0x000028, "Wrong size on LevelSequenceDirector_GetBoundActors");
-static_assert(offsetof(LevelSequenceDirector_GetBoundActors, ObjectBinding) == 0x000000, "Member 'LevelSequenceDirector_GetBoundActors::ObjectBinding' has a wrong offset!");
-static_assert(offsetof(LevelSequenceDirector_GetBoundActors, ReturnValue) == 0x000018, "Member 'LevelSequenceDirector_GetBoundActors::ReturnValue' has a wrong offset!");
-
-// Function LevelSequence.LevelSequenceDirector.GetBoundObject
-// 0x0020 (0x0020 - 0x0000)
-struct LevelSequenceDirector_GetBoundObject final
-{
-public:
-	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(LevelSequenceDirector_GetBoundObject) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetBoundObject");
-static_assert(sizeof(LevelSequenceDirector_GetBoundObject) == 0x000020, "Wrong size on LevelSequenceDirector_GetBoundObject");
-static_assert(offsetof(LevelSequenceDirector_GetBoundObject, ObjectBinding) == 0x000000, "Member 'LevelSequenceDirector_GetBoundObject::ObjectBinding' has a wrong offset!");
-static_assert(offsetof(LevelSequenceDirector_GetBoundObject, ReturnValue) == 0x000018, "Member 'LevelSequenceDirector_GetBoundObject::ReturnValue' has a wrong offset!");
-
-// Function LevelSequence.LevelSequenceDirector.GetBoundObjects
-// 0x0028 (0x0028 - 0x0000)
-struct LevelSequenceDirector_GetBoundObjects final
-{
-public:
-	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UObject*>                        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(LevelSequenceDirector_GetBoundObjects) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetBoundObjects");
-static_assert(sizeof(LevelSequenceDirector_GetBoundObjects) == 0x000028, "Wrong size on LevelSequenceDirector_GetBoundObjects");
-static_assert(offsetof(LevelSequenceDirector_GetBoundObjects, ObjectBinding) == 0x000000, "Member 'LevelSequenceDirector_GetBoundObjects::ObjectBinding' has a wrong offset!");
-static_assert(offsetof(LevelSequenceDirector_GetBoundObjects, ReturnValue) == 0x000018, "Member 'LevelSequenceDirector_GetBoundObjects::ReturnValue' has a wrong offset!");
-
-// Function LevelSequence.LevelSequenceDirector.GetSequence
-// 0x0008 (0x0008 - 0x0000)
-struct LevelSequenceDirector_GetSequence final
-{
-public:
-	class UMovieSceneSequence*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(LevelSequenceDirector_GetSequence) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetSequence");
-static_assert(sizeof(LevelSequenceDirector_GetSequence) == 0x000008, "Wrong size on LevelSequenceDirector_GetSequence");
-static_assert(offsetof(LevelSequenceDirector_GetSequence, ReturnValue) == 0x000000, "Member 'LevelSequenceDirector_GetSequence::ReturnValue' has a wrong offset!");
-
-// Function LevelSequence.LevelSequenceDirector.GetCurrentTime
-// 0x0010 (0x0010 - 0x0000)
-struct LevelSequenceDirector_GetCurrentTime final
-{
-public:
-	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(LevelSequenceDirector_GetCurrentTime) == 0x000004, "Wrong alignment on LevelSequenceDirector_GetCurrentTime");
-static_assert(sizeof(LevelSequenceDirector_GetCurrentTime) == 0x000010, "Wrong size on LevelSequenceDirector_GetCurrentTime");
-static_assert(offsetof(LevelSequenceDirector_GetCurrentTime, ReturnValue) == 0x000000, "Member 'LevelSequenceDirector_GetCurrentTime::ReturnValue' has a wrong offset!");
-
-// Function LevelSequence.LevelSequenceDirector.GetMasterSequenceTime
-// 0x0010 (0x0010 - 0x0000)
-struct LevelSequenceDirector_GetMasterSequenceTime final
-{
-public:
-	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(LevelSequenceDirector_GetMasterSequenceTime) == 0x000004, "Wrong alignment on LevelSequenceDirector_GetMasterSequenceTime");
-static_assert(sizeof(LevelSequenceDirector_GetMasterSequenceTime) == 0x000010, "Wrong size on LevelSequenceDirector_GetMasterSequenceTime");
-static_assert(offsetof(LevelSequenceDirector_GetMasterSequenceTime, ReturnValue) == 0x000000, "Member 'LevelSequenceDirector_GetMasterSequenceTime::ReturnValue' has a wrong offset!");
-
 // Function LevelSequence.LevelSequence.CopyMetaData
 // 0x0010 (0x0010 - 0x0000)
 struct LevelSequence_CopyMetaData final
@@ -396,6 +311,91 @@ public:
 static_assert(alignof(LevelSequenceBurnIn_GetSettingsClass) == 0x000008, "Wrong alignment on LevelSequenceBurnIn_GetSettingsClass");
 static_assert(sizeof(LevelSequenceBurnIn_GetSettingsClass) == 0x000008, "Wrong size on LevelSequenceBurnIn_GetSettingsClass");
 static_assert(offsetof(LevelSequenceBurnIn_GetSettingsClass, ReturnValue) == 0x000000, "Member 'LevelSequenceBurnIn_GetSettingsClass::ReturnValue' has a wrong offset!");
+
+// Function LevelSequence.LevelSequenceDirector.GetBoundActor
+// 0x0020 (0x0020 - 0x0000)
+struct LevelSequenceDirector_GetBoundActor final
+{
+public:
+	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(LevelSequenceDirector_GetBoundActor) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetBoundActor");
+static_assert(sizeof(LevelSequenceDirector_GetBoundActor) == 0x000020, "Wrong size on LevelSequenceDirector_GetBoundActor");
+static_assert(offsetof(LevelSequenceDirector_GetBoundActor, ObjectBinding) == 0x000000, "Member 'LevelSequenceDirector_GetBoundActor::ObjectBinding' has a wrong offset!");
+static_assert(offsetof(LevelSequenceDirector_GetBoundActor, ReturnValue) == 0x000018, "Member 'LevelSequenceDirector_GetBoundActor::ReturnValue' has a wrong offset!");
+
+// Function LevelSequence.LevelSequenceDirector.GetBoundActors
+// 0x0028 (0x0028 - 0x0000)
+struct LevelSequenceDirector_GetBoundActors final
+{
+public:
+	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(LevelSequenceDirector_GetBoundActors) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetBoundActors");
+static_assert(sizeof(LevelSequenceDirector_GetBoundActors) == 0x000028, "Wrong size on LevelSequenceDirector_GetBoundActors");
+static_assert(offsetof(LevelSequenceDirector_GetBoundActors, ObjectBinding) == 0x000000, "Member 'LevelSequenceDirector_GetBoundActors::ObjectBinding' has a wrong offset!");
+static_assert(offsetof(LevelSequenceDirector_GetBoundActors, ReturnValue) == 0x000018, "Member 'LevelSequenceDirector_GetBoundActors::ReturnValue' has a wrong offset!");
+
+// Function LevelSequence.LevelSequenceDirector.GetBoundObject
+// 0x0020 (0x0020 - 0x0000)
+struct LevelSequenceDirector_GetBoundObject final
+{
+public:
+	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(LevelSequenceDirector_GetBoundObject) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetBoundObject");
+static_assert(sizeof(LevelSequenceDirector_GetBoundObject) == 0x000020, "Wrong size on LevelSequenceDirector_GetBoundObject");
+static_assert(offsetof(LevelSequenceDirector_GetBoundObject, ObjectBinding) == 0x000000, "Member 'LevelSequenceDirector_GetBoundObject::ObjectBinding' has a wrong offset!");
+static_assert(offsetof(LevelSequenceDirector_GetBoundObject, ReturnValue) == 0x000018, "Member 'LevelSequenceDirector_GetBoundObject::ReturnValue' has a wrong offset!");
+
+// Function LevelSequence.LevelSequenceDirector.GetBoundObjects
+// 0x0028 (0x0028 - 0x0000)
+struct LevelSequenceDirector_GetBoundObjects final
+{
+public:
+	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(LevelSequenceDirector_GetBoundObjects) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetBoundObjects");
+static_assert(sizeof(LevelSequenceDirector_GetBoundObjects) == 0x000028, "Wrong size on LevelSequenceDirector_GetBoundObjects");
+static_assert(offsetof(LevelSequenceDirector_GetBoundObjects, ObjectBinding) == 0x000000, "Member 'LevelSequenceDirector_GetBoundObjects::ObjectBinding' has a wrong offset!");
+static_assert(offsetof(LevelSequenceDirector_GetBoundObjects, ReturnValue) == 0x000018, "Member 'LevelSequenceDirector_GetBoundObjects::ReturnValue' has a wrong offset!");
+
+// Function LevelSequence.LevelSequenceDirector.GetSequence
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceDirector_GetSequence final
+{
+public:
+	class UMovieSceneSequence*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(LevelSequenceDirector_GetSequence) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetSequence");
+static_assert(sizeof(LevelSequenceDirector_GetSequence) == 0x000008, "Wrong size on LevelSequenceDirector_GetSequence");
+static_assert(offsetof(LevelSequenceDirector_GetSequence, ReturnValue) == 0x000000, "Member 'LevelSequenceDirector_GetSequence::ReturnValue' has a wrong offset!");
+
+// Function LevelSequence.LevelSequenceDirector.GetCurrentTime
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceDirector_GetCurrentTime final
+{
+public:
+	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(LevelSequenceDirector_GetCurrentTime) == 0x000004, "Wrong alignment on LevelSequenceDirector_GetCurrentTime");
+static_assert(sizeof(LevelSequenceDirector_GetCurrentTime) == 0x000010, "Wrong size on LevelSequenceDirector_GetCurrentTime");
+static_assert(offsetof(LevelSequenceDirector_GetCurrentTime, ReturnValue) == 0x000000, "Member 'LevelSequenceDirector_GetCurrentTime::ReturnValue' has a wrong offset!");
+
+// Function LevelSequence.LevelSequenceDirector.GetMasterSequenceTime
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceDirector_GetMasterSequenceTime final
+{
+public:
+	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(LevelSequenceDirector_GetMasterSequenceTime) == 0x000004, "Wrong alignment on LevelSequenceDirector_GetMasterSequenceTime");
+static_assert(sizeof(LevelSequenceDirector_GetMasterSequenceTime) == 0x000010, "Wrong size on LevelSequenceDirector_GetMasterSequenceTime");
+static_assert(offsetof(LevelSequenceDirector_GetMasterSequenceTime, ReturnValue) == 0x000000, "Member 'LevelSequenceDirector_GetMasterSequenceTime::ReturnValue' has a wrong offset!");
 
 // Function LevelSequence.LevelSequenceMediaController.SynchronizeToServer
 // 0x0004 (0x0004 - 0x0000)

@@ -21,8 +21,8 @@ namespace SDK
 class UBP_AIAction_NPC_Combat_Gun_Oilrig_C final : public UBP_AIAction_NPC_Combat_Gun_C
 {
 public:
-	void IsTargetOutOfOilrigRange(bool* OutRange);
 	void AddAllState();
+	void IsTargetOutOfOilrigRange(bool* OutRange);
 	void SwitchTickState();
 
 public:

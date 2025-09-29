@@ -17,9 +17,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_NPC_NewBase.BP_NPC_NewBase_C
-// 0x0000 (0x0A10 - 0x0A10)
-class ABP_NPC_NewBase_C : public APalNPC
+// 0x0010 (0x0A20 - 0x0A10)
+#pragma pack(push, 0x1)
+class alignas(0x10) ABP_NPC_NewBase_C : public APalNPC
 {
+public:
+	class UPalPassiveSkillInvokerComponent*       PalPassiveSkillInvoker;                            // 0x0A10(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -30,8 +34,10 @@ public:
 		return GetDefaultObjImpl<ABP_NPC_NewBase_C>();
 	}
 };
+#pragma pack(pop)
 static_assert(alignof(ABP_NPC_NewBase_C) == 0x000010, "Wrong alignment on ABP_NPC_NewBase_C");
-static_assert(sizeof(ABP_NPC_NewBase_C) == 0x000A10, "Wrong size on ABP_NPC_NewBase_C");
+static_assert(sizeof(ABP_NPC_NewBase_C) == 0x000A20, "Wrong size on ABP_NPC_NewBase_C");
+static_assert(offsetof(ABP_NPC_NewBase_C, PalPassiveSkillInvoker) == 0x000A10, "Member 'ABP_NPC_NewBase_C::PalPassiveSkillInvoker' has a wrong offset!");
 
 }
 

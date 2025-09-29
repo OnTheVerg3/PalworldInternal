@@ -170,17 +170,6 @@ static_assert(offsetof(FSubmixEffectEQBand, Frequency) == 0x000000, "Member 'FSu
 static_assert(offsetof(FSubmixEffectEQBand, Bandwidth) == 0x000004, "Member 'FSubmixEffectEQBand::Bandwidth' has a wrong offset!");
 static_assert(offsetof(FSubmixEffectEQBand, GainDb) == 0x000008, "Member 'FSubmixEffectEQBand::GainDb' has a wrong offset!");
 
-// ScriptStruct AudioMixer.SubmixEffectSubmixEQSettings
-// 0x0010 (0x0010 - 0x0000)
-struct FSubmixEffectSubmixEQSettings final
-{
-public:
-	TArray<struct FSubmixEffectEQBand>            EQBands;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSubmixEffectSubmixEQSettings) == 0x000008, "Wrong alignment on FSubmixEffectSubmixEQSettings");
-static_assert(sizeof(FSubmixEffectSubmixEQSettings) == 0x000010, "Wrong size on FSubmixEffectSubmixEQSettings");
-static_assert(offsetof(FSubmixEffectSubmixEQSettings, EQBands) == 0x000000, "Member 'FSubmixEffectSubmixEQSettings::EQBands' has a wrong offset!");
-
 // ScriptStruct AudioMixer.AudioOutputDeviceInfo
 // 0x0048 (0x0048 - 0x0000)
 struct FAudioOutputDeviceInfo final
@@ -287,6 +276,17 @@ static_assert(offsetof(FSubmixEffectDynamicsProcessorSettings, KeyGainDb) == 0x0
 static_assert(offsetof(FSubmixEffectDynamicsProcessorSettings, OutputGainDb) == 0x000040, "Member 'FSubmixEffectDynamicsProcessorSettings::OutputGainDb' has a wrong offset!");
 static_assert(offsetof(FSubmixEffectDynamicsProcessorSettings, KeyHighshelf) == 0x000044, "Member 'FSubmixEffectDynamicsProcessorSettings::KeyHighshelf' has a wrong offset!");
 static_assert(offsetof(FSubmixEffectDynamicsProcessorSettings, KeyLowshelf) == 0x000050, "Member 'FSubmixEffectDynamicsProcessorSettings::KeyLowshelf' has a wrong offset!");
+
+// ScriptStruct AudioMixer.SubmixEffectSubmixEQSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FSubmixEffectSubmixEQSettings final
+{
+public:
+	TArray<struct FSubmixEffectEQBand>            EQBands;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSubmixEffectSubmixEQSettings) == 0x000008, "Wrong alignment on FSubmixEffectSubmixEQSettings");
+static_assert(sizeof(FSubmixEffectSubmixEQSettings) == 0x000010, "Wrong size on FSubmixEffectSubmixEQSettings");
+static_assert(offsetof(FSubmixEffectSubmixEQSettings, EQBands) == 0x000000, "Member 'FSubmixEffectSubmixEQSettings::EQBands' has a wrong offset!");
 
 // ScriptStruct AudioMixer.SubmixEffectReverbSettings
 // 0x0040 (0x0040 - 0x0000)

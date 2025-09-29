@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Title_SettingsButton.WBP_Title_SettingsButton_C
-// 0x0090 (0x0308 - 0x0278)
+// 0x00A0 (0x0318 - 0x0278)
 class UWBP_Title_SettingsButton_C final : public UUserWidget
 {
 public:
@@ -39,6 +39,7 @@ public:
 	struct FPalDataTableRowName_UIInputAction     DisplayActionName;                                 // 0x02E0(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void()>              OnClicked;                                         // 0x02E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	struct FDataTableRowHandle                    MsgID;                                             // 0x02F8(0x0010)(Edit, BlueprintVisible, NoDestructor)
+	TMulticastInlineDelegate<void(class UWBP_Title_SettingsButton_C* Widget)> OnHovered;             // 0x0308(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void OnInitialized();
@@ -58,7 +59,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_Title_SettingsButton_C) == 0x000008, "Wrong alignment on UWBP_Title_SettingsButton_C");
-static_assert(sizeof(UWBP_Title_SettingsButton_C) == 0x000308, "Wrong size on UWBP_Title_SettingsButton_C");
+static_assert(sizeof(UWBP_Title_SettingsButton_C) == 0x000318, "Wrong size on UWBP_Title_SettingsButton_C");
 static_assert(offsetof(UWBP_Title_SettingsButton_C, UberGraphFrame) == 0x000278, "Member 'UWBP_Title_SettingsButton_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_SettingsButton_C, Anm_DisableToEnable) == 0x000280, "Member 'UWBP_Title_SettingsButton_C::Anm_DisableToEnable' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_SettingsButton_C, Anm_AttentionNormalToFocus) == 0x000288, "Member 'UWBP_Title_SettingsButton_C::Anm_AttentionNormalToFocus' has a wrong offset!");
@@ -75,6 +76,7 @@ static_assert(offsetof(UWBP_Title_SettingsButton_C, WBP_PalKeyGuideIcon) == 0x00
 static_assert(offsetof(UWBP_Title_SettingsButton_C, DisplayActionName) == 0x0002E0, "Member 'UWBP_Title_SettingsButton_C::DisplayActionName' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_SettingsButton_C, OnClicked) == 0x0002E8, "Member 'UWBP_Title_SettingsButton_C::OnClicked' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_SettingsButton_C, MsgID) == 0x0002F8, "Member 'UWBP_Title_SettingsButton_C::MsgID' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_SettingsButton_C, OnHovered) == 0x000308, "Member 'UWBP_Title_SettingsButton_C::OnHovered' has a wrong offset!");
 
 }
 

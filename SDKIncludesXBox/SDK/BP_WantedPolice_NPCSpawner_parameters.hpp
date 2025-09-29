@@ -1159,7 +1159,7 @@ static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_SetupOwnerAndHandle, K2Node_
 static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_SetupOwnerAndHandle, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_WantedPolice_NPCSpawner_C_SetupOwnerAndHandle::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function BP_WantedPolice_NPCSpawner.BP_WantedPolice_NPCSpawner_C.Spawn
-// 0x0418 (0x0418 - 0x0000)
+// 0x0420 (0x0420 - 0x0000)
 struct BP_WantedPolice_NPCSpawner_C_Spawn final
 {
 public:
@@ -1174,13 +1174,13 @@ public:
 	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  K2Node_MakeStruct_Guid;                            // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x0070(0x0078)(NoDestructor)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00E8(0x0320)()
-	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_409[0x7];                                      // 0x0409(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0410(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00E8(0x0328)()
+	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0418(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_WantedPolice_NPCSpawner_C_Spawn) == 0x000008, "Wrong alignment on BP_WantedPolice_NPCSpawner_C_Spawn");
-static_assert(sizeof(BP_WantedPolice_NPCSpawner_C_Spawn) == 0x000418, "Wrong size on BP_WantedPolice_NPCSpawner_C_Spawn");
+static_assert(sizeof(BP_WantedPolice_NPCSpawner_C_Spawn) == 0x000420, "Wrong size on BP_WantedPolice_NPCSpawner_C_Spawn");
 static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_Spawn, Temp_object_Variable) == 0x000000, "Member 'BP_WantedPolice_NPCSpawner_C_Spawn::Temp_object_Variable' has a wrong offset!");
 static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_Spawn, CallFunc_FindSpawnLocation_Location) == 0x000008, "Member 'BP_WantedPolice_NPCSpawner_C_Spawn::CallFunc_FindSpawnLocation_Location' has a wrong offset!");
 static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_Spawn, CallFunc_FindSpawnLocation_IsSuccess) == 0x000020, "Member 'BP_WantedPolice_NPCSpawner_C_Spawn::CallFunc_FindSpawnLocation_IsSuccess' has a wrong offset!");
@@ -1191,8 +1191,8 @@ static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_Spawn, CallFunc_GetLocalPlay
 static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_Spawn, K2Node_MakeStruct_Guid) == 0x000060, "Member 'BP_WantedPolice_NPCSpawner_C_Spawn::K2Node_MakeStruct_Guid' has a wrong offset!");
 static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_Spawn, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x000070, "Member 'BP_WantedPolice_NPCSpawner_C_Spawn::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
 static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_Spawn, CallFunc_GetInitializedCharacterSaveParemter_outParameter) == 0x0000E8, "Member 'BP_WantedPolice_NPCSpawner_C_Spawn::CallFunc_GetInitializedCharacterSaveParemter_outParameter' has a wrong offset!");
-static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_Spawn, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000408, "Member 'BP_WantedPolice_NPCSpawner_C_Spawn::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_Spawn, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000410, "Member 'BP_WantedPolice_NPCSpawner_C_Spawn::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_Spawn, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000410, "Member 'BP_WantedPolice_NPCSpawner_C_Spawn::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WantedPolice_NPCSpawner_C_Spawn, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000418, "Member 'BP_WantedPolice_NPCSpawner_C_Spawn::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
 
 // Function BP_WantedPolice_NPCSpawner.BP_WantedPolice_NPCSpawner_C.SpawnDelegate
 // 0x00F0 (0x00F0 - 0x0000)

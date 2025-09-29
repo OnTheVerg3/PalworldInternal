@@ -20,7 +20,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_UniqueSkillModule_Tackle.BP_UniqueSkillModule_Tackle_C
 // 0x00E0 (0x0118 - 0x0038)
-class UBP_UniqueSkillModule_Tackle_C : public UPalUniqueSkillModule
+class UBP_UniqueSkillModule_Tackle_C final : public UPalUniqueSkillModule
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0038(0x0008)(ZeroConstructor, Transient, DuplicateTransient)

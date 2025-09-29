@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Pal_structs.hpp"
 #include "WBP_PalItemSlotButtonBase_classes.hpp"
 #include "UMG_structs.hpp"
 

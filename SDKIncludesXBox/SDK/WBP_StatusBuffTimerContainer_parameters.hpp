@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function WBP_StatusBuffTimerContainer.WBP_StatusBuffTimerContainer_C.ExecuteUbergraph_WBP_StatusBuffTimerContainer
-// 0x0480 (0x0480 - 0x0000)
+// 0x0488 (0x0488 - 0x0000)
 struct WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer final
 {
 public:
@@ -41,29 +41,29 @@ public:
 	class UPalIndividualCharacterParameter*       K2Node_CustomEvent_IndividualParam;                // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x0058(0x0320)(ConstParm)
-	bool                                          CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue; // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_379[0x7];                                      // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalFoodRegeneInfo                     CallFunc_GetRegeneItemName_ReturnValue;            // 0x0380(0x0020)()
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x03A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A1[0x7];                                      // 0x03A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalStatusEffectFoodDataRow            CallFunc_GetDataTableRowFromName_OutRow;           // 0x03A8(0x0028)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D1[0x3];                                      // 0x03D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetEffectFoodName_ReturnValue;            // 0x03D4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DC[0x4];                                      // 0x03DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalStatusEffectFoodDataRow            CallFunc_GetDataTableRowFromName_OutRow_1;         // 0x03E0(0x0028)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue_1;    // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0409(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40A[0x6];                                      // 0x040A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<EPalFoodStatusEffectType, int32>         K2Node_MakeMap_Map;                                // 0x0410(0x0050)()
-	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue;      // 0x0460(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue_1;   // 0x0468(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWBP_InventoryEquipment_StatusBuffTimer_C* CallFunc_Create_ReturnValue_1;                  // 0x0470(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue_1;    // 0x0478(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x0058(0x0328)(ConstParm)
+	bool                                          CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue; // 0x0380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPalFoodRegeneInfo                     CallFunc_GetRegeneItemName_ReturnValue;            // 0x0388(0x0020)()
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPalStatusEffectFoodDataRow            CallFunc_GetDataTableRowFromName_OutRow;           // 0x03B0(0x0028)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D9[0x3];                                      // 0x03D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetEffectFoodName_ReturnValue;            // 0x03DC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPalStatusEffectFoodDataRow            CallFunc_GetDataTableRowFromName_OutRow_1;         // 0x03E8(0x0028)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue_1;    // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0411(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_412[0x6];                                      // 0x0412(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EPalFoodStatusEffectType, int32>         K2Node_MakeMap_Map;                                // 0x0418(0x0050)()
+	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue;      // 0x0468(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue_1;   // 0x0470(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWBP_InventoryEquipment_StatusBuffTimer_C* CallFunc_Create_ReturnValue_1;                  // 0x0478(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue_1;    // 0x0480(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer) == 0x000008, "Wrong alignment on WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer");
-static_assert(sizeof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer) == 0x000480, "Wrong size on WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer");
+static_assert(sizeof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer) == 0x000488, "Wrong size on WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer");
 static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, EntryPoint) == 0x000000, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, Temp_int_Array_Index_Variable) == 0x000004, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -81,20 +81,20 @@ static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_Statu
 static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, K2Node_CustomEvent_IndividualParam) == 0x000048, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::K2Node_CustomEvent_IndividualParam' has a wrong offset!");
 static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_Greater_IntInt_ReturnValue) == 0x000050, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetSaveParameter_ReturnValue) == 0x000058, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetSaveParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue) == 0x000378, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetRegeneItemName_ReturnValue) == 0x000380, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetRegeneItemName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_BooleanAND_ReturnValue) == 0x0003A0, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetDataTableRowFromName_OutRow) == 0x0003A8, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0003D0, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetEffectFoodName_ReturnValue) == 0x0003D4, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetEffectFoodName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetDataTableRowFromName_OutRow_1) == 0x0003E0, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetDataTableRowFromName_OutRow_1' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetDataTableRowFromName_ReturnValue_1) == 0x000408, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetDataTableRowFromName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000409, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, K2Node_MakeMap_Map) == 0x000410, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::K2Node_MakeMap_Map' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_AddChildToHorizontalBox_ReturnValue) == 0x000460, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_AddChildToHorizontalBox_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetLocalPlayerController_ReturnValue_1) == 0x000468, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetLocalPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_Create_ReturnValue_1) == 0x000470, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_Create_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_AddChildToHorizontalBox_ReturnValue_1) == 0x000478, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_AddChildToHorizontalBox_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue) == 0x000380, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetRegeneItemName_ReturnValue) == 0x000388, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetRegeneItemName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_BooleanAND_ReturnValue) == 0x0003A8, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetDataTableRowFromName_OutRow) == 0x0003B0, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0003D8, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetEffectFoodName_ReturnValue) == 0x0003DC, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetEffectFoodName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetDataTableRowFromName_OutRow_1) == 0x0003E8, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetDataTableRowFromName_OutRow_1' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetDataTableRowFromName_ReturnValue_1) == 0x000410, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetDataTableRowFromName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000411, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, K2Node_MakeMap_Map) == 0x000418, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::K2Node_MakeMap_Map' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_AddChildToHorizontalBox_ReturnValue) == 0x000468, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_AddChildToHorizontalBox_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_GetLocalPlayerController_ReturnValue_1) == 0x000470, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_GetLocalPlayerController_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_Create_ReturnValue_1) == 0x000478, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_Create_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer, CallFunc_AddChildToHorizontalBox_ReturnValue_1) == 0x000480, "Member 'WBP_StatusBuffTimerContainer_C_ExecuteUbergraph_WBP_StatusBuffTimerContainer::CallFunc_AddChildToHorizontalBox_ReturnValue_1' has a wrong offset!");
 
 // Function WBP_StatusBuffTimerContainer.WBP_StatusBuffTimerContainer_C.UpdateCharacterBuff
 // 0x0008 (0x0008 - 0x0000)

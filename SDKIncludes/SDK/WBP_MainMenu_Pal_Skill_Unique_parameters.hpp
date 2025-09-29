@@ -19,51 +19,51 @@ namespace SDK::Params
 {
 
 // Function WBP_MainMenu_Pal_Skill_Unique.WBP_MainMenu_Pal_Skill_Unique_C.SetupBySaveParameter
-// 0x03C0 (0x03C0 - 0x0000)
+// 0x03C8 (0x03C8 - 0x0000)
 struct WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter final
 {
 public:
-	struct FPalIndividualCharacterSaveParameter   Parameter;                                         // 0x0000(0x0320)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          ShowLv;                                            // 0x0320(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0321(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_322[0x2];                                      // 0x0322(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetSaveParameterValue_Rank_ReturnValue;   // 0x0324(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0328(0x0018)()
-	class FName                                   CallFunc_GetSaveParameterValue_CharacterID_ReturnValue; // 0x0340(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_349[0x3];                                      // 0x0349(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetTribeIDNameFromCharacterID_outTribeIDName; // 0x034C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0354(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0355(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_356[0x2];                                      // 0x0356(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0358(0x0014)()
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x036C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36D[0x3];                                      // 0x036D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0370(0x0014)()
-	struct FSlateColor                            K2Node_Select_Default_1;                           // 0x0384(0x0014)()
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x0398(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetPartnerSkillMsgID_OutMsgID;            // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetLocalizedText_ReturnValue;             // 0x03A8(0x0018)()
+	struct FPalIndividualCharacterSaveParameter   Parameter;                                         // 0x0000(0x0328)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          ShowLv;                                            // 0x0328(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0329(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32A[0x2];                                      // 0x032A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetSaveParameterValue_Rank_ReturnValue;   // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0330(0x0018)()
+	class FName                                   CallFunc_GetSaveParameterValue_CharacterID_ReturnValue; // 0x0348(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_351[0x3];                                      // 0x0351(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetTribeIDNameFromCharacterID_outTribeIDName; // 0x0354(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x035C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x035D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35E[0x2];                                      // 0x035E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0360(0x0014)()
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0374(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_375[0x3];                                      // 0x0375(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0378(0x0014)()
+	struct FSlateColor                            K2Node_Select_Default_1;                           // 0x038C(0x0014)()
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x03A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetPartnerSkillMsgID_OutMsgID;            // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetLocalizedText_ReturnValue;             // 0x03B0(0x0018)()
 };
 static_assert(alignof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter) == 0x000008, "Wrong alignment on WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter");
-static_assert(sizeof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter) == 0x0003C0, "Wrong size on WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter");
+static_assert(sizeof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter) == 0x0003C8, "Wrong size on WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter");
 static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, Parameter) == 0x000000, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::Parameter' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, ShowLv) == 0x000320, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::ShowLv' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, Temp_bool_Variable) == 0x000321, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_GetSaveParameterValue_Rank_ReturnValue) == 0x000324, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_GetSaveParameterValue_Rank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_Conv_IntToText_ReturnValue) == 0x000328, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_GetSaveParameterValue_CharacterID_ReturnValue) == 0x000340, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_GetSaveParameterValue_CharacterID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, Temp_bool_Variable_1) == 0x000348, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_GetTribeIDNameFromCharacterID_outTribeIDName) == 0x00034C, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_GetTribeIDNameFromCharacterID_outTribeIDName' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, Temp_byte_Variable) == 0x000354, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, Temp_byte_Variable_1) == 0x000355, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, K2Node_MakeStruct_SlateColor) == 0x000358, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, K2Node_Select_Default) == 0x00036C, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, K2Node_MakeStruct_SlateColor_1) == 0x000370, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, K2Node_Select_Default_1) == 0x000384, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x000398, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_GetPartnerSkillMsgID_OutMsgID) == 0x0003A0, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_GetPartnerSkillMsgID_OutMsgID' has a wrong offset!");
-static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_GetLocalizedText_ReturnValue) == 0x0003A8, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_GetLocalizedText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, ShowLv) == 0x000328, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::ShowLv' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, Temp_bool_Variable) == 0x000329, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_GetSaveParameterValue_Rank_ReturnValue) == 0x00032C, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_GetSaveParameterValue_Rank_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_Conv_IntToText_ReturnValue) == 0x000330, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_GetSaveParameterValue_CharacterID_ReturnValue) == 0x000348, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_GetSaveParameterValue_CharacterID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, Temp_bool_Variable_1) == 0x000350, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_GetTribeIDNameFromCharacterID_outTribeIDName) == 0x000354, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_GetTribeIDNameFromCharacterID_outTribeIDName' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, Temp_byte_Variable) == 0x00035C, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, Temp_byte_Variable_1) == 0x00035D, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, K2Node_MakeStruct_SlateColor) == 0x000360, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::K2Node_MakeStruct_SlateColor' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, K2Node_Select_Default) == 0x000374, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, K2Node_MakeStruct_SlateColor_1) == 0x000378, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, K2Node_Select_Default_1) == 0x00038C, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x0003A0, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_GetPartnerSkillMsgID_OutMsgID) == 0x0003A8, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_GetPartnerSkillMsgID_OutMsgID' has a wrong offset!");
+static_assert(offsetof(WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter, CallFunc_GetLocalizedText_ReturnValue) == 0x0003B0, "Member 'WBP_MainMenu_Pal_Skill_Unique_C_SetupBySaveParameter::CallFunc_GetLocalizedText_ReturnValue' has a wrong offset!");
 
 // Function WBP_MainMenu_Pal_Skill_Unique.WBP_MainMenu_Pal_Skill_Unique_C.SetupFromHandle
 // 0x0070 (0x0070 - 0x0000)

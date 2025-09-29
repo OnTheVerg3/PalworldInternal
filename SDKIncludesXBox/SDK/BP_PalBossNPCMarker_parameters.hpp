@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Pal_structs.hpp"
-#include "ST_RideBossAnimation_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ST_RideBossAnimation_structs.hpp"
 
 
 namespace SDK::Params

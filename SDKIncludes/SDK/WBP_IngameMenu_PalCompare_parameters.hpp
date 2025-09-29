@@ -17,17 +17,17 @@ namespace SDK::Params
 {
 
 // Function WBP_IngameMenu_PalCompare.WBP_IngameMenu_PalCompare_C.SetCompareParameter
-// 0x0640 (0x0640 - 0x0000)
+// 0x0650 (0x0650 - 0x0000)
 struct WBP_IngameMenu_PalCompare_C_SetCompareParameter final
 {
 public:
-	struct FPalIndividualCharacterSaveParameter   OverwriteParameter;                                // 0x0000(0x0320)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FPalIndividualCharacterSaveParameter   OriginalParameter;                                 // 0x0320(0x0320)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FPalIndividualCharacterSaveParameter   OverwriteParameter;                                // 0x0000(0x0328)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FPalIndividualCharacterSaveParameter   OriginalParameter;                                 // 0x0328(0x0328)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_IngameMenu_PalCompare_C_SetCompareParameter) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalCompare_C_SetCompareParameter");
-static_assert(sizeof(WBP_IngameMenu_PalCompare_C_SetCompareParameter) == 0x000640, "Wrong size on WBP_IngameMenu_PalCompare_C_SetCompareParameter");
+static_assert(sizeof(WBP_IngameMenu_PalCompare_C_SetCompareParameter) == 0x000650, "Wrong size on WBP_IngameMenu_PalCompare_C_SetCompareParameter");
 static_assert(offsetof(WBP_IngameMenu_PalCompare_C_SetCompareParameter, OverwriteParameter) == 0x000000, "Member 'WBP_IngameMenu_PalCompare_C_SetCompareParameter::OverwriteParameter' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalCompare_C_SetCompareParameter, OriginalParameter) == 0x000320, "Member 'WBP_IngameMenu_PalCompare_C_SetCompareParameter::OriginalParameter' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalCompare_C_SetCompareParameter, OriginalParameter) == 0x000328, "Member 'WBP_IngameMenu_PalCompare_C_SetCompareParameter::OriginalParameter' has a wrong offset!");
 
 // Function WBP_IngameMenu_PalCompare.WBP_IngameMenu_PalCompare_C.GetCancelButtonFocusTarget
 // 0x0008 (0x0008 - 0x0000)

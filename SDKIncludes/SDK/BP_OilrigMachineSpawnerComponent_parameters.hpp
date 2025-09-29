@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -121,7 +121,7 @@ static_assert(offsetof(BP_OilrigMachineSpawnerComponent_C_SpawnMachine, Location
 static_assert(offsetof(BP_OilrigMachineSpawnerComponent_C_SpawnMachine, Rotate) == 0x000018, "Member 'BP_OilrigMachineSpawnerComponent_C_SpawnMachine::Rotate' has a wrong offset!");
 
 // Function BP_OilrigMachineSpawnerComponent.BP_OilrigMachineSpawnerComponent_C.SpawnMecha
-// 0x0408 (0x0408 - 0x0000)
+// 0x0410 (0x0410 - 0x0000)
 struct BP_OilrigMachineSpawnerComponent_C_SpawnMecha final
 {
 public:
@@ -132,13 +132,13 @@ public:
 	class UPalCharacterManager*                   CallFunc_GetCharacterManager_ReturnValue;          // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x0050(0x0078)(NoDestructor)
 	struct FGuid                                  K2Node_MakeStruct_Guid;                            // 0x00C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00D8(0x0320)()
-	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F9[0x7];                                      // 0x03F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0400(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00D8(0x0328)()
+	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_401[0x7];                                      // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0408(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha) == 0x000008, "Wrong alignment on BP_OilrigMachineSpawnerComponent_C_SpawnMecha");
-static_assert(sizeof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha) == 0x000408, "Wrong size on BP_OilrigMachineSpawnerComponent_C_SpawnMecha");
+static_assert(sizeof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha) == 0x000410, "Wrong size on BP_OilrigMachineSpawnerComponent_C_SpawnMecha");
 static_assert(offsetof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha, Location) == 0x000000, "Member 'BP_OilrigMachineSpawnerComponent_C_SpawnMecha::Location' has a wrong offset!");
 static_assert(offsetof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha, Rotate) == 0x000018, "Member 'BP_OilrigMachineSpawnerComponent_C_SpawnMecha::Rotate' has a wrong offset!");
 static_assert(offsetof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha, K2Node_CreateDelegate_OutputDelegate) == 0x000030, "Member 'BP_OilrigMachineSpawnerComponent_C_SpawnMecha::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
@@ -147,8 +147,8 @@ static_assert(offsetof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha, CallFunc_G
 static_assert(offsetof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x000050, "Member 'BP_OilrigMachineSpawnerComponent_C_SpawnMecha::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
 static_assert(offsetof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha, K2Node_MakeStruct_Guid) == 0x0000C8, "Member 'BP_OilrigMachineSpawnerComponent_C_SpawnMecha::K2Node_MakeStruct_Guid' has a wrong offset!");
 static_assert(offsetof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha, CallFunc_GetInitializedCharacterSaveParemter_outParameter) == 0x0000D8, "Member 'BP_OilrigMachineSpawnerComponent_C_SpawnMecha::CallFunc_GetInitializedCharacterSaveParemter_outParameter' has a wrong offset!");
-static_assert(offsetof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x0003F8, "Member 'BP_OilrigMachineSpawnerComponent_C_SpawnMecha::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000400, "Member 'BP_OilrigMachineSpawnerComponent_C_SpawnMecha::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000400, "Member 'BP_OilrigMachineSpawnerComponent_C_SpawnMecha::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_OilrigMachineSpawnerComponent_C_SpawnMecha, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000408, "Member 'BP_OilrigMachineSpawnerComponent_C_SpawnMecha::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
 
 }
 

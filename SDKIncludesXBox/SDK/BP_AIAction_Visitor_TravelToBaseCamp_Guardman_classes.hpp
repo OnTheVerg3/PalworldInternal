@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "BP_AIAction_CanCombatBase_classes.hpp"
 #include "Pal_structs.hpp"
+#include "BP_AIAction_CanCombatBase_classes.hpp"
 
 
 namespace SDK
@@ -42,7 +42,6 @@ public:
 	void ActionStart(class APawn* ControlledPawn);
 	void ActionTick(class APawn* ControlledPawn, float DeltaSeconds);
 	void ExecuteUbergraph_BP_AIAction_Visitor_TravelToBaseCamp_Guardman(int32 EntryPoint);
-	void Fun_Damage_AIResponse(const struct FPalDamageResult& DamageResult);
 	void IsVisitorLeaderTalking(bool* IsTalking);
 	void OnLeaderArrived();
 	void SightCheckAndResponse(EPalAIResponseType Current, bool OverrideIsDamage, bool* ChangeNextAction);

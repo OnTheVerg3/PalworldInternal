@@ -10,17 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "Pal_classes.hpp"
 #include "CommonUser_structs.hpp"
 #include "Engine_structs.hpp"
 #include "E_PalUITitleMenuButtonType_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Pal_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TItle.WBP_TItle_C
-// 0x0058 (0x0478 - 0x0420)
+// 0x0090 (0x04B0 - 0x0420)
 class UWBP_TItle_C final : public UPalUITitleBase
 {
 public:
@@ -31,13 +32,16 @@ public:
 	uint8                                         Pad_439[0x7];                                      // 0x0439(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULoadingProcessTask*                    CurrentLoadingScreen;                              // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UWBP_LoadingScreen_Transition_C*        CurrentWidget;                                     // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_Title_MenuButton_C*                LastClickedButton;                                 // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    CrossPlayNetworkErrorMsgID;                        // 0x0458(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	class UPalHUDDispatchParameterBase*           TermsWindowParameter;                              // 0x0468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         TermsOfUseAgreementNumber;                         // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    CrossPlayNetworkErrorMsgID;                        // 0x0450(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class UPalHUDDispatchParameterBase*           TermsWindowParameter;                              // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         TermsOfUseAgreementNumber;                         // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46C[0x4];                                      // 0x046C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UWBP_Title_MenuButton_C> SoftLastClickedButton;                             // 0x0470(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, InstancedReference, HasGetValueTypeHash)
+	struct FGuid                                  pushedWidgetID;                                    // 0x04A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void WBP_TItle_AutoGenFunc(bool bResult);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void SwitchUser();
 	void SetupForSteamDeck();
 	void OpenQuitGameDialog();
@@ -66,17 +70,18 @@ public:
 	}
 };
 static_assert(alignof(UWBP_TItle_C) == 0x000008, "Wrong alignment on UWBP_TItle_C");
-static_assert(sizeof(UWBP_TItle_C) == 0x000478, "Wrong size on UWBP_TItle_C");
+static_assert(sizeof(UWBP_TItle_C) == 0x0004B0, "Wrong size on UWBP_TItle_C");
 static_assert(offsetof(UWBP_TItle_C, UberGraphFrame) == 0x000420, "Member 'UWBP_TItle_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_TItle_C, WBP_Title_MenuBG) == 0x000428, "Member 'UWBP_TItle_C::WBP_Title_MenuBG' has a wrong offset!");
 static_assert(offsetof(UWBP_TItle_C, WBP_TitleMenu) == 0x000430, "Member 'UWBP_TItle_C::WBP_TitleMenu' has a wrong offset!");
 static_assert(offsetof(UWBP_TItle_C, Requested_Privilege) == 0x000438, "Member 'UWBP_TItle_C::Requested_Privilege' has a wrong offset!");
 static_assert(offsetof(UWBP_TItle_C, CurrentLoadingScreen) == 0x000440, "Member 'UWBP_TItle_C::CurrentLoadingScreen' has a wrong offset!");
 static_assert(offsetof(UWBP_TItle_C, CurrentWidget) == 0x000448, "Member 'UWBP_TItle_C::CurrentWidget' has a wrong offset!");
-static_assert(offsetof(UWBP_TItle_C, LastClickedButton) == 0x000450, "Member 'UWBP_TItle_C::LastClickedButton' has a wrong offset!");
-static_assert(offsetof(UWBP_TItle_C, CrossPlayNetworkErrorMsgID) == 0x000458, "Member 'UWBP_TItle_C::CrossPlayNetworkErrorMsgID' has a wrong offset!");
-static_assert(offsetof(UWBP_TItle_C, TermsWindowParameter) == 0x000468, "Member 'UWBP_TItle_C::TermsWindowParameter' has a wrong offset!");
-static_assert(offsetof(UWBP_TItle_C, TermsOfUseAgreementNumber) == 0x000470, "Member 'UWBP_TItle_C::TermsOfUseAgreementNumber' has a wrong offset!");
+static_assert(offsetof(UWBP_TItle_C, CrossPlayNetworkErrorMsgID) == 0x000450, "Member 'UWBP_TItle_C::CrossPlayNetworkErrorMsgID' has a wrong offset!");
+static_assert(offsetof(UWBP_TItle_C, TermsWindowParameter) == 0x000460, "Member 'UWBP_TItle_C::TermsWindowParameter' has a wrong offset!");
+static_assert(offsetof(UWBP_TItle_C, TermsOfUseAgreementNumber) == 0x000468, "Member 'UWBP_TItle_C::TermsOfUseAgreementNumber' has a wrong offset!");
+static_assert(offsetof(UWBP_TItle_C, SoftLastClickedButton) == 0x000470, "Member 'UWBP_TItle_C::SoftLastClickedButton' has a wrong offset!");
+static_assert(offsetof(UWBP_TItle_C, pushedWidgetID) == 0x0004A0, "Member 'UWBP_TItle_C::pushedWidgetID' has a wrong offset!");
 
 }
 

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Pal_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Pal_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -104,52 +104,56 @@ static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ClearExtraUIDisplay, CallF
 struct WBP_IngameMenu_PalBox_Preset_C_DeletePreset final
 {
 public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalGameSetting*                        CallFunc_GetGameSetting_ReturnValue;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DeletePresetData_ReturnValue;             // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F[0x1];                                       // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0030(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          bAlreadyFullPreset;                                // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalGameSetting*                        CallFunc_GetGameSetting_ReturnValue;               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DeletePresetData_ReturnValue;             // 0x0027(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0038(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_IngameMenu_PalBox_PresetList_C*    K2Node_DynamicCast_AsWBP_Ingame_Menu_Pal_Box_Preset_List; // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBox_Preset_C_DeletePreset");
 static_assert(sizeof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset) == 0x000070, "Wrong size on WBP_IngameMenu_PalBox_Preset_C_DeletePreset");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_GetGameSetting_ReturnValue) == 0x000010, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_GetGameSetting_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Add_IntInt_ReturnValue_1) == 0x000018, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x00001C, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00001D, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_DeletePresetData_ReturnValue) == 0x00001E, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_DeletePresetData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000024, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_GetChildrenCount_ReturnValue) == 0x000028, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_GetAllChildren_ReturnValue) == 0x000030, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Subtract_IntInt_ReturnValue) == 0x000040, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Array_Get_Item) == 0x000048, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_GetChildAt_ReturnValue) == 0x000050, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, bAlreadyFullPreset) == 0x000000, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::bAlreadyFullPreset' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, Temp_int_Array_Index_Variable) == 0x000004, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_GetGameSetting_ReturnValue) == 0x000018, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_GetGameSetting_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Add_IntInt_ReturnValue_1) == 0x000020, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000024, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000025, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000026, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_DeletePresetData_ReturnValue) == 0x000027, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_DeletePresetData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Array_Length_ReturnValue_1) == 0x000028, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_GetChildrenCount_ReturnValue) == 0x00002C, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000030, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Subtract_IntInt_ReturnValue) == 0x000034, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_GetAllChildren_ReturnValue) == 0x000038, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_GetChildAt_ReturnValue) == 0x000048, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Array_Get_Item) == 0x000050, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, K2Node_DynamicCast_AsWBP_Ingame_Menu_Pal_Box_Preset_List) == 0x000058, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::K2Node_DynamicCast_AsWBP_Ingame_Menu_Pal_Box_Preset_List' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Array_Length_ReturnValue_1) == 0x000064, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Array_Length_ReturnValue_2) == 0x000064, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_DeletePreset, CallFunc_Less_IntInt_ReturnValue) == 0x000068, "Member 'WBP_IngameMenu_PalBox_Preset_C_DeletePreset::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WBP_IngameMenu_PalBox_Preset.WBP_IngameMenu_PalBox_Preset_C.ExecuteUbergraph_WBP_IngameMenu_PalBox_Preset
@@ -482,28 +486,28 @@ static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_SetupListWidget, K2Node_Cr
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_SetupListWidget, K2Node_CreateDelegate_OutputDelegate_6) == 0x000094, "Member 'WBP_IngameMenu_PalBox_Preset_C_SetupListWidget::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
 
 // Function WBP_IngameMenu_PalBox_Preset.WBP_IngameMenu_PalBox_Preset_C.Show Character Detail
-// 0x0390 (0x0390 - 0x0000)
+// 0x0398 (0x0398 - 0x0000)
 struct WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail final
 {
 public:
 	int32                                         LoadoutIndex;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CharaIndex;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FPalOtomoLoadoutData                   CallFunc_Array_Get_Item;                           // 0x0008(0x0020)()
-	struct FPalOtomoLoadoutElementData            CallFunc_Array_Get_Item_1;                         // 0x0028(0x0358)()
-	class UPalIndividualCharacterHandle*          CallFunc_Map_Find_Value;                           // 0x0380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalOtomoLoadoutElementData            CallFunc_Array_Get_Item_1;                         // 0x0028(0x0360)()
+	class UPalIndividualCharacterHandle*          CallFunc_Map_Find_Value;                           // 0x0388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail");
-static_assert(sizeof(WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail) == 0x000390, "Wrong size on WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail");
+static_assert(sizeof(WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail) == 0x000398, "Wrong size on WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail, LoadoutIndex) == 0x000000, "Member 'WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail::LoadoutIndex' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail, CharaIndex) == 0x000004, "Member 'WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail::CharaIndex' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail, CallFunc_Array_Get_Item) == 0x000008, "Member 'WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail, CallFunc_Array_Get_Item_1) == 0x000028, "Member 'WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail, CallFunc_Map_Find_Value) == 0x000380, "Member 'WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail, CallFunc_Map_Find_ReturnValue) == 0x000388, "Member 'WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail, CallFunc_Map_Find_Value) == 0x000388, "Member 'WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail, CallFunc_Map_Find_ReturnValue) == 0x000390, "Member 'WBP_IngameMenu_PalBox_Preset_C_Show_Character_Detail::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 
 // Function WBP_IngameMenu_PalBox_Preset.WBP_IngameMenu_PalBox_Preset_C.ToggleIndividualParamReplicate
-// 0x0418 (0x0418 - 0x0000)
+// 0x0420 (0x0420 - 0x0000)
 struct WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate final
 {
 public:
@@ -530,15 +534,15 @@ public:
 	struct FPalOtomoLoadoutData                   CallFunc_Array_Get_Item_1;                         // 0x0080(0x0020)()
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalOtomoLoadoutElementData            CallFunc_Array_Get_Item_2;                         // 0x00A8(0x0358)()
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_401[0x3];                                      // 0x0401(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0404(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPalIndividualCharacterHandleReference* CallFunc_GetIndividualHandleReference_ReturnValue; // 0x0408(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalOtomoLoadoutElementData            CallFunc_Array_Get_Item_2;                         // 0x00A8(0x0360)()
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_409[0x3];                                      // 0x0409(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x040C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPalIndividualCharacterHandleReference* CallFunc_GetIndividualHandleReference_ReturnValue; // 0x0410(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate");
-static_assert(sizeof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate) == 0x000418, "Wrong size on WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate");
+static_assert(sizeof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate) == 0x000420, "Wrong size on WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, Replicate) == 0x000000, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::Replicate' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, Temp_int_Array_Index_Variable) == 0x000004, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -556,10 +560,10 @@ static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamRepli
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, CallFunc_Array_Get_Item_1) == 0x000080, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::CallFunc_Array_Get_Item_1' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, CallFunc_Array_Length_ReturnValue_1) == 0x0000A0, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, CallFunc_Array_Get_Item_2) == 0x0000A8, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, CallFunc_Less_IntInt_ReturnValue_1) == 0x000400, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, CallFunc_Array_Add_ReturnValue) == 0x000404, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, CallFunc_GetIndividualHandleReference_ReturnValue) == 0x000408, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::CallFunc_GetIndividualHandleReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, CallFunc_IsValid_ReturnValue) == 0x000410, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, CallFunc_Less_IntInt_ReturnValue_1) == 0x000408, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, CallFunc_Array_Add_ReturnValue) == 0x00040C, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, CallFunc_GetIndividualHandleReference_ReturnValue) == 0x000410, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::CallFunc_GetIndividualHandleReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate, CallFunc_IsValid_ReturnValue) == 0x000418, "Member 'WBP_IngameMenu_PalBox_Preset_C_ToggleIndividualParamReplicate::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function WBP_IngameMenu_PalBox_Preset.WBP_IngameMenu_PalBox_Preset_C.BP_GetDesiredFocusTarget
 // 0x0040 (0x0040 - 0x0000)

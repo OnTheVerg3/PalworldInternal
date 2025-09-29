@@ -95,10 +95,10 @@ public:
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x03E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x03E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3E5[0x3];                                      // 0x03E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x03E8(0x0320)()
-	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0708(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_709[0x7];                                      // 0x0709(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0710(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x03E8(0x0328)()
+	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0710(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_711[0x7];                                      // 0x0711(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0718(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase) == 0x000010, "Wrong alignment on BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase");
 static_assert(sizeof(BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase) == 0x000720, "Wrong size on BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase");
@@ -152,8 +152,8 @@ static_assert(offsetof(BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_Yakush
 static_assert(offsetof(BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase, K2Node_Event_DeltaSeconds) == 0x0003E0, "Member 'BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase::K2Node_Event_DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase, CallFunc_IsDedicatedServer_ReturnValue) == 0x0003E4, "Member 'BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase, CallFunc_GetInitializedCharacterSaveParemter_outParameter) == 0x0003E8, "Member 'BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase::CallFunc_GetInitializedCharacterSaveParemter_outParameter' has a wrong offset!");
-static_assert(offsetof(BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000708, "Member 'BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000710, "Member 'BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000710, "Member 'BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000718, "Member 'BP_YakushimaBoss002_PartBase_C_ExecuteUbergraph_BP_YakushimaBoss002_PartBase::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
 
 // Function BP_YakushimaBoss002_PartBase.BP_YakushimaBoss002_PartBase_C.GetPartsType
 // 0x0010 (0x0010 - 0x0000)

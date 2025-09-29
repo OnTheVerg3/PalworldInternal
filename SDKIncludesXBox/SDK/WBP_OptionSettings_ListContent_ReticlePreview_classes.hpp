@@ -29,9 +29,9 @@ public:
 	class UImage*                                 Image_Reticle_1;                                   // 0x0298(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_OptionSettings_ListContent_ReticlePreview(int32 EntryPoint);
-	void SetOutline(double OutlineOpacity);
 	void SetReticleColor(int32 ColorIndex);
+	void SetOutline(double OutlineOpacity);
+	void ExecuteUbergraph_WBP_OptionSettings_ListContent_ReticlePreview(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

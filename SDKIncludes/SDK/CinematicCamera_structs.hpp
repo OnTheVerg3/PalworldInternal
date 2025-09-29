@@ -38,20 +38,6 @@ static_assert(alignof(FPlateCropSettings) == 0x000004, "Wrong alignment on FPlat
 static_assert(sizeof(FPlateCropSettings) == 0x000004, "Wrong size on FPlateCropSettings");
 static_assert(offsetof(FPlateCropSettings, AspectRatio) == 0x000000, "Member 'FPlateCropSettings::AspectRatio' has a wrong offset!");
 
-// ScriptStruct CinematicCamera.NamedPlateCropPreset
-// 0x0018 (0x0018 - 0x0000)
-struct FNamedPlateCropPreset final
-{
-public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPlateCropSettings                     CropSettings;                                      // 0x0010(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FNamedPlateCropPreset) == 0x000008, "Wrong alignment on FNamedPlateCropPreset");
-static_assert(sizeof(FNamedPlateCropPreset) == 0x000018, "Wrong size on FNamedPlateCropPreset");
-static_assert(offsetof(FNamedPlateCropPreset, Name) == 0x000000, "Member 'FNamedPlateCropPreset::Name' has a wrong offset!");
-static_assert(offsetof(FNamedPlateCropPreset, CropSettings) == 0x000010, "Member 'FNamedPlateCropPreset::CropSettings' has a wrong offset!");
-
 // ScriptStruct CinematicCamera.CameraFilmbackSettings
 // 0x000C (0x000C - 0x0000)
 struct FCameraFilmbackSettings final
@@ -117,6 +103,20 @@ static_assert(alignof(FNamedLensPreset) == 0x000008, "Wrong alignment on FNamedL
 static_assert(sizeof(FNamedLensPreset) == 0x000030, "Wrong size on FNamedLensPreset");
 static_assert(offsetof(FNamedLensPreset, Name) == 0x000000, "Member 'FNamedLensPreset::Name' has a wrong offset!");
 static_assert(offsetof(FNamedLensPreset, LensSettings) == 0x000010, "Member 'FNamedLensPreset::LensSettings' has a wrong offset!");
+
+// ScriptStruct CinematicCamera.NamedPlateCropPreset
+// 0x0018 (0x0018 - 0x0000)
+struct FNamedPlateCropPreset final
+{
+public:
+	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPlateCropSettings                     CropSettings;                                      // 0x0010(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FNamedPlateCropPreset) == 0x000008, "Wrong alignment on FNamedPlateCropPreset");
+static_assert(sizeof(FNamedPlateCropPreset) == 0x000018, "Wrong size on FNamedPlateCropPreset");
+static_assert(offsetof(FNamedPlateCropPreset, Name) == 0x000000, "Member 'FNamedPlateCropPreset::Name' has a wrong offset!");
+static_assert(offsetof(FNamedPlateCropPreset, CropSettings) == 0x000010, "Member 'FNamedPlateCropPreset::CropSettings' has a wrong offset!");
 
 // ScriptStruct CinematicCamera.CameraTrackingFocusSettings
 // 0x0050 (0x0050 - 0x0000)

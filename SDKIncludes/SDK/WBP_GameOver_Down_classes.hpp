@@ -45,6 +45,7 @@ public:
 	bool                                          Is_Partner_Skill_Revive;                           // 0x04C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void CencelPartnerSkillReive();
 	void CloseWidget();
 	void Construct();
 	void CustomEvent();

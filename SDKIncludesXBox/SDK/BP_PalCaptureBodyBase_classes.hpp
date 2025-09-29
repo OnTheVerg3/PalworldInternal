@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "E_PalCaptureSphereBouncedReason_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EPalSphereCaptureFailedReason_structs.hpp"
 #include "Pal_classes.hpp"
-#include "E_PalCaptureSphereBouncedReason_structs.hpp"
 
 
 namespace SDK
@@ -21,7 +21,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_PalCaptureBodyBase.BP_PalCaptureBodyBase_C
 // 0x0098 (0x0328 - 0x0290)
-class ABP_PalCaptureBodyBase_C : public APalSphereBodyBase
+class ABP_PalCaptureBodyBase_C final : public APalSphereBodyBase
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)

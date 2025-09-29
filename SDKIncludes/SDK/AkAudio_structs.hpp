@@ -551,6 +551,37 @@ enum class EAkFitToGeometryMode : uint8
 	EAkFitToGeometryMode_MAX                 = 3,
 };
 
+// ScriptStruct AkAudio.AkExternalSourceInfo
+// 0x0038 (0x0038 - 0x0000)
+struct FAkExternalSourceInfo final
+{
+public:
+	class FString                                 ExternalSrcName;                                   // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAkCodecId                                    CodecID;                                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Filename;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAkExternalMediaAsset*                  ExternalSourceAsset;                               // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsStreamed;                                        // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAkExternalSourceInfo) == 0x000008, "Wrong alignment on FAkExternalSourceInfo");
+static_assert(sizeof(FAkExternalSourceInfo) == 0x000038, "Wrong size on FAkExternalSourceInfo");
+static_assert(offsetof(FAkExternalSourceInfo, ExternalSrcName) == 0x000000, "Member 'FAkExternalSourceInfo::ExternalSrcName' has a wrong offset!");
+static_assert(offsetof(FAkExternalSourceInfo, CodecID) == 0x000010, "Member 'FAkExternalSourceInfo::CodecID' has a wrong offset!");
+static_assert(offsetof(FAkExternalSourceInfo, Filename) == 0x000018, "Member 'FAkExternalSourceInfo::Filename' has a wrong offset!");
+static_assert(offsetof(FAkExternalSourceInfo, ExternalSourceAsset) == 0x000028, "Member 'FAkExternalSourceInfo::ExternalSourceAsset' has a wrong offset!");
+static_assert(offsetof(FAkExternalSourceInfo, IsStreamed) == 0x000030, "Member 'FAkExternalSourceInfo::IsStreamed' has a wrong offset!");
+
+// ScriptStruct AkAudio.AKWaapiJsonObject
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FAKWaapiJsonObject final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAKWaapiJsonObject) == 0x000008, "Wrong alignment on FAKWaapiJsonObject");
+static_assert(sizeof(FAKWaapiJsonObject) == 0x000010, "Wrong size on FAKWaapiJsonObject");
+
 // ScriptStruct AkAudio.AkAdvancedInitializationSettings
 // 0x002C (0x002C - 0x0000)
 struct FAkAdvancedInitializationSettings
@@ -585,6 +616,42 @@ static_assert(offsetof(FAkAdvancedInitializationSettings, MaximumHardwareTimeout
 static_assert(offsetof(FAkAdvancedInitializationSettings, DebugOutOfRangeCheckEnabled) == 0x000024, "Member 'FAkAdvancedInitializationSettings::DebugOutOfRangeCheckEnabled' has a wrong offset!");
 static_assert(offsetof(FAkAdvancedInitializationSettings, DebugOutOfRangeLimit) == 0x000028, "Member 'FAkAdvancedInitializationSettings::DebugOutOfRangeLimit' has a wrong offset!");
 
+// ScriptStruct AkAudio.AkMidiEventBase
+// 0x0002 (0x0002 - 0x0000)
+struct FAkMidiEventBase
+{
+public:
+	EAkMidiEventType                              Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Chan;                                              // 0x0001(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAkMidiEventBase) == 0x000001, "Wrong alignment on FAkMidiEventBase");
+static_assert(sizeof(FAkMidiEventBase) == 0x000002, "Wrong size on FAkMidiEventBase");
+static_assert(offsetof(FAkMidiEventBase, Type) == 0x000000, "Member 'FAkMidiEventBase::Type' has a wrong offset!");
+static_assert(offsetof(FAkMidiEventBase, Chan) == 0x000001, "Member 'FAkMidiEventBase::Chan' has a wrong offset!");
+
+// ScriptStruct AkAudio.AkMidiNoteOnOff
+// 0x0002 (0x0004 - 0x0002)
+struct FAkMidiNoteOnOff final : public FAkMidiEventBase
+{
+public:
+	uint8                                         Note;                                              // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Velocity;                                          // 0x0003(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAkMidiNoteOnOff) == 0x000001, "Wrong alignment on FAkMidiNoteOnOff");
+static_assert(sizeof(FAkMidiNoteOnOff) == 0x000004, "Wrong size on FAkMidiNoteOnOff");
+static_assert(offsetof(FAkMidiNoteOnOff, Note) == 0x000002, "Member 'FAkMidiNoteOnOff::Note' has a wrong offset!");
+static_assert(offsetof(FAkMidiNoteOnOff, Velocity) == 0x000003, "Member 'FAkMidiNoteOnOff::Velocity' has a wrong offset!");
+
+// ScriptStruct AkAudio.AkWaapiSubscriptionId
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FAkWaapiSubscriptionId final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAkWaapiSubscriptionId) == 0x000008, "Wrong alignment on FAkWaapiSubscriptionId");
+static_assert(sizeof(FAkWaapiSubscriptionId) == 0x000008, "Wrong size on FAkWaapiSubscriptionId");
+
 // ScriptStruct AkAudio.AkAdvancedInitializationSettingsWithMultiCoreRendering
 // 0x000C (0x0038 - 0x002C)
 struct FAkAdvancedInitializationSettingsWithMultiCoreRendering : public FAkAdvancedInitializationSettings
@@ -601,16 +668,6 @@ static_assert(offsetof(FAkAdvancedInitializationSettingsWithMultiCoreRendering, 
 static_assert(offsetof(FAkAdvancedInitializationSettingsWithMultiCoreRendering, MaxNumJobWorkers) == 0x000030, "Member 'FAkAdvancedInitializationSettingsWithMultiCoreRendering::MaxNumJobWorkers' has a wrong offset!");
 static_assert(offsetof(FAkAdvancedInitializationSettingsWithMultiCoreRendering, JobWorkerMaxExecutionTimeUSec) == 0x000034, "Member 'FAkAdvancedInitializationSettingsWithMultiCoreRendering::JobWorkerMaxExecutionTimeUSec' has a wrong offset!");
 
-// ScriptStruct AkAudio.AKWaapiJsonObject
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FAKWaapiJsonObject final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAKWaapiJsonObject) == 0x000008, "Wrong alignment on FAKWaapiJsonObject");
-static_assert(sizeof(FAKWaapiJsonObject) == 0x000010, "Wrong size on FAKWaapiJsonObject");
-
 // ScriptStruct AkAudio.AkAndroidAdvancedInitializationSettings
 // 0x0008 (0x0040 - 0x0038)
 struct FAkAndroidAdvancedInitializationSettings final : public FAkAdvancedInitializationSettingsWithMultiCoreRendering
@@ -626,30 +683,6 @@ static_assert(sizeof(FAkAndroidAdvancedInitializationSettings) == 0x000040, "Wro
 static_assert(offsetof(FAkAndroidAdvancedInitializationSettings, AudioAPI) == 0x000038, "Member 'FAkAndroidAdvancedInitializationSettings::AudioAPI' has a wrong offset!");
 static_assert(offsetof(FAkAndroidAdvancedInitializationSettings, RoundFrameSizeToHardwareSize) == 0x00003C, "Member 'FAkAndroidAdvancedInitializationSettings::RoundFrameSizeToHardwareSize' has a wrong offset!");
 static_assert(offsetof(FAkAndroidAdvancedInitializationSettings, UseLowLatencyMode) == 0x00003D, "Member 'FAkAndroidAdvancedInitializationSettings::UseLowLatencyMode' has a wrong offset!");
-
-// ScriptStruct AkAudio.WwiseGeometrySurfacePropertiesRow
-// 0x0038 (0x0040 - 0x0008)
-struct FWwiseGeometrySurfacePropertiesRow final : public FTableRowBase
-{
-public:
-	TSoftObjectPtr<class UAkAcousticTexture>      AcousticTexture;                                   // 0x0008(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TransmissionLoss;                                  // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FWwiseGeometrySurfacePropertiesRow) == 0x000008, "Wrong alignment on FWwiseGeometrySurfacePropertiesRow");
-static_assert(sizeof(FWwiseGeometrySurfacePropertiesRow) == 0x000040, "Wrong size on FWwiseGeometrySurfacePropertiesRow");
-static_assert(offsetof(FWwiseGeometrySurfacePropertiesRow, AcousticTexture) == 0x000008, "Member 'FWwiseGeometrySurfacePropertiesRow::AcousticTexture' has a wrong offset!");
-static_assert(offsetof(FWwiseGeometrySurfacePropertiesRow, TransmissionLoss) == 0x000038, "Member 'FWwiseGeometrySurfacePropertiesRow::TransmissionLoss' has a wrong offset!");
-
-// ScriptStruct AkAudio.AkWaapiSubscriptionId
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FAkWaapiSubscriptionId final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAkWaapiSubscriptionId) == 0x000008, "Wrong alignment on FAkWaapiSubscriptionId");
-static_assert(sizeof(FAkWaapiSubscriptionId) == 0x000008, "Wrong size on FAkWaapiSubscriptionId");
 
 // ScriptStruct AkAudio.AkAudioSession
 // 0x000C (0x000C - 0x0000)
@@ -695,19 +728,6 @@ static_assert(offsetof(FAkOutputSettings, IdDevice) == 0x000010, "Member 'FAkOut
 static_assert(offsetof(FAkOutputSettings, PanRule) == 0x000014, "Member 'FAkOutputSettings::PanRule' has a wrong offset!");
 static_assert(offsetof(FAkOutputSettings, ChannelConfig) == 0x000015, "Member 'FAkOutputSettings::ChannelConfig' has a wrong offset!");
 
-// ScriptStruct AkAudio.AkMidiEventBase
-// 0x0002 (0x0002 - 0x0000)
-struct FAkMidiEventBase
-{
-public:
-	EAkMidiEventType                              Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Chan;                                              // 0x0001(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAkMidiEventBase) == 0x000001, "Wrong alignment on FAkMidiEventBase");
-static_assert(sizeof(FAkMidiEventBase) == 0x000002, "Wrong size on FAkMidiEventBase");
-static_assert(offsetof(FAkMidiEventBase, Type) == 0x000000, "Member 'FAkMidiEventBase::Type' has a wrong offset!");
-static_assert(offsetof(FAkMidiEventBase, Chan) == 0x000001, "Member 'FAkMidiEventBase::Chan' has a wrong offset!");
-
 // ScriptStruct AkAudio.AkMidiGeneric
 // 0x0002 (0x0004 - 0x0002)
 struct FAkMidiGeneric final : public FAkMidiEventBase
@@ -720,19 +740,6 @@ static_assert(alignof(FAkMidiGeneric) == 0x000001, "Wrong alignment on FAkMidiGe
 static_assert(sizeof(FAkMidiGeneric) == 0x000004, "Wrong size on FAkMidiGeneric");
 static_assert(offsetof(FAkMidiGeneric, Param1) == 0x000002, "Member 'FAkMidiGeneric::Param1' has a wrong offset!");
 static_assert(offsetof(FAkMidiGeneric, Param2) == 0x000003, "Member 'FAkMidiGeneric::Param2' has a wrong offset!");
-
-// ScriptStruct AkAudio.AkMidiNoteOnOff
-// 0x0002 (0x0004 - 0x0002)
-struct FAkMidiNoteOnOff final : public FAkMidiEventBase
-{
-public:
-	uint8                                         Note;                                              // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Velocity;                                          // 0x0003(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAkMidiNoteOnOff) == 0x000001, "Wrong alignment on FAkMidiNoteOnOff");
-static_assert(sizeof(FAkMidiNoteOnOff) == 0x000004, "Wrong size on FAkMidiNoteOnOff");
-static_assert(offsetof(FAkMidiNoteOnOff, Note) == 0x000002, "Member 'FAkMidiNoteOnOff::Note' has a wrong offset!");
-static_assert(offsetof(FAkMidiNoteOnOff, Velocity) == 0x000003, "Member 'FAkMidiNoteOnOff::Velocity' has a wrong offset!");
 
 // ScriptStruct AkAudio.AkMidiCc
 // 0x0002 (0x0004 - 0x0002)
@@ -823,27 +830,6 @@ static_assert(offsetof(FAkSegmentInfo, BeatDuration) == 0x000014, "Member 'FAkSe
 static_assert(offsetof(FAkSegmentInfo, BarDuration) == 0x000018, "Member 'FAkSegmentInfo::BarDuration' has a wrong offset!");
 static_assert(offsetof(FAkSegmentInfo, GridDuration) == 0x00001C, "Member 'FAkSegmentInfo::GridDuration' has a wrong offset!");
 static_assert(offsetof(FAkSegmentInfo, GridOffset) == 0x000020, "Member 'FAkSegmentInfo::GridOffset' has a wrong offset!");
-
-// ScriptStruct AkAudio.AkExternalSourceInfo
-// 0x0038 (0x0038 - 0x0000)
-struct FAkExternalSourceInfo final
-{
-public:
-	class FString                                 ExternalSrcName;                                   // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAkCodecId                                    CodecID;                                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Filename;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAkExternalMediaAsset*                  ExternalSourceAsset;                               // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsStreamed;                                        // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAkExternalSourceInfo) == 0x000008, "Wrong alignment on FAkExternalSourceInfo");
-static_assert(sizeof(FAkExternalSourceInfo) == 0x000038, "Wrong size on FAkExternalSourceInfo");
-static_assert(offsetof(FAkExternalSourceInfo, ExternalSrcName) == 0x000000, "Member 'FAkExternalSourceInfo::ExternalSrcName' has a wrong offset!");
-static_assert(offsetof(FAkExternalSourceInfo, CodecID) == 0x000010, "Member 'FAkExternalSourceInfo::CodecID' has a wrong offset!");
-static_assert(offsetof(FAkExternalSourceInfo, Filename) == 0x000018, "Member 'FAkExternalSourceInfo::Filename' has a wrong offset!");
-static_assert(offsetof(FAkExternalSourceInfo, ExternalSourceAsset) == 0x000028, "Member 'FAkExternalSourceInfo::ExternalSourceAsset' has a wrong offset!");
-static_assert(offsetof(FAkExternalSourceInfo, IsStreamed) == 0x000030, "Member 'FAkExternalSourceInfo::IsStreamed' has a wrong offset!");
 
 // ScriptStruct AkAudio.AkGeometrySurfaceOverride
 // 0x0018 (0x0018 - 0x0000)
@@ -1152,6 +1138,20 @@ static_assert(alignof(FAkGeometrySurfacePropertiesToMap) == 0x000008, "Wrong ali
 static_assert(sizeof(FAkGeometrySurfacePropertiesToMap) == 0x000038, "Wrong size on FAkGeometrySurfacePropertiesToMap");
 static_assert(offsetof(FAkGeometrySurfacePropertiesToMap, AcousticTexture) == 0x000000, "Member 'FAkGeometrySurfacePropertiesToMap::AcousticTexture' has a wrong offset!");
 static_assert(offsetof(FAkGeometrySurfacePropertiesToMap, OcclusionValue) == 0x000030, "Member 'FAkGeometrySurfacePropertiesToMap::OcclusionValue' has a wrong offset!");
+
+// ScriptStruct AkAudio.WwiseGeometrySurfacePropertiesRow
+// 0x0038 (0x0040 - 0x0008)
+struct FWwiseGeometrySurfacePropertiesRow final : public FTableRowBase
+{
+public:
+	TSoftObjectPtr<class UAkAcousticTexture>      AcousticTexture;                                   // 0x0008(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TransmissionLoss;                                  // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FWwiseGeometrySurfacePropertiesRow) == 0x000008, "Wrong alignment on FWwiseGeometrySurfacePropertiesRow");
+static_assert(sizeof(FWwiseGeometrySurfacePropertiesRow) == 0x000040, "Wrong size on FWwiseGeometrySurfacePropertiesRow");
+static_assert(offsetof(FWwiseGeometrySurfacePropertiesRow, AcousticTexture) == 0x000008, "Member 'FWwiseGeometrySurfacePropertiesRow::AcousticTexture' has a wrong offset!");
+static_assert(offsetof(FWwiseGeometrySurfacePropertiesRow, TransmissionLoss) == 0x000038, "Member 'FWwiseGeometrySurfacePropertiesRow::TransmissionLoss' has a wrong offset!");
 
 // ScriptStruct AkAudio.WwiseDecayAuxBusRow
 // 0x0038 (0x0040 - 0x0008)

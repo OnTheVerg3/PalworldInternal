@@ -159,29 +159,29 @@ static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupByParameter, CallFunc_Mak
 static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupByParameter, K2Node_CreateDelegate_OutputDelegate) == 0x000044, "Member 'WBP_PalCharacterIconBase_C_SetupByParameter::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 
 // Function WBP_PalCharacterIconBase.WBP_PalCharacterIconBase_C.SetupBySaveParameter
-// 0x03A0 (0x03A0 - 0x0000)
+// 0x03A8 (0x03A8 - 0x0000)
 struct WBP_PalCharacterIconBase_C_SetupBySaveParameter final
 {
 public:
-	struct FPalIndividualCharacterSaveParameter   SaveParam;                                         // 0x0000(0x0320)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetSaveParameterValue_CharacterID_ReturnValue; // 0x0328(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetSaveParameterValue_SkinName_ReturnValue; // 0x0330(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UTexture2D>              CallFunc_GetCharacterIconTexture_ReturnValue;      // 0x0338(0x0030)(UObjectWrapper, HasGetValueTypeHash)
-	TSoftObjectPtr<class UTexture2D>              CallFunc_GetCharacterIconTextureBySkinName_ReturnValue; // 0x0368(0x0030)(UObjectWrapper, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0398(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0399(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   SaveParam;                                         // 0x0000(0x0328)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetSaveParameterValue_CharacterID_ReturnValue; // 0x0330(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetSaveParameterValue_SkinName_ReturnValue; // 0x0338(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UTexture2D>              CallFunc_GetCharacterIconTexture_ReturnValue;      // 0x0340(0x0030)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UTexture2D>              CallFunc_GetCharacterIconTextureBySkinName_ReturnValue; // 0x0370(0x0030)(UObjectWrapper, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x03A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x03A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_PalCharacterIconBase_C_SetupBySaveParameter) == 0x000008, "Wrong alignment on WBP_PalCharacterIconBase_C_SetupBySaveParameter");
-static_assert(sizeof(WBP_PalCharacterIconBase_C_SetupBySaveParameter) == 0x0003A0, "Wrong size on WBP_PalCharacterIconBase_C_SetupBySaveParameter");
+static_assert(sizeof(WBP_PalCharacterIconBase_C_SetupBySaveParameter) == 0x0003A8, "Wrong size on WBP_PalCharacterIconBase_C_SetupBySaveParameter");
 static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, SaveParam) == 0x000000, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::SaveParam' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x000320, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_GetSaveParameterValue_CharacterID_ReturnValue) == 0x000328, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_GetSaveParameterValue_CharacterID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_GetSaveParameterValue_SkinName_ReturnValue) == 0x000330, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_GetSaveParameterValue_SkinName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_GetCharacterIconTexture_ReturnValue) == 0x000338, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_GetCharacterIconTexture_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_GetCharacterIconTextureBySkinName_ReturnValue) == 0x000368, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_GetCharacterIconTextureBySkinName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000398, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_IsValid_ReturnValue) == 0x000399, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x000328, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_GetSaveParameterValue_CharacterID_ReturnValue) == 0x000330, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_GetSaveParameterValue_CharacterID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_GetSaveParameterValue_SkinName_ReturnValue) == 0x000338, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_GetSaveParameterValue_SkinName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_GetCharacterIconTexture_ReturnValue) == 0x000340, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_GetCharacterIconTexture_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_GetCharacterIconTextureBySkinName_ReturnValue) == 0x000370, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_GetCharacterIconTextureBySkinName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x0003A0, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterIconBase_C_SetupBySaveParameter, CallFunc_IsValid_ReturnValue) == 0x0003A1, "Member 'WBP_PalCharacterIconBase_C_SetupBySaveParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function WBP_PalCharacterIconBase.WBP_PalCharacterIconBase_C.SetupBySoftTexture
 // 0x0038 (0x0038 - 0x0000)

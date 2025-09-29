@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Pal_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Pal_structs.hpp"
 
 
 namespace SDK
@@ -40,6 +40,7 @@ public:
 	static void GetTechnologyIcon(class FName technologyName, class UObject* __WorldContext, TSoftObjectPtr<class UTexture2D>* SoftIconTexture);
 	static void GetWorkDetailName(class UPalIndividualCharacterHandle* Handle, bool NotBattle, class UObject* __WorldContext, class FText* OutText);
 	static void IsDisplayWorkSuitability_ForUI(EPalWorkSuitability Suitability, class UObject* __WorldContext, bool* ShouldDisplay);
+	static void OpenWorldSettingThresholdsCautionDialog(class UBP_HUDDispatchPrameter_WorldSettingCaution_C* Parameter, class UObject* __WorldContext, bool* bOpenedDialog);
 	static void Project_Icon_Position_to_World_Postion(const struct FVector2D& MinLandscapePositionXY, const struct FVector2D& MaxLandscapePositionXY, class UWidget* TargetWigdet, class UCanvasPanel* TargetCanvas, double Scale, class UObject* __WorldContext, struct FVector* WorldPosition);
 	static void ProjectIconToWorldMap(const struct FVector2D& MinLandscapePositionXY, const struct FVector2D& MaxLandscapePositionXY, class UCanvasPanel* TargetCanvas, const struct FVector& WorldLocation, class UWidget* AddWidget, class UObject* __WorldContext);
 	static void SetItemInfo(class FName ItemId, class UPalTextBlockBase* nameTextBlock, class UPalTextBlockBase* descTextBlock, class UImage* IconImage, class UObject* __WorldContext);

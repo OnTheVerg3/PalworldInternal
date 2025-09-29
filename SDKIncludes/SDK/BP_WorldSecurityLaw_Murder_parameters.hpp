@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_WorldSecurityLaw_Murder.BP_WorldSecurityLaw_Murder_C.Condition
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct BP_WorldSecurityLaw_Murder_C_Condition final
 {
 public:
@@ -34,20 +34,20 @@ public:
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPalCharacterParameterComponent*        CallFunc_IsValidCharacterActor_CharacterParameter_1; // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsWildNPC_ReturnValue;                    // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPalMonster_ReturnValue;                 // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0092(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0093(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPalRideMarkerComponent*                CallFunc_GetComponentByClass_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsRiding_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsOtomo_ReturnValue;                      // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsOtomo_ReturnValue;                      // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsRiding_ReturnValue;                     // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsWildNPC_ReturnValue_1;                  // 0x00A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalOrganizationType                          CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue; // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsNPC_bCitizen;                           // 0x00A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPalMonster_ReturnValue;                 // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00A6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalOrganizationType                          CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue; // 0x00A7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsNPC_bCitizen;                           // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_WorldSecurityLaw_Murder_C_Condition) == 0x000008, "Wrong alignment on BP_WorldSecurityLaw_Murder_C_Condition");
-static_assert(sizeof(BP_WorldSecurityLaw_Murder_C_Condition) == 0x0000A8, "Wrong size on BP_WorldSecurityLaw_Murder_C_Condition");
+static_assert(sizeof(BP_WorldSecurityLaw_Murder_C_Condition) == 0x0000B0, "Wrong size on BP_WorldSecurityLaw_Murder_C_Condition");
 static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, DeadInfo) == 0x000000, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::DeadInfo' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CriminalHandle) == 0x000050, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CriminalHandle' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, ReturnValue) == 0x000058, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::ReturnValue' has a wrong offset!");
@@ -58,16 +58,16 @@ static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsValidC
 static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsValidCharacterActor_bValid_1) == 0x000080, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsValidCharacterActor_bValid_1' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsValidCharacterActor_CharacterParameter_1) == 0x000088, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsValidCharacterActor_CharacterParameter_1' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsWildNPC_ReturnValue) == 0x000090, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsWildNPC_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsPalMonster_ReturnValue) == 0x000091, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsPalMonster_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_Not_PreBool_ReturnValue) == 0x000092, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_BooleanAND_ReturnValue) == 0x000093, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_GetComponentByClass_ReturnValue) == 0x000098, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsRiding_ReturnValue) == 0x0000A0, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsRiding_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsValid_ReturnValue) == 0x0000A1, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsOtomo_ReturnValue) == 0x0000A2, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsOtomo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsOtomo_ReturnValue) == 0x0000A0, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsOtomo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsRiding_ReturnValue) == 0x0000A1, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsRiding_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsValid_ReturnValue) == 0x0000A2, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsWildNPC_ReturnValue_1) == 0x0000A3, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsWildNPC_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue) == 0x0000A4, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsNPC_bCitizen) == 0x0000A5, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsNPC_bCitizen' has a wrong offset!");
+static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsPalMonster_ReturnValue) == 0x0000A4, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsPalMonster_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_Not_PreBool_ReturnValue) == 0x0000A5, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_BooleanAND_ReturnValue) == 0x0000A6, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue) == 0x0000A7, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_GetOrganizationTypeByIndividualHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WorldSecurityLaw_Murder_C_Condition, CallFunc_IsNPC_bCitizen) == 0x0000A8, "Member 'BP_WorldSecurityLaw_Murder_C_Condition::CallFunc_IsNPC_bCitizen' has a wrong offset!");
 
 // Function BP_WorldSecurityLaw_Murder.BP_WorldSecurityLaw_Murder_C.IsNPC
 // 0x0007 (0x0007 - 0x0000)

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Pal_structs.hpp"
 #include "WBP_IndividualParameterBindWidget_classes.hpp"
 #include "UMG_structs.hpp"
 
@@ -127,7 +127,7 @@ public:
 	void Set_Work_Suitability(const TMap<EPalWorkSuitability, int32>& WorkSuitabilities);
 	void SetElementType(EPalElementType type1, EPalElementType type2);
 	void SetFoodAmount(int32 FoodAmount);
-	void SetFriendship(int32 FriendshipRank, int32 FriendshipPoint);
+	void SetFriendShip(int32 FriendshipRank, int32 FriendshipPoint);
 	void SetGender(EPalGenderType GenderType);
 	void SetImportedFlag(bool bImportedFlag);
 	void SetPassiveSkill(TArray<class FName>& PassiveSkills);

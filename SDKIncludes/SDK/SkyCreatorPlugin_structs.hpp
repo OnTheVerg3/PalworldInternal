@@ -83,19 +83,6 @@ enum class ESkyCreatorStarMapRotationType : uint8
 	StarMapRotationType_MAX                  = 3,
 };
 
-// ScriptStruct SkyCreatorPlugin.SkyCreatorLightningParameters
-// 0x0020 (0x0020 - 0x0000)
-struct FSkyCreatorLightningParameters final
-{
-public:
-	struct FLinearColor                           Position;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Color;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSkyCreatorLightningParameters) == 0x000004, "Wrong alignment on FSkyCreatorLightningParameters");
-static_assert(sizeof(FSkyCreatorLightningParameters) == 0x000020, "Wrong size on FSkyCreatorLightningParameters");
-static_assert(offsetof(FSkyCreatorLightningParameters, Position) == 0x000000, "Member 'FSkyCreatorLightningParameters::Position' has a wrong offset!");
-static_assert(offsetof(FSkyCreatorLightningParameters, Color) == 0x000010, "Member 'FSkyCreatorLightningParameters::Color' has a wrong offset!");
-
 // ScriptStruct SkyCreatorPlugin.CelestialPositionData
 // 0x0008 (0x0008 - 0x0000)
 struct FCelestialPositionData final
@@ -108,6 +95,19 @@ static_assert(alignof(FCelestialPositionData) == 0x000004, "Wrong alignment on F
 static_assert(sizeof(FCelestialPositionData) == 0x000008, "Wrong size on FCelestialPositionData");
 static_assert(offsetof(FCelestialPositionData, Elevation) == 0x000000, "Member 'FCelestialPositionData::Elevation' has a wrong offset!");
 static_assert(offsetof(FCelestialPositionData, Azimuth) == 0x000004, "Member 'FCelestialPositionData::Azimuth' has a wrong offset!");
+
+// ScriptStruct SkyCreatorPlugin.SkyCreatorLightningParameters
+// 0x0020 (0x0020 - 0x0000)
+struct FSkyCreatorLightningParameters final
+{
+public:
+	struct FLinearColor                           Position;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Color;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSkyCreatorLightningParameters) == 0x000004, "Wrong alignment on FSkyCreatorLightningParameters");
+static_assert(sizeof(FSkyCreatorLightningParameters) == 0x000020, "Wrong size on FSkyCreatorLightningParameters");
+static_assert(offsetof(FSkyCreatorLightningParameters, Position) == 0x000000, "Member 'FSkyCreatorLightningParameters::Position' has a wrong offset!");
+static_assert(offsetof(FSkyCreatorLightningParameters, Color) == 0x000010, "Member 'FSkyCreatorLightningParameters::Color' has a wrong offset!");
 
 // ScriptStruct SkyCreatorPlugin.SkyCreatorSkyAtmosphereSettings
 // 0x0080 (0x0080 - 0x0000)

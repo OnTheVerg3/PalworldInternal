@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -565,27 +565,27 @@ static_assert(offsetof(WBP_PalCharacterSlotBase_C_SetupByIndividualId, CallFunc_
 static_assert(offsetof(WBP_PalCharacterSlotBase_C_SetupByIndividualId, CallFunc_GetIsBoss_ReturnValue) == 0x000068, "Member 'WBP_PalCharacterSlotBase_C_SetupByIndividualId::CallFunc_GetIsBoss_ReturnValue' has a wrong offset!");
 
 // Function WBP_PalCharacterSlotBase.WBP_PalCharacterSlotBase_C.SetupBySaveParameter
-// 0x0340 (0x0340 - 0x0000)
+// 0x0348 (0x0348 - 0x0000)
 struct WBP_PalCharacterSlotBase_C_SetupBySaveParameter final
 {
 public:
-	struct FPalIndividualCharacterSaveParameter   SaveParam;                                         // 0x0000(0x0320)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          CallFunc_GetSaveParameterValue_IsRarePal_ReturnValue; // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_321[0x3];                                      // 0x0321(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetSaveParameterValue_CharacterID_ReturnValue; // 0x0324(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x032C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32D[0x3];                                      // 0x032D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsBoss_ReturnValue;                    // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   SaveParam;                                         // 0x0000(0x0328)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          CallFunc_GetSaveParameterValue_IsRarePal_ReturnValue; // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_329[0x3];                                      // 0x0329(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetSaveParameterValue_CharacterID_ReturnValue; // 0x032C(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0334(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_335[0x3];                                      // 0x0335(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalDatabaseCharacterParameter*         CallFunc_GetDatabaseCharacterParameter_ReturnValue; // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsBoss_ReturnValue;                    // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter) == 0x000008, "Wrong alignment on WBP_PalCharacterSlotBase_C_SetupBySaveParameter");
-static_assert(sizeof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter) == 0x000340, "Wrong size on WBP_PalCharacterSlotBase_C_SetupBySaveParameter");
+static_assert(sizeof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter) == 0x000348, "Wrong size on WBP_PalCharacterSlotBase_C_SetupBySaveParameter");
 static_assert(offsetof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter, SaveParam) == 0x000000, "Member 'WBP_PalCharacterSlotBase_C_SetupBySaveParameter::SaveParam' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter, CallFunc_GetSaveParameterValue_IsRarePal_ReturnValue) == 0x000320, "Member 'WBP_PalCharacterSlotBase_C_SetupBySaveParameter::CallFunc_GetSaveParameterValue_IsRarePal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter, CallFunc_GetSaveParameterValue_CharacterID_ReturnValue) == 0x000324, "Member 'WBP_PalCharacterSlotBase_C_SetupBySaveParameter::CallFunc_GetSaveParameterValue_CharacterID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter, CallFunc_IsValid_ReturnValue) == 0x00032C, "Member 'WBP_PalCharacterSlotBase_C_SetupBySaveParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x000330, "Member 'WBP_PalCharacterSlotBase_C_SetupBySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter, CallFunc_GetIsBoss_ReturnValue) == 0x000338, "Member 'WBP_PalCharacterSlotBase_C_SetupBySaveParameter::CallFunc_GetIsBoss_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter, CallFunc_GetSaveParameterValue_IsRarePal_ReturnValue) == 0x000328, "Member 'WBP_PalCharacterSlotBase_C_SetupBySaveParameter::CallFunc_GetSaveParameterValue_IsRarePal_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter, CallFunc_GetSaveParameterValue_CharacterID_ReturnValue) == 0x00032C, "Member 'WBP_PalCharacterSlotBase_C_SetupBySaveParameter::CallFunc_GetSaveParameterValue_CharacterID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter, CallFunc_IsValid_ReturnValue) == 0x000334, "Member 'WBP_PalCharacterSlotBase_C_SetupBySaveParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter, CallFunc_GetDatabaseCharacterParameter_ReturnValue) == 0x000338, "Member 'WBP_PalCharacterSlotBase_C_SetupBySaveParameter::CallFunc_GetDatabaseCharacterParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterSlotBase_C_SetupBySaveParameter, CallFunc_GetIsBoss_ReturnValue) == 0x000340, "Member 'WBP_PalCharacterSlotBase_C_SetupBySaveParameter::CallFunc_GetIsBoss_ReturnValue' has a wrong offset!");
 
 // Function WBP_PalCharacterSlotBase.WBP_PalCharacterSlotBase_C.Unbind Parameter Event
 // 0x0098 (0x0098 - 0x0000)
@@ -660,26 +660,26 @@ static_assert(offsetof(WBP_PalCharacterSlotBase_C_UnbindActorEvent, CallFunc_IsV
 static_assert(offsetof(WBP_PalCharacterSlotBase_C_UnbindActorEvent, K2Node_CreateDelegate_OutputDelegate_2) == 0x000054, "Member 'WBP_PalCharacterSlotBase_C_UnbindActorEvent::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
 
 // Function WBP_PalCharacterSlotBase.WBP_PalCharacterSlotBase_C.UnbindEvents
-// 0x0350 (0x0350 - 0x0000)
+// 0x0358 (0x0358 - 0x0000)
 struct WBP_PalCharacterSlotBase_C_UnbindEvents final
 {
 public:
 	TDelegate<void(class UPalIndividualCharacterParameter* Parameter)> K2Node_CreateDelegate_OutputDelegate; // 0x0000(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FPalIndividualCharacterSaveParameter   K2Node_MakeStruct_PalIndividualCharacterSaveParameter; // 0x0010(0x0320)()
-	class UPalIndividualCharacterHandle*          CallFunc_GetHandle_ReturnValue;                    // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0339(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33A[0x2];                                      // 0x033A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UPalIndividualCharacterSlot* Slot, class UPalIndividualCharacterHandle* LastHandle)> K2Node_CreateDelegate_OutputDelegate_1; // 0x033C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   K2Node_MakeStruct_PalIndividualCharacterSaveParameter; // 0x0010(0x0328)()
+	class UPalIndividualCharacterHandle*          CallFunc_GetHandle_ReturnValue;                    // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0341(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_342[0x2];                                      // 0x0342(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UPalIndividualCharacterSlot* Slot, class UPalIndividualCharacterHandle* LastHandle)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0344(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_PalCharacterSlotBase_C_UnbindEvents) == 0x000008, "Wrong alignment on WBP_PalCharacterSlotBase_C_UnbindEvents");
-static_assert(sizeof(WBP_PalCharacterSlotBase_C_UnbindEvents) == 0x000350, "Wrong size on WBP_PalCharacterSlotBase_C_UnbindEvents");
+static_assert(sizeof(WBP_PalCharacterSlotBase_C_UnbindEvents) == 0x000358, "Wrong size on WBP_PalCharacterSlotBase_C_UnbindEvents");
 static_assert(offsetof(WBP_PalCharacterSlotBase_C_UnbindEvents, K2Node_CreateDelegate_OutputDelegate) == 0x000000, "Member 'WBP_PalCharacterSlotBase_C_UnbindEvents::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(WBP_PalCharacterSlotBase_C_UnbindEvents, K2Node_MakeStruct_PalIndividualCharacterSaveParameter) == 0x000010, "Member 'WBP_PalCharacterSlotBase_C_UnbindEvents::K2Node_MakeStruct_PalIndividualCharacterSaveParameter' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterSlotBase_C_UnbindEvents, CallFunc_GetHandle_ReturnValue) == 0x000330, "Member 'WBP_PalCharacterSlotBase_C_UnbindEvents::CallFunc_GetHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterSlotBase_C_UnbindEvents, CallFunc_IsValid_ReturnValue) == 0x000338, "Member 'WBP_PalCharacterSlotBase_C_UnbindEvents::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterSlotBase_C_UnbindEvents, CallFunc_IsValid_ReturnValue_1) == 0x000339, "Member 'WBP_PalCharacterSlotBase_C_UnbindEvents::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_PalCharacterSlotBase_C_UnbindEvents, K2Node_CreateDelegate_OutputDelegate_1) == 0x00033C, "Member 'WBP_PalCharacterSlotBase_C_UnbindEvents::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterSlotBase_C_UnbindEvents, CallFunc_GetHandle_ReturnValue) == 0x000338, "Member 'WBP_PalCharacterSlotBase_C_UnbindEvents::CallFunc_GetHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterSlotBase_C_UnbindEvents, CallFunc_IsValid_ReturnValue) == 0x000340, "Member 'WBP_PalCharacterSlotBase_C_UnbindEvents::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterSlotBase_C_UnbindEvents, CallFunc_IsValid_ReturnValue_1) == 0x000341, "Member 'WBP_PalCharacterSlotBase_C_UnbindEvents::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterSlotBase_C_UnbindEvents, K2Node_CreateDelegate_OutputDelegate_1) == 0x000344, "Member 'WBP_PalCharacterSlotBase_C_UnbindEvents::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
 
 }
 

@@ -103,21 +103,6 @@ enum class EFlowLogVerbosity : uint8
 	EFlowLogVerbosity_MAX                    = 6,
 };
 
-// ScriptStruct Flow.FlowComponentSaveData
-// 0x0030 (0x0030 - 0x0000)
-struct FFlowComponentSaveData final
-{
-public:
-	class FString                                 WorldName;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, SaveGame, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ActorInstanceName;                                 // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, SaveGame, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 ComponentData;                                     // 0x0020(0x0010)(ZeroConstructor, SaveGame, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FFlowComponentSaveData) == 0x000008, "Wrong alignment on FFlowComponentSaveData");
-static_assert(sizeof(FFlowComponentSaveData) == 0x000030, "Wrong size on FFlowComponentSaveData");
-static_assert(offsetof(FFlowComponentSaveData, WorldName) == 0x000000, "Member 'FFlowComponentSaveData::WorldName' has a wrong offset!");
-static_assert(offsetof(FFlowComponentSaveData, ActorInstanceName) == 0x000010, "Member 'FFlowComponentSaveData::ActorInstanceName' has a wrong offset!");
-static_assert(offsetof(FFlowComponentSaveData, ComponentData) == 0x000020, "Member 'FFlowComponentSaveData::ComponentData' has a wrong offset!");
-
 // ScriptStruct Flow.FlowNodeSaveData
 // 0x0020 (0x0020 - 0x0000)
 struct FFlowNodeSaveData final
@@ -148,24 +133,20 @@ static_assert(offsetof(FFlowAssetSaveData, InstanceName) == 0x000010, "Member 'F
 static_assert(offsetof(FFlowAssetSaveData, AssetData) == 0x000020, "Member 'FFlowAssetSaveData::AssetData' has a wrong offset!");
 static_assert(offsetof(FFlowAssetSaveData, NodeRecords) == 0x000030, "Member 'FFlowAssetSaveData::NodeRecords' has a wrong offset!");
 
-// ScriptStruct Flow.FlowPinHandle
-// 0x0008 (0x0008 - 0x0000)
-struct FFlowPinHandle
+// ScriptStruct Flow.FlowComponentSaveData
+// 0x0030 (0x0030 - 0x0000)
+struct FFlowComponentSaveData final
 {
 public:
-	class FName                                   PinName;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 WorldName;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, SaveGame, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ActorInstanceName;                                 // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, SaveGame, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 ComponentData;                                     // 0x0020(0x0010)(ZeroConstructor, SaveGame, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FFlowPinHandle) == 0x000004, "Wrong alignment on FFlowPinHandle");
-static_assert(sizeof(FFlowPinHandle) == 0x000008, "Wrong size on FFlowPinHandle");
-static_assert(offsetof(FFlowPinHandle, PinName) == 0x000000, "Member 'FFlowPinHandle::PinName' has a wrong offset!");
-
-// ScriptStruct Flow.FlowInputPinHandle
-// 0x0000 (0x0008 - 0x0008)
-struct FFlowInputPinHandle final : public FFlowPinHandle
-{
-};
-static_assert(alignof(FFlowInputPinHandle) == 0x000004, "Wrong alignment on FFlowInputPinHandle");
-static_assert(sizeof(FFlowInputPinHandle) == 0x000008, "Wrong size on FFlowInputPinHandle");
+static_assert(alignof(FFlowComponentSaveData) == 0x000008, "Wrong alignment on FFlowComponentSaveData");
+static_assert(sizeof(FFlowComponentSaveData) == 0x000030, "Wrong size on FFlowComponentSaveData");
+static_assert(offsetof(FFlowComponentSaveData, WorldName) == 0x000000, "Member 'FFlowComponentSaveData::WorldName' has a wrong offset!");
+static_assert(offsetof(FFlowComponentSaveData, ActorInstanceName) == 0x000010, "Member 'FFlowComponentSaveData::ActorInstanceName' has a wrong offset!");
+static_assert(offsetof(FFlowComponentSaveData, ComponentData) == 0x000020, "Member 'FFlowComponentSaveData::ComponentData' has a wrong offset!");
 
 // ScriptStruct Flow.MovieSceneFlowTemplateBase
 // 0x0008 (0x0028 - 0x0020)
@@ -178,19 +159,6 @@ public:
 };
 static_assert(alignof(FMovieSceneFlowTemplateBase) == 0x000008, "Wrong alignment on FMovieSceneFlowTemplateBase");
 static_assert(sizeof(FMovieSceneFlowTemplateBase) == 0x000028, "Wrong size on FMovieSceneFlowTemplateBase");
-
-// ScriptStruct Flow.MovieSceneFlowTriggerTemplate
-// 0x0020 (0x0048 - 0x0028)
-struct FMovieSceneFlowTriggerTemplate final : public FMovieSceneFlowTemplateBase
-{
-public:
-	TArray<struct FFrameNumber>                   EventTimes;                                        // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FString>                         EventNames;                                        // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMovieSceneFlowTriggerTemplate) == 0x000008, "Wrong alignment on FMovieSceneFlowTriggerTemplate");
-static_assert(sizeof(FMovieSceneFlowTriggerTemplate) == 0x000048, "Wrong size on FMovieSceneFlowTriggerTemplate");
-static_assert(offsetof(FMovieSceneFlowTriggerTemplate, EventTimes) == 0x000028, "Member 'FMovieSceneFlowTriggerTemplate::EventTimes' has a wrong offset!");
-static_assert(offsetof(FMovieSceneFlowTriggerTemplate, EventNames) == 0x000038, "Member 'FMovieSceneFlowTriggerTemplate::EventNames' has a wrong offset!");
 
 // ScriptStruct Flow.NotifyTagReplication
 // 0x0010 (0x0010 - 0x0000)
@@ -218,6 +186,19 @@ static_assert(sizeof(FFlowOwnerFunctionRef) == 0x000010, "Wrong size on FFlowOwn
 static_assert(offsetof(FFlowOwnerFunctionRef, FunctionName) == 0x000000, "Member 'FFlowOwnerFunctionRef::FunctionName' has a wrong offset!");
 static_assert(offsetof(FFlowOwnerFunctionRef, Function) == 0x000008, "Member 'FFlowOwnerFunctionRef::Function' has a wrong offset!");
 
+// ScriptStruct Flow.MovieSceneFlowTriggerTemplate
+// 0x0020 (0x0048 - 0x0028)
+struct FMovieSceneFlowTriggerTemplate final : public FMovieSceneFlowTemplateBase
+{
+public:
+	TArray<struct FFrameNumber>                   EventTimes;                                        // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         EventNames;                                        // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMovieSceneFlowTriggerTemplate) == 0x000008, "Wrong alignment on FMovieSceneFlowTriggerTemplate");
+static_assert(sizeof(FMovieSceneFlowTriggerTemplate) == 0x000048, "Wrong size on FMovieSceneFlowTriggerTemplate");
+static_assert(offsetof(FMovieSceneFlowTriggerTemplate, EventTimes) == 0x000028, "Member 'FMovieSceneFlowTriggerTemplate::EventTimes' has a wrong offset!");
+static_assert(offsetof(FMovieSceneFlowTriggerTemplate, EventNames) == 0x000038, "Member 'FMovieSceneFlowTriggerTemplate::EventNames' has a wrong offset!");
+
 // ScriptStruct Flow.MovieSceneFlowRepeaterTemplate
 // 0x0010 (0x0038 - 0x0028)
 struct FMovieSceneFlowRepeaterTemplate final : public FMovieSceneFlowTemplateBase
@@ -243,6 +224,25 @@ static_assert(sizeof(FFlowPin) == 0x000030, "Wrong size on FFlowPin");
 static_assert(offsetof(FFlowPin, PinName) == 0x000000, "Member 'FFlowPin::PinName' has a wrong offset!");
 static_assert(offsetof(FFlowPin, PinFriendlyName) == 0x000008, "Member 'FFlowPin::PinFriendlyName' has a wrong offset!");
 static_assert(offsetof(FFlowPin, PinToolTip) == 0x000020, "Member 'FFlowPin::PinToolTip' has a wrong offset!");
+
+// ScriptStruct Flow.FlowPinHandle
+// 0x0008 (0x0008 - 0x0000)
+struct FFlowPinHandle
+{
+public:
+	class FName                                   PinName;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FFlowPinHandle) == 0x000004, "Wrong alignment on FFlowPinHandle");
+static_assert(sizeof(FFlowPinHandle) == 0x000008, "Wrong size on FFlowPinHandle");
+static_assert(offsetof(FFlowPinHandle, PinName) == 0x000000, "Member 'FFlowPinHandle::PinName' has a wrong offset!");
+
+// ScriptStruct Flow.FlowInputPinHandle
+// 0x0000 (0x0008 - 0x0008)
+struct FFlowInputPinHandle final : public FFlowPinHandle
+{
+};
+static_assert(alignof(FFlowInputPinHandle) == 0x000004, "Wrong alignment on FFlowInputPinHandle");
+static_assert(sizeof(FFlowInputPinHandle) == 0x000008, "Wrong size on FFlowInputPinHandle");
 
 // ScriptStruct Flow.FlowOutputPinHandle
 // 0x0000 (0x0008 - 0x0008)

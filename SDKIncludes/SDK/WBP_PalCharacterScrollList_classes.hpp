@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "WBP_PalCommonScrollList_classes.hpp"
-#include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Pal_structs.hpp"
+#include "WBP_PalCommonScrollList_classes.hpp"
 
 
 namespace SDK

@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
 #include "Pal_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Action_FishingSalvage.BP_Action_FishingSalvage_C
-// 0x0050 (0x01B0 - 0x0160)
+// 0x0060 (0x01C0 - 0x0160)
 class UBP_Action_FishingSalvage_C final : public UPalActionBase
 {
 public:
@@ -33,6 +33,9 @@ public:
 	class UAnimMontage*                           FailedMontage;                                     // 0x0190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class FName                                   flagName;                                          // 0x0198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPalFishingComponent*                   FishingComponent;                                  // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        ThrowForwardOffset;                                // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WaterPlaneCheckHeightOffset;                       // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WaterPlaneCheckLength;                             // 0x01B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void EndAnim();
@@ -71,7 +74,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_Action_FishingSalvage_C) == 0x000010, "Wrong alignment on UBP_Action_FishingSalvage_C");
-static_assert(sizeof(UBP_Action_FishingSalvage_C) == 0x0001B0, "Wrong size on UBP_Action_FishingSalvage_C");
+static_assert(sizeof(UBP_Action_FishingSalvage_C) == 0x0001C0, "Wrong size on UBP_Action_FishingSalvage_C");
 static_assert(offsetof(UBP_Action_FishingSalvage_C, UberGraphFrame) == 0x000160, "Member 'UBP_Action_FishingSalvage_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_Action_FishingSalvage_C, StartAnimMontage) == 0x000168, "Member 'UBP_Action_FishingSalvage_C::StartAnimMontage' has a wrong offset!");
 static_assert(offsetof(UBP_Action_FishingSalvage_C, IdleLoopAnimMontage) == 0x000170, "Member 'UBP_Action_FishingSalvage_C::IdleLoopAnimMontage' has a wrong offset!");
@@ -81,6 +84,9 @@ static_assert(offsetof(UBP_Action_FishingSalvage_C, SuccessMontage) == 0x000188,
 static_assert(offsetof(UBP_Action_FishingSalvage_C, FailedMontage) == 0x000190, "Member 'UBP_Action_FishingSalvage_C::FailedMontage' has a wrong offset!");
 static_assert(offsetof(UBP_Action_FishingSalvage_C, flagName) == 0x000198, "Member 'UBP_Action_FishingSalvage_C::flagName' has a wrong offset!");
 static_assert(offsetof(UBP_Action_FishingSalvage_C, FishingComponent) == 0x0001A0, "Member 'UBP_Action_FishingSalvage_C::FishingComponent' has a wrong offset!");
+static_assert(offsetof(UBP_Action_FishingSalvage_C, ThrowForwardOffset) == 0x0001A8, "Member 'UBP_Action_FishingSalvage_C::ThrowForwardOffset' has a wrong offset!");
+static_assert(offsetof(UBP_Action_FishingSalvage_C, WaterPlaneCheckHeightOffset) == 0x0001B0, "Member 'UBP_Action_FishingSalvage_C::WaterPlaneCheckHeightOffset' has a wrong offset!");
+static_assert(offsetof(UBP_Action_FishingSalvage_C, WaterPlaneCheckLength) == 0x0001B8, "Member 'UBP_Action_FishingSalvage_C::WaterPlaneCheckLength' has a wrong offset!");
 
 }
 

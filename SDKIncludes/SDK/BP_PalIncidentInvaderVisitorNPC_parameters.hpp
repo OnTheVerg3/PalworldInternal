@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Pal_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -178,7 +178,7 @@ static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_IsSquad, Result) == 0x0
 static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_IsSquad, CallFunc_Get_Chosen_Row_Data_ChosenRowData) == 0x000008, "Member 'BP_PalIncidentInvaderVisitorNPC_C_IsSquad::CallFunc_Get_Chosen_Row_Data_ChosenRowData' has a wrong offset!");
 
 // Function BP_PalIncidentInvaderVisitorNPC.BP_PalIncidentInvaderVisitorNPC_C.OnAllCharacterSpawned
-// 0x0278 (0x0278 - 0x0000)
+// 0x0290 (0x0290 - 0x0000)
 struct BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned final
 {
 public:
@@ -188,70 +188,111 @@ public:
 	struct FPalVisitorInitParameter               VisitorInitParam;                                  // 0x0018(0x0040)(Edit, BlueprintVisible, NoDestructor)
 	int32                                         GuardmanIndex;                                     // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPalVisitorNPCDatabaseRow              CallFunc_Get_Chosen_Row_Data_ChosenRowData;        // 0x0060(0x0098)()
-	class UPalBaseCampModel*                      CallFunc_GetTargetCampModel_ReturnValue;           // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetLevel_ReturnValue;                     // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetTargetBaseCampPosition_Location;       // 0x0108(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPalVisitorNPCDatabaseRow              CallFunc_Get_Chosen_Row_Data_ChosenRowData_1;      // 0x0120(0x0098)()
-	int32                                         CallFunc_GetVisitorNPCReturnTimeMinutes_ReturnValue; // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetTargetBaseCampPosition_Location_1;     // 0x01C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APalAIController*                       CallFunc_Array_Get_Item;                           // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APalAIController*                       CallFunc_Array_Get_Item_1;                         // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_GetPalAIBlackboard_C> K2Node_DynamicCast_AsBPI_Get_Pal_AIBlackboard; // 0x01F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_PalAIBlackboard_Common_C*           CallFunc_GetMyBB_PalBrackboard;                    // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalIndividualCharacterHandle*          CallFunc_GetIndividualCharacterHandleByActor_ReturnValue; // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetIndividualHandleIndex_Index;           // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_224[0x4];                                      // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_CalcFormationOffset_Offset;               // 0x0228(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_1;                 // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBI_AIController_Interface_Visitor_C> K2Node_DynamicCast_AsBI_AIController_Interface_Visitor; // 0x0248(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_259[0x7];                                      // 0x0259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalRecruiterComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0260(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_269[0x3];                                      // 0x0269(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0060(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalVisitorNPCDatabaseRow              CallFunc_Get_Chosen_Row_Data_ChosenRowData;        // 0x0070(0x0098)()
+	class UPalBaseCampModel*                      CallFunc_GetTargetCampModel_ReturnValue;           // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetLevel_ReturnValue;                     // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetTargetBaseCampPosition_Location;       // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalVisitorNPCDatabaseRow              CallFunc_Get_Chosen_Row_Data_ChosenRowData_1;      // 0x0130(0x0098)()
+	int32                                         CallFunc_GetVisitorNPCReturnTimeMinutes_ReturnValue; // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetTargetBaseCampPosition_Location_1;     // 0x01D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APalAIController*                       CallFunc_Array_Get_Item;                           // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APalAIController*                       CallFunc_Array_Get_Item_1;                         // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_GetPalAIBlackboard_C> K2Node_DynamicCast_AsBPI_Get_Pal_AIBlackboard; // 0x0200(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_NPCAIController_Visitor_C*          K2Node_DynamicCast_AsBP_NPCAIController_Visitor;   // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_PalAIBlackboard_Common_C*           CallFunc_GetMyBB_PalBrackboard;                    // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_1;                 // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalIndividualCharacterHandle*          CallFunc_GetIndividualCharacterHandleByActor_ReturnValue; // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalRecruiterComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0248(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetIndividualHandleIndex_Index;           // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0254(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0255(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_256[0x2];                                      // 0x0256(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_CalcFormationOffset_Offset;               // 0x0258(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBI_AIController_Interface_Visitor_C> K2Node_DynamicCast_AsBI_AIController_Interface_Visitor; // 0x0270(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_281[0x3];                                      // 0x0281(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0284(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned) == 0x000008, "Wrong alignment on BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned");
-static_assert(sizeof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned) == 0x000278, "Wrong size on BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned");
+static_assert(sizeof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned) == 0x000290, "Wrong size on BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned");
 static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, MemberController_0) == 0x000000, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::MemberController_0' has a wrong offset!");
 static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, FormationRow) == 0x000010, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::FormationRow' has a wrong offset!");
 static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, VisitorInitParam) == 0x000018, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::VisitorInitParam' has a wrong offset!");
 static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, GuardmanIndex) == 0x000058, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::GuardmanIndex' has a wrong offset!");
 static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, Temp_int_Array_Index_Variable) == 0x00005C, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Get_Chosen_Row_Data_ChosenRowData) == 0x000060, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Get_Chosen_Row_Data_ChosenRowData' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetTargetCampModel_ReturnValue) == 0x0000F8, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetTargetCampModel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetLevel_ReturnValue) == 0x000100, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetTargetBaseCampPosition_Location) == 0x000108, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetTargetBaseCampPosition_Location' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Get_Chosen_Row_Data_ChosenRowData_1) == 0x000120, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Get_Chosen_Row_Data_ChosenRowData_1' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetVisitorNPCReturnTimeMinutes_ReturnValue) == 0x0001B8, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetVisitorNPCReturnTimeMinutes_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetTargetBaseCampPosition_Location_1) == 0x0001C0, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetTargetBaseCampPosition_Location_1' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, Temp_int_Loop_Counter_Variable) == 0x0001D8, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Add_IntInt_ReturnValue) == 0x0001DC, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Array_Get_Item) == 0x0001E0, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Array_Get_Item_1) == 0x0001E8, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, K2Node_DynamicCast_AsBPI_Get_Pal_AIBlackboard) == 0x0001F0, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::K2Node_DynamicCast_AsBPI_Get_Pal_AIBlackboard' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, K2Node_DynamicCast_bSuccess) == 0x000200, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_K2_GetPawn_ReturnValue) == 0x000208, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetMyBB_PalBrackboard) == 0x000210, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetMyBB_PalBrackboard' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetIndividualCharacterHandleByActor_ReturnValue) == 0x000218, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetIndividualCharacterHandleByActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetIndividualHandleIndex_Index) == 0x000220, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetIndividualHandleIndex_Index' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_CalcFormationOffset_Offset) == 0x000228, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_CalcFormationOffset_Offset' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_K2_GetPawn_ReturnValue_1) == 0x000240, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_K2_GetPawn_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, K2Node_DynamicCast_AsBI_AIController_Interface_Visitor) == 0x000248, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::K2Node_DynamicCast_AsBI_AIController_Interface_Visitor' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, K2Node_DynamicCast_bSuccess_1) == 0x000258, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetComponentByClass_ReturnValue) == 0x000260, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_IsValid_ReturnValue) == 0x000268, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Array_Length_ReturnValue) == 0x00026C, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Less_IntInt_ReturnValue) == 0x000270, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, K2Node_CreateDelegate_OutputDelegate) == 0x000060, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Get_Chosen_Row_Data_ChosenRowData) == 0x000070, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Get_Chosen_Row_Data_ChosenRowData' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetTargetCampModel_ReturnValue) == 0x000108, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetTargetCampModel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetLevel_ReturnValue) == 0x000110, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetTargetBaseCampPosition_Location) == 0x000118, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetTargetBaseCampPosition_Location' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Get_Chosen_Row_Data_ChosenRowData_1) == 0x000130, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Get_Chosen_Row_Data_ChosenRowData_1' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetVisitorNPCReturnTimeMinutes_ReturnValue) == 0x0001C8, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetVisitorNPCReturnTimeMinutes_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetTargetBaseCampPosition_Location_1) == 0x0001D0, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetTargetBaseCampPosition_Location_1' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, Temp_int_Loop_Counter_Variable) == 0x0001E8, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Add_IntInt_ReturnValue) == 0x0001EC, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Array_Get_Item) == 0x0001F0, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Array_Get_Item_1) == 0x0001F8, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, K2Node_DynamicCast_AsBPI_Get_Pal_AIBlackboard) == 0x000200, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::K2Node_DynamicCast_AsBPI_Get_Pal_AIBlackboard' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, K2Node_DynamicCast_bSuccess) == 0x000210, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, K2Node_DynamicCast_AsBP_NPCAIController_Visitor) == 0x000218, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::K2Node_DynamicCast_AsBP_NPCAIController_Visitor' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, K2Node_DynamicCast_bSuccess_1) == 0x000220, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetMyBB_PalBrackboard) == 0x000228, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetMyBB_PalBrackboard' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_K2_GetPawn_ReturnValue) == 0x000230, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_K2_GetPawn_ReturnValue_1) == 0x000238, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_K2_GetPawn_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetIndividualCharacterHandleByActor_ReturnValue) == 0x000240, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetIndividualCharacterHandleByActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetComponentByClass_ReturnValue) == 0x000248, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_GetIndividualHandleIndex_Index) == 0x000250, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_GetIndividualHandleIndex_Index' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_IsValid_ReturnValue) == 0x000254, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000255, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_CalcFormationOffset_Offset) == 0x000258, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_CalcFormationOffset_Offset' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, K2Node_DynamicCast_AsBI_AIController_Interface_Visitor) == 0x000270, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::K2Node_DynamicCast_AsBI_AIController_Interface_Visitor' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, K2Node_DynamicCast_bSuccess_2) == 0x000280, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Array_Length_ReturnValue) == 0x000284, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned, CallFunc_Less_IntInt_ReturnValue) == 0x000288, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnAllCharacterSpawned::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BP_PalIncidentInvaderVisitorNPC.BP_PalIncidentInvaderVisitorNPC_C.OnLeaderBaseCampArrived
+// 0x0068 (0x0068 - 0x0000)
+struct BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalCharacterLocationType                     CallFunc_Get_Character_Location_Type_CharacterLocationType; // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterHandle*          CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APalCharacter*                          CallFunc_TryGetIndividualActor_ReturnValue;        // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDead_ReturnValue;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPalInstanceID                         CallFunc_GetIndividualID_ReturnValue;              // 0x0038(0x0030)(HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived) == 0x000008, "Wrong alignment on BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived");
+static_assert(sizeof(BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived) == 0x000068, "Wrong size on BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived, CallFunc_Get_Character_Location_Type_CharacterLocationType) == 0x00000C, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived::CallFunc_Get_Character_Location_Type_CharacterLocationType' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived, CallFunc_Array_Get_Item) == 0x000018, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived, CallFunc_TryGetIndividualActor_ReturnValue) == 0x000028, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived::CallFunc_TryGetIndividualActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived, CallFunc_IsDead_ReturnValue) == 0x000030, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived::CallFunc_IsDead_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived, CallFunc_GetIndividualID_ReturnValue) == 0x000038, "Member 'BP_PalIncidentInvaderVisitorNPC_C_OnLeaderBaseCampArrived::CallFunc_GetIndividualID_ReturnValue' has a wrong offset!");
 
 // Function BP_PalIncidentInvaderVisitorNPC.BP_PalIncidentInvaderVisitorNPC_C.GetNPCAIControllerClass
 // 0x0030 (0x0030 - 0x0000)

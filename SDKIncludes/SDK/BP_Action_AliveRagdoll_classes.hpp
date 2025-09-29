@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Pal_structs.hpp"
 #include "Pal_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -28,7 +28,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0160(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	bool                                          IsRagdoll;                                         // 0x0168(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                PreLocation;                                       // 0x0170(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                preLocation;                                       // 0x0170(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             MeshTF;                                            // 0x0190(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EndAble;                                           // 0x01F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -69,7 +69,7 @@ static_assert(alignof(UBP_Action_AliveRagdoll_C) == 0x000010, "Wrong alignment o
 static_assert(sizeof(UBP_Action_AliveRagdoll_C) == 0x000230, "Wrong size on UBP_Action_AliveRagdoll_C");
 static_assert(offsetof(UBP_Action_AliveRagdoll_C, UberGraphFrame) == 0x000160, "Member 'UBP_Action_AliveRagdoll_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_Action_AliveRagdoll_C, IsRagdoll) == 0x000168, "Member 'UBP_Action_AliveRagdoll_C::IsRagdoll' has a wrong offset!");
-static_assert(offsetof(UBP_Action_AliveRagdoll_C, PreLocation) == 0x000170, "Member 'UBP_Action_AliveRagdoll_C::PreLocation' has a wrong offset!");
+static_assert(offsetof(UBP_Action_AliveRagdoll_C, preLocation) == 0x000170, "Member 'UBP_Action_AliveRagdoll_C::preLocation' has a wrong offset!");
 static_assert(offsetof(UBP_Action_AliveRagdoll_C, MeshTF) == 0x000190, "Member 'UBP_Action_AliveRagdoll_C::MeshTF' has a wrong offset!");
 static_assert(offsetof(UBP_Action_AliveRagdoll_C, EndAble) == 0x0001F0, "Member 'UBP_Action_AliveRagdoll_C::EndAble' has a wrong offset!");
 static_assert(offsetof(UBP_Action_AliveRagdoll_C, InBoneName) == 0x0001F4, "Member 'UBP_Action_AliveRagdoll_C::InBoneName' has a wrong offset!");

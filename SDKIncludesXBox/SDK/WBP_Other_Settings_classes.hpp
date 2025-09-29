@@ -35,10 +35,10 @@ public:
 	TMap<class FString, struct FDataTableRowHandle> LangMap;                                         // 0x02E8(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 
 public:
-	void ApplySettings(bool ApplyOriginal);
-	void Construct();
-	void ExecuteUbergraph_WBP_Other_Settings(int32 EntryPoint);
 	void OnLanguageChanged(int32 Value);
+	void ExecuteUbergraph_WBP_Other_Settings(int32 EntryPoint);
+	void Construct();
+	void ApplySettings(bool ApplyOriginal);
 	void SetDefault();
 
 public:

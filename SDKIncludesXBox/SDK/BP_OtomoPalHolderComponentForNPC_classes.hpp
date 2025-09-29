@@ -25,6 +25,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_OtomoPalHolderComponentForNPC_C; // 0x01A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
+	bool ActivateCurrentOtomo(const struct FTransform& SpawnTransform);
 	void ExecuteUbergraph_BP_OtomoPalHolderComponentForNPC(int32 EntryPoint);
 	void GetAIClass(class UClass** Class_0);
 	void ReceiveBeginPlay();

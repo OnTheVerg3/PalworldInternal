@@ -33,6 +33,61 @@ static_assert(offsetof(ARActor_AddARComponent, InComponentClass) == 0x000000, "M
 static_assert(offsetof(ARActor_AddARComponent, NativeID) == 0x000008, "Member 'ARActor_AddARComponent::NativeID' has a wrong offset!");
 static_assert(offsetof(ARActor_AddARComponent, ReturnValue) == 0x000018, "Member 'ARActor_AddARComponent::ReturnValue' has a wrong offset!");
 
+// Function AugmentedReality.ARComponent.GetMRMesh
+// 0x0008 (0x0008 - 0x0000)
+struct ARComponent_GetMRMesh final
+{
+public:
+	class UMRMeshComponent*                       ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARComponent_GetMRMesh) == 0x000008, "Wrong alignment on ARComponent_GetMRMesh");
+static_assert(sizeof(ARComponent_GetMRMesh) == 0x000008, "Wrong size on ARComponent_GetMRMesh");
+static_assert(offsetof(ARComponent_GetMRMesh, ReturnValue) == 0x000000, "Member 'ARComponent_GetMRMesh::ReturnValue' has a wrong offset!");
+
+// Function AugmentedReality.ARComponent.SetNativeID
+// 0x0010 (0x0010 - 0x0000)
+struct ARComponent_SetNativeID final
+{
+public:
+	struct FGuid                                  NativeID_0;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARComponent_SetNativeID) == 0x000004, "Wrong alignment on ARComponent_SetNativeID");
+static_assert(sizeof(ARComponent_SetNativeID) == 0x000010, "Wrong size on ARComponent_SetNativeID");
+static_assert(offsetof(ARComponent_SetNativeID, NativeID_0) == 0x000000, "Member 'ARComponent_SetNativeID::NativeID_0' has a wrong offset!");
+
+// Function AugmentedReality.ARPointComponent.ReceiveAdd
+// 0x0001 (0x0001 - 0x0000)
+struct ARPointComponent_ReceiveAdd final
+{
+public:
+	struct FARPointUpdatePayload                  Payload;                                           // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARPointComponent_ReceiveAdd) == 0x000001, "Wrong alignment on ARPointComponent_ReceiveAdd");
+static_assert(sizeof(ARPointComponent_ReceiveAdd) == 0x000001, "Wrong size on ARPointComponent_ReceiveAdd");
+static_assert(offsetof(ARPointComponent_ReceiveAdd, Payload) == 0x000000, "Member 'ARPointComponent_ReceiveAdd::Payload' has a wrong offset!");
+
+// Function AugmentedReality.ARPointComponent.ReceiveUpdate
+// 0x0001 (0x0001 - 0x0000)
+struct ARPointComponent_ReceiveUpdate final
+{
+public:
+	struct FARPointUpdatePayload                  Payload;                                           // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARPointComponent_ReceiveUpdate) == 0x000001, "Wrong alignment on ARPointComponent_ReceiveUpdate");
+static_assert(sizeof(ARPointComponent_ReceiveUpdate) == 0x000001, "Wrong size on ARPointComponent_ReceiveUpdate");
+static_assert(offsetof(ARPointComponent_ReceiveUpdate, Payload) == 0x000000, "Member 'ARPointComponent_ReceiveUpdate::Payload' has a wrong offset!");
+
+// Function AugmentedReality.ARPointComponent.ServerUpdatePayload
+// 0x0001 (0x0001 - 0x0000)
+struct ARPointComponent_ServerUpdatePayload final
+{
+public:
+	struct FARPointUpdatePayload                  NewPayload;                                        // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARPointComponent_ServerUpdatePayload) == 0x000001, "Wrong alignment on ARPointComponent_ServerUpdatePayload");
+static_assert(sizeof(ARPointComponent_ServerUpdatePayload) == 0x000001, "Wrong size on ARPointComponent_ServerUpdatePayload");
+static_assert(offsetof(ARPointComponent_ServerUpdatePayload, NewPayload) == 0x000000, "Member 'ARPointComponent_ServerUpdatePayload::NewPayload' has a wrong offset!");
+
 // Function AugmentedReality.ARBlueprintLibrary.AddManualEnvironmentCaptureProbe
 // 0x0038 (0x0038 - 0x0000)
 struct ARBlueprintLibrary_AddManualEnvironmentCaptureProbe final
@@ -894,89 +949,6 @@ static_assert(sizeof(ARTraceResultLibrary_GetTrackedGeometry) == 0x0000A0, "Wron
 static_assert(offsetof(ARTraceResultLibrary_GetTrackedGeometry, TraceResult) == 0x000000, "Member 'ARTraceResultLibrary_GetTrackedGeometry::TraceResult' has a wrong offset!");
 static_assert(offsetof(ARTraceResultLibrary_GetTrackedGeometry, ReturnValue) == 0x000090, "Member 'ARTraceResultLibrary_GetTrackedGeometry::ReturnValue' has a wrong offset!");
 
-// Function AugmentedReality.ARGeoTrackingSupport.GetGeoTrackingSupport
-// 0x0008 (0x0008 - 0x0000)
-struct ARGeoTrackingSupport_GetGeoTrackingSupport final
-{
-public:
-	class UARGeoTrackingSupport*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARGeoTrackingSupport_GetGeoTrackingSupport) == 0x000008, "Wrong alignment on ARGeoTrackingSupport_GetGeoTrackingSupport");
-static_assert(sizeof(ARGeoTrackingSupport_GetGeoTrackingSupport) == 0x000008, "Wrong size on ARGeoTrackingSupport_GetGeoTrackingSupport");
-static_assert(offsetof(ARGeoTrackingSupport_GetGeoTrackingSupport, ReturnValue) == 0x000000, "Member 'ARGeoTrackingSupport_GetGeoTrackingSupport::ReturnValue' has a wrong offset!");
-
-// Function AugmentedReality.ARGeoTrackingSupport.AddGeoAnchorAtLocation
-// 0x0020 (0x0020 - 0x0000)
-struct ARGeoTrackingSupport_AddGeoAnchorAtLocation final
-{
-public:
-	float                                         Longitude;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Latitude;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OptionalAnchorName;                                // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ARGeoTrackingSupport_AddGeoAnchorAtLocation) == 0x000008, "Wrong alignment on ARGeoTrackingSupport_AddGeoAnchorAtLocation");
-static_assert(sizeof(ARGeoTrackingSupport_AddGeoAnchorAtLocation) == 0x000020, "Wrong size on ARGeoTrackingSupport_AddGeoAnchorAtLocation");
-static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocation, Longitude) == 0x000000, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocation::Longitude' has a wrong offset!");
-static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocation, Latitude) == 0x000004, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocation::Latitude' has a wrong offset!");
-static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocation, OptionalAnchorName) == 0x000008, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocation::OptionalAnchorName' has a wrong offset!");
-static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocation, ReturnValue) == 0x000018, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocation::ReturnValue' has a wrong offset!");
-
-// Function AugmentedReality.ARGeoTrackingSupport.AddGeoAnchorAtLocationWithAltitude
-// 0x0028 (0x0028 - 0x0000)
-struct ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude final
-{
-public:
-	float                                         Longitude;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Latitude;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AltitudeMeters;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 OptionalAnchorName;                                // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude) == 0x000008, "Wrong alignment on ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude");
-static_assert(sizeof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude) == 0x000028, "Wrong size on ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude");
-static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude, Longitude) == 0x000000, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude::Longitude' has a wrong offset!");
-static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude, Latitude) == 0x000004, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude::Latitude' has a wrong offset!");
-static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude, AltitudeMeters) == 0x000008, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude::AltitudeMeters' has a wrong offset!");
-static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude, OptionalAnchorName) == 0x000010, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude::OptionalAnchorName' has a wrong offset!");
-static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude, ReturnValue) == 0x000020, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude::ReturnValue' has a wrong offset!");
-
-// Function AugmentedReality.ARGeoTrackingSupport.GetGeoTrackingAccuracy
-// 0x0001 (0x0001 - 0x0000)
-struct ARGeoTrackingSupport_GetGeoTrackingAccuracy final
-{
-public:
-	EARGeoTrackingAccuracy                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARGeoTrackingSupport_GetGeoTrackingAccuracy) == 0x000001, "Wrong alignment on ARGeoTrackingSupport_GetGeoTrackingAccuracy");
-static_assert(sizeof(ARGeoTrackingSupport_GetGeoTrackingAccuracy) == 0x000001, "Wrong size on ARGeoTrackingSupport_GetGeoTrackingAccuracy");
-static_assert(offsetof(ARGeoTrackingSupport_GetGeoTrackingAccuracy, ReturnValue) == 0x000000, "Member 'ARGeoTrackingSupport_GetGeoTrackingAccuracy::ReturnValue' has a wrong offset!");
-
-// Function AugmentedReality.ARGeoTrackingSupport.GetGeoTrackingState
-// 0x0001 (0x0001 - 0x0000)
-struct ARGeoTrackingSupport_GetGeoTrackingState final
-{
-public:
-	EARGeoTrackingState                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARGeoTrackingSupport_GetGeoTrackingState) == 0x000001, "Wrong alignment on ARGeoTrackingSupport_GetGeoTrackingState");
-static_assert(sizeof(ARGeoTrackingSupport_GetGeoTrackingState) == 0x000001, "Wrong size on ARGeoTrackingSupport_GetGeoTrackingState");
-static_assert(offsetof(ARGeoTrackingSupport_GetGeoTrackingState, ReturnValue) == 0x000000, "Member 'ARGeoTrackingSupport_GetGeoTrackingState::ReturnValue' has a wrong offset!");
-
-// Function AugmentedReality.ARGeoTrackingSupport.GetGeoTrackingStateReason
-// 0x0001 (0x0001 - 0x0000)
-struct ARGeoTrackingSupport_GetGeoTrackingStateReason final
-{
-public:
-	EARGeoTrackingStateReason                     ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARGeoTrackingSupport_GetGeoTrackingStateReason) == 0x000001, "Wrong alignment on ARGeoTrackingSupport_GetGeoTrackingStateReason");
-static_assert(sizeof(ARGeoTrackingSupport_GetGeoTrackingStateReason) == 0x000001, "Wrong size on ARGeoTrackingSupport_GetGeoTrackingStateReason");
-static_assert(offsetof(ARGeoTrackingSupport_GetGeoTrackingStateReason, ReturnValue) == 0x000000, "Member 'ARGeoTrackingSupport_GetGeoTrackingStateReason::ReturnValue' has a wrong offset!");
-
 // Function AugmentedReality.ARSaveWorldAsyncTaskBlueprintProxy.ARSaveWorld
 // 0x0010 (0x0010 - 0x0000)
 struct ARSaveWorldAsyncTaskBlueprintProxy_ARSaveWorld final
@@ -989,72 +961,6 @@ static_assert(alignof(ARSaveWorldAsyncTaskBlueprintProxy_ARSaveWorld) == 0x00000
 static_assert(sizeof(ARSaveWorldAsyncTaskBlueprintProxy_ARSaveWorld) == 0x000010, "Wrong size on ARSaveWorldAsyncTaskBlueprintProxy_ARSaveWorld");
 static_assert(offsetof(ARSaveWorldAsyncTaskBlueprintProxy_ARSaveWorld, WorldContextObject) == 0x000000, "Member 'ARSaveWorldAsyncTaskBlueprintProxy_ARSaveWorld::WorldContextObject' has a wrong offset!");
 static_assert(offsetof(ARSaveWorldAsyncTaskBlueprintProxy_ARSaveWorld, ReturnValue) == 0x000008, "Member 'ARSaveWorldAsyncTaskBlueprintProxy_ARSaveWorld::ReturnValue' has a wrong offset!");
-
-// Function AugmentedReality.ARComponent.GetMRMesh
-// 0x0008 (0x0008 - 0x0000)
-struct ARComponent_GetMRMesh final
-{
-public:
-	class UMRMeshComponent*                       ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARComponent_GetMRMesh) == 0x000008, "Wrong alignment on ARComponent_GetMRMesh");
-static_assert(sizeof(ARComponent_GetMRMesh) == 0x000008, "Wrong size on ARComponent_GetMRMesh");
-static_assert(offsetof(ARComponent_GetMRMesh, ReturnValue) == 0x000000, "Member 'ARComponent_GetMRMesh::ReturnValue' has a wrong offset!");
-
-// Function AugmentedReality.ARComponent.SetNativeID
-// 0x0010 (0x0010 - 0x0000)
-struct ARComponent_SetNativeID final
-{
-public:
-	struct FGuid                                  NativeID_0;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARComponent_SetNativeID) == 0x000004, "Wrong alignment on ARComponent_SetNativeID");
-static_assert(sizeof(ARComponent_SetNativeID) == 0x000010, "Wrong size on ARComponent_SetNativeID");
-static_assert(offsetof(ARComponent_SetNativeID, NativeID_0) == 0x000000, "Member 'ARComponent_SetNativeID::NativeID_0' has a wrong offset!");
-
-// Function AugmentedReality.ARPoseComponent.SetPoseComponentDebugMode
-// 0x0001 (0x0001 - 0x0000)
-struct ARPoseComponent_SetPoseComponentDebugMode final
-{
-public:
-	EPoseComponentDebugMode                       NewDebugMode;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARPoseComponent_SetPoseComponentDebugMode) == 0x000001, "Wrong alignment on ARPoseComponent_SetPoseComponentDebugMode");
-static_assert(sizeof(ARPoseComponent_SetPoseComponentDebugMode) == 0x000001, "Wrong size on ARPoseComponent_SetPoseComponentDebugMode");
-static_assert(offsetof(ARPoseComponent_SetPoseComponentDebugMode, NewDebugMode) == 0x000000, "Member 'ARPoseComponent_SetPoseComponentDebugMode::NewDebugMode' has a wrong offset!");
-
-// Function AugmentedReality.ARPoseComponent.ReceiveAdd
-// 0x0070 (0x0070 - 0x0000)
-struct ARPoseComponent_ReceiveAdd final
-{
-public:
-	struct FARPoseUpdatePayload                   Payload;                                           // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARPoseComponent_ReceiveAdd) == 0x000010, "Wrong alignment on ARPoseComponent_ReceiveAdd");
-static_assert(sizeof(ARPoseComponent_ReceiveAdd) == 0x000070, "Wrong size on ARPoseComponent_ReceiveAdd");
-static_assert(offsetof(ARPoseComponent_ReceiveAdd, Payload) == 0x000000, "Member 'ARPoseComponent_ReceiveAdd::Payload' has a wrong offset!");
-
-// Function AugmentedReality.ARPoseComponent.ReceiveUpdate
-// 0x0070 (0x0070 - 0x0000)
-struct ARPoseComponent_ReceiveUpdate final
-{
-public:
-	struct FARPoseUpdatePayload                   Payload;                                           // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARPoseComponent_ReceiveUpdate) == 0x000010, "Wrong alignment on ARPoseComponent_ReceiveUpdate");
-static_assert(sizeof(ARPoseComponent_ReceiveUpdate) == 0x000070, "Wrong size on ARPoseComponent_ReceiveUpdate");
-static_assert(offsetof(ARPoseComponent_ReceiveUpdate, Payload) == 0x000000, "Member 'ARPoseComponent_ReceiveUpdate::Payload' has a wrong offset!");
-
-// Function AugmentedReality.ARPoseComponent.ServerUpdatePayload
-// 0x0070 (0x0070 - 0x0000)
-struct ARPoseComponent_ServerUpdatePayload final
-{
-public:
-	struct FARPoseUpdatePayload                   NewPayload;                                        // 0x0000(0x0070)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARPoseComponent_ServerUpdatePayload) == 0x000010, "Wrong alignment on ARPoseComponent_ServerUpdatePayload");
-static_assert(sizeof(ARPoseComponent_ServerUpdatePayload) == 0x000070, "Wrong size on ARPoseComponent_ServerUpdatePayload");
-static_assert(offsetof(ARPoseComponent_ServerUpdatePayload, NewPayload) == 0x000000, "Member 'ARPoseComponent_ServerUpdatePayload::NewPayload' has a wrong offset!");
 
 // Function AugmentedReality.ARGetCandidateObjectAsyncTaskBlueprintProxy.ARGetCandidateObject
 // 0x0040 (0x0040 - 0x0000)
@@ -1138,83 +1044,6 @@ public:
 static_assert(alignof(ARPlaneComponent_ServerUpdatePayload) == 0x000010, "Wrong alignment on ARPlaneComponent_ServerUpdatePayload");
 static_assert(sizeof(ARPlaneComponent_ServerUpdatePayload) == 0x0000D0, "Wrong size on ARPlaneComponent_ServerUpdatePayload");
 static_assert(offsetof(ARPlaneComponent_ServerUpdatePayload, NewPayload) == 0x000000, "Member 'ARPlaneComponent_ServerUpdatePayload::NewPayload' has a wrong offset!");
-
-// Function AugmentedReality.ARPointComponent.ReceiveAdd
-// 0x0001 (0x0001 - 0x0000)
-struct ARPointComponent_ReceiveAdd final
-{
-public:
-	struct FARPointUpdatePayload                  Payload;                                           // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARPointComponent_ReceiveAdd) == 0x000001, "Wrong alignment on ARPointComponent_ReceiveAdd");
-static_assert(sizeof(ARPointComponent_ReceiveAdd) == 0x000001, "Wrong size on ARPointComponent_ReceiveAdd");
-static_assert(offsetof(ARPointComponent_ReceiveAdd, Payload) == 0x000000, "Member 'ARPointComponent_ReceiveAdd::Payload' has a wrong offset!");
-
-// Function AugmentedReality.ARPointComponent.ReceiveUpdate
-// 0x0001 (0x0001 - 0x0000)
-struct ARPointComponent_ReceiveUpdate final
-{
-public:
-	struct FARPointUpdatePayload                  Payload;                                           // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARPointComponent_ReceiveUpdate) == 0x000001, "Wrong alignment on ARPointComponent_ReceiveUpdate");
-static_assert(sizeof(ARPointComponent_ReceiveUpdate) == 0x000001, "Wrong size on ARPointComponent_ReceiveUpdate");
-static_assert(offsetof(ARPointComponent_ReceiveUpdate, Payload) == 0x000000, "Member 'ARPointComponent_ReceiveUpdate::Payload' has a wrong offset!");
-
-// Function AugmentedReality.ARPointComponent.ServerUpdatePayload
-// 0x0001 (0x0001 - 0x0000)
-struct ARPointComponent_ServerUpdatePayload final
-{
-public:
-	struct FARPointUpdatePayload                  NewPayload;                                        // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARPointComponent_ServerUpdatePayload) == 0x000001, "Wrong alignment on ARPointComponent_ServerUpdatePayload");
-static_assert(sizeof(ARPointComponent_ServerUpdatePayload) == 0x000001, "Wrong size on ARPointComponent_ServerUpdatePayload");
-static_assert(offsetof(ARPointComponent_ServerUpdatePayload, NewPayload) == 0x000000, "Member 'ARPointComponent_ServerUpdatePayload::NewPayload' has a wrong offset!");
-
-// Function AugmentedReality.ARGeoAnchorComponent.SetGeoAnchorComponentDebugMode
-// 0x0001 (0x0001 - 0x0000)
-struct ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode final
-{
-public:
-	EGeoAnchorComponentDebugMode                  NewDebugMode;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode) == 0x000001, "Wrong alignment on ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode");
-static_assert(sizeof(ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode) == 0x000001, "Wrong size on ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode");
-static_assert(offsetof(ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode, NewDebugMode) == 0x000000, "Member 'ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode::NewDebugMode' has a wrong offset!");
-
-// Function AugmentedReality.ARGeoAnchorComponent.ReceiveAdd
-// 0x00A0 (0x00A0 - 0x0000)
-struct ARGeoAnchorComponent_ReceiveAdd final
-{
-public:
-	struct FARGeoAnchorUpdatePayload              Payload;                                           // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARGeoAnchorComponent_ReceiveAdd) == 0x000010, "Wrong alignment on ARGeoAnchorComponent_ReceiveAdd");
-static_assert(sizeof(ARGeoAnchorComponent_ReceiveAdd) == 0x0000A0, "Wrong size on ARGeoAnchorComponent_ReceiveAdd");
-static_assert(offsetof(ARGeoAnchorComponent_ReceiveAdd, Payload) == 0x000000, "Member 'ARGeoAnchorComponent_ReceiveAdd::Payload' has a wrong offset!");
-
-// Function AugmentedReality.ARGeoAnchorComponent.ReceiveUpdate
-// 0x00A0 (0x00A0 - 0x0000)
-struct ARGeoAnchorComponent_ReceiveUpdate final
-{
-public:
-	struct FARGeoAnchorUpdatePayload              Payload;                                           // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARGeoAnchorComponent_ReceiveUpdate) == 0x000010, "Wrong alignment on ARGeoAnchorComponent_ReceiveUpdate");
-static_assert(sizeof(ARGeoAnchorComponent_ReceiveUpdate) == 0x0000A0, "Wrong size on ARGeoAnchorComponent_ReceiveUpdate");
-static_assert(offsetof(ARGeoAnchorComponent_ReceiveUpdate, Payload) == 0x000000, "Member 'ARGeoAnchorComponent_ReceiveUpdate::Payload' has a wrong offset!");
-
-// Function AugmentedReality.ARGeoAnchorComponent.ServerUpdatePayload
-// 0x00A0 (0x00A0 - 0x0000)
-struct ARGeoAnchorComponent_ServerUpdatePayload final
-{
-public:
-	struct FARGeoAnchorUpdatePayload              NewPayload;                                        // 0x0000(0x00A0)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ARGeoAnchorComponent_ServerUpdatePayload) == 0x000010, "Wrong alignment on ARGeoAnchorComponent_ServerUpdatePayload");
-static_assert(sizeof(ARGeoAnchorComponent_ServerUpdatePayload) == 0x0000A0, "Wrong size on ARGeoAnchorComponent_ServerUpdatePayload");
-static_assert(offsetof(ARGeoAnchorComponent_ServerUpdatePayload, NewPayload) == 0x000000, "Member 'ARGeoAnchorComponent_ServerUpdatePayload::NewPayload' has a wrong offset!");
 
 // Function AugmentedReality.ARFaceComponent.SetFaceComponentDebugMode
 // 0x0001 (0x0001 - 0x0000)
@@ -1348,6 +1177,50 @@ static_assert(alignof(ARQRCodeComponent_ServerUpdatePayload) == 0x000010, "Wrong
 static_assert(sizeof(ARQRCodeComponent_ServerUpdatePayload) == 0x0000B0, "Wrong size on ARQRCodeComponent_ServerUpdatePayload");
 static_assert(offsetof(ARQRCodeComponent_ServerUpdatePayload, NewPayload) == 0x000000, "Member 'ARQRCodeComponent_ServerUpdatePayload::NewPayload' has a wrong offset!");
 
+// Function AugmentedReality.ARPoseComponent.SetPoseComponentDebugMode
+// 0x0001 (0x0001 - 0x0000)
+struct ARPoseComponent_SetPoseComponentDebugMode final
+{
+public:
+	EPoseComponentDebugMode                       NewDebugMode;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARPoseComponent_SetPoseComponentDebugMode) == 0x000001, "Wrong alignment on ARPoseComponent_SetPoseComponentDebugMode");
+static_assert(sizeof(ARPoseComponent_SetPoseComponentDebugMode) == 0x000001, "Wrong size on ARPoseComponent_SetPoseComponentDebugMode");
+static_assert(offsetof(ARPoseComponent_SetPoseComponentDebugMode, NewDebugMode) == 0x000000, "Member 'ARPoseComponent_SetPoseComponentDebugMode::NewDebugMode' has a wrong offset!");
+
+// Function AugmentedReality.ARPoseComponent.ReceiveAdd
+// 0x0070 (0x0070 - 0x0000)
+struct ARPoseComponent_ReceiveAdd final
+{
+public:
+	struct FARPoseUpdatePayload                   Payload;                                           // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARPoseComponent_ReceiveAdd) == 0x000010, "Wrong alignment on ARPoseComponent_ReceiveAdd");
+static_assert(sizeof(ARPoseComponent_ReceiveAdd) == 0x000070, "Wrong size on ARPoseComponent_ReceiveAdd");
+static_assert(offsetof(ARPoseComponent_ReceiveAdd, Payload) == 0x000000, "Member 'ARPoseComponent_ReceiveAdd::Payload' has a wrong offset!");
+
+// Function AugmentedReality.ARPoseComponent.ReceiveUpdate
+// 0x0070 (0x0070 - 0x0000)
+struct ARPoseComponent_ReceiveUpdate final
+{
+public:
+	struct FARPoseUpdatePayload                   Payload;                                           // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARPoseComponent_ReceiveUpdate) == 0x000010, "Wrong alignment on ARPoseComponent_ReceiveUpdate");
+static_assert(sizeof(ARPoseComponent_ReceiveUpdate) == 0x000070, "Wrong size on ARPoseComponent_ReceiveUpdate");
+static_assert(offsetof(ARPoseComponent_ReceiveUpdate, Payload) == 0x000000, "Member 'ARPoseComponent_ReceiveUpdate::Payload' has a wrong offset!");
+
+// Function AugmentedReality.ARPoseComponent.ServerUpdatePayload
+// 0x0070 (0x0070 - 0x0000)
+struct ARPoseComponent_ServerUpdatePayload final
+{
+public:
+	struct FARPoseUpdatePayload                   NewPayload;                                        // 0x0000(0x0070)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARPoseComponent_ServerUpdatePayload) == 0x000010, "Wrong alignment on ARPoseComponent_ServerUpdatePayload");
+static_assert(sizeof(ARPoseComponent_ServerUpdatePayload) == 0x000070, "Wrong size on ARPoseComponent_ServerUpdatePayload");
+static_assert(offsetof(ARPoseComponent_ServerUpdatePayload, NewPayload) == 0x000000, "Member 'ARPoseComponent_ServerUpdatePayload::NewPayload' has a wrong offset!");
+
 // Function AugmentedReality.AREnvironmentProbeComponent.ReceiveAdd
 // 0x0060 (0x0060 - 0x0000)
 struct AREnvironmentProbeComponent_ReceiveAdd final
@@ -1447,6 +1320,50 @@ static_assert(alignof(ARMeshComponent_ServerUpdatePayload) == 0x000010, "Wrong a
 static_assert(sizeof(ARMeshComponent_ServerUpdatePayload) == 0x000090, "Wrong size on ARMeshComponent_ServerUpdatePayload");
 static_assert(offsetof(ARMeshComponent_ServerUpdatePayload, NewPayload) == 0x000000, "Member 'ARMeshComponent_ServerUpdatePayload::NewPayload' has a wrong offset!");
 
+// Function AugmentedReality.ARGeoAnchorComponent.SetGeoAnchorComponentDebugMode
+// 0x0001 (0x0001 - 0x0000)
+struct ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode final
+{
+public:
+	EGeoAnchorComponentDebugMode                  NewDebugMode;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode) == 0x000001, "Wrong alignment on ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode");
+static_assert(sizeof(ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode) == 0x000001, "Wrong size on ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode");
+static_assert(offsetof(ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode, NewDebugMode) == 0x000000, "Member 'ARGeoAnchorComponent_SetGeoAnchorComponentDebugMode::NewDebugMode' has a wrong offset!");
+
+// Function AugmentedReality.ARGeoAnchorComponent.ReceiveAdd
+// 0x00A0 (0x00A0 - 0x0000)
+struct ARGeoAnchorComponent_ReceiveAdd final
+{
+public:
+	struct FARGeoAnchorUpdatePayload              Payload;                                           // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARGeoAnchorComponent_ReceiveAdd) == 0x000010, "Wrong alignment on ARGeoAnchorComponent_ReceiveAdd");
+static_assert(sizeof(ARGeoAnchorComponent_ReceiveAdd) == 0x0000A0, "Wrong size on ARGeoAnchorComponent_ReceiveAdd");
+static_assert(offsetof(ARGeoAnchorComponent_ReceiveAdd, Payload) == 0x000000, "Member 'ARGeoAnchorComponent_ReceiveAdd::Payload' has a wrong offset!");
+
+// Function AugmentedReality.ARGeoAnchorComponent.ReceiveUpdate
+// 0x00A0 (0x00A0 - 0x0000)
+struct ARGeoAnchorComponent_ReceiveUpdate final
+{
+public:
+	struct FARGeoAnchorUpdatePayload              Payload;                                           // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARGeoAnchorComponent_ReceiveUpdate) == 0x000010, "Wrong alignment on ARGeoAnchorComponent_ReceiveUpdate");
+static_assert(sizeof(ARGeoAnchorComponent_ReceiveUpdate) == 0x0000A0, "Wrong size on ARGeoAnchorComponent_ReceiveUpdate");
+static_assert(offsetof(ARGeoAnchorComponent_ReceiveUpdate, Payload) == 0x000000, "Member 'ARGeoAnchorComponent_ReceiveUpdate::Payload' has a wrong offset!");
+
+// Function AugmentedReality.ARGeoAnchorComponent.ServerUpdatePayload
+// 0x00A0 (0x00A0 - 0x0000)
+struct ARGeoAnchorComponent_ServerUpdatePayload final
+{
+public:
+	struct FARGeoAnchorUpdatePayload              NewPayload;                                        // 0x0000(0x00A0)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARGeoAnchorComponent_ServerUpdatePayload) == 0x000010, "Wrong alignment on ARGeoAnchorComponent_ServerUpdatePayload");
+static_assert(sizeof(ARGeoAnchorComponent_ServerUpdatePayload) == 0x0000A0, "Wrong size on ARGeoAnchorComponent_ServerUpdatePayload");
+static_assert(offsetof(ARGeoAnchorComponent_ServerUpdatePayload, NewPayload) == 0x000000, "Member 'ARGeoAnchorComponent_ServerUpdatePayload::NewPayload' has a wrong offset!");
+
 // Function AugmentedReality.ARDependencyHandler.GetARDependencyHandler
 // 0x0008 (0x0008 - 0x0000)
 struct ARDependencyHandler_GetARDependencyHandler final
@@ -1522,6 +1439,89 @@ static_assert(sizeof(ARDependencyHandler_StartARSessionLatent) == 0x000028, "Wro
 static_assert(offsetof(ARDependencyHandler_StartARSessionLatent, WorldContextObject) == 0x000000, "Member 'ARDependencyHandler_StartARSessionLatent::WorldContextObject' has a wrong offset!");
 static_assert(offsetof(ARDependencyHandler_StartARSessionLatent, SessionConfig) == 0x000008, "Member 'ARDependencyHandler_StartARSessionLatent::SessionConfig' has a wrong offset!");
 static_assert(offsetof(ARDependencyHandler_StartARSessionLatent, LatentInfo) == 0x000010, "Member 'ARDependencyHandler_StartARSessionLatent::LatentInfo' has a wrong offset!");
+
+// Function AugmentedReality.ARGeoTrackingSupport.GetGeoTrackingSupport
+// 0x0008 (0x0008 - 0x0000)
+struct ARGeoTrackingSupport_GetGeoTrackingSupport final
+{
+public:
+	class UARGeoTrackingSupport*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARGeoTrackingSupport_GetGeoTrackingSupport) == 0x000008, "Wrong alignment on ARGeoTrackingSupport_GetGeoTrackingSupport");
+static_assert(sizeof(ARGeoTrackingSupport_GetGeoTrackingSupport) == 0x000008, "Wrong size on ARGeoTrackingSupport_GetGeoTrackingSupport");
+static_assert(offsetof(ARGeoTrackingSupport_GetGeoTrackingSupport, ReturnValue) == 0x000000, "Member 'ARGeoTrackingSupport_GetGeoTrackingSupport::ReturnValue' has a wrong offset!");
+
+// Function AugmentedReality.ARGeoTrackingSupport.AddGeoAnchorAtLocation
+// 0x0020 (0x0020 - 0x0000)
+struct ARGeoTrackingSupport_AddGeoAnchorAtLocation final
+{
+public:
+	float                                         Longitude;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Latitude;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OptionalAnchorName;                                // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ARGeoTrackingSupport_AddGeoAnchorAtLocation) == 0x000008, "Wrong alignment on ARGeoTrackingSupport_AddGeoAnchorAtLocation");
+static_assert(sizeof(ARGeoTrackingSupport_AddGeoAnchorAtLocation) == 0x000020, "Wrong size on ARGeoTrackingSupport_AddGeoAnchorAtLocation");
+static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocation, Longitude) == 0x000000, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocation::Longitude' has a wrong offset!");
+static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocation, Latitude) == 0x000004, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocation::Latitude' has a wrong offset!");
+static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocation, OptionalAnchorName) == 0x000008, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocation::OptionalAnchorName' has a wrong offset!");
+static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocation, ReturnValue) == 0x000018, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocation::ReturnValue' has a wrong offset!");
+
+// Function AugmentedReality.ARGeoTrackingSupport.AddGeoAnchorAtLocationWithAltitude
+// 0x0028 (0x0028 - 0x0000)
+struct ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude final
+{
+public:
+	float                                         Longitude;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Latitude;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AltitudeMeters;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 OptionalAnchorName;                                // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude) == 0x000008, "Wrong alignment on ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude");
+static_assert(sizeof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude) == 0x000028, "Wrong size on ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude");
+static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude, Longitude) == 0x000000, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude::Longitude' has a wrong offset!");
+static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude, Latitude) == 0x000004, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude::Latitude' has a wrong offset!");
+static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude, AltitudeMeters) == 0x000008, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude::AltitudeMeters' has a wrong offset!");
+static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude, OptionalAnchorName) == 0x000010, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude::OptionalAnchorName' has a wrong offset!");
+static_assert(offsetof(ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude, ReturnValue) == 0x000020, "Member 'ARGeoTrackingSupport_AddGeoAnchorAtLocationWithAltitude::ReturnValue' has a wrong offset!");
+
+// Function AugmentedReality.ARGeoTrackingSupport.GetGeoTrackingAccuracy
+// 0x0001 (0x0001 - 0x0000)
+struct ARGeoTrackingSupport_GetGeoTrackingAccuracy final
+{
+public:
+	EARGeoTrackingAccuracy                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARGeoTrackingSupport_GetGeoTrackingAccuracy) == 0x000001, "Wrong alignment on ARGeoTrackingSupport_GetGeoTrackingAccuracy");
+static_assert(sizeof(ARGeoTrackingSupport_GetGeoTrackingAccuracy) == 0x000001, "Wrong size on ARGeoTrackingSupport_GetGeoTrackingAccuracy");
+static_assert(offsetof(ARGeoTrackingSupport_GetGeoTrackingAccuracy, ReturnValue) == 0x000000, "Member 'ARGeoTrackingSupport_GetGeoTrackingAccuracy::ReturnValue' has a wrong offset!");
+
+// Function AugmentedReality.ARGeoTrackingSupport.GetGeoTrackingState
+// 0x0001 (0x0001 - 0x0000)
+struct ARGeoTrackingSupport_GetGeoTrackingState final
+{
+public:
+	EARGeoTrackingState                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARGeoTrackingSupport_GetGeoTrackingState) == 0x000001, "Wrong alignment on ARGeoTrackingSupport_GetGeoTrackingState");
+static_assert(sizeof(ARGeoTrackingSupport_GetGeoTrackingState) == 0x000001, "Wrong size on ARGeoTrackingSupport_GetGeoTrackingState");
+static_assert(offsetof(ARGeoTrackingSupport_GetGeoTrackingState, ReturnValue) == 0x000000, "Member 'ARGeoTrackingSupport_GetGeoTrackingState::ReturnValue' has a wrong offset!");
+
+// Function AugmentedReality.ARGeoTrackingSupport.GetGeoTrackingStateReason
+// 0x0001 (0x0001 - 0x0000)
+struct ARGeoTrackingSupport_GetGeoTrackingStateReason final
+{
+public:
+	EARGeoTrackingStateReason                     ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ARGeoTrackingSupport_GetGeoTrackingStateReason) == 0x000001, "Wrong alignment on ARGeoTrackingSupport_GetGeoTrackingStateReason");
+static_assert(sizeof(ARGeoTrackingSupport_GetGeoTrackingStateReason) == 0x000001, "Wrong size on ARGeoTrackingSupport_GetGeoTrackingStateReason");
+static_assert(offsetof(ARGeoTrackingSupport_GetGeoTrackingStateReason, ReturnValue) == 0x000000, "Member 'ARGeoTrackingSupport_GetGeoTrackingStateReason::ReturnValue' has a wrong offset!");
 
 // Function AugmentedReality.CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy.CheckGeoTrackingAvailability
 // 0x0010 (0x0010 - 0x0000)

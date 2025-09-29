@@ -9,33 +9,17 @@
 // FORWARD DECLARATIONS
 
 
-namespace ABP_FireKirin_Implementation { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Player_Hair001_Implementation { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_YakushimaBoss002_R { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_NPC_Child { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ABP_RidingBoss { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_FishingRod001 { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_ElecPanda { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_NPC_Child { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_F_OldCloth001_Implimentation { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_ChickenPal_Implemantation { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Pinkcat_Implementation { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_ChickenPal { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_SheepBall_Implementation { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Kitsunebi_PartnerSkill { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_YakushimaBoss002_R { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ABP_NPC_Male_DarkTrader01 { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_YakushimaBoss002_L { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_YakushimaBoss002_B { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ABP_YakushimaBoss002_R_Implementation { struct FAnimBlueprintGeneratedConstantData; }
 
@@ -43,18 +27,14 @@ namespace ABP_YakushimaBoss002_B_Implementation { struct FAnimBlueprintGenerated
 
 namespace ABP_YakushimaBoss002_L_Implementation { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_YakushimaBoss002_B { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_YakushimaBoss002_L { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_PinkCat { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_FishingRod001_Backweapon { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Weapon_AssaultRifle_011 { struct FAnimBlueprintGeneratedConstantData; }
-
 
 namespace ABP_Player_Head
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_Player
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
@@ -62,30 +42,18 @@ namespace ABP_Player_Head
 
 namespace ABP_MonsterBase
 {
-	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
 }
 
 namespace ABP_Player_Hair
 {
-	struct FAnimBlueprintGeneratedMutableData;
 	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
 }
 
 namespace ABP_NPC_Base
 {
 	struct FAnimBlueprintGeneratedMutableData;
 	struct FAnimBlueprintGeneratedConstantData;
-}
-
-namespace ABP_ElecPanda_Implementation
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace ABP_Player
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
 }

@@ -18,19 +18,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupTextInput
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_Title_WorldSettings_ListContent_C_SetupTextInput final
-{
-public:
-	class FString                                 DefaultString;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0018)()
-};
-static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput) == 0x000008, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetupTextInput");
-static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput) == 0x000028, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetupTextInput");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput, DefaultString) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupTextInput::DefaultString' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupTextInput::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-
 // Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupSelectString
 // 0x0018 (0x0018 - 0x0000)
 struct WBP_Title_WorldSettings_ListContent_C_SetupSelectString final
@@ -159,15 +146,17 @@ static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_PreConstruct) == 0x00
 static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 // Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.OnClickedInternal
-// 0x0001 (0x0001 - 0x0000)
+// 0x0002 (0x0002 - 0x0000)
 struct WBP_Title_WorldSettings_ListContent_C_OnClickedInternal final
 {
 public:
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanEditable_bEditable;                    // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_OnClickedInternal) == 0x000001, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_OnClickedInternal");
-static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_OnClickedInternal) == 0x000001, "Wrong size on WBP_Title_WorldSettings_ListContent_C_OnClickedInternal");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_OnClickedInternal, K2Node_SwitchEnum_CmpSuccess) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_OnClickedInternal::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_OnClickedInternal) == 0x000002, "Wrong size on WBP_Title_WorldSettings_ListContent_C_OnClickedInternal");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_OnClickedInternal, CallFunc_CanEditable_bEditable) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_OnClickedInternal::CallFunc_CanEditable_bEditable' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_OnClickedInternal, K2Node_SwitchEnum_CmpSuccess) == 0x000001, "Member 'WBP_Title_WorldSettings_ListContent_C_OnClickedInternal::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.IsOn
 // 0x0002 (0x0002 - 0x0000)
@@ -269,77 +258,86 @@ static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_GetButtonText, Text
 static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_GetButtonText, CallFunc_GetButtonText_ButtonText) == 0x000018, "Member 'WBP_Title_WorldSettings_ListContent_C_GetButtonText::CallFunc_GetButtonText_ButtonText' has a wrong offset!");
 
 // Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.ExecuteUbergraph_WBP_Title_WorldSettings_ListContent
-// 0x0178 (0x0178 - 0x0000)
+// 0x0180 (0x0180 - 0x0000)
 struct WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EUMGSequencePlayMode                          Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EUMGSequencePlayMode                          Temp_byte_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_isEnableButton;                 // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EUMGSequencePlayMode                          K2Node_Select_Default;                             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          Temp_bool_Variable;                                // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_isEnableButton;                 // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUMGSequencePlayMode                          K2Node_Select_Default;                             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_2;               // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_2;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_IsOn;                   // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_ComponentBoundEvent_Text_1;                 // 0x0048(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod;           // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x0068(0x0018)(ConstParm)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         K2Node_ComponentBoundEvent_Selection;              // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Left_ReturnValue;                         // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00C0(0x0018)()
-	double                                        K2Node_ComponentBoundEvent_Value;                  // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x00E8(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0100(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0150(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0160(0x0018)()
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_2;               // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_2;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_IsOn;                   // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_ComponentBoundEvent_Text_1;                 // 0x0050(0x0018)(ConstParm)
+	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod;           // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x0070(0x0018)(ConstParm)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         K2Node_ComponentBoundEvent_Selection;              // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Left_ReturnValue;                         // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00C8(0x0018)()
+	double                                        K2Node_ComponentBoundEvent_Value;                  // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x00F0(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0108(0x0050)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0158(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0168(0x0018)()
 };
 static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent) == 0x000008, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent");
-static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent) == 0x000178, "Wrong size on WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent");
+static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent) == 0x000180, "Wrong size on WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent");
 static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, EntryPoint) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, Temp_byte_Variable) == 0x000004, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, Temp_byte_Variable_1) == 0x000005, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_CustomEvent_isEnableButton) == 0x000006, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_CustomEvent_isEnableButton' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, Temp_bool_Variable) == 0x000007, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000008, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_Select_Default) == 0x000009, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, Temp_bool_Variable) == 0x000006, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, Temp_byte_Variable_2) == 0x000007, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::Temp_byte_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, Temp_byte_Variable_3) == 0x000008, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::Temp_byte_Variable_3' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_CustomEvent_isEnableButton) == 0x000009, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_CustomEvent_isEnableButton' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, Temp_bool_Variable_1) == 0x00000A, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x00000B, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_Select_Default) == 0x00000C, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_Select_Default' has a wrong offset!");
 static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_PlayAnimation_ReturnValue) == 0x000010, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Button_2) == 0x000018, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Button_2' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Button_1) == 0x000020, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_PlayAnimation_ReturnValue_1) == 0x000028, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_PlayAnimation_ReturnValue_2) == 0x000030, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_PlayAnimation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_IsOn) == 0x000038, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_IsOn' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Button) == 0x000040, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Text_1) == 0x000048, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Text_1' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_CommitMethod) == 0x000060, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_CommitMethod' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Text) == 0x000068, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Text' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_SwitchEnum_CmpSuccess) == 0x000080, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_Conv_TextToString_ReturnValue) == 0x000088, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000098, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Selection) == 0x0000A8, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Selection' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_Left_ReturnValue) == 0x0000B0, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_Left_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_Conv_StringToText_ReturnValue) == 0x0000C0, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Value) == 0x0000D8, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Value' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_Event_IsDesignTime) == 0x0000E0, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_Conv_NameToText_ReturnValue) == 0x0000E8, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_MakeStruct_FormatArgumentData) == 0x000100, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_MakeArray_Array) == 0x000150, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_Format_ReturnValue) == 0x000160, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_Select_Default_1) == 0x000018, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Button_2) == 0x000020, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Button_2' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Button_1) == 0x000028, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_PlayAnimation_ReturnValue_1) == 0x000030, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_PlayAnimation_ReturnValue_2) == 0x000038, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_PlayAnimation_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_IsOn) == 0x000040, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_IsOn' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Button) == 0x000048, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Text_1) == 0x000050, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Text_1' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_CommitMethod) == 0x000068, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_CommitMethod' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Text) == 0x000070, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Text' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_SwitchEnum_CmpSuccess) == 0x000088, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_Conv_TextToString_ReturnValue) == 0x000090, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_Conv_TextToString_ReturnValue_1) == 0x0000A0, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Selection) == 0x0000B0, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Selection' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_Left_ReturnValue) == 0x0000B8, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_Left_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_Conv_StringToText_ReturnValue) == 0x0000C8, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_ComponentBoundEvent_Value) == 0x0000E0, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_ComponentBoundEvent_Value' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_Event_IsDesignTime) == 0x0000E8, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_Conv_NameToText_ReturnValue) == 0x0000F0, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_MakeStruct_FormatArgumentData) == 0x000108, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, K2Node_MakeArray_Array) == 0x000158, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent, CallFunc_Format_ReturnValue) == 0x000168, "Member 'WBP_Title_WorldSettings_ListContent_C_ExecuteUbergraph_WBP_Title_WorldSettings_ListContent::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.CustomNavi_ToRight
 // 0x0018 (0x0018 - 0x0000)
@@ -349,35 +347,55 @@ public:
 	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsOn_IsOn;                                // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanEditable_bEditable;                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsOn_IsOn;                                // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight) == 0x000008, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight");
 static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight) == 0x000018, "Wrong size on WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight");
 static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight, Navigation_0) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight::Navigation_0' has a wrong offset!");
 static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight, ReturnValue) == 0x000008, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight, K2Node_SwitchEnum_CmpSuccess) == 0x000010, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight, CallFunc_IsOn_IsOn) == 0x000011, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight::CallFunc_IsOn_IsOn' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight, CallFunc_CanEditable_bEditable) == 0x000010, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight::CallFunc_CanEditable_bEditable' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight, K2Node_SwitchEnum_CmpSuccess) == 0x000011, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight, CallFunc_IsOn_IsOn) == 0x000012, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToRight::CallFunc_IsOn_IsOn' has a wrong offset!");
 
 // Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.CustomNavi_ToLeft
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft final
 {
 public:
 	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsOn_IsOn;                                // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanEditable_bEditable;                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsOn_IsOn;                                // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft) == 0x000008, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft");
-static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft) == 0x000020, "Wrong size on WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft");
+static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft) == 0x000028, "Wrong size on WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft");
 static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft, Navigation_0) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft::Navigation_0' has a wrong offset!");
 static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft, ReturnValue) == 0x000008, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000010, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft, K2Node_SwitchEnum_CmpSuccess) == 0x000018, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft, CallFunc_IsOn_IsOn) == 0x000019, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft::CallFunc_IsOn_IsOn' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft, CallFunc_CanEditable_bEditable) == 0x000010, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft::CallFunc_CanEditable_bEditable' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000018, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft, K2Node_SwitchEnum_CmpSuccess) == 0x000020, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft, CallFunc_IsOn_IsOn) == 0x000021, "Member 'WBP_Title_WorldSettings_ListContent_C_CustomNavi_ToLeft::CallFunc_IsOn_IsOn' has a wrong offset!");
+
+// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.CanEditable
+// 0x0003 (0x0003 - 0x0000)
+struct WBP_Title_WorldSettings_ListContent_C_CanEditable final
+{
+public:
+	bool                                          bEditable;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_CanEditable) == 0x000001, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_CanEditable");
+static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_CanEditable) == 0x000003, "Wrong size on WBP_Title_WorldSettings_ListContent_C_CanEditable");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CanEditable, bEditable) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_CanEditable::bEditable' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CanEditable, CallFunc_GetVisibility_ReturnValue) == 0x000001, "Member 'WBP_Title_WorldSettings_ListContent_C_CanEditable::CallFunc_GetVisibility_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_CanEditable, K2Node_SwitchEnum_CmpSuccess) == 0x000002, "Member 'WBP_Title_WorldSettings_ListContent_C_CanEditable::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.BndEvt__WBP_Title_WorldSettings_ListContent_WBP_PalInvisibleButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -479,6 +497,38 @@ public:
 static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_AnmEvent_SetEnableBuutton) == 0x000001, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_AnmEvent_SetEnableBuutton");
 static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_AnmEvent_SetEnableBuutton) == 0x000001, "Wrong size on WBP_Title_WorldSettings_ListContent_C_AnmEvent_SetEnableBuutton");
 static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_AnmEvent_SetEnableBuutton, isEnableButton) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_AnmEvent_SetEnableBuutton::isEnableButton' has a wrong offset!");
+
+// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupTextInput
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_Title_WorldSettings_ListContent_C_SetupTextInput final
+{
+public:
+	class FString                                 DefaultString;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0018)()
+};
+static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput) == 0x000008, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetupTextInput");
+static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput) == 0x000028, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetupTextInput");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput, DefaultString) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupTextInput::DefaultString' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupTextInput::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+
+// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetVisibilityCaution
+// 0x0005 (0x0005 - 0x0000)
+struct WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution) == 0x000001, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution");
+static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution) == 0x000005, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, bVisible) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::bVisible' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, Temp_bool_Variable) == 0x000001, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, Temp_byte_Variable) == 0x000002, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, Temp_byte_Variable_1) == 0x000003, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, K2Node_Select_Default) == 0x000004, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::K2Node_Select_Default' has a wrong offset!");
 
 }
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
 #include "WBP_PalCharacterSlotBase_classes.hpp"
+#include "Pal_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -20,47 +20,47 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_PalCommonCharacterSlot.WBP_PalCommonCharacterSlot_C
-// 0x0100 (0x0998 - 0x0898)
+// 0x0100 (0x09A0 - 0x08A0)
 class UWBP_PalCommonCharacterSlot_C final : public UWBP_PalCharacterSlotBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WBP_PalCommonCharacterSlot_C;       // 0x0898(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Anm_BaseDefault;                                   // 0x08A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_BaseDisable;                                   // 0x08A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_SeedIcon;                                      // 0x08B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_LowHealthLoop;                                 // 0x08B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_SleepIcon;                                     // 0x08C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_MealIcon;                                      // 0x08C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_WorkIcon;                                      // 0x08D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Background;                                        // 0x08D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Background_circle_b;                               // 0x08E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Background_Doping;                                 // 0x08E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_64;                                          // 0x08F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_229;                                         // 0x08F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Icon_Expedition;                             // 0x0900(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Icon_GlobalInport;                           // 0x0908(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Icon_Locked;                                 // 0x0910(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_IconPalWork;                                 // 0x0918(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Meal;                                        // 0x0920(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_PalBattleImage;                              // 0x0928(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_PalDying;                                    // 0x0930(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_PalLowHealth;                                // 0x0938(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_PalSleep;                                    // 0x0940(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Rare;                                        // 0x0948(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Strong;                                      // 0x0950(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_Doping;                                    // 0x0958(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_Revive;                                    // 0x0960(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBP_PalTextBlock_C*                     Text_HPPercent;                                    // 0x0968(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBP_PalTextBlock_C*                     Text_ReviveTimer;                                  // 0x0970(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PalCommonCharacterIcon_C*          WBP_PalCommonCharacterIcon;                        // 0x0978(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          lastWorkDetail;                                    // 0x0980(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isBattleModeDisplay;                               // 0x0981(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isLowHealthBlink;                                  // 0x0982(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isDisplayHealthPercent;                            // 0x0983(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isDisplayRarity;                                   // 0x0984(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_985[0x3];                                      // 0x0985(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        chachedLastHPPercent;                              // 0x0988(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsDIsplayDopingEffect;                            // 0x0990(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WBP_PalCommonCharacterSlot_C;       // 0x08A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Anm_BaseDefault;                                   // 0x08A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_BaseDisable;                                   // 0x08B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_SeedIcon;                                      // 0x08B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_LowHealthLoop;                                 // 0x08C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_SleepIcon;                                     // 0x08C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_MealIcon;                                      // 0x08D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_WorkIcon;                                      // 0x08D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Background;                                        // 0x08E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Background_circle_b;                               // 0x08E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Background_Doping;                                 // 0x08F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_64;                                          // 0x08F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_229;                                         // 0x0900(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Icon_Expedition;                             // 0x0908(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Icon_GlobalInport;                           // 0x0910(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Icon_Locked;                                 // 0x0918(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_IconPalWork;                                 // 0x0920(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Meal;                                        // 0x0928(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_PalBattleImage;                              // 0x0930(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_PalDying;                                    // 0x0938(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_PalLowHealth;                                // 0x0940(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_PalSleep;                                    // 0x0948(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Rare;                                        // 0x0950(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Strong;                                      // 0x0958(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_Doping;                                    // 0x0960(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_Revive;                                    // 0x0968(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBP_PalTextBlock_C*                     Text_HPPercent;                                    // 0x0970(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBP_PalTextBlock_C*                     Text_ReviveTimer;                                  // 0x0978(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PalCommonCharacterIcon_C*          WBP_PalCommonCharacterIcon;                        // 0x0980(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          lastWorkDetail;                                    // 0x0988(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isBattleModeDisplay;                               // 0x0989(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isLowHealthBlink;                                  // 0x098A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isDisplayHealthPercent;                            // 0x098B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isDisplayRarity;                                   // 0x098C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_98D[0x3];                                      // 0x098D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        chachedLastHPPercent;                              // 0x0990(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsDIsplayDopingEffect;                            // 0x0998(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnmEvent_BeginEat();
@@ -106,43 +106,43 @@ public:
 	}
 };
 static_assert(alignof(UWBP_PalCommonCharacterSlot_C) == 0x000008, "Wrong alignment on UWBP_PalCommonCharacterSlot_C");
-static_assert(sizeof(UWBP_PalCommonCharacterSlot_C) == 0x000998, "Wrong size on UWBP_PalCommonCharacterSlot_C");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, UberGraphFrame_WBP_PalCommonCharacterSlot_C) == 0x000898, "Member 'UWBP_PalCommonCharacterSlot_C::UberGraphFrame_WBP_PalCommonCharacterSlot_C' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_BaseDefault) == 0x0008A0, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_BaseDefault' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_BaseDisable) == 0x0008A8, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_BaseDisable' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_SeedIcon) == 0x0008B0, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_SeedIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_LowHealthLoop) == 0x0008B8, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_LowHealthLoop' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_SleepIcon) == 0x0008C0, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_SleepIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_MealIcon) == 0x0008C8, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_MealIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_WorkIcon) == 0x0008D0, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_WorkIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Background) == 0x0008D8, "Member 'UWBP_PalCommonCharacterSlot_C::Background' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Background_circle_b) == 0x0008E0, "Member 'UWBP_PalCommonCharacterSlot_C::Background_circle_b' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Background_Doping) == 0x0008E8, "Member 'UWBP_PalCommonCharacterSlot_C::Background_Doping' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_64) == 0x0008F0, "Member 'UWBP_PalCommonCharacterSlot_C::Image_64' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_229) == 0x0008F8, "Member 'UWBP_PalCommonCharacterSlot_C::Image_229' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_Icon_Expedition) == 0x000900, "Member 'UWBP_PalCommonCharacterSlot_C::Image_Icon_Expedition' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_Icon_GlobalInport) == 0x000908, "Member 'UWBP_PalCommonCharacterSlot_C::Image_Icon_GlobalInport' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_Icon_Locked) == 0x000910, "Member 'UWBP_PalCommonCharacterSlot_C::Image_Icon_Locked' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_IconPalWork) == 0x000918, "Member 'UWBP_PalCommonCharacterSlot_C::Image_IconPalWork' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_Meal) == 0x000920, "Member 'UWBP_PalCommonCharacterSlot_C::Image_Meal' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_PalBattleImage) == 0x000928, "Member 'UWBP_PalCommonCharacterSlot_C::Image_PalBattleImage' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_PalDying) == 0x000930, "Member 'UWBP_PalCommonCharacterSlot_C::Image_PalDying' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_PalLowHealth) == 0x000938, "Member 'UWBP_PalCommonCharacterSlot_C::Image_PalLowHealth' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_PalSleep) == 0x000940, "Member 'UWBP_PalCommonCharacterSlot_C::Image_PalSleep' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_Rare) == 0x000948, "Member 'UWBP_PalCommonCharacterSlot_C::Image_Rare' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_Strong) == 0x000950, "Member 'UWBP_PalCommonCharacterSlot_C::Image_Strong' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Overlay_Doping) == 0x000958, "Member 'UWBP_PalCommonCharacterSlot_C::Overlay_Doping' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Overlay_Revive) == 0x000960, "Member 'UWBP_PalCommonCharacterSlot_C::Overlay_Revive' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Text_HPPercent) == 0x000968, "Member 'UWBP_PalCommonCharacterSlot_C::Text_HPPercent' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Text_ReviveTimer) == 0x000970, "Member 'UWBP_PalCommonCharacterSlot_C::Text_ReviveTimer' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, WBP_PalCommonCharacterIcon) == 0x000978, "Member 'UWBP_PalCommonCharacterSlot_C::WBP_PalCommonCharacterIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, lastWorkDetail) == 0x000980, "Member 'UWBP_PalCommonCharacterSlot_C::lastWorkDetail' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, isBattleModeDisplay) == 0x000981, "Member 'UWBP_PalCommonCharacterSlot_C::isBattleModeDisplay' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, isLowHealthBlink) == 0x000982, "Member 'UWBP_PalCommonCharacterSlot_C::isLowHealthBlink' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, isDisplayHealthPercent) == 0x000983, "Member 'UWBP_PalCommonCharacterSlot_C::isDisplayHealthPercent' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, isDisplayRarity) == 0x000984, "Member 'UWBP_PalCommonCharacterSlot_C::isDisplayRarity' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, chachedLastHPPercent) == 0x000988, "Member 'UWBP_PalCommonCharacterSlot_C::chachedLastHPPercent' has a wrong offset!");
-static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, bIsDIsplayDopingEffect) == 0x000990, "Member 'UWBP_PalCommonCharacterSlot_C::bIsDIsplayDopingEffect' has a wrong offset!");
+static_assert(sizeof(UWBP_PalCommonCharacterSlot_C) == 0x0009A0, "Wrong size on UWBP_PalCommonCharacterSlot_C");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, UberGraphFrame_WBP_PalCommonCharacterSlot_C) == 0x0008A0, "Member 'UWBP_PalCommonCharacterSlot_C::UberGraphFrame_WBP_PalCommonCharacterSlot_C' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_BaseDefault) == 0x0008A8, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_BaseDefault' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_BaseDisable) == 0x0008B0, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_BaseDisable' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_SeedIcon) == 0x0008B8, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_SeedIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_LowHealthLoop) == 0x0008C0, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_LowHealthLoop' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_SleepIcon) == 0x0008C8, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_SleepIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_MealIcon) == 0x0008D0, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_MealIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Anm_WorkIcon) == 0x0008D8, "Member 'UWBP_PalCommonCharacterSlot_C::Anm_WorkIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Background) == 0x0008E0, "Member 'UWBP_PalCommonCharacterSlot_C::Background' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Background_circle_b) == 0x0008E8, "Member 'UWBP_PalCommonCharacterSlot_C::Background_circle_b' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Background_Doping) == 0x0008F0, "Member 'UWBP_PalCommonCharacterSlot_C::Background_Doping' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_64) == 0x0008F8, "Member 'UWBP_PalCommonCharacterSlot_C::Image_64' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_229) == 0x000900, "Member 'UWBP_PalCommonCharacterSlot_C::Image_229' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_Icon_Expedition) == 0x000908, "Member 'UWBP_PalCommonCharacterSlot_C::Image_Icon_Expedition' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_Icon_GlobalInport) == 0x000910, "Member 'UWBP_PalCommonCharacterSlot_C::Image_Icon_GlobalInport' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_Icon_Locked) == 0x000918, "Member 'UWBP_PalCommonCharacterSlot_C::Image_Icon_Locked' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_IconPalWork) == 0x000920, "Member 'UWBP_PalCommonCharacterSlot_C::Image_IconPalWork' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_Meal) == 0x000928, "Member 'UWBP_PalCommonCharacterSlot_C::Image_Meal' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_PalBattleImage) == 0x000930, "Member 'UWBP_PalCommonCharacterSlot_C::Image_PalBattleImage' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_PalDying) == 0x000938, "Member 'UWBP_PalCommonCharacterSlot_C::Image_PalDying' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_PalLowHealth) == 0x000940, "Member 'UWBP_PalCommonCharacterSlot_C::Image_PalLowHealth' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_PalSleep) == 0x000948, "Member 'UWBP_PalCommonCharacterSlot_C::Image_PalSleep' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_Rare) == 0x000950, "Member 'UWBP_PalCommonCharacterSlot_C::Image_Rare' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Image_Strong) == 0x000958, "Member 'UWBP_PalCommonCharacterSlot_C::Image_Strong' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Overlay_Doping) == 0x000960, "Member 'UWBP_PalCommonCharacterSlot_C::Overlay_Doping' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Overlay_Revive) == 0x000968, "Member 'UWBP_PalCommonCharacterSlot_C::Overlay_Revive' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Text_HPPercent) == 0x000970, "Member 'UWBP_PalCommonCharacterSlot_C::Text_HPPercent' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, Text_ReviveTimer) == 0x000978, "Member 'UWBP_PalCommonCharacterSlot_C::Text_ReviveTimer' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, WBP_PalCommonCharacterIcon) == 0x000980, "Member 'UWBP_PalCommonCharacterSlot_C::WBP_PalCommonCharacterIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, lastWorkDetail) == 0x000988, "Member 'UWBP_PalCommonCharacterSlot_C::lastWorkDetail' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, isBattleModeDisplay) == 0x000989, "Member 'UWBP_PalCommonCharacterSlot_C::isBattleModeDisplay' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, isLowHealthBlink) == 0x00098A, "Member 'UWBP_PalCommonCharacterSlot_C::isLowHealthBlink' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, isDisplayHealthPercent) == 0x00098B, "Member 'UWBP_PalCommonCharacterSlot_C::isDisplayHealthPercent' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, isDisplayRarity) == 0x00098C, "Member 'UWBP_PalCommonCharacterSlot_C::isDisplayRarity' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, chachedLastHPPercent) == 0x000990, "Member 'UWBP_PalCommonCharacterSlot_C::chachedLastHPPercent' has a wrong offset!");
+static_assert(offsetof(UWBP_PalCommonCharacterSlot_C, bIsDIsplayDopingEffect) == 0x000998, "Member 'UWBP_PalCommonCharacterSlot_C::bIsDIsplayDopingEffect' has a wrong offset!");
 
 }
 

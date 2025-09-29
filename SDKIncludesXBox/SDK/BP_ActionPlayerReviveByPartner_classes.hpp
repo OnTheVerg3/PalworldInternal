@@ -27,6 +27,7 @@ public:
 	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UNiagaraSystem*                         ReviveFX;                                          // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class UNiagaraSystem>          ReviveFX_Asset;                                    // 0x01A8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class FName                                   flagName;                                          // 0x01D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Calc_Effect_Location(struct FVector* Location);
@@ -60,6 +61,7 @@ static_assert(offsetof(UBP_ActionPlayerReviveByPartner_C, UberGraphFrame_BP_Acti
 static_assert(offsetof(UBP_ActionPlayerReviveByPartner_C, IsEnd) == 0x000198, "Member 'UBP_ActionPlayerReviveByPartner_C::IsEnd' has a wrong offset!");
 static_assert(offsetof(UBP_ActionPlayerReviveByPartner_C, ReviveFX) == 0x0001A0, "Member 'UBP_ActionPlayerReviveByPartner_C::ReviveFX' has a wrong offset!");
 static_assert(offsetof(UBP_ActionPlayerReviveByPartner_C, ReviveFX_Asset) == 0x0001A8, "Member 'UBP_ActionPlayerReviveByPartner_C::ReviveFX_Asset' has a wrong offset!");
+static_assert(offsetof(UBP_ActionPlayerReviveByPartner_C, flagName) == 0x0001D8, "Member 'UBP_ActionPlayerReviveByPartner_C::flagName' has a wrong offset!");
 
 }
 

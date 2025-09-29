@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "AIModule_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params

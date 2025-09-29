@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "BP_AIAction_CanCombatBase_classes.hpp"
 
 
@@ -35,6 +35,8 @@ public:
 	double                                        EndDistance;                                       // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ActionAbort(class APawn* ControlledPawn);
+	void ActionFinished(class APawn* ControlledPawn, EPawnActionResult WithResult);
 	void ActionTick(class APawn* ControlledPawn, float DeltaSeconds);
 	void ChangeReturnMode(bool* ChangeSuccess);
 	void ExecuteUbergraph_BP_AIActionEscape(int32 EntryPoint);
@@ -43,8 +45,6 @@ public:
 	void OnFail_023A017548911A48339C18BEF9D1B042(EPathFollowingResult MovementResult);
 	void OnSuccess_023A017548911A48339C18BEF9D1B042(EPathFollowingResult MovementResult);
 	void SetGoalLocation(bool* Success);
-	void ActionAbort(class APawn* ControlledPawn);
-	void ActionFinished(class APawn* ControlledPawn, EPawnActionResult WithResult);
 	void ActionPause(class APawn* ControlledPawn);
 	void ActionResume(class APawn* ControlledPawn);
 	void ActionStart(class APawn* ControlledPawn);

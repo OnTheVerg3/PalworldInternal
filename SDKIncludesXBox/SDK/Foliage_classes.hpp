@@ -10,15 +10,88 @@
 
 #include "Basic.hpp"
 
-#include "Foliage_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Foliage_structs.hpp"
 
 
 namespace SDK
 {
+
+// Class Foliage.InstancedFoliageActor
+// 0x0050 (0x02F0 - 0x02A0)
+class AInstancedFoliageActor final : public AISMPartitionActor
+{
+public:
+	uint8                                         Pad_2A0[0x50];                                     // 0x02A0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InstancedFoliageActor">();
+	}
+	static class AInstancedFoliageActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AInstancedFoliageActor>();
+	}
+};
+static_assert(alignof(AInstancedFoliageActor) == 0x000008, "Wrong alignment on AInstancedFoliageActor");
+static_assert(sizeof(AInstancedFoliageActor) == 0x0002F0, "Wrong size on AInstancedFoliageActor");
+
+// Class Foliage.ProceduralFoliageComponent
+// 0x0028 (0x00C8 - 0x00A0)
+class UProceduralFoliageComponent : public UActorComponent
+{
+public:
+	class UProceduralFoliageSpawner*              FoliageSpawner;                                    // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TileOverlap;                                       // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AVolume*                                SpawningVolume;                                    // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FGuid                                  ProceduralGuid;                                    // 0x00B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ProceduralFoliageComponent">();
+	}
+	static class UProceduralFoliageComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UProceduralFoliageComponent>();
+	}
+};
+static_assert(alignof(UProceduralFoliageComponent) == 0x000008, "Wrong alignment on UProceduralFoliageComponent");
+static_assert(sizeof(UProceduralFoliageComponent) == 0x0000C8, "Wrong size on UProceduralFoliageComponent");
+static_assert(offsetof(UProceduralFoliageComponent, FoliageSpawner) == 0x0000A0, "Member 'UProceduralFoliageComponent::FoliageSpawner' has a wrong offset!");
+static_assert(offsetof(UProceduralFoliageComponent, TileOverlap) == 0x0000A8, "Member 'UProceduralFoliageComponent::TileOverlap' has a wrong offset!");
+static_assert(offsetof(UProceduralFoliageComponent, SpawningVolume) == 0x0000B0, "Member 'UProceduralFoliageComponent::SpawningVolume' has a wrong offset!");
+static_assert(offsetof(UProceduralFoliageComponent, ProceduralGuid) == 0x0000B8, "Member 'UProceduralFoliageComponent::ProceduralGuid' has a wrong offset!");
+
+// Class Foliage.ProceduralFoliageTile
+// 0x0148 (0x0170 - 0x0028)
+class UProceduralFoliageTile final : public UObject
+{
+public:
+	class UProceduralFoliageSpawner*              FoliageSpawner;                                    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_30[0xA0];                                      // 0x0030(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FProceduralFoliageInstance>     InstancesArray;                                    // 0x00D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_E0[0x90];                                      // 0x00E0(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ProceduralFoliageTile">();
+	}
+	static class UProceduralFoliageTile* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UProceduralFoliageTile>();
+	}
+};
+static_assert(alignof(UProceduralFoliageTile) == 0x000008, "Wrong alignment on UProceduralFoliageTile");
+static_assert(sizeof(UProceduralFoliageTile) == 0x000170, "Wrong size on UProceduralFoliageTile");
+static_assert(offsetof(UProceduralFoliageTile, FoliageSpawner) == 0x000028, "Member 'UProceduralFoliageTile::FoliageSpawner' has a wrong offset!");
+static_assert(offsetof(UProceduralFoliageTile, InstancesArray) == 0x0000D0, "Member 'UProceduralFoliageTile::InstancesArray' has a wrong offset!");
 
 // Class Foliage.FoliageInstancedStaticMeshComponent
 // 0x0030 (0x0910 - 0x08E0)
@@ -250,33 +323,52 @@ static_assert(offsetof(UFoliageType, RuntimeVirtualTextures) == 0x0004A8, "Membe
 static_assert(offsetof(UFoliageType, VirtualTextureCullMips) == 0x0004B8, "Member 'UFoliageType::VirtualTextureCullMips' has a wrong offset!");
 static_assert(offsetof(UFoliageType, VirtualTextureRenderPassType) == 0x0004BC, "Member 'UFoliageType::VirtualTextureRenderPassType' has a wrong offset!");
 
-// Class Foliage.FoliageType_Actor
-// 0x0018 (0x04D8 - 0x04C0)
-class UFoliageType_Actor final : public UFoliageType
+// Class Foliage.InteractiveFoliageComponent
+// 0x0010 (0x0600 - 0x05F0)
+class UInteractiveFoliageComponent final : public UStaticMeshComponent
 {
 public:
-	TSubclassOf<class AActor>                     actorClass;                                        // 0x04C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldAttachToBaseComponent;                      // 0x04C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStaticMeshOnly;                                   // 0x04C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4CA[0x6];                                      // 0x04CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UFoliageInstancedStaticMeshComponent> StaticMeshOnlyComponentClass;            // 0x04D0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5F0[0x10];                                     // 0x05F0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FoliageType_Actor">();
+		return StaticClassImpl<"InteractiveFoliageComponent">();
 	}
-	static class UFoliageType_Actor* GetDefaultObj()
+	static class UInteractiveFoliageComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UFoliageType_Actor>();
+		return GetDefaultObjImpl<UInteractiveFoliageComponent>();
 	}
 };
-static_assert(alignof(UFoliageType_Actor) == 0x000008, "Wrong alignment on UFoliageType_Actor");
-static_assert(sizeof(UFoliageType_Actor) == 0x0004D8, "Wrong size on UFoliageType_Actor");
-static_assert(offsetof(UFoliageType_Actor, actorClass) == 0x0004C0, "Member 'UFoliageType_Actor::actorClass' has a wrong offset!");
-static_assert(offsetof(UFoliageType_Actor, bShouldAttachToBaseComponent) == 0x0004C8, "Member 'UFoliageType_Actor::bShouldAttachToBaseComponent' has a wrong offset!");
-static_assert(offsetof(UFoliageType_Actor, bStaticMeshOnly) == 0x0004C9, "Member 'UFoliageType_Actor::bStaticMeshOnly' has a wrong offset!");
-static_assert(offsetof(UFoliageType_Actor, StaticMeshOnlyComponentClass) == 0x0004D0, "Member 'UFoliageType_Actor::StaticMeshOnlyComponentClass' has a wrong offset!");
+static_assert(alignof(UInteractiveFoliageComponent) == 0x000010, "Wrong alignment on UInteractiveFoliageComponent");
+static_assert(sizeof(UInteractiveFoliageComponent) == 0x000600, "Wrong size on UInteractiveFoliageComponent");
+
+// Class Foliage.FoliageType_InstancedStaticMesh
+// 0x0030 (0x04F0 - 0x04C0)
+class UFoliageType_InstancedStaticMesh : public UFoliageType
+{
+public:
+	class UStaticMesh*                            Mesh;                                              // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             OverrideMaterials;                                 // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             NaniteOverrideMaterials;                           // 0x04D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
+	TSubclassOf<class UFoliageInstancedStaticMeshComponent> ComponentClass;                          // 0x04E8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"FoliageType_InstancedStaticMesh">();
+	}
+	static class UFoliageType_InstancedStaticMesh* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFoliageType_InstancedStaticMesh>();
+	}
+};
+static_assert(alignof(UFoliageType_InstancedStaticMesh) == 0x000008, "Wrong alignment on UFoliageType_InstancedStaticMesh");
+static_assert(sizeof(UFoliageType_InstancedStaticMesh) == 0x0004F0, "Wrong size on UFoliageType_InstancedStaticMesh");
+static_assert(offsetof(UFoliageType_InstancedStaticMesh, Mesh) == 0x0004C0, "Member 'UFoliageType_InstancedStaticMesh::Mesh' has a wrong offset!");
+static_assert(offsetof(UFoliageType_InstancedStaticMesh, OverrideMaterials) == 0x0004C8, "Member 'UFoliageType_InstancedStaticMesh::OverrideMaterials' has a wrong offset!");
+static_assert(offsetof(UFoliageType_InstancedStaticMesh, NaniteOverrideMaterials) == 0x0004D8, "Member 'UFoliageType_InstancedStaticMesh::NaniteOverrideMaterials' has a wrong offset!");
+static_assert(offsetof(UFoliageType_InstancedStaticMesh, ComponentClass) == 0x0004E8, "Member 'UFoliageType_InstancedStaticMesh::ComponentClass' has a wrong offset!");
 
 // Class Foliage.FoliageEditPresetData
 // 0x0028 (0x0050 - 0x0028)
@@ -316,100 +408,33 @@ static_assert(offsetof(UFoliageEditPresetData, bFilterFoliage) == 0x000037, "Mem
 static_assert(offsetof(UFoliageEditPresetData, bFilterTranslucent) == 0x000038, "Member 'UFoliageEditPresetData::bFilterTranslucent' has a wrong offset!");
 static_assert(offsetof(UFoliageEditPresetData, FoliageTypes) == 0x000040, "Member 'UFoliageEditPresetData::FoliageTypes' has a wrong offset!");
 
-// Class Foliage.FoliageType_InstancedStaticMesh
-// 0x0030 (0x04F0 - 0x04C0)
-class UFoliageType_InstancedStaticMesh : public UFoliageType
+// Class Foliage.FoliageType_Actor
+// 0x0018 (0x04D8 - 0x04C0)
+class UFoliageType_Actor final : public UFoliageType
 {
 public:
-	class UStaticMesh*                            Mesh;                                              // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             OverrideMaterials;                                 // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             NaniteOverrideMaterials;                           // 0x04D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
-	TSubclassOf<class UFoliageInstancedStaticMeshComponent> ComponentClass;                          // 0x04E8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     actorClass;                                        // 0x04C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShouldAttachToBaseComponent;                      // 0x04C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStaticMeshOnly;                                   // 0x04C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4CA[0x6];                                      // 0x04CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UFoliageInstancedStaticMeshComponent> StaticMeshOnlyComponentClass;            // 0x04D0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FoliageType_InstancedStaticMesh">();
+		return StaticClassImpl<"FoliageType_Actor">();
 	}
-	static class UFoliageType_InstancedStaticMesh* GetDefaultObj()
+	static class UFoliageType_Actor* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UFoliageType_InstancedStaticMesh>();
+		return GetDefaultObjImpl<UFoliageType_Actor>();
 	}
 };
-static_assert(alignof(UFoliageType_InstancedStaticMesh) == 0x000008, "Wrong alignment on UFoliageType_InstancedStaticMesh");
-static_assert(sizeof(UFoliageType_InstancedStaticMesh) == 0x0004F0, "Wrong size on UFoliageType_InstancedStaticMesh");
-static_assert(offsetof(UFoliageType_InstancedStaticMesh, Mesh) == 0x0004C0, "Member 'UFoliageType_InstancedStaticMesh::Mesh' has a wrong offset!");
-static_assert(offsetof(UFoliageType_InstancedStaticMesh, OverrideMaterials) == 0x0004C8, "Member 'UFoliageType_InstancedStaticMesh::OverrideMaterials' has a wrong offset!");
-static_assert(offsetof(UFoliageType_InstancedStaticMesh, NaniteOverrideMaterials) == 0x0004D8, "Member 'UFoliageType_InstancedStaticMesh::NaniteOverrideMaterials' has a wrong offset!");
-static_assert(offsetof(UFoliageType_InstancedStaticMesh, ComponentClass) == 0x0004E8, "Member 'UFoliageType_InstancedStaticMesh::ComponentClass' has a wrong offset!");
-
-// Class Foliage.InteractiveFoliageComponent
-// 0x0010 (0x0600 - 0x05F0)
-class UInteractiveFoliageComponent final : public UStaticMeshComponent
-{
-public:
-	uint8                                         Pad_5F0[0x10];                                     // 0x05F0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"InteractiveFoliageComponent">();
-	}
-	static class UInteractiveFoliageComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInteractiveFoliageComponent>();
-	}
-};
-static_assert(alignof(UInteractiveFoliageComponent) == 0x000010, "Wrong alignment on UInteractiveFoliageComponent");
-static_assert(sizeof(UInteractiveFoliageComponent) == 0x000600, "Wrong size on UInteractiveFoliageComponent");
-
-// Class Foliage.ProceduralFoliageComponent
-// 0x0028 (0x00C8 - 0x00A0)
-class UProceduralFoliageComponent : public UActorComponent
-{
-public:
-	class UProceduralFoliageSpawner*              FoliageSpawner;                                    // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TileOverlap;                                       // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AVolume*                                SpawningVolume;                                    // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FGuid                                  ProceduralGuid;                                    // 0x00B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ProceduralFoliageComponent">();
-	}
-	static class UProceduralFoliageComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UProceduralFoliageComponent>();
-	}
-};
-static_assert(alignof(UProceduralFoliageComponent) == 0x000008, "Wrong alignment on UProceduralFoliageComponent");
-static_assert(sizeof(UProceduralFoliageComponent) == 0x0000C8, "Wrong size on UProceduralFoliageComponent");
-static_assert(offsetof(UProceduralFoliageComponent, FoliageSpawner) == 0x0000A0, "Member 'UProceduralFoliageComponent::FoliageSpawner' has a wrong offset!");
-static_assert(offsetof(UProceduralFoliageComponent, TileOverlap) == 0x0000A8, "Member 'UProceduralFoliageComponent::TileOverlap' has a wrong offset!");
-static_assert(offsetof(UProceduralFoliageComponent, SpawningVolume) == 0x0000B0, "Member 'UProceduralFoliageComponent::SpawningVolume' has a wrong offset!");
-static_assert(offsetof(UProceduralFoliageComponent, ProceduralGuid) == 0x0000B8, "Member 'UProceduralFoliageComponent::ProceduralGuid' has a wrong offset!");
-
-// Class Foliage.InstancedFoliageActor
-// 0x0050 (0x02F0 - 0x02A0)
-class AInstancedFoliageActor final : public AISMPartitionActor
-{
-public:
-	uint8                                         Pad_2A0[0x50];                                     // 0x02A0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"InstancedFoliageActor">();
-	}
-	static class AInstancedFoliageActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AInstancedFoliageActor>();
-	}
-};
-static_assert(alignof(AInstancedFoliageActor) == 0x000008, "Wrong alignment on AInstancedFoliageActor");
-static_assert(sizeof(AInstancedFoliageActor) == 0x0002F0, "Wrong size on AInstancedFoliageActor");
+static_assert(alignof(UFoliageType_Actor) == 0x000008, "Wrong alignment on UFoliageType_Actor");
+static_assert(sizeof(UFoliageType_Actor) == 0x0004D8, "Wrong size on UFoliageType_Actor");
+static_assert(offsetof(UFoliageType_Actor, actorClass) == 0x0004C0, "Member 'UFoliageType_Actor::actorClass' has a wrong offset!");
+static_assert(offsetof(UFoliageType_Actor, bShouldAttachToBaseComponent) == 0x0004C8, "Member 'UFoliageType_Actor::bShouldAttachToBaseComponent' has a wrong offset!");
+static_assert(offsetof(UFoliageType_Actor, bStaticMeshOnly) == 0x0004C9, "Member 'UFoliageType_Actor::bStaticMeshOnly' has a wrong offset!");
+static_assert(offsetof(UFoliageType_Actor, StaticMeshOnlyComponentClass) == 0x0004D0, "Member 'UFoliageType_Actor::StaticMeshOnlyComponentClass' has a wrong offset!");
 
 // Class Foliage.FoliageStatistics
 // 0x0000 (0x0028 - 0x0028)
@@ -557,31 +582,6 @@ static_assert(offsetof(UProceduralFoliageSpawner, TileSize) == 0x00002C, "Member
 static_assert(offsetof(UProceduralFoliageSpawner, NumUniqueTiles) == 0x000030, "Member 'UProceduralFoliageSpawner::NumUniqueTiles' has a wrong offset!");
 static_assert(offsetof(UProceduralFoliageSpawner, MinimumQuadTreeSize) == 0x000034, "Member 'UProceduralFoliageSpawner::MinimumQuadTreeSize' has a wrong offset!");
 static_assert(offsetof(UProceduralFoliageSpawner, FoliageTypes) == 0x000040, "Member 'UProceduralFoliageSpawner::FoliageTypes' has a wrong offset!");
-
-// Class Foliage.ProceduralFoliageTile
-// 0x0148 (0x0170 - 0x0028)
-class UProceduralFoliageTile final : public UObject
-{
-public:
-	class UProceduralFoliageSpawner*              FoliageSpawner;                                    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_30[0xA0];                                      // 0x0030(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FProceduralFoliageInstance>     InstancesArray;                                    // 0x00D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_E0[0x90];                                      // 0x00E0(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ProceduralFoliageTile">();
-	}
-	static class UProceduralFoliageTile* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UProceduralFoliageTile>();
-	}
-};
-static_assert(alignof(UProceduralFoliageTile) == 0x000008, "Wrong alignment on UProceduralFoliageTile");
-static_assert(sizeof(UProceduralFoliageTile) == 0x000170, "Wrong size on UProceduralFoliageTile");
-static_assert(offsetof(UProceduralFoliageTile, FoliageSpawner) == 0x000028, "Member 'UProceduralFoliageTile::FoliageSpawner' has a wrong offset!");
-static_assert(offsetof(UProceduralFoliageTile, InstancesArray) == 0x0000D0, "Member 'UProceduralFoliageTile::InstancesArray' has a wrong offset!");
 
 // Class Foliage.ProceduralFoliageVolume
 // 0x0010 (0x02D8 - 0x02C8)

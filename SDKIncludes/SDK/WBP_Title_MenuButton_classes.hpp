@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "E_PalUITitleMenuButtonType_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "E_PalUITitleMenuButtonType_structs.hpp"
 
 
 namespace SDK
@@ -26,7 +26,7 @@ class UWBP_Title_MenuButton_C final : public UUserWidget
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWidgetAnimation*                       Anm_Disable;                                       // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_Push;                                          // 0x0288(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_push;                                          // 0x0288(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Focus;                                         // 0x0290(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Normal;                                        // 0x0298(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UImage*                                 Image_161;                                         // 0x02A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -63,7 +63,7 @@ static_assert(alignof(UWBP_Title_MenuButton_C) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(UWBP_Title_MenuButton_C) == 0x000330, "Wrong size on UWBP_Title_MenuButton_C");
 static_assert(offsetof(UWBP_Title_MenuButton_C, UberGraphFrame) == 0x000278, "Member 'UWBP_Title_MenuButton_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_MenuButton_C, Anm_Disable) == 0x000280, "Member 'UWBP_Title_MenuButton_C::Anm_Disable' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_MenuButton_C, Anm_Push) == 0x000288, "Member 'UWBP_Title_MenuButton_C::Anm_Push' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_MenuButton_C, Anm_push) == 0x000288, "Member 'UWBP_Title_MenuButton_C::Anm_push' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_MenuButton_C, Anm_Focus) == 0x000290, "Member 'UWBP_Title_MenuButton_C::Anm_Focus' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_MenuButton_C, Anm_Normal) == 0x000298, "Member 'UWBP_Title_MenuButton_C::Anm_Normal' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_MenuButton_C, Image_161) == 0x0002A0, "Member 'UWBP_Title_MenuButton_C::Image_161' has a wrong offset!");

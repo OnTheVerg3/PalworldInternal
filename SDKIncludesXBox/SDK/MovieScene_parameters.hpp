@@ -17,6 +17,56 @@
 namespace SDK::Params
 {
 
+// Function MovieScene.MovieSceneCustomClockSource.OnRequestCurrentTime
+// 0x001C (0x001C - 0x0000)
+struct MovieSceneCustomClockSource_OnRequestCurrentTime final
+{
+public:
+	struct FQualifiedFrameTime                    InCurrentTime;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InPlayRate;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameTime                             ReturnValue;                                       // 0x0014(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneCustomClockSource_OnRequestCurrentTime) == 0x000004, "Wrong alignment on MovieSceneCustomClockSource_OnRequestCurrentTime");
+static_assert(sizeof(MovieSceneCustomClockSource_OnRequestCurrentTime) == 0x00001C, "Wrong size on MovieSceneCustomClockSource_OnRequestCurrentTime");
+static_assert(offsetof(MovieSceneCustomClockSource_OnRequestCurrentTime, InCurrentTime) == 0x000000, "Member 'MovieSceneCustomClockSource_OnRequestCurrentTime::InCurrentTime' has a wrong offset!");
+static_assert(offsetof(MovieSceneCustomClockSource_OnRequestCurrentTime, InPlayRate) == 0x000010, "Member 'MovieSceneCustomClockSource_OnRequestCurrentTime::InPlayRate' has a wrong offset!");
+static_assert(offsetof(MovieSceneCustomClockSource_OnRequestCurrentTime, ReturnValue) == 0x000014, "Member 'MovieSceneCustomClockSource_OnRequestCurrentTime::ReturnValue' has a wrong offset!");
+
+// Function MovieScene.MovieSceneCustomClockSource.OnStartPlaying
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneCustomClockSource_OnStartPlaying final
+{
+public:
+	struct FQualifiedFrameTime                    InStartTime;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneCustomClockSource_OnStartPlaying) == 0x000004, "Wrong alignment on MovieSceneCustomClockSource_OnStartPlaying");
+static_assert(sizeof(MovieSceneCustomClockSource_OnStartPlaying) == 0x000010, "Wrong size on MovieSceneCustomClockSource_OnStartPlaying");
+static_assert(offsetof(MovieSceneCustomClockSource_OnStartPlaying, InStartTime) == 0x000000, "Member 'MovieSceneCustomClockSource_OnStartPlaying::InStartTime' has a wrong offset!");
+
+// Function MovieScene.MovieSceneCustomClockSource.OnStopPlaying
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneCustomClockSource_OnStopPlaying final
+{
+public:
+	struct FQualifiedFrameTime                    InStopTime;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneCustomClockSource_OnStopPlaying) == 0x000004, "Wrong alignment on MovieSceneCustomClockSource_OnStopPlaying");
+static_assert(sizeof(MovieSceneCustomClockSource_OnStopPlaying) == 0x000010, "Wrong size on MovieSceneCustomClockSource_OnStopPlaying");
+static_assert(offsetof(MovieSceneCustomClockSource_OnStopPlaying, InStopTime) == 0x000000, "Member 'MovieSceneCustomClockSource_OnStopPlaying::InStopTime' has a wrong offset!");
+
+// Function MovieScene.MovieSceneCustomClockSource.OnTick
+// 0x0008 (0x0008 - 0x0000)
+struct MovieSceneCustomClockSource_OnTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InPlayRate;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneCustomClockSource_OnTick) == 0x000004, "Wrong alignment on MovieSceneCustomClockSource_OnTick");
+static_assert(sizeof(MovieSceneCustomClockSource_OnTick) == 0x000008, "Wrong size on MovieSceneCustomClockSource_OnTick");
+static_assert(offsetof(MovieSceneCustomClockSource_OnTick, DeltaSeconds) == 0x000000, "Member 'MovieSceneCustomClockSource_OnTick::DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(MovieSceneCustomClockSource_OnTick, InPlayRate) == 0x000004, "Member 'MovieSceneCustomClockSource_OnTick::InPlayRate' has a wrong offset!");
+
 // Function MovieScene.MovieSceneSection.SetBlendType
 // 0x0001 (0x0001 - 0x0000)
 struct MovieSceneSection_SetBlendType final
@@ -677,56 +727,6 @@ static_assert(alignof(MovieSceneEasingFunction_OnEvaluate) == 0x000004, "Wrong a
 static_assert(sizeof(MovieSceneEasingFunction_OnEvaluate) == 0x000008, "Wrong size on MovieSceneEasingFunction_OnEvaluate");
 static_assert(offsetof(MovieSceneEasingFunction_OnEvaluate, Interp) == 0x000000, "Member 'MovieSceneEasingFunction_OnEvaluate::Interp' has a wrong offset!");
 static_assert(offsetof(MovieSceneEasingFunction_OnEvaluate, ReturnValue) == 0x000004, "Member 'MovieSceneEasingFunction_OnEvaluate::ReturnValue' has a wrong offset!");
-
-// Function MovieScene.MovieSceneCustomClockSource.OnRequestCurrentTime
-// 0x001C (0x001C - 0x0000)
-struct MovieSceneCustomClockSource_OnRequestCurrentTime final
-{
-public:
-	struct FQualifiedFrameTime                    InCurrentTime;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InPlayRate;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameTime                             ReturnValue;                                       // 0x0014(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneCustomClockSource_OnRequestCurrentTime) == 0x000004, "Wrong alignment on MovieSceneCustomClockSource_OnRequestCurrentTime");
-static_assert(sizeof(MovieSceneCustomClockSource_OnRequestCurrentTime) == 0x00001C, "Wrong size on MovieSceneCustomClockSource_OnRequestCurrentTime");
-static_assert(offsetof(MovieSceneCustomClockSource_OnRequestCurrentTime, InCurrentTime) == 0x000000, "Member 'MovieSceneCustomClockSource_OnRequestCurrentTime::InCurrentTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneCustomClockSource_OnRequestCurrentTime, InPlayRate) == 0x000010, "Member 'MovieSceneCustomClockSource_OnRequestCurrentTime::InPlayRate' has a wrong offset!");
-static_assert(offsetof(MovieSceneCustomClockSource_OnRequestCurrentTime, ReturnValue) == 0x000014, "Member 'MovieSceneCustomClockSource_OnRequestCurrentTime::ReturnValue' has a wrong offset!");
-
-// Function MovieScene.MovieSceneCustomClockSource.OnStartPlaying
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneCustomClockSource_OnStartPlaying final
-{
-public:
-	struct FQualifiedFrameTime                    InStartTime;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneCustomClockSource_OnStartPlaying) == 0x000004, "Wrong alignment on MovieSceneCustomClockSource_OnStartPlaying");
-static_assert(sizeof(MovieSceneCustomClockSource_OnStartPlaying) == 0x000010, "Wrong size on MovieSceneCustomClockSource_OnStartPlaying");
-static_assert(offsetof(MovieSceneCustomClockSource_OnStartPlaying, InStartTime) == 0x000000, "Member 'MovieSceneCustomClockSource_OnStartPlaying::InStartTime' has a wrong offset!");
-
-// Function MovieScene.MovieSceneCustomClockSource.OnStopPlaying
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneCustomClockSource_OnStopPlaying final
-{
-public:
-	struct FQualifiedFrameTime                    InStopTime;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneCustomClockSource_OnStopPlaying) == 0x000004, "Wrong alignment on MovieSceneCustomClockSource_OnStopPlaying");
-static_assert(sizeof(MovieSceneCustomClockSource_OnStopPlaying) == 0x000010, "Wrong size on MovieSceneCustomClockSource_OnStopPlaying");
-static_assert(offsetof(MovieSceneCustomClockSource_OnStopPlaying, InStopTime) == 0x000000, "Member 'MovieSceneCustomClockSource_OnStopPlaying::InStopTime' has a wrong offset!");
-
-// Function MovieScene.MovieSceneCustomClockSource.OnTick
-// 0x0008 (0x0008 - 0x0000)
-struct MovieSceneCustomClockSource_OnTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InPlayRate;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneCustomClockSource_OnTick) == 0x000004, "Wrong alignment on MovieSceneCustomClockSource_OnTick");
-static_assert(sizeof(MovieSceneCustomClockSource_OnTick) == 0x000008, "Wrong size on MovieSceneCustomClockSource_OnTick");
-static_assert(offsetof(MovieSceneCustomClockSource_OnTick, DeltaSeconds) == 0x000000, "Member 'MovieSceneCustomClockSource_OnTick::DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(MovieSceneCustomClockSource_OnTick, InPlayRate) == 0x000004, "Member 'MovieSceneCustomClockSource_OnTick::InPlayRate' has a wrong offset!");
 
 }
 

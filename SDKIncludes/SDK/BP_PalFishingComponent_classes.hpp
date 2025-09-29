@@ -11,31 +11,31 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Pal_structs.hpp"
 #include "Pal_classes.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PalFishingComponent.BP_PalFishingComponent_C
-// 0x00F0 (0x03F0 - 0x0300)
+// 0x00F0 (0x03E8 - 0x02F8)
 class UBP_PalFishingComponent_C final : public UPalFishingComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class APalCutsceneActor*                      CutsceneActor;                                     // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 TargetCutsceneActor;                               // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UPalCutsceneComponent*                  CutsceneComponent;                                 // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CutsceneOffsetLocation;                            // 0x0320(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPalFishingCutsceneInfo                FishingCutsceneInfo;                               // 0x0338(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          IsHideWeapon;                                      // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D1[0x3];                                      // 0x03D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   flagName;                                          // 0x03D4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DC[0x4];                                      // 0x03DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalShooterComponent*                   ShooterComponent;                                  // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsStartCutscene;                                   // 0x03E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class APalCutsceneActor*                      CutsceneActor;                                     // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 TargetCutsceneActor;                               // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UPalCutsceneComponent*                  CutsceneComponent;                                 // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CutsceneOffsetLocation;                            // 0x0318(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalFishingCutsceneInfo                FishingCutsceneInfo;                               // 0x0330(0x0098)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          IsHideWeapon;                                      // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C9[0x3];                                      // 0x03C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   flagName;                                          // 0x03CC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D4[0x4];                                      // 0x03D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalShooterComponent*                   ShooterComponent;                                  // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsStartCutscene;                                   // 0x03E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CreateBindParameter(const struct FPalFishingCutsceneInfo& CutsceneInfo, class UPalCutsceneFishingBindParameter** BindParameter);
@@ -66,17 +66,17 @@ public:
 	}
 };
 static_assert(alignof(UBP_PalFishingComponent_C) == 0x000008, "Wrong alignment on UBP_PalFishingComponent_C");
-static_assert(sizeof(UBP_PalFishingComponent_C) == 0x0003F0, "Wrong size on UBP_PalFishingComponent_C");
-static_assert(offsetof(UBP_PalFishingComponent_C, UberGraphFrame) == 0x000300, "Member 'UBP_PalFishingComponent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_PalFishingComponent_C, CutsceneActor) == 0x000308, "Member 'UBP_PalFishingComponent_C::CutsceneActor' has a wrong offset!");
-static_assert(offsetof(UBP_PalFishingComponent_C, TargetCutsceneActor) == 0x000310, "Member 'UBP_PalFishingComponent_C::TargetCutsceneActor' has a wrong offset!");
-static_assert(offsetof(UBP_PalFishingComponent_C, CutsceneComponent) == 0x000318, "Member 'UBP_PalFishingComponent_C::CutsceneComponent' has a wrong offset!");
-static_assert(offsetof(UBP_PalFishingComponent_C, CutsceneOffsetLocation) == 0x000320, "Member 'UBP_PalFishingComponent_C::CutsceneOffsetLocation' has a wrong offset!");
-static_assert(offsetof(UBP_PalFishingComponent_C, FishingCutsceneInfo) == 0x000338, "Member 'UBP_PalFishingComponent_C::FishingCutsceneInfo' has a wrong offset!");
-static_assert(offsetof(UBP_PalFishingComponent_C, IsHideWeapon) == 0x0003D0, "Member 'UBP_PalFishingComponent_C::IsHideWeapon' has a wrong offset!");
-static_assert(offsetof(UBP_PalFishingComponent_C, flagName) == 0x0003D4, "Member 'UBP_PalFishingComponent_C::flagName' has a wrong offset!");
-static_assert(offsetof(UBP_PalFishingComponent_C, ShooterComponent) == 0x0003E0, "Member 'UBP_PalFishingComponent_C::ShooterComponent' has a wrong offset!");
-static_assert(offsetof(UBP_PalFishingComponent_C, IsStartCutscene) == 0x0003E8, "Member 'UBP_PalFishingComponent_C::IsStartCutscene' has a wrong offset!");
+static_assert(sizeof(UBP_PalFishingComponent_C) == 0x0003E8, "Wrong size on UBP_PalFishingComponent_C");
+static_assert(offsetof(UBP_PalFishingComponent_C, UberGraphFrame) == 0x0002F8, "Member 'UBP_PalFishingComponent_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_PalFishingComponent_C, CutsceneActor) == 0x000300, "Member 'UBP_PalFishingComponent_C::CutsceneActor' has a wrong offset!");
+static_assert(offsetof(UBP_PalFishingComponent_C, TargetCutsceneActor) == 0x000308, "Member 'UBP_PalFishingComponent_C::TargetCutsceneActor' has a wrong offset!");
+static_assert(offsetof(UBP_PalFishingComponent_C, CutsceneComponent) == 0x000310, "Member 'UBP_PalFishingComponent_C::CutsceneComponent' has a wrong offset!");
+static_assert(offsetof(UBP_PalFishingComponent_C, CutsceneOffsetLocation) == 0x000318, "Member 'UBP_PalFishingComponent_C::CutsceneOffsetLocation' has a wrong offset!");
+static_assert(offsetof(UBP_PalFishingComponent_C, FishingCutsceneInfo) == 0x000330, "Member 'UBP_PalFishingComponent_C::FishingCutsceneInfo' has a wrong offset!");
+static_assert(offsetof(UBP_PalFishingComponent_C, IsHideWeapon) == 0x0003C8, "Member 'UBP_PalFishingComponent_C::IsHideWeapon' has a wrong offset!");
+static_assert(offsetof(UBP_PalFishingComponent_C, flagName) == 0x0003CC, "Member 'UBP_PalFishingComponent_C::flagName' has a wrong offset!");
+static_assert(offsetof(UBP_PalFishingComponent_C, ShooterComponent) == 0x0003D8, "Member 'UBP_PalFishingComponent_C::ShooterComponent' has a wrong offset!");
+static_assert(offsetof(UBP_PalFishingComponent_C, IsStartCutscene) == 0x0003E0, "Member 'UBP_PalFishingComponent_C::IsStartCutscene' has a wrong offset!");
 
 }
 

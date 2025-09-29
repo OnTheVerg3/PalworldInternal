@@ -10,9 +10,36 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+
 
 namespace SDK::Params
 {
+
+// Function BP_OtomoPalHolderComponentForNPC.BP_OtomoPalHolderComponentForNPC_C.ActivateCurrentOtomo
+// 0x0090 (0x0090 - 0x0000)
+struct BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo final
+{
+public:
+	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APalCharacter*                          CallFunc_GetOwnerCharacter_Character;              // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ActivateCurrentOtomo_ReturnValue;         // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalCharacterParameterComponent*        CallFunc_GetComponentByClass_ReturnValue;          // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class APalCharacter*                          CallFunc_TryGetCurrentSelectPalActor_ReturnValue;  // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalCharacterParameterComponent*        CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo) == 0x000010, "Wrong alignment on BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo");
+static_assert(sizeof(BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo) == 0x000090, "Wrong size on BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo");
+static_assert(offsetof(BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo, SpawnTransform) == 0x000000, "Member 'BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo::SpawnTransform' has a wrong offset!");
+static_assert(offsetof(BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo, ReturnValue) == 0x000060, "Member 'BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo, CallFunc_GetOwnerCharacter_Character) == 0x000068, "Member 'BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo::CallFunc_GetOwnerCharacter_Character' has a wrong offset!");
+static_assert(offsetof(BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo, CallFunc_ActivateCurrentOtomo_ReturnValue) == 0x000070, "Member 'BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo::CallFunc_ActivateCurrentOtomo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo, CallFunc_GetComponentByClass_ReturnValue) == 0x000078, "Member 'BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo, CallFunc_TryGetCurrentSelectPalActor_ReturnValue) == 0x000080, "Member 'BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo::CallFunc_TryGetCurrentSelectPalActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000088, "Member 'BP_OtomoPalHolderComponentForNPC_C_ActivateCurrentOtomo::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
 
 // Function BP_OtomoPalHolderComponentForNPC.BP_OtomoPalHolderComponentForNPC_C.ExecuteUbergraph_BP_OtomoPalHolderComponentForNPC
 // 0x0008 (0x0008 - 0x0000)

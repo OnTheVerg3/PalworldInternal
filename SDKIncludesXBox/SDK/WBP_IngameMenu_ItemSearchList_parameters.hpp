@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Pal_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -214,7 +214,7 @@ public:
 	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPalItemAndNum                         CallFunc_GetItemAndNum_ItemAndNum;                 // 0x00F4(0x002C)(NoDestructor)
 	struct FPalItemAndNum                         CallFunc_GetItemAndNum_ItemAndNum_1;               // 0x0120(0x002C)(NoDestructor)
-	TDelegate<void(class UWBP_PalItemSlotButtonBase_C* ButtonBase, EPalItemSlotPressType PressType)> K2Node_CreateDelegate_OutputDelegate_1; // 0x014C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UWBP_PalItemSlotButtonBase_C* buttonBase, EPalItemSlotPressType PressType)> K2Node_CreateDelegate_OutputDelegate_1; // 0x014C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UWBP_PalItemSlotButtonBase_C* Widget)> K2Node_CreateDelegate_OutputDelegate_2; // 0x015C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x016C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x016D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

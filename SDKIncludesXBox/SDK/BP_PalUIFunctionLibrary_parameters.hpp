@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
-#include "Pal_structs.hpp"
-#include "FPalPartnerSkillIconData_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "FPalPartnerSkillIconData_structs.hpp"
 #include "FPalTechnologyIconData_structs.hpp"
 
 
@@ -670,6 +670,34 @@ static_assert(offsetof(BP_PalUIFunctionLibrary_C_IsDisplayWorkSuitability_ForUI,
 static_assert(offsetof(BP_PalUIFunctionLibrary_C_IsDisplayWorkSuitability_ForUI, CallFunc_BooleanOR_ReturnValue) == 0x000014, "Member 'BP_PalUIFunctionLibrary_C_IsDisplayWorkSuitability_ForUI::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PalUIFunctionLibrary_C_IsDisplayWorkSuitability_ForUI, CallFunc_BooleanOR_ReturnValue_1) == 0x000015, "Member 'BP_PalUIFunctionLibrary_C_IsDisplayWorkSuitability_ForUI::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_PalUIFunctionLibrary_C_IsDisplayWorkSuitability_ForUI, CallFunc_Not_PreBool_ReturnValue) == 0x000016, "Member 'BP_PalUIFunctionLibrary_C_IsDisplayWorkSuitability_ForUI::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+
+// Function BP_PalUIFunctionLibrary.BP_PalUIFunctionLibrary_C.OpenWorldSettingThresholdsCautionDialog
+// 0x0040 (0x0040 - 0x0000)
+struct BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog final
+{
+public:
+	class UBP_HUDDispatchPrameter_WorldSettingCaution_C* Parameter;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bOpenedDialog;                                     // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue;                // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Push_ReturnValue;                         // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPalOptionSubsystem*                    CallFunc_GetOptionSubsystem_ReturnValue;           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_VerifyWorldSettingThresholds_ReturnValue; // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog) == 0x000008, "Wrong alignment on BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog");
+static_assert(sizeof(BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog) == 0x000040, "Wrong size on BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog");
+static_assert(offsetof(BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog, Parameter) == 0x000000, "Member 'BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog::Parameter' has a wrong offset!");
+static_assert(offsetof(BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog, __WorldContext) == 0x000008, "Member 'BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog, bOpenedDialog) == 0x000010, "Member 'BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog::bOpenedDialog' has a wrong offset!");
+static_assert(offsetof(BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog, CallFunc_IsValid_ReturnValue) == 0x000011, "Member 'BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog, CallFunc_GetHUDService_ReturnValue) == 0x000018, "Member 'BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog::CallFunc_GetHUDService_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog, CallFunc_Push_ReturnValue) == 0x000020, "Member 'BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog::CallFunc_Push_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog, CallFunc_GetOptionSubsystem_ReturnValue) == 0x000030, "Member 'BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog::CallFunc_GetOptionSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog, CallFunc_VerifyWorldSettingThresholds_ReturnValue) == 0x000038, "Member 'BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog::CallFunc_VerifyWorldSettingThresholds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog, CallFunc_IsValid_ReturnValue_1) == 0x000039, "Member 'BP_PalUIFunctionLibrary_C_OpenWorldSettingThresholdsCautionDialog::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function BP_PalUIFunctionLibrary.BP_PalUIFunctionLibrary_C.Project Icon Position to World Postion
 // 0x01E0 (0x01E0 - 0x0000)

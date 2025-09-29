@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ArenaWorldRankingInfo.BP_ArenaWorldRankingInfo_C
-// 0x0008 (0x0310 - 0x0308)
+// 0x0008 (0x0450 - 0x0448)
 class ABP_ArenaWorldRankingInfo_C final : public APalArenaWorldRankingInfo
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ABP_ArenaWorldRankingInfo_C) == 0x000008, "Wrong alignment on ABP_ArenaWorldRankingInfo_C");
-static_assert(sizeof(ABP_ArenaWorldRankingInfo_C) == 0x000310, "Wrong size on ABP_ArenaWorldRankingInfo_C");
-static_assert(offsetof(ABP_ArenaWorldRankingInfo_C, DefaultSceneRoot) == 0x000308, "Member 'ABP_ArenaWorldRankingInfo_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(sizeof(ABP_ArenaWorldRankingInfo_C) == 0x000450, "Wrong size on ABP_ArenaWorldRankingInfo_C");
+static_assert(offsetof(ABP_ArenaWorldRankingInfo_C, DefaultSceneRoot) == 0x000448, "Member 'ABP_ArenaWorldRankingInfo_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

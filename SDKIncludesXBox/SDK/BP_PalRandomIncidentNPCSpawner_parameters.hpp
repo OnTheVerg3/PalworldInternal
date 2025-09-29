@@ -799,7 +799,7 @@ static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_Spawn_NPC, CallFunc_Spaw
 static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_Spawn_NPC, CallFunc_SpawnCharacter_RotZ_ImplicitCast) == 0x0000D8, "Member 'BP_PalRandomIncidentNPCSpawner_C_Spawn_NPC::CallFunc_SpawnCharacter_RotZ_ImplicitCast' has a wrong offset!");
 
 // Function BP_PalRandomIncidentNPCSpawner.BP_PalRandomIncidentNPCSpawner_C.SpawnCharacter
-// 0x0538 (0x0538 - 0x0000)
+// 0x0540 (0x0540 - 0x0000)
 struct BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter final
 {
 public:
@@ -843,16 +843,16 @@ public:
 	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  K2Node_MakeStruct_Guid;                            // 0x0170(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x0180(0x0078)(NoDestructor)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x01F8(0x0320)()
-	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0518(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_519[0x7];                                      // 0x0519(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0520(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0528(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomSpawnLocationByRadiusLineTraceWithWorldLocation_Radius_ImplicitCast; // 0x0530(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x0534(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x01F8(0x0328)()
+	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0520(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_521[0x7];                                      // 0x0521(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0528(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0530(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomSpawnLocationByRadiusLineTraceWithWorldLocation_Radius_ImplicitCast; // 0x0538(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x053C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter) == 0x000008, "Wrong alignment on BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter");
-static_assert(sizeof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter) == 0x000538, "Wrong size on BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter");
+static_assert(sizeof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter) == 0x000540, "Wrong size on BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter");
 static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, RowName) == 0x000000, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::RowName' has a wrong offset!");
 static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, CharacterID) == 0x000008, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::CharacterID' has a wrong offset!");
 static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, UniqueName) == 0x000010, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::UniqueName' has a wrong offset!");
@@ -890,11 +890,11 @@ static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, CallFunc
 static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, K2Node_MakeStruct_Guid) == 0x000170, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::K2Node_MakeStruct_Guid' has a wrong offset!");
 static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x000180, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
 static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, CallFunc_GetInitializedCharacterSaveParemter_outParameter) == 0x0001F8, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::CallFunc_GetInitializedCharacterSaveParemter_outParameter' has a wrong offset!");
-static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000518, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000520, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000528, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, CallFunc_RandomSpawnLocationByRadiusLineTraceWithWorldLocation_Radius_ImplicitCast) == 0x000530, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::CallFunc_RandomSpawnLocationByRadiusLineTraceWithWorldLocation_Radius_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000534, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000520, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000528, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000530, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, CallFunc_RandomSpawnLocationByRadiusLineTraceWithWorldLocation_Radius_ImplicitCast) == 0x000538, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::CallFunc_RandomSpawnLocationByRadiusLineTraceWithWorldLocation_Radius_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x00053C, "Member 'BP_PalRandomIncidentNPCSpawner_C_SpawnCharacter::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
 
 // Function BP_PalRandomIncidentNPCSpawner.BP_PalRandomIncidentNPCSpawner_C.SpawnMonster
 // 0x0058 (0x0058 - 0x0000)

@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Pal_classes.hpp"
 #include "Engine_structs.hpp"
+#include "Pal_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PalGameInstance.BP_PalGameInstance_C
-// 0x00C8 (0x0958 - 0x0890)
+// 0x00D0 (0x0960 - 0x0890)
 class UBP_PalGameInstance_C final : public UPalGameInstance
 {
 public:
@@ -37,6 +37,8 @@ public:
 	struct FDataTableRowHandle                    CreateSessionErrorMsgId;                           // 0x0930(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	struct FDataTableRowHandle                    CreateSessionErrorMsgId_Console;                   // 0x0940(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	bool                                          IsStartingGame;                                    // 0x0950(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_951[0x3];                                      // 0x0951(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   UIInputBlockFlagName;                              // 0x0954(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_PalGameInstance_AutoGenFunc(bool bResult);
@@ -71,7 +73,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_PalGameInstance_C) == 0x000008, "Wrong alignment on UBP_PalGameInstance_C");
-static_assert(sizeof(UBP_PalGameInstance_C) == 0x000958, "Wrong size on UBP_PalGameInstance_C");
+static_assert(sizeof(UBP_PalGameInstance_C) == 0x000960, "Wrong size on UBP_PalGameInstance_C");
 static_assert(offsetof(UBP_PalGameInstance_C, UberGraphFrame) == 0x000890, "Member 'UBP_PalGameInstance_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_PalGameInstance_C, CurrentLoadingTask) == 0x000898, "Member 'UBP_PalGameInstance_C::CurrentLoadingTask' has a wrong offset!");
 static_assert(offsetof(UBP_PalGameInstance_C, LoadingFadeParameter) == 0x0008A0, "Member 'UBP_PalGameInstance_C::LoadingFadeParameter' has a wrong offset!");
@@ -85,6 +87,7 @@ static_assert(offsetof(UBP_PalGameInstance_C, PlayingID) == 0x000928, "Member 'U
 static_assert(offsetof(UBP_PalGameInstance_C, CreateSessionErrorMsgId) == 0x000930, "Member 'UBP_PalGameInstance_C::CreateSessionErrorMsgId' has a wrong offset!");
 static_assert(offsetof(UBP_PalGameInstance_C, CreateSessionErrorMsgId_Console) == 0x000940, "Member 'UBP_PalGameInstance_C::CreateSessionErrorMsgId_Console' has a wrong offset!");
 static_assert(offsetof(UBP_PalGameInstance_C, IsStartingGame) == 0x000950, "Member 'UBP_PalGameInstance_C::IsStartingGame' has a wrong offset!");
+static_assert(offsetof(UBP_PalGameInstance_C, UIInputBlockFlagName) == 0x000954, "Member 'UBP_PalGameInstance_C::UIInputBlockFlagName' has a wrong offset!");
 
 }
 

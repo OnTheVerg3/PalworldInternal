@@ -10,21 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
 #include "Pal_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_PalSaveParameterDisplayWidget.WBP_PalSaveParameterDisplayWidget_C
-// 0x0328 (0x0730 - 0x0408)
+// 0x0330 (0x0738 - 0x0408)
 class UWBP_PalSaveParameterDisplayWidget_C : public UPalUserWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FPalIndividualCharacterSaveParameter   CachedSaveParameter;                               // 0x0410(0x0320)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPalIndividualCharacterSaveParameter   CachedSaveParameter;                               // 0x0410(0x0328)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void Bind_Event();
@@ -69,7 +69,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_PalSaveParameterDisplayWidget_C) == 0x000008, "Wrong alignment on UWBP_PalSaveParameterDisplayWidget_C");
-static_assert(sizeof(UWBP_PalSaveParameterDisplayWidget_C) == 0x000730, "Wrong size on UWBP_PalSaveParameterDisplayWidget_C");
+static_assert(sizeof(UWBP_PalSaveParameterDisplayWidget_C) == 0x000738, "Wrong size on UWBP_PalSaveParameterDisplayWidget_C");
 static_assert(offsetof(UWBP_PalSaveParameterDisplayWidget_C, UberGraphFrame) == 0x000408, "Member 'UWBP_PalSaveParameterDisplayWidget_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_PalSaveParameterDisplayWidget_C, CachedSaveParameter) == 0x000410, "Member 'UWBP_PalSaveParameterDisplayWidget_C::CachedSaveParameter' has a wrong offset!");
 

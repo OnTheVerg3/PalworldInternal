@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BP_ActionStepBase_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK

@@ -17,8 +17,9 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_NPC_FatHumanDataSet.BP_NPC_FatHumanDataSet_C
-// 0x0000 (0x0A90 - 0x0A90)
-class ABP_NPC_FatHumanDataSet_C : public ABP_NPC_StandardHumanDataSet_C
+// 0x0000 (0x0AA0 - 0x0AA0)
+#pragma pack(push, 0x1)
+class alignas(0x10) ABP_NPC_FatHumanDataSet_C : public ABP_NPC_StandardHumanDataSet_C
 {
 public:
 	static class UClass* StaticClass()
@@ -30,8 +31,9 @@ public:
 		return GetDefaultObjImpl<ABP_NPC_FatHumanDataSet_C>();
 	}
 };
+#pragma pack(pop)
 static_assert(alignof(ABP_NPC_FatHumanDataSet_C) == 0x000010, "Wrong alignment on ABP_NPC_FatHumanDataSet_C");
-static_assert(sizeof(ABP_NPC_FatHumanDataSet_C) == 0x000A90, "Wrong size on ABP_NPC_FatHumanDataSet_C");
+static_assert(sizeof(ABP_NPC_FatHumanDataSet_C) == 0x000AA0, "Wrong size on ABP_NPC_FatHumanDataSet_C");
 
 }
 

@@ -442,7 +442,7 @@ static_assert(sizeof(BP_YakushimaBoss002_B_C_SpawnLeft) == 0x000030, "Wrong size
 static_assert(offsetof(BP_YakushimaBoss002_B_C_SpawnLeft, ID) == 0x000000, "Member 'BP_YakushimaBoss002_B_C_SpawnLeft::ID' has a wrong offset!");
 
 // Function BP_YakushimaBoss002_B.BP_YakushimaBoss002_B_C.SpawnParts
-// 0x0428 (0x0428 - 0x0000)
+// 0x0430 (0x0430 - 0x0000)
 struct BP_YakushimaBoss002_B_C_SpawnParts final
 {
 public:
@@ -458,13 +458,13 @@ public:
 	class UPalCharacterManager*                   CallFunc_GetCharacterManager_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x0070(0x0078)(NoDestructor)
 	struct FGuid                                  K2Node_MakeStruct_Guid;                            // 0x00E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00F8(0x0320)()
-	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_419[0x7];                                      // 0x0419(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0420(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00F8(0x0328)()
+	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_421[0x7];                                      // 0x0421(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0428(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_YakushimaBoss002_B_C_SpawnParts) == 0x000008, "Wrong alignment on BP_YakushimaBoss002_B_C_SpawnParts");
-static_assert(sizeof(BP_YakushimaBoss002_B_C_SpawnParts) == 0x000428, "Wrong size on BP_YakushimaBoss002_B_C_SpawnParts");
+static_assert(sizeof(BP_YakushimaBoss002_B_C_SpawnParts) == 0x000430, "Wrong size on BP_YakushimaBoss002_B_C_SpawnParts");
 static_assert(offsetof(BP_YakushimaBoss002_B_C_SpawnParts, CharacterID) == 0x000000, "Member 'BP_YakushimaBoss002_B_C_SpawnParts::CharacterID' has a wrong offset!");
 static_assert(offsetof(BP_YakushimaBoss002_B_C_SpawnParts, Controller_Class) == 0x000008, "Member 'BP_YakushimaBoss002_B_C_SpawnParts::Controller_Class' has a wrong offset!");
 static_assert(offsetof(BP_YakushimaBoss002_B_C_SpawnParts, spawnCallback) == 0x000010, "Member 'BP_YakushimaBoss002_B_C_SpawnParts::spawnCallback' has a wrong offset!");
@@ -477,8 +477,8 @@ static_assert(offsetof(BP_YakushimaBoss002_B_C_SpawnParts, CallFunc_GetCharacter
 static_assert(offsetof(BP_YakushimaBoss002_B_C_SpawnParts, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x000070, "Member 'BP_YakushimaBoss002_B_C_SpawnParts::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
 static_assert(offsetof(BP_YakushimaBoss002_B_C_SpawnParts, K2Node_MakeStruct_Guid) == 0x0000E8, "Member 'BP_YakushimaBoss002_B_C_SpawnParts::K2Node_MakeStruct_Guid' has a wrong offset!");
 static_assert(offsetof(BP_YakushimaBoss002_B_C_SpawnParts, CallFunc_GetInitializedCharacterSaveParemter_outParameter) == 0x0000F8, "Member 'BP_YakushimaBoss002_B_C_SpawnParts::CallFunc_GetInitializedCharacterSaveParemter_outParameter' has a wrong offset!");
-static_assert(offsetof(BP_YakushimaBoss002_B_C_SpawnParts, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000418, "Member 'BP_YakushimaBoss002_B_C_SpawnParts::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_YakushimaBoss002_B_C_SpawnParts, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000420, "Member 'BP_YakushimaBoss002_B_C_SpawnParts::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_YakushimaBoss002_B_C_SpawnParts, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000420, "Member 'BP_YakushimaBoss002_B_C_SpawnParts::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_YakushimaBoss002_B_C_SpawnParts, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000428, "Member 'BP_YakushimaBoss002_B_C_SpawnParts::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
 
 // Function BP_YakushimaBoss002_B.BP_YakushimaBoss002_B_C.SpawnRight
 // 0x0030 (0x0030 - 0x0000)

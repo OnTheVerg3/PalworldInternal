@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Pal_structs.hpp"
 #include "Pal_classes.hpp"
 
@@ -19,8 +20,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Status_Dying.BP_Status_Dying_C
-// 0x0060 (0x00A8 - 0x0048)
-class UBP_Status_Dying_C final : public UPalStatusBase
+// 0x0080 (0x00C8 - 0x0048)
+class UBP_Status_Dying_C final : public UPalStatusDying
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0048(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -32,17 +33,24 @@ public:
 	class AActor*                                 Action_Actor;                                      // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UWBP_DyingFriendLoupe_C*                DyingLoupe;                                        // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          TickEnabled;                                       // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  GameOverUIGUID;                                    // 0x00A4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PartnerSkillReviveCanceled;                        // 0x00B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        OtomoRiviveCancelTimer;                            // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           OtomoReviveCancelTimerHandle;                      // 0x00C0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void CancelOtomoRevive();
 	void ExecuteUbergraph_BP_Status_Dying(int32 EntryPoint);
 	void FlagControll(bool bIsDisable);
 	void IsInstantDeath_(bool* IsInstantDeath);
-	void IsOtomoRevive(bool* IsRevive);
 	void IsRunningPartnerSkill(bool* IsRunning);
 	void OnBeginStatus();
 	void OnEndRescue(class AActor* Other, EPalInteractiveObjectIndicatorType IndicatorType);
 	void OnEndStatus();
 	void OnStartRescue(class AActor* Other, EPalInteractiveObjectIndicatorType IndicatorType);
+	void OtomoReviveCancelCheck();
 	void ProcessDeath();
 	void Setup();
 	void SetupInteractTrigger(bool IsEnable);
@@ -51,6 +59,8 @@ public:
 	void TickStatus(float DeltaTime);
 	void ToDeath(bool isIsstantDeath);
 	void UpdateDyingWidget();
+
+	bool IsOtomoRevive() const;
 
 public:
 	static class UClass* StaticClass()
@@ -63,7 +73,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_Status_Dying_C) == 0x000008, "Wrong alignment on UBP_Status_Dying_C");
-static_assert(sizeof(UBP_Status_Dying_C) == 0x0000A8, "Wrong size on UBP_Status_Dying_C");
+static_assert(sizeof(UBP_Status_Dying_C) == 0x0000C8, "Wrong size on UBP_Status_Dying_C");
 static_assert(offsetof(UBP_Status_Dying_C, UberGraphFrame) == 0x000048, "Member 'UBP_Status_Dying_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_Status_Dying_C, flagName) == 0x000050, "Member 'UBP_Status_Dying_C::flagName' has a wrong offset!");
 static_assert(offsetof(UBP_Status_Dying_C, OnUpdateDying) == 0x000058, "Member 'UBP_Status_Dying_C::OnUpdateDying' has a wrong offset!");
@@ -73,6 +83,10 @@ static_assert(offsetof(UBP_Status_Dying_C, OnDyingInterrupt) == 0x000080, "Membe
 static_assert(offsetof(UBP_Status_Dying_C, Action_Actor) == 0x000090, "Member 'UBP_Status_Dying_C::Action_Actor' has a wrong offset!");
 static_assert(offsetof(UBP_Status_Dying_C, DyingLoupe) == 0x000098, "Member 'UBP_Status_Dying_C::DyingLoupe' has a wrong offset!");
 static_assert(offsetof(UBP_Status_Dying_C, TickEnabled) == 0x0000A0, "Member 'UBP_Status_Dying_C::TickEnabled' has a wrong offset!");
+static_assert(offsetof(UBP_Status_Dying_C, GameOverUIGUID) == 0x0000A4, "Member 'UBP_Status_Dying_C::GameOverUIGUID' has a wrong offset!");
+static_assert(offsetof(UBP_Status_Dying_C, PartnerSkillReviveCanceled) == 0x0000B4, "Member 'UBP_Status_Dying_C::PartnerSkillReviveCanceled' has a wrong offset!");
+static_assert(offsetof(UBP_Status_Dying_C, OtomoRiviveCancelTimer) == 0x0000B8, "Member 'UBP_Status_Dying_C::OtomoRiviveCancelTimer' has a wrong offset!");
+static_assert(offsetof(UBP_Status_Dying_C, OtomoReviveCancelTimerHandle) == 0x0000C0, "Member 'UBP_Status_Dying_C::OtomoReviveCancelTimerHandle' has a wrong offset!");
 
 }
 

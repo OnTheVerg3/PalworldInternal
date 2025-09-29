@@ -71,7 +71,7 @@ static_assert(offsetof(BP_NPC_Base_C_DestoryWeapon, CallFunc_GetHasWeapon_Return
 static_assert(offsetof(BP_NPC_Base_C_DestoryWeapon, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_NPC_Base_C_DestoryWeapon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function BP_NPC_Base.BP_NPC_Base_C.ExecuteUbergraph_BP_NPC_Base
-// 0x0640 (0x0640 - 0x0000)
+// 0x0648 (0x0648 - 0x0000)
 struct BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base final
 {
 public:
@@ -126,23 +126,23 @@ public:
 	class UPalCharacterMovementComponent*         K2Node_DynamicCast_AsPal_Character_Movement_Component_1; // 0x0140(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x0150(0x0320)(ConstParm)
-	class FName                                   CallFunc_GetSaveParameterValue_CharacterID_ReturnValue; // 0x0470(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPalCharacterParameterDatabaseRow      CallFunc_GetDataTableRowFromName_OutRow;           // 0x0478(0x0180)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x05F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F9[0x3];                                      // 0x05F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalDataTableRowName_SoundID           K2Node_MakeStruct_PalDataTableRowName_SoundID;     // 0x05FC(0x0008)(NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FPalDeadInfo& DeadInfo)> K2Node_CreateDelegate_OutputDelegate_3;     // 0x0604(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_614[0x4];                                      // 0x0614(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalShooterComponent*                   CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0618(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class APalWeaponBase*                         CallFunc_GetHasWeapon_ReturnValue;                 // 0x0620(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0628(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_629[0x7];                                      // 0x0629(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0630(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0638(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x0150(0x0328)(ConstParm)
+	class FName                                   CallFunc_GetSaveParameterValue_CharacterID_ReturnValue; // 0x0478(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalCharacterParameterDatabaseRow      CallFunc_GetDataTableRowFromName_OutRow;           // 0x0480(0x0180)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0600(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_601[0x3];                                      // 0x0601(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPalDataTableRowName_SoundID           K2Node_MakeStruct_PalDataTableRowName_SoundID;     // 0x0604(0x0008)(NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FPalDeadInfo& DeadInfo)> K2Node_CreateDelegate_OutputDelegate_3;     // 0x060C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61C[0x4];                                      // 0x061C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalShooterComponent*                   CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0620(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class APalWeaponBase*                         CallFunc_GetHasWeapon_ReturnValue;                 // 0x0628(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0630(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_631[0x7];                                      // 0x0631(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0638(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0640(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base) == 0x000008, "Wrong alignment on BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base");
-static_assert(sizeof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base) == 0x000640, "Wrong size on BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base");
+static_assert(sizeof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base) == 0x000648, "Wrong size on BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base");
 static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, EntryPoint) == 0x000000, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, K2Node_CreateDelegate_OutputDelegate_1) == 0x000014, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
@@ -185,16 +185,16 @@ static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, K2Node_Create
 static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, K2Node_DynamicCast_AsPal_Character_Movement_Component_1) == 0x000140, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::K2Node_DynamicCast_AsPal_Character_Movement_Component_1' has a wrong offset!");
 static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, K2Node_DynamicCast_bSuccess_2) == 0x000148, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
 static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_GetSaveParameter_ReturnValue) == 0x000150, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_GetSaveParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_GetSaveParameterValue_CharacterID_ReturnValue) == 0x000470, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_GetSaveParameterValue_CharacterID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_GetDataTableRowFromName_OutRow) == 0x000478, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0005F8, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, K2Node_MakeStruct_PalDataTableRowName_SoundID) == 0x0005FC, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::K2Node_MakeStruct_PalDataTableRowName_SoundID' has a wrong offset!");
-static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, K2Node_CreateDelegate_OutputDelegate_3) == 0x000604, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000618, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_GetHasWeapon_ReturnValue) == 0x000620, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_GetHasWeapon_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_IsValid_ReturnValue_1) == 0x000628, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000630, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000638, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_GetSaveParameterValue_CharacterID_ReturnValue) == 0x000478, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_GetSaveParameterValue_CharacterID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_GetDataTableRowFromName_OutRow) == 0x000480, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000600, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, K2Node_MakeStruct_PalDataTableRowName_SoundID) == 0x000604, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::K2Node_MakeStruct_PalDataTableRowName_SoundID' has a wrong offset!");
+static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, K2Node_CreateDelegate_OutputDelegate_3) == 0x00060C, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000620, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_GetHasWeapon_ReturnValue) == 0x000628, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_GetHasWeapon_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_IsValid_ReturnValue_1) == 0x000630, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000638, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000640, "Member 'BP_NPC_Base_C_ExecuteUbergraph_BP_NPC_Base::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 // Function BP_NPC_Base.BP_NPC_Base_C.ReceiveEndPlay
 // 0x0001 (0x0001 - 0x0000)

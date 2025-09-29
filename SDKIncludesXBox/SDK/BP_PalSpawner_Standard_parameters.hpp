@@ -746,7 +746,7 @@ static_assert(offsetof(BP_PalSpawner_Standard_C_SetLocationIgnoreRaycast, CallFu
 static_assert(offsetof(BP_PalSpawner_Standard_C_SetLocationIgnoreRaycast, CallFunc_K2_SetActorLocation_ReturnValue) == 0x000170, "Member 'BP_PalSpawner_Standard_C_SetLocationIgnoreRaycast::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
 
 // Function BP_PalSpawner_Standard.BP_PalSpawner_Standard_C.Spawn
-// 0x05D0 (0x05D0 - 0x0000)
+// 0x05D8 (0x05D8 - 0x0000)
 struct BP_PalSpawner_Standard_C_Spawn final
 {
 public:
@@ -813,25 +813,25 @@ public:
 	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0198(0x0018)()
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01B0(0x0010)(ReferenceParm)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x01C0(0x0320)()
-	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x04E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E1[0x7];                                      // 0x04E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x04E8(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0500(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x0510(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FPalInstanceID& ID)> K2Node_CreateDelegate_OutputDelegate;           // 0x0518(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x0528(0x0078)(NoDestructor)
-	class UPalCharacterManager*                   CallFunc_GetCharacterManager_ReturnValue;          // 0x05A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x05A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x05B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x05B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_Yaw_ImplicitCast;               // 0x05B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomSpawnLocationByRadiusLineTrace_RayStartUpOffset_ImplicitCast; // 0x05C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomSpawnLocationByRadiusLineTrace_RayEndDownOffset_ImplicitCast; // 0x05C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomSpawnLocationByRadiusLineTrace_Radius_ImplicitCast; // 0x05C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x01C0(0x0328)()
+	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x04E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E9[0x7];                                      // 0x04E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x04F0(0x0018)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0508(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x0518(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FPalInstanceID& ID)> K2Node_CreateDelegate_OutputDelegate;           // 0x0520(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x0530(0x0078)(NoDestructor)
+	class UPalCharacterManager*                   CallFunc_GetCharacterManager_ReturnValue;          // 0x05A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x05B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x05B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x05BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_Yaw_ImplicitCast;               // 0x05C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomSpawnLocationByRadiusLineTrace_RayStartUpOffset_ImplicitCast; // 0x05C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomSpawnLocationByRadiusLineTrace_RayEndDownOffset_ImplicitCast; // 0x05CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomSpawnLocationByRadiusLineTrace_Radius_ImplicitCast; // 0x05D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PalSpawner_Standard_C_Spawn) == 0x000008, "Wrong alignment on BP_PalSpawner_Standard_C_Spawn");
-static_assert(sizeof(BP_PalSpawner_Standard_C_Spawn) == 0x0005D0, "Wrong size on BP_PalSpawner_Standard_C_Spawn");
+static_assert(sizeof(BP_PalSpawner_Standard_C_Spawn) == 0x0005D8, "Wrong size on BP_PalSpawner_Standard_C_Spawn");
 static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, SpawnGroup) == 0x000000, "Member 'BP_PalSpawner_Standard_C_Spawn::SpawnGroup' has a wrong offset!");
 static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, RequestNum) == 0x000028, "Member 'BP_PalSpawner_Standard_C_Spawn::RequestNum' has a wrong offset!");
 static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, spawnNumSum) == 0x00002C, "Member 'BP_PalSpawner_Standard_C_Spawn::spawnNumSum' has a wrong offset!");
@@ -886,20 +886,20 @@ static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_RandomSpawnLocat
 static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_Conv_NameToText_ReturnValue) == 0x000198, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, K2Node_MakeArray_Array) == 0x0001B0, "Member 'BP_PalSpawner_Standard_C_Spawn::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_GetInitializedCharacterSaveParemter_outParameter) == 0x0001C0, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_GetInitializedCharacterSaveParemter_outParameter' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x0004E0, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_Format_ReturnValue) == 0x0004E8, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_Conv_TextToString_ReturnValue) == 0x000500, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_GetLocalPlayerController_ReturnValue) == 0x000510, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_GetLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, K2Node_CreateDelegate_OutputDelegate) == 0x000518, "Member 'BP_PalSpawner_Standard_C_Spawn::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x000528, "Member 'BP_PalSpawner_Standard_C_Spawn::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_GetCharacterManager_ReturnValue) == 0x0005A0, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_GetCharacterManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_SpawnNewCharacter_ReturnValue) == 0x0005A8, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_Array_Add_ReturnValue_1) == 0x0005B0, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x0005B4, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, K2Node_VariableSet_Yaw_ImplicitCast) == 0x0005B8, "Member 'BP_PalSpawner_Standard_C_Spawn::K2Node_VariableSet_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_RandomSpawnLocationByRadiusLineTrace_RayStartUpOffset_ImplicitCast) == 0x0005C0, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_RandomSpawnLocationByRadiusLineTrace_RayStartUpOffset_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_RandomSpawnLocationByRadiusLineTrace_RayEndDownOffset_ImplicitCast) == 0x0005C4, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_RandomSpawnLocationByRadiusLineTrace_RayEndDownOffset_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_RandomSpawnLocationByRadiusLineTrace_Radius_ImplicitCast) == 0x0005C8, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_RandomSpawnLocationByRadiusLineTrace_Radius_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x0004E8, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_Format_ReturnValue) == 0x0004F0, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_Conv_TextToString_ReturnValue) == 0x000508, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_GetLocalPlayerController_ReturnValue) == 0x000518, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_GetLocalPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, K2Node_CreateDelegate_OutputDelegate) == 0x000520, "Member 'BP_PalSpawner_Standard_C_Spawn::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x000530, "Member 'BP_PalSpawner_Standard_C_Spawn::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_GetCharacterManager_ReturnValue) == 0x0005A8, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_GetCharacterManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_SpawnNewCharacter_ReturnValue) == 0x0005B0, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_Array_Add_ReturnValue_1) == 0x0005B8, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x0005BC, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, K2Node_VariableSet_Yaw_ImplicitCast) == 0x0005C0, "Member 'BP_PalSpawner_Standard_C_Spawn::K2Node_VariableSet_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_RandomSpawnLocationByRadiusLineTrace_RayStartUpOffset_ImplicitCast) == 0x0005C8, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_RandomSpawnLocationByRadiusLineTrace_RayStartUpOffset_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_RandomSpawnLocationByRadiusLineTrace_RayEndDownOffset_ImplicitCast) == 0x0005CC, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_RandomSpawnLocationByRadiusLineTrace_RayEndDownOffset_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_PalSpawner_Standard_C_Spawn, CallFunc_RandomSpawnLocationByRadiusLineTrace_Radius_ImplicitCast) == 0x0005D0, "Member 'BP_PalSpawner_Standard_C_Spawn::CallFunc_RandomSpawnLocationByRadiusLineTrace_Radius_ImplicitCast' has a wrong offset!");
 
 // Function BP_PalSpawner_Standard.BP_PalSpawner_Standard_C.Spawn Delegate
 // 0x0198 (0x0198 - 0x0000)

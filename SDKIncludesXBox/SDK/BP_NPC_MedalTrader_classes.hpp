@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_NPC_MedalTrader.BP_NPC_MedalTrader_C
-// 0x0010 (0x0AA0 - 0x0A90)
+// 0x0000 (0x0AA0 - 0x0AA0)
 class ABP_NPC_MedalTrader_C final : public ABP_NPC_FatHumanDataSet_C
 {
 public:
-	class UBP_PalShopVenderDataComponent_C*       BP_PalShopVenderDataComponent;                     // 0x0A90(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PalShopVenderDataComponent_C*       BP_PalShopVenderDataComponent;                     // 0x0A98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,7 +35,7 @@ public:
 };
 static_assert(alignof(ABP_NPC_MedalTrader_C) == 0x000010, "Wrong alignment on ABP_NPC_MedalTrader_C");
 static_assert(sizeof(ABP_NPC_MedalTrader_C) == 0x000AA0, "Wrong size on ABP_NPC_MedalTrader_C");
-static_assert(offsetof(ABP_NPC_MedalTrader_C, BP_PalShopVenderDataComponent) == 0x000A90, "Member 'ABP_NPC_MedalTrader_C::BP_PalShopVenderDataComponent' has a wrong offset!");
+static_assert(offsetof(ABP_NPC_MedalTrader_C, BP_PalShopVenderDataComponent) == 0x000A98, "Member 'ABP_NPC_MedalTrader_C::BP_PalShopVenderDataComponent' has a wrong offset!");
 
 }
 

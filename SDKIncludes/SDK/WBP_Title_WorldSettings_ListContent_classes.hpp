@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "Pal_classes.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "E_PalTitleWorldSettingOptionType_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Pal_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C
-// 0x0110 (0x0518 - 0x0408)
+// 0x0148 (0x0550 - 0x0408)
 class UWBP_Title_WorldSettings_ListContent_C final : public UPalUserWidget
 {
 public:
@@ -29,35 +29,40 @@ public:
 	class UWidgetAnimation*                       Anm_TextEditOnToOff;                               // 0x0410(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_DisableToEnable;                               // 0x0418(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_NormalToFocus;                                 // 0x0420(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanel*                           Canvas_TextEdit;                                   // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       EditableTextBox_46;                                // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Caution;                                     // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBP_PalTextBlock_C*                     Text_OptionTitle;                                  // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_OptionSettings_ListContentCheckbox_C* WBP_OptionSettings_ListContentCheckbox;         // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_OptionSettings_ListContentLR_C*    WBP_OptionSettings_ListContentLR;                  // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_OptionSettings_ListContentSlider_C* WBP_OptionSettings_ListContentSlider;             // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_OptionSettings_ListContentSwitch_C* WBP_OptionSettings_ListContentSwitch;             // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PalInvisibleButton_C*              WBP_PalInvisibleButton;                            // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_Title_WorldSettings_ListButton_C*  WBP_Title_WorldSettings_ListButton;                // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	E_PalTitleWorldSettingOptionType              OptionType;                                        // 0x0478(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_479[0x7];                                      // 0x0479(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataTableRowHandle                    titleMsgId;                                        // 0x0480(0x0010)(Edit, BlueprintVisible, NoDestructor)
-	TMulticastInlineDelegate<void(bool IsOn)>     OnSwitchChanged;                                   // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(const class FString& NewString)> OnComittedText;                   // 0x04A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	int32                                         InputTextMaxLen;                                   // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B4[0x4];                                      // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(int32 NewIndex)> OnChangedSelectIndex;                             // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FDataTableRowHandle                    ButtonMsgID;                                       // 0x04C8(0x0010)(Edit, BlueprintVisible, NoDestructor)
-	TMulticastInlineDelegate<void()>              OnClickedSettingButton;                            // 0x04D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(double NewValue)> OnChangedValue;                                  // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          NowEnabled;                                        // 0x04F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsOverrideSliderStep;                              // 0x04F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA[0x6];                                      // 0x04FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        OverrideSliderStepValue;                           // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnClickedPlatformButton;                           // 0x0508(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UCanvasPanel*                           Canvas_Caution;                                    // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Canvas_ListContent;                                // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Canvas_TextEdit;                                   // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       EditableTextBox_46;                                // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Base;                                        // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Caution;                                     // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_CautionIcon;                                 // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBP_PalTextBlock_C*                     Text_Caution;                                      // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBP_PalTextBlock_C*                     Text_OptionTitle;                                  // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_OptionSettings_ListContentCheckbox_C* WBP_OptionSettings_ListContentCheckbox;         // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_OptionSettings_ListContentLR_C*    WBP_OptionSettings_ListContentLR;                  // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_OptionSettings_ListContentSlider_C* WBP_OptionSettings_ListContentSlider;             // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_OptionSettings_ListContentSwitch_C* WBP_OptionSettings_ListContentSwitch;             // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PalInvisibleButton_C*              WBP_PalInvisibleButton;                            // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Title_WorldSettings_ListButton_C*  WBP_Title_WorldSettings_ListButton;                // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	E_PalTitleWorldSettingOptionType              OptionType;                                        // 0x04A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A1[0x7];                                      // 0x04A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataTableRowHandle                    titleMsgId;                                        // 0x04A8(0x0010)(Edit, BlueprintVisible, NoDestructor)
+	TMulticastInlineDelegate<void(bool IsOn)>     OnSwitchChanged;                                   // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const class FString& NewString)> OnComittedText;                   // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	int32                                         InputTextMaxLen;                                   // 0x04D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4DC[0x4];                                      // 0x04DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(int32 NewIndex)> OnChangedSelectIndex;                             // 0x04E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FDataTableRowHandle                    ButtonMsgID;                                       // 0x04F0(0x0010)(Edit, BlueprintVisible, NoDestructor)
+	TMulticastInlineDelegate<void()>              OnClickedSettingButton;                            // 0x0500(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(double NewValue)> OnChangedValue;                                  // 0x0510(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          NowEnabled;                                        // 0x0520(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsOverrideSliderStep;                              // 0x0521(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_522[0x6];                                      // 0x0522(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        OverrideSliderStepValue;                           // 0x0528(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnClickedPlatformButton;                           // 0x0530(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class UWBP_Title_WorldSettings_ListContent_C* Widget)> OnHovered;  // 0x0540(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void SetupTextInput(const class FString& DefaultString);
 	void SetupSelectString(TArray<class FString>& SelectStrings, int32 DefaultSelectIndex);
 	void SetupOnOff(bool IsOn_0);
 	void SetupIntValue(int32 Value, int32 Min, int32 Max);
@@ -78,6 +83,7 @@ public:
 	class UWidget* CustomNavi_ToRight(EUINavigation Navigation_0);
 	class UWidget* CustomNavi_ToLeft(EUINavigation Navigation_0);
 	void Construct();
+	void CanEditable(bool* bEditable);
 	void BndEvt__WBP_Title_WorldSettings_ListContent_WBP_Title_WorldSettings_ListButton_K2Node_ComponentBoundEvent_7_OnClicked__DelegateSignature();
 	void BndEvt__WBP_Title_WorldSettings_ListContent_WBP_PalInvisibleButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__WBP_Title_WorldSettings_ListContent_WBP_PalInvisibleButton_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
@@ -89,6 +95,8 @@ public:
 	void BndEvt__WBP_Title_WorldSettings_ListContent_EditableTextBox_46_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text);
 	void BndEvt__WBP_Title_WorldSettings_ListContent_EditableTextBox_46_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
 	void AnmEvent_SetEnableBuutton(bool isEnableButton);
+	void SetupTextInput(const class FString& DefaultString);
+	void SetVisibilityCaution(bool bVisible);
 
 public:
 	static class UClass* StaticClass()
@@ -101,34 +109,40 @@ public:
 	}
 };
 static_assert(alignof(UWBP_Title_WorldSettings_ListContent_C) == 0x000008, "Wrong alignment on UWBP_Title_WorldSettings_ListContent_C");
-static_assert(sizeof(UWBP_Title_WorldSettings_ListContent_C) == 0x000518, "Wrong size on UWBP_Title_WorldSettings_ListContent_C");
+static_assert(sizeof(UWBP_Title_WorldSettings_ListContent_C) == 0x000550, "Wrong size on UWBP_Title_WorldSettings_ListContent_C");
 static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, UberGraphFrame) == 0x000408, "Member 'UWBP_Title_WorldSettings_ListContent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Anm_TextEditOnToOff) == 0x000410, "Member 'UWBP_Title_WorldSettings_ListContent_C::Anm_TextEditOnToOff' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Anm_DisableToEnable) == 0x000418, "Member 'UWBP_Title_WorldSettings_ListContent_C::Anm_DisableToEnable' has a wrong offset!");
 static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Anm_NormalToFocus) == 0x000420, "Member 'UWBP_Title_WorldSettings_ListContent_C::Anm_NormalToFocus' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Canvas_TextEdit) == 0x000428, "Member 'UWBP_Title_WorldSettings_ListContent_C::Canvas_TextEdit' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, EditableTextBox_46) == 0x000430, "Member 'UWBP_Title_WorldSettings_ListContent_C::EditableTextBox_46' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Image_Caution) == 0x000438, "Member 'UWBP_Title_WorldSettings_ListContent_C::Image_Caution' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Text_OptionTitle) == 0x000440, "Member 'UWBP_Title_WorldSettings_ListContent_C::Text_OptionTitle' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, WBP_OptionSettings_ListContentCheckbox) == 0x000448, "Member 'UWBP_Title_WorldSettings_ListContent_C::WBP_OptionSettings_ListContentCheckbox' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, WBP_OptionSettings_ListContentLR) == 0x000450, "Member 'UWBP_Title_WorldSettings_ListContent_C::WBP_OptionSettings_ListContentLR' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, WBP_OptionSettings_ListContentSlider) == 0x000458, "Member 'UWBP_Title_WorldSettings_ListContent_C::WBP_OptionSettings_ListContentSlider' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, WBP_OptionSettings_ListContentSwitch) == 0x000460, "Member 'UWBP_Title_WorldSettings_ListContent_C::WBP_OptionSettings_ListContentSwitch' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, WBP_PalInvisibleButton) == 0x000468, "Member 'UWBP_Title_WorldSettings_ListContent_C::WBP_PalInvisibleButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, WBP_Title_WorldSettings_ListButton) == 0x000470, "Member 'UWBP_Title_WorldSettings_ListContent_C::WBP_Title_WorldSettings_ListButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OptionType) == 0x000478, "Member 'UWBP_Title_WorldSettings_ListContent_C::OptionType' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, titleMsgId) == 0x000480, "Member 'UWBP_Title_WorldSettings_ListContent_C::titleMsgId' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OnSwitchChanged) == 0x000490, "Member 'UWBP_Title_WorldSettings_ListContent_C::OnSwitchChanged' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OnComittedText) == 0x0004A0, "Member 'UWBP_Title_WorldSettings_ListContent_C::OnComittedText' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, InputTextMaxLen) == 0x0004B0, "Member 'UWBP_Title_WorldSettings_ListContent_C::InputTextMaxLen' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OnChangedSelectIndex) == 0x0004B8, "Member 'UWBP_Title_WorldSettings_ListContent_C::OnChangedSelectIndex' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, ButtonMsgID) == 0x0004C8, "Member 'UWBP_Title_WorldSettings_ListContent_C::ButtonMsgID' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OnClickedSettingButton) == 0x0004D8, "Member 'UWBP_Title_WorldSettings_ListContent_C::OnClickedSettingButton' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OnChangedValue) == 0x0004E8, "Member 'UWBP_Title_WorldSettings_ListContent_C::OnChangedValue' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, NowEnabled) == 0x0004F8, "Member 'UWBP_Title_WorldSettings_ListContent_C::NowEnabled' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, IsOverrideSliderStep) == 0x0004F9, "Member 'UWBP_Title_WorldSettings_ListContent_C::IsOverrideSliderStep' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OverrideSliderStepValue) == 0x000500, "Member 'UWBP_Title_WorldSettings_ListContent_C::OverrideSliderStepValue' has a wrong offset!");
-static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OnClickedPlatformButton) == 0x000508, "Member 'UWBP_Title_WorldSettings_ListContent_C::OnClickedPlatformButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Canvas_Caution) == 0x000428, "Member 'UWBP_Title_WorldSettings_ListContent_C::Canvas_Caution' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Canvas_ListContent) == 0x000430, "Member 'UWBP_Title_WorldSettings_ListContent_C::Canvas_ListContent' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Canvas_TextEdit) == 0x000438, "Member 'UWBP_Title_WorldSettings_ListContent_C::Canvas_TextEdit' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, EditableTextBox_46) == 0x000440, "Member 'UWBP_Title_WorldSettings_ListContent_C::EditableTextBox_46' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Image_Base) == 0x000448, "Member 'UWBP_Title_WorldSettings_ListContent_C::Image_Base' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Image_Caution) == 0x000450, "Member 'UWBP_Title_WorldSettings_ListContent_C::Image_Caution' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Image_CautionIcon) == 0x000458, "Member 'UWBP_Title_WorldSettings_ListContent_C::Image_CautionIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Text_Caution) == 0x000460, "Member 'UWBP_Title_WorldSettings_ListContent_C::Text_Caution' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, Text_OptionTitle) == 0x000468, "Member 'UWBP_Title_WorldSettings_ListContent_C::Text_OptionTitle' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, WBP_OptionSettings_ListContentCheckbox) == 0x000470, "Member 'UWBP_Title_WorldSettings_ListContent_C::WBP_OptionSettings_ListContentCheckbox' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, WBP_OptionSettings_ListContentLR) == 0x000478, "Member 'UWBP_Title_WorldSettings_ListContent_C::WBP_OptionSettings_ListContentLR' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, WBP_OptionSettings_ListContentSlider) == 0x000480, "Member 'UWBP_Title_WorldSettings_ListContent_C::WBP_OptionSettings_ListContentSlider' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, WBP_OptionSettings_ListContentSwitch) == 0x000488, "Member 'UWBP_Title_WorldSettings_ListContent_C::WBP_OptionSettings_ListContentSwitch' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, WBP_PalInvisibleButton) == 0x000490, "Member 'UWBP_Title_WorldSettings_ListContent_C::WBP_PalInvisibleButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, WBP_Title_WorldSettings_ListButton) == 0x000498, "Member 'UWBP_Title_WorldSettings_ListContent_C::WBP_Title_WorldSettings_ListButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OptionType) == 0x0004A0, "Member 'UWBP_Title_WorldSettings_ListContent_C::OptionType' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, titleMsgId) == 0x0004A8, "Member 'UWBP_Title_WorldSettings_ListContent_C::titleMsgId' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OnSwitchChanged) == 0x0004B8, "Member 'UWBP_Title_WorldSettings_ListContent_C::OnSwitchChanged' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OnComittedText) == 0x0004C8, "Member 'UWBP_Title_WorldSettings_ListContent_C::OnComittedText' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, InputTextMaxLen) == 0x0004D8, "Member 'UWBP_Title_WorldSettings_ListContent_C::InputTextMaxLen' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OnChangedSelectIndex) == 0x0004E0, "Member 'UWBP_Title_WorldSettings_ListContent_C::OnChangedSelectIndex' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, ButtonMsgID) == 0x0004F0, "Member 'UWBP_Title_WorldSettings_ListContent_C::ButtonMsgID' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OnClickedSettingButton) == 0x000500, "Member 'UWBP_Title_WorldSettings_ListContent_C::OnClickedSettingButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OnChangedValue) == 0x000510, "Member 'UWBP_Title_WorldSettings_ListContent_C::OnChangedValue' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, NowEnabled) == 0x000520, "Member 'UWBP_Title_WorldSettings_ListContent_C::NowEnabled' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, IsOverrideSliderStep) == 0x000521, "Member 'UWBP_Title_WorldSettings_ListContent_C::IsOverrideSliderStep' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OverrideSliderStepValue) == 0x000528, "Member 'UWBP_Title_WorldSettings_ListContent_C::OverrideSliderStepValue' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OnClickedPlatformButton) == 0x000530, "Member 'UWBP_Title_WorldSettings_ListContent_C::OnClickedPlatformButton' has a wrong offset!");
+static_assert(offsetof(UWBP_Title_WorldSettings_ListContent_C, OnHovered) == 0x000540, "Member 'UWBP_Title_WorldSettings_ListContent_C::OnHovered' has a wrong offset!");
 
 }
 

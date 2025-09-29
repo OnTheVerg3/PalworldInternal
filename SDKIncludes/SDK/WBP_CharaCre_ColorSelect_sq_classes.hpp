@@ -25,7 +25,7 @@ class UWBP_CharaCre_ColorSelect_sq_C final : public UUserWidget
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWidgetAnimation*                       Anm_NormalToFocus;                                 // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Anm_Push;                                          // 0x0288(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Anm_push;                                          // 0x0288(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Focus;                                         // 0x0290(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Anm_Normal;                                        // 0x0298(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UCanvasPanel*                           Canvas_Select;                                     // 0x02A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -60,7 +60,7 @@ static_assert(alignof(UWBP_CharaCre_ColorSelect_sq_C) == 0x000008, "Wrong alignm
 static_assert(sizeof(UWBP_CharaCre_ColorSelect_sq_C) == 0x0002D8, "Wrong size on UWBP_CharaCre_ColorSelect_sq_C");
 static_assert(offsetof(UWBP_CharaCre_ColorSelect_sq_C, UberGraphFrame) == 0x000278, "Member 'UWBP_CharaCre_ColorSelect_sq_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_CharaCre_ColorSelect_sq_C, Anm_NormalToFocus) == 0x000280, "Member 'UWBP_CharaCre_ColorSelect_sq_C::Anm_NormalToFocus' has a wrong offset!");
-static_assert(offsetof(UWBP_CharaCre_ColorSelect_sq_C, Anm_Push) == 0x000288, "Member 'UWBP_CharaCre_ColorSelect_sq_C::Anm_Push' has a wrong offset!");
+static_assert(offsetof(UWBP_CharaCre_ColorSelect_sq_C, Anm_push) == 0x000288, "Member 'UWBP_CharaCre_ColorSelect_sq_C::Anm_push' has a wrong offset!");
 static_assert(offsetof(UWBP_CharaCre_ColorSelect_sq_C, Anm_Focus) == 0x000290, "Member 'UWBP_CharaCre_ColorSelect_sq_C::Anm_Focus' has a wrong offset!");
 static_assert(offsetof(UWBP_CharaCre_ColorSelect_sq_C, Anm_Normal) == 0x000298, "Member 'UWBP_CharaCre_ColorSelect_sq_C::Anm_Normal' has a wrong offset!");
 static_assert(offsetof(UWBP_CharaCre_ColorSelect_sq_C, Canvas_Select) == 0x0002A0, "Member 'UWBP_CharaCre_ColorSelect_sq_C::Canvas_Select' has a wrong offset!");

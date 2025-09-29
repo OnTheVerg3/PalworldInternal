@@ -129,17 +129,6 @@ static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ExecuteUb
 static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ExecuteUbergraph_BP_AIAction_Visitor_TravelToBaseCamp_Guardman, CallFunc_GetPalAIController_ReturnValue) == 0x0000C8, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ExecuteUbergraph_BP_AIAction_Visitor_TravelToBaseCamp_Guardman::CallFunc_GetPalAIController_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ExecuteUbergraph_BP_AIAction_Visitor_TravelToBaseCamp_Guardman, K2Node_MakeStruct_PalVisitorFormationMoveInitParameter) == 0x0000D0, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_ExecuteUbergraph_BP_AIAction_Visitor_TravelToBaseCamp_Guardman::K2Node_MakeStruct_PalVisitorFormationMoveInitParameter' has a wrong offset!");
 
-// Function BP_AIAction_Visitor_TravelToBaseCamp_Guardman.BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C.Fun_Damage_AIResponse
-// 0x0050 (0x0050 - 0x0000)
-struct BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Fun_Damage_AIResponse final
-{
-public:
-	struct FPalDamageResult                       DamageResult;                                      // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-static_assert(alignof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Fun_Damage_AIResponse) == 0x000008, "Wrong alignment on BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Fun_Damage_AIResponse");
-static_assert(sizeof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Fun_Damage_AIResponse) == 0x000050, "Wrong size on BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Fun_Damage_AIResponse");
-static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Fun_Damage_AIResponse, DamageResult) == 0x000000, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_Fun_Damage_AIResponse::DamageResult' has a wrong offset!");
-
 // Function BP_AIAction_Visitor_TravelToBaseCamp_Guardman.BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C.IsVisitorLeaderTalking
 // 0x0040 (0x0040 - 0x0000)
 struct BP_AIAction_Visitor_TravelToBaseCamp_Guardman_C_IsVisitorLeaderTalking final

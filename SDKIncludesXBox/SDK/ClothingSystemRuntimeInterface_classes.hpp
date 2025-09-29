@@ -18,6 +18,23 @@
 namespace SDK
 {
 
+// Class ClothingSystemRuntimeInterface.ClothSharedSimConfigBase
+// 0x0000 (0x0028 - 0x0028)
+class UClothSharedSimConfigBase final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ClothSharedSimConfigBase">();
+	}
+	static class UClothSharedSimConfigBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothSharedSimConfigBase>();
+	}
+};
+static_assert(alignof(UClothSharedSimConfigBase) == 0x000008, "Wrong alignment on UClothSharedSimConfigBase");
+static_assert(sizeof(UClothSharedSimConfigBase) == 0x000028, "Wrong size on UClothSharedSimConfigBase");
+
 // Class ClothingSystemRuntimeInterface.ClothConfigBase
 // 0x0000 (0x0028 - 0x0028)
 class UClothConfigBase : public UObject
@@ -51,26 +68,6 @@ public:
 };
 static_assert(alignof(UClothingSimulationFactory) == 0x000008, "Wrong alignment on UClothingSimulationFactory");
 static_assert(sizeof(UClothingSimulationFactory) == 0x000028, "Wrong size on UClothingSimulationFactory");
-
-// Class ClothingSystemRuntimeInterface.ClothingInteractor
-// 0x0008 (0x0030 - 0x0028)
-class UClothingInteractor : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ClothingInteractor">();
-	}
-	static class UClothingInteractor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UClothingInteractor>();
-	}
-};
-static_assert(alignof(UClothingInteractor) == 0x000008, "Wrong alignment on UClothingInteractor");
-static_assert(sizeof(UClothingInteractor) == 0x000030, "Wrong size on UClothingInteractor");
 
 // Class ClothingSystemRuntimeInterface.ClothPhysicalMeshDataBase_Legacy
 // 0x00B8 (0x00E0 - 0x0028)
@@ -107,6 +104,49 @@ static_assert(offsetof(UClothPhysicalMeshDataBase_Legacy, BoneData) == 0x000068,
 static_assert(offsetof(UClothPhysicalMeshDataBase_Legacy, NumFixedVerts) == 0x000078, "Member 'UClothPhysicalMeshDataBase_Legacy::NumFixedVerts' has a wrong offset!");
 static_assert(offsetof(UClothPhysicalMeshDataBase_Legacy, MaxBoneWeights) == 0x00007C, "Member 'UClothPhysicalMeshDataBase_Legacy::MaxBoneWeights' has a wrong offset!");
 static_assert(offsetof(UClothPhysicalMeshDataBase_Legacy, SelfCollisionIndices) == 0x000080, "Member 'UClothPhysicalMeshDataBase_Legacy::SelfCollisionIndices' has a wrong offset!");
+
+// Class ClothingSystemRuntimeInterface.ClothingInteractor
+// 0x0008 (0x0030 - 0x0028)
+class UClothingInteractor : public UObject
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ClothingInteractor">();
+	}
+	static class UClothingInteractor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothingInteractor>();
+	}
+};
+static_assert(alignof(UClothingInteractor) == 0x000008, "Wrong alignment on UClothingInteractor");
+static_assert(sizeof(UClothingInteractor) == 0x000030, "Wrong size on UClothingInteractor");
+
+// Class ClothingSystemRuntimeInterface.ClothingAssetBase
+// 0x0020 (0x0048 - 0x0028)
+class UClothingAssetBase : public UObject
+{
+public:
+	class FString                                 ImportedFilePath;                                  // 0x0028(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  AssetGuid;                                         // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ClothingAssetBase">();
+	}
+	static class UClothingAssetBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothingAssetBase>();
+	}
+};
+static_assert(alignof(UClothingAssetBase) == 0x000008, "Wrong alignment on UClothingAssetBase");
+static_assert(sizeof(UClothingAssetBase) == 0x000048, "Wrong size on UClothingAssetBase");
+static_assert(offsetof(UClothingAssetBase, ImportedFilePath) == 0x000028, "Member 'UClothingAssetBase::ImportedFilePath' has a wrong offset!");
+static_assert(offsetof(UClothingAssetBase, AssetGuid) == 0x000038, "Member 'UClothingAssetBase::AssetGuid' has a wrong offset!");
 
 // Class ClothingSystemRuntimeInterface.ClothingSimulationInteractor
 // 0x0068 (0x0090 - 0x0028)
@@ -147,46 +187,6 @@ public:
 static_assert(alignof(UClothingSimulationInteractor) == 0x000008, "Wrong alignment on UClothingSimulationInteractor");
 static_assert(sizeof(UClothingSimulationInteractor) == 0x000090, "Wrong size on UClothingSimulationInteractor");
 static_assert(offsetof(UClothingSimulationInteractor, ClothingInteractors) == 0x000028, "Member 'UClothingSimulationInteractor::ClothingInteractors' has a wrong offset!");
-
-// Class ClothingSystemRuntimeInterface.ClothingAssetBase
-// 0x0020 (0x0048 - 0x0028)
-class UClothingAssetBase : public UObject
-{
-public:
-	class FString                                 ImportedFilePath;                                  // 0x0028(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  AssetGuid;                                         // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ClothingAssetBase">();
-	}
-	static class UClothingAssetBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UClothingAssetBase>();
-	}
-};
-static_assert(alignof(UClothingAssetBase) == 0x000008, "Wrong alignment on UClothingAssetBase");
-static_assert(sizeof(UClothingAssetBase) == 0x000048, "Wrong size on UClothingAssetBase");
-static_assert(offsetof(UClothingAssetBase, ImportedFilePath) == 0x000028, "Member 'UClothingAssetBase::ImportedFilePath' has a wrong offset!");
-static_assert(offsetof(UClothingAssetBase, AssetGuid) == 0x000038, "Member 'UClothingAssetBase::AssetGuid' has a wrong offset!");
-
-// Class ClothingSystemRuntimeInterface.ClothSharedSimConfigBase
-// 0x0000 (0x0028 - 0x0028)
-class UClothSharedSimConfigBase final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ClothSharedSimConfigBase">();
-	}
-	static class UClothSharedSimConfigBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UClothSharedSimConfigBase>();
-	}
-};
-static_assert(alignof(UClothSharedSimConfigBase) == 0x000008, "Wrong alignment on UClothSharedSimConfigBase");
-static_assert(sizeof(UClothSharedSimConfigBase) == 0x000028, "Wrong size on UClothSharedSimConfigBase");
 
 }
 

@@ -18,7 +18,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_PalInputData_XInput.BP_PalInputData_XInput_C
 // 0x0000 (0x0110 - 0x0110)
-class UBP_PalInputData_XInput_C final : public UCommonInputBaseControllerData
+class UBP_PalInputData_XInput_C : public UCommonInputBaseControllerData
 {
 public:
 	static class UClass* StaticClass()

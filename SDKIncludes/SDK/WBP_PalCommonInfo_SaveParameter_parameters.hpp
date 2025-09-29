@@ -17,21 +17,21 @@ namespace SDK::Params
 {
 
 // Function WBP_PalCommonInfo_SaveParameter.WBP_PalCommonInfo_SaveParameter_C.DisplaySaveParameter
-// 0x0330 (0x0330 - 0x0000)
+// 0x0338 (0x0338 - 0x0000)
 struct WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter final
 {
 public:
-	struct FPalIndividualCharacterSaveParameter   displayParameter;                                  // 0x0000(0x0320)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         CallFunc_GetSaveParameterValue_Talent_Defense_ReturnValue; // 0x0320(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSaveParameterValue_Talent_Shot_ReturnValue; // 0x0324(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSaveParameterValue_Talent_HP_ReturnValue; // 0x0328(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   displayParameter;                                  // 0x0000(0x0328)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         CallFunc_GetSaveParameterValue_Talent_Defense_ReturnValue; // 0x0328(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSaveParameterValue_Talent_Shot_ReturnValue; // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSaveParameterValue_Talent_HP_ReturnValue; // 0x0330(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter) == 0x000008, "Wrong alignment on WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter");
-static_assert(sizeof(WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter) == 0x000330, "Wrong size on WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter");
+static_assert(sizeof(WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter) == 0x000338, "Wrong size on WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter");
 static_assert(offsetof(WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter, displayParameter) == 0x000000, "Member 'WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter::displayParameter' has a wrong offset!");
-static_assert(offsetof(WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Talent_Defense_ReturnValue) == 0x000320, "Member 'WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Talent_Defense_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Talent_Shot_ReturnValue) == 0x000324, "Member 'WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Talent_Shot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Talent_HP_ReturnValue) == 0x000328, "Member 'WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Talent_HP_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Talent_Defense_ReturnValue) == 0x000328, "Member 'WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Talent_Defense_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Talent_Shot_ReturnValue) == 0x00032C, "Member 'WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Talent_Shot_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter, CallFunc_GetSaveParameterValue_Talent_HP_ReturnValue) == 0x000330, "Member 'WBP_PalCommonInfo_SaveParameter_C_DisplaySaveParameter::CallFunc_GetSaveParameterValue_Talent_HP_ReturnValue' has a wrong offset!");
 
 // Function WBP_PalCommonInfo_SaveParameter.WBP_PalCommonInfo_SaveParameter_C.SetBaseParameter
 // 0x0060 (0x0060 - 0x0000)
@@ -83,18 +83,18 @@ static_assert(alignof(WBP_PalCommonInfo_SaveParameter_C_SetFoodAmount) == 0x0000
 static_assert(sizeof(WBP_PalCommonInfo_SaveParameter_C_SetFoodAmount) == 0x000004, "Wrong size on WBP_PalCommonInfo_SaveParameter_C_SetFoodAmount");
 static_assert(offsetof(WBP_PalCommonInfo_SaveParameter_C_SetFoodAmount, FoddAmount) == 0x000000, "Member 'WBP_PalCommonInfo_SaveParameter_C_SetFoodAmount::FoddAmount' has a wrong offset!");
 
-// Function WBP_PalCommonInfo_SaveParameter.WBP_PalCommonInfo_SaveParameter_C.SetFriendship
+// Function WBP_PalCommonInfo_SaveParameter.WBP_PalCommonInfo_SaveParameter_C.SetFriendShip
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_PalCommonInfo_SaveParameter_C_SetFriendship final
+struct WBP_PalCommonInfo_SaveParameter_C_SetFriendShip final
 {
 public:
 	int32                                         FriendshipRank;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         FriendshipPoint;                                   // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_PalCommonInfo_SaveParameter_C_SetFriendship) == 0x000004, "Wrong alignment on WBP_PalCommonInfo_SaveParameter_C_SetFriendship");
-static_assert(sizeof(WBP_PalCommonInfo_SaveParameter_C_SetFriendship) == 0x000008, "Wrong size on WBP_PalCommonInfo_SaveParameter_C_SetFriendship");
-static_assert(offsetof(WBP_PalCommonInfo_SaveParameter_C_SetFriendship, FriendshipRank) == 0x000000, "Member 'WBP_PalCommonInfo_SaveParameter_C_SetFriendship::FriendshipRank' has a wrong offset!");
-static_assert(offsetof(WBP_PalCommonInfo_SaveParameter_C_SetFriendship, FriendshipPoint) == 0x000004, "Member 'WBP_PalCommonInfo_SaveParameter_C_SetFriendship::FriendshipPoint' has a wrong offset!");
+static_assert(alignof(WBP_PalCommonInfo_SaveParameter_C_SetFriendShip) == 0x000004, "Wrong alignment on WBP_PalCommonInfo_SaveParameter_C_SetFriendShip");
+static_assert(sizeof(WBP_PalCommonInfo_SaveParameter_C_SetFriendShip) == 0x000008, "Wrong size on WBP_PalCommonInfo_SaveParameter_C_SetFriendShip");
+static_assert(offsetof(WBP_PalCommonInfo_SaveParameter_C_SetFriendShip, FriendshipRank) == 0x000000, "Member 'WBP_PalCommonInfo_SaveParameter_C_SetFriendShip::FriendshipRank' has a wrong offset!");
+static_assert(offsetof(WBP_PalCommonInfo_SaveParameter_C_SetFriendShip, FriendshipPoint) == 0x000004, "Member 'WBP_PalCommonInfo_SaveParameter_C_SetFriendShip::FriendshipPoint' has a wrong offset!");
 
 // Function WBP_PalCommonInfo_SaveParameter.WBP_PalCommonInfo_SaveParameter_C.SetGender
 // 0x0001 (0x0001 - 0x0000)

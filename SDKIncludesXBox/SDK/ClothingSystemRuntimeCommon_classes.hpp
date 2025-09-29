@@ -19,23 +19,6 @@
 namespace SDK
 {
 
-// Class ClothingSystemRuntimeCommon.ClothingAssetCustomData
-// 0x0000 (0x0028 - 0x0028)
-class UClothingAssetCustomData final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ClothingAssetCustomData">();
-	}
-	static class UClothingAssetCustomData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UClothingAssetCustomData>();
-	}
-};
-static_assert(alignof(UClothingAssetCustomData) == 0x000008, "Wrong alignment on UClothingAssetCustomData");
-static_assert(sizeof(UClothingAssetCustomData) == 0x000028, "Wrong size on UClothingAssetCustomData");
-
 // Class ClothingSystemRuntimeCommon.ClothConfigCommon
 // 0x0000 (0x0028 - 0x0028)
 class UClothConfigCommon : public UClothConfigBase
@@ -69,6 +52,23 @@ public:
 };
 static_assert(alignof(UClothSharedConfigCommon) == 0x000008, "Wrong alignment on UClothSharedConfigCommon");
 static_assert(sizeof(UClothSharedConfigCommon) == 0x000028, "Wrong size on UClothSharedConfigCommon");
+
+// Class ClothingSystemRuntimeCommon.ClothingAssetCustomData
+// 0x0000 (0x0028 - 0x0028)
+class UClothingAssetCustomData final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ClothingAssetCustomData">();
+	}
+	static class UClothingAssetCustomData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothingAssetCustomData>();
+	}
+};
+static_assert(alignof(UClothingAssetCustomData) == 0x000008, "Wrong alignment on UClothingAssetCustomData");
+static_assert(sizeof(UClothingAssetCustomData) == 0x000028, "Wrong size on UClothingAssetCustomData");
 
 // Class ClothingSystemRuntimeCommon.ClothingAssetCommon
 // 0x00A8 (0x00F0 - 0x0048)

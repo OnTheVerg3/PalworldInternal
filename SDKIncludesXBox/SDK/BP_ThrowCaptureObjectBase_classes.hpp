@@ -18,7 +18,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_ThrowCaptureObjectBase.BP_ThrowCaptureObjectBase_C
 // 0x0018 (0x0430 - 0x0418)
-class ABP_ThrowCaptureObjectBase_C : public ABP_ThrowObjectBase_C
+class ABP_ThrowCaptureObjectBase_C final : public ABP_ThrowObjectBase_C
 {
 public:
 	TMulticastInlineDelegate<void(class AActor* createdBodyActor, class UPalIndividualCharacterHandle* tagretHandle, bool isBonus, bool bCritical)> OnCaptureStarted; // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)

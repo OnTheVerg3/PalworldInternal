@@ -102,7 +102,7 @@ static_assert(offsetof(APlacementToolBase, bHideBrush) == 0x0003E4, "Member 'APl
 
 // Class PlacementTools.BoxPlacement
 // 0x0030 (0x0420 - 0x03F0)
-class ABoxPlacement : public APlacementToolBase
+class ABoxPlacement final : public APlacementToolBase
 {
 public:
 	struct FVector                                BoxExtent;                                         // 0x03E8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)

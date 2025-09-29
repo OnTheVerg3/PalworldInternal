@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Pal_structs.hpp"
 
 
 namespace SDK::Params
@@ -58,7 +58,7 @@ static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_IsSkipCutscene, Call
 static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_IsSkipCutscene, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_BossBattle_BossCharacterSpawner_C_IsSkipCutscene::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function BP_BossBattle_BossCharacterSpawner.BP_BossBattle_BossCharacterSpawner_C.RequestBossSpawn
-// 0x0440 (0x0440 - 0x0000)
+// 0x0448 (0x0448 - 0x0000)
 struct BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn final
 {
 public:
@@ -72,17 +72,17 @@ public:
 	class UPalCharacterManager*                   CallFunc_GetCharacterManager_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  K2Node_MakeStruct_Guid;                            // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x0060(0x0320)()
-	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0388(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x03A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x03B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x03C0(0x0078)(NoDestructor)
-	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0438(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x0060(0x0328)()
+	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_389[0x7];                                      // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0390(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x03A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x03C8(0x0078)(NoDestructor)
+	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0440(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn) == 0x000008, "Wrong alignment on BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn");
-static_assert(sizeof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn) == 0x000440, "Wrong size on BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn");
+static_assert(sizeof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn) == 0x000448, "Wrong size on BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn");
 static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CharacterID) == 0x000000, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CharacterID' has a wrong offset!");
 static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, Level) == 0x000008, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::Level' has a wrong offset!");
 static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CallFunc_GetBossBattleManager_ReturnValue) == 0x000010, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CallFunc_GetBossBattleManager_ReturnValue' has a wrong offset!");
@@ -92,15 +92,15 @@ static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, Ca
 static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, K2Node_MakeStruct_Guid) == 0x000038, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::K2Node_MakeStruct_Guid' has a wrong offset!");
 static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000048, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CallFunc_GetInitializedCharacterSaveParemter_outParameter) == 0x000060, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CallFunc_GetInitializedCharacterSaveParemter_outParameter' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000380, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CallFunc_Add_VectorVector_ReturnValue) == 0x000388, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CallFunc_K2_GetActorRotation_ReturnValue) == 0x0003A0, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CallFunc_GetLocalPlayerController_ReturnValue) == 0x0003B8, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CallFunc_GetLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x0003C0, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000438, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000388, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CallFunc_Add_VectorVector_ReturnValue) == 0x000390, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CallFunc_K2_GetActorRotation_ReturnValue) == 0x0003A8, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CallFunc_GetLocalPlayerController_ReturnValue) == 0x0003C0, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CallFunc_GetLocalPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x0003C8, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000440, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestBossSpawn::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
 
 // Function BP_BossBattle_BossCharacterSpawner.BP_BossBattle_BossCharacterSpawner_C.RequestOtherSpawn
-// 0x04C0 (0x04C0 - 0x0000)
+// 0x04C8 (0x04C8 - 0x0000)
 struct BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn final
 {
 public:
@@ -123,19 +123,19 @@ public:
 	class UPalCharacterManager*                   CallFunc_GetCharacterManager_ReturnValue;          // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  K2Node_MakeStruct_Guid;                            // 0x0098(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00C0(0x0320)()
-	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x03E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0400(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_SelectRotator_ReturnValue;                // 0x0418(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x0430(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x0438(0x0078)(NoDestructor)
-	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x04B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x04B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00C0(0x0328)()
+	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x03E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E9[0x7];                                      // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x03F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0408(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_SelectRotator_ReturnValue;                // 0x0420(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x0438(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x0440(0x0078)(NoDestructor)
+	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x04B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x04C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn) == 0x000008, "Wrong alignment on BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn");
-static_assert(sizeof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn) == 0x0004C0, "Wrong size on BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn");
+static_assert(sizeof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn) == 0x0004C8, "Wrong size on BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn");
 static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CharacterID) == 0x000000, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CharacterID' has a wrong offset!");
 static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, Level) == 0x000008, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::Level' has a wrong offset!");
 static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, AIController) == 0x000010, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::AIController' has a wrong offset!");
@@ -152,14 +152,14 @@ static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, C
 static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, K2Node_MakeStruct_Guid) == 0x000098, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::K2Node_MakeStruct_Guid' has a wrong offset!");
 static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x0000A8, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_GetInitializedCharacterSaveParemter_outParameter) == 0x0000C0, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_GetInitializedCharacterSaveParemter_outParameter' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x0003E0, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_SelectVector_ReturnValue) == 0x0003E8, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000400, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_SelectRotator_ReturnValue) == 0x000418, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_SelectRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_GetLocalPlayerController_ReturnValue) == 0x000430, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_GetLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x000438, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_SpawnNewCharacter_ReturnValue) == 0x0004B0, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_Array_Add_ReturnValue) == 0x0004B8, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x0003E8, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_SelectVector_ReturnValue) == 0x0003F0, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000408, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_SelectRotator_ReturnValue) == 0x000420, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_SelectRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_GetLocalPlayerController_ReturnValue) == 0x000438, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_GetLocalPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x000440, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_SpawnNewCharacter_ReturnValue) == 0x0004B8, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn, CallFunc_Array_Add_ReturnValue) == 0x0004C0, "Member 'BP_BossBattle_BossCharacterSpawner_C_RequestOtherSpawn::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function BP_BossBattle_BossCharacterSpawner.BP_BossBattle_BossCharacterSpawner_C.SetCharacterStartLocation
 // 0x0190 (0x0190 - 0x0000)

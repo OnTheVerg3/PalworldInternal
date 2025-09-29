@@ -20,7 +20,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_ActionUniqueAttackBase.BP_ActionUniqueAttackBase_C
 // 0x00C0 (0x0230 - 0x0170)
-class UBP_ActionUniqueAttackBase_C : public UPalActionWazaBase
+class UBP_ActionUniqueAttackBase_C final : public UPalActionWazaBase
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0170(0x0008)(ZeroConstructor, Transient, DuplicateTransient)

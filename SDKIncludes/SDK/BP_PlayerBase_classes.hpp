@@ -10,29 +10,29 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
 #include "Pal_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PlayerBase.BP_PlayerBase_C
-// 0x0070 (0x0F80 - 0x0F10)
+// 0x0070 (0x0F90 - 0x0F20)
 class ABP_PlayerBase_C : public APalPlayerCharacter
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UPalPassiveSkillInvokerComponent*       PalPassiveSkillInvoker;                            // 0x0F18(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                      DeadColllision;                                    // 0x0F20(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_PalTimerPointLightComponent_C*      PlayerLight;                                       // 0x0F28(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPalRiderComponent*                     Rider_Component;                                   // 0x0F30(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsInCapturedCage;                                 // 0x0F38(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F39[0x7];                                      // 0x0F39(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_LampBase_C*                         Lantern;                                           // 0x0F40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   WaitingLampClass;                                  // 0x0F48(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          bIsLoadingLamp;                                    // 0x0F78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F20(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UPalPassiveSkillInvokerComponent*       PalPassiveSkillInvoker;                            // 0x0F28(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      DeadColllision;                                    // 0x0F30(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PalTimerPointLightComponent_C*      PlayerLight;                                       // 0x0F38(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPalRiderComponent*                     Rider_Component;                                   // 0x0F40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsInCapturedCage;                                 // 0x0F48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F49[0x7];                                      // 0x0F49(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_LampBase_C*                         Lantern;                                           // 0x0F50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   WaitingLampClass;                                  // 0x0F58(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          bIsLoadingLamp;                                    // 0x0F88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__BP_PlayerBase_CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
@@ -68,16 +68,16 @@ public:
 	}
 };
 static_assert(alignof(ABP_PlayerBase_C) == 0x000010, "Wrong alignment on ABP_PlayerBase_C");
-static_assert(sizeof(ABP_PlayerBase_C) == 0x000F80, "Wrong size on ABP_PlayerBase_C");
-static_assert(offsetof(ABP_PlayerBase_C, UberGraphFrame) == 0x000F10, "Member 'ABP_PlayerBase_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerBase_C, PalPassiveSkillInvoker) == 0x000F18, "Member 'ABP_PlayerBase_C::PalPassiveSkillInvoker' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerBase_C, DeadColllision) == 0x000F20, "Member 'ABP_PlayerBase_C::DeadColllision' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerBase_C, PlayerLight) == 0x000F28, "Member 'ABP_PlayerBase_C::PlayerLight' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerBase_C, Rider_Component) == 0x000F30, "Member 'ABP_PlayerBase_C::Rider_Component' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerBase_C, bIsInCapturedCage) == 0x000F38, "Member 'ABP_PlayerBase_C::bIsInCapturedCage' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerBase_C, Lantern) == 0x000F40, "Member 'ABP_PlayerBase_C::Lantern' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerBase_C, WaitingLampClass) == 0x000F48, "Member 'ABP_PlayerBase_C::WaitingLampClass' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerBase_C, bIsLoadingLamp) == 0x000F78, "Member 'ABP_PlayerBase_C::bIsLoadingLamp' has a wrong offset!");
+static_assert(sizeof(ABP_PlayerBase_C) == 0x000F90, "Wrong size on ABP_PlayerBase_C");
+static_assert(offsetof(ABP_PlayerBase_C, UberGraphFrame) == 0x000F20, "Member 'ABP_PlayerBase_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerBase_C, PalPassiveSkillInvoker) == 0x000F28, "Member 'ABP_PlayerBase_C::PalPassiveSkillInvoker' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerBase_C, DeadColllision) == 0x000F30, "Member 'ABP_PlayerBase_C::DeadColllision' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerBase_C, PlayerLight) == 0x000F38, "Member 'ABP_PlayerBase_C::PlayerLight' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerBase_C, Rider_Component) == 0x000F40, "Member 'ABP_PlayerBase_C::Rider_Component' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerBase_C, bIsInCapturedCage) == 0x000F48, "Member 'ABP_PlayerBase_C::bIsInCapturedCage' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerBase_C, Lantern) == 0x000F50, "Member 'ABP_PlayerBase_C::Lantern' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerBase_C, WaitingLampClass) == 0x000F58, "Member 'ABP_PlayerBase_C::WaitingLampClass' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerBase_C, bIsLoadingLamp) == 0x000F88, "Member 'ABP_PlayerBase_C::bIsLoadingLamp' has a wrong offset!");
 
 }
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -237,10 +237,10 @@ public:
 	struct FGuid                                  K2Node_MakeStruct_Guid;                            // 0x01A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x01D0(0x0078)(NoDestructor)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x0248(0x0320)()
-	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0568(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_569[0x7];                                      // 0x0569(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0570(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x0248(0x0328)()
+	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0570(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_571[0x7];                                      // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0578(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PalRaidBossComponent_C_Spawn_One_Pal) == 0x000010, "Wrong alignment on BP_PalRaidBossComponent_C_Spawn_One_Pal");
 static_assert(sizeof(BP_PalRaidBossComponent_C_Spawn_One_Pal) == 0x000580, "Wrong size on BP_PalRaidBossComponent_C_Spawn_One_Pal");
@@ -269,8 +269,8 @@ static_assert(offsetof(BP_PalRaidBossComponent_C_Spawn_One_Pal, K2Node_MakeStruc
 static_assert(offsetof(BP_PalRaidBossComponent_C_Spawn_One_Pal, CallFunc_Add_VectorVector_ReturnValue) == 0x0001B8, "Member 'BP_PalRaidBossComponent_C_Spawn_One_Pal::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PalRaidBossComponent_C_Spawn_One_Pal, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x0001D0, "Member 'BP_PalRaidBossComponent_C_Spawn_One_Pal::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
 static_assert(offsetof(BP_PalRaidBossComponent_C_Spawn_One_Pal, CallFunc_GetInitializedCharacterSaveParemter_outParameter) == 0x000248, "Member 'BP_PalRaidBossComponent_C_Spawn_One_Pal::CallFunc_GetInitializedCharacterSaveParemter_outParameter' has a wrong offset!");
-static_assert(offsetof(BP_PalRaidBossComponent_C_Spawn_One_Pal, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000568, "Member 'BP_PalRaidBossComponent_C_Spawn_One_Pal::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalRaidBossComponent_C_Spawn_One_Pal, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000570, "Member 'BP_PalRaidBossComponent_C_Spawn_One_Pal::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalRaidBossComponent_C_Spawn_One_Pal, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000570, "Member 'BP_PalRaidBossComponent_C_Spawn_One_Pal::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalRaidBossComponent_C_Spawn_One_Pal, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000578, "Member 'BP_PalRaidBossComponent_C_Spawn_One_Pal::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
 
 // Function BP_PalRaidBossComponent.BP_PalRaidBossComponent_C.Spawn Volume
 // 0x0090 (0x0090 - 0x0000)
@@ -324,7 +324,7 @@ static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnRaidBoss_BP, CallFunc_Less
 static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnRaidBoss_BP, CallFunc_Add_IntInt_ReturnValue) == 0x0000F8, "Member 'BP_PalRaidBossComponent_C_SpawnRaidBoss_BP::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 // Function BP_PalRaidBossComponent.BP_PalRaidBossComponent_C.SpawnServantPal
-// 0x0420 (0x0420 - 0x0000)
+// 0x0428 (0x0428 - 0x0000)
 struct BP_PalRaidBossComponent_C_SpawnServantPal final
 {
 public:
@@ -338,14 +338,14 @@ public:
 	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  K2Node_MakeStruct_Guid;                            // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FNetworkActorSpawnParameters           K2Node_MakeStruct_NetworkActorSpawnParameters;     // 0x0070(0x0078)(NoDestructor)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00E8(0x0320)()
-	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_409[0x7];                                      // 0x0409(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0410(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0418(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetInitializedCharacterSaveParemter_outParameter; // 0x00E8(0x0328)()
+	bool                                          CallFunc_GetInitializedCharacterSaveParemter_ReturnValue; // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterHandle*          CallFunc_SpawnNewCharacter_ReturnValue;            // 0x0418(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PalRaidBossComponent_C_SpawnServantPal) == 0x000008, "Wrong alignment on BP_PalRaidBossComponent_C_SpawnServantPal");
-static_assert(sizeof(BP_PalRaidBossComponent_C_SpawnServantPal) == 0x000420, "Wrong size on BP_PalRaidBossComponent_C_SpawnServantPal");
+static_assert(sizeof(BP_PalRaidBossComponent_C_SpawnServantPal) == 0x000428, "Wrong size on BP_PalRaidBossComponent_C_SpawnServantPal");
 static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnServantPal, CharacterID) == 0x000000, "Member 'BP_PalRaidBossComponent_C_SpawnServantPal::CharacterID' has a wrong offset!");
 static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnServantPal, Level) == 0x000008, "Member 'BP_PalRaidBossComponent_C_SpawnServantPal::Level' has a wrong offset!");
 static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnServantPal, Location) == 0x000010, "Member 'BP_PalRaidBossComponent_C_SpawnServantPal::Location' has a wrong offset!");
@@ -356,9 +356,9 @@ static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnServantPal, CallFunc_GetLo
 static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnServantPal, K2Node_MakeStruct_Guid) == 0x000060, "Member 'BP_PalRaidBossComponent_C_SpawnServantPal::K2Node_MakeStruct_Guid' has a wrong offset!");
 static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnServantPal, K2Node_MakeStruct_NetworkActorSpawnParameters) == 0x000070, "Member 'BP_PalRaidBossComponent_C_SpawnServantPal::K2Node_MakeStruct_NetworkActorSpawnParameters' has a wrong offset!");
 static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnServantPal, CallFunc_GetInitializedCharacterSaveParemter_outParameter) == 0x0000E8, "Member 'BP_PalRaidBossComponent_C_SpawnServantPal::CallFunc_GetInitializedCharacterSaveParemter_outParameter' has a wrong offset!");
-static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnServantPal, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000408, "Member 'BP_PalRaidBossComponent_C_SpawnServantPal::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnServantPal, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000410, "Member 'BP_PalRaidBossComponent_C_SpawnServantPal::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnServantPal, CallFunc_Array_Add_ReturnValue) == 0x000418, "Member 'BP_PalRaidBossComponent_C_SpawnServantPal::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnServantPal, CallFunc_GetInitializedCharacterSaveParemter_ReturnValue) == 0x000410, "Member 'BP_PalRaidBossComponent_C_SpawnServantPal::CallFunc_GetInitializedCharacterSaveParemter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnServantPal, CallFunc_SpawnNewCharacter_ReturnValue) == 0x000418, "Member 'BP_PalRaidBossComponent_C_SpawnServantPal::CallFunc_SpawnNewCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalRaidBossComponent_C_SpawnServantPal, CallFunc_Array_Add_ReturnValue) == 0x000420, "Member 'BP_PalRaidBossComponent_C_SpawnServantPal::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 }
 

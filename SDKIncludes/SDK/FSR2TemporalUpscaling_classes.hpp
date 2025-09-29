@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "FSR2TemporalUpscaling_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK

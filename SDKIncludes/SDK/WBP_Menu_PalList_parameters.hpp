@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WBP_Menu_PalList.WBP_Menu_PalList_C.UpdateWazaLearnable
-// 0x0338 (0x0338 - 0x0000)
+// 0x0340 (0x0340 - 0x0000)
 struct WBP_Menu_PalList_C_UpdateWazaLearnable final
 {
 public:
@@ -30,22 +30,22 @@ public:
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x0010(0x0320)(ConstParm)
-	bool                                          CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue; // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0332(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x0010(0x0328)(ConstParm)
+	bool                                          CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue; // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0339(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x033A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Menu_PalList_C_UpdateWazaLearnable) == 0x000008, "Wrong alignment on WBP_Menu_PalList_C_UpdateWazaLearnable");
-static_assert(sizeof(WBP_Menu_PalList_C_UpdateWazaLearnable) == 0x000338, "Wrong size on WBP_Menu_PalList_C_UpdateWazaLearnable");
+static_assert(sizeof(WBP_Menu_PalList_C_UpdateWazaLearnable) == 0x000340, "Wrong size on WBP_Menu_PalList_C_UpdateWazaLearnable");
 static_assert(offsetof(WBP_Menu_PalList_C_UpdateWazaLearnable, Individual_Parameter) == 0x000000, "Member 'WBP_Menu_PalList_C_UpdateWazaLearnable::Individual_Parameter' has a wrong offset!");
 static_assert(offsetof(WBP_Menu_PalList_C_UpdateWazaLearnable, WazaID) == 0x000008, "Member 'WBP_Menu_PalList_C_UpdateWazaLearnable::WazaID' has a wrong offset!");
 static_assert(offsetof(WBP_Menu_PalList_C_UpdateWazaLearnable, CallFunc_HasMasteredWaza_ReturnValue) == 0x00000A, "Member 'WBP_Menu_PalList_C_UpdateWazaLearnable::CallFunc_HasMasteredWaza_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Menu_PalList_C_UpdateWazaLearnable, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00000B, "Member 'WBP_Menu_PalList_C_UpdateWazaLearnable::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Menu_PalList_C_UpdateWazaLearnable, CallFunc_Not_PreBool_ReturnValue) == 0x00000C, "Member 'WBP_Menu_PalList_C_UpdateWazaLearnable::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Menu_PalList_C_UpdateWazaLearnable, CallFunc_GetSaveParameter_ReturnValue) == 0x000010, "Member 'WBP_Menu_PalList_C_UpdateWazaLearnable::CallFunc_GetSaveParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Menu_PalList_C_UpdateWazaLearnable, CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue) == 0x000330, "Member 'WBP_Menu_PalList_C_UpdateWazaLearnable::CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Menu_PalList_C_UpdateWazaLearnable, CallFunc_Not_PreBool_ReturnValue_1) == 0x000331, "Member 'WBP_Menu_PalList_C_UpdateWazaLearnable::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Menu_PalList_C_UpdateWazaLearnable, CallFunc_BooleanAND_ReturnValue) == 0x000332, "Member 'WBP_Menu_PalList_C_UpdateWazaLearnable::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Menu_PalList_C_UpdateWazaLearnable, CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue) == 0x000338, "Member 'WBP_Menu_PalList_C_UpdateWazaLearnable::CallFunc_GetSaveParameterValue_IsPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Menu_PalList_C_UpdateWazaLearnable, CallFunc_Not_PreBool_ReturnValue_1) == 0x000339, "Member 'WBP_Menu_PalList_C_UpdateWazaLearnable::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Menu_PalList_C_UpdateWazaLearnable, CallFunc_BooleanAND_ReturnValue) == 0x00033A, "Member 'WBP_Menu_PalList_C_UpdateWazaLearnable::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WBP_Menu_PalList.WBP_Menu_PalList_C.UpdateNickname
 // 0x0028 (0x0028 - 0x0000)

@@ -10,36 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "TypedElementRuntime_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "TypedElementRuntime_structs.hpp"
 
 
 namespace SDK
 {
-
-// Class TypedElementRuntime.TypedElementSelectionSetLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UTypedElementSelectionSetLibrary final : public UObject
-{
-public:
-	static bool DeselectElementsFromList(class UTypedElementSelectionSet* SelectionSet, const struct FScriptTypedElementListProxy& ElementList, const struct FTypedElementSelectionOptions& SelectionOptions);
-	static struct FScriptTypedElementListProxy GetNormalizedElementList(class UTypedElementSelectionSet* SelectionSet, const struct FScriptTypedElementListProxy& ElementList, const struct FTypedElementSelectionNormalizationOptions& NormalizationOptions);
-	static struct FScriptTypedElementListProxy GetNormalizedSelection(class UTypedElementSelectionSet* SelectionSet, const struct FTypedElementSelectionNormalizationOptions& NormalizationOptions);
-	static bool SelectElementsFromList(class UTypedElementSelectionSet* SelectionSet, const struct FScriptTypedElementListProxy& ElementList, const struct FTypedElementSelectionOptions& SelectionOptions);
-	static bool SetSelectionFromList(class UTypedElementSelectionSet* SelectionSet, const struct FScriptTypedElementListProxy& ElementList, const struct FTypedElementSelectionOptions& SelectionOptions);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"TypedElementSelectionSetLibrary">();
-	}
-	static class UTypedElementSelectionSetLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTypedElementSelectionSetLibrary>();
-	}
-};
-static_assert(alignof(UTypedElementSelectionSetLibrary) == 0x000008, "Wrong alignment on UTypedElementSelectionSetLibrary");
-static_assert(sizeof(UTypedElementSelectionSetLibrary) == 0x000028, "Wrong size on UTypedElementSelectionSetLibrary");
 
 // Class TypedElementRuntime.TypedElementSelectionSet
 // 0x0870 (0x0898 - 0x0028)
@@ -90,6 +66,30 @@ static_assert(alignof(UTypedElementSelectionSet) == 0x000008, "Wrong alignment o
 static_assert(sizeof(UTypedElementSelectionSet) == 0x000898, "Wrong size on UTypedElementSelectionSet");
 static_assert(offsetof(UTypedElementSelectionSet, OnPreSelectionChange) == 0x000828, "Member 'UTypedElementSelectionSet::OnPreSelectionChange' has a wrong offset!");
 static_assert(offsetof(UTypedElementSelectionSet, OnSelectionChange) == 0x000838, "Member 'UTypedElementSelectionSet::OnSelectionChange' has a wrong offset!");
+
+// Class TypedElementRuntime.TypedElementSelectionSetLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UTypedElementSelectionSetLibrary final : public UObject
+{
+public:
+	static bool DeselectElementsFromList(class UTypedElementSelectionSet* SelectionSet, const struct FScriptTypedElementListProxy& ElementList, const struct FTypedElementSelectionOptions& SelectionOptions);
+	static struct FScriptTypedElementListProxy GetNormalizedElementList(class UTypedElementSelectionSet* SelectionSet, const struct FScriptTypedElementListProxy& ElementList, const struct FTypedElementSelectionNormalizationOptions& NormalizationOptions);
+	static struct FScriptTypedElementListProxy GetNormalizedSelection(class UTypedElementSelectionSet* SelectionSet, const struct FTypedElementSelectionNormalizationOptions& NormalizationOptions);
+	static bool SelectElementsFromList(class UTypedElementSelectionSet* SelectionSet, const struct FScriptTypedElementListProxy& ElementList, const struct FTypedElementSelectionOptions& SelectionOptions);
+	static bool SetSelectionFromList(class UTypedElementSelectionSet* SelectionSet, const struct FScriptTypedElementListProxy& ElementList, const struct FTypedElementSelectionOptions& SelectionOptions);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"TypedElementSelectionSetLibrary">();
+	}
+	static class UTypedElementSelectionSetLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTypedElementSelectionSetLibrary>();
+	}
+};
+static_assert(alignof(UTypedElementSelectionSetLibrary) == 0x000008, "Wrong alignment on UTypedElementSelectionSetLibrary");
+static_assert(sizeof(UTypedElementSelectionSetLibrary) == 0x000028, "Wrong size on UTypedElementSelectionSetLibrary");
 
 // Class TypedElementRuntime.TypedElementAssetDataInterface
 // 0x0000 (0x0000 - 0x0000)

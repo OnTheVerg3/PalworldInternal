@@ -11,6 +11,7 @@ void TabChangeLog()
         ImGui::Spacing();
 
         static const char* notes_v180[] = {
+            "Updated for game patch 0.6.6.",
             "New: Added Godmode.",
             "Fix: Telelport now works in PalGuard Servers.",
             nullptr

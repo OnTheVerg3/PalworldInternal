@@ -128,23 +128,6 @@ static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_C_ExecuteUbergraph_B
 static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_C_ExecuteUbergraph_BP_AIAction_Visitor_TravelToBaseCamp, CallFunc_K2_GetPawn_ReturnValue) == 0x000070, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_C_ExecuteUbergraph_BP_AIAction_Visitor_TravelToBaseCamp::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_C_ExecuteUbergraph_BP_AIAction_Visitor_TravelToBaseCamp, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000078, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_C_ExecuteUbergraph_BP_AIAction_Visitor_TravelToBaseCamp::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
 
-// Function BP_AIAction_Visitor_TravelToBaseCamp.BP_AIAction_Visitor_TravelToBaseCamp_C.Fun_Damage_AIResponse
-// 0x0068 (0x0068 - 0x0000)
-struct BP_AIAction_Visitor_TravelToBaseCamp_C_Fun_Damage_AIResponse final
-{
-public:
-	struct FPalDamageResult                       DamageResult;                                      // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalCharacterMovementComponent*         CallFunc_GetComponentByClass_ReturnValue;          // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AIAction_Visitor_TravelToBaseCamp_C_Fun_Damage_AIResponse) == 0x000008, "Wrong alignment on BP_AIAction_Visitor_TravelToBaseCamp_C_Fun_Damage_AIResponse");
-static_assert(sizeof(BP_AIAction_Visitor_TravelToBaseCamp_C_Fun_Damage_AIResponse) == 0x000068, "Wrong size on BP_AIAction_Visitor_TravelToBaseCamp_C_Fun_Damage_AIResponse");
-static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_C_Fun_Damage_AIResponse, DamageResult) == 0x000000, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_C_Fun_Damage_AIResponse::DamageResult' has a wrong offset!");
-static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_C_Fun_Damage_AIResponse, CallFunc_GetController_ReturnValue) == 0x000050, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_C_Fun_Damage_AIResponse::CallFunc_GetController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_C_Fun_Damage_AIResponse, CallFunc_K2_GetPawn_ReturnValue) == 0x000058, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_C_Fun_Damage_AIResponse::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AIAction_Visitor_TravelToBaseCamp_C_Fun_Damage_AIResponse, CallFunc_GetComponentByClass_ReturnValue) == 0x000060, "Member 'BP_AIAction_Visitor_TravelToBaseCamp_C_Fun_Damage_AIResponse::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-
 // Function BP_AIAction_Visitor_TravelToBaseCamp.BP_AIAction_Visitor_TravelToBaseCamp_C.SightCheckAndResponse
 // 0x0003 (0x0003 - 0x0000)
 struct BP_AIAction_Visitor_TravelToBaseCamp_C_SightCheckAndResponse final

@@ -10,13 +10,40 @@
 
 #include "Basic.hpp"
 
-#include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Pal_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function WBP_TitleLocalWorldSelect.WBP_TitleLocalWorldSelect_C.TryOpenWorldSettingThresholdsCautionDialog
+// 0x0038 (0x0038 - 0x0000)
+struct WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog final
+{
+public:
+	bool                                          bOpened;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UPalHUDDispatchParameterBase* Param)> K2Node_CreateDelegate_OutputDelegate; // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue;                // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_HUDDispatchPrameter_WorldSettingCaution_C* CallFunc_SpawnObject_ReturnValue;           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalOptionSubsystem*                    CallFunc_GetOptionSubsystem_ReturnValue;           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OpenWorldSettingThresholdsCautionDialog_bOpenedDialog; // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_VerifyWorldSettingThresholds_ReturnValue; // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog) == 0x000008, "Wrong alignment on WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog");
+static_assert(sizeof(WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog) == 0x000038, "Wrong size on WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog, bOpened) == 0x000000, "Member 'WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog::bOpened' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog, CallFunc_GetHUDService_ReturnValue) == 0x000018, "Member 'WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog::CallFunc_GetHUDService_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog, CallFunc_SpawnObject_ReturnValue) == 0x000020, "Member 'WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog, CallFunc_GetOptionSubsystem_ReturnValue) == 0x000028, "Member 'WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog::CallFunc_GetOptionSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog, CallFunc_OpenWorldSettingThresholdsCautionDialog_bOpenedDialog) == 0x000030, "Member 'WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog::CallFunc_OpenWorldSettingThresholdsCautionDialog_bOpenedDialog' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog, CallFunc_IsValid_ReturnValue) == 0x000031, "Member 'WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog, CallFunc_VerifyWorldSettingThresholds_ReturnValue) == 0x000032, "Member 'WBP_TitleLocalWorldSelect_C_TryOpenWorldSettingThresholdsCautionDialog::CallFunc_VerifyWorldSettingThresholds_ReturnValue' has a wrong offset!");
 
 // Function WBP_TitleLocalWorldSelect.WBP_TitleLocalWorldSelect_C.SetupWorldList
 // 0x0068 (0x0068 - 0x0000)
@@ -62,6 +89,21 @@ static_assert(alignof(WBP_TitleLocalWorldSelect_C_OnCompleted_9E90A95E4884F409B5
 static_assert(sizeof(WBP_TitleLocalWorldSelect_C_OnCompleted_9E90A95E4884F409B5BB1E8F7B4194E1) == 0x000002, "Wrong size on WBP_TitleLocalWorldSelect_C_OnCompleted_9E90A95E4884F409B5BB1E8F7B4194E1");
 static_assert(offsetof(WBP_TitleLocalWorldSelect_C_OnCompleted_9E90A95E4884F409B5BB1E8F7B4194E1, bIsReset) == 0x000000, "Member 'WBP_TitleLocalWorldSelect_C_OnCompleted_9E90A95E4884F409B5BB1E8F7B4194E1::bIsReset' has a wrong offset!");
 static_assert(offsetof(WBP_TitleLocalWorldSelect_C_OnCompleted_9E90A95E4884F409B5BB1E8F7B4194E1, bCanPlay) == 0x000001, "Member 'WBP_TitleLocalWorldSelect_C_OnCompleted_9E90A95E4884F409B5BB1E8F7B4194E1::bCanPlay' has a wrong offset!");
+
+// Function WBP_TitleLocalWorldSelect.WBP_TitleLocalWorldSelect_C.OnClosedWorldSettingThresholdsCautionDialog
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_TitleLocalWorldSelect_C_OnClosedWorldSettingThresholdsCautionDialog final
+{
+public:
+	class UPalHUDDispatchParameterBase*           Param_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_HUDDispatchPrameter_WorldSettingCaution_C* K2Node_DynamicCast_AsBP_HUDDispatch_Prameter_World_Setting_Caution; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_TitleLocalWorldSelect_C_OnClosedWorldSettingThresholdsCautionDialog) == 0x000008, "Wrong alignment on WBP_TitleLocalWorldSelect_C_OnClosedWorldSettingThresholdsCautionDialog");
+static_assert(sizeof(WBP_TitleLocalWorldSelect_C_OnClosedWorldSettingThresholdsCautionDialog) == 0x000018, "Wrong size on WBP_TitleLocalWorldSelect_C_OnClosedWorldSettingThresholdsCautionDialog");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_OnClosedWorldSettingThresholdsCautionDialog, Param_0) == 0x000000, "Member 'WBP_TitleLocalWorldSelect_C_OnClosedWorldSettingThresholdsCautionDialog::Param_0' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_OnClosedWorldSettingThresholdsCautionDialog, K2Node_DynamicCast_AsBP_HUDDispatch_Prameter_World_Setting_Caution) == 0x000008, "Member 'WBP_TitleLocalWorldSelect_C_OnClosedWorldSettingThresholdsCautionDialog::K2Node_DynamicCast_AsBP_HUDDispatch_Prameter_World_Setting_Caution' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_OnClosedWorldSettingThresholdsCautionDialog, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'WBP_TitleLocalWorldSelect_C_OnClosedWorldSettingThresholdsCautionDialog::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function WBP_TitleLocalWorldSelect.WBP_TitleLocalWorldSelect_C.OnClosedSuccessedRestoreDialog
 // 0x0010 (0x0010 - 0x0000)
@@ -236,7 +278,8 @@ struct WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect fi
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_Title_WorldSelect_ListContent_C*   K2Node_ComponentBoundEvent_ButtonWidget_1;         // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_Title_WorldSelect_CreateWorld_ListContent_C* K2Node_ComponentBoundEvent_ButtonWidget; // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetBindedSaveDirectoryName_DirectoryName; // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -247,54 +290,58 @@ public:
 	class UPalHUDDispatchParameter_WorldSetting*  CallFunc_SpawnObject_ReturnValue;                  // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  CallFunc_Push_ReturnValue;                         // 0x0060(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UPalHUDDispatchParameterBase* Param)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0070(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue_1;              // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue_1;              // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalHUDDispatchParameter_WorldSetting*  CallFunc_SpawnObject_ReturnValue_1;                // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UPalHUDDispatchParameterBase* Param)> K2Node_CreateDelegate_OutputDelegate_3; // 0x0090(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalHUDDispatchParameter_WorldSetting*  CallFunc_SpawnObject_ReturnValue_1;                // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalCheckMultiplayRestrictionLatent*    CallFunc_PalCheckMultiplayRestrictionLatent_ReturnValue; // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue_1;                       // 0x00B0(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x00C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalOptionWorldSaveData                CallFunc_SelectWorld_OptionWorldData;              // 0x00C8(0x01A0)()
-	bool                                          CallFunc_SelectWorld_ReturnValue;                  // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_269[0x7];                                      // 0x0269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_PalGameInstance_C*                  K2Node_DynamicCast_AsBP_Pal_Game_Instance;         // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_281[0x3];                                      // 0x0281(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0284(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Push_ReturnValue_1;                       // 0x00A0(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPalCheckMultiplayRestrictionLatent*    CallFunc_PalCheckMultiplayRestrictionLatent_ReturnValue; // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x00BB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPalOptionWorldSaveData                CallFunc_SelectWorld_OptionWorldData;              // 0x00C0(0x01A0)()
+	bool                                          CallFunc_SelectWorld_ReturnValue;                  // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_PalGameInstance_C*                  K2Node_DynamicCast_AsBP_Pal_Game_Instance;         // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_279[0x7];                                      // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_Title_WorldSelect_ListContent_C*   K2Node_ComponentBoundEvent_SelectedWorldButton_1;  // 0x0280(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_289[0x7];                                      // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_Title_WorldSelect_ListContent_C*   K2Node_ComponentBoundEvent_SelectedWorldButton_1;  // 0x0290(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetBindedSaveDirectoryName_DirectoryName_1; // 0x02A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FPalUILocalWorldDisplayData            CallFunc_Map_Find_Value;                           // 0x02B0(0x01F8)()
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x04A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWindows_ReturnValue;                    // 0x04A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AA[0x6];                                      // 0x04AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_Title_WorldSelect_ListContent_C*   K2Node_ComponentBoundEvent_SelectedWorldButton;    // 0x04B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x04B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetBindedSaveDirectoryName_DirectoryName_2; // 0x04C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue_2;              // 0x04D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_HUDDIspatchParameter_DeleteWorld_C* CallFunc_CreateDispatchParameterForK2Node_ReturnValue; // 0x04E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalHUDDispatchParameter_SaveDataBackupSelect* CallFunc_SpawnObject_ReturnValue_2;         // 0x04E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue_2;                       // 0x04F0(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue_3;                       // 0x0500(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bIsReset;                       // 0x0510(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bCanPlay;                       // 0x0511(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_512[0x2];                                      // 0x0512(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool bIsReset, bool bCanPlay)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x0514(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetBindedSaveDirectoryName_DirectoryName_1; // 0x0290(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UWBP_Title_WorldSelect_ListContent_C*   K2Node_ComponentBoundEvent_SelectedWorldButton;    // 0x02A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPalUILocalWorldDisplayData            CallFunc_Map_Find_Value;                           // 0x02A8(0x01F8)()
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x04A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A1[0x7];                                      // 0x04A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetBindedSaveDirectoryName_DirectoryName_2; // 0x04A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue_2;              // 0x04B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x04C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UPalHUDDispatchParameter_SaveDataBackupSelect* CallFunc_SpawnObject_ReturnValue_2;         // 0x04D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Push_ReturnValue_2;                       // 0x04D8(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_HUDDIspatchParameter_DeleteWorld_C* CallFunc_CreateDispatchParameterForK2Node_ReturnValue; // 0x04E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bIsReset;                       // 0x04F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bCanPlay;                       // 0x04F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F2[0x2];                                      // 0x04F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  CallFunc_Push_ReturnValue_3;                       // 0x04F4(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool bIsReset, bool bCanPlay)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x0504(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWindows_ReturnValue;                    // 0x0514(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGDK_ReturnValue;                        // 0x0515(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsMac_ReturnValue;                        // 0x0516(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0517(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0518(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TryOpenWorldSettingThresholdsCautionDialog_bOpened; // 0x0519(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51A[0x2];                                      // 0x051A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x051C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0520(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect) == 0x000008, "Wrong alignment on WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect");
 static_assert(sizeof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect) == 0x000528, "Wrong size on WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect");
 static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, EntryPoint) == 0x000000, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, Temp_bool_Has_Been_Initd_Variable) == 0x000004, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, Temp_bool_IsClosed_Variable) == 0x000005, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::Temp_bool_IsClosed_Variable' has a wrong offset!");
 static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_ComponentBoundEvent_ButtonWidget_1) == 0x000008, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_ComponentBoundEvent_ButtonWidget_1' has a wrong offset!");
 static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_ComponentBoundEvent_ButtonWidget) == 0x000010, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_ComponentBoundEvent_ButtonWidget' has a wrong offset!");
 static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_GetBindedSaveDirectoryName_DirectoryName) == 0x000018, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_GetBindedSaveDirectoryName_DirectoryName' has a wrong offset!");
@@ -305,41 +352,45 @@ static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLoc
 static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_SpawnObject_ReturnValue) == 0x000058, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Push_ReturnValue) == 0x000060, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Push_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_CreateDelegate_OutputDelegate_2) == 0x000070, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, Temp_bool_IsClosed_Variable) == 0x000080, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_GetHUDService_ReturnValue_1) == 0x000088, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_GetHUDService_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_GetHUDService_ReturnValue_1) == 0x000080, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_GetHUDService_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_SpawnObject_ReturnValue_1) == 0x000088, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_SpawnObject_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_CreateDelegate_OutputDelegate_3) == 0x000090, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_SpawnObject_ReturnValue_1) == 0x0000A0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_SpawnObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_PalCheckMultiplayRestrictionLatent_ReturnValue) == 0x0000A8, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_PalCheckMultiplayRestrictionLatent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Push_ReturnValue_1) == 0x0000B0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Push_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_IsValid_ReturnValue) == 0x0000C0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, Temp_bool_Variable) == 0x0000C1, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Not_PreBool_ReturnValue) == 0x0000C2, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, Temp_bool_Variable_1) == 0x0000C3, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_BooleanAND_ReturnValue) == 0x0000C4, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_SelectWorld_OptionWorldData) == 0x0000C8, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_SelectWorld_OptionWorldData' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_SelectWorld_ReturnValue) == 0x000268, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_SelectWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_GetGameInstance_ReturnValue) == 0x000270, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_DynamicCast_AsBP_Pal_Game_Instance) == 0x000278, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_DynamicCast_AsBP_Pal_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_DynamicCast_bSuccess) == 0x000280, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Array_Length_ReturnValue) == 0x000284, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Greater_IntInt_ReturnValue) == 0x000288, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_ComponentBoundEvent_SelectedWorldButton_1) == 0x000290, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_ComponentBoundEvent_SelectedWorldButton_1' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_IsValid_ReturnValue_1) == 0x000298, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_GetBindedSaveDirectoryName_DirectoryName_1) == 0x0002A0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_GetBindedSaveDirectoryName_DirectoryName_1' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Map_Find_Value) == 0x0002B0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Map_Find_ReturnValue) == 0x0004A8, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_IsWindows_ReturnValue) == 0x0004A9, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_IsWindows_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_ComponentBoundEvent_SelectedWorldButton) == 0x0004B0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_ComponentBoundEvent_SelectedWorldButton' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Concat_StrStr_ReturnValue) == 0x0004B8, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_GetBindedSaveDirectoryName_DirectoryName_2) == 0x0004C8, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_GetBindedSaveDirectoryName_DirectoryName_2' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_GetHUDService_ReturnValue_2) == 0x0004D8, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_GetHUDService_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_CreateDispatchParameterForK2Node_ReturnValue) == 0x0004E0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_CreateDispatchParameterForK2Node_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_SpawnObject_ReturnValue_2) == 0x0004E8, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_SpawnObject_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Push_ReturnValue_2) == 0x0004F0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Push_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Push_ReturnValue_3) == 0x000500, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Push_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_CustomEvent_bIsReset) == 0x000510, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_CustomEvent_bIsReset' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_CustomEvent_bCanPlay) == 0x000511, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_CustomEvent_bCanPlay' has a wrong offset!");
-static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_CreateDelegate_OutputDelegate_4) == 0x000514, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Push_ReturnValue_1) == 0x0000A0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Push_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_PalCheckMultiplayRestrictionLatent_ReturnValue) == 0x0000B0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_PalCheckMultiplayRestrictionLatent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, Temp_bool_Variable) == 0x0000B8, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Not_PreBool_ReturnValue) == 0x0000B9, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_IsValid_ReturnValue) == 0x0000BA, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, Temp_bool_Variable_1) == 0x0000BB, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_BooleanAND_ReturnValue) == 0x0000BC, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_SelectWorld_OptionWorldData) == 0x0000C0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_SelectWorld_OptionWorldData' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_SelectWorld_ReturnValue) == 0x000260, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_SelectWorld_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_GetGameInstance_ReturnValue) == 0x000268, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_DynamicCast_AsBP_Pal_Game_Instance) == 0x000270, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_DynamicCast_AsBP_Pal_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_DynamicCast_bSuccess) == 0x000278, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_ComponentBoundEvent_SelectedWorldButton_1) == 0x000280, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_ComponentBoundEvent_SelectedWorldButton_1' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_IsValid_ReturnValue_1) == 0x000288, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_GetBindedSaveDirectoryName_DirectoryName_1) == 0x000290, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_GetBindedSaveDirectoryName_DirectoryName_1' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_ComponentBoundEvent_SelectedWorldButton) == 0x0002A0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_ComponentBoundEvent_SelectedWorldButton' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Map_Find_Value) == 0x0002A8, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Map_Find_ReturnValue) == 0x0004A0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_GetBindedSaveDirectoryName_DirectoryName_2) == 0x0004A8, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_GetBindedSaveDirectoryName_DirectoryName_2' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_GetHUDService_ReturnValue_2) == 0x0004B8, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_GetHUDService_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Concat_StrStr_ReturnValue) == 0x0004C0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_SpawnObject_ReturnValue_2) == 0x0004D0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_SpawnObject_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Push_ReturnValue_2) == 0x0004D8, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Push_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_CreateDispatchParameterForK2Node_ReturnValue) == 0x0004E8, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_CreateDispatchParameterForK2Node_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_CustomEvent_bIsReset) == 0x0004F0, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_CustomEvent_bIsReset' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_CustomEvent_bCanPlay) == 0x0004F1, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_CustomEvent_bCanPlay' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Push_ReturnValue_3) == 0x0004F4, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Push_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, K2Node_CreateDelegate_OutputDelegate_4) == 0x000504, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_IsWindows_ReturnValue) == 0x000514, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_IsWindows_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_IsGDK_ReturnValue) == 0x000515, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_IsGDK_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_IsMac_ReturnValue) == 0x000516, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_IsMac_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_BooleanOR_ReturnValue) == 0x000517, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_BooleanOR_ReturnValue_1) == 0x000518, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_TryOpenWorldSettingThresholdsCautionDialog_bOpened) == 0x000519, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_TryOpenWorldSettingThresholdsCautionDialog_bOpened' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Array_Length_ReturnValue) == 0x00051C, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect, CallFunc_Greater_IntInt_ReturnValue) == 0x000520, "Member 'WBP_TitleLocalWorldSelect_C_ExecuteUbergraph_WBP_TitleLocalWorldSelect::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WBP_TitleLocalWorldSelect.WBP_TitleLocalWorldSelect_C.BndEvt__WBP_TitleLocalWorldSelect_WBP_Title_WorldSelect_K2Node_ComponentBoundEvent_6_OnClickedSelectBackupButton__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)

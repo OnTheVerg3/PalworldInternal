@@ -346,6 +346,20 @@ static_assert(sizeof(FMakeLiteralFloatDataflowNode) == 0x0000D8, "Wrong size on 
 static_assert(offsetof(FMakeLiteralFloatDataflowNode, Value) == 0x0000D0, "Member 'FMakeLiteralFloatDataflowNode::Value' has a wrong offset!");
 static_assert(offsetof(FMakeLiteralFloatDataflowNode, float_0) == 0x0000D4, "Member 'FMakeLiteralFloatDataflowNode::float_0' has a wrong offset!");
 
+// ScriptStruct GeometryCollectionNodes.HashVectorDataflowNode
+// 0x0020 (0x00F0 - 0x00D0)
+struct FHashVectorDataflowNode final : public FDataflowNode
+{
+public:
+	struct FVector                                Vector;                                            // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Hash;                                              // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FHashVectorDataflowNode) == 0x000008, "Wrong alignment on FHashVectorDataflowNode");
+static_assert(sizeof(FHashVectorDataflowNode) == 0x0000F0, "Wrong size on FHashVectorDataflowNode");
+static_assert(offsetof(FHashVectorDataflowNode, Vector) == 0x0000D0, "Member 'FHashVectorDataflowNode::Vector' has a wrong offset!");
+static_assert(offsetof(FHashVectorDataflowNode, Hash) == 0x0000E8, "Member 'FHashVectorDataflowNode::Hash' has a wrong offset!");
+
 // ScriptStruct GeometryCollectionNodes.MakeLiteralIntDataflowNode
 // 0x0008 (0x00D8 - 0x00D0)
 struct FMakeLiteralIntDataflowNode final : public FDataflowNode
@@ -684,20 +698,6 @@ static_assert(alignof(FHashStringDataflowNode) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(FHashStringDataflowNode) == 0x0000E8, "Wrong size on FHashStringDataflowNode");
 static_assert(offsetof(FHashStringDataflowNode, String) == 0x0000D0, "Member 'FHashStringDataflowNode::String' has a wrong offset!");
 static_assert(offsetof(FHashStringDataflowNode, Hash) == 0x0000E0, "Member 'FHashStringDataflowNode::Hash' has a wrong offset!");
-
-// ScriptStruct GeometryCollectionNodes.HashVectorDataflowNode
-// 0x0020 (0x00F0 - 0x00D0)
-struct FHashVectorDataflowNode final : public FDataflowNode
-{
-public:
-	struct FVector                                Vector;                                            // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Hash;                                              // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FHashVectorDataflowNode) == 0x000008, "Wrong alignment on FHashVectorDataflowNode");
-static_assert(sizeof(FHashVectorDataflowNode) == 0x0000F0, "Wrong size on FHashVectorDataflowNode");
-static_assert(offsetof(FHashVectorDataflowNode, Vector) == 0x0000D0, "Member 'FHashVectorDataflowNode::Vector' has a wrong offset!");
-static_assert(offsetof(FHashVectorDataflowNode, Hash) == 0x0000E8, "Member 'FHashVectorDataflowNode::Hash' has a wrong offset!");
 
 // ScriptStruct GeometryCollectionNodes.FloatToIntDataflowNode
 // 0x0010 (0x00E0 - 0x00D0)

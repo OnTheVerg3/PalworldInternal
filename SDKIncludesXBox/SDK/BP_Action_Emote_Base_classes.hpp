@@ -19,8 +19,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_Action_Emote_Base.BP_Action_Emote_Base_C
 // 0x0020 (0x0180 - 0x0160)
-#pragma pack(push, 0x1)
-class alignas(0x10) UBP_Action_Emote_Base_C : public UPalActionBase
+class UBP_Action_Emote_Base_C final : public UPalActionBase
 {
 public:
 	uint8                                         Pad_158[0x8];                                      // 0x0158(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -53,7 +52,6 @@ public:
 		return GetDefaultObjImpl<UBP_Action_Emote_Base_C>();
 	}
 };
-#pragma pack(pop)
 static_assert(alignof(UBP_Action_Emote_Base_C) == 0x000010, "Wrong alignment on UBP_Action_Emote_Base_C");
 static_assert(sizeof(UBP_Action_Emote_Base_C) == 0x000180, "Wrong size on UBP_Action_Emote_Base_C");
 static_assert(offsetof(UBP_Action_Emote_Base_C, UberGraphFrame) == 0x000160, "Member 'UBP_Action_Emote_Base_C::UberGraphFrame' has a wrong offset!");

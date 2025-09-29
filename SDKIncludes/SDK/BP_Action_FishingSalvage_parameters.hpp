@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Pal_structs.hpp"
 
 
 namespace SDK::Params
@@ -177,78 +177,87 @@ static_assert(offsetof(BP_Action_FishingSalvage_C_FinishSalvageGame, CallFunc_Ge
 static_assert(offsetof(BP_Action_FishingSalvage_C_FinishSalvageGame, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000018, "Member 'BP_Action_FishingSalvage_C_FinishSalvageGame::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
 
 // Function BP_Action_FishingSalvage.BP_Action_FishingSalvage_C.GetThrowLocation
-// 0x02B0 (0x02B0 - 0x0000)
+// 0x0318 (0x0318 - 0x0000)
 struct BP_Action_FishingSalvage_C_GetThrowLocation final
 {
 public:
 	struct FVector                                WaterLocation;                                     // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                ForwardLocation;                                   // 0x0018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0030(0x0010)(ConstParm, ReferenceParm)
-	struct FVector                                CallFunc_Conv_FloatToVector_ReturnValue;           // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_1;      // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_LineTraceSingle_OutHit;                   // 0x0088(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0172(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_173[0x1];                                      // 0x0173(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0180(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0198(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x01B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x01C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x01F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x020C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_214[0x4];                                      // 0x0214(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0218(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0230(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue;           // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetActorForwardVector_ReturnValue;        // 0x0250(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0268(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0280(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0298(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingle_OutHit;                   // 0x00A0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x01A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1AA[0x2];                                      // 0x01AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x01D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x01E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0228(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x0244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0250(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0268(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_1;      // 0x0280(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue;           // 0x0298(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetActorForwardVector_ReturnValue;        // 0x02A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x02B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x02D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x02E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0300(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_Action_FishingSalvage_C_GetThrowLocation) == 0x000008, "Wrong alignment on BP_Action_FishingSalvage_C_GetThrowLocation");
-static_assert(sizeof(BP_Action_FishingSalvage_C_GetThrowLocation) == 0x0002B0, "Wrong size on BP_Action_FishingSalvage_C_GetThrowLocation");
+static_assert(sizeof(BP_Action_FishingSalvage_C_GetThrowLocation) == 0x000318, "Wrong size on BP_Action_FishingSalvage_C_GetThrowLocation");
 static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, WaterLocation) == 0x000000, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::WaterLocation' has a wrong offset!");
 static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, ForwardLocation) == 0x000018, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::ForwardLocation' has a wrong offset!");
 static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, Temp_object_Variable) == 0x000030, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_Conv_FloatToVector_ReturnValue) == 0x000040, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_Conv_FloatToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000058, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_Subtract_VectorVector_ReturnValue_1) == 0x000070, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_Subtract_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_LineTraceSingle_OutHit) == 0x000088, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_LineTraceSingle_OutHit' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_LineTraceSingle_ReturnValue) == 0x000170, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_LineTraceSingle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_bBlockingHit) == 0x000171, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_bInitialOverlap) == 0x000172, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_Time) == 0x000174, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_Distance) == 0x000178, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_Location) == 0x000180, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_ImpactPoint) == 0x000198, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_Normal) == 0x0001B0, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_ImpactNormal) == 0x0001C8, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_PhysMat) == 0x0001E0, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_HitActor) == 0x0001E8, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_HitComponent) == 0x0001F0, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_HitBoneName) == 0x0001F8, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_BoneName) == 0x000200, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_HitItem) == 0x000208, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_ElementIndex) == 0x00020C, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_FaceIndex) == 0x000210, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_TraceStart) == 0x000218, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_TraceEnd) == 0x000230, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_GetActionCharacter_ReturnValue) == 0x000248, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_GetActionCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_GetActorForwardVector_ReturnValue) == 0x000250, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_GetActorForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000268, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000280, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_Add_VectorVector_ReturnValue) == 0x000298, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_MakeVector_ReturnValue) == 0x000040, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_MakeVector_ReturnValue_1) == 0x000058, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000070, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_MakeVector_ReturnValue_2) == 0x000088, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_MakeVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_LineTraceSingle_OutHit) == 0x0000A0, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_LineTraceSingle_OutHit' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_LineTraceSingle_ReturnValue) == 0x000188, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_LineTraceSingle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000190, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_bBlockingHit) == 0x0001A8, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_bInitialOverlap) == 0x0001A9, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_Time) == 0x0001AC, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_Time' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_Distance) == 0x0001B0, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_Distance' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_Location) == 0x0001B8, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_Location' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_ImpactPoint) == 0x0001D0, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_Normal) == 0x0001E8, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_Normal' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_ImpactNormal) == 0x000200, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_PhysMat) == 0x000218, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_HitActor) == 0x000220, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_HitComponent) == 0x000228, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_HitBoneName) == 0x000230, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_BoneName) == 0x000238, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_HitItem) == 0x000240, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_ElementIndex) == 0x000244, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_FaceIndex) == 0x000248, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_TraceStart) == 0x000250, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_BreakHitResult_TraceEnd) == 0x000268, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_Subtract_VectorVector_ReturnValue_1) == 0x000280, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_Subtract_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_GetActionCharacter_ReturnValue) == 0x000298, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_GetActionCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_GetActorForwardVector_ReturnValue) == 0x0002A0, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_GetActorForwardVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_K2_GetActorLocation_ReturnValue) == 0x0002B8, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_Multiply_VectorVector_ReturnValue) == 0x0002D0, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_Add_VectorVector_ReturnValue) == 0x0002E8, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Action_FishingSalvage_C_GetThrowLocation, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000300, "Member 'BP_Action_FishingSalvage_C_GetThrowLocation::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
 
 // Function BP_Action_FishingSalvage.BP_Action_FishingSalvage_C.NotifySalvageEndToWeapon
 // 0x0038 (0x0038 - 0x0000)

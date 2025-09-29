@@ -22,7 +22,7 @@ class UWBP_CharaCre_ScrollBoxContentBase_C : public UPalUserWidget
 {
 public:
 	TMulticastInlineDelegate<void()>              OnNotifyOpenSelectColorWindow;                     // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              OnNotifyCloseSelectColorWIndow;                    // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnNotifyCloseSelectColorWindow;                    // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ApplyMakeInfo(const struct FPalPlayerDataCharacterMakeInfo& MakeInfo);
@@ -44,7 +44,7 @@ public:
 static_assert(alignof(UWBP_CharaCre_ScrollBoxContentBase_C) == 0x000008, "Wrong alignment on UWBP_CharaCre_ScrollBoxContentBase_C");
 static_assert(sizeof(UWBP_CharaCre_ScrollBoxContentBase_C) == 0x000428, "Wrong size on UWBP_CharaCre_ScrollBoxContentBase_C");
 static_assert(offsetof(UWBP_CharaCre_ScrollBoxContentBase_C, OnNotifyOpenSelectColorWindow) == 0x000408, "Member 'UWBP_CharaCre_ScrollBoxContentBase_C::OnNotifyOpenSelectColorWindow' has a wrong offset!");
-static_assert(offsetof(UWBP_CharaCre_ScrollBoxContentBase_C, OnNotifyCloseSelectColorWIndow) == 0x000418, "Member 'UWBP_CharaCre_ScrollBoxContentBase_C::OnNotifyCloseSelectColorWIndow' has a wrong offset!");
+static_assert(offsetof(UWBP_CharaCre_ScrollBoxContentBase_C, OnNotifyCloseSelectColorWindow) == 0x000418, "Member 'UWBP_CharaCre_ScrollBoxContentBase_C::OnNotifyCloseSelectColorWindow' has a wrong offset!");
 
 }
 

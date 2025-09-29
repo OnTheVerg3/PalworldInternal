@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "MediaAssets_structs.hpp"
+#include "MediaUtils_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "MediaUtils_structs.hpp"
 
 
 namespace SDK::Params
@@ -94,71 +94,16 @@ static_assert(alignof(MediaSource_Validate) == 0x000001, "Wrong alignment on Med
 static_assert(sizeof(MediaSource_Validate) == 0x000001, "Wrong size on MediaSource_Validate");
 static_assert(offsetof(MediaSource_Validate, ReturnValue) == 0x000000, "Member 'MediaSource_Validate::ReturnValue' has a wrong offset!");
 
-// Function MediaAssets.MediaTexture.SetMediaPlayer
-// 0x0008 (0x0008 - 0x0000)
-struct MediaTexture_SetMediaPlayer final
+// Function MediaAssets.FileMediaSource.SetFilePath
+// 0x0010 (0x0010 - 0x0000)
+struct FileMediaSource_SetFilePath final
 {
 public:
-	class UMediaPlayer*                           NewMediaPlayer;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MediaTexture_SetMediaPlayer) == 0x000008, "Wrong alignment on MediaTexture_SetMediaPlayer");
-static_assert(sizeof(MediaTexture_SetMediaPlayer) == 0x000008, "Wrong size on MediaTexture_SetMediaPlayer");
-static_assert(offsetof(MediaTexture_SetMediaPlayer, NewMediaPlayer) == 0x000000, "Member 'MediaTexture_SetMediaPlayer::NewMediaPlayer' has a wrong offset!");
-
-// Function MediaAssets.MediaTexture.GetAspectRatio
-// 0x0004 (0x0004 - 0x0000)
-struct MediaTexture_GetAspectRatio final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MediaTexture_GetAspectRatio) == 0x000004, "Wrong alignment on MediaTexture_GetAspectRatio");
-static_assert(sizeof(MediaTexture_GetAspectRatio) == 0x000004, "Wrong size on MediaTexture_GetAspectRatio");
-static_assert(offsetof(MediaTexture_GetAspectRatio, ReturnValue) == 0x000000, "Member 'MediaTexture_GetAspectRatio::ReturnValue' has a wrong offset!");
-
-// Function MediaAssets.MediaTexture.GetHeight
-// 0x0004 (0x0004 - 0x0000)
-struct MediaTexture_GetHeight final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MediaTexture_GetHeight) == 0x000004, "Wrong alignment on MediaTexture_GetHeight");
-static_assert(sizeof(MediaTexture_GetHeight) == 0x000004, "Wrong size on MediaTexture_GetHeight");
-static_assert(offsetof(MediaTexture_GetHeight, ReturnValue) == 0x000000, "Member 'MediaTexture_GetHeight::ReturnValue' has a wrong offset!");
-
-// Function MediaAssets.MediaTexture.GetMediaPlayer
-// 0x0008 (0x0008 - 0x0000)
-struct MediaTexture_GetMediaPlayer final
-{
-public:
-	class UMediaPlayer*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MediaTexture_GetMediaPlayer) == 0x000008, "Wrong alignment on MediaTexture_GetMediaPlayer");
-static_assert(sizeof(MediaTexture_GetMediaPlayer) == 0x000008, "Wrong size on MediaTexture_GetMediaPlayer");
-static_assert(offsetof(MediaTexture_GetMediaPlayer, ReturnValue) == 0x000000, "Member 'MediaTexture_GetMediaPlayer::ReturnValue' has a wrong offset!");
-
-// Function MediaAssets.MediaTexture.GetTextureNumMips
-// 0x0004 (0x0004 - 0x0000)
-struct MediaTexture_GetTextureNumMips final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MediaTexture_GetTextureNumMips) == 0x000004, "Wrong alignment on MediaTexture_GetTextureNumMips");
-static_assert(sizeof(MediaTexture_GetTextureNumMips) == 0x000004, "Wrong size on MediaTexture_GetTextureNumMips");
-static_assert(offsetof(MediaTexture_GetTextureNumMips, ReturnValue) == 0x000000, "Member 'MediaTexture_GetTextureNumMips::ReturnValue' has a wrong offset!");
-
-// Function MediaAssets.MediaTexture.GetWidth
-// 0x0004 (0x0004 - 0x0000)
-struct MediaTexture_GetWidth final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MediaTexture_GetWidth) == 0x000004, "Wrong alignment on MediaTexture_GetWidth");
-static_assert(sizeof(MediaTexture_GetWidth) == 0x000004, "Wrong size on MediaTexture_GetWidth");
-static_assert(offsetof(MediaTexture_GetWidth, ReturnValue) == 0x000000, "Member 'MediaTexture_GetWidth::ReturnValue' has a wrong offset!");
+static_assert(alignof(FileMediaSource_SetFilePath) == 0x000008, "Wrong alignment on FileMediaSource_SetFilePath");
+static_assert(sizeof(FileMediaSource_SetFilePath) == 0x000010, "Wrong size on FileMediaSource_SetFilePath");
+static_assert(offsetof(FileMediaSource_SetFilePath, Path) == 0x000000, "Member 'FileMediaSource_SetFilePath::Path' has a wrong offset!");
 
 // Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
 // 0x03D0 (0x03D0 - 0x0000)
@@ -278,16 +223,71 @@ static_assert(alignof(MediaSoundComponent_GetMediaPlayer) == 0x000008, "Wrong al
 static_assert(sizeof(MediaSoundComponent_GetMediaPlayer) == 0x000008, "Wrong size on MediaSoundComponent_GetMediaPlayer");
 static_assert(offsetof(MediaSoundComponent_GetMediaPlayer, ReturnValue) == 0x000000, "Member 'MediaSoundComponent_GetMediaPlayer::ReturnValue' has a wrong offset!");
 
-// Function MediaAssets.FileMediaSource.SetFilePath
-// 0x0010 (0x0010 - 0x0000)
-struct FileMediaSource_SetFilePath final
+// Function MediaAssets.MediaTexture.SetMediaPlayer
+// 0x0008 (0x0008 - 0x0000)
+struct MediaTexture_SetMediaPlayer final
 {
 public:
-	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMediaPlayer*                           NewMediaPlayer;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FileMediaSource_SetFilePath) == 0x000008, "Wrong alignment on FileMediaSource_SetFilePath");
-static_assert(sizeof(FileMediaSource_SetFilePath) == 0x000010, "Wrong size on FileMediaSource_SetFilePath");
-static_assert(offsetof(FileMediaSource_SetFilePath, Path) == 0x000000, "Member 'FileMediaSource_SetFilePath::Path' has a wrong offset!");
+static_assert(alignof(MediaTexture_SetMediaPlayer) == 0x000008, "Wrong alignment on MediaTexture_SetMediaPlayer");
+static_assert(sizeof(MediaTexture_SetMediaPlayer) == 0x000008, "Wrong size on MediaTexture_SetMediaPlayer");
+static_assert(offsetof(MediaTexture_SetMediaPlayer, NewMediaPlayer) == 0x000000, "Member 'MediaTexture_SetMediaPlayer::NewMediaPlayer' has a wrong offset!");
+
+// Function MediaAssets.MediaTexture.GetAspectRatio
+// 0x0004 (0x0004 - 0x0000)
+struct MediaTexture_GetAspectRatio final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MediaTexture_GetAspectRatio) == 0x000004, "Wrong alignment on MediaTexture_GetAspectRatio");
+static_assert(sizeof(MediaTexture_GetAspectRatio) == 0x000004, "Wrong size on MediaTexture_GetAspectRatio");
+static_assert(offsetof(MediaTexture_GetAspectRatio, ReturnValue) == 0x000000, "Member 'MediaTexture_GetAspectRatio::ReturnValue' has a wrong offset!");
+
+// Function MediaAssets.MediaTexture.GetHeight
+// 0x0004 (0x0004 - 0x0000)
+struct MediaTexture_GetHeight final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MediaTexture_GetHeight) == 0x000004, "Wrong alignment on MediaTexture_GetHeight");
+static_assert(sizeof(MediaTexture_GetHeight) == 0x000004, "Wrong size on MediaTexture_GetHeight");
+static_assert(offsetof(MediaTexture_GetHeight, ReturnValue) == 0x000000, "Member 'MediaTexture_GetHeight::ReturnValue' has a wrong offset!");
+
+// Function MediaAssets.MediaTexture.GetMediaPlayer
+// 0x0008 (0x0008 - 0x0000)
+struct MediaTexture_GetMediaPlayer final
+{
+public:
+	class UMediaPlayer*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MediaTexture_GetMediaPlayer) == 0x000008, "Wrong alignment on MediaTexture_GetMediaPlayer");
+static_assert(sizeof(MediaTexture_GetMediaPlayer) == 0x000008, "Wrong size on MediaTexture_GetMediaPlayer");
+static_assert(offsetof(MediaTexture_GetMediaPlayer, ReturnValue) == 0x000000, "Member 'MediaTexture_GetMediaPlayer::ReturnValue' has a wrong offset!");
+
+// Function MediaAssets.MediaTexture.GetTextureNumMips
+// 0x0004 (0x0004 - 0x0000)
+struct MediaTexture_GetTextureNumMips final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MediaTexture_GetTextureNumMips) == 0x000004, "Wrong alignment on MediaTexture_GetTextureNumMips");
+static_assert(sizeof(MediaTexture_GetTextureNumMips) == 0x000004, "Wrong size on MediaTexture_GetTextureNumMips");
+static_assert(offsetof(MediaTexture_GetTextureNumMips, ReturnValue) == 0x000000, "Member 'MediaTexture_GetTextureNumMips::ReturnValue' has a wrong offset!");
+
+// Function MediaAssets.MediaTexture.GetWidth
+// 0x0004 (0x0004 - 0x0000)
+struct MediaTexture_GetWidth final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MediaTexture_GetWidth) == 0x000004, "Wrong alignment on MediaTexture_GetWidth");
+static_assert(sizeof(MediaTexture_GetWidth) == 0x000004, "Wrong size on MediaTexture_GetWidth");
+static_assert(offsetof(MediaTexture_GetWidth, ReturnValue) == 0x000000, "Member 'MediaTexture_GetWidth::ReturnValue' has a wrong offset!");
 
 // Function MediaAssets.MediaComponent.GetMediaPlayer
 // 0x0008 (0x0008 - 0x0000)

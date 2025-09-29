@@ -19,14 +19,14 @@ namespace SDK::Params
 struct BP_ActionFriendlyLookat_C_ChangeFace final
 {
 public:
-	bool                                          smile;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Smile;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APalCharacter*                          CallFunc_GetActionCharacter_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPalFacialComponent*                    CallFunc_GetComponentByClass_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_ActionFriendlyLookat_C_ChangeFace) == 0x000008, "Wrong alignment on BP_ActionFriendlyLookat_C_ChangeFace");
 static_assert(sizeof(BP_ActionFriendlyLookat_C_ChangeFace) == 0x000018, "Wrong size on BP_ActionFriendlyLookat_C_ChangeFace");
-static_assert(offsetof(BP_ActionFriendlyLookat_C_ChangeFace, smile) == 0x000000, "Member 'BP_ActionFriendlyLookat_C_ChangeFace::smile' has a wrong offset!");
+static_assert(offsetof(BP_ActionFriendlyLookat_C_ChangeFace, Smile) == 0x000000, "Member 'BP_ActionFriendlyLookat_C_ChangeFace::Smile' has a wrong offset!");
 static_assert(offsetof(BP_ActionFriendlyLookat_C_ChangeFace, CallFunc_GetActionCharacter_ReturnValue) == 0x000008, "Member 'BP_ActionFriendlyLookat_C_ChangeFace::CallFunc_GetActionCharacter_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_ActionFriendlyLookat_C_ChangeFace, CallFunc_GetComponentByClass_ReturnValue) == 0x000010, "Member 'BP_ActionFriendlyLookat_C_ChangeFace::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
 

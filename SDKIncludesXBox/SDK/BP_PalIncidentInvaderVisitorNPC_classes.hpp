@@ -35,6 +35,7 @@ public:
 	bool GetInvaderStartPoint(struct FVector* Result);
 	void IsSquad(bool* Result);
 	void OnAllCharacterSpawned(TArray<class APalAIController*>& MemberController_0);
+	void OnLeaderBaseCampArrived();
 	void StartProc();
 
 	TSubclassOf<class APalAIController> GetNPCAIControllerClass(const struct FPalInvaderSpawnCharacterParameter& SpawnParameter) const;

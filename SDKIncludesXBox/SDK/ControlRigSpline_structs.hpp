@@ -70,6 +70,35 @@ static_assert(offsetof(FRigUnit_PositionFromControlRigSpline, Spline) == 0x00000
 static_assert(offsetof(FRigUnit_PositionFromControlRigSpline, U) == 0x000020, "Member 'FRigUnit_PositionFromControlRigSpline::U' has a wrong offset!");
 static_assert(offsetof(FRigUnit_PositionFromControlRigSpline, Position) == 0x000028, "Member 'FRigUnit_PositionFromControlRigSpline::Position' has a wrong offset!");
 
+// ScriptStruct ControlRigSpline.RigUnit_ClosestParameterFromControlRigSpline
+// 0x0038 (0x0040 - 0x0008)
+struct FRigUnit_ClosestParameterFromControlRigSpline final : public FRigUnit_ControlRigSplineBase
+{
+public:
+	struct FControlRigSpline                      Spline;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FVector                                Position;                                          // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         U;                                                 // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigUnit_ClosestParameterFromControlRigSpline) == 0x000008, "Wrong alignment on FRigUnit_ClosestParameterFromControlRigSpline");
+static_assert(sizeof(FRigUnit_ClosestParameterFromControlRigSpline) == 0x000040, "Wrong size on FRigUnit_ClosestParameterFromControlRigSpline");
+static_assert(offsetof(FRigUnit_ClosestParameterFromControlRigSpline, Spline) == 0x000008, "Member 'FRigUnit_ClosestParameterFromControlRigSpline::Spline' has a wrong offset!");
+static_assert(offsetof(FRigUnit_ClosestParameterFromControlRigSpline, Position) == 0x000020, "Member 'FRigUnit_ClosestParameterFromControlRigSpline::Position' has a wrong offset!");
+static_assert(offsetof(FRigUnit_ClosestParameterFromControlRigSpline, U) == 0x000038, "Member 'FRigUnit_ClosestParameterFromControlRigSpline::U' has a wrong offset!");
+
+// ScriptStruct ControlRigSpline.RigUnit_FitSplineCurveToChainItemArray
+// 0x0028 (0x0068 - 0x0040)
+struct FRigUnit_FitSplineCurveToChainItemArray final : public FRigUnit_HighlevelBaseMutable
+{
+public:
+	TArray<struct FRigElementKey>                 Items;                                             // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FControlRigSpline                      Spline;                                            // 0x0050(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigUnit_FitSplineCurveToChainItemArray) == 0x000008, "Wrong alignment on FRigUnit_FitSplineCurveToChainItemArray");
+static_assert(sizeof(FRigUnit_FitSplineCurveToChainItemArray) == 0x000068, "Wrong size on FRigUnit_FitSplineCurveToChainItemArray");
+static_assert(offsetof(FRigUnit_FitSplineCurveToChainItemArray, Items) == 0x000040, "Member 'FRigUnit_FitSplineCurveToChainItemArray::Items' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitSplineCurveToChainItemArray, Spline) == 0x000050, "Member 'FRigUnit_FitSplineCurveToChainItemArray::Spline' has a wrong offset!");
+
 // ScriptStruct ControlRigSpline.RigUnit_TransformFromControlRigSpline
 // 0x0098 (0x00A0 - 0x0008)
 struct FRigUnit_TransformFromControlRigSpline final : public FRigUnit_ControlRigSplineBase
@@ -123,6 +152,19 @@ static_assert(alignof(FRigUnit_SetSplinePoints) == 0x000008, "Wrong alignment on
 static_assert(sizeof(FRigUnit_SetSplinePoints) == 0x000068, "Wrong size on FRigUnit_SetSplinePoints");
 static_assert(offsetof(FRigUnit_SetSplinePoints, Points) == 0x000040, "Member 'FRigUnit_SetSplinePoints::Points' has a wrong offset!");
 static_assert(offsetof(FRigUnit_SetSplinePoints, Spline) == 0x000050, "Member 'FRigUnit_SetSplinePoints::Spline' has a wrong offset!");
+
+// ScriptStruct ControlRigSpline.RigUnit_FitSplineCurveToChain
+// 0x0028 (0x0068 - 0x0040)
+struct FRigUnit_FitSplineCurveToChain final : public FRigUnit_HighlevelBaseMutable
+{
+public:
+	struct FRigElementKeyCollection               Items;                                             // 0x0040(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FControlRigSpline                      Spline;                                            // 0x0050(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigUnit_FitSplineCurveToChain) == 0x000008, "Wrong alignment on FRigUnit_FitSplineCurveToChain");
+static_assert(sizeof(FRigUnit_FitSplineCurveToChain) == 0x000068, "Wrong size on FRigUnit_FitSplineCurveToChain");
+static_assert(offsetof(FRigUnit_FitSplineCurveToChain, Items) == 0x000040, "Member 'FRigUnit_FitSplineCurveToChain::Items' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitSplineCurveToChain, Spline) == 0x000050, "Member 'FRigUnit_FitSplineCurveToChain::Spline' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_TangentFromControlRigSpline
 // 0x0038 (0x0040 - 0x0008)
@@ -256,48 +298,6 @@ static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Weight) == 0x000
 static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, bPropagateToChildren) == 0x0000D8, "Member 'FRigUnit_FitChainToSplineCurveItemArray::bPropagateToChildren' has a wrong offset!");
 static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, DebugSettings) == 0x0000E0, "Member 'FRigUnit_FitChainToSplineCurveItemArray::DebugSettings' has a wrong offset!");
 static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, WorkData) == 0x000170, "Member 'FRigUnit_FitChainToSplineCurveItemArray::WorkData' has a wrong offset!");
-
-// ScriptStruct ControlRigSpline.RigUnit_FitSplineCurveToChain
-// 0x0028 (0x0068 - 0x0040)
-struct FRigUnit_FitSplineCurveToChain final : public FRigUnit_HighlevelBaseMutable
-{
-public:
-	struct FRigElementKeyCollection               Items;                                             // 0x0040(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FControlRigSpline                      Spline;                                            // 0x0050(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigUnit_FitSplineCurveToChain) == 0x000008, "Wrong alignment on FRigUnit_FitSplineCurveToChain");
-static_assert(sizeof(FRigUnit_FitSplineCurveToChain) == 0x000068, "Wrong size on FRigUnit_FitSplineCurveToChain");
-static_assert(offsetof(FRigUnit_FitSplineCurveToChain, Items) == 0x000040, "Member 'FRigUnit_FitSplineCurveToChain::Items' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitSplineCurveToChain, Spline) == 0x000050, "Member 'FRigUnit_FitSplineCurveToChain::Spline' has a wrong offset!");
-
-// ScriptStruct ControlRigSpline.RigUnit_FitSplineCurveToChainItemArray
-// 0x0028 (0x0068 - 0x0040)
-struct FRigUnit_FitSplineCurveToChainItemArray final : public FRigUnit_HighlevelBaseMutable
-{
-public:
-	TArray<struct FRigElementKey>                 Items;                                             // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FControlRigSpline                      Spline;                                            // 0x0050(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigUnit_FitSplineCurveToChainItemArray) == 0x000008, "Wrong alignment on FRigUnit_FitSplineCurveToChainItemArray");
-static_assert(sizeof(FRigUnit_FitSplineCurveToChainItemArray) == 0x000068, "Wrong size on FRigUnit_FitSplineCurveToChainItemArray");
-static_assert(offsetof(FRigUnit_FitSplineCurveToChainItemArray, Items) == 0x000040, "Member 'FRigUnit_FitSplineCurveToChainItemArray::Items' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitSplineCurveToChainItemArray, Spline) == 0x000050, "Member 'FRigUnit_FitSplineCurveToChainItemArray::Spline' has a wrong offset!");
-
-// ScriptStruct ControlRigSpline.RigUnit_ClosestParameterFromControlRigSpline
-// 0x0038 (0x0040 - 0x0008)
-struct FRigUnit_ClosestParameterFromControlRigSpline final : public FRigUnit_ControlRigSplineBase
-{
-public:
-	struct FControlRigSpline                      Spline;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FVector                                Position;                                          // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         U;                                                 // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigUnit_ClosestParameterFromControlRigSpline) == 0x000008, "Wrong alignment on FRigUnit_ClosestParameterFromControlRigSpline");
-static_assert(sizeof(FRigUnit_ClosestParameterFromControlRigSpline) == 0x000040, "Wrong size on FRigUnit_ClosestParameterFromControlRigSpline");
-static_assert(offsetof(FRigUnit_ClosestParameterFromControlRigSpline, Spline) == 0x000008, "Member 'FRigUnit_ClosestParameterFromControlRigSpline::Spline' has a wrong offset!");
-static_assert(offsetof(FRigUnit_ClosestParameterFromControlRigSpline, Position) == 0x000020, "Member 'FRigUnit_ClosestParameterFromControlRigSpline::Position' has a wrong offset!");
-static_assert(offsetof(FRigUnit_ClosestParameterFromControlRigSpline, U) == 0x000038, "Member 'FRigUnit_ClosestParameterFromControlRigSpline::U' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_ParameterAtPercentage
 // 0x0020 (0x0028 - 0x0008)

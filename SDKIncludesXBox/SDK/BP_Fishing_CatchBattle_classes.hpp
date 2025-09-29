@@ -19,14 +19,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Fishing_CatchBattle.BP_Fishing_CatchBattle_C
-// 0x0080 (0x0198 - 0x0118)
+// 0x0080 (0x0190 - 0x0110)
 class UBP_Fishing_CatchBattle_C final : public UPalFishingCatchBattle
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0118(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBP_Fishing_CatchBattle_Behavior_C*     BehaviorModule;                                    // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FPalFishingCatchBattleInfo             CatchBattleInfo;                                   // 0x0128(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	TMap<EPalFishBattleBehaviorType, class UClass*> BehaviorMap;                                     // 0x0148(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0110(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBP_Fishing_CatchBattle_Behavior_C*     BehaviorModule;                                    // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPalFishingCatchBattleInfo             CatchBattleInfo;                                   // 0x0120(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	TMap<EPalFishBattleBehaviorType, class UClass*> BehaviorMap;                                     // 0x0140(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BP_Fishing_CatchBattle(int32 EntryPoint);
@@ -44,11 +44,11 @@ public:
 	}
 };
 static_assert(alignof(UBP_Fishing_CatchBattle_C) == 0x000008, "Wrong alignment on UBP_Fishing_CatchBattle_C");
-static_assert(sizeof(UBP_Fishing_CatchBattle_C) == 0x000198, "Wrong size on UBP_Fishing_CatchBattle_C");
-static_assert(offsetof(UBP_Fishing_CatchBattle_C, UberGraphFrame) == 0x000118, "Member 'UBP_Fishing_CatchBattle_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Fishing_CatchBattle_C, BehaviorModule) == 0x000120, "Member 'UBP_Fishing_CatchBattle_C::BehaviorModule' has a wrong offset!");
-static_assert(offsetof(UBP_Fishing_CatchBattle_C, CatchBattleInfo) == 0x000128, "Member 'UBP_Fishing_CatchBattle_C::CatchBattleInfo' has a wrong offset!");
-static_assert(offsetof(UBP_Fishing_CatchBattle_C, BehaviorMap) == 0x000148, "Member 'UBP_Fishing_CatchBattle_C::BehaviorMap' has a wrong offset!");
+static_assert(sizeof(UBP_Fishing_CatchBattle_C) == 0x000190, "Wrong size on UBP_Fishing_CatchBattle_C");
+static_assert(offsetof(UBP_Fishing_CatchBattle_C, UberGraphFrame) == 0x000110, "Member 'UBP_Fishing_CatchBattle_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_Fishing_CatchBattle_C, BehaviorModule) == 0x000118, "Member 'UBP_Fishing_CatchBattle_C::BehaviorModule' has a wrong offset!");
+static_assert(offsetof(UBP_Fishing_CatchBattle_C, CatchBattleInfo) == 0x000120, "Member 'UBP_Fishing_CatchBattle_C::CatchBattleInfo' has a wrong offset!");
+static_assert(offsetof(UBP_Fishing_CatchBattle_C, BehaviorMap) == 0x000140, "Member 'UBP_Fishing_CatchBattle_C::BehaviorMap' has a wrong offset!");
 
 }
 

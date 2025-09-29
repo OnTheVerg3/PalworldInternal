@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
 #include "UMG_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "F_PalUIGlobalPalStorageExportCacheData_structs.hpp"
 
 
@@ -86,29 +86,29 @@ static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_Register_Send_And_Favor
 static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_Register_Send_And_Favorite_Action, CallFunc_RegisterActionBinding_ReturnValue_1) == 0x000030, "Member 'WBP_GlobalPalStorage_ForDisplay_C_Register_Send_And_Favorite_Action::CallFunc_RegisterActionBinding_ReturnValue_1' has a wrong offset!");
 
 // Function WBP_GlobalPalStorage_ForDisplay.WBP_GlobalPalStorage_ForDisplay_C.OpenImportOverwriteWindow
-// 0x06B8 (0x06B8 - 0x0000)
+// 0x06C8 (0x06C8 - 0x0000)
 struct WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow final
 {
 public:
-	struct FPalGlobalPalStorageImportResultAdditionalData AdditionalData;                            // 0x0000(0x0328)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class UPalGlobalPalStorageSubsystem*          CallFunc_GetGlobalPalStorageSubsystem_ReturnValue; // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UPalHUDDispatchParameterBase* Param)> K2Node_CreateDelegate_OutputDelegate; // 0x0330(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue;                // 0x0340(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_GPSPalCompareWindowParameter_C*     CallFunc_SpawnObject_ReturnValue;                  // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue;                         // 0x0350(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPalGlobalPalStorageSaveParameter      CallFunc_GetData_OutData;                          // 0x0360(0x0350)()
-	bool                                          CallFunc_GetData_ReturnValue;                      // 0x06B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalGlobalPalStorageImportResultAdditionalData AdditionalData;                            // 0x0000(0x0330)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class UPalGlobalPalStorageSubsystem*          CallFunc_GetGlobalPalStorageSubsystem_ReturnValue; // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UPalHUDDispatchParameterBase* Param)> K2Node_CreateDelegate_OutputDelegate; // 0x0338(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue;                // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_GPSPalCompareWindowParameter_C*     CallFunc_SpawnObject_ReturnValue;                  // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Push_ReturnValue;                         // 0x0358(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalGlobalPalStorageSaveParameter      CallFunc_GetData_OutData;                          // 0x0368(0x0358)()
+	bool                                          CallFunc_GetData_ReturnValue;                      // 0x06C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow) == 0x000008, "Wrong alignment on WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow");
-static_assert(sizeof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow) == 0x0006B8, "Wrong size on WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow");
+static_assert(sizeof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow) == 0x0006C8, "Wrong size on WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow");
 static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, AdditionalData) == 0x000000, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::AdditionalData' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, CallFunc_GetGlobalPalStorageSubsystem_ReturnValue) == 0x000328, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::CallFunc_GetGlobalPalStorageSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, K2Node_CreateDelegate_OutputDelegate) == 0x000330, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, CallFunc_GetHUDService_ReturnValue) == 0x000340, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::CallFunc_GetHUDService_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, CallFunc_SpawnObject_ReturnValue) == 0x000348, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, CallFunc_Push_ReturnValue) == 0x000350, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::CallFunc_Push_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, CallFunc_GetData_OutData) == 0x000360, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::CallFunc_GetData_OutData' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, CallFunc_GetData_ReturnValue) == 0x0006B0, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::CallFunc_GetData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, CallFunc_GetGlobalPalStorageSubsystem_ReturnValue) == 0x000330, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::CallFunc_GetGlobalPalStorageSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, K2Node_CreateDelegate_OutputDelegate) == 0x000338, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, CallFunc_GetHUDService_ReturnValue) == 0x000348, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::CallFunc_GetHUDService_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, CallFunc_SpawnObject_ReturnValue) == 0x000350, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, CallFunc_Push_ReturnValue) == 0x000358, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::CallFunc_Push_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, CallFunc_GetData_OutData) == 0x000368, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::CallFunc_GetData_OutData' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow, CallFunc_GetData_ReturnValue) == 0x0006C0, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OpenImportOverwriteWindow::CallFunc_GetData_ReturnValue' has a wrong offset!");
 
 // Function WBP_GlobalPalStorage_ForDisplay.WBP_GlobalPalStorage_ForDisplay_C.OnStartImport
 // 0x000C (0x000C - 0x0000)
@@ -195,61 +195,61 @@ static_assert(sizeof(WBP_GlobalPalStorage_ForDisplay_C_OnSaveGPSData) == 0x00000
 static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnSaveGPSData, bIsSuccess) == 0x000000, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnSaveGPSData::bIsSuccess' has a wrong offset!");
 
 // Function WBP_GlobalPalStorage_ForDisplay.WBP_GlobalPalStorage_ForDisplay_C.OnImport
-// 0x0548 (0x0548 - 0x0000)
+// 0x0550 (0x0550 - 0x0000)
 struct WBP_GlobalPalStorage_ForDisplay_C_OnImport final
 {
 public:
 	EPalGlobalStorageImportResult                 Result;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalGlobalPalStorageImportResultAdditionalData AdditionalData;                            // 0x0008(0x0328)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	TMap<EPalGlobalStorageImportResult, struct FDataTableRowHandle> ErrorMsgIDMap;                   // 0x0330(0x0050)(Edit, BlueprintVisible)
-	class FText                                   ErrorText;                                         // 0x0380(0x0018)(Edit, BlueprintVisible)
-	struct FDataTableRowHandle                    NewLocalVar;                                       // 0x0398(0x0010)(Edit, BlueprintVisible, NoDestructor)
-	TMap<EPalGlobalStorageImportResult, struct FDataTableRowHandle> K2Node_MakeVariable_MakeVariableOutput; // 0x03A8(0x0050)()
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x03F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3FA[0x6];                                      // 0x03FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalGameSetting*                        CallFunc_GetGameSetting_ReturnValue;               // 0x0400(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0408(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetLocalizedTextFromHandle_Text;          // 0x0410(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0428(0x0050)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0478(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_479[0x3];                                      // 0x0479(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool bResult)>                 K2Node_CreateDelegate_OutputDelegate;              // 0x047C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Dialog_ReturnValue;                       // 0x048C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C[0x4];                                      // 0x049C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataTableRowHandle                    CallFunc_Map_Find_Value;                           // 0x04A0(0x0010)(NoDestructor)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x04B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B1[0x7];                                      // 0x04B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetLocalizedTextFromHandle_Text_1;        // 0x04B8(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x04D0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0520(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0530(0x0018)()
+	struct FPalGlobalPalStorageImportResultAdditionalData AdditionalData;                            // 0x0008(0x0330)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TMap<EPalGlobalStorageImportResult, struct FDataTableRowHandle> ErrorMsgIDMap;                   // 0x0338(0x0050)(Edit, BlueprintVisible)
+	class FText                                   ErrorText;                                         // 0x0388(0x0018)(Edit, BlueprintVisible)
+	struct FDataTableRowHandle                    NewLocalVar;                                       // 0x03A0(0x0010)(Edit, BlueprintVisible, NoDestructor)
+	TMap<EPalGlobalStorageImportResult, struct FDataTableRowHandle> K2Node_MakeVariable_MakeVariableOutput; // 0x03B0(0x0050)()
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0401(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_402[0x6];                                      // 0x0402(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalGameSetting*                        CallFunc_GetGameSetting_ReturnValue;               // 0x0408(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0410(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_414[0x4];                                      // 0x0414(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetLocalizedTextFromHandle_Text;          // 0x0418(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0430(0x0050)(HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0480(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_481[0x3];                                      // 0x0481(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool bResult)>                 K2Node_CreateDelegate_OutputDelegate;              // 0x0484(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Dialog_ReturnValue;                       // 0x0494(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A4[0x4];                                      // 0x04A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataTableRowHandle                    CallFunc_Map_Find_Value;                           // 0x04A8(0x0010)(NoDestructor)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x04B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetLocalizedTextFromHandle_Text_1;        // 0x04C0(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x04D8(0x0050)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0528(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0538(0x0018)()
 };
 static_assert(alignof(WBP_GlobalPalStorage_ForDisplay_C_OnImport) == 0x000008, "Wrong alignment on WBP_GlobalPalStorage_ForDisplay_C_OnImport");
-static_assert(sizeof(WBP_GlobalPalStorage_ForDisplay_C_OnImport) == 0x000548, "Wrong size on WBP_GlobalPalStorage_ForDisplay_C_OnImport");
+static_assert(sizeof(WBP_GlobalPalStorage_ForDisplay_C_OnImport) == 0x000550, "Wrong size on WBP_GlobalPalStorage_ForDisplay_C_OnImport");
 static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, Result) == 0x000000, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::Result' has a wrong offset!");
 static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, AdditionalData) == 0x000008, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::AdditionalData' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, ErrorMsgIDMap) == 0x000330, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::ErrorMsgIDMap' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, ErrorText) == 0x000380, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::ErrorText' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, NewLocalVar) == 0x000398, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::NewLocalVar' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, K2Node_MakeVariable_MakeVariableOutput) == 0x0003A8, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::K2Node_MakeVariable_MakeVariableOutput' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0003F8, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x0003F9, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_GetGameSetting_ReturnValue) == 0x000400, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_GetGameSetting_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_Divide_IntInt_ReturnValue) == 0x000408, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_GetLocalizedTextFromHandle_Text) == 0x000410, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_GetLocalizedTextFromHandle_Text' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, K2Node_MakeStruct_FormatArgumentData) == 0x000428, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000478, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, K2Node_CreateDelegate_OutputDelegate) == 0x00047C, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_Dialog_ReturnValue) == 0x00048C, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_Dialog_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_Map_Find_Value) == 0x0004A0, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_Map_Find_ReturnValue) == 0x0004B0, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_GetLocalizedTextFromHandle_Text_1) == 0x0004B8, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_GetLocalizedTextFromHandle_Text_1' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, K2Node_MakeStruct_FormatArgumentData_1) == 0x0004D0, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, K2Node_MakeArray_Array) == 0x000520, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_Format_ReturnValue) == 0x000530, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, ErrorMsgIDMap) == 0x000338, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::ErrorMsgIDMap' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, ErrorText) == 0x000388, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::ErrorText' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, NewLocalVar) == 0x0003A0, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::NewLocalVar' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, K2Node_MakeVariable_MakeVariableOutput) == 0x0003B0, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::K2Node_MakeVariable_MakeVariableOutput' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000400, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000401, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_GetGameSetting_ReturnValue) == 0x000408, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_GetGameSetting_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_Divide_IntInt_ReturnValue) == 0x000410, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_GetLocalizedTextFromHandle_Text) == 0x000418, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_GetLocalizedTextFromHandle_Text' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, K2Node_MakeStruct_FormatArgumentData) == 0x000430, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000480, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, K2Node_CreateDelegate_OutputDelegate) == 0x000484, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_Dialog_ReturnValue) == 0x000494, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_Dialog_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_Map_Find_Value) == 0x0004A8, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_Map_Find_ReturnValue) == 0x0004B8, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_GetLocalizedTextFromHandle_Text_1) == 0x0004C0, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_GetLocalizedTextFromHandle_Text_1' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, K2Node_MakeStruct_FormatArgumentData_1) == 0x0004D8, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, K2Node_MakeArray_Array) == 0x000528, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_OnImport, CallFunc_Format_ReturnValue) == 0x000538, "Member 'WBP_GlobalPalStorage_ForDisplay_C_OnImport::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WBP_GlobalPalStorage_ForDisplay.WBP_GlobalPalStorage_ForDisplay_C.OnFavoriteShortcutAction
 // 0x0018 (0x0018 - 0x0000)
@@ -350,7 +350,7 @@ static_assert(sizeof(WBP_GlobalPalStorage_ForDisplay_C_IsWaitingImport) == 0x000
 static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_IsWaitingImport, bWaiting) == 0x000000, "Member 'WBP_GlobalPalStorage_ForDisplay_C_IsWaitingImport::bWaiting' has a wrong offset!");
 
 // Function WBP_GlobalPalStorage_ForDisplay.WBP_GlobalPalStorage_ForDisplay_C.HandleExportFailed
-// 0x0920 (0x0920 - 0x0000)
+// 0x0930 (0x0930 - 0x0000)
 struct WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed final
 {
 public:
@@ -383,19 +383,19 @@ public:
 	int32                                         CallFunc_GetDataIndex_ReturnValue;                 // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0248(0x0010)(ReferenceParm)
-	struct FPalGlobalPalStorageSaveParameter      CallFunc_GetData_OutData;                          // 0x0258(0x0350)()
-	bool                                          CallFunc_GetData_ReturnValue;                      // 0x05A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A9[0x7];                                      // 0x05A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x05B0(0x0018)()
-	class UPalIndividualCharacterParameter*       CallFunc_TryGetIndividualParameter_ReturnValue;    // 0x05C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UPalHUDDispatchParameterBase* Param)> K2Node_CreateDelegate_OutputDelegate_1; // 0x05D0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x05E0(0x0320)(ConstParm)
-	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue;                // 0x0900(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_GPSPalCompareWindowParameter_C*     CallFunc_SpawnObject_ReturnValue;                  // 0x0908(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Push_ReturnValue;                         // 0x0910(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalGlobalPalStorageSaveParameter      CallFunc_GetData_OutData;                          // 0x0258(0x0358)()
+	bool                                          CallFunc_GetData_ReturnValue;                      // 0x05B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5B1[0x7];                                      // 0x05B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x05B8(0x0018)()
+	class UPalIndividualCharacterParameter*       CallFunc_TryGetIndividualParameter_ReturnValue;    // 0x05D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UPalHUDDispatchParameterBase* Param)> K2Node_CreateDelegate_OutputDelegate_1; // 0x05D8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x05E8(0x0328)(ConstParm)
+	class UPalHUDService*                         CallFunc_GetHUDService_ReturnValue;                // 0x0910(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_GPSPalCompareWindowParameter_C*     CallFunc_SpawnObject_ReturnValue;                  // 0x0918(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Push_ReturnValue;                         // 0x0920(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed) == 0x000008, "Wrong alignment on WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed");
-static_assert(sizeof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed) == 0x000920, "Wrong size on WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed");
+static_assert(sizeof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed) == 0x000930, "Wrong size on WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed");
 static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, Result) == 0x000000, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::Result' has a wrong offset!");
 static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, TargetSlot) == 0x000008, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::TargetSlot' has a wrong offset!");
 static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, ExportDataIndex) == 0x000010, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::ExportDataIndex' has a wrong offset!");
@@ -420,14 +420,14 @@ static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, K2N
 static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_GetDataIndex_ReturnValue) == 0x000240, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_GetDataIndex_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, K2Node_MakeArray_Array) == 0x000248, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_GetData_OutData) == 0x000258, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_GetData_OutData' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_GetData_ReturnValue) == 0x0005A8, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_GetData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_Format_ReturnValue) == 0x0005B0, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_TryGetIndividualParameter_ReturnValue) == 0x0005C8, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_TryGetIndividualParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, K2Node_CreateDelegate_OutputDelegate_1) == 0x0005D0, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_GetSaveParameter_ReturnValue) == 0x0005E0, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_GetSaveParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_GetHUDService_ReturnValue) == 0x000900, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_GetHUDService_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_SpawnObject_ReturnValue) == 0x000908, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_Push_ReturnValue) == 0x000910, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_Push_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_GetData_ReturnValue) == 0x0005B0, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_GetData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_Format_ReturnValue) == 0x0005B8, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_TryGetIndividualParameter_ReturnValue) == 0x0005D0, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_TryGetIndividualParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, K2Node_CreateDelegate_OutputDelegate_1) == 0x0005D8, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_GetSaveParameter_ReturnValue) == 0x0005E8, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_GetSaveParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_GetHUDService_ReturnValue) == 0x000910, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_GetHUDService_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_SpawnObject_ReturnValue) == 0x000918, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed, CallFunc_Push_ReturnValue) == 0x000920, "Member 'WBP_GlobalPalStorage_ForDisplay_C_HandleExportFailed::CallFunc_Push_ReturnValue' has a wrong offset!");
 
 // Function WBP_GlobalPalStorage_ForDisplay.WBP_GlobalPalStorage_ForDisplay_C.ExecuteUbergraph_WBP_GlobalPalStorage_ForDisplay
 // 0x01B8 (0x01B8 - 0x0000)

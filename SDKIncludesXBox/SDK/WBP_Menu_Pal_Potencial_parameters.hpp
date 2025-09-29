@@ -50,26 +50,26 @@ static_assert(offsetof(WBP_Menu_Pal_Potencial_C_SetupByNum, Talent_Attack) == 0x
 static_assert(offsetof(WBP_Menu_Pal_Potencial_C_SetupByNum, Talent_Defense) == 0x000008, "Member 'WBP_Menu_Pal_Potencial_C_SetupByNum::Talent_Defense' has a wrong offset!");
 
 // Function WBP_Menu_Pal_Potencial.WBP_Menu_Pal_Potencial_C.SetupByParameter
-// 0x0340 (0x0340 - 0x0000)
+// 0x0348 (0x0348 - 0x0000)
 struct WBP_Menu_Pal_Potencial_C_SetupByParameter final
 {
 public:
 	class UPalIndividualCharacterParameter*       TargetParameter;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x0010(0x0320)(ConstParm)
-	int32                                         CallFunc_GetSaveParameterValue_Talent_Defense_ReturnValue; // 0x0330(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSaveParameterValue_Talent_Shot_ReturnValue; // 0x0334(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSaveParameterValue_Talent_HP_ReturnValue; // 0x0338(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x0010(0x0328)(ConstParm)
+	int32                                         CallFunc_GetSaveParameterValue_Talent_Defense_ReturnValue; // 0x0338(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSaveParameterValue_Talent_Shot_ReturnValue; // 0x033C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSaveParameterValue_Talent_HP_ReturnValue; // 0x0340(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Menu_Pal_Potencial_C_SetupByParameter) == 0x000008, "Wrong alignment on WBP_Menu_Pal_Potencial_C_SetupByParameter");
-static_assert(sizeof(WBP_Menu_Pal_Potencial_C_SetupByParameter) == 0x000340, "Wrong size on WBP_Menu_Pal_Potencial_C_SetupByParameter");
+static_assert(sizeof(WBP_Menu_Pal_Potencial_C_SetupByParameter) == 0x000348, "Wrong size on WBP_Menu_Pal_Potencial_C_SetupByParameter");
 static_assert(offsetof(WBP_Menu_Pal_Potencial_C_SetupByParameter, TargetParameter) == 0x000000, "Member 'WBP_Menu_Pal_Potencial_C_SetupByParameter::TargetParameter' has a wrong offset!");
 static_assert(offsetof(WBP_Menu_Pal_Potencial_C_SetupByParameter, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'WBP_Menu_Pal_Potencial_C_SetupByParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Menu_Pal_Potencial_C_SetupByParameter, CallFunc_GetSaveParameter_ReturnValue) == 0x000010, "Member 'WBP_Menu_Pal_Potencial_C_SetupByParameter::CallFunc_GetSaveParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Menu_Pal_Potencial_C_SetupByParameter, CallFunc_GetSaveParameterValue_Talent_Defense_ReturnValue) == 0x000330, "Member 'WBP_Menu_Pal_Potencial_C_SetupByParameter::CallFunc_GetSaveParameterValue_Talent_Defense_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Menu_Pal_Potencial_C_SetupByParameter, CallFunc_GetSaveParameterValue_Talent_Shot_ReturnValue) == 0x000334, "Member 'WBP_Menu_Pal_Potencial_C_SetupByParameter::CallFunc_GetSaveParameterValue_Talent_Shot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Menu_Pal_Potencial_C_SetupByParameter, CallFunc_GetSaveParameterValue_Talent_HP_ReturnValue) == 0x000338, "Member 'WBP_Menu_Pal_Potencial_C_SetupByParameter::CallFunc_GetSaveParameterValue_Talent_HP_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Menu_Pal_Potencial_C_SetupByParameter, CallFunc_GetSaveParameterValue_Talent_Defense_ReturnValue) == 0x000338, "Member 'WBP_Menu_Pal_Potencial_C_SetupByParameter::CallFunc_GetSaveParameterValue_Talent_Defense_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Menu_Pal_Potencial_C_SetupByParameter, CallFunc_GetSaveParameterValue_Talent_Shot_ReturnValue) == 0x00033C, "Member 'WBP_Menu_Pal_Potencial_C_SetupByParameter::CallFunc_GetSaveParameterValue_Talent_Shot_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Menu_Pal_Potencial_C_SetupByParameter, CallFunc_GetSaveParameterValue_Talent_HP_ReturnValue) == 0x000340, "Member 'WBP_Menu_Pal_Potencial_C_SetupByParameter::CallFunc_GetSaveParameterValue_Talent_HP_ReturnValue' has a wrong offset!");
 
 }
 

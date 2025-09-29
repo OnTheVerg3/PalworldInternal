@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Pal_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "CoreUObject_structs.hpp"
@@ -70,10 +70,10 @@ public:
 	TArray<class FString>                         DrawDistanceStrings;                               // 0x0610(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void GetDisplayGraphicLevel(const struct FPalOptionGraphicsSettings& GraphicLevel, EPalOptionGraphicsLevel* Graphicsレベル);
 	void ExecuteUbergraph_WBP_Graphic_Settings(int32 EntryPoint);
 	void Construct();
 	void ApplySettings();
+	void GetDisplayGraphicLevel(const struct FPalOptionGraphicsSettings& GraphicLevel, EPalOptionGraphicsLevel* Graphicsレベル);
 	void GetMapObjectDrawDistanceTypeIndex(EPalOptionMapObjectDrawDistanceType DistanceType, int32* SelectionIndex);
 	void GetUpscalingMsgIdArray(TArray<struct FDataTableRowHandle>* MsgIdArray);
 	void OnAAChanged(int32 Selection);

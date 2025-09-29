@@ -39,6 +39,74 @@ public:
 static_assert(alignof(AARActor) == 0x000008, "Wrong alignment on AARActor");
 static_assert(sizeof(AARActor) == 0x000290, "Wrong size on AARActor");
 
+// Class AugmentedReality.ARComponent
+// 0x0080 (0x0320 - 0x02A0)
+class UARComponent : public USceneComponent
+{
+public:
+	struct FGuid                                  NativeID;                                          // 0x02A0(0x0010)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2B0[0x30];                                     // 0x02B0(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUseDefaultReplication;                            // 0x02E0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2E1[0x7];                                      // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     DefaultMeshMaterial;                               // 0x02E8(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInterface*                     DefaultWireframeMeshMaterial;                      // 0x02F0(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMRMeshComponent*                       MRMeshComponent;                                   // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UARTrackedGeometry*                     MyTrackedGeometry;                                 // 0x0300(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_308[0x18];                                     // 0x0308(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UMRMeshComponent* GetMRMesh();
+	void OnRep_Payload();
+	void ReceiveRemove();
+	void SetNativeID(const struct FGuid& NativeID_0);
+	void UpdateVisualization();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ARComponent">();
+	}
+	static class UARComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UARComponent>();
+	}
+};
+static_assert(alignof(UARComponent) == 0x000010, "Wrong alignment on UARComponent");
+static_assert(sizeof(UARComponent) == 0x000320, "Wrong size on UARComponent");
+static_assert(offsetof(UARComponent, NativeID) == 0x0002A0, "Member 'UARComponent::NativeID' has a wrong offset!");
+static_assert(offsetof(UARComponent, bUseDefaultReplication) == 0x0002E0, "Member 'UARComponent::bUseDefaultReplication' has a wrong offset!");
+static_assert(offsetof(UARComponent, DefaultMeshMaterial) == 0x0002E8, "Member 'UARComponent::DefaultMeshMaterial' has a wrong offset!");
+static_assert(offsetof(UARComponent, DefaultWireframeMeshMaterial) == 0x0002F0, "Member 'UARComponent::DefaultWireframeMeshMaterial' has a wrong offset!");
+static_assert(offsetof(UARComponent, MRMeshComponent) == 0x0002F8, "Member 'UARComponent::MRMeshComponent' has a wrong offset!");
+static_assert(offsetof(UARComponent, MyTrackedGeometry) == 0x000300, "Member 'UARComponent::MyTrackedGeometry' has a wrong offset!");
+
+// Class AugmentedReality.ARPointComponent
+// 0x0010 (0x0330 - 0x0320)
+class UARPointComponent final : public UARComponent
+{
+public:
+	struct FARPointUpdatePayload                  ReplicatedPayload;                                 // 0x0320(0x0001)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_321[0xF];                                      // 0x0321(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ReceiveAdd(const struct FARPointUpdatePayload& Payload);
+	void ReceiveUpdate(const struct FARPointUpdatePayload& Payload);
+	void ServerUpdatePayload(const struct FARPointUpdatePayload& NewPayload);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ARPointComponent">();
+	}
+	static class UARPointComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UARPointComponent>();
+	}
+};
+static_assert(alignof(UARPointComponent) == 0x000010, "Wrong alignment on UARPointComponent");
+static_assert(sizeof(UARPointComponent) == 0x000330, "Wrong size on UARPointComponent");
+static_assert(offsetof(UARPointComponent, ReplicatedPayload) == 0x000320, "Member 'UARPointComponent::ReplicatedPayload' has a wrong offset!");
+
 // Class AugmentedReality.ARBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UARBlueprintLibrary final : public UBlueprintFunctionLibrary
@@ -119,6 +187,26 @@ public:
 static_assert(alignof(UARBlueprintLibrary) == 0x000008, "Wrong alignment on UARBlueprintLibrary");
 static_assert(sizeof(UARBlueprintLibrary) == 0x000028, "Wrong size on UARBlueprintLibrary");
 
+// Class AugmentedReality.ARBaseAsyncTaskBlueprintProxy
+// 0x0020 (0x0050 - 0x0030)
+class UARBaseAsyncTaskBlueprintProxy : public UBlueprintAsyncActionBase
+{
+public:
+	uint8                                         Pad_30[0x20];                                      // 0x0030(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ARBaseAsyncTaskBlueprintProxy">();
+	}
+	static class UARBaseAsyncTaskBlueprintProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UARBaseAsyncTaskBlueprintProxy>();
+	}
+};
+static_assert(alignof(UARBaseAsyncTaskBlueprintProxy) == 0x000008, "Wrong alignment on UARBaseAsyncTaskBlueprintProxy");
+static_assert(sizeof(UARBaseAsyncTaskBlueprintProxy) == 0x000050, "Wrong size on UARBaseAsyncTaskBlueprintProxy");
+
 // Class AugmentedReality.ARTypesDummyClass
 // 0x0000 (0x0028 - 0x0028)
 class UARTypesDummyClass final : public UObject
@@ -161,53 +249,6 @@ public:
 static_assert(alignof(UARTraceResultLibrary) == 0x000008, "Wrong alignment on UARTraceResultLibrary");
 static_assert(sizeof(UARTraceResultLibrary) == 0x000028, "Wrong size on UARTraceResultLibrary");
 
-// Class AugmentedReality.ARGeoTrackingSupport
-// 0x0000 (0x0028 - 0x0028)
-class UARGeoTrackingSupport final : public UObject
-{
-public:
-	static class UARGeoTrackingSupport* GetGeoTrackingSupport();
-
-	bool AddGeoAnchorAtLocation(float Longitude, float Latitude, const class FString& OptionalAnchorName);
-	bool AddGeoAnchorAtLocationWithAltitude(float Longitude, float Latitude, float AltitudeMeters, const class FString& OptionalAnchorName);
-
-	EARGeoTrackingAccuracy GetGeoTrackingAccuracy() const;
-	EARGeoTrackingState GetGeoTrackingState() const;
-	EARGeoTrackingStateReason GetGeoTrackingStateReason() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ARGeoTrackingSupport">();
-	}
-	static class UARGeoTrackingSupport* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UARGeoTrackingSupport>();
-	}
-};
-static_assert(alignof(UARGeoTrackingSupport) == 0x000008, "Wrong alignment on UARGeoTrackingSupport");
-static_assert(sizeof(UARGeoTrackingSupport) == 0x000028, "Wrong size on UARGeoTrackingSupport");
-
-// Class AugmentedReality.ARBaseAsyncTaskBlueprintProxy
-// 0x0020 (0x0050 - 0x0030)
-class UARBaseAsyncTaskBlueprintProxy : public UBlueprintAsyncActionBase
-{
-public:
-	uint8                                         Pad_30[0x20];                                      // 0x0030(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ARBaseAsyncTaskBlueprintProxy">();
-	}
-	static class UARBaseAsyncTaskBlueprintProxy* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UARBaseAsyncTaskBlueprintProxy>();
-	}
-};
-static_assert(alignof(UARBaseAsyncTaskBlueprintProxy) == 0x000008, "Wrong alignment on UARBaseAsyncTaskBlueprintProxy");
-static_assert(sizeof(UARBaseAsyncTaskBlueprintProxy) == 0x000050, "Wrong size on UARBaseAsyncTaskBlueprintProxy");
-
 // Class AugmentedReality.ARSaveWorldAsyncTaskBlueprintProxy
 // 0x0030 (0x0080 - 0x0050)
 class UARSaveWorldAsyncTaskBlueprintProxy final : public UARBaseAsyncTaskBlueprintProxy
@@ -234,75 +275,6 @@ static_assert(alignof(UARSaveWorldAsyncTaskBlueprintProxy) == 0x000008, "Wrong a
 static_assert(sizeof(UARSaveWorldAsyncTaskBlueprintProxy) == 0x000080, "Wrong size on UARSaveWorldAsyncTaskBlueprintProxy");
 static_assert(offsetof(UARSaveWorldAsyncTaskBlueprintProxy, OnSuccess) == 0x000050, "Member 'UARSaveWorldAsyncTaskBlueprintProxy::OnSuccess' has a wrong offset!");
 static_assert(offsetof(UARSaveWorldAsyncTaskBlueprintProxy, OnFailed) == 0x000060, "Member 'UARSaveWorldAsyncTaskBlueprintProxy::OnFailed' has a wrong offset!");
-
-// Class AugmentedReality.ARComponent
-// 0x0080 (0x0320 - 0x02A0)
-class UARComponent : public USceneComponent
-{
-public:
-	struct FGuid                                  NativeID;                                          // 0x02A0(0x0010)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2B0[0x30];                                     // 0x02B0(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bUseDefaultReplication;                            // 0x02E0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2E1[0x7];                                      // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     DefaultMeshMaterial;                               // 0x02E8(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     DefaultWireframeMeshMaterial;                      // 0x02F0(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMRMeshComponent*                       MRMeshComponent;                                   // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UARTrackedGeometry*                     MyTrackedGeometry;                                 // 0x0300(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_308[0x18];                                     // 0x0308(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UMRMeshComponent* GetMRMesh();
-	void OnRep_Payload();
-	void ReceiveRemove();
-	void SetNativeID(const struct FGuid& NativeID_0);
-	void UpdateVisualization();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ARComponent">();
-	}
-	static class UARComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UARComponent>();
-	}
-};
-static_assert(alignof(UARComponent) == 0x000010, "Wrong alignment on UARComponent");
-static_assert(sizeof(UARComponent) == 0x000320, "Wrong size on UARComponent");
-static_assert(offsetof(UARComponent, NativeID) == 0x0002A0, "Member 'UARComponent::NativeID' has a wrong offset!");
-static_assert(offsetof(UARComponent, bUseDefaultReplication) == 0x0002E0, "Member 'UARComponent::bUseDefaultReplication' has a wrong offset!");
-static_assert(offsetof(UARComponent, DefaultMeshMaterial) == 0x0002E8, "Member 'UARComponent::DefaultMeshMaterial' has a wrong offset!");
-static_assert(offsetof(UARComponent, DefaultWireframeMeshMaterial) == 0x0002F0, "Member 'UARComponent::DefaultWireframeMeshMaterial' has a wrong offset!");
-static_assert(offsetof(UARComponent, MRMeshComponent) == 0x0002F8, "Member 'UARComponent::MRMeshComponent' has a wrong offset!");
-static_assert(offsetof(UARComponent, MyTrackedGeometry) == 0x000300, "Member 'UARComponent::MyTrackedGeometry' has a wrong offset!");
-
-// Class AugmentedReality.ARPoseComponent
-// 0x0070 (0x0390 - 0x0320)
-class UARPoseComponent final : public UARComponent
-{
-public:
-	struct FARPoseUpdatePayload                   ReplicatedPayload;                                 // 0x0320(0x0070)(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static void SetPoseComponentDebugMode(EPoseComponentDebugMode NewDebugMode);
-
-	void ReceiveAdd(const struct FARPoseUpdatePayload& Payload);
-	void ReceiveUpdate(const struct FARPoseUpdatePayload& Payload);
-	void ServerUpdatePayload(const struct FARPoseUpdatePayload& NewPayload);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ARPoseComponent">();
-	}
-	static class UARPoseComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UARPoseComponent>();
-	}
-};
-static_assert(alignof(UARPoseComponent) == 0x000010, "Wrong alignment on UARPoseComponent");
-static_assert(sizeof(UARPoseComponent) == 0x000390, "Wrong size on UARPoseComponent");
-static_assert(offsetof(UARPoseComponent, ReplicatedPayload) == 0x000320, "Member 'UARPoseComponent::ReplicatedPayload' has a wrong offset!");
 
 // Class AugmentedReality.ARGetCandidateObjectAsyncTaskBlueprintProxy
 // 0x0060 (0x00B0 - 0x0050)
@@ -360,61 +332,6 @@ public:
 static_assert(alignof(UARPlaneComponent) == 0x000010, "Wrong alignment on UARPlaneComponent");
 static_assert(sizeof(UARPlaneComponent) == 0x0003F0, "Wrong size on UARPlaneComponent");
 static_assert(offsetof(UARPlaneComponent, ReplicatedPayload) == 0x000320, "Member 'UARPlaneComponent::ReplicatedPayload' has a wrong offset!");
-
-// Class AugmentedReality.ARPointComponent
-// 0x0010 (0x0330 - 0x0320)
-class UARPointComponent final : public UARComponent
-{
-public:
-	struct FARPointUpdatePayload                  ReplicatedPayload;                                 // 0x0320(0x0001)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_321[0xF];                                      // 0x0321(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void ReceiveAdd(const struct FARPointUpdatePayload& Payload);
-	void ReceiveUpdate(const struct FARPointUpdatePayload& Payload);
-	void ServerUpdatePayload(const struct FARPointUpdatePayload& NewPayload);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ARPointComponent">();
-	}
-	static class UARPointComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UARPointComponent>();
-	}
-};
-static_assert(alignof(UARPointComponent) == 0x000010, "Wrong alignment on UARPointComponent");
-static_assert(sizeof(UARPointComponent) == 0x000330, "Wrong size on UARPointComponent");
-static_assert(offsetof(UARPointComponent, ReplicatedPayload) == 0x000320, "Member 'UARPointComponent::ReplicatedPayload' has a wrong offset!");
-
-// Class AugmentedReality.ARGeoAnchorComponent
-// 0x00A0 (0x03C0 - 0x0320)
-class UARGeoAnchorComponent final : public UARComponent
-{
-public:
-	struct FARGeoAnchorUpdatePayload              ReplicatedPayload;                                 // 0x0320(0x00A0)(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static void SetGeoAnchorComponentDebugMode(EGeoAnchorComponentDebugMode NewDebugMode);
-
-	void ReceiveAdd(const struct FARGeoAnchorUpdatePayload& Payload);
-	void ReceiveUpdate(const struct FARGeoAnchorUpdatePayload& Payload);
-	void ServerUpdatePayload(const struct FARGeoAnchorUpdatePayload& NewPayload);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ARGeoAnchorComponent">();
-	}
-	static class UARGeoAnchorComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UARGeoAnchorComponent>();
-	}
-};
-static_assert(alignof(UARGeoAnchorComponent) == 0x000010, "Wrong alignment on UARGeoAnchorComponent");
-static_assert(sizeof(UARGeoAnchorComponent) == 0x0003C0, "Wrong size on UARGeoAnchorComponent");
-static_assert(offsetof(UARGeoAnchorComponent, ReplicatedPayload) == 0x000320, "Member 'UARGeoAnchorComponent::ReplicatedPayload' has a wrong offset!");
 
 // Class AugmentedReality.ARFaceComponent
 // 0x0090 (0x03B0 - 0x0320)
@@ -508,6 +425,34 @@ static_assert(alignof(UARQRCodeComponent) == 0x000010, "Wrong alignment on UARQR
 static_assert(sizeof(UARQRCodeComponent) == 0x0003D0, "Wrong size on UARQRCodeComponent");
 static_assert(offsetof(UARQRCodeComponent, ReplicatedPayload) == 0x000320, "Member 'UARQRCodeComponent::ReplicatedPayload' has a wrong offset!");
 
+// Class AugmentedReality.ARPoseComponent
+// 0x0070 (0x0390 - 0x0320)
+class UARPoseComponent final : public UARComponent
+{
+public:
+	struct FARPoseUpdatePayload                   ReplicatedPayload;                                 // 0x0320(0x0070)(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, Protected, NativeAccessSpecifierProtected)
+
+public:
+	static void SetPoseComponentDebugMode(EPoseComponentDebugMode NewDebugMode);
+
+	void ReceiveAdd(const struct FARPoseUpdatePayload& Payload);
+	void ReceiveUpdate(const struct FARPoseUpdatePayload& Payload);
+	void ServerUpdatePayload(const struct FARPoseUpdatePayload& NewPayload);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ARPoseComponent">();
+	}
+	static class UARPoseComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UARPoseComponent>();
+	}
+};
+static_assert(alignof(UARPoseComponent) == 0x000010, "Wrong alignment on UARPoseComponent");
+static_assert(sizeof(UARPoseComponent) == 0x000390, "Wrong size on UARPoseComponent");
+static_assert(offsetof(UARPoseComponent, ReplicatedPayload) == 0x000320, "Member 'UARPoseComponent::ReplicatedPayload' has a wrong offset!");
+
 // Class AugmentedReality.AREnvironmentProbeComponent
 // 0x0060 (0x0380 - 0x0320)
 class UAREnvironmentProbeComponent final : public UARComponent
@@ -586,6 +531,34 @@ static_assert(alignof(UARMeshComponent) == 0x000010, "Wrong alignment on UARMesh
 static_assert(sizeof(UARMeshComponent) == 0x0003B0, "Wrong size on UARMeshComponent");
 static_assert(offsetof(UARMeshComponent, ReplicatedPayload) == 0x000320, "Member 'UARMeshComponent::ReplicatedPayload' has a wrong offset!");
 
+// Class AugmentedReality.ARGeoAnchorComponent
+// 0x00A0 (0x03C0 - 0x0320)
+class UARGeoAnchorComponent final : public UARComponent
+{
+public:
+	struct FARGeoAnchorUpdatePayload              ReplicatedPayload;                                 // 0x0320(0x00A0)(BlueprintVisible, BlueprintReadOnly, Net, RepNotify, Protected, NativeAccessSpecifierProtected)
+
+public:
+	static void SetGeoAnchorComponentDebugMode(EGeoAnchorComponentDebugMode NewDebugMode);
+
+	void ReceiveAdd(const struct FARGeoAnchorUpdatePayload& Payload);
+	void ReceiveUpdate(const struct FARGeoAnchorUpdatePayload& Payload);
+	void ServerUpdatePayload(const struct FARGeoAnchorUpdatePayload& NewPayload);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ARGeoAnchorComponent">();
+	}
+	static class UARGeoAnchorComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UARGeoAnchorComponent>();
+	}
+};
+static_assert(alignof(UARGeoAnchorComponent) == 0x000010, "Wrong alignment on UARGeoAnchorComponent");
+static_assert(sizeof(UARGeoAnchorComponent) == 0x0003C0, "Wrong size on UARGeoAnchorComponent");
+static_assert(offsetof(UARGeoAnchorComponent, ReplicatedPayload) == 0x000320, "Member 'UARGeoAnchorComponent::ReplicatedPayload' has a wrong offset!");
+
 // Class AugmentedReality.ARDependencyHandler
 // 0x0000 (0x0028 - 0x0028)
 class UARDependencyHandler final : public UObject
@@ -610,6 +583,33 @@ public:
 };
 static_assert(alignof(UARDependencyHandler) == 0x000008, "Wrong alignment on UARDependencyHandler");
 static_assert(sizeof(UARDependencyHandler) == 0x000028, "Wrong size on UARDependencyHandler");
+
+// Class AugmentedReality.ARGeoTrackingSupport
+// 0x0000 (0x0028 - 0x0028)
+class UARGeoTrackingSupport final : public UObject
+{
+public:
+	static class UARGeoTrackingSupport* GetGeoTrackingSupport();
+
+	bool AddGeoAnchorAtLocation(float Longitude, float Latitude, const class FString& OptionalAnchorName);
+	bool AddGeoAnchorAtLocationWithAltitude(float Longitude, float Latitude, float AltitudeMeters, const class FString& OptionalAnchorName);
+
+	EARGeoTrackingAccuracy GetGeoTrackingAccuracy() const;
+	EARGeoTrackingState GetGeoTrackingState() const;
+	EARGeoTrackingStateReason GetGeoTrackingStateReason() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ARGeoTrackingSupport">();
+	}
+	static class UARGeoTrackingSupport* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UARGeoTrackingSupport>();
+	}
+};
+static_assert(alignof(UARGeoTrackingSupport) == 0x000008, "Wrong alignment on UARGeoTrackingSupport");
+static_assert(sizeof(UARGeoTrackingSupport) == 0x000028, "Wrong size on UARGeoTrackingSupport");
 
 // Class AugmentedReality.CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy
 // 0x0050 (0x00A0 - 0x0050)

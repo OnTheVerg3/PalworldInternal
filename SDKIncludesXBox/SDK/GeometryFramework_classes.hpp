@@ -10,16 +10,42 @@
 
 #include "Basic.hpp"
 
-#include "PhysicsCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "GeometryFramework_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "PhysicsCore_structs.hpp"
 
 
 namespace SDK
 {
+
+// Class GeometryFramework.MeshReplacementCommandChangeTarget
+// 0x0000 (0x0000 - 0x0000)
+class IMeshReplacementCommandChangeTarget final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshReplacementCommandChangeTarget">();
+	}
+	static class IMeshReplacementCommandChangeTarget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IMeshReplacementCommandChangeTarget>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+static_assert(alignof(IMeshReplacementCommandChangeTarget) == 0x000001, "Wrong alignment on IMeshReplacementCommandChangeTarget");
+static_assert(sizeof(IMeshReplacementCommandChangeTarget) == 0x000001, "Wrong size on IMeshReplacementCommandChangeTarget");
 
 // Class GeometryFramework.BaseDynamicMeshComponent
 // 0x0070 (0x05E0 - 0x0570)
@@ -94,6 +120,58 @@ static_assert(offsetof(UBaseDynamicMeshComponent, SecondaryRenderMaterial) == 0x
 static_assert(offsetof(UBaseDynamicMeshComponent, bEnableRayTracing) == 0x0005C1, "Member 'UBaseDynamicMeshComponent::bEnableRayTracing' has a wrong offset!");
 static_assert(offsetof(UBaseDynamicMeshComponent, BaseMaterials) == 0x0005C8, "Member 'UBaseDynamicMeshComponent::BaseMaterials' has a wrong offset!");
 
+// Class GeometryFramework.MeshCommandChangeTarget
+// 0x0000 (0x0000 - 0x0000)
+class IMeshCommandChangeTarget final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshCommandChangeTarget">();
+	}
+	static class IMeshCommandChangeTarget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IMeshCommandChangeTarget>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+static_assert(alignof(IMeshCommandChangeTarget) == 0x000001, "Wrong alignment on IMeshCommandChangeTarget");
+static_assert(sizeof(IMeshCommandChangeTarget) == 0x000001, "Wrong size on IMeshCommandChangeTarget");
+
+// Class GeometryFramework.MeshVertexCommandChangeTarget
+// 0x0000 (0x0000 - 0x0000)
+class IMeshVertexCommandChangeTarget final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshVertexCommandChangeTarget">();
+	}
+	static class IMeshVertexCommandChangeTarget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IMeshVertexCommandChangeTarget>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+static_assert(alignof(IMeshVertexCommandChangeTarget) == 0x000001, "Wrong alignment on IMeshVertexCommandChangeTarget");
+static_assert(sizeof(IMeshVertexCommandChangeTarget) == 0x000001, "Wrong size on IMeshVertexCommandChangeTarget");
+
 // Class GeometryFramework.DynamicMeshComponent
 // 0x0210 (0x07F0 - 0x05E0)
 class UDynamicMeshComponent final : public UBaseDynamicMeshComponent
@@ -147,84 +225,6 @@ static_assert(offsetof(UDynamicMeshComponent, bDeferCollisionUpdates) == 0x00072
 static_assert(offsetof(UDynamicMeshComponent, MeshBodySetup) == 0x000728, "Member 'UDynamicMeshComponent::MeshBodySetup' has a wrong offset!");
 static_assert(offsetof(UDynamicMeshComponent, AggGeom) == 0x000768, "Member 'UDynamicMeshComponent::AggGeom' has a wrong offset!");
 static_assert(offsetof(UDynamicMeshComponent, AsyncBodySetupQueue) == 0x0007D0, "Member 'UDynamicMeshComponent::AsyncBodySetupQueue' has a wrong offset!");
-
-// Class GeometryFramework.MeshCommandChangeTarget
-// 0x0000 (0x0000 - 0x0000)
-class IMeshCommandChangeTarget final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MeshCommandChangeTarget">();
-	}
-	static class IMeshCommandChangeTarget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IMeshCommandChangeTarget>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-static_assert(alignof(IMeshCommandChangeTarget) == 0x000001, "Wrong alignment on IMeshCommandChangeTarget");
-static_assert(sizeof(IMeshCommandChangeTarget) == 0x000001, "Wrong size on IMeshCommandChangeTarget");
-
-// Class GeometryFramework.MeshReplacementCommandChangeTarget
-// 0x0000 (0x0000 - 0x0000)
-class IMeshReplacementCommandChangeTarget final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MeshReplacementCommandChangeTarget">();
-	}
-	static class IMeshReplacementCommandChangeTarget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IMeshReplacementCommandChangeTarget>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-static_assert(alignof(IMeshReplacementCommandChangeTarget) == 0x000001, "Wrong alignment on IMeshReplacementCommandChangeTarget");
-static_assert(sizeof(IMeshReplacementCommandChangeTarget) == 0x000001, "Wrong size on IMeshReplacementCommandChangeTarget");
-
-// Class GeometryFramework.MeshVertexCommandChangeTarget
-// 0x0000 (0x0000 - 0x0000)
-class IMeshVertexCommandChangeTarget final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MeshVertexCommandChangeTarget">();
-	}
-	static class IMeshVertexCommandChangeTarget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IMeshVertexCommandChangeTarget>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-static_assert(alignof(IMeshVertexCommandChangeTarget) == 0x000001, "Wrong alignment on IMeshVertexCommandChangeTarget");
-static_assert(sizeof(IMeshVertexCommandChangeTarget) == 0x000001, "Wrong size on IMeshVertexCommandChangeTarget");
 
 // Class GeometryFramework.DynamicMeshActor
 // 0x0018 (0x02A8 - 0x0290)

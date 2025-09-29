@@ -16,16 +16,16 @@
 namespace SDK::Params
 {
 
-// Function WBP_Other_Settings.WBP_Other_Settings_C.ApplySettings
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Other_Settings_C_ApplySettings final
+// Function WBP_Other_Settings.WBP_Other_Settings_C.OnLanguageChanged
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Other_Settings_C_OnLanguageChanged final
 {
 public:
-	bool                                          ApplyOriginal;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Other_Settings_C_ApplySettings) == 0x000001, "Wrong alignment on WBP_Other_Settings_C_ApplySettings");
-static_assert(sizeof(WBP_Other_Settings_C_ApplySettings) == 0x000001, "Wrong size on WBP_Other_Settings_C_ApplySettings");
-static_assert(offsetof(WBP_Other_Settings_C_ApplySettings, ApplyOriginal) == 0x000000, "Member 'WBP_Other_Settings_C_ApplySettings::ApplyOriginal' has a wrong offset!");
+static_assert(alignof(WBP_Other_Settings_C_OnLanguageChanged) == 0x000004, "Wrong alignment on WBP_Other_Settings_C_OnLanguageChanged");
+static_assert(sizeof(WBP_Other_Settings_C_OnLanguageChanged) == 0x000004, "Wrong size on WBP_Other_Settings_C_OnLanguageChanged");
+static_assert(offsetof(WBP_Other_Settings_C_OnLanguageChanged, Value) == 0x000000, "Member 'WBP_Other_Settings_C_OnLanguageChanged::Value' has a wrong offset!");
 
 // Function WBP_Other_Settings.WBP_Other_Settings_C.ExecuteUbergraph_WBP_Other_Settings
 // 0x00A8 (0x00A8 - 0x0000)
@@ -81,16 +81,16 @@ static_assert(offsetof(WBP_Other_Settings_C_ExecuteUbergraph_WBP_Other_Settings,
 static_assert(offsetof(WBP_Other_Settings_C_ExecuteUbergraph_WBP_Other_Settings, CallFunc_Map_Find_ReturnValue) == 0x0000A0, "Member 'WBP_Other_Settings_C_ExecuteUbergraph_WBP_Other_Settings::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Other_Settings_C_ExecuteUbergraph_WBP_Other_Settings, CallFunc_Array_Add_ReturnValue) == 0x0000A4, "Member 'WBP_Other_Settings_C_ExecuteUbergraph_WBP_Other_Settings::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
-// Function WBP_Other_Settings.WBP_Other_Settings_C.OnLanguageChanged
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Other_Settings_C_OnLanguageChanged final
+// Function WBP_Other_Settings.WBP_Other_Settings_C.ApplySettings
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Other_Settings_C_ApplySettings final
 {
 public:
-	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ApplyOriginal;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Other_Settings_C_OnLanguageChanged) == 0x000004, "Wrong alignment on WBP_Other_Settings_C_OnLanguageChanged");
-static_assert(sizeof(WBP_Other_Settings_C_OnLanguageChanged) == 0x000004, "Wrong size on WBP_Other_Settings_C_OnLanguageChanged");
-static_assert(offsetof(WBP_Other_Settings_C_OnLanguageChanged, Value) == 0x000000, "Member 'WBP_Other_Settings_C_OnLanguageChanged::Value' has a wrong offset!");
+static_assert(alignof(WBP_Other_Settings_C_ApplySettings) == 0x000001, "Wrong alignment on WBP_Other_Settings_C_ApplySettings");
+static_assert(sizeof(WBP_Other_Settings_C_ApplySettings) == 0x000001, "Wrong size on WBP_Other_Settings_C_ApplySettings");
+static_assert(offsetof(WBP_Other_Settings_C_ApplySettings, ApplyOriginal) == 0x000000, "Member 'WBP_Other_Settings_C_ApplySettings::ApplyOriginal' has a wrong offset!");
 
 }
 

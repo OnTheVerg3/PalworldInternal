@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
 #include "WBP_IndividualParameterBindWidget_classes.hpp"
 #include "UMG_structs.hpp"
 #include "E_PalUIStatusDIsplayParameter_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
 namespace SDK
@@ -208,7 +208,7 @@ public:
 	void SetLockEdit(bool IsLock);
 	void SetImportedFlag(bool bImportedFlag);
 	void SetGender(EPalGenderType GenderType);
-	void SetFriendship(int32 FriendshipRank, int32 FriendshipPoint);
+	void SetFriendShip(int32 FriendshipRank, int32 FriendshipPoint);
 	void SetFoodAmount(int32 FoodAmount);
 	void SetElementType(EPalElementType type1, EPalElementType type2);
 	void Set_Work_Suitability(const TMap<EPalWorkSuitability, int32>& WorkSuitabilities);
