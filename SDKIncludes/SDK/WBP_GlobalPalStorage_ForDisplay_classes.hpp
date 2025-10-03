@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "F_PalUIGlobalPalStorageExportCacheData_structs.hpp"
 #include "Pal_structs.hpp"
 #include "Pal_classes.hpp"
 #include "F_PalUIGlobalPalStorageImportCacheData_structs.hpp"
 #include "Engine_structs.hpp"
-#include "F_PalUIGlobalPalStorageExportCacheData_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -47,10 +47,6 @@ public:
 	struct FPalUIActionBindData                   SendSlotActionhandle;                              // 0x04E0(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
-	void UnregisterSendAndFavoriteAction();
-	void SetImportingMode(bool bImporting);
-	void Set_Enable_Show_Pal_Status_Action(bool bIsEnableAction);
-	void Register_Send_And_Favorite_Action();
 	void OpenImportOverwriteWindow(const struct FPalGlobalPalStorageImportResultAdditionalData& AdditionalData);
 	void OnStartImport(int32 GPSDataIndex, int32 TargetSlotIndex, const struct FPalGlobalPalStorageImportOption& ImportOption);
 	void OnShowPalDetailAction();
@@ -81,6 +77,10 @@ public:
 	void BndEvt__WBP_GlobalPalStorage_ForDisplay_WBP_IngameMenu_PalBoxGlobal_K2Node_ComponentBoundEvent_2_OnConfirmRemoveData__DelegateSignature(TArray<struct FPalInstanceID>& SelectedInstanceIDArray);
 	void BndEvt__WBP_GlobalPalStorage_ForDisplay_WBP_IngameMenu_PalBoxGlobal_K2Node_ComponentBoundEvent_1_OnSelectedGPSSlot__DelegateSignature(class UWBP_PalCharacterSlotButtonBase_C* Widget, EPalItemSlotPressType PressType);
 	void BndEvt__WBP_GlobalPalStorage_ForDisplay_WBP_IngameMenu_PalBoxGlobal_K2Node_ComponentBoundEvent_0_OnSelectedInGameBoxSlot__DelegateSignature(class UWBP_PalCharacterSlotButtonBase_C* Widget, EPalItemSlotPressType PressType);
+	void Register_Send_And_Favorite_Action();
+	void Set_Enable_Show_Pal_Status_Action(bool bIsEnableAction);
+	void SetImportingMode(bool bImporting);
+	void UnregisterSendAndFavoriteAction();
 
 	class UPalUIGlobalPalStorageList* GetGlobalStorageListUI() const;
 	class UWidget* BP_GetDesiredFocusTarget() const;

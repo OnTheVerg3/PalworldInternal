@@ -104,7 +104,7 @@ public:
 	TDelegate<void(class UWBP_PalCharacterSlotButtonBase_C* Widget)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UWBP_PalCharacterSlotButtonBase_C* Widget)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UWBP_PalCharacterSlotButtonBase_C* Widget)> K2Node_CreateDelegate_OutputDelegate_3; // 0x0038(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UWBP_PalCharacterSlotButtonBase_C* ButtonBase)> K2Node_CreateDelegate_OutputDelegate_4; // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UWBP_PalCharacterSlotButtonBase_C* buttonBase)> K2Node_CreateDelegate_OutputDelegate_4; // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UWBP_PalCharacterSlotButtonBase_C* Widget, EPalItemSlotPressType PressType)> K2Node_CreateDelegate_OutputDelegate_5; // 0x0058(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UWBP_PalCharacterSlotButtonBase_C* SlotButton)> K2Node_CreateDelegate_OutputDelegate_6; // 0x0068(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -293,11 +293,11 @@ static_assert(offsetof(WBP_PalCharacterScrollList_C_GetTopFocusTarget, CallFunc_
 struct WBP_PalCharacterScrollList_C_On_Right_Clicked_Internal final
 {
 public:
-	class UWBP_PalCharacterSlotButtonBase_C*      ButtonBase;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_PalCharacterSlotButtonBase_C*      buttonBase;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_PalCharacterScrollList_C_On_Right_Clicked_Internal) == 0x000008, "Wrong alignment on WBP_PalCharacterScrollList_C_On_Right_Clicked_Internal");
 static_assert(sizeof(WBP_PalCharacterScrollList_C_On_Right_Clicked_Internal) == 0x000008, "Wrong size on WBP_PalCharacterScrollList_C_On_Right_Clicked_Internal");
-static_assert(offsetof(WBP_PalCharacterScrollList_C_On_Right_Clicked_Internal, ButtonBase) == 0x000000, "Member 'WBP_PalCharacterScrollList_C_On_Right_Clicked_Internal::ButtonBase' has a wrong offset!");
+static_assert(offsetof(WBP_PalCharacterScrollList_C_On_Right_Clicked_Internal, buttonBase) == 0x000000, "Member 'WBP_PalCharacterScrollList_C_On_Right_Clicked_Internal::buttonBase' has a wrong offset!");
 
 // Function WBP_PalCharacterScrollList.WBP_PalCharacterScrollList_C.OnFocused_Internal
 // 0x0008 (0x0008 - 0x0000)

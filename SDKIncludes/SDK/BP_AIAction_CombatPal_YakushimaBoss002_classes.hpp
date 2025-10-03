@@ -12,8 +12,8 @@
 
 #include "Pal_structs.hpp"
 #include "Engine_structs.hpp"
-#include "BP_AIAction_CombatPal_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BP_AIAction_CombatPal_classes.hpp"
 
 
 namespace SDK

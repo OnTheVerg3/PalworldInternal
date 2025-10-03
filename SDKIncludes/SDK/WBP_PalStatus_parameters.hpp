@@ -185,7 +185,7 @@ public:
 	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPalIndividualCharacterHandle*          CallFunc_Array_Get_Item;                           // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPalIndividualCharacterParameter*       CallFunc_TryGetIndividualParameter_ReturnValue;    // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetNickName_OutName;                      // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNickName_outName;                      // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0088(0x0018)()
 };
 static_assert(alignof(WBP_PalStatus_C_NickNameFinalCheck) == 0x000008, "Wrong alignment on WBP_PalStatus_C_NickNameFinalCheck");
@@ -199,7 +199,7 @@ static_assert(offsetof(WBP_PalStatus_C_NickNameFinalCheck, CallFunc_Len_ReturnVa
 static_assert(offsetof(WBP_PalStatus_C_NickNameFinalCheck, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000064, "Member 'WBP_PalStatus_C_NickNameFinalCheck::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_PalStatus_C_NickNameFinalCheck, CallFunc_Array_Get_Item) == 0x000068, "Member 'WBP_PalStatus_C_NickNameFinalCheck::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(WBP_PalStatus_C_NickNameFinalCheck, CallFunc_TryGetIndividualParameter_ReturnValue) == 0x000070, "Member 'WBP_PalStatus_C_NickNameFinalCheck::CallFunc_TryGetIndividualParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_PalStatus_C_NickNameFinalCheck, CallFunc_GetNickName_OutName) == 0x000078, "Member 'WBP_PalStatus_C_NickNameFinalCheck::CallFunc_GetNickName_OutName' has a wrong offset!");
+static_assert(offsetof(WBP_PalStatus_C_NickNameFinalCheck, CallFunc_GetNickName_outName) == 0x000078, "Member 'WBP_PalStatus_C_NickNameFinalCheck::CallFunc_GetNickName_outName' has a wrong offset!");
 static_assert(offsetof(WBP_PalStatus_C_NickNameFinalCheck, CallFunc_Conv_StringToText_ReturnValue) == 0x000088, "Member 'WBP_PalStatus_C_NickNameFinalCheck::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function WBP_PalStatus.WBP_PalStatus_C.Is Editing Nick Name

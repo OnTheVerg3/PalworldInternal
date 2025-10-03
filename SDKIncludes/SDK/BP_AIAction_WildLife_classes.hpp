@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "EWildPalAIMoveMode_structs.hpp"
+#include "EWildPalAIRestType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EWildPalAIMoveMode_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "EWildPalAIRestType_structs.hpp"
 #include "Pal_structs.hpp"
 #include "BP_AIAction_CanCombatBase_classes.hpp"
 
@@ -61,7 +61,10 @@ public:
 public:
 	void ActionAbort(class APawn* ControlledPawn);
 	void ActionFinished(class APawn* ControlledPawn, EPawnActionResult WithResult);
+	void ActionPause(class APawn* ControlledPawn);
 	void ActionPostTick(class APawn* ControlledPawn, float DeltaSeconds);
+	void ActionResume(class APawn* ControlledPawn);
+	void ActionStart(class APawn* ControlledPawn);
 	void ActionTick(class APawn* ControlledPawn, float DeltaSeconds);
 	void ActionTickAnyThread(class APawn* ControlledPawn, float DeltaSeconds);
 	void ChangeNextMovePosition(double Radius, const struct FVector& CenterPos);
@@ -84,12 +87,9 @@ public:
 	void RestModeUpdate(bool Nest);
 	void RestModeWalk();
 	void SetDrinkWaterFlag();
+	void SoundEvent(const struct FVector& EmitLocation);
 	void StateUpdate();
 	void カスタムイベント_Stack();
-	void ActionPause(class APawn* ControlledPawn);
-	void ActionResume(class APawn* ControlledPawn);
-	void ActionStart(class APawn* ControlledPawn);
-	void SoundEvent(const struct FVector& EmitLocation);
 
 public:
 	static class UClass* StaticClass()

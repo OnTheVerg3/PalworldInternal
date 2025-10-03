@@ -20,47 +20,27 @@
 namespace SDK::Params
 {
 
-// Function WBP_OptionSettings.WBP_OptionSettings_C.SwitchTabTo
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_OptionSettings_C_SwitchTabTo final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_OptionSettings_C_SwitchTabTo) == 0x000004, "Wrong alignment on WBP_OptionSettings_C_SwitchTabTo");
-static_assert(sizeof(WBP_OptionSettings_C_SwitchTabTo) == 0x000004, "Wrong size on WBP_OptionSettings_C_SwitchTabTo");
-static_assert(offsetof(WBP_OptionSettings_C_SwitchTabTo, Index_0) == 0x000000, "Member 'WBP_OptionSettings_C_SwitchTabTo::Index_0' has a wrong offset!");
-
-// Function WBP_OptionSettings.WBP_OptionSettings_C.SetDefault
+// Function WBP_OptionSettings.WBP_OptionSettings_C.ApplySettings
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_OptionSettings_C_SetDefault final
+struct WBP_OptionSettings_C_ApplySettings final
 {
 public:
 	bool                                          Confirmed;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_OptionSettings_C_SetDefault) == 0x000001, "Wrong alignment on WBP_OptionSettings_C_SetDefault");
-static_assert(sizeof(WBP_OptionSettings_C_SetDefault) == 0x000001, "Wrong size on WBP_OptionSettings_C_SetDefault");
-static_assert(offsetof(WBP_OptionSettings_C_SetDefault, Confirmed) == 0x000000, "Member 'WBP_OptionSettings_C_SetDefault::Confirmed' has a wrong offset!");
+static_assert(alignof(WBP_OptionSettings_C_ApplySettings) == 0x000001, "Wrong alignment on WBP_OptionSettings_C_ApplySettings");
+static_assert(sizeof(WBP_OptionSettings_C_ApplySettings) == 0x000001, "Wrong size on WBP_OptionSettings_C_ApplySettings");
+static_assert(offsetof(WBP_OptionSettings_C_ApplySettings, Confirmed) == 0x000000, "Member 'WBP_OptionSettings_C_ApplySettings::Confirmed' has a wrong offset!");
 
-// Function WBP_OptionSettings.WBP_OptionSettings_C.Set Tab Action
-// 0x002C (0x002C - 0x0000)
-struct WBP_OptionSettings_C_Set_Tab_Action final
+// Function WBP_OptionSettings.WBP_OptionSettings_C.EmptyEvent
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_OptionSettings_C_EmptyEvent final
 {
 public:
-	bool                                          Bind;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FPalUIActionBindData                   CallFunc_RegisterActionBinding_ReturnValue;        // 0x0024(0x0004)(NoDestructor)
-	struct FPalUIActionBindData                   CallFunc_RegisterActionBinding_ReturnValue_1;      // 0x0028(0x0004)(NoDestructor)
+	bool                                          bResult;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_OptionSettings_C_Set_Tab_Action) == 0x000004, "Wrong alignment on WBP_OptionSettings_C_Set_Tab_Action");
-static_assert(sizeof(WBP_OptionSettings_C_Set_Tab_Action) == 0x00002C, "Wrong size on WBP_OptionSettings_C_Set_Tab_Action");
-static_assert(offsetof(WBP_OptionSettings_C_Set_Tab_Action, Bind) == 0x000000, "Member 'WBP_OptionSettings_C_Set_Tab_Action::Bind' has a wrong offset!");
-static_assert(offsetof(WBP_OptionSettings_C_Set_Tab_Action, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'WBP_OptionSettings_C_Set_Tab_Action::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WBP_OptionSettings_C_Set_Tab_Action, K2Node_CreateDelegate_OutputDelegate_1) == 0x000014, "Member 'WBP_OptionSettings_C_Set_Tab_Action::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WBP_OptionSettings_C_Set_Tab_Action, CallFunc_RegisterActionBinding_ReturnValue) == 0x000024, "Member 'WBP_OptionSettings_C_Set_Tab_Action::CallFunc_RegisterActionBinding_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_OptionSettings_C_Set_Tab_Action, CallFunc_RegisterActionBinding_ReturnValue_1) == 0x000028, "Member 'WBP_OptionSettings_C_Set_Tab_Action::CallFunc_RegisterActionBinding_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(WBP_OptionSettings_C_EmptyEvent) == 0x000001, "Wrong alignment on WBP_OptionSettings_C_EmptyEvent");
+static_assert(sizeof(WBP_OptionSettings_C_EmptyEvent) == 0x000001, "Wrong size on WBP_OptionSettings_C_EmptyEvent");
+static_assert(offsetof(WBP_OptionSettings_C_EmptyEvent, bResult) == 0x000000, "Member 'WBP_OptionSettings_C_EmptyEvent::bResult' has a wrong offset!");
 
 // Function WBP_OptionSettings.WBP_OptionSettings_C.ExecuteUbergraph_WBP_OptionSettings
 // 0x0698 (0x0698 - 0x0000)
@@ -492,27 +472,47 @@ static_assert(offsetof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings,
 static_assert(offsetof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings, CallFunc_BooleanOR_ReturnValue_23) == 0x000695, "Member 'WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings::CallFunc_BooleanOR_ReturnValue_23' has a wrong offset!");
 static_assert(offsetof(WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings, CallFunc_Not_PreBool_ReturnValue_10) == 0x000696, "Member 'WBP_OptionSettings_C_ExecuteUbergraph_WBP_OptionSettings::CallFunc_Not_PreBool_ReturnValue_10' has a wrong offset!");
 
-// Function WBP_OptionSettings.WBP_OptionSettings_C.EmptyEvent
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_OptionSettings_C_EmptyEvent final
+// Function WBP_OptionSettings.WBP_OptionSettings_C.Set Tab Action
+// 0x002C (0x002C - 0x0000)
+struct WBP_OptionSettings_C_Set_Tab_Action final
 {
 public:
-	bool                                          bResult;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Bind;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalUIActionBindData                   CallFunc_RegisterActionBinding_ReturnValue;        // 0x0024(0x0004)(NoDestructor)
+	struct FPalUIActionBindData                   CallFunc_RegisterActionBinding_ReturnValue_1;      // 0x0028(0x0004)(NoDestructor)
 };
-static_assert(alignof(WBP_OptionSettings_C_EmptyEvent) == 0x000001, "Wrong alignment on WBP_OptionSettings_C_EmptyEvent");
-static_assert(sizeof(WBP_OptionSettings_C_EmptyEvent) == 0x000001, "Wrong size on WBP_OptionSettings_C_EmptyEvent");
-static_assert(offsetof(WBP_OptionSettings_C_EmptyEvent, bResult) == 0x000000, "Member 'WBP_OptionSettings_C_EmptyEvent::bResult' has a wrong offset!");
+static_assert(alignof(WBP_OptionSettings_C_Set_Tab_Action) == 0x000004, "Wrong alignment on WBP_OptionSettings_C_Set_Tab_Action");
+static_assert(sizeof(WBP_OptionSettings_C_Set_Tab_Action) == 0x00002C, "Wrong size on WBP_OptionSettings_C_Set_Tab_Action");
+static_assert(offsetof(WBP_OptionSettings_C_Set_Tab_Action, Bind) == 0x000000, "Member 'WBP_OptionSettings_C_Set_Tab_Action::Bind' has a wrong offset!");
+static_assert(offsetof(WBP_OptionSettings_C_Set_Tab_Action, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'WBP_OptionSettings_C_Set_Tab_Action::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WBP_OptionSettings_C_Set_Tab_Action, K2Node_CreateDelegate_OutputDelegate_1) == 0x000014, "Member 'WBP_OptionSettings_C_Set_Tab_Action::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WBP_OptionSettings_C_Set_Tab_Action, CallFunc_RegisterActionBinding_ReturnValue) == 0x000024, "Member 'WBP_OptionSettings_C_Set_Tab_Action::CallFunc_RegisterActionBinding_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_OptionSettings_C_Set_Tab_Action, CallFunc_RegisterActionBinding_ReturnValue_1) == 0x000028, "Member 'WBP_OptionSettings_C_Set_Tab_Action::CallFunc_RegisterActionBinding_ReturnValue_1' has a wrong offset!");
 
-// Function WBP_OptionSettings.WBP_OptionSettings_C.ApplySettings
+// Function WBP_OptionSettings.WBP_OptionSettings_C.SetDefault
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_OptionSettings_C_ApplySettings final
+struct WBP_OptionSettings_C_SetDefault final
 {
 public:
 	bool                                          Confirmed;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_OptionSettings_C_ApplySettings) == 0x000001, "Wrong alignment on WBP_OptionSettings_C_ApplySettings");
-static_assert(sizeof(WBP_OptionSettings_C_ApplySettings) == 0x000001, "Wrong size on WBP_OptionSettings_C_ApplySettings");
-static_assert(offsetof(WBP_OptionSettings_C_ApplySettings, Confirmed) == 0x000000, "Member 'WBP_OptionSettings_C_ApplySettings::Confirmed' has a wrong offset!");
+static_assert(alignof(WBP_OptionSettings_C_SetDefault) == 0x000001, "Wrong alignment on WBP_OptionSettings_C_SetDefault");
+static_assert(sizeof(WBP_OptionSettings_C_SetDefault) == 0x000001, "Wrong size on WBP_OptionSettings_C_SetDefault");
+static_assert(offsetof(WBP_OptionSettings_C_SetDefault, Confirmed) == 0x000000, "Member 'WBP_OptionSettings_C_SetDefault::Confirmed' has a wrong offset!");
+
+// Function WBP_OptionSettings.WBP_OptionSettings_C.SwitchTabTo
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_OptionSettings_C_SwitchTabTo final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_OptionSettings_C_SwitchTabTo) == 0x000004, "Wrong alignment on WBP_OptionSettings_C_SwitchTabTo");
+static_assert(sizeof(WBP_OptionSettings_C_SwitchTabTo) == 0x000004, "Wrong size on WBP_OptionSettings_C_SwitchTabTo");
+static_assert(offsetof(WBP_OptionSettings_C_SwitchTabTo, Index_0) == 0x000000, "Member 'WBP_OptionSettings_C_SwitchTabTo::Index_0' has a wrong offset!");
 
 // Function WBP_OptionSettings.WBP_OptionSettings_C.BP_GetDesiredFocusTarget
 // 0x0028 (0x0028 - 0x0000)

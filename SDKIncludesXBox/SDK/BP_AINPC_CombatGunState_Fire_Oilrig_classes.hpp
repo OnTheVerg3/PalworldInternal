@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_AINPC_CombatGunState_Aim_Oilrig_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_AINPC_CombatGunState_Aim_Oilrig_classes.hpp"
 
 
 namespace SDK

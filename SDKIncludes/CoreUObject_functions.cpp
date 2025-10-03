@@ -8,10 +8,10 @@
 
 // Package: CoreUObject
 
-#include "Basic.hpp"
+#include "../SDK/Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
-#include "CoreUObject_parameters.hpp"
+#include "../SDK/CoreUObject_classes.hpp"
+#include "../SDK/CoreUObject_parameters.hpp"
 
 
 namespace SDK

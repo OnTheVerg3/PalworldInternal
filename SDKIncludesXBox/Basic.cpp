@@ -9,7 +9,7 @@
 // Basic file containing function-implementations from Basic.hpp
 
 #include <Windows.h>
-#include "Basic.hpp"
+#include "SDKIncludesXBox/SDK/Basic.hpp"
 
 #include "SDKIncludesXBox/SDK/CoreUObject_classes.hpp"
 #include "SDKIncludesXBox/SDK/CoreUObject_structs.hpp"

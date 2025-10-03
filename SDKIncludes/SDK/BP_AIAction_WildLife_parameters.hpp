@@ -43,6 +43,17 @@ static_assert(sizeof(BP_AIAction_WildLife_C_ActionFinished) == 0x000010, "Wrong 
 static_assert(offsetof(BP_AIAction_WildLife_C_ActionFinished, ControlledPawn) == 0x000000, "Member 'BP_AIAction_WildLife_C_ActionFinished::ControlledPawn' has a wrong offset!");
 static_assert(offsetof(BP_AIAction_WildLife_C_ActionFinished, WithResult) == 0x000008, "Member 'BP_AIAction_WildLife_C_ActionFinished::WithResult' has a wrong offset!");
 
+// Function BP_AIAction_WildLife.BP_AIAction_WildLife_C.ActionPause
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AIAction_WildLife_C_ActionPause final
+{
+public:
+	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AIAction_WildLife_C_ActionPause) == 0x000008, "Wrong alignment on BP_AIAction_WildLife_C_ActionPause");
+static_assert(sizeof(BP_AIAction_WildLife_C_ActionPause) == 0x000008, "Wrong size on BP_AIAction_WildLife_C_ActionPause");
+static_assert(offsetof(BP_AIAction_WildLife_C_ActionPause, ControlledPawn) == 0x000000, "Member 'BP_AIAction_WildLife_C_ActionPause::ControlledPawn' has a wrong offset!");
+
 // Function BP_AIAction_WildLife.BP_AIAction_WildLife_C.ActionPostTick
 // 0x0010 (0x0010 - 0x0000)
 struct BP_AIAction_WildLife_C_ActionPostTick final
@@ -55,6 +66,28 @@ static_assert(alignof(BP_AIAction_WildLife_C_ActionPostTick) == 0x000008, "Wrong
 static_assert(sizeof(BP_AIAction_WildLife_C_ActionPostTick) == 0x000010, "Wrong size on BP_AIAction_WildLife_C_ActionPostTick");
 static_assert(offsetof(BP_AIAction_WildLife_C_ActionPostTick, ControlledPawn) == 0x000000, "Member 'BP_AIAction_WildLife_C_ActionPostTick::ControlledPawn' has a wrong offset!");
 static_assert(offsetof(BP_AIAction_WildLife_C_ActionPostTick, DeltaSeconds) == 0x000008, "Member 'BP_AIAction_WildLife_C_ActionPostTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_AIAction_WildLife.BP_AIAction_WildLife_C.ActionResume
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AIAction_WildLife_C_ActionResume final
+{
+public:
+	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AIAction_WildLife_C_ActionResume) == 0x000008, "Wrong alignment on BP_AIAction_WildLife_C_ActionResume");
+static_assert(sizeof(BP_AIAction_WildLife_C_ActionResume) == 0x000008, "Wrong size on BP_AIAction_WildLife_C_ActionResume");
+static_assert(offsetof(BP_AIAction_WildLife_C_ActionResume, ControlledPawn) == 0x000000, "Member 'BP_AIAction_WildLife_C_ActionResume::ControlledPawn' has a wrong offset!");
+
+// Function BP_AIAction_WildLife.BP_AIAction_WildLife_C.ActionStart
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AIAction_WildLife_C_ActionStart final
+{
+public:
+	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AIAction_WildLife_C_ActionStart) == 0x000008, "Wrong alignment on BP_AIAction_WildLife_C_ActionStart");
+static_assert(sizeof(BP_AIAction_WildLife_C_ActionStart) == 0x000008, "Wrong size on BP_AIAction_WildLife_C_ActionStart");
+static_assert(offsetof(BP_AIAction_WildLife_C_ActionStart, ControlledPawn) == 0x000000, "Member 'BP_AIAction_WildLife_C_ActionStart::ControlledPawn' has a wrong offset!");
 
 // Function BP_AIAction_WildLife.BP_AIAction_WildLife_C.ActionTick
 // 0x0010 (0x0010 - 0x0000)
@@ -322,7 +355,7 @@ public:
 	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetMyLocation_NewParam_3;                 // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsNearTwoPoint_ReturnValue_1;             // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPalActionType                                K2Node_CustomEvent_action;                         // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPalActionType                                K2Node_CustomEvent_Action;                         // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_14A[0x6];                                      // 0x014A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AController*                            CallFunc_GetController_ReturnValue_2;              // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -446,7 +479,7 @@ static_assert(offsetof(BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildL
 static_assert(offsetof(BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife, K2Node_CustomEvent_Nest) == 0x000128, "Member 'BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife::K2Node_CustomEvent_Nest' has a wrong offset!");
 static_assert(offsetof(BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife, CallFunc_GetMyLocation_NewParam_3) == 0x000130, "Member 'BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife::CallFunc_GetMyLocation_NewParam_3' has a wrong offset!");
 static_assert(offsetof(BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife, CallFunc_IsNearTwoPoint_ReturnValue_1) == 0x000148, "Member 'BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife::CallFunc_IsNearTwoPoint_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife, K2Node_CustomEvent_action) == 0x000149, "Member 'BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife::K2Node_CustomEvent_action' has a wrong offset!");
+static_assert(offsetof(BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife, K2Node_CustomEvent_Action) == 0x000149, "Member 'BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife::K2Node_CustomEvent_Action' has a wrong offset!");
 static_assert(offsetof(BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife, CallFunc_GetController_ReturnValue_2) == 0x000150, "Member 'BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife::CallFunc_GetController_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife, CallFunc_K2_GetPawn_ReturnValue) == 0x000158, "Member 'BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife, K2Node_CreateDelegate_OutputDelegate_3) == 0x000160, "Member 'BP_AIAction_WildLife_C_ExecuteUbergraph_BP_AIAction_WildLife::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
@@ -755,6 +788,17 @@ static_assert(alignof(BP_AIAction_WildLife_C_RestModeUpdate) == 0x000001, "Wrong
 static_assert(sizeof(BP_AIAction_WildLife_C_RestModeUpdate) == 0x000001, "Wrong size on BP_AIAction_WildLife_C_RestModeUpdate");
 static_assert(offsetof(BP_AIAction_WildLife_C_RestModeUpdate, Nest) == 0x000000, "Member 'BP_AIAction_WildLife_C_RestModeUpdate::Nest' has a wrong offset!");
 
+// Function BP_AIAction_WildLife.BP_AIAction_WildLife_C.SoundEvent
+// 0x0018 (0x0018 - 0x0000)
+struct BP_AIAction_WildLife_C_SoundEvent final
+{
+public:
+	struct FVector                                EmitLocation;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AIAction_WildLife_C_SoundEvent) == 0x000008, "Wrong alignment on BP_AIAction_WildLife_C_SoundEvent");
+static_assert(sizeof(BP_AIAction_WildLife_C_SoundEvent) == 0x000018, "Wrong size on BP_AIAction_WildLife_C_SoundEvent");
+static_assert(offsetof(BP_AIAction_WildLife_C_SoundEvent, EmitLocation) == 0x000000, "Member 'BP_AIAction_WildLife_C_SoundEvent::EmitLocation' has a wrong offset!");
+
 // Function BP_AIAction_WildLife.BP_AIAction_WildLife_C.StateUpdate
 // 0x00C8 (0x00C8 - 0x0000)
 struct BP_AIAction_WildLife_C_StateUpdate final
@@ -806,50 +850,6 @@ static_assert(offsetof(BP_AIAction_WildLife_C_StateUpdate, CallFunc_IsNearTwoPoi
 static_assert(offsetof(BP_AIAction_WildLife_C_StateUpdate, CallFunc_IsValid_ReturnValue) == 0x0000B9, "Member 'BP_AIAction_WildLife_C_StateUpdate::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_AIAction_WildLife_C_StateUpdate, CallFunc_IsNearTwoPoint_distance_ImplicitCast) == 0x0000BC, "Member 'BP_AIAction_WildLife_C_StateUpdate::CallFunc_IsNearTwoPoint_distance_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_AIAction_WildLife_C_StateUpdate, CallFunc_IsNearTwoPoint_distance_ImplicitCast_1) == 0x0000C0, "Member 'BP_AIAction_WildLife_C_StateUpdate::CallFunc_IsNearTwoPoint_distance_ImplicitCast_1' has a wrong offset!");
-
-// Function BP_AIAction_WildLife.BP_AIAction_WildLife_C.ActionPause
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AIAction_WildLife_C_ActionPause final
-{
-public:
-	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AIAction_WildLife_C_ActionPause) == 0x000008, "Wrong alignment on BP_AIAction_WildLife_C_ActionPause");
-static_assert(sizeof(BP_AIAction_WildLife_C_ActionPause) == 0x000008, "Wrong size on BP_AIAction_WildLife_C_ActionPause");
-static_assert(offsetof(BP_AIAction_WildLife_C_ActionPause, ControlledPawn) == 0x000000, "Member 'BP_AIAction_WildLife_C_ActionPause::ControlledPawn' has a wrong offset!");
-
-// Function BP_AIAction_WildLife.BP_AIAction_WildLife_C.ActionResume
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AIAction_WildLife_C_ActionResume final
-{
-public:
-	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AIAction_WildLife_C_ActionResume) == 0x000008, "Wrong alignment on BP_AIAction_WildLife_C_ActionResume");
-static_assert(sizeof(BP_AIAction_WildLife_C_ActionResume) == 0x000008, "Wrong size on BP_AIAction_WildLife_C_ActionResume");
-static_assert(offsetof(BP_AIAction_WildLife_C_ActionResume, ControlledPawn) == 0x000000, "Member 'BP_AIAction_WildLife_C_ActionResume::ControlledPawn' has a wrong offset!");
-
-// Function BP_AIAction_WildLife.BP_AIAction_WildLife_C.ActionStart
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AIAction_WildLife_C_ActionStart final
-{
-public:
-	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AIAction_WildLife_C_ActionStart) == 0x000008, "Wrong alignment on BP_AIAction_WildLife_C_ActionStart");
-static_assert(sizeof(BP_AIAction_WildLife_C_ActionStart) == 0x000008, "Wrong size on BP_AIAction_WildLife_C_ActionStart");
-static_assert(offsetof(BP_AIAction_WildLife_C_ActionStart, ControlledPawn) == 0x000000, "Member 'BP_AIAction_WildLife_C_ActionStart::ControlledPawn' has a wrong offset!");
-
-// Function BP_AIAction_WildLife.BP_AIAction_WildLife_C.SoundEvent
-// 0x0018 (0x0018 - 0x0000)
-struct BP_AIAction_WildLife_C_SoundEvent final
-{
-public:
-	struct FVector                                EmitLocation;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AIAction_WildLife_C_SoundEvent) == 0x000008, "Wrong alignment on BP_AIAction_WildLife_C_SoundEvent");
-static_assert(sizeof(BP_AIAction_WildLife_C_SoundEvent) == 0x000018, "Wrong size on BP_AIAction_WildLife_C_SoundEvent");
-static_assert(offsetof(BP_AIAction_WildLife_C_SoundEvent, EmitLocation) == 0x000000, "Member 'BP_AIAction_WildLife_C_SoundEvent::EmitLocation' has a wrong offset!");
 
 }
 

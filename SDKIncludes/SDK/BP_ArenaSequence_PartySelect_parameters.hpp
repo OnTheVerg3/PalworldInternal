@@ -205,7 +205,7 @@ public:
 	class UPalIndividualCharacterParameter*       CallFunc_Array_Get_Item_1;                         // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetNickName_OutName;                      // 0x01D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNickName_outName;                      // 0x01D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x01F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -247,7 +247,7 @@ static_assert(offsetof(BP_ArenaSequence_PartySelect_C_PrintPartySelectLog, CallF
 static_assert(offsetof(BP_ArenaSequence_PartySelect_C_PrintPartySelectLog, CallFunc_Array_IsEmpty_ReturnValue) == 0x0001C1, "Member 'BP_ArenaSequence_PartySelect_C_PrintPartySelectLog::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_ArenaSequence_PartySelect_C_PrintPartySelectLog, CallFunc_Array_Get_Item_1) == 0x0001C8, "Member 'BP_ArenaSequence_PartySelect_C_PrintPartySelectLog::CallFunc_Array_Get_Item_1' has a wrong offset!");
 static_assert(offsetof(BP_ArenaSequence_PartySelect_C_PrintPartySelectLog, CallFunc_Not_PreBool_ReturnValue_1) == 0x0001D0, "Member 'BP_ArenaSequence_PartySelect_C_PrintPartySelectLog::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ArenaSequence_PartySelect_C_PrintPartySelectLog, CallFunc_GetNickName_OutName) == 0x0001D8, "Member 'BP_ArenaSequence_PartySelect_C_PrintPartySelectLog::CallFunc_GetNickName_OutName' has a wrong offset!");
+static_assert(offsetof(BP_ArenaSequence_PartySelect_C_PrintPartySelectLog, CallFunc_GetNickName_outName) == 0x0001D8, "Member 'BP_ArenaSequence_PartySelect_C_PrintPartySelectLog::CallFunc_GetNickName_outName' has a wrong offset!");
 static_assert(offsetof(BP_ArenaSequence_PartySelect_C_PrintPartySelectLog, CallFunc_BooleanAND_ReturnValue) == 0x0001E8, "Member 'BP_ArenaSequence_PartySelect_C_PrintPartySelectLog::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_ArenaSequence_PartySelect_C_PrintPartySelectLog, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0001F0, "Member 'BP_ArenaSequence_PartySelect_C_PrintPartySelectLog::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_ArenaSequence_PartySelect_C_PrintPartySelectLog, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000200, "Member 'BP_ArenaSequence_PartySelect_C_PrintPartySelectLog::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");

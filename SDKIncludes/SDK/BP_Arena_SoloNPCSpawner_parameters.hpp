@@ -72,7 +72,7 @@ public:
 	class UPalIndividualCharacterHandle*          CallFunc_Array_Get_Item;                           // 0x07F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x07F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7FC[0x4];                                      // 0x07FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalInstanceID                         K2Node_CustomEvent_ID;                             // 0x0800(0x0030)(HasGetValueTypeHash)
+	struct FPalInstanceID                         K2Node_CustomEvent_id;                             // 0x0800(0x0030)(HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0830(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_831[0x7];                                      // 0x0831(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPalCharacterManager*                   CallFunc_GetCharacterManager_ReturnValue_2;        // 0x0838(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -107,7 +107,7 @@ static_assert(offsetof(BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloN
 static_assert(offsetof(BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner, CallFunc_Array_Add_ReturnValue) == 0x0007E8, "Member 'BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner, CallFunc_Array_Get_Item) == 0x0007F0, "Member 'BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner, CallFunc_Array_Length_ReturnValue) == 0x0007F8, "Member 'BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner, K2Node_CustomEvent_ID) == 0x000800, "Member 'BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner::K2Node_CustomEvent_ID' has a wrong offset!");
+static_assert(offsetof(BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner, K2Node_CustomEvent_id) == 0x000800, "Member 'BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner::K2Node_CustomEvent_id' has a wrong offset!");
 static_assert(offsetof(BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner, CallFunc_Less_IntInt_ReturnValue) == 0x000830, "Member 'BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner, CallFunc_GetCharacterManager_ReturnValue_2) == 0x000838, "Member 'BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner::CallFunc_GetCharacterManager_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner, CallFunc_GetCharacterManager_ReturnValue_3) == 0x000840, "Member 'BP_Arena_SoloNPCSpawner_C_ExecuteUbergraph_BP_Arena_SoloNPCSpawner::CallFunc_GetCharacterManager_ReturnValue_3' has a wrong offset!");

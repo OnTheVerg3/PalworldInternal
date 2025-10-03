@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_PalEmo_structs.hpp"
 #include "Pal_structs.hpp"
+#include "E_PalEmo_structs.hpp"
 #include "AkAudio_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
@@ -286,7 +286,7 @@ public:
 	uint8                                         Pad_1F[0x1];                                       // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetPalID_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetPalId_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPalSkeletalMeshComponent*              CallFunc_GetMainMesh_ReturnValue;                  // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDead_ReturnValue;                       // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -305,7 +305,7 @@ static_assert(offsetof(BP_PalCryComponent_C_PlayCry, CallFunc_NotEqual_NameName_
 static_assert(offsetof(BP_PalCryComponent_C_PlayCry, CallFunc_EqualEqual_NameName_ReturnValue) == 0x00001E, "Member 'BP_PalCryComponent_C_PlayCry::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PalCryComponent_C_PlayCry, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000020, "Member 'BP_PalCryComponent_C_PlayCry::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PalCryComponent_C_PlayCry, CallFunc_Conv_NameToString_ReturnValue) == 0x000038, "Member 'BP_PalCryComponent_C_PlayCry::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PalCryComponent_C_PlayCry, CallFunc_GetPalID_ReturnValue) == 0x000048, "Member 'BP_PalCryComponent_C_PlayCry::CallFunc_GetPalID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalCryComponent_C_PlayCry, CallFunc_GetPalId_ReturnValue) == 0x000048, "Member 'BP_PalCryComponent_C_PlayCry::CallFunc_GetPalId_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PalCryComponent_C_PlayCry, CallFunc_GetMainMesh_ReturnValue) == 0x000050, "Member 'BP_PalCryComponent_C_PlayCry::CallFunc_GetMainMesh_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PalCryComponent_C_PlayCry, CallFunc_IsVisible_ReturnValue) == 0x000058, "Member 'BP_PalCryComponent_C_PlayCry::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PalCryComponent_C_PlayCry, CallFunc_IsDead_ReturnValue) == 0x000059, "Member 'BP_PalCryComponent_C_PlayCry::CallFunc_IsDead_ReturnValue' has a wrong offset!");

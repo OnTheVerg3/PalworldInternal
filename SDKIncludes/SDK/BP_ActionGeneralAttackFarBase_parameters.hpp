@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "EEffectSpawnParametersType_structs.hpp"
 #include "Pal_structs.hpp"
+#include "EEffectSpawnParametersType_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -281,17 +281,6 @@ static_assert(alignof(BP_ActionGeneralAttackFarBase_C_OnLoaded_8D503426441FF5C87
 static_assert(sizeof(BP_ActionGeneralAttackFarBase_C_OnLoaded_8D503426441FF5C878F58A8373F67BE7) == 0x000008, "Wrong size on BP_ActionGeneralAttackFarBase_C_OnLoaded_8D503426441FF5C878F58A8373F67BE7");
 static_assert(offsetof(BP_ActionGeneralAttackFarBase_C_OnLoaded_8D503426441FF5C878F58A8373F67BE7, Loaded) == 0x000000, "Member 'BP_ActionGeneralAttackFarBase_C_OnLoaded_8D503426441FF5C878F58A8373F67BE7::Loaded' has a wrong offset!");
 
-// Function BP_ActionGeneralAttackFarBase.BP_ActionGeneralAttackFarBase_C.OnSpawnEffect
-// 0x0008 (0x0008 - 0x0000)
-struct BP_ActionGeneralAttackFarBase_C_OnSpawnEffect final
-{
-public:
-	class APalSkillEffectBase*                    Effect_0;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_ActionGeneralAttackFarBase_C_OnSpawnEffect) == 0x000008, "Wrong alignment on BP_ActionGeneralAttackFarBase_C_OnSpawnEffect");
-static_assert(sizeof(BP_ActionGeneralAttackFarBase_C_OnSpawnEffect) == 0x000008, "Wrong size on BP_ActionGeneralAttackFarBase_C_OnSpawnEffect");
-static_assert(offsetof(BP_ActionGeneralAttackFarBase_C_OnSpawnEffect, Effect_0) == 0x000000, "Member 'BP_ActionGeneralAttackFarBase_C_OnSpawnEffect::Effect_0' has a wrong offset!");
-
 // Function BP_ActionGeneralAttackFarBase.BP_ActionGeneralAttackFarBase_C.RestorePalPitch
 // 0x0030 (0x0030 - 0x0000)
 struct BP_ActionGeneralAttackFarBase_C_RestorePalPitch final
@@ -492,17 +481,6 @@ static_assert(offsetof(BP_ActionGeneralAttackFarBase_C_SetPredictedTarget, CallF
 static_assert(offsetof(BP_ActionGeneralAttackFarBase_C_SetPredictedTarget, CallFunc_GetActionTarget_ReturnValue_1) == 0x0000A0, "Member 'BP_ActionGeneralAttackFarBase_C_SetPredictedTarget::CallFunc_GetActionTarget_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_ActionGeneralAttackFarBase_C_SetPredictedTarget, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x0000A8, "Member 'BP_ActionGeneralAttackFarBase_C_SetPredictedTarget::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_ActionGeneralAttackFarBase_C_SetPredictedTarget, CallFunc_FinishSpawningActor_ReturnValue) == 0x0000B0, "Member 'BP_ActionGeneralAttackFarBase_C_SetPredictedTarget::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-
-// Function BP_ActionGeneralAttackFarBase.BP_ActionGeneralAttackFarBase_C.TickAction
-// 0x0004 (0x0004 - 0x0000)
-struct BP_ActionGeneralAttackFarBase_C_TickAction final
-{
-public:
-	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_ActionGeneralAttackFarBase_C_TickAction) == 0x000004, "Wrong alignment on BP_ActionGeneralAttackFarBase_C_TickAction");
-static_assert(sizeof(BP_ActionGeneralAttackFarBase_C_TickAction) == 0x000004, "Wrong size on BP_ActionGeneralAttackFarBase_C_TickAction");
-static_assert(offsetof(BP_ActionGeneralAttackFarBase_C_TickAction, DeltaTime) == 0x000000, "Member 'BP_ActionGeneralAttackFarBase_C_TickAction::DeltaTime' has a wrong offset!");
 
 // Function BP_ActionGeneralAttackFarBase.BP_ActionGeneralAttackFarBase_C.UpdateEffectPitchToTarget
 // 0x00D8 (0x00D8 - 0x0000)
@@ -761,6 +739,28 @@ static_assert(offsetof(BP_ActionGeneralAttackFarBase_C_UpdateRiddenPalYawToTarge
 static_assert(offsetof(BP_ActionGeneralAttackFarBase_C_UpdateRiddenPalYawToTarget, CallFunc_FInterpTo_Current_ImplicitCast) == 0x0000B8, "Member 'BP_ActionGeneralAttackFarBase_C_UpdateRiddenPalYawToTarget::CallFunc_FInterpTo_Current_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_ActionGeneralAttackFarBase_C_UpdateRiddenPalYawToTarget, CallFunc_FInterpTo_Target_ImplicitCast) == 0x0000C0, "Member 'BP_ActionGeneralAttackFarBase_C_UpdateRiddenPalYawToTarget::CallFunc_FInterpTo_Target_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_ActionGeneralAttackFarBase_C_UpdateRiddenPalYawToTarget, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x0000C8, "Member 'BP_ActionGeneralAttackFarBase_C_UpdateRiddenPalYawToTarget::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+
+// Function BP_ActionGeneralAttackFarBase.BP_ActionGeneralAttackFarBase_C.OnSpawnEffect
+// 0x0008 (0x0008 - 0x0000)
+struct BP_ActionGeneralAttackFarBase_C_OnSpawnEffect final
+{
+public:
+	class APalSkillEffectBase*                    Effect_0;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_ActionGeneralAttackFarBase_C_OnSpawnEffect) == 0x000008, "Wrong alignment on BP_ActionGeneralAttackFarBase_C_OnSpawnEffect");
+static_assert(sizeof(BP_ActionGeneralAttackFarBase_C_OnSpawnEffect) == 0x000008, "Wrong size on BP_ActionGeneralAttackFarBase_C_OnSpawnEffect");
+static_assert(offsetof(BP_ActionGeneralAttackFarBase_C_OnSpawnEffect, Effect_0) == 0x000000, "Member 'BP_ActionGeneralAttackFarBase_C_OnSpawnEffect::Effect_0' has a wrong offset!");
+
+// Function BP_ActionGeneralAttackFarBase.BP_ActionGeneralAttackFarBase_C.TickAction
+// 0x0004 (0x0004 - 0x0000)
+struct BP_ActionGeneralAttackFarBase_C_TickAction final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_ActionGeneralAttackFarBase_C_TickAction) == 0x000004, "Wrong alignment on BP_ActionGeneralAttackFarBase_C_TickAction");
+static_assert(sizeof(BP_ActionGeneralAttackFarBase_C_TickAction) == 0x000004, "Wrong size on BP_ActionGeneralAttackFarBase_C_TickAction");
+static_assert(offsetof(BP_ActionGeneralAttackFarBase_C_TickAction, DeltaTime) == 0x000000, "Member 'BP_ActionGeneralAttackFarBase_C_TickAction::DeltaTime' has a wrong offset!");
 
 }
 

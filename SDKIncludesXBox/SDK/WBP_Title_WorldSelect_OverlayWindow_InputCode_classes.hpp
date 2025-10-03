@@ -47,29 +47,29 @@ public:
 	bool                                          bShowInviteCode;                                   // 0x04F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_Buildup_Player_WBP_Menu_btn_Close_K2Node_ComponentBoundEvent_2_OnButtonClicked__DelegateSignature();
-	void BndEvt__WBP_Title_WorldSelect_OverlayWindow_InputCode_PalEditableTextBox_111_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text);
-	void BndEvt__WBP_Title_WorldSelect_OverlayWindow_InputCode_PalEditableTextBox_111_K2Node_ComponentBoundEvent_6_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
-	void BndEvt__WBP_Title_WorldSelect_OverlayWindow_InputCode_WBP_PalInvisibleButton_ShoiwHideInviteCode_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__WBP_Title_WorldSelect_OverlayWindow_InputCode_WBP_Title_SettingsButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
-	void ChangeMode(EPalUIJoinGameInputCodeType InputMode_0);
-	void CloseWaitWIndow();
 	void Construct();
-	class UWidget* CustomNavi_ToCloseButton(EUINavigation Navigation_0);
-	class UWidget* CustomNavi_ToTextBox(EUINavigation Navigation_0);
-	void Destruct();
-	void ExecuteUbergraph_WBP_Title_WorldSelect_OverlayWindow_InputCode(int32 EntryPoint);
-	void On_Cancel_Action();
-	void OnConfirmInternal();
-	void OnInitialized();
-	void OnNotifyVerifyInviteCode(bool IsValidCode, bool IsRequirePassword);
-	void OnNotifyVerifyInviteCodeImpl(bool IsValidCode, bool IsRequirePassword);
-	void OnNotifyVerifyPassword(bool IsMatchPassword);
-	void OnNotifyVerifyPasswordImpl(bool IsValidPassword);
-	void OnSetup();
-	void OnTimer_TimeoutWaitResponse();
-	void OpenWaitWindow();
+	void CloseWaitWIndow();
+	void ChangeMode(EPalUIJoinGameInputCodeType InputMode_0);
+	void BndEvt__WBP_Title_WorldSelect_OverlayWindow_InputCode_WBP_Title_SettingsButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
+	void BndEvt__WBP_Title_WorldSelect_OverlayWindow_InputCode_WBP_PalInvisibleButton_ShoiwHideInviteCode_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__WBP_Title_WorldSelect_OverlayWindow_InputCode_PalEditableTextBox_111_K2Node_ComponentBoundEvent_6_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
+	void BndEvt__WBP_Title_WorldSelect_OverlayWindow_InputCode_PalEditableTextBox_111_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text);
+	void BndEvt__WBP_Buildup_Player_WBP_Menu_btn_Close_K2Node_ComponentBoundEvent_2_OnButtonClicked__DelegateSignature();
 	void ShowHideInputText();
+	void OpenWaitWindow();
+	void OnTimer_TimeoutWaitResponse();
+	void OnSetup();
+	void OnNotifyVerifyPasswordImpl(bool IsValidPassword);
+	void OnNotifyVerifyPassword(bool IsMatchPassword);
+	void OnNotifyVerifyInviteCodeImpl(bool IsValidCode, bool IsRequirePassword);
+	void OnNotifyVerifyInviteCode(bool IsValidCode, bool IsRequirePassword);
+	void OnInitialized();
+	void OnConfirmInternal();
+	void On_Cancel_Action();
+	void ExecuteUbergraph_WBP_Title_WorldSelect_OverlayWindow_InputCode(int32 EntryPoint);
+	void Destruct();
+	class UWidget* CustomNavi_ToTextBox(EUINavigation Navigation_0);
+	class UWidget* CustomNavi_ToCloseButton(EUINavigation Navigation_0);
 
 	class UWidget* BP_GetDesiredFocusTarget() const;
 

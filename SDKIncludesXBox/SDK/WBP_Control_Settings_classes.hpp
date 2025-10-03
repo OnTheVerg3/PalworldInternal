@@ -77,41 +77,41 @@ public:
 	TMap<int32, int32>                            FontSizeMap;                                       // 0x0528(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void SwitchTab(bool Next);
-	void SwitchPanel(int32 Index_0);
-	void SetDefault();
-	void OnVibChanged(bool IsOn);
-	void OnToggleLongPressChanged_GP(bool IsOn);
-	void OnToggleLongPressChanged(bool IsOn);
-	void OnToggleBuildModeChanged_GP(bool IsOn);
-	void OnToggleBuildModeChanged(bool IsOn);
-	void OnRStickYChanged(bool IsOn);
-	void OnRStickXChanged(bool IsOn);
-	void OnRStickThreChanged(double Value);
-	void OnRStickSensiChanged(double Value);
-	void OnMouseYChanged(bool IsOn);
-	void OnMouseXChanged(bool IsOn);
-	void OnMouseSensiChanged(double Value);
-	void OnMouseAIMChanged(double Value);
-	void OnMinFontSizeChanged(int32 Value);
-	void OnLStickThreChanged(double Value);
-	void OnHideChatChanged(bool IsOn);
-	void OnGPDashChanged(bool IsOn);
-	void OnGPAimChanged(double Value);
-	void OnDashChanged(bool IsOn);
-	void OnChatUICloseDelayChanged(double Value);
-	void OnChangedReticleOutline(double Value);
-	void OnChangedReticleColor(int32 ColorIndex);
-	void OnChangedMaxDamageDisplayNum(double Value);
-	void OnChangedHideUINotInBattle(bool IsOn);
-	void OnChangedHideCraftExpLog(bool IsOn);
-	void OnChangedDisableGuildJoined(bool IsOn);
-	void OnChangedDisableAutoItemPick(bool IsOn);
-	void OnChangedDamageTextScale(double Value);
-	void GetDesiredFocusTarget(class UWidget** Target);
-	void ExecuteUbergraph_WBP_Control_Settings(int32 EntryPoint);
-	void Construct();
 	void ApplySettings();
+	void Construct();
+	void ExecuteUbergraph_WBP_Control_Settings(int32 EntryPoint);
+	void GetDesiredFocusTarget(class UWidget** Target);
+	void OnChangedDamageTextScale(double Value);
+	void OnChangedDisableAutoItemPick(bool IsOn);
+	void OnChangedDisableGuildJoined(bool IsOn);
+	void OnChangedHideCraftExpLog(bool IsOn);
+	void OnChangedHideUINotInBattle(bool IsOn);
+	void OnChangedMaxDamageDisplayNum(double Value);
+	void OnChangedReticleColor(int32 ColorIndex);
+	void OnChangedReticleOutline(double Value);
+	void OnChatUICloseDelayChanged(double Value);
+	void OnDashChanged(bool IsOn);
+	void OnGPAimChanged(double Value);
+	void OnGPDashChanged(bool IsOn);
+	void OnHideChatChanged(bool IsOn);
+	void OnLStickThreChanged(double Value);
+	void OnMinFontSizeChanged(int32 Value);
+	void OnMouseAIMChanged(double Value);
+	void OnMouseSensiChanged(double Value);
+	void OnMouseXChanged(bool IsOn);
+	void OnMouseYChanged(bool IsOn);
+	void OnRStickSensiChanged(double Value);
+	void OnRStickThreChanged(double Value);
+	void OnRStickXChanged(bool IsOn);
+	void OnRStickYChanged(bool IsOn);
+	void OnToggleBuildModeChanged(bool IsOn);
+	void OnToggleBuildModeChanged_GP(bool IsOn);
+	void OnToggleLongPressChanged(bool IsOn);
+	void OnToggleLongPressChanged_GP(bool IsOn);
+	void OnVibChanged(bool IsOn);
+	void SetDefault();
+	void SwitchPanel(int32 Index_0);
+	void SwitchTab(bool Next);
 
 public:
 	static class UClass* StaticClass()

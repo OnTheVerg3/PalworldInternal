@@ -216,7 +216,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetNickName_OutName;                      // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNickName_outName;                      // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TDelegate<void(const struct FPalInstanceID& InstanceId)> K2Node_CreateDelegate_OutputDelegate;   // 0x0070(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPalCharacterManager*                   CallFunc_GetCharacterManager_ReturnValue;          // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(double DyingHP, double MaxDyingHP)> K2Node_CreateDelegate_OutputDelegate_1;       // 0x0088(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -231,7 +231,7 @@ static_assert(offsetof(WBP_DyingFriendLoupe_C_Setup, CallFunc_GetComponentByClas
 static_assert(offsetof(WBP_DyingFriendLoupe_C_Setup, CallFunc_GetIndividualParameter_ReturnValue) == 0x000050, "Member 'WBP_DyingFriendLoupe_C_Setup::CallFunc_GetIndividualParameter_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_DyingFriendLoupe_C_Setup, CallFunc_IsValid_ReturnValue) == 0x000058, "Member 'WBP_DyingFriendLoupe_C_Setup::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_DyingFriendLoupe_C_Setup, CallFunc_IsValid_ReturnValue_1) == 0x000059, "Member 'WBP_DyingFriendLoupe_C_Setup::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_DyingFriendLoupe_C_Setup, CallFunc_GetNickName_OutName) == 0x000060, "Member 'WBP_DyingFriendLoupe_C_Setup::CallFunc_GetNickName_OutName' has a wrong offset!");
+static_assert(offsetof(WBP_DyingFriendLoupe_C_Setup, CallFunc_GetNickName_outName) == 0x000060, "Member 'WBP_DyingFriendLoupe_C_Setup::CallFunc_GetNickName_outName' has a wrong offset!");
 static_assert(offsetof(WBP_DyingFriendLoupe_C_Setup, K2Node_CreateDelegate_OutputDelegate) == 0x000070, "Member 'WBP_DyingFriendLoupe_C_Setup::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(WBP_DyingFriendLoupe_C_Setup, CallFunc_GetCharacterManager_ReturnValue) == 0x000080, "Member 'WBP_DyingFriendLoupe_C_Setup::CallFunc_GetCharacterManager_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_DyingFriendLoupe_C_Setup, K2Node_CreateDelegate_OutputDelegate_1) == 0x000088, "Member 'WBP_DyingFriendLoupe_C_Setup::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");

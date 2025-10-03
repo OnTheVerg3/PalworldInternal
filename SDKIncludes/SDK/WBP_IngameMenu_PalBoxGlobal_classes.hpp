@@ -79,22 +79,6 @@ public:
 	TMulticastInlineDelegate<void(class UWBP_PalCharacterSlotButtonBase_C* Widget)> OnHoveredInGameBoxSlot; // 0x0620(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateRemoveModeSlotButtonEnableAll();
-	void UpdateRemoveModeSlotButtonEnable(class UWBP_PalCharacterSlotButtonBase_C* SlotButton);
-	void UpdateRemoveCheckMarkAll();
-	void UpdateRemoveCheckMark(class UWBP_PalCharacterSlotButtonBase_C* SlotWidget);
-	void UpdateInGameBoxSlotEnable(class UWBP_PalCharacterSlotButtonBase_C* SlotWidget);
-	void UpdateAllInGameBoxSlotEnable();
-	void ToRemoveDataMode();
-	void ToPrevPage();
-	void ToNextPage();
-	void ToggleRemoveMark(class UWBP_PalCharacterSlotButtonBase_C* SlotButton);
-	void ToEditDataMode();
-	void ShowPalDetail(class UPalIndividualCharacterSlot* Slot_0);
-	void Setup();
-	void RefreshGPSData();
-	void PreConstruct(bool IsDesignTime);
-	void OnTriggerRemoveDataInput();
 	void IsRemoveDataMode(bool* bRemoveDataMode);
 	void GetLastHoveredSlot(class UPalIndividualCharacterSlot** Slot_0);
 	void GetLastHoveredFocusTarget(class UWidget** Widget);
@@ -121,6 +105,22 @@ public:
 	void BndEvt__WBP_IngameMenu_PalBoxGlobal_WBP_BoxPalList_K2Node_ComponentBoundEvent_12_OnSorted__DelegateSignature();
 	void BndEvt__WBP_IngameMenu_PalBoxGlobal_WBP_BoxPalList_K2Node_ComponentBoundEvent_11_OnCreatedNewSlot__DelegateSignature(class UWBP_PalCharacterSlotButtonBase_C* NewSlot);
 	void BndEvt__WBP_IngameMenu_PalBoxGlobal_WBP_BoxPalList_K2Node_ComponentBoundEvent_0_OnLeftClickedSlot__DelegateSignature(class UWBP_PalCharacterSlotButtonBase_C* Widget, EPalItemSlotPressType PressType);
+	void OnTriggerRemoveDataInput();
+	void PreConstruct(bool IsDesignTime);
+	void RefreshGPSData();
+	void Setup();
+	void ShowPalDetail(class UPalIndividualCharacterSlot* Slot_0);
+	void ToEditDataMode();
+	void ToggleRemoveMark(class UWBP_PalCharacterSlotButtonBase_C* SlotButton);
+	void ToNextPage();
+	void ToPrevPage();
+	void ToRemoveDataMode();
+	void UpdateAllInGameBoxSlotEnable();
+	void UpdateInGameBoxSlotEnable(class UWBP_PalCharacterSlotButtonBase_C* SlotWidget);
+	void UpdateRemoveCheckMark(class UWBP_PalCharacterSlotButtonBase_C* SlotWidget);
+	void UpdateRemoveCheckMarkAll();
+	void UpdateRemoveModeSlotButtonEnable(class UWBP_PalCharacterSlotButtonBase_C* SlotButton);
+	void UpdateRemoveModeSlotButtonEnableAll();
 
 public:
 	static class UClass* StaticClass()

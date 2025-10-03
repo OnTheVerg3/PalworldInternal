@@ -85,7 +85,7 @@ public:
 	class FName                                   CallFunc_Get_Name_Text_Id_SkillNameTextId;         // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPalCharacterParameterComponent*        CallFunc_GetComponentByClass_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_GetLocalizedText_ReturnValue;             // 0x0060(0x0018)()
-	class FString                                 CallFunc_GetNickName_OutName;                      // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNickName_outName;                      // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0088(0x0018)()
 	struct FPalLogInfo_Skill                      K2Node_MakeStruct_PalLogInfo_Skill;                // 0x00A0(0x0048)()
 };
@@ -96,7 +96,7 @@ static_assert(offsetof(BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp, CallFu
 static_assert(offsetof(BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp, CallFunc_Get_Name_Text_Id_SkillNameTextId) == 0x000050, "Member 'BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp::CallFunc_Get_Name_Text_Id_SkillNameTextId' has a wrong offset!");
 static_assert(offsetof(BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp, CallFunc_GetComponentByClass_ReturnValue) == 0x000058, "Member 'BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp, CallFunc_GetLocalizedText_ReturnValue) == 0x000060, "Member 'BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp::CallFunc_GetLocalizedText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp, CallFunc_GetNickName_OutName) == 0x000078, "Member 'BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp::CallFunc_GetNickName_OutName' has a wrong offset!");
+static_assert(offsetof(BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp, CallFunc_GetNickName_outName) == 0x000078, "Member 'BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp::CallFunc_GetNickName_outName' has a wrong offset!");
 static_assert(offsetof(BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp, CallFunc_Conv_StringToText_ReturnValue) == 0x000088, "Member 'BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp, K2Node_MakeStruct_PalLogInfo_Skill) == 0x0000A0, "Member 'BP_Status_CollectItem_C_AddLog_UseSkillInBaseCamp::K2Node_MakeStruct_PalLogInfo_Skill' has a wrong offset!");
 

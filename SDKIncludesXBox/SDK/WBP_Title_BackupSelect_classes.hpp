@@ -33,14 +33,14 @@ public:
 	TMulticastInlineDelegate<void(class UWBP_Title_BackupSelect_ListContent_C* Widget)> OnClickedBackup; // 0x0440(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void BndEvt__WBP_Title_BackupSelect_WBP_Menu_btn_K2Node_ComponentBoundEvent_0_OnButtonClicked__DelegateSignature();
-	class UWidget* CustomNavi_ToCloseButton(EUINavigation Navigation_0);
-	class UWidget* CustomNavi_ToListTop(EUINavigation Navigation_0);
-	void Destruct();
-	void ExecuteUbergraph_WBP_Title_BackupSelect(int32 EntryPoint);
-	void GetTopFocusTarget(class UWidget** TargetWidget);
-	void OnClickedBackupButton_Internal(class UWBP_Title_BackupSelect_ListContent_C* Widget);
 	void SetBackupDisplayData(TArray<struct FPalUIBackupSaveDisplayData>& DisplayData);
+	void OnClickedBackupButton_Internal(class UWBP_Title_BackupSelect_ListContent_C* Widget);
+	void GetTopFocusTarget(class UWidget** TargetWidget);
+	void ExecuteUbergraph_WBP_Title_BackupSelect(int32 EntryPoint);
+	void Destruct();
+	class UWidget* CustomNavi_ToListTop(EUINavigation Navigation_0);
+	class UWidget* CustomNavi_ToCloseButton(EUINavigation Navigation_0);
+	void BndEvt__WBP_Title_BackupSelect_WBP_Menu_btn_K2Node_ComponentBoundEvent_0_OnButtonClicked__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()

@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "Pal_structs.hpp"
-#include "AIModule_structs.hpp"
 #include "BP_AIActionCombatHeliBase_classes.hpp"
+#include "AIModule_structs.hpp"
 
 
 namespace SDK

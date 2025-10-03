@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Pal_structs.hpp"
-#include "FPalRequestItemLotteryDataTableRow_structs.hpp"
 #include "FPalPresentLotteryDataTableRow_structs.hpp"
+#include "FPalRequestItemLotteryDataTableRow_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -273,7 +273,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetNickName_OutName;                      // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetNickName_outName;                      // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0068(0x0018)()
 };
 static_assert(alignof(BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo) == 0x000008, "Wrong alignment on BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo");
@@ -285,7 +285,7 @@ static_assert(offsetof(BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo, CallFunc_IsVa
 static_assert(offsetof(BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo, CallFunc_TryGetSpawnedOtomo_ReturnValue) == 0x000048, "Member 'BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo::CallFunc_TryGetSpawnedOtomo_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo, CallFunc_IsValid_ReturnValue_1) == 0x000050, "Member 'BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo, CallFunc_IsValid_ReturnValue_2) == 0x000051, "Member 'BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo, CallFunc_GetNickName_OutName) == 0x000058, "Member 'BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo::CallFunc_GetNickName_OutName' has a wrong offset!");
+static_assert(offsetof(BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo, CallFunc_GetNickName_outName) == 0x000058, "Member 'BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo::CallFunc_GetNickName_outName' has a wrong offset!");
 static_assert(offsetof(BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo, CallFunc_Conv_StringToText_ReturnValue) == 0x000068, "Member 'BP_PalIncidentNPCTalk_C_Doctor_Check_Otomo::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function BP_PalIncidentNPCTalk.BP_PalIncidentNPCTalk_C.Doctor CheckDayLimit

@@ -344,7 +344,7 @@ public:
 	class UPalIndividualCharacterHandle*          Handle;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPalIndividualCharacterParameter*       Parameter;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FPalInstanceID                         IndividualId;                                      // 0x0010(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FPalInstanceID                         CallFunc_GetPalID_ReturnValue;                     // 0x0040(0x0030)(HasGetValueTypeHash)
+	struct FPalInstanceID                         CallFunc_GetPalId_ReturnValue;                     // 0x0040(0x0030)(HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidInstanceID_ReturnValue;            // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_PalInstanceIDPalInstanceID_ReturnValue; // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidInstanceID_ReturnValue_1;          // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -355,7 +355,7 @@ static_assert(sizeof(WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter) =
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter, Handle) == 0x000000, "Member 'WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter::Handle' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter, Parameter) == 0x000008, "Member 'WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter::Parameter' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter, IndividualId) == 0x000010, "Member 'WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter::IndividualId' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter, CallFunc_GetPalID_ReturnValue) == 0x000040, "Member 'WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter::CallFunc_GetPalID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter, CallFunc_GetPalId_ReturnValue) == 0x000040, "Member 'WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter::CallFunc_GetPalId_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter, CallFunc_IsValidInstanceID_ReturnValue) == 0x000070, "Member 'WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter::CallFunc_IsValidInstanceID_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter, CallFunc_EqualEqual_PalInstanceIDPalInstanceID_ReturnValue) == 0x000071, "Member 'WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter::CallFunc_EqualEqual_PalInstanceIDPalInstanceID_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter, CallFunc_IsValidInstanceID_ReturnValue_1) == 0x000072, "Member 'WBP_IngameMenu_PalBox_Preset_C_OnSyncIndividualParameter::CallFunc_IsValidInstanceID_ReturnValue_1' has a wrong offset!");

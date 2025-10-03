@@ -124,7 +124,7 @@ public:
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue;              // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPalLookAtComponent*                    CallFunc_GetComponentByClass_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	const class UPalActionBase*                   K2Node_CustomEvent_action;                         // 0x0060(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class UPalActionBase*                   K2Node_CustomEvent_Action;                         // 0x0060(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsEnableLookAt_ReturnValue;               // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBP_ActionGeneralAttackBase_C*          K2Node_DynamicCast_AsBP_Action_General_Attack_Base; // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -159,7 +159,7 @@ static_assert(offsetof(ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss, K2Node_
 static_assert(offsetof(ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss, CallFunc_BooleanAND_ReturnValue_2) == 0x000048, "Member 'ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss, CallFunc_TryGetPawnOwner_ReturnValue) == 0x000050, "Member 'ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss, CallFunc_GetComponentByClass_ReturnValue) == 0x000058, "Member 'ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss, K2Node_CustomEvent_action) == 0x000060, "Member 'ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss::K2Node_CustomEvent_action' has a wrong offset!");
+static_assert(offsetof(ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss, K2Node_CustomEvent_Action) == 0x000060, "Member 'ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss::K2Node_CustomEvent_Action' has a wrong offset!");
 static_assert(offsetof(ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss, CallFunc_IsEnableLookAt_ReturnValue) == 0x000068, "Member 'ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss::CallFunc_IsEnableLookAt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss, K2Node_DynamicCast_AsBP_Action_General_Attack_Base) == 0x000070, "Member 'ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss::K2Node_DynamicCast_AsBP_Action_General_Attack_Base' has a wrong offset!");
 static_assert(offsetof(ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'ABP_RidingBoss_C_ExecuteUbergraph_ABP_RidingBoss::K2Node_DynamicCast_bSuccess' has a wrong offset!");

@@ -16,6 +16,61 @@
 namespace SDK::Params
 {
 
+// Function WBP_Sound_Settings.WBP_Sound_Settings_C.OnUIChanged
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Sound_Settings_C_OnUIChanged final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Sound_Settings_C_OnUIChanged) == 0x000008, "Wrong alignment on WBP_Sound_Settings_C_OnUIChanged");
+static_assert(sizeof(WBP_Sound_Settings_C_OnUIChanged) == 0x000008, "Wrong size on WBP_Sound_Settings_C_OnUIChanged");
+static_assert(offsetof(WBP_Sound_Settings_C_OnUIChanged, Value) == 0x000000, "Member 'WBP_Sound_Settings_C_OnUIChanged::Value' has a wrong offset!");
+
+// Function WBP_Sound_Settings.WBP_Sound_Settings_C.OnSEChanged
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Sound_Settings_C_OnSEChanged final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Sound_Settings_C_OnSEChanged) == 0x000008, "Wrong alignment on WBP_Sound_Settings_C_OnSEChanged");
+static_assert(sizeof(WBP_Sound_Settings_C_OnSEChanged) == 0x000008, "Wrong size on WBP_Sound_Settings_C_OnSEChanged");
+static_assert(offsetof(WBP_Sound_Settings_C_OnSEChanged, Value) == 0x000000, "Member 'WBP_Sound_Settings_C_OnSEChanged::Value' has a wrong offset!");
+
+// Function WBP_Sound_Settings.WBP_Sound_Settings_C.OnPalVoiceChanged
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Sound_Settings_C_OnPalVoiceChanged final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Sound_Settings_C_OnPalVoiceChanged) == 0x000008, "Wrong alignment on WBP_Sound_Settings_C_OnPalVoiceChanged");
+static_assert(sizeof(WBP_Sound_Settings_C_OnPalVoiceChanged) == 0x000008, "Wrong size on WBP_Sound_Settings_C_OnPalVoiceChanged");
+static_assert(offsetof(WBP_Sound_Settings_C_OnPalVoiceChanged, Value) == 0x000000, "Member 'WBP_Sound_Settings_C_OnPalVoiceChanged::Value' has a wrong offset!");
+
+// Function WBP_Sound_Settings.WBP_Sound_Settings_C.OnMasterChanged
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Sound_Settings_C_OnMasterChanged final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Sound_Settings_C_OnMasterChanged) == 0x000008, "Wrong alignment on WBP_Sound_Settings_C_OnMasterChanged");
+static_assert(sizeof(WBP_Sound_Settings_C_OnMasterChanged) == 0x000008, "Wrong size on WBP_Sound_Settings_C_OnMasterChanged");
+static_assert(offsetof(WBP_Sound_Settings_C_OnMasterChanged, Value) == 0x000000, "Member 'WBP_Sound_Settings_C_OnMasterChanged::Value' has a wrong offset!");
+
+// Function WBP_Sound_Settings.WBP_Sound_Settings_C.OnHumanVoiceChanged
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Sound_Settings_C_OnHumanVoiceChanged final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Sound_Settings_C_OnHumanVoiceChanged) == 0x000008, "Wrong alignment on WBP_Sound_Settings_C_OnHumanVoiceChanged");
+static_assert(sizeof(WBP_Sound_Settings_C_OnHumanVoiceChanged) == 0x000008, "Wrong size on WBP_Sound_Settings_C_OnHumanVoiceChanged");
+static_assert(offsetof(WBP_Sound_Settings_C_OnHumanVoiceChanged, Value) == 0x000000, "Member 'WBP_Sound_Settings_C_OnHumanVoiceChanged::Value' has a wrong offset!");
+
 // Function WBP_Sound_Settings.WBP_Sound_Settings_C.OnBGMChanged
 // 0x0008 (0x0008 - 0x0000)
 struct WBP_Sound_Settings_C_OnBGMChanged final
@@ -188,61 +243,6 @@ public:
 static_assert(alignof(WBP_Sound_Settings_C_ApplySettings) == 0x000001, "Wrong alignment on WBP_Sound_Settings_C_ApplySettings");
 static_assert(sizeof(WBP_Sound_Settings_C_ApplySettings) == 0x000001, "Wrong size on WBP_Sound_Settings_C_ApplySettings");
 static_assert(offsetof(WBP_Sound_Settings_C_ApplySettings, ApplyOriginal) == 0x000000, "Member 'WBP_Sound_Settings_C_ApplySettings::ApplyOriginal' has a wrong offset!");
-
-// Function WBP_Sound_Settings.WBP_Sound_Settings_C.OnUIChanged
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Sound_Settings_C_OnUIChanged final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Sound_Settings_C_OnUIChanged) == 0x000008, "Wrong alignment on WBP_Sound_Settings_C_OnUIChanged");
-static_assert(sizeof(WBP_Sound_Settings_C_OnUIChanged) == 0x000008, "Wrong size on WBP_Sound_Settings_C_OnUIChanged");
-static_assert(offsetof(WBP_Sound_Settings_C_OnUIChanged, Value) == 0x000000, "Member 'WBP_Sound_Settings_C_OnUIChanged::Value' has a wrong offset!");
-
-// Function WBP_Sound_Settings.WBP_Sound_Settings_C.OnSEChanged
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Sound_Settings_C_OnSEChanged final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Sound_Settings_C_OnSEChanged) == 0x000008, "Wrong alignment on WBP_Sound_Settings_C_OnSEChanged");
-static_assert(sizeof(WBP_Sound_Settings_C_OnSEChanged) == 0x000008, "Wrong size on WBP_Sound_Settings_C_OnSEChanged");
-static_assert(offsetof(WBP_Sound_Settings_C_OnSEChanged, Value) == 0x000000, "Member 'WBP_Sound_Settings_C_OnSEChanged::Value' has a wrong offset!");
-
-// Function WBP_Sound_Settings.WBP_Sound_Settings_C.OnPalVoiceChanged
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Sound_Settings_C_OnPalVoiceChanged final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Sound_Settings_C_OnPalVoiceChanged) == 0x000008, "Wrong alignment on WBP_Sound_Settings_C_OnPalVoiceChanged");
-static_assert(sizeof(WBP_Sound_Settings_C_OnPalVoiceChanged) == 0x000008, "Wrong size on WBP_Sound_Settings_C_OnPalVoiceChanged");
-static_assert(offsetof(WBP_Sound_Settings_C_OnPalVoiceChanged, Value) == 0x000000, "Member 'WBP_Sound_Settings_C_OnPalVoiceChanged::Value' has a wrong offset!");
-
-// Function WBP_Sound_Settings.WBP_Sound_Settings_C.OnMasterChanged
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Sound_Settings_C_OnMasterChanged final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Sound_Settings_C_OnMasterChanged) == 0x000008, "Wrong alignment on WBP_Sound_Settings_C_OnMasterChanged");
-static_assert(sizeof(WBP_Sound_Settings_C_OnMasterChanged) == 0x000008, "Wrong size on WBP_Sound_Settings_C_OnMasterChanged");
-static_assert(offsetof(WBP_Sound_Settings_C_OnMasterChanged, Value) == 0x000000, "Member 'WBP_Sound_Settings_C_OnMasterChanged::Value' has a wrong offset!");
-
-// Function WBP_Sound_Settings.WBP_Sound_Settings_C.OnHumanVoiceChanged
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Sound_Settings_C_OnHumanVoiceChanged final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Sound_Settings_C_OnHumanVoiceChanged) == 0x000008, "Wrong alignment on WBP_Sound_Settings_C_OnHumanVoiceChanged");
-static_assert(sizeof(WBP_Sound_Settings_C_OnHumanVoiceChanged) == 0x000008, "Wrong size on WBP_Sound_Settings_C_OnHumanVoiceChanged");
-static_assert(offsetof(WBP_Sound_Settings_C_OnHumanVoiceChanged, Value) == 0x000000, "Member 'WBP_Sound_Settings_C_OnHumanVoiceChanged::Value' has a wrong offset!");
 
 }
 

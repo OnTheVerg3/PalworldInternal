@@ -18,90 +18,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_Title_BackupSelect.WBP_Title_BackupSelect_C.CustomNavi_ToCloseButton
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton final
-{
-public:
-	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton) == 0x000008, "Wrong alignment on WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton");
-static_assert(sizeof(WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton) == 0x000010, "Wrong size on WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton");
-static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton, Navigation_0) == 0x000000, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton::Navigation_0' has a wrong offset!");
-static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton, ReturnValue) == 0x000008, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton::ReturnValue' has a wrong offset!");
-
-// Function WBP_Title_BackupSelect.WBP_Title_BackupSelect_C.CustomNavi_ToListTop
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_Title_BackupSelect_C_CustomNavi_ToListTop final
-{
-public:
-	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UScrollBox*                             CallFunc_GetScrollBox_ScrollBox;                   // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_Title_BackupSelect_ListContent_C*  K2Node_DynamicCast_AsWBP_Title_Backup_Select_List_Content; // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop) == 0x000008, "Wrong alignment on WBP_Title_BackupSelect_C_CustomNavi_ToListTop");
-static_assert(sizeof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop) == 0x000030, "Wrong size on WBP_Title_BackupSelect_C_CustomNavi_ToListTop");
-static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, Navigation_0) == 0x000000, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::Navigation_0' has a wrong offset!");
-static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, ReturnValue) == 0x000008, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, CallFunc_GetScrollBox_ScrollBox) == 0x000010, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::CallFunc_GetScrollBox_ScrollBox' has a wrong offset!");
-static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, CallFunc_GetChildAt_ReturnValue) == 0x000018, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, K2Node_DynamicCast_AsWBP_Title_Backup_Select_List_Content) == 0x000020, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::K2Node_DynamicCast_AsWBP_Title_Backup_Select_List_Content' has a wrong offset!");
-static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, CallFunc_IsValid_ReturnValue) == 0x000029, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function WBP_Title_BackupSelect.WBP_Title_BackupSelect_C.ExecuteUbergraph_WBP_Title_BackupSelect
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect) == 0x000004, "Wrong alignment on WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect");
-static_assert(sizeof(WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect) == 0x000004, "Wrong size on WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect");
-static_assert(offsetof(WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect, EntryPoint) == 0x000000, "Member 'WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect::EntryPoint' has a wrong offset!");
-
-// Function WBP_Title_BackupSelect.WBP_Title_BackupSelect_C.GetTopFocusTarget
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_Title_BackupSelect_C_GetTopFocusTarget final
-{
-public:
-	class UWidget*                                TargetWidget;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UScrollBox*                             CallFunc_GetScrollBox_ScrollBox;                   // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_Title_BackupSelect_ListContent_C*  K2Node_DynamicCast_AsWBP_Title_Backup_Select_List_Content; // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Title_BackupSelect_C_GetTopFocusTarget) == 0x000008, "Wrong alignment on WBP_Title_BackupSelect_C_GetTopFocusTarget");
-static_assert(sizeof(WBP_Title_BackupSelect_C_GetTopFocusTarget) == 0x000030, "Wrong size on WBP_Title_BackupSelect_C_GetTopFocusTarget");
-static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, TargetWidget) == 0x000000, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::TargetWidget' has a wrong offset!");
-static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, CallFunc_GetScrollBox_ScrollBox) == 0x000008, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::CallFunc_GetScrollBox_ScrollBox' has a wrong offset!");
-static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, CallFunc_GetChildAt_ReturnValue) == 0x000010, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, CallFunc_GetChildrenCount_ReturnValue) == 0x000018, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, K2Node_DynamicCast_AsWBP_Title_Backup_Select_List_Content) == 0x000020, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::K2Node_DynamicCast_AsWBP_Title_Backup_Select_List_Content' has a wrong offset!");
-static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, CallFunc_Greater_IntInt_ReturnValue) == 0x000029, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-
-// Function WBP_Title_BackupSelect.WBP_Title_BackupSelect_C.OnClickedBackupButton_Internal
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal final
-{
-public:
-	class UWBP_Title_BackupSelect_ListContent_C*  Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal) == 0x000008, "Wrong alignment on WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal");
-static_assert(sizeof(WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal) == 0x000008, "Wrong size on WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal");
-static_assert(offsetof(WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal, Widget) == 0x000000, "Member 'WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal::Widget' has a wrong offset!");
-
 // Function WBP_Title_BackupSelect.WBP_Title_BackupSelect_C.SetBackupDisplayData
 // 0x00E0 (0x00E0 - 0x0000)
 struct WBP_Title_BackupSelect_C_SetBackupDisplayData final
@@ -171,6 +87,90 @@ static_assert(offsetof(WBP_Title_BackupSelect_C_SetBackupDisplayData, CallFunc_C
 static_assert(offsetof(WBP_Title_BackupSelect_C_SetBackupDisplayData, CallFunc_AddChild_ReturnValue) == 0x0000C8, "Member 'WBP_Title_BackupSelect_C_SetBackupDisplayData::CallFunc_AddChild_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Title_BackupSelect_C_SetBackupDisplayData, K2Node_DynamicCast_AsScroll_Box_Slot) == 0x0000D0, "Member 'WBP_Title_BackupSelect_C_SetBackupDisplayData::K2Node_DynamicCast_AsScroll_Box_Slot' has a wrong offset!");
 static_assert(offsetof(WBP_Title_BackupSelect_C_SetBackupDisplayData, K2Node_DynamicCast_bSuccess) == 0x0000D8, "Member 'WBP_Title_BackupSelect_C_SetBackupDisplayData::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function WBP_Title_BackupSelect.WBP_Title_BackupSelect_C.OnClickedBackupButton_Internal
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal final
+{
+public:
+	class UWBP_Title_BackupSelect_ListContent_C*  Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal) == 0x000008, "Wrong alignment on WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal");
+static_assert(sizeof(WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal) == 0x000008, "Wrong size on WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal");
+static_assert(offsetof(WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal, Widget) == 0x000000, "Member 'WBP_Title_BackupSelect_C_OnClickedBackupButton_Internal::Widget' has a wrong offset!");
+
+// Function WBP_Title_BackupSelect.WBP_Title_BackupSelect_C.GetTopFocusTarget
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_Title_BackupSelect_C_GetTopFocusTarget final
+{
+public:
+	class UWidget*                                TargetWidget;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UScrollBox*                             CallFunc_GetScrollBox_ScrollBox;                   // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_Title_BackupSelect_ListContent_C*  K2Node_DynamicCast_AsWBP_Title_Backup_Select_List_Content; // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_BackupSelect_C_GetTopFocusTarget) == 0x000008, "Wrong alignment on WBP_Title_BackupSelect_C_GetTopFocusTarget");
+static_assert(sizeof(WBP_Title_BackupSelect_C_GetTopFocusTarget) == 0x000030, "Wrong size on WBP_Title_BackupSelect_C_GetTopFocusTarget");
+static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, TargetWidget) == 0x000000, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::TargetWidget' has a wrong offset!");
+static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, CallFunc_GetScrollBox_ScrollBox) == 0x000008, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::CallFunc_GetScrollBox_ScrollBox' has a wrong offset!");
+static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, CallFunc_GetChildAt_ReturnValue) == 0x000010, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, CallFunc_GetChildrenCount_ReturnValue) == 0x000018, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, K2Node_DynamicCast_AsWBP_Title_Backup_Select_List_Content) == 0x000020, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::K2Node_DynamicCast_AsWBP_Title_Backup_Select_List_Content' has a wrong offset!");
+static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_Title_BackupSelect_C_GetTopFocusTarget, CallFunc_Greater_IntInt_ReturnValue) == 0x000029, "Member 'WBP_Title_BackupSelect_C_GetTopFocusTarget::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+
+// Function WBP_Title_BackupSelect.WBP_Title_BackupSelect_C.ExecuteUbergraph_WBP_Title_BackupSelect
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect) == 0x000004, "Wrong alignment on WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect");
+static_assert(sizeof(WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect) == 0x000004, "Wrong size on WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect");
+static_assert(offsetof(WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect, EntryPoint) == 0x000000, "Member 'WBP_Title_BackupSelect_C_ExecuteUbergraph_WBP_Title_BackupSelect::EntryPoint' has a wrong offset!");
+
+// Function WBP_Title_BackupSelect.WBP_Title_BackupSelect_C.CustomNavi_ToListTop
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_Title_BackupSelect_C_CustomNavi_ToListTop final
+{
+public:
+	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UScrollBox*                             CallFunc_GetScrollBox_ScrollBox;                   // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Title_BackupSelect_ListContent_C*  K2Node_DynamicCast_AsWBP_Title_Backup_Select_List_Content; // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop) == 0x000008, "Wrong alignment on WBP_Title_BackupSelect_C_CustomNavi_ToListTop");
+static_assert(sizeof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop) == 0x000030, "Wrong size on WBP_Title_BackupSelect_C_CustomNavi_ToListTop");
+static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, Navigation_0) == 0x000000, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::Navigation_0' has a wrong offset!");
+static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, ReturnValue) == 0x000008, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, CallFunc_GetScrollBox_ScrollBox) == 0x000010, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::CallFunc_GetScrollBox_ScrollBox' has a wrong offset!");
+static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, CallFunc_GetChildAt_ReturnValue) == 0x000018, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, K2Node_DynamicCast_AsWBP_Title_Backup_Select_List_Content) == 0x000020, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::K2Node_DynamicCast_AsWBP_Title_Backup_Select_List_Content' has a wrong offset!");
+static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToListTop, CallFunc_IsValid_ReturnValue) == 0x000029, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToListTop::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function WBP_Title_BackupSelect.WBP_Title_BackupSelect_C.CustomNavi_ToCloseButton
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton final
+{
+public:
+	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton) == 0x000008, "Wrong alignment on WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton");
+static_assert(sizeof(WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton) == 0x000010, "Wrong size on WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton");
+static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton, Navigation_0) == 0x000000, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton::Navigation_0' has a wrong offset!");
+static_assert(offsetof(WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton, ReturnValue) == 0x000008, "Member 'WBP_Title_BackupSelect_C_CustomNavi_ToCloseButton::ReturnValue' has a wrong offset!");
 
 }
 

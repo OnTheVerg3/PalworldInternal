@@ -17,315 +17,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.UpdateRemoveModeSlotButtonEnableAll
-// 0x0038 (0x0038 - 0x0000)
-struct WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWBP_PalCommonCharacterSlotButton_C*> CallFunc_GetCurrentDisplaySlotWidgets_SlotWidgets; // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_PalCommonCharacterSlotButton_C*    CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll");
-static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll) == 0x000038, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, CallFunc_GetCurrentDisplaySlotWidgets_SlotWidgets) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::CallFunc_GetCurrentDisplaySlotWidgets_SlotWidgets' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-
-// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.UpdateRemoveModeSlotButtonEnable
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable final
-{
-public:
-	class UWBP_PalCharacterSlotButtonBase_C*      SlotButton;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_PalCommonCharacterSlotButton_C*    K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button; // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterParameter*       CallFunc_GetIndividualParameter_IndividualParameter; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsFavoritePal_ReturnValue;                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable");
-static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable) == 0x000028, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, SlotButton) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::SlotButton' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, CallFunc_GetIndividualParameter_IndividualParameter) == 0x000018, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::CallFunc_GetIndividualParameter_IndividualParameter' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, CallFunc_IsFavoritePal_ReturnValue) == 0x000020, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::CallFunc_IsFavoritePal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, CallFunc_IsValid_ReturnValue) == 0x000021, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, CallFunc_Not_PreBool_ReturnValue) == 0x000022, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-
-// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.UpdateRemoveCheckMarkAll
-// 0x0038 (0x0038 - 0x0000)
-struct WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWBP_PalCommonCharacterSlotButton_C*> CallFunc_GetCurrentDisplaySlotWidgets_SlotWidgets; // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_PalCommonCharacterSlotButton_C*    CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll");
-static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll) == 0x000038, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, CallFunc_GetCurrentDisplaySlotWidgets_SlotWidgets) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::CallFunc_GetCurrentDisplaySlotWidgets_SlotWidgets' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-
-// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.UpdateRemoveCheckMark
-// 0x0068 (0x0068 - 0x0000)
-struct WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark final
-{
-public:
-	class UWBP_PalCharacterSlotButtonBase_C*      SlotWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPalInstanceID                         CallFunc_GetInstanceIDFromSlotWidget_InstanceID;   // 0x0010(0x0030)(HasGetValueTypeHash)
-	class UWBP_PalCommonCharacterSlotButton_C*    K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button; // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidInstanceID_ReturnValue;            // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Temp_real_Variable;                                // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsRemoveDataMode_bRemoveDataMode;         // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56[0x2];                                       // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Temp_real_Variable_1;                              // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsRemoveDataMode_bRemoveDataMode_1;       // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x005E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F[0x1];                                       // 0x005F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Select_Default_1;                           // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark");
-static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark) == 0x000068, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, SlotWidget) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::SlotWidget' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, Temp_bool_Variable) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_GetInstanceIDFromSlotWidget_InstanceID) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_GetInstanceIDFromSlotWidget_InstanceID' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button) == 0x000040, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_IsValidInstanceID_ReturnValue) == 0x000049, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_IsValidInstanceID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, Temp_byte_Variable) == 0x00004A, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, Temp_byte_Variable_1) == 0x00004B, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, Temp_real_Variable) == 0x00004C, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::Temp_real_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_IsRemoveDataMode_bRemoveDataMode) == 0x000054, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_IsRemoveDataMode_bRemoveDataMode' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000055, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, Temp_real_Variable_1) == 0x000058, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::Temp_real_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, K2Node_Select_Default) == 0x00005C, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_IsRemoveDataMode_bRemoveDataMode_1) == 0x00005D, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_IsRemoveDataMode_bRemoveDataMode_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, Temp_bool_Variable_1) == 0x00005E, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, K2Node_Select_Default_1) == 0x000060, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_Array_Contains_ReturnValue) == 0x000064, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-
-// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.UpdateInGameBoxSlotEnable
-// 0x0370 (0x0370 - 0x0000)
-struct WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable final
-{
-public:
-	class UWBP_PalCharacterSlotButtonBase_C*      SlotWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UPalGlobalPalStorageSubsystem*          CallFunc_GetGlobalPalStorageSubsystem_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWBP_PalCommonCharacterSlotButton_C*    K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button; // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterSlot*            CallFunc_GetTargetSlot_targetSlot;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPalIndividualCharacterHandle*          CallFunc_GetHandle_ReturnValue;                    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPalIndividualCharacterParameter*       CallFunc_TryGetIndividualParameter_ReturnValue;    // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x0040(0x0328)(ConstParm)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0368(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanDuplication_ReturnValue;               // 0x0369(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable");
-static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable) == 0x000370, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, SlotWidget) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::SlotWidget' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_GetGlobalPalStorageSubsystem_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_GetGlobalPalStorageSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_GetTargetSlot_targetSlot) == 0x000020, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_GetTargetSlot_targetSlot' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_GetHandle_ReturnValue) == 0x000028, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_GetHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_IsEmpty_ReturnValue) == 0x000030, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_IsValid_ReturnValue) == 0x000031, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_TryGetIndividualParameter_ReturnValue) == 0x000038, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_TryGetIndividualParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_GetSaveParameter_ReturnValue) == 0x000040, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_GetSaveParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_IsValid_ReturnValue_1) == 0x000368, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_CanDuplication_ReturnValue) == 0x000369, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_CanDuplication_ReturnValue' has a wrong offset!");
-
-// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.UpdateAllInGameBoxSlotEnable
-// 0x0038 (0x0038 - 0x0000)
-struct WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWBP_PalCommonCharacterSlotButton_C*> CallFunc_GetCurrentBoxSlots_Slots;            // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_PalCommonCharacterSlotButton_C*    CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable");
-static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable) == 0x000038, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, CallFunc_GetCurrentBoxSlots_Slots) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::CallFunc_GetCurrentBoxSlots_Slots' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-
-// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.ToRemoveDataMode
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode final
-{
-public:
-	class APalPlayerCharacter*                    CallFunc_GetPalmi_ReturnValue;                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode");
-static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode) == 0x000010, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode, CallFunc_GetPalmi_ReturnValue) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode::CallFunc_GetPalmi_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.ToggleRemoveMark
-// 0x0048 (0x0048 - 0x0000)
-struct WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark final
-{
-public:
-	class UWBP_PalCharacterSlotButtonBase_C*      SlotButton;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FPalInstanceID                         CallFunc_GetInstanceIDFromSlotWidget_InstanceID;   // 0x0008(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidInstanceID_ReturnValue;            // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark");
-static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark) == 0x000048, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark, SlotButton) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark::SlotButton' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark, CallFunc_GetInstanceIDFromSlotWidget_InstanceID) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark::CallFunc_GetInstanceIDFromSlotWidget_InstanceID' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark, CallFunc_IsValidInstanceID_ReturnValue) == 0x000038, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark::CallFunc_IsValidInstanceID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark, CallFunc_Array_Add_ReturnValue) == 0x00003C, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark, CallFunc_Array_RemoveItem_ReturnValue) == 0x000040, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark, CallFunc_Array_Contains_ReturnValue) == 0x000041, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-
-// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.ToEditDataMode
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode final
-{
-public:
-	class APalPlayerCharacter*                    CallFunc_GetPalmi_ReturnValue;                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode");
-static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode) == 0x000010, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode, CallFunc_GetPalmi_ReturnValue) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode::CallFunc_GetPalmi_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.ShowPalDetail
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail final
-{
-public:
-	class UPalIndividualCharacterSlot*            Slot_0;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail");
-static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail) == 0x000010, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail, Slot_0) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail::Slot_0' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail, CallFunc_IsEmpty_ReturnValue) == 0x000009, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-
-// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.Setup
-// 0x0230 (0x0230 - 0x0000)
-struct WBP_IngameMenu_PalBoxGlobal_C_Setup final
-{
-public:
-	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class APalPlayerCharacter*                    CallFunc_GetPalmi_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetLocalizedTextFromHandle_Text;          // 0x0018(0x0018)()
-	class FText                                   CallFunc_GetLocalizedTextFromHandle_Text_1;        // 0x0030(0x0018)()
-	struct FPalOptionWorldSettings                CallFunc_GetOptionWorldSettings_ReturnValue;       // 0x0048(0x01A0)(ConstParm)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x01E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FPalUIActionBindData                   CallFunc_RegisterActionBinding_ReturnValue;        // 0x01F8(0x0004)(NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x01FC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FPalUIActionBindData                   CallFunc_RegisterActionBinding_ReturnValue_1;      // 0x020C(0x0004)(NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0210(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APalPlayerCharacter*                    CallFunc_GetPalmi_ReturnValue_1;                   // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FPalUIActionBindData                   CallFunc_RegisterActionBinding_ReturnValue_2;      // 0x0228(0x0004)(NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x022C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x022D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x022E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_Setup) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_Setup");
-static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_Setup) == 0x000230, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_Setup");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, Temp_bool_Variable) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, Temp_byte_Variable) == 0x000001, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, Temp_byte_Variable_1) == 0x000002, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, Temp_bool_Variable_1) == 0x000003, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, Temp_byte_Variable_2) == 0x000004, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, Temp_byte_Variable_3) == 0x000005, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_GetPalmi_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_GetPalmi_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_GetLocalizedTextFromHandle_Text) == 0x000018, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_GetLocalizedTextFromHandle_Text' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_GetLocalizedTextFromHandle_Text_1) == 0x000030, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_GetLocalizedTextFromHandle_Text_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_GetOptionWorldSettings_ReturnValue) == 0x000048, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_GetOptionWorldSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, K2Node_CreateDelegate_OutputDelegate) == 0x0001E8, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_RegisterActionBinding_ReturnValue) == 0x0001F8, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_RegisterActionBinding_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, K2Node_CreateDelegate_OutputDelegate_1) == 0x0001FC, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_RegisterActionBinding_ReturnValue_1) == 0x00020C, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_RegisterActionBinding_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, K2Node_CreateDelegate_OutputDelegate_2) == 0x000210, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_GetPalmi_ReturnValue_1) == 0x000220, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_GetPalmi_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_RegisterActionBinding_ReturnValue_2) == 0x000228, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_RegisterActionBinding_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_IsValid_ReturnValue_1) == 0x00022C, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, K2Node_Select_Default) == 0x00022D, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, K2Node_Select_Default_1) == 0x00022E, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::K2Node_Select_Default_1' has a wrong offset!");
-
-// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_IngameMenu_PalBoxGlobal_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_PreConstruct");
-static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_PreConstruct) == 0x000001, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_PreConstruct");
-static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
 // Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.IsRemoveDataMode
 // 0x0001 (0x0001 - 0x0000)
 struct WBP_IngameMenu_PalBoxGlobal_C_IsRemoveDataMode final
@@ -653,6 +344,315 @@ static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_BndEvt__WBP_IngameMenu_PalBo
 static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_BndEvt__WBP_IngameMenu_PalBoxGlobal_WBP_BoxPalList_K2Node_ComponentBoundEvent_0_OnLeftClickedSlot__DelegateSignature) == 0x000010, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_BndEvt__WBP_IngameMenu_PalBoxGlobal_WBP_BoxPalList_K2Node_ComponentBoundEvent_0_OnLeftClickedSlot__DelegateSignature");
 static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_BndEvt__WBP_IngameMenu_PalBoxGlobal_WBP_BoxPalList_K2Node_ComponentBoundEvent_0_OnLeftClickedSlot__DelegateSignature, Widget) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_BndEvt__WBP_IngameMenu_PalBoxGlobal_WBP_BoxPalList_K2Node_ComponentBoundEvent_0_OnLeftClickedSlot__DelegateSignature::Widget' has a wrong offset!");
 static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_BndEvt__WBP_IngameMenu_PalBoxGlobal_WBP_BoxPalList_K2Node_ComponentBoundEvent_0_OnLeftClickedSlot__DelegateSignature, PressType) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_BndEvt__WBP_IngameMenu_PalBoxGlobal_WBP_BoxPalList_K2Node_ComponentBoundEvent_0_OnLeftClickedSlot__DelegateSignature::PressType' has a wrong offset!");
+
+// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_IngameMenu_PalBoxGlobal_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_PreConstruct");
+static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_PreConstruct) == 0x000001, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_PreConstruct");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.Setup
+// 0x0230 (0x0230 - 0x0000)
+struct WBP_IngameMenu_PalBoxGlobal_C_Setup final
+{
+public:
+	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class APalPlayerCharacter*                    CallFunc_GetPalmi_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetLocalizedTextFromHandle_Text;          // 0x0018(0x0018)()
+	class FText                                   CallFunc_GetLocalizedTextFromHandle_Text_1;        // 0x0030(0x0018)()
+	struct FPalOptionWorldSettings                CallFunc_GetOptionWorldSettings_ReturnValue;       // 0x0048(0x01A0)(ConstParm)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x01E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalUIActionBindData                   CallFunc_RegisterActionBinding_ReturnValue;        // 0x01F8(0x0004)(NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x01FC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalUIActionBindData                   CallFunc_RegisterActionBinding_ReturnValue_1;      // 0x020C(0x0004)(NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0210(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APalPlayerCharacter*                    CallFunc_GetPalmi_ReturnValue_1;                   // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalUIActionBindData                   CallFunc_RegisterActionBinding_ReturnValue_2;      // 0x0228(0x0004)(NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x022C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x022D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x022E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_Setup) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_Setup");
+static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_Setup) == 0x000230, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_Setup");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, Temp_bool_Variable) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, Temp_byte_Variable) == 0x000001, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, Temp_byte_Variable_1) == 0x000002, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, Temp_bool_Variable_1) == 0x000003, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, Temp_byte_Variable_2) == 0x000004, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::Temp_byte_Variable_2' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, Temp_byte_Variable_3) == 0x000005, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::Temp_byte_Variable_3' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_GetPalmi_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_GetPalmi_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_GetLocalizedTextFromHandle_Text) == 0x000018, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_GetLocalizedTextFromHandle_Text' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_GetLocalizedTextFromHandle_Text_1) == 0x000030, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_GetLocalizedTextFromHandle_Text_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_GetOptionWorldSettings_ReturnValue) == 0x000048, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_GetOptionWorldSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, K2Node_CreateDelegate_OutputDelegate) == 0x0001E8, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_RegisterActionBinding_ReturnValue) == 0x0001F8, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_RegisterActionBinding_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, K2Node_CreateDelegate_OutputDelegate_1) == 0x0001FC, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_RegisterActionBinding_ReturnValue_1) == 0x00020C, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_RegisterActionBinding_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, K2Node_CreateDelegate_OutputDelegate_2) == 0x000210, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_GetPalmi_ReturnValue_1) == 0x000220, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_GetPalmi_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_RegisterActionBinding_ReturnValue_2) == 0x000228, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_RegisterActionBinding_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, CallFunc_IsValid_ReturnValue_1) == 0x00022C, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, K2Node_Select_Default) == 0x00022D, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_Setup, K2Node_Select_Default_1) == 0x00022E, "Member 'WBP_IngameMenu_PalBoxGlobal_C_Setup::K2Node_Select_Default_1' has a wrong offset!");
+
+// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.ShowPalDetail
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail final
+{
+public:
+	class UPalIndividualCharacterSlot*            Slot_0;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail");
+static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail) == 0x000010, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail, Slot_0) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail::Slot_0' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail, CallFunc_IsEmpty_ReturnValue) == 0x000009, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ShowPalDetail::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
+
+// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.ToEditDataMode
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode final
+{
+public:
+	class APalPlayerCharacter*                    CallFunc_GetPalmi_ReturnValue;                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode");
+static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode) == 0x000010, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode, CallFunc_GetPalmi_ReturnValue) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode::CallFunc_GetPalmi_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToEditDataMode::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.ToggleRemoveMark
+// 0x0048 (0x0048 - 0x0000)
+struct WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark final
+{
+public:
+	class UWBP_PalCharacterSlotButtonBase_C*      SlotButton;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPalInstanceID                         CallFunc_GetInstanceIDFromSlotWidget_InstanceID;   // 0x0008(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidInstanceID_ReturnValue;            // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark");
+static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark) == 0x000048, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark, SlotButton) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark::SlotButton' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark, CallFunc_GetInstanceIDFromSlotWidget_InstanceID) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark::CallFunc_GetInstanceIDFromSlotWidget_InstanceID' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark, CallFunc_IsValidInstanceID_ReturnValue) == 0x000038, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark::CallFunc_IsValidInstanceID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark, CallFunc_Array_Add_ReturnValue) == 0x00003C, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark, CallFunc_Array_RemoveItem_ReturnValue) == 0x000040, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark, CallFunc_Array_Contains_ReturnValue) == 0x000041, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToggleRemoveMark::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
+
+// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.ToRemoveDataMode
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode final
+{
+public:
+	class APalPlayerCharacter*                    CallFunc_GetPalmi_ReturnValue;                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode");
+static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode) == 0x000010, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode, CallFunc_GetPalmi_ReturnValue) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode::CallFunc_GetPalmi_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_ToRemoveDataMode::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.UpdateAllInGameBoxSlotEnable
+// 0x0038 (0x0038 - 0x0000)
+struct WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWBP_PalCommonCharacterSlotButton_C*> CallFunc_GetCurrentBoxSlots_Slots;            // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_PalCommonCharacterSlotButton_C*    CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable");
+static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable) == 0x000038, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, CallFunc_GetCurrentBoxSlots_Slots) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::CallFunc_GetCurrentBoxSlots_Slots' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateAllInGameBoxSlotEnable::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+
+// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.UpdateInGameBoxSlotEnable
+// 0x0370 (0x0370 - 0x0000)
+struct WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable final
+{
+public:
+	class UWBP_PalCharacterSlotButtonBase_C*      SlotWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UPalGlobalPalStorageSubsystem*          CallFunc_GetGlobalPalStorageSubsystem_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWBP_PalCommonCharacterSlotButton_C*    K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button; // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterSlot*            CallFunc_GetTargetSlot_targetSlot;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPalIndividualCharacterHandle*          CallFunc_GetHandle_ReturnValue;                    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterParameter*       CallFunc_TryGetIndividualParameter_ReturnValue;    // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPalIndividualCharacterSaveParameter   CallFunc_GetSaveParameter_ReturnValue;             // 0x0040(0x0328)(ConstParm)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0368(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanDuplication_ReturnValue;               // 0x0369(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable");
+static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable) == 0x000370, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, SlotWidget) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::SlotWidget' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_GetGlobalPalStorageSubsystem_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_GetGlobalPalStorageSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_GetTargetSlot_targetSlot) == 0x000020, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_GetTargetSlot_targetSlot' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_GetHandle_ReturnValue) == 0x000028, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_GetHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_IsEmpty_ReturnValue) == 0x000030, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_IsValid_ReturnValue) == 0x000031, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_TryGetIndividualParameter_ReturnValue) == 0x000038, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_TryGetIndividualParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_GetSaveParameter_ReturnValue) == 0x000040, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_GetSaveParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_IsValid_ReturnValue_1) == 0x000368, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable, CallFunc_CanDuplication_ReturnValue) == 0x000369, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateInGameBoxSlotEnable::CallFunc_CanDuplication_ReturnValue' has a wrong offset!");
+
+// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.UpdateRemoveCheckMark
+// 0x0068 (0x0068 - 0x0000)
+struct WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark final
+{
+public:
+	class UWBP_PalCharacterSlotButtonBase_C*      SlotWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPalInstanceID                         CallFunc_GetInstanceIDFromSlotWidget_InstanceID;   // 0x0010(0x0030)(HasGetValueTypeHash)
+	class UWBP_PalCommonCharacterSlotButton_C*    K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button; // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidInstanceID_ReturnValue;            // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_real_Variable;                                // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsRemoveDataMode_bRemoveDataMode;         // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_56[0x2];                                       // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Temp_real_Variable_1;                              // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsRemoveDataMode_bRemoveDataMode_1;       // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x005E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5F[0x1];                                       // 0x005F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Select_Default_1;                           // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark");
+static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark) == 0x000068, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, SlotWidget) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::SlotWidget' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, Temp_bool_Variable) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_GetInstanceIDFromSlotWidget_InstanceID) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_GetInstanceIDFromSlotWidget_InstanceID' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button) == 0x000040, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_IsValidInstanceID_ReturnValue) == 0x000049, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_IsValidInstanceID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, Temp_byte_Variable) == 0x00004A, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, Temp_byte_Variable_1) == 0x00004B, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, Temp_real_Variable) == 0x00004C, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::Temp_real_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_IsRemoveDataMode_bRemoveDataMode) == 0x000054, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_IsRemoveDataMode_bRemoveDataMode' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000055, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, Temp_real_Variable_1) == 0x000058, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::Temp_real_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, K2Node_Select_Default) == 0x00005C, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_IsRemoveDataMode_bRemoveDataMode_1) == 0x00005D, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_IsRemoveDataMode_bRemoveDataMode_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, Temp_bool_Variable_1) == 0x00005E, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, K2Node_Select_Default_1) == 0x000060, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark, CallFunc_Array_Contains_ReturnValue) == 0x000064, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMark::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
+
+// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.UpdateRemoveCheckMarkAll
+// 0x0038 (0x0038 - 0x0000)
+struct WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWBP_PalCommonCharacterSlotButton_C*> CallFunc_GetCurrentDisplaySlotWidgets_SlotWidgets; // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_PalCommonCharacterSlotButton_C*    CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll");
+static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll) == 0x000038, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, CallFunc_GetCurrentDisplaySlotWidgets_SlotWidgets) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::CallFunc_GetCurrentDisplaySlotWidgets_SlotWidgets' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveCheckMarkAll::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+
+// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.UpdateRemoveModeSlotButtonEnable
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable final
+{
+public:
+	class UWBP_PalCharacterSlotButtonBase_C*      SlotButton;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_PalCommonCharacterSlotButton_C*    K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button; // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPalIndividualCharacterParameter*       CallFunc_GetIndividualParameter_IndividualParameter; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsFavoritePal_ReturnValue;                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable");
+static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable) == 0x000028, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, SlotButton) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::SlotButton' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::K2Node_DynamicCast_AsWBP_Pal_Common_Character_Slot_Button' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, CallFunc_GetIndividualParameter_IndividualParameter) == 0x000018, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::CallFunc_GetIndividualParameter_IndividualParameter' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, CallFunc_IsFavoritePal_ReturnValue) == 0x000020, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::CallFunc_IsFavoritePal_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, CallFunc_IsValid_ReturnValue) == 0x000021, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable, CallFunc_Not_PreBool_ReturnValue) == 0x000022, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnable::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+
+// Function WBP_IngameMenu_PalBoxGlobal.WBP_IngameMenu_PalBoxGlobal_C.UpdateRemoveModeSlotButtonEnableAll
+// 0x0038 (0x0038 - 0x0000)
+struct WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWBP_PalCommonCharacterSlotButton_C*> CallFunc_GetCurrentDisplaySlotWidgets_SlotWidgets; // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_PalCommonCharacterSlotButton_C*    CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll) == 0x000008, "Wrong alignment on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll");
+static_assert(sizeof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll) == 0x000038, "Wrong size on WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, CallFunc_GetCurrentDisplaySlotWidgets_SlotWidgets) == 0x000010, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::CallFunc_GetCurrentDisplaySlotWidgets_SlotWidgets' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'WBP_IngameMenu_PalBoxGlobal_C_UpdateRemoveModeSlotButtonEnableAll::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 }
 

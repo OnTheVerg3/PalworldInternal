@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BP_ActionGeneralAttackBase_classes.hpp"
 #include "EEffectSpawnParametersType_structs.hpp"
+#include "BP_ActionGeneralAttackBase_classes.hpp"
 
 
 namespace SDK
@@ -60,25 +60,25 @@ public:
 	class APalCharacter* GetTargetEnemy();
 	void IsEnableRotPitch(bool* IsEnable);
 	bool IsSpecificEffect(class APalSkillEffectBase* Effect_0, EEffectSpawnParametersType ParametersType, int32 Index_0);
-	void OnBeginAction();
-	void OnBreakAction();
-	void OnEndAction();
 	void OnLoaded_8D503426441FF5C878F58A8373F67BE7(class UObject* Loaded);
-	void OnSpawnEffect(class APalSkillEffectBase* Effect_0);
-	void OnStartAfterAnimation();
-	void OnStartProcessAnimation();
-	void OnStartReadyAnimation();
 	void RestorePalPitch();
 	void SetBulletSpeed(class APalSkillEffectBase** Effect_0);
 	void SetEffectVelocityTowardNearestEnemy(bool* Success);
 	void SetEffectVelocityTowardReticle();
 	void SetHomingTarget(class APalSkillEffectBase* Effect_0);
 	void SetPredictedTarget();
-	void TickAction(float DeltaTime);
 	void UpdateEffectPitchToTarget();
 	void UpdatePalYawAndPitchToTarget();
 	void UpdatePredictedTargetLocation();
 	void UpdateRiddenPalYawToTarget();
+	void OnBeginAction();
+	void OnBreakAction();
+	void OnEndAction();
+	void OnSpawnEffect(class APalSkillEffectBase* Effect_0);
+	void OnStartAfterAnimation();
+	void OnStartProcessAnimation();
+	void OnStartReadyAnimation();
+	void TickAction(float DeltaTime);
 
 public:
 	static class UClass* StaticClass()

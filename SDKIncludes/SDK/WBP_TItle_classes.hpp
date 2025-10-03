@@ -12,9 +12,9 @@
 
 #include "CommonUser_structs.hpp"
 #include "Engine_structs.hpp"
-#include "E_PalUITitleMenuButtonType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Pal_classes.hpp"
+#include "E_PalUITitleMenuButtonType_structs.hpp"
 
 
 namespace SDK

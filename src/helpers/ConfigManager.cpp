@@ -46,7 +46,6 @@ void SaveConfig(const std::string& filename)
     file << "cameraBrightness=" << cheatState.cameraBrightness << "\n";
     file << "attack=" << cheatState.attack << "\n";
     file << "weight=" << cheatState.weight << "\n";
-    file << "godmode=" << cheatState.godmode << "\n";
 
     // Aimbot
     file << "aimbotEnabled=" << cheatState.aimbotEnabled << "\n";
@@ -126,7 +125,6 @@ void LoadConfig(const std::string& filename)
         else if (key == "cameraBrightness")  cheatState.cameraBrightness = std::stof(value);
         else if (key == "attack")            cheatState.attack = std::stoi(value);
         else if (key == "weight")            cheatState.weight = std::stof(value);
-        else if (key == "godmode")            cheatState.godmode = std::stoi(value);
 
         // Aimbot
         else if (key == "aimbotEnabled")     cheatState.aimbotEnabled = std::stoi(value);

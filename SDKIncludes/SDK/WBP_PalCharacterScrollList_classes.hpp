@@ -51,7 +51,7 @@ public:
 	void FocusToTopContent();
 	void Get_All_Children(TArray<class UWidget*>* widgets);
 	void GetTopFocusTarget(class UWidget** Widget);
-	void On_Right_Clicked_Internal(class UWBP_PalCharacterSlotButtonBase_C* ButtonBase);
+	void On_Right_Clicked_Internal(class UWBP_PalCharacterSlotButtonBase_C* buttonBase);
 	void OnFocused_Internal(class UWBP_PalCharacterSlotButtonBase_C* Widget);
 	void OnHovered_Internal(class UWBP_PalCharacterSlotButtonBase_C* Widget);
 	void OnInitialized();

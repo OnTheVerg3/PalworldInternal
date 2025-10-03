@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "E_PalUITitleMenuButtonType_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params

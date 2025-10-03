@@ -25,7 +25,6 @@ void SetInfiniteMagazine();
 void TeleportPlayerToHome();
 void RevealMapAroundPlayer();
 void UnlockAllFastTravelPoints();
-void Godmode();
 
 //Debug
 void DebugBuildOverlap();
@@ -56,7 +55,6 @@ struct CheatState
     bool infStamina = false;
     float cameraFov = 90.0f;
     float cameraBrightness = 1.0f;
-    bool godmode = false;
 
     //Aimbot
     bool isSilent = true;

@@ -18,94 +18,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetVisibilityCaution
-// 0x0005 (0x0005 - 0x0000)
-struct WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution) == 0x000001, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution");
-static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution) == 0x000005, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, bVisible) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::bVisible' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, Temp_bool_Variable) == 0x000001, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, Temp_byte_Variable) == 0x000002, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, Temp_byte_Variable_1) == 0x000003, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, K2Node_Select_Default) == 0x000004, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::K2Node_Select_Default' has a wrong offset!");
-
-// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupTextInput
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_Title_WorldSettings_ListContent_C_SetupTextInput final
-{
-public:
-	class FString                                 DefaultString;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0018)()
-};
-static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput) == 0x000008, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetupTextInput");
-static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput) == 0x000028, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetupTextInput");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput, DefaultString) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupTextInput::DefaultString' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupTextInput::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-
-// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupSelectString
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_Title_WorldSettings_ListContent_C_SetupSelectString final
-{
-public:
-	TArray<class FString>                         SelectStrings;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	int32                                         DefaultSelectIndex;                                // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetupSelectString) == 0x000008, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetupSelectString");
-static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetupSelectString) == 0x000018, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetupSelectString");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupSelectString, SelectStrings) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupSelectString::SelectStrings' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupSelectString, DefaultSelectIndex) == 0x000010, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupSelectString::DefaultSelectIndex' has a wrong offset!");
-
-// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupOnOff
-// 0x0002 (0x0002 - 0x0000)
-struct WBP_Title_WorldSettings_ListContent_C_SetupOnOff final
-{
-public:
-	bool                                          IsOn_0;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetupOnOff) == 0x000001, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetupOnOff");
-static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetupOnOff) == 0x000002, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetupOnOff");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupOnOff, IsOn_0) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupOnOff::IsOn_0' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupOnOff, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000001, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupOnOff::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-
-// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupIntValue
-// 0x000C (0x000C - 0x0000)
-struct WBP_Title_WorldSettings_ListContent_C_SetupIntValue final
-{
-public:
-	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Min;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Max;                                               // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetupIntValue) == 0x000004, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetupIntValue");
-static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetupIntValue) == 0x00000C, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetupIntValue");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupIntValue, Value) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupIntValue::Value' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupIntValue, Min) == 0x000004, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupIntValue::Min' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupIntValue, Max) == 0x000008, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupIntValue::Max' has a wrong offset!");
-
-// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupFloatValue
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_Title_WorldSettings_ListContent_C_SetupFloatValue final
-{
-public:
-	double                                        NowValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MinValue;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxValue;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetupFloatValue) == 0x000008, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetupFloatValue");
-static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetupFloatValue) == 0x000018, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetupFloatValue");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupFloatValue, NowValue) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupFloatValue::NowValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupFloatValue, MinValue) == 0x000008, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupFloatValue::MinValue' has a wrong offset!");
-static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupFloatValue, MaxValue) == 0x000010, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupFloatValue::MaxValue' has a wrong offset!");
-
 // Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupFlag
 // 0x0005 (0x0005 - 0x0000)
 struct WBP_Title_WorldSettings_ListContent_C_SetupFlag final
@@ -529,6 +441,94 @@ public:
 static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_AnmEvent_SetEnableBuutton) == 0x000001, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_AnmEvent_SetEnableBuutton");
 static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_AnmEvent_SetEnableBuutton) == 0x000001, "Wrong size on WBP_Title_WorldSettings_ListContent_C_AnmEvent_SetEnableBuutton");
 static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_AnmEvent_SetEnableBuutton, isEnableButton) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_AnmEvent_SetEnableBuutton::isEnableButton' has a wrong offset!");
+
+// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetVisibilityCaution
+// 0x0005 (0x0005 - 0x0000)
+struct WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution) == 0x000001, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution");
+static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution) == 0x000005, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, bVisible) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::bVisible' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, Temp_bool_Variable) == 0x000001, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, Temp_byte_Variable) == 0x000002, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, Temp_byte_Variable_1) == 0x000003, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution, K2Node_Select_Default) == 0x000004, "Member 'WBP_Title_WorldSettings_ListContent_C_SetVisibilityCaution::K2Node_Select_Default' has a wrong offset!");
+
+// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupTextInput
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_Title_WorldSettings_ListContent_C_SetupTextInput final
+{
+public:
+	class FString                                 DefaultString;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0018)()
+};
+static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput) == 0x000008, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetupTextInput");
+static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput) == 0x000028, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetupTextInput");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput, DefaultString) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupTextInput::DefaultString' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupTextInput, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupTextInput::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+
+// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupSelectString
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_Title_WorldSettings_ListContent_C_SetupSelectString final
+{
+public:
+	TArray<class FString>                         SelectStrings;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	int32                                         DefaultSelectIndex;                                // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetupSelectString) == 0x000008, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetupSelectString");
+static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetupSelectString) == 0x000018, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetupSelectString");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupSelectString, SelectStrings) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupSelectString::SelectStrings' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupSelectString, DefaultSelectIndex) == 0x000010, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupSelectString::DefaultSelectIndex' has a wrong offset!");
+
+// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupOnOff
+// 0x0002 (0x0002 - 0x0000)
+struct WBP_Title_WorldSettings_ListContent_C_SetupOnOff final
+{
+public:
+	bool                                          IsOn_0;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetupOnOff) == 0x000001, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetupOnOff");
+static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetupOnOff) == 0x000002, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetupOnOff");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupOnOff, IsOn_0) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupOnOff::IsOn_0' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupOnOff, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000001, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupOnOff::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+
+// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupIntValue
+// 0x000C (0x000C - 0x0000)
+struct WBP_Title_WorldSettings_ListContent_C_SetupIntValue final
+{
+public:
+	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Min;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Max;                                               // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetupIntValue) == 0x000004, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetupIntValue");
+static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetupIntValue) == 0x00000C, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetupIntValue");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupIntValue, Value) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupIntValue::Value' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupIntValue, Min) == 0x000004, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupIntValue::Min' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupIntValue, Max) == 0x000008, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupIntValue::Max' has a wrong offset!");
+
+// Function WBP_Title_WorldSettings_ListContent.WBP_Title_WorldSettings_ListContent_C.SetupFloatValue
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_Title_WorldSettings_ListContent_C_SetupFloatValue final
+{
+public:
+	double                                        NowValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MinValue;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxValue;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Title_WorldSettings_ListContent_C_SetupFloatValue) == 0x000008, "Wrong alignment on WBP_Title_WorldSettings_ListContent_C_SetupFloatValue");
+static_assert(sizeof(WBP_Title_WorldSettings_ListContent_C_SetupFloatValue) == 0x000018, "Wrong size on WBP_Title_WorldSettings_ListContent_C_SetupFloatValue");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupFloatValue, NowValue) == 0x000000, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupFloatValue::NowValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupFloatValue, MinValue) == 0x000008, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupFloatValue::MinValue' has a wrong offset!");
+static_assert(offsetof(WBP_Title_WorldSettings_ListContent_C_SetupFloatValue, MaxValue) == 0x000010, "Member 'WBP_Title_WorldSettings_ListContent_C_SetupFloatValue::MaxValue' has a wrong offset!");
 
 }
 

@@ -490,27 +490,6 @@ void UnlockAllFastTravelPoints()
 	}
 }
 
-void Godmode()
-{
-	APalPlayerCharacter* player = GetPalPlayerCharacter();
-	if (!player)
-		return;
-
-	APalPlayerController* PC = GetPalPlayerController();
-	if (!PC)
-		return;
-
-	UPalCharacterParameterComponent* pParams = player->CharacterParameterComponent;
-	if (!pParams)
-		return;
-
-	FFixedPoint newHealthPoint = FFixedPoint(5000);
-
-	PC->Transmitter->CharacterStatusOperation->RequestReviveCharacterFromDying_ToServer(player);
-	//	pPalPlayerCharacter->ReviveCharacter_ToServer(newHealthPoint);
-}
-
-
 ///////////////////////////////////// DEBUG FUNCTIONS ///////////////////////////////////////
 
 void DebugBuildOverlap()

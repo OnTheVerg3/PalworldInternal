@@ -41,17 +41,6 @@ static_assert(sizeof(BP_NPCAIController_Invader_C_ExecuteUbergraph_BP_NPCAIContr
 static_assert(offsetof(BP_NPCAIController_Invader_C_ExecuteUbergraph_BP_NPCAIController_Invader, EntryPoint) == 0x000000, "Member 'BP_NPCAIController_Invader_C_ExecuteUbergraph_BP_NPCAIController_Invader::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_NPCAIController_Invader_C_ExecuteUbergraph_BP_NPCAIController_Invader, K2Node_Event_Event) == 0x000004, "Member 'BP_NPCAIController_Invader_C_ExecuteUbergraph_BP_NPCAIController_Invader::K2Node_Event_Event' has a wrong offset!");
 
-// Function BP_NPCAIController_Invader.BP_NPCAIController_Invader_C.ForceBattleStartForOutside
-// 0x0008 (0x0008 - 0x0000)
-struct BP_NPCAIController_Invader_C_ForceBattleStartForOutside final
-{
-public:
-	class AActor*                                 StartActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_NPCAIController_Invader_C_ForceBattleStartForOutside) == 0x000008, "Wrong alignment on BP_NPCAIController_Invader_C_ForceBattleStartForOutside");
-static_assert(sizeof(BP_NPCAIController_Invader_C_ForceBattleStartForOutside) == 0x000008, "Wrong size on BP_NPCAIController_Invader_C_ForceBattleStartForOutside");
-static_assert(offsetof(BP_NPCAIController_Invader_C_ForceBattleStartForOutside, StartActor) == 0x000000, "Member 'BP_NPCAIController_Invader_C_ForceBattleStartForOutside::StartActor' has a wrong offset!");
-
 // Function BP_NPCAIController_Invader.BP_NPCAIController_Invader_C.ReturnSpawnedPoint
 // 0x0080 (0x0080 - 0x0000)
 struct BP_NPCAIController_Invader_C_ReturnSpawnedPoint final
@@ -92,6 +81,17 @@ static_assert(offsetof(BP_NPCAIController_Invader_C_StartMarch, K2Node_MakeStruc
 static_assert(offsetof(BP_NPCAIController_Invader_C_StartMarch, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000070, "Member 'BP_NPCAIController_Invader_C_StartMarch::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_NPCAIController_Invader_C_StartMarch, CallFunc_SetActionClassParameter_ReturnValue) == 0x000078, "Member 'BP_NPCAIController_Invader_C_StartMarch::CallFunc_SetActionClassParameter_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_NPCAIController_Invader_C_StartMarch, CallFunc_SetActionClassParameter_ReturnValue_1) == 0x000080, "Member 'BP_NPCAIController_Invader_C_StartMarch::CallFunc_SetActionClassParameter_ReturnValue_1' has a wrong offset!");
+
+// Function BP_NPCAIController_Invader.BP_NPCAIController_Invader_C.ForceBattleStartForOutside
+// 0x0008 (0x0008 - 0x0000)
+struct BP_NPCAIController_Invader_C_ForceBattleStartForOutside final
+{
+public:
+	class AActor*                                 StartActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_NPCAIController_Invader_C_ForceBattleStartForOutside) == 0x000008, "Wrong alignment on BP_NPCAIController_Invader_C_ForceBattleStartForOutside");
+static_assert(sizeof(BP_NPCAIController_Invader_C_ForceBattleStartForOutside) == 0x000008, "Wrong size on BP_NPCAIController_Invader_C_ForceBattleStartForOutside");
+static_assert(offsetof(BP_NPCAIController_Invader_C_ForceBattleStartForOutside, StartActor) == 0x000000, "Member 'BP_NPCAIController_Invader_C_ForceBattleStartForOutside::StartActor' has a wrong offset!");
 
 }
 

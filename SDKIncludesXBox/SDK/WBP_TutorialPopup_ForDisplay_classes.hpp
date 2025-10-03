@@ -26,9 +26,9 @@ public:
 	class UWBP_CommonTutorialPopup_C*             WBP_CommonTutorialPopup;                           // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_TutorialPopup_ForDisplay_WBP_CommonTutorialPopup_K2Node_ComponentBoundEvent_0_OnClickedYes__DelegateSignature();
-	void ExecuteUbergraph_WBP_TutorialPopup_ForDisplay(int32 EntryPoint);
 	void OnSetup();
+	void ExecuteUbergraph_WBP_TutorialPopup_ForDisplay(int32 EntryPoint);
+	void BndEvt__WBP_TutorialPopup_ForDisplay_WBP_CommonTutorialPopup_K2Node_ComponentBoundEvent_0_OnClickedYes__DelegateSignature();
 
 	class UWidget* BP_GetDesiredFocusTarget() const;
 

@@ -27,8 +27,8 @@ public:
 public:
 	bool ActivateCurrentOtomo(const struct FTransform& SpawnTransform);
 	void ExecuteUbergraph_BP_OtomoPalHolderComponentForNPC(int32 EntryPoint);
-	void ReceiveBeginPlay();
 	void GetAIClass(class UClass** Class_0);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

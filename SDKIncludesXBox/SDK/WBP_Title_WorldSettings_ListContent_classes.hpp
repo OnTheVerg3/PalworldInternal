@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Pal_classes.hpp"
 #include "E_PalTitleWorldSettingOptionType_structs.hpp"
+#include "Pal_classes.hpp"
 #include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 
@@ -63,12 +63,6 @@ public:
 	TMulticastInlineDelegate<void(class UWBP_Title_WorldSettings_ListContent_C* Widget)> OnHovered;  // 0x0540(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void SetVisibilityCaution(bool bVisible);
-	void SetupTextInput(const class FString& DefaultString);
-	void SetupSelectString(TArray<class FString>& SelectStrings, int32 DefaultSelectIndex);
-	void SetupOnOff(bool IsOn_0);
-	void SetupIntValue(int32 Value, int32 Min, int32 Max);
-	void SetupFloatValue(double NowValue, double MinValue, double MaxValue);
 	void SetupFlag(bool IsSteam, bool IsXbox, bool IsPS5, bool IsMac);
 	void SetEnableCautionMark(bool IsEnableMark);
 	void SetButtonText(const class FText& Text);
@@ -97,6 +91,12 @@ public:
 	void BndEvt__WBP_Title_WorldSettings_ListContent_EditableTextBox_46_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text);
 	void BndEvt__WBP_Title_WorldSettings_ListContent_EditableTextBox_46_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
 	void AnmEvent_SetEnableBuutton(bool isEnableButton);
+	void SetVisibilityCaution(bool bVisible);
+	void SetupTextInput(const class FString& DefaultString);
+	void SetupSelectString(TArray<class FString>& SelectStrings, int32 DefaultSelectIndex);
+	void SetupOnOff(bool IsOn_0);
+	void SetupIntValue(int32 Value, int32 Min, int32 Max);
+	void SetupFloatValue(double NowValue, double MinValue, double MaxValue);
 
 public:
 	static class UClass* StaticClass()
